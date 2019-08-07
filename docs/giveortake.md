@@ -29,7 +29,7 @@ Documentation is an evolving effort, and we need help. This guide lives in githu
 
 ## Development Workflow
 
-Start by reading open ISSUES (so you don't end redoing what someone else is already working on) and looking at our [Roadmap for version 8.x-1.0](https://github.com/esmero/archipelago-deployment/issues/5). If the solution to your problem is not there or of there is an unchecked element in the roadmap, this is a great opportunity to help by creating a new ISSUE.
+Start by reading open ISSUES (so you don't end up redoing what someone else is already working on) and looking at our [Roadmap for version 8.x-1.0](https://github.com/esmero/archipelago-deployment/issues/5). If the solution to your problem is not there or of there is an unchecked element in the roadmap, this is a great opportunity to help by creating a new ISSUE.
 
 So next you will start by opening an Github ISSUE in any of the 5 GitHub repositories. Which repository will depend on what it is you are trying to do.
 Please be concise with the title of your ISSUE so that it is easy to understand. Use Markdown to explain the What, How, etc of your contribution. Note: Even if something related is already in the works, if for example there could already be an open issue or you are in doubt, you can still contribute. Just add your comments on any open ISSUE. Or if you think you want to contribute with a totally different perspective, feel free to open a new ISSUE anyway. We can always discuss next steps starting from there. Every Community has its rhythm and style and our style is just beginning to develop: we are still figuring out what works best for everyone.
