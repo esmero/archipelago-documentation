@@ -3,7 +3,7 @@
 
 ``Archipelago`` welcomes, appreciates, and recognizes any and all type of contribution. This includes input on all use cases and needs, questions or answers, documentation, DevOps, and configurations.  It also includes more general ideas, thoughts and even future dreams! Of course we also invite you to contribute PHP code, including fixes and new features. We want to be embracing, helpful, kind and open. We encourage discussions and always respect anyone's opinions, language, gender, style, backgrounds, origins and destinations if those come from the same root values of respect we state here. We follow and support conflict resolution using nothing more than basic common sense and value diversity in all its shapes, forms, colors, epoches, numbers and kinds, with or without labels, including inbetweens and evolving. We always assume we can do better and that you have done a lot. Under this very basic social framework, this is how we hope you can contribute:
 
-## Where the wild things live
+## Where The Wild Things Live
 
 Archipelago has 5 active Github repositories
 
@@ -18,7 +18,7 @@ Archipelago has 5 active Github repositories
 - [Archipelago Documentation](https://github.com/esmero/archipelago-documentation/tree/8.x-1.0-beta1)
   What? Documentation: This guide and whatever we manage to write to explain Archipelago goes here.
 
-## Questions, answers and in transit between both ends.
+## Questions, Answers and In Transit Between Both Ends
 
 For now we have a single Community interaction Channel, our [google group](https://groups.google.com/forum/#!forum/archipelago-commons). That is the best place to ask questions and make suggestions that are not specific to a single module and/or you think can contribute to a larger community. Discussions work best in this forum (not excluding github of course), and our official announcements are posted there too.
 
@@ -45,7 +45,7 @@ As a best practice, we encourage pull requests to discuss/fix existing code, new
 
 For the full step by step workflow, we will use [Archipelago Documentation](https://github.com/esmero/archipelago-documentation/tree/8.x-1.0-beta1) and the `8.x-1.0-beta1` branch as example. The same applies to any of the other repositories, just change the remote urls and use the most current Branch name.
 
-### Example: Setup Archipelago Documentation GitHub Repository
+### Example: Set Up Archipelago Documentation GitHub Repository
 Fork the [Archipelago Documentation Upstream](https://github.com/esmero/archipelago-documentation/fork) source repository to your own personal Github account (e.g YOU). Copy the URL of your Archipelago Documentation fork (you will need it for the `git clone` command below).
 
 ```Shell
@@ -54,7 +54,7 @@ $ cd archipelago-documentation
 $ git checkout 8.x-1.0-beta1
 ```
 
-### Set up git remote as ``upstream``
+### Set Up Git Remote As ``upstream``
 ```Shell
 $ git remote add upstream https://github.com/esmero/archipelago-documentation
 $ git fetch upstream
@@ -62,14 +62,14 @@ $ git merge upstream/8.x-1.0-beta1
 ...
 ```
 
-### Create your ISSUE branch
+### Create Your ISSUE Branch
 Before making changes, make sure you create a branch using the ISSUE number you created for these contributions.
 
 ```Shell
 $ git checkout -b ISSUE-6
 ```
 
-### Do some Cleanup and test locally
+### Do Some Clean Up and Test Locally
 After your code changes, make sure
 
 - If modifying `PHP`, run `phpcs --standard=Drupal yourchanged.file.php`. We use (or try our best) to use Drupal 8 Coding standards
@@ -78,17 +78,17 @@ After your code changes, make sure
 - If modifying `PHP`, please test your changes live on your local instance of Archipelago. All non Documentation modules are already there inside `web/modules/contrib/`
 
 
-### Commit changes
+### Commit Changes
 After verification, commit your changes. This is [very good post](https://chris.beams.io/posts/git-commit/) on how to write commit messages.
 ```Shell
 $ git commit -am 'Fix that Strawberry'
 ```
 
-### Push to the branch
+### Push To The Branch
 Push your locally committed changes to the remote origin (your fork)
 ```Shell
 $ git push origin ISSUE-6
 ```
 
-### Create a Pull Request
+### Create A Pull Request
 Pull requests can be created via GitHub. [This document](https://help.github.com/articles/creating-a-pull-request/) explains in detail how to create one. After your Pull Request gets peer reviewed and approved, it can be merged. Discussion can happen and peers can ask you for modifications, fixes or more information on how to test. We will be respectful. You will be given credit for all your contributions and shown appreciation. There is no wrong and never too little. There could be a too much!
