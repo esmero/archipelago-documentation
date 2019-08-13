@@ -24,11 +24,11 @@ To get here we had to do a full stop first. Look around. Questioning everything 
 Learn [`what makes Archipelago so different`](docs/ourtake.md) and hopefully also a well known place.
 
 
-## Strawberryfields Forever
+## Strawberryfields For Ever
 
 Archipelago integrates transparently into the Drupal 8 ecosystem using its Core Content Entity System (Nodes), Discovery (Search API) and in general all its Core Components plus a few well maintained external ones. 
 
-By design (and because we think its imperative), Archipelago takes full charge of the metadata layer and associated media assets by implementing a highly configurable, smart JSON-based Drupal field named [`strawberryfield`](https://github.com/esmero/strawberryfield/tree/8.x-1.0-beta1) that attaches to any content. 
+By design (and because we think its imperative), Archipelago takes full charge of the metadata layer and associated media assets by implementing a highly configurable, smart Drupal field written in JSON named [`strawberryfield`](https://github.com/esmero/strawberryfield/tree/8.x-1.0-beta1) that attaches to any content. 
 
 All of JSON's internals, keys, paths, and values are dynamically exposed to the rest of the ecosystem. Strawberryfield even remembers its structure as data evolves by storing JSON apths of every little detail. 
 
