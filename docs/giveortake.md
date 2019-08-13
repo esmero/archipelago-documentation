@@ -75,10 +75,10 @@ $ git checkout -b ISSUE-6
 ### Do Some Clean Up and Test Locally
 After your code changes, make sure
 
-- If modifying `PHP`, run `phpcs --standard=Drupal yourchanged.file.php`. We (try our best to) use Drupal 8 \cCoding standards
-- If modifying a `MARKDOWN` file, make sure it renders well (you can use Textmate, Atom, Textile, etc to preview) and that links are not broken
-- If writing large pieces of code, add PHP Tests. We can help if you don't know how (tell us in the ISSUE). Tests will be enforced starting with the first stable release
-- If modifying `PHP`, please test your changes live on your local instance of Archipelago. All non-documentation modules are already inside `web/modules/contrib/`
+- If modifying `PHP`, run `phpcs --standard=Drupal yourchanged.file.php`. We (try our best to) use Drupal 8 coding standards.
+- If modifying a `MARKDOWN` file, make sure it renders well (you can use Textmate, Atom, Textile, etc to preview) and that links are not broken.
+- If writing large pieces of code, add PHP Tests. We can help if you don't know how (tell us in the ISSUE). Tests will be enforced starting with the first stable release.
+- If modifying `PHP`, please test your changes live on your local instance of Archipelago. All non-documentation modules are already inside `web/modules/contrib/`.
 
 
 ### Commit Changes
