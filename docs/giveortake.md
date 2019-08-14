@@ -10,19 +10,19 @@ We will be helpful, kind, and open. We encourage discussions and always respect 
 Archipelago has 5 active GitHub repositories
 
 - [Strawberryfield](https://github.com/esmero/strawberryfield/tree/8.x-1.0-beta1)
-  What? Code: Deals with metadata storage and exposure to Drupal. Events/Subscribers that trigger when content is modified. The way internal pieces of JSON are exposed to the rest of the ecosystem. Core to all what is Archipeleago as a concept. One of its Drupal forms is a Field.
+  What? Code: Deals with metadata storage and exposure to Drupal. Events/Subscribers that trigger when content is modified. The way internal pieces of JSON are exposed to the rest of the ecosystem. Core to all of what Archipeleago is as a concept. One of its Drupal forms is a Field.
 - [Webform Strawberryfield](https://github.com/esmero/webform_strawberryfield/tree/8.x-1.0-beta1)
-  What? Code: Deals with UI based ingest of content using webforms. How files and media are attached to JSON, tech md is extracted and any interaction that happens during the edit and ingest process via a form. In its Drupal form it provides a Field Widget for `Strawberryfield`.
+  What? Code: Deals with UI based ingest of content using webforms. How files and media are attached to JSON, how tech md is extracted, and any interaction that happens during the edit and ingest processes via a form. In its Drupal form it provides a Field Widget for `Strawberryfield`.
 - [Format Strawberryfield](https://github.com/esmero/format_strawberryfield/tree/8.x-1.0-beta1)
-  What? Code: Deals with exposing and transforming the JSON when navigating the site. What is displayed, how it is displayed. Provides templating, metadata display entities via Twig and direct file downloads. In its Drupal from it provides many field formatters for Strawberryfield` and a content entity for the twig templates.
+  What? Code: Deals with exposing and transforming the JSON when navigating the site. What is displayed, how it is displayed. Provides templating, metadata display entities via Twig, and direct file downloads. In its Drupal form it provides many field formatters for Strawberryfield` and a content entity for the Twig templates.
 - [Archipelago Deployment](https://github.com/esmero/archipelago-deployment/tree/8.x-1.0-beta1)
-  What? DevOps: Docker-compose deployment strategy, including a full skeleton projects with persistance folders for Min.io, DB, Solr, Cantaloupe and Drupal 8. Includes initial deployment configurations, what modules are enabled, how things look in Drupal 8 and some scripts plus the deployment documentation for both OSX and Linux.
+  What? DevOps: Docker-compose deployment strategy, including a full skeleton of projects with persistence folders for Min.io, DB, Solr, Cantaloupe and Drupal 8. Includes initial deployment configurations, which modules are enabled, how things look in Drupal 8 and some scripts plus the deployment documentation for both OSX and Linux.
 - [Archipelago Documentation](https://github.com/esmero/archipelago-documentation/tree/8.x-1.0-beta1)
   What? Documentation: This guide and whatever we manage to write to explain Archipelago goes here.
 
 ## Questions, Answers and In Transit Between Both Ends
 
-We host a community interaction channel, our [google group](https://groups.google.com/forum/#!forum/archipelago-commons). This is the best place to ask questions and make suggestions that are not specific to a single module and/or you think can contribute to a larger discussion within our community. Discussions work best in this forum (not excluding GitHub of course), and our official announcements are posted there, too.
+We host a community interaction channel, our [google group](https://groups.google.com/forum/#!forum/archipelago-commons). This is the best place to ask questions and make suggestions that are not specific to a single module, and/or if you would like to contribute to a larger conversation within our community. Discussions work best in this forum (not excluding GitHub of course), and our official announcements are posted there too.
 
 
 ## Documentation Workflow
