@@ -16,7 +16,7 @@ Archipelago has 5 active GitHub repositories
 - [Format Strawberryfield](https://github.com/esmero/format_strawberryfield/tree/8.x-1.0-beta1)
   What? Code: Deals with exposing and transforming the JSON when navigating the site. What is displayed, how it is displayed. Provides templating, metadata display entities via Twig, and direct file downloads. In its Drupal form it provides many field formatters for Strawberryfield` and a content entity for the Twig templates.
 - [Archipelago Deployment](https://github.com/esmero/archipelago-deployment/tree/8.x-1.0-beta1)
-  What? DevOps: Docker-compose deployment strategy, including a full skeleton of projects with persistence folders for Min.io, DB, Solr, Cantaloupe and Drupal 8. Includes initial deployment configurations, which modules are enabled, how things look in Drupal 8 and some scripts plus the deployment documentation for both OSX and Linux.
+  What? DevOps: Docker-compose deployment strategy, including a full skeleton project with persistence folders for Min.io, DB, Solr, Cantaloupe and Drupal 8. Includes initial deployment configurations, which modules are enabled, how things look in Drupal 8 and some scripts plus the deployment documentation for both OSX and Linux.
 - [Archipelago Documentation](https://github.com/esmero/archipelago-documentation/tree/8.x-1.0-beta1)
   What? Documentation: This guide and whatever we manage to write to explain Archipelago goes here.
 
