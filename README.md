@@ -80,7 +80,7 @@ Archipelago welcomes and appreciates any type of contribution, from use cases an
 
 ## Acknowledgments
 
-This software is a [Metropolitan New York Library Council](metro.org) Open-Source initiative and part of the Archipelago Commons project.
+This software is a [Metropolitan New York Library Council](https://metro.org) Open-Source initiative and part of the Archipelago Commons project.
 
 ## License
 
