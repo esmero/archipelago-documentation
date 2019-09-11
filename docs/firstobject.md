@@ -111,5 +111,5 @@ Note: Don't press `Save`, Don't press `Preview`. Why? You are not ready yet!
 
 ![Ingest Step2](../imgs/ingest-step2.jpg)
 
-This Step showcases some of the Autocomplete Linked data Webform elements we built for Archipelago. We truly believe in Wikidata as a open, honest, source of Linked Open Data and also one where you can contribute back. But we also have LoC autocompletes and Getty. More to come!
+This Step showcases some of the Autocomplete Linked data Webform elements we built for Archipelago. We truly believe in Wikidata as a open, honest, source of Linked Open Data and also one where you can contribute back. But we also have LoC autocompletes and Getty. 
 
