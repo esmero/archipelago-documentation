@@ -87,7 +87,7 @@ Here you see all the `Content Types` defined by default in Archipelago. Yes, you
 What you see here is a `Form Mode` in action, with the Title field exposed as a simple text input (`Field Widget`), a Multi Step Web Form that will ingest metadata into a field of type Strawberry Field (where all the magic happens) 
 attached to that field using a `Webform Field Widget`, an editorial/advanced Block on the right side and a Workflow/state drop down (`Save as`) at the bottom. 
 
-![Ingest Step1](../imgs/ingest-step1.jpg)
+![Ingest Step1](../imgs/MyMetadata_1.png)
 
 Fill the form out. We recommend to use similar values as the ones shown in the screen capture to make following the tutorial easier. 
 
