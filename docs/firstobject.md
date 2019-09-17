@@ -115,19 +115,19 @@ Note: Don't press `Save`, Don't press `Preview`. Why? You are not ready yet!
 
 ![Ingest Step2](../imgs/ingest-step2.jpg)
 
-As the name of this step suggests; on this page you will be adding all your [`Linked Data`] (https://en.wikipedia.org/wiki/Linked_data) and information regarding your Digital Object.  This Step showcases some of the Autocomplete Linked data Webform elements we built for Archipelago. We truly believe in Wikidata as a open, honest, source of Linked Open Data and also one where you can contribute back. But we also have LoC autocompletes and Getty.
+As the name of this step suggests; on this page you will be adding all your Linked Data for your Digital Object. This Step showcases some of the Autocomplete Linked data Webform elements we built for Archipelago. We truly believe in Wikidata as an open, honest, source of Linked Open Data and also one where you can contribute back. But we also have LoC autocompletes and Getty.
 
 Click: `Next: Collections`
 
 ### Collections
 
-![Screen Shot 2019-09-16 at 3 03 45 PM](https://user-images.githubusercontent.com/53673253/64985968-14f6f880-d894-11e9-9458-47cecdbf40d8.png)
+![ingest step 3_Collections](../imgs/ingest step 3_Collections.png)
 
-Since this is our first digital object we do not yet have a Digital Object *Collection* for which `My First Digital Object` can be a member of. In other words, you can leave this field blank and then stay tuned for our demo on creating a Digital Object Collection.
+Since this is our first digital object we do not yet have a Digital Object *Collection* for which `My First Digital Object` could be a member of. In other words, you can leave `Collection Membership` blank and click `Next: Upload Files`.
 
 ### Upload Files
 
-![Screen Shot 2019-09-16 at 2 06 21 PM](https://user-images.githubusercontent.com/53673253/64986260-a1092000-d894-11e9-9ad6-ee35e631c179.png)
+![ingest step 4_upload files](../imgs/ingest step 4_Upload Files.png)
 
 This step is pretty straight forward: Click `Choose Files` to open your computer's directory and select which file you would like to ingest. After you've done this, click `Save Metadata`
 
@@ -135,17 +135,17 @@ From here, Steps 5 & 6 (hotspots & Preview) are skipped and you are directed to 
 
 ### Complete
 
-![Screen Shot 2019-09-16 at 2 10 24 PM](https://user-images.githubusercontent.com/53673253/64986550-37d5dc80-d895-11e9-8a5a-390a6dff798b.png)
+![ingest step 7_complete](../imgs/ingest step 7_Complete.png)
 
 You made it! You added your Metadata, Linked Data, Uploaded your files and now you're ready to save! First, give your object a preivew by clicking the `Preview` button.
 
 Does everything look alright? Great! Click the `Back to content editing` button in the top left corner to go through with saving your object.
 
-![Preview-page-screenshot](https://user-images.githubusercontent.com/53673253/64987204-b8490d00-d896-11e9-9d0d-6b296acf69ff.png)
+![Preview-page-screenshot](../imgs/ingest-documentation_preview-page.png)
 
-Now you are back to where you started, but!, all your data has been saved so go ahead and click `Save` at the bottom of this page. Once you do complete this, you will be directed to your new Digital Object and you should see a few green push notifications indicating your object has been created. 
+Now you are back to where you began, and you are ready to save your First Digital Object! **Be sure to switch your "Save As" status from *Draft* to *Publish*.** Once you hit `Save` you should see a few green push notifications indicating your object has been created. 
+
 Like this:
-![Screen Shot 2019-09-16 at 2 15 15 PM](https://user-images.githubusercontent.com/53673253/64986697-969b5600-d895-11e9-9999-8483dda61dc9.png)
-> **Note: at this time, all objects saved as a *draft* are inaccessible when logged in with your `demo` user. You will need to login with your `admin` credentials in order to view or edit any drafts.**  
+![ingest step 7_complete_final(../imgs/ingest step 7_Complete final.png)
 
-Congratulations on creating your first digital object! Stay tuned for our tutorial on creating a Digital Objects Collection! 
+Congratulations on creating your first digital object!
