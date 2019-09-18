@@ -87,7 +87,7 @@ Here you see all the `Content Types` defined by default in Archipelago. Yes, you
 What you see here is a `Form Mode` in action, with the Title field exposed as a simple text input (`Field Widget`), a Multi Step Web Form that will ingest metadata into a field of type Strawberry Field (where all the magic happens) 
 attached to that field using a `Webform Field Widget`, an editorial/advanced Block on the right side and a Workflow/state drop down (`Save as`) at the bottom. 
 
-![Ingest Step1](../imgs/MyMetadata_1.png)
+![Ingest Step1](../imgs/MyMetadata_1.jpg)
 
 Fill the form out. We recommend to use similar values as the ones shown in the screen capture to make following the tutorial easier. 
 
@@ -121,13 +121,13 @@ Click: `Next: Collections`
 
 ### Collections
 
-![ingest step 3_Collections](../imgs/ingest step 3_Collections.png)
+![Ingest Step3](../imgs/inges-step-3_Collections.jpg)
 
 Since this is our first digital object we do not yet have a Digital Object *Collection* for which `My First Digital Object` could be a member of. In other words, you can leave `Collection Membership` blank and click `Next: Upload Files`.
 
 ### Upload Files
 
-![ingest step 4_upload files](../imgs/ingest step 4_Upload Files.png)
+![Ingest Step4](../imgs/ingest-step-4_Upload-files.jpg)
 
 This step is pretty straight forward: Click `Choose Files` to open your computer's directory and select which file you would like to ingest. After you've done this, click `Save Metadata`
 
@@ -135,7 +135,7 @@ From here, Steps 5 & 6 (hotspots & Preview) are skipped and you are directed to 
 
 ### Complete
 
-![ingest step 7_complete](../imgs/ingest step 7_Complete.png)
+![Ingest Step7](../imgs/ingest-step-7_Complete.jpg)
 
 You made it! You added your Metadata, Linked Data, Uploaded your files and now you're ready to save! First, give your object a preivew by clicking the `Preview` button.
 
@@ -146,6 +146,6 @@ Does everything look alright? Great! Click the `Back to content editing` button 
 Now you are back to where you began, and you are ready to save your First Digital Object! **Be sure to switch your "Save As" status from *Draft* to *Publish*.** Once you hit `Save` you should see a few green push notifications indicating your object has been created. 
 
 Like this:
-![ingest step 7_complete_final(../imgs/ingest step 7_Complete final.png)
+![Ingest Step7 Saved](../imgs/ingest-step-7_Complete-save.jpg)
 
 Congratulations on creating your first digital object!
