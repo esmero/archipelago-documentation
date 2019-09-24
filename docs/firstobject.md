@@ -82,10 +82,12 @@ Here you see all the `Content Types` defined by default in Archipelago. Yes, you
 
 ## That first Digital Object
 
+### My Metadata
+
 What you see here is a `Form Mode` in action, with the Title field exposed as a simple text input (`Field Widget`), a Multi Step Web Form that will ingest metadata into a field of type Strawberry Field (where all the magic happens) 
 attached to that field using a `Webform Field Widget`, an editorial/advanced Block on the right side and a Workflow/state drop down (`Save as`) at the bottom. 
 
-![Ingest Step1](../imgs/ingest-step1.jpg)
+![Ingest Step1](../imgs/MyMetadata_1.jpg)
 
 Fill the form out. We recommend to use similar values as the ones shown in the screen capture to make following the tutorial easier. 
 
@@ -105,11 +107,47 @@ We will come back to this later.
 </div>
 </details>
 
-Make sure you select `Photograph` as `Media Type` and all the fields with a red `*` are filled up. Press `Next: Linked data`. That will load the next step inline.
+Make sure you select `Photograph` as `Media Type` and all the fields with a red `*` are filled up. Press `Next: Linked data`. That will load the next step inline. 
 
 Note: Don't press `Save`, Don't press `Preview`. Why? You are not ready yet!
 
+### Linked Data
+
 ![Ingest Step2](../imgs/ingest-step2.jpg)
 
-This Step showcases some of the Autocomplete Linked data Webform elements we built for Archipelago. We truly believe in Wikidata as a open, honest, source of Linked Open Data and also one where you can contribute back. But we also have LoC autocompletes and Getty. More to come!
+As the name of this step suggests; on this page you will be adding all your Linked Data elements. This Step showcases some of the Autocomplete Linked Data Webform elements we built for Archipelago. We truly believe in Wikidata as an open, honest, source of Linked Open Data and also one where you can contribute back. But we also have LoC autocompletes and Getty.
 
+Click: `Next: Collections`
+
+### Collections
+
+![Ingest Step3](../imgs/inges-step-3_Collections.jpg)
+
+Since this is our first digital object we do not yet have a Digital Object *Collection* for which `My First Digital Object` could be a member of. In other words, you can leave `Collection Membership` blank and click `Next: Upload Files`.
+
+### Upload Files
+
+![Ingest Step4](../imgs/ingest-step-4_Upload-files.jpg)
+
+This step is pretty straight forward: Click `Choose Files` to open your file selector window and choose which file you would like to ingest. After you've done this, click `Save Metadata`. 
+
+Two things to note: The `Save Metadata` button simply persists the metadata in the current webform session. The actual ingest of the Object happens when you click `Save` (see the **Complete** step below). Secondly, each "upload field" has a set of allowed file types (such as .jpg, .tiff, .png) and in this demo there are also file size restrictions which are explained in the Upload Field's description.
+
+From here, Steps 5 & 6 (hotspots & Preview) are skipped and you are directed to the **Complete** step.
+
+### Complete
+
+![Ingest Step7](../imgs/ingest-step-7_Complete.jpg)
+
+You made it! You added your Metadata, Linked Data, Uploaded your files and now you're ready to save! First, give your object a preview by clicking the `Preview` button directly to the right of the `Save` button.
+
+Does everything look alright? Great! Click the `Back to content editing` button in the top left corner to go through with saving your object.
+
+![Preview-page-screenshot](../imgs/ingest-documentation_preview-page.png)
+
+Now you are back to where you began, and you are ready to save your First Digital Object! **Be sure to switch your "Save As" status from *Draft* to *Publish*.** Once you hit `Save` you should see a few green push notifications indicating your object has been created. 
+
+Like this:
+![Ingest Step7 Saved](../imgs/ingest-step-7_Complete-save.jpg)
+
+Congratulations on creating your first digital object!
