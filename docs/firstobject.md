@@ -115,7 +115,7 @@ Note: Don't press `Save`, Don't press `Preview`. Why? You are not ready yet!
 
 ![Ingest Step2](../imgs/ingest-step2.jpg)
 
-As the name of this step suggests; on this page you will be adding all your Linked Data for your Digital Object. This Step showcases some of the Autocomplete Linked data Webform elements we built for Archipelago. We truly believe in Wikidata as an open, honest, source of Linked Open Data and also one where you can contribute back. But we also have LoC autocompletes and Getty.
+As the name of this step suggests; on this page you will be adding all your Linked Data elements. This Step showcases some of the Autocomplete Linked Data Webform elements we built for Archipelago. We truly believe in Wikidata as an open, honest, source of Linked Open Data and also one where you can contribute back. But we also have LoC autocompletes and Getty.
 
 Click: `Next: Collections`
 
@@ -129,7 +129,9 @@ Since this is our first digital object we do not yet have a Digital Object *Coll
 
 ![Ingest Step4](../imgs/ingest-step-4_Upload-files.jpg)
 
-This step is pretty straight forward: Click `Choose Files` to open your computer's directory and select which file you would like to ingest. After you've done this, click `Save Metadata`
+This step is pretty straight forward: Click `Choose Files` to open your file selector window and choose which file you would like to ingest. After you've done this, click `Save Metadata`. 
+
+Two things to note: The `Save Metadata` button simply persists the metadata in the current webform session. The actual ingest of the Object happens when you click `Save` (see the **Complete** step below). Secondly, each "upload field" has a set of allowed file types (such as .jpg, .tiff, .png) and in this demo there are also file size restrictions which are explained in the Upload Field's description.
 
 From here, Steps 5 & 6 (hotspots & Preview) are skipped and you are directed to the **Complete** step.
 
@@ -137,7 +139,7 @@ From here, Steps 5 & 6 (hotspots & Preview) are skipped and you are directed to 
 
 ![Ingest Step7](../imgs/ingest-step-7_Complete.jpg)
 
-You made it! You added your Metadata, Linked Data, Uploaded your files and now you're ready to save! First, give your object a preivew by clicking the `Preview` button.
+You made it! You added your Metadata, Linked Data, Uploaded your files and now you're ready to save! First, give your object a preview by clicking the `Preview` button directly to the right of the `Save` button.
 
 Does everything look alright? Great! Click the `Back to content editing` button in the top left corner to go through with saving your object.
 
