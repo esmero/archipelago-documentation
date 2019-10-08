@@ -19,7 +19,7 @@ We also like to say that Archipelago is like a Metadata Synthetizer (LFO anyone?
 
 Finally, Archipelago tries to stay humble, slim, and nimble in nature with a small code base full of inline comments and `@todos`. 
 
-To get here we had to do a full stop first. Look around. Questioning everything we knew. Research and test (repeat) and then re-architect slowly on new and old assumptions, and especially new community values. 
+To get here we had to do a full stop first. Look around. Question everything we knew. Research and test (repeat) and then re-architect slowly on new and old assumptions, and especially new community values. 
 
 Learn [`what makes Archipelago so different`](docs/ourtake.md) and hopefully also a well known place.
 
@@ -32,7 +32,7 @@ By design (and because we think its imperative), Archipelago takes full charge o
 
 All of JSON's internals, keys, paths, and values are dynamically exposed to the rest of the ecosystem. Strawberryfield even remembers its structure as data evolves by storing JSON apths of every little detail. 
 
-Explore what [`strawberryfield does`](docs/strawberryfield.md), why we built it, and what issues it addresses.
+Explore what [`strawberryfield does`](http://www.archipelago.nyc/#strawberryfield), why we built it, and what issues it addresses.
 
 ## Nothing Is Real
 
