@@ -6,7 +6,7 @@ on the popular CMS [`Drupal8/9`](https://www.drupal.org) and released under [`GL
 Archipelago is a mix of deeply integrated custom-coded Drupal8 modules (made with care by us) and a curated and well-configured Drupal8 instance, running under a discrete and and well-planned set of service containers. 
 All of this driven by a clear and [concise but thoughtfull planned technical roadmap](https://github.com/esmero/archipelago-deployment/issues/5). 
 
-Archipelago was dreamt as a multi-tenant, distributed, capable system (as its name suggests!) and can live isolated or in flocks of similar deployments, sharing storage, services, or -- even better -- just the discovery layer. Learn more about the different [`Software Services`](devops.md) used by Archipelago.
+Archipelago was dreamt as a multi-tenant, distributed, capable system (as its name suggests!) and can live isolated or in flocks of similar deployments, sharing storage, services, or -- even better -- just the discovery layer. Learn more about the different [`Software Services`](http://archipelago.nyc/do/def5ac89-73ae-45d9-bd24-3b515fb83ea8) used by Archipelago.
 
 Archipelago's primary focus is to serve the [`GLAM community`](https://en.wikipedia.org/wiki/GLAM_(industry_sector)) by providing a flexible, consistent, and unified way of describing, storing, linking, exposing metadata and media assets. We respect identities and existing workflows.
 
@@ -21,7 +21,7 @@ Finally, Archipelago tries to stay humble, slim, and nimble in nature with a sma
 
 To get here we had to do a full stop first. Look around. Question everything we knew. Research and test (repeat) and then re-architect slowly on new and old assumptions, and especially new community values. 
 
-Learn [`what makes Archipelago so different`](docs/ourtake.md) and hopefully also a well known place.
+Learn [`what makes Archipelago so different`](https://gist.github.com/DiegoPino/60a039263920e72996622a479311c95b) and hopefully also a well known place.
 
 
 ## Strawberryfields For Ever
