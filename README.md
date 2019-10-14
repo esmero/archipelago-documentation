@@ -49,7 +49,7 @@ We also added `WIKIDATA`, `LoC` and `Getty` Authority querying elements to aid i
 
 All these integrations are made to help local needs and community identities to survive the never-ending race for the next metadata schema. They are made to prototype, plan, and grow independently of how metadata will need to be exposed yesterday or tomorrow. And we plan to add more. 
 
-Explore what other features [`webform_strawberryfield provides to help with ingesting`](docs/webform.md), reading, and interacting with your metadata during that process.
+Explore what other features [`webform_strawberryfield provides to help with ingesting`](https://github.com/esmero/webform_strawberryfield/blob/8.x-1.0-beta1/README.md), reading, and interacting with your metadata during that process.
 
 ## Exposing
 `Format Strawberryfield` (we had even a better name but...) deals with taking your JSON based metadata and `casting`, mashing, mixing, exposing, displaying, and transforming it to allow rich interaction for users and other systems with your digital objects. 
@@ -59,7 +59,7 @@ In its guts (or heart?), Archipelago does something quite simple but core to our
 This templating system is exposed to Archipelago users through the UI and stored side by side in the repository as content 
 (we named them `Metadata Display entities`, but they not only serve display needs!) so users can fully control how metadata is transformed and published without touching their individual sources.
 
-Templates or recipes can be shared, exported, ingested, updated, and adapted in many ways. Fast changes are possible without having to wait for the next mayor release of Archipelago or your favorited Metadata Schema Specs Committee agreeing on the next or the last version. Of course, this module not only handles metadata but media assets too, extracting local or remote URIs and files from your metadata and rendering them as media viewers: books, 3D models, images, panoramas, A/V with IIIF in its soul. Discover what [`format_strawberryfield can`](format.md) do and what many other possibilities are exposed through our templating system.
+Templates or recipes can be shared, exported, ingested, updated, and adapted in many ways. Fast changes are possible without having to wait for the next major release of Archipelago or your favorited Metadata Schema Specs Committee agreeing on the next or the last version. Of course, this module not only handles metadata but media assets too, extracting local or remote URIs and files from your metadata and rendering them as media viewers: books, 3D models, images, panoramas, A/V with IIIF in its soul. Discover what [`format_strawberryfield can`](https://github.com/esmero/format_strawberryfield/blob/8.x-1.0-beta1/README.md) do and what many other possibilities are exposed through our templating system.
 
 # Archipelago Deployment Quickstart
 
