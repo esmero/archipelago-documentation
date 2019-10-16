@@ -118,12 +118,12 @@ Gist here is (look at the screenshot and copy the settings):
 
 ### Confirmation Settings
 
-![Webform Confirmation Settings](Development/esmero/esmero-docker/release-8.x-1.0-beta1/archipelago-documentation/imgs/webform-confirmation-settings.jpg)
+![Webform Confirmation Settings](../imgs/webform-confirmation-settings.jpg)
 Gitst here is (again, look at the screenshot and copy the settings):
 - Select "Inline Confirmation". You don't want Webform to send your user to another page while they are still ingesting their ADOs.
 
 ### Handler
-![Webform Handler Settings](Development/esmero/esmero-docker/release-8.x-1.0-beta1/archipelago-documentation/imgs/webform-handler-settings.jpg)
+![Webform Handler Settings](../imgs/webform-handler-settings.jpg)
 The glue, the piece of resistance. The handler is the one that knows how to talk to a SBF. In simple words, the handler (any handler) provides functionality that does something with a Webform Submission. The one that you want to select here, is the "Strawberryfield harvester" handler. Add it, name it whatever you like (or copy what you see in the screenshot) and make sure you select, if running using our deployment strategy, "S3 File System" as the option for "Permanent Destination for uploaded files". The wording is tricky there, its not really Permantent, since that is handled by Archipelago, but more to Temporary, while working in ingesting an Object, destination for the Webform. Its not really wrong neither. Its permanent for the Webform, but we have better plans for the files and metadata!
 
 Save your settings. And you are ready to roll. That webform can now be used as a Setting for any of the StrawberryField Widgets that use Webforms.
