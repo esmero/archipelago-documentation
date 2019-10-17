@@ -47,7 +47,7 @@ Good question! So, to enable, configure and customize these Display Modes you ha
 You can see that for every existint Content Type, there is a drop down menu with options:
 
 - Manage Display: will lead you to configuration page where you can setup each View Mode and its settings for a given Content Type
-- Form Display: will lead you to configuration page where you can setup each View Mode and its settings for a given Content Type
+- Manage Form Display: will lead you to configuration page where you can setup each View Mode and its settings for a given Content Type
 
 ## Manage Display
 ![Manage Display](../imgs/manage-display.jpg)
@@ -85,7 +85,7 @@ You can play with this, experiment and change some settings to get more comforta
 
 On the top you will see all your Form Modes Listed, with the `Default` one selected and expanded.
 The Table that follows has one row per Field attached/partof this Content Type. The list of fields here is shorter, the SBF CopyFields are not present because all data goes really only into real fields. Also some other, display only ones (means you can not modify them) will not appear here. Again, Some of the fields are part of the Content Type itself, in this case Digital Object (bundled) and some other ones are common to every Content Entity derived from a Node.
-"Field" column contains each field name and the Widget Colum allows you to select what type of Input you are going to use to feed it on Ingest/edit. On the right you will see again a little gear, that allows you to configure the settings for a particular Widget. Those settings apply always only to the current Form Mode.
+"Field" column contains each field name and the Widget Column allows you to select what type of Input you are going to use to feed it on Ingest/edit. On the right you will see again a little gear, that allows you to configure the settings for a particular Widget. Those settings apply always only to the current Form Mode.
 
 So. The one we want to understand is the one attached to the "Descriptive Metadata" field. Currently one named "Strawberryfield webform based input with inline rendering". There are other two. But let's start with this. Press on the Gear to the right on the same row.
 
@@ -113,8 +113,8 @@ But we know you did not do that (where is the fun there right?). So lets setup o
 ![Webform General Settings](../imgs/webform-general-settings.jpg)
 Gist here is (look at the screenshot and copy the settings):
 
-- Disable Saving of Form Submissions. You won't need this form to generate a Native Webform Submission entry. 
-- AJAX Settings: check "use ajax". We want people to have the experience of staying in a single page while the create a new ADO and go to, e.g, a Multi Step Webform Workflow.
+- GENERAL Settings: Check "Disable saving of submissions" option. You won't need this form to generate a Native Webform Submission entry.
+- AJAX Settings: Check "use ajax" option. We want people to have the experience of staying in a single page while the create a new ADO via a Multi Step Webform Workflow.
 
 ### Confirmation Settings
 
@@ -128,6 +128,29 @@ The glue, the piece of resistance. The handler is the one that knows how to talk
 
 Save your settings. And you are ready to roll. That webform can now be used as a Setting for any of the StrawberryField Widgets that use Webforms.
 
-Finally (the real finally). Archipelago encourages at least one Field/JSON key to be present always. The "type" JSON key. So make sure that your Custom Webform has that one, you can copy its config from the provided Webform (in the future we will generate it automatically for you, no worries, we are working to make this easier). having a "type" value will make your life easier. You don't need it, but everything works smoother that way. Since you have a single Content Type named Digital Object, having a "type" Webform field, which leads to a "type" JSON key allows you to discern the Nature of your Digital Object, book or Podcast, Image or 3D and do smart, nice things with them.
+Finally (the real finally). Archipelago encourages at least one Field/JSON key to be present always. One with "type" as key value. So make sure that your Custom Webform has that one.
+
+There are two ways of doing that:
+
+- You can copy how it is setup from the provided Webform's Elements, from the main Descriptive Metadata Webform and then add one "select" element to yours using the same "type" "key".Important in Archipelago is always the key value since that is what builds the JSON for your metadata. The Description can be any, but for UI consistency you could want to keep it the same across all your webforms.
+
+![Type Webform Element](../imgs/type_webform_element.jpg)
+
+- Or, advanced, you can use the import/export capabilities (Webforms are just YAML files!) and export/copy your custom one as text, add the following element before or after some existing elements there
+```YAML
+ type:
+      '#type': select
+      '#title': 'Media Type'
+      '#options': schema_org_creative_works
+      '#required': true
+      '#label_attributes':
+        class:
+          - custom-form-input-heading
+````
+And then reimport.
+
+Having a "type" value will make your life easier. You don't need it, but everything works smoother that way. 
+
+Since you have a single Content Type named Digital Object, having a Webform field that has as key "type", which leads to a "type" JSON key, allows you to discern the Nature of your Digital Object, book or Podcast, Image or 3D and do smart, nice things with them.
 
 Thanks for reaching the end of this chapter!
