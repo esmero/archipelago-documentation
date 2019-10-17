@@ -8,7 +8,7 @@ In a few quick words, The Display Mode Concept covers: formatting your Content E
 
 First, formatting output (basically building the front facing page for each content entity) is done by a `View Mode`. Second, defining how/what input method you are going to use to create or edit Content entities, is handlede by a `Form Mode`. Both Modes, are, in Drupal Lingo, Configuration Entities, they provide things you can configure, you can name them and reuse them and those configurations can all be exported and reimported using YAML files. Also both Modes the following in common:
 
-- Drupal always provide a "default" one and that is not "deletable".
+- Drupal always provides a "default" one that can not be deleted.
 - You can create new ones.
 - You can apply permissions to them.
 - All Modes work on "fields", means the tiny little input/output pieces that are either part of a Content Entity or attached to them (the title, the Body, and in our case a Strawberryfield (SBF),
