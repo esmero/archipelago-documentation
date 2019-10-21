@@ -36,7 +36,7 @@ So, resuming, this is what lives under the Concept of a "Display Mode":
 - Which Widgets are available will depend on the "type" of field the Content Entity has. 
   - Example: A `Node` Title will have a single Text Input with some options, like the size of the Textfield used to feed it.
   - More Complex and fun fields, like the ones of type `SBF` (strawberryfield), will provide a larger list of possible Widgets, ranging from raw JSON input (which you could select if your data was already in the right format) to the reason we are reading this: `Webform driven Widgets`. These Widgets include:
-   - ones the _webform_strawberrfield_ Drupal module provides
+   - ones the _webform_strawberryfield_ Drupal module provides
    - ones that use an existing Webform (which are also Entitites!) which either 1) you created or 2) we provided as a setting
    
 If you chose a widget other than the raw JSON, the widget will take the raw JSON to build, massage and enrich the data so that it can be presented in a visual format by the SBF. This is because a SBF type of field has much more than just a text value. It contains a full graph of metadata and properties, inclusive links to Files and provenance metadata, which for example allows us to use an Upload field directly in the attached/configured webform.
