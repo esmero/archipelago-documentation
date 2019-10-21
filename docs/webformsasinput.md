@@ -44,11 +44,12 @@ If you chose a widget other than the raw JSON, the widget will take the raw JSON
 
 # I think i get this...but how can i use this knowledge now?
 
-Good question! So, to enable, configure and customize these Display Modes you have to navigate go to your `Content Type` Configuration page, in your running Archipelago, which can be found at `/admin/structure/types`. Note: the way things are named in Drupal can be confusing to even the most deeply committed Drupal user, so bear in mind some terms will change. Feel free to read and re-read.
+Good question! So, to enable, configure, and customize these Display Modes you have to navigate to your `Content Type` Configuration page in your running Archipelago. This is found at `/admin/structure/types`. Note: the way things are named in Drupal can be confusing to even the most deeply committed Drupal user, so bear in mind some terms will change. Feel free to read and re-read.
+
 
 ![Display Mode Managment for Content Types](../imgs/managing-display-modes.jpg)
 
-You can see that for every existint Content Type, there is a drop down menu with options:
+You can see that for every existent Content Type, there is a drop down menu with options:
 
 - Manage Display: will lead you to configuration page where you can setup each View Mode and its settings for a given Content Type
 - Manage Form Display: will lead you to configuration page where you can setup each View Mode and its settings for a given Content Type
@@ -57,8 +58,8 @@ You can see that for every existint Content Type, there is a drop down menu with
 ![Manage Display](../imgs/manage-display.jpg)
 
 On the top you will see all your View Modes Listed, with the `Default` one selected and expanded.
-The Table that follows has one row per Field attached/partof this Content Type. Some of the fields are part of the Content Type itself, in this case Digital Object (bundled) and some other ones are common to every Content Entity derived from a Node.
-"Field" column contains each field name (not their type, reason why you don't see Strawberry Field there!) but we can tell your right now that there is one, named "Descriptive Metadata" that is of `SBF` type. 
+The Table that follows has one row per Field attached/part of this Content Type. Some of the fields are part of the Content Type itself, in this case Digital Object (bundled) and some other ones are common to every Content Entity derived from a Node.
+The "Field" column contains each field name (not their type, reason why you don't see Strawberry Field there!) but we can tell you right now that there is one, named "Descriptive Metadata", that is of `SBF` type. 
 
 <details><summary>Wait! Which are the fields in my Content Type?</summary>
 <span>
@@ -69,13 +70,13 @@ How do we know that the field named "Descriptive Metadata" is a Strawberryfield?
 
 *Also Surprise:* You Content Entity has really really just 2 fields! And that, friends, is one of the secret ingredients of Archipelago. All goes into a Single Field.
 But wait: i see more fields in my Manage Display table. Why?
-Well. Some of them are base fields, part of what a Drupal Node is: base field means you can not remove them, they are part of the Defintion itself. One obvious one is the `Title`. 
+Well. Some of them are base fields, part of what a Drupal Node is: base field means you can not remove them, they are part of the Definition itself. One obvious one is the `Title`.
 
-But there are also some very particular to Archipelago ones: You can see there are also ones named
+But there are also some fields very particular to Archipelago: You can see there are also ones named
 "Formatter Object Metadata", "Media" and one named "Static Media"!. Where does come from? Those are also Strawberryfields. It sounds confusing but it is really simple. They are really not "fields" in the sense of having different data than "Descriptive Metadata". Those are In Memory, realtime, copies of the "Descriptive Metadata" SBF field and are there to overcome one limitation of Drupal 8:
 >Each Field can have a single "Formatter" setup per field. 
 
-But we want to re-usue the JSON data to show a Viewer, Show Metadata as HTML directly on the ADO/NODE landing page, and we want also to, for example, format sometimes images as Thumbnails and not using a IIIF viewer only. This CopyFields (Legal term) have also a nice Performance advantage. Drupal needs to fetch only once the data from the real Field, "Descriptive Metadata", from the database. And then just makes the data available in real time to its copies. That makes all fast, very very fast! And of course flexible. As you dig more into Archipelago you will see the benefits of this approach. Finally, if you need to, you can make more CopyFields. But the reallity is, there is a single, only one, SBF in each Digital Object and its named "Descriptive Metadata". 
+But we want to re-usue the JSON data to show a Viewer, Show Metadata as HTML directly on the ADO/NODE landing page, and we want also to, for example, format sometimes images as Thumbnails and not using a IIIF viewer only. This CopyFields (Legal term) have also a nice Performance advantage. Drupal needs to fetch only once the data from the real Field, "Descriptive Metadata", from the database. And then just makes the data available in real time to its copies. That makes all fast, very very fast! And of course flexible. As you dig more into Archipelago you will see the benefits of this approach. Finally, if you need to, you can make more CopyFields. But the reality is, there is a single, only one, SBF in each Digital Object and its named "Descriptive Metadata". 
 
 </span>
 </details>
