@@ -17,7 +17,7 @@ First, formatting output (basically building the front facing page for each cont
 
 The main difference, other than their purpose (Output v/s Input) is that, on View Modes, the settings you apply to each field are associated to "Formatters" and on Form Modes, the settings you apply to each field are connected to "Widgets".
 
-So, resuming, what lives under the Concept of a "Display Mode": 
+So, resuming, this is what lives under the Concept of a "Display Mode": 
 
 ## View Mode
 ![See all your View Modes](../imgs/view-modes.jpg)
