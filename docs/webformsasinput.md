@@ -4,9 +4,9 @@ Drupal 8/9 provides a lot of out-of-the-box functionality to setup the way Conte
 
 ![Display Modes](../imgs/display-modes.jpg)
 
-In a few quick words, The Display Mode Concept covers: formatting your Content Entities and their associated Fields so when a user lands on a Content Page, they are displayed in a certain, hopefuly pleasing, way and also how users with proper Credentials can fill inputs/edit values for each `field` a Content Entity provides.
+In a few quick words, The Display Mode Concept covers: formatting your Content Entities and their associated Fields so when a user lands on a Content Page, they are displayed in a certain, hopefully pleasing, way and also how users with proper Credentials can fill inputs/edit values for each `field` a Content Entity provides.
 
-First, formatting output (basically building the front facing page for each content entity) is done by a `View Mode`. Second, defining how/what input method you are going to use to create or edit Content entities, is handlede by a `Form Mode`. Both Modes, are, in Drupal Lingo, Configuration Entities, they provide things you can configure, you can name them and reuse them and those configurations can all be exported and reimported using YAML files. Also both Modes the following in common:
+First, formatting output (basically building the front facing page for each content entity) is done by a `View Mode`. Second, defining how/what input method you are going to use to create or edit Content entities, is handled by a `Form Mode`. Both Modes, are, in Drupal Lingo, Configuration Entities, they provide things you can configure, you can name them and reuse them and those configurations can all be exported and reimported using YAML files. Also both Modes the following in common:
 
 - Drupal always provides a "default" one that can not be deleted.
 - You can create new ones.
@@ -124,12 +124,12 @@ Gist here is (look at the screenshot and copy the settings):
 ### Confirmation Settings
 
 ![Webform Confirmation Settings](../imgs/webform-confirmation-settings.jpg)
-Gitst here is (again, look at the screenshot and copy the settings):
+Gist here is (again, look at the screenshot and copy the settings):
 - Select "Inline Confirmation". You don't want Webform to send your user to another page while they are still ingesting their ADOs.
 
 ### Handler
 ![Webform Handler Settings](../imgs/webform-handler-settings.jpg)
-The glue, the piece of resistance. The handler is the one that knows how to talk to a SBF. In simple words, the handler (any handler) provides functionality that does something with a Webform Submission. The one that you want to select here, is the "Strawberryfield harvester" handler. Add it, name it whatever you like (or copy what you see in the screenshot) and make sure you select, if running using our deployment strategy, "S3 File System" as the option for "Permanent Destination for uploaded files". The wording is tricky there, its not really Permantent, since that is handled by Archipelago, but more to Temporary, while working in ingesting an Object, destination for the Webform. Its not really wrong neither. Its permanent for the Webform, but we have better plans for the files and metadata!
+The glue, the piece of resistance. The handler is the one that knows how to talk to a SBF. In simple words, the handler (any handler) provides functionality that does something with a Webform Submission. The one that you want to select here, is the "Strawberryfield harvester" handler. Add it, name it whatever you like (or copy what you see in the screenshot) and make sure you select, if running using our deployment strategy, "S3 File System" as the option for "Permanent Destination for uploaded files". The wording is tricky there, its not really Permanent, since that is handled by Archipelago, but more to Temporary, while working in ingesting an Object, destination for the Webform. Its not really wrong neither. Its permanent for the Webform, but we have better plans for the files and metadata!
 
 Save your settings. And you are ready to roll. That webform can now be used as a Setting for any of the StrawberryField Widgets that use Webforms.
 
