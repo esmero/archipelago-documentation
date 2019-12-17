@@ -17,10 +17,10 @@ This document describes how to enable Xdebug for local PHP development using the
 
 ## Part 2: PHPStorm
 
-1. In PHPStorm, open your `archipelago-deploymenet` project.
+1. In PHPStorm, open your `archipelago-deployment` project.
  
 2. Go to `Preferences > Languages & Frameworks > PHP > Debug`. In this window there is an Xdebug section. Use these settings:
-    - Debug port: `9001`. (do NOT use the default, 9000)
+    - Debug port: `9999`. (do NOT use the default, 9000)
     - Can accept external connections: yes, select checkbox
     
     Your settings should look like this (img). Hit APPLY and OK.
@@ -59,7 +59,7 @@ This document describes how to enable Xdebug for local PHP development using the
       ![Debug](../imgs/xdebug/telephone.png) 
  2. Now, you can use `Run > Debug` and select the `docker-debug-server` that we created in the previous steps. The debugging console will appear. Happy debugging!
  
- ####Questions? You can ask Marlo at  [mlongley@metro.org](mlongley@metro.org) or post on our [Google Group](https://groups.google.com/forum/#!forum/archipelago-commons)
+ ####Questions? Please ask our [Google Group](https://groups.google.com/forum/#!forum/archipelago-commons)
  
  
  
