@@ -76,7 +76,7 @@ This document describes how to enable Xdebug for local PHP development using the
 Xdebug makes accessing variables in Drupal kind of great. Many possibilities, including debugging for Twig templates. Happy debugging!
 
  ----
- ####Questions? Please ask our [Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) and we will respond.
+ #### Questions? Please ask our [Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) and we will respond.
  
  
  
