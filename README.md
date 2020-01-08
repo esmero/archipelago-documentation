@@ -7,10 +7,11 @@
 * [Exposing](https://github.com/esmero/archipelago-documentation#exposing)
 
 ## Instructions and Guides
-#### Archipelago Deployment Quickstart
-To get a general glance of what is included and how it works deploy our latest beta locally using `Docker` with [this Guide](https://github.com/esmero/archipelago-deployment/blob/8.x-1.0-beta1/README.md) covering OSX and Ubuntu 18.04 for now.
+### Archipelago Deployment Quickstart
+To get a general glance of what is included and how it works,
+follow [this guide](https://github.com/esmero/archipelago-deployment/blob/8.x-1.0-beta1/README.md) to deploy our latest beta locally using `Docker` with OSX or Ubuntu 18.04.
 
-#### Archipelago Usage Quick Start
+### Archipelago Usage Quick Start
 Now that you have Archipelago running, the following guides will help you master the basics.
 * [Ingesting Your First Object](docs/firstobject.md)
 * [Creating Display Modes](docs/createdisplaymodes.md)
@@ -108,6 +109,8 @@ Archipelago welcomes and appreciates any type of contribution, from use cases an
 ## Acknowledgments
 
 This software is a [Metropolitan New York Library Council](https://metro.org) Open-Source initiative and part of the Archipelago Commons project.
+
+[Archipelago Steering Committee](docs/needtomakethisfile.md)
 
 ## License
 
