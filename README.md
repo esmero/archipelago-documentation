@@ -1,7 +1,7 @@
 # Table of Contents
-## Introduction
-* [Archipelago Commons Intro](https://github.com/esmero/archipelago-documentation#archipelago-commons-intro)
-* [Strawberryfields Forever](https://github.com/esmero/archipelago-documentation#strawberryfields-for-ever)
+## What is Archipelago?
+* [Introduction](https://github.com/esmero/archipelago-documentation#archipelago-commons-intro)
+* [Strawberryfields For Ever](https://github.com/esmero/archipelago-documentation#strawberryfields-for-ever)
 * [Nothing Is Real](https://github.com/esmero/archipelago-documentation#nothing-is-real)
 * [Ingesting](https://github.com/esmero/archipelago-documentation#ingesting)
 * [Exposing](https://github.com/esmero/archipelago-documentation#exposing)
