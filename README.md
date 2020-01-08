@@ -1,3 +1,27 @@
+# Table of Contents
+
+## Introduction
+	- [Archipelago Commons Introduction](https://github.com/esmero/archipelago-documentation#archipelago-commons-intro)
+	- [Strawberryfields Forever](https://github.com/esmero/archipelago-documentation#strawberryfields-for-ever)
+	- [Nothing Is Real](https://github.com/esmero/archipelago-documentation#nothing-is-real)
+	- [Ingesting](https://github.com/esmero/archipelago-documentation#ingesting)
+	- [Exposing](https://github.com/esmero/archipelago-documentation#exposing)
+## Instructions and Guides
+### Archipelago Deployment Quickstart
+	To get a general glance of what is included and how it works deploy our latest beta locally using `Docker` with [this Guide](https://github.com/esmero/archipelago-deployment/blob/8.x-1.0-beta1/README.md) covering OSX and Ubuntu 18.04 for now.
+### Archipelago Usage Quick Start
+	Now that you have Archipelago running, the following guides will help you master the basics.
+		- [Ingesting Your First Object](docs/firstobject.md)
+		- [Creating Display Modes](docs/createdisplaymodes.md)
+		- [How to create a webform as an input method for ADO](docs/webformasinput.md)
+		- [Debugging PHP in Archipelago](docs/xdebug.md)
+## Contributing
+	- [Contributing Guidelines](https://github.com/esmero/archipelago-documentation#contributing)
+	- [Caring & Code + Fixing](https://github.com/esmero/archipelago-documentation#caring--coding--fixing)
+	- [Acknowledgments](https://github.com/esmero/archipelago-documentation#acknowledgments)
+	- [License](https://github.com/esmero/archipelago-documentation#license)
+
+
 # Archipelago Commons Intro
 
 Archipelago Commons, or simply Archipelago, is an evolving Open Source Digital Objects Repository / DAM Server Architecture based
