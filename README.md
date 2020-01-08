@@ -1,4 +1,5 @@
 # Table of Contents
+
 ## What is Archipelago?
 * [Introduction](https://github.com/esmero/archipelago-documentation#archipelago-commons-intro)
 * [Strawberryfields For Ever](https://github.com/esmero/archipelago-documentation#strawberryfields-for-ever)
@@ -7,19 +8,22 @@
 * [Exposing](https://github.com/esmero/archipelago-documentation#exposing)
 
 ## Instructions and Guides
+
 ### Archipelago Deployment Quickstart
+
 To get a general glance of what is included and how it works,
 follow [this guide](https://github.com/esmero/archipelago-deployment/blob/8.x-1.0-beta1/README.md) to deploy our latest beta locally using `Docker` with OSX or Ubuntu 18.04.
 
 ### Archipelago Usage Quick Start
+
 Now that you have Archipelago running, the following guides will help you master the basics.
 * [Ingesting Your First Object](docs/firstobject.md)
 * [Creating Display Modes](docs/createdisplaymodes.md)
 * [How to create a webform as an input method for ADO](docs/webformasinput.md)
-
 * [Debugging PHP in Archipelago](docs/xdebug.md)
 
 ## Contributing
+
 * [Contributing Guidelines](https://github.com/esmero/archipelago-documentation#contributing)
 * [Caring & Code + Fixing](https://github.com/esmero/archipelago-documentation#caring--coding--fixing)
 * [Acknowledgments](https://github.com/esmero/archipelago-documentation#acknowledgments)
