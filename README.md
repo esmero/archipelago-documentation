@@ -1,7 +1,7 @@
 # Table of Contents
 * [What is Archipelago?](https://github.com/esmero/archipelago-documentation#archipelago-commons-intro)
-* [Instructions and Guides](https://github.com/esmero/archipelago-documentation#archipelago-deployment-quickstart)
 * [Code of Conduct](https://github.com/esmero/archipelago-documentation/blob/8.x-1.0-beta1/CODE_OF_CONDUCT.md)
+* [Instructions and Guides](https://github.com/esmero/archipelago-documentation#archipelago-deployment-quickstart)
 * [Contributing](https://github.com/esmero/archipelago-documentation#contributing)
 
 # Archipelago Commons Intro
@@ -67,6 +67,9 @@ This templating system is exposed to Archipelago users through the UI and stored
 
 Templates or recipes can be shared, exported, ingested, updated, and adapted in many ways. Fast changes are possible without having to wait for the next mayor release of Archipelago or your favorited Metadata Schema Specs Committee agreeing on the next or the last version. Of course, this module not only handles metadata but media assets too, extracting local or remote URIs and files from your metadata and rendering them as media viewers: books, 3D models, images, panoramas, A/V with IIIF in its soul. Discover what [`format_strawberryfield can`](format.md) do and what many other possibilities are exposed through our templating system.
 
+# Code of Conduct
+The Archipelago Commons community is dedicated to providing a welcoming and positive experience for all participants. Please review our [Code of Conduct](docs/CODE_OF_CONDUCT.md).
+
 # Archipelago Deployment Quickstart
 To get a general glance of what is included and how it works, follow [this guide](https://github.com/esmero/archipelago-deployment/blob/8.x-1.0-beta1/README.md) to deploy our latest beta locally using `Docker` with OSX or Ubuntu 18.04.
 
@@ -76,9 +79,6 @@ Now that you have Archipelago running, the following guides will help you master
 * [Creating Display Modes](docs/createdisplaymodes.md)
 * [How to Create a Webform as an Input Method for ADO](docs/webformasinput.md)
 * [Debugging PHP in Archipelago](docs/xdebug.md)
-
-# Code of Conduct
-The Archipelago Commons community is dedicated to providing a welcoming and positive experience for all participants. Please review our [Code of Conduct](docs/CODE_OF_CONDUCT.md).
 
 # Contributing
 Archipelago welcomes and appreciates any type of contribution, from use cases and needs, questions, documentation, devops and configuration and -- of course -- code, fixes, or new features. To make the process less painful, we recommend you first to read our documentation and deploy a local instance. After that please follow [this set of guidelines](docs/giveortake.md) to help you get started.
