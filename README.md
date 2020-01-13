@@ -77,7 +77,7 @@ To get a general glance of what is included and how it works, follow [this guide
 Now that you have Archipelago running, the following guides will help you master the basics.
 * [Ingesting Your First Object](docs/firstobject.md)
 * [Creating Display Modes](docs/createdisplaymodes.md)
-* [How to Create a Webform as an Input Method for ADO](docs/webformsasinput.md)
+* [How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)](docs/webformsasinput.md)
 * [Debugging PHP in Archipelago](docs/xdebug.md)
 
 # Contributing
