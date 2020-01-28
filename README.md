@@ -1,6 +1,6 @@
 # Table of Contents
 * [What is Archipelago?](https://github.com/esmero/archipelago-documentation#archipelago-commons-intro)
-* [Code of Conduct](https://github.com/esmero/archipelago-documentation#contributing)
+* [Code of Conduct](https://github.com/esmero/archipelago-documentation#code-of-conduct)
 * [Instructions and Guides](https://github.com/esmero/archipelago-documentation#archipelago-deployment-quickstart)
 * [Contributing](https://github.com/esmero/archipelago-documentation#contributing)
 
