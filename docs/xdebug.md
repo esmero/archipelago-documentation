@@ -3,20 +3,14 @@
 This document describes how to enable Xdebug for local PHP development using the PHPStorm IDE and a docker container running the Archipelago `esmero-php:development` image. It involves interacting with the [esmero/archipelago-docker-images](https://github.com/esmero/archipelago-docker-images) repo and the [esmero/archipelago-deployment](https://github.com/esmero/archipelago-deployment) repo.
 
 ## Part 1: Docker
-1. Build the development image with Xdebug enabled. Run the following from the `/archipelago-docker-images/esmero-php-fmp` folder:
-
-    `sudo docker build -f Dockerfile.dev -t esmero-php:development . --no-cache`
-    
-    This image is based on top of our main `esmero-php` image with a few additions.
-
-2. Run the following commands from your `/archipelago-deployment` directory:
+1. Run the following commands from your `/archipelago-deployment` directory:
    
    `docker-compose down` \
    `docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d`
    
-   This version of `docker-compose up` uses an override file to modify the image being used by our PHP service. `docker-compose.dev.yml` uses the `esmero-php:development` tagged image that we built in step 1. To stop the containers in the future, run `docker-compose -f docker-compose.yml -f docker-compose.dev.yml down`.
+   This version of `docker-compose up` uses an override file to modify our services. `docker-compose.dev.yml` we now have an extra PHP container called `esmero-php-debug`. To stop the containers in the future, run `docker-compose -f docker-compose.yml -f docker-compose.dev.yml down`.
    
-   So we have rebuilt the containers and now you are ready for Part 2.
+   So we have reloaded the containers and now you are ready for Part 2.
 
 ## Part 2: PHPStorm
 
