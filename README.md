@@ -10,7 +10,7 @@ Archipelago Commons, or simply Archipelago, is an evolving Open Source Digital O
 on the popular CMS [`Drupal8/9`](https://www.drupal.org) and released under [`GLP V.3 Licence`](https://www.gnu.org/licenses/gpl-3.0.txt).
 
 Archipelago is a mix of deeply integrated custom-coded Drupal8 modules (made with care by us) and a curated and well-configured Drupal8 instance, running under a discrete and and well-planned set of service containers.
-All of this driven by a clear and [concise but thoughtful planned technical roadmap](https://github.com/esmero/archipelago-deployment/issues/5).
+All of this driven by a clear and [concise but thoughtful planned technical roadmap -Updated for Beta2](https://github.com/esmero/archipelago-deployment/issues/35).
 
 Archipelago was dreamt as a multi-tenant, distributed, capable system (as its name suggests!) and can live isolated or in flocks of similar deployments, sharing storage, services, or -- even better -- just the discovery layer. Learn more about the different [`Software Services`](devops.md) used by Archipelago.
 
@@ -34,15 +34,15 @@ Learn [`what makes Archipelago so different`](docs/ourtake.md) and hopefully als
 
 Archipelago integrates transparently into the Drupal 8 ecosystem using its Core Content Entity System (Nodes), Discovery (Search API) and in general all its Core Components plus a few well maintained external ones.
 
-By design (and because we think its imperative), Archipelago takes full charge of the metadata layer and associated media assets by implementing a highly configurable, smart Drupal field written in JSON named [`strawberryfield`](https://github.com/esmero/strawberryfield/tree/8.x-1.0-beta1) that attaches to any content.
+By design (and because we think its imperative), Archipelago takes full charge of the metadata layer and associated media assets by implementing a highly configurable, smart Drupal field written in JSON named [`strawberryfield`](https://github.com/esmero/strawberryfield/tree/8.x-1.0-beta2) that attaches to any content.
 
 All of JSON's internals, keys, paths, and values are dynamically exposed to the rest of the ecosystem. Strawberryfield even remembers its structure as data evolves by storing JSON apths of every little detail.
 
 Explore what [`strawberryfield does`](docs/strawberryfield.md), why we built it, and what issues it addresses.
 
-## Nothing Is Real
+## Nothing Is Real (Beta2)
 
-Archipelago includes two additional companion modules, [`webform_strawberryfield`](https://github.com/esmero/webform_strawberryfield/tree/8.x-1.0-beta1) and [`format_strawberryfield`](https://github.com/esmero/webform_strawberryfield/tree/8.x-1.0-beta1) that
+Archipelago includes two additional companion modules, [`webform_strawberryfield`](https://github.com/esmero/webform_strawberryfield/tree/8.x-1.0-beta2) and [`format_strawberryfield`](https://github.com/esmero/webform_strawberryfield/tree/8.x-1.0-beta2) that
 extend the core metadata capabilities of Strawberryfield and allow the same flexibility to be exposed during ingest and viewing of digital objects.
 
 ## Ingesting
@@ -71,7 +71,7 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
 The Archipelago Commons community is dedicated to providing a welcoming and positive experience for all participants. To ensure this can be met for all parties, please review our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 # Archipelago Deployment Quickstart
-To get a general glance of what is included and how it works, follow [this guide](https://github.com/esmero/archipelago-deployment/blob/8.x-1.0-beta1/README.md) to deploy our latest beta locally using `Docker` with OSX or Ubuntu 18.04.
+To get a general glance of what is included and how it works, follow [this guide](https://github.com/esmero/archipelago-deployment/blob/8.x-1.0-beta2/README.md) to deploy our latest beta locally using `Docker` with OSX or Ubuntu 18.04.
 
 # Archipelago Usage Guides
 Now that you have Archipelago running, the following guides will help you master the basics.
