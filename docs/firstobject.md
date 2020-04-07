@@ -4,9 +4,9 @@
 
 You followed every [Deployment step](https://github.com/esmero/archipelago-deployment/blob/8.x-1.0-beta1/README.md) and you have now a local ``Archipelago`` instance. Great!
 
-So what now? It is time to give your new Repository a try and we feel the best way is to start by ingest a simple Digital Object.
+So what now? It is time to give your new repository a try and we feel the best way is to start by ingest a simple Digital Object.
 
-Note: This guide will assume Archipelago is running on `http://localhost:8001`, so if you wizardly deployed everthing in a different location, please replace all `URIs` with your own setup while following this guide.
+**Note:** This guide will assume Archipelago is running on `http://localhost:8001`, so if you wizardly deployed everthing in a different location, please replace all `URIs` with your own setup while following this guide.
 
 ## Requirements
  - Running Archipelago (http://localhost:8001)
@@ -15,28 +15,29 @@ Note: This guide will assume Archipelago is running on `http://localhost:8001`, 
 
 ## Welcome!
 
-Start by opening `http://locahost:8001` in your favourite Web Browser.
+Start by opening `http://locahost:8001` in your favorite Web Browser.
 
 ![Welcome](../imgs/01_ingest_log-in_beta2.png)
 
 Your Demo deployment will have a fancy Home page with some banners and a small explanation of what Archipelago is and can do. Feel free to read through that now or later.
 
-Click on `Log in` and use your `demo` credentials from them deployment guide.
+Click on `Log in` in the top left corner and use your `demo` credentials from the deployment guide.
 
-- User: demo
+- user: demo
 - pass: demo
 
 (or whatever password you decided was easy for you to remember during the deployment phase)
 
-![Log In](../imgs/02_ingest_demo-demo_beta2.png)
-
 Press the `Log in` button.
 
-![Logged In](../imgs/03_ingest-logged-in_beta2.png)
+![Log In](../imgs/02_ingest_demo-demo_beta2_cropped.png)
 
-Great, welcome `demo` user! This users has limited credentials and uses the same global Theme as any anonymous user would. Still, `demo` can create content, so let's use those super powers and give that a try.
+Great, welcome `demo` user! This users has limited credentials and uses the same global theme as any anonymous user would. Still, `demo` can create content, so let's use those super powers and give that a try.
 
 You will see a new `Menu item` on the top, black, navigation bar named `Add Content`. Click it!
+
+![Logged In](../imgs/03_ingest-logged-in_beta2_cropped.png)
+
 
 ### Brief Background
 
