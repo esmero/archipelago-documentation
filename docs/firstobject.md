@@ -17,7 +17,7 @@ So what now? It is time to give your new repository a try and we feel the best w
 
 Start by opening `http://locahost:8001` in your favourite Web Browser.
 
-![Welcome](../imgs/ingest-first-object_beta2/01_log-in.jpg)
+![Welcome](../imgs/firstobject/01_log-in.jpg)
 
 Your Demo deployment will have a fancy Home page with some banners and a small explanation of what Archipelago is and can do. Feel free to read through that now or later.
 
@@ -30,13 +30,13 @@ Click on `Log in` in the top left corner and use your `demo` credentials from th
 
 Press the `Log in` button.
 
-![Log In](../imgs/ingest-first-object_beta2/02_demo-demo.jpg)
+![Log In](../imgs/firstobject/02_demo-demo.jpg)
 
 Great, welcome `demo` user! This users has limited credentials and uses the same global theme as any anonymous user would. Still, `demo` can create content, so let's use those super powers and give that a try.
 
 You will see a new `Menu item` on the top, black, navigation bar named `Add Content`. Click it!
 
-![Logged In](../imgs/ingest-first-object_beta2/03-logged-in.jpg)
+![Logged In](../imgs/firstobject/03-logged-in.jpg)
 
 
 ### Brief Background
@@ -80,17 +80,17 @@ There is of course a lot more to Nodes, Content Types, Formatters, Widgets and i
 
 Below you see all the `Content Types` defined by default in Archipelago. Let's click on `Digital Object` to get your first Digital Object Node.
 
-![Add Content](../imgs/ingest-first-object_beta2/04_add-content.jpg)
+![Add Content](../imgs/firstobject/04_add-content.jpg)
 
 ### My Metadata
 
-What you see below is a `Form Mode` in action, with the Title field exposed as a simple text input (`Field Widget`), a Multi Step Web Form that will ingest metadata into a field of type Strawberry Field (where all the magic happens) attached to that field using a `Webform Field Widget`, an editorial/advanced Block on the right side and a Workflow/state drop down (`Save as`) at the bottom.
+What you see below is a `Form Mode` in action. A multi-step Webform that will ingest metadata into a field of type Strawberry Field (where all the magic happens) attached to that field using a `Webform Field Widget`, an editorial/advanced Block on the right side and a Workflow/state drop down (`Save as`) at the bottom.
 
 Let's fill out the form to begin our ingest. We recommend to use similar values as the ones shown in the screen capture to make following the tutorial easier.
 
 All fields with a red `*` are required fields. Be sure to enter a `Title`, `Media Type`, `Description`, and `Location, Place or Address`. When you are finished, press `Move on to next step` at the bottom of the form.
 
-![Ingest Step 1 - MyMetadata](../imgs/ingest-first-object_beta2/05_MyMetadata.jpg)
+![Ingest Step 1 - MyMetadata](../imgs/firstobject/05_MyMetadata.jpg)
 
 **Tip:** When entering a location, place or address you will need to click on the `Search OpenStreet Maps` button, which is what that big red arrow is pointing to in the screenshot above.
 
@@ -118,23 +118,23 @@ As the name of this step suggests; you will be adding all your Linked Data eleme
 
 Again, enter all fields with a red `*` and when you are finished, click `Move on to next step`
 
-![Ingest Step 2 - Linked Data](../imgs/ingest-first-object_beta2/06_step-two_linked-data.jpg)
+![Ingest Step 2 - Linked Data](../imgs/firstobject/06_step-two_linked-data.jpg)
 
 ### Collections
 
 Since this is our first digital object we do not yet have a Digital Object *Collection* for which `My First Digital Object` could be a member of. In other words, you can leave `Collection Membership` blank and click `Next: Upload Files`.
 
-![Ingest Step 3 - Collections](../imgs/ingest-first-object_beta2/07_step-three_collections.jpg)
+![Ingest Step 3 - Collections](../imgs/firstobject/07_step-three_collections.jpg)
 
 ### Upload Files
 
 Now we will upload our `Photograph`. Click `Choose Files` to open your file selector window and choose which file you would like to ingest.
 
-![Ingest Step 4 - Attach Files pt 1](../imgs/ingest-first-object_beta2/08_step-four_upload-files_1.jpg)
+![Ingest Step 4 - Attach Files pt 1](../imgs/firstobject/08_step-four_upload-files_1.jpg)
 
 Once you've uploaded your file, you will see all the Exif data extracted from the image, like so...
 
-![Ingest Step 4 - Attach Files pt 2](../imgs/ingest-first-object_beta2/09_step-four_upload-files_2.jpg)
+![Ingest Step 4 - Attach Files pt 2](../imgs/firstobject/09_step-four_upload-files_2.jpg)
 
 Once you've mentally digested all of that data, let's go ahead and click `Save Metadata`.
 
@@ -146,14 +146,14 @@ Once you've mentally digested all of that data, let's go ahead and click `Save M
 
 Alright, we've made it. We've added metadata, linked Data, uploaded our files and now... we're ready to **save**! Go ahead and change the status from *Draft* to *Published* and click `Save`.
 
-![Ingest Step 7 - Complete 1](../imgs/ingest-first-object_beta2/10_step-six_complete.jpg)
+![Ingest Step 7 - Complete 1](../imgs/firstobject/10_step-six_complete.jpg)
 
 Once you hit save you should see the following green messages and your first Archipelago Digital Object!
 
-![Ingest Step 7 - Complete Green Messages](../imgs/ingest-first-object_beta2/11_step-six_complete_green-messages.jpg)
+![Ingest Step 7 - Complete Green Messages](../imgs/firstobject/11_step-six_complete_green-messages.jpg)
 
-![Ingest Step 7 - Complete 2](../imgs/ingest-first-object_beta2/12_step-six_complete_2.jpg)
+![Ingest Step 7 - Complete 2](../imgs/firstobject/12_step-six_complete_2.jpg)
 
 Congratulations on creating your first digital object! 🍓
 
-➡️[Back to Instructions and Guides](https://github.com/esmero/archipelago-documentation#archipelago-deployment-quickstart)
+[Back to Instructions and Guides](https://github.com/esmero/archipelago-documentation#archipelago-deployment-quickstart)
