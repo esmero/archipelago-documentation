@@ -88,7 +88,7 @@ What you see below is a `Form Mode` in action. A multi-step Webform that will in
 
 Let's fill out the form to begin our ingest. We recommend to use similar values as the ones shown in the screen capture to make following the tutorial easier.
 
-All fields with a red `*` are required fields. Be sure to enter a `Title`, `Media Type`, `Description`, and `Location, Place or Address`. When you are finished, press `Move on to next step` at the bottom of the form.
+Make sure you select `Photograph` as `Media Type` and all the fields with a red `*` are filled up. Then press `Move on to next step` at the bottom of the webform to load the next step inline. 
 
 ![Ingest Step 1 - MyMetadata](../imgs/firstobject/05_MyMetadata.jpg)
 
