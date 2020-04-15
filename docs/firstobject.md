@@ -36,7 +36,7 @@ Great, welcome `demo` user! This users has limited credentials and uses the same
 
 You will see a new `Menu item` on the top, black, navigation bar named `Add Content`. Click it!
 
-![Logged In](../imgs/firstobject/03-logged-in.jpg)
+![Logged In](../imgs/firstobject/03_logged-in.jpg)
 
 
 ### Brief Background
