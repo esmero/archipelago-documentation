@@ -30,13 +30,13 @@ Here we see all of the elements in `Descriptive Metadata`; *Title*, *Media type*
 
 ![Upload Associated Documents element](../imgs/modifyingfileextensionsinwebform/05_upload-associated-documents.jpg)
 
-A new screen will pop up named `Edit Upload Associated Documents element`. This is where you configure can configure maximum number of values (i.e. files - under `ELEMENT SETTINGS`), the maximum file size and, what we want to do, edit the allowed file extensions for this element. The latter both exist under `FILE SETTINGS`, high lighted in the screenshot below.
+A new screen will pop up named `Edit Upload Associated Documents element`. This is where you configure can configure maximum number of values (under `ELEMENT SETTINGS`), the maximum file size and edit the allowed file extensions for this element, which is what we'll be doing. The latter both exist under `FILE SETTINGS`, high lighted in the screenshot below.
 
 ![Edit Upload Associated Documents element](../imgs/modifyingfileextensionsinwebform/06_edit-upload-associated-documents-element.jpg)
 
-When you scroll down you'll see the `Maximum file size` and `Allowed file extensions` fields. This is where we will add the `csv` file extension and where you can also edit the maximum file size allowed to be uploaded. You can see in the screenshot, this repository is configured to allow the maximum.
+When you scroll down you'll see the `Allowed file extensions` fields. This is where we will add the `csv` file extension and where you can also edit the maximum file size allowed to be uploaded. You can see in the screenshot, this repository is configured to allow the maximum file size.
 
-**Please note:** All file extensions are separated by a space; no `,` or `.` between the values (i.e. file extensions).
+**Please note:** All file extensions are separated by a space; no `,` or `.` between the values.
 
 Once you've added all the file extensions your project needs, scroll down to the bottom of `Edit Upload Associated Documents element` and click `Save`.
 
