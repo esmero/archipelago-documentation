@@ -1,71 +1,60 @@
-# Modifying allowable file extensions in a Webform
+# Customizing Webforms: Modifying allowable file extensions
 
-This guide will walk users through how to modify their webform to allow additional file extensions to be ingested into Archipelago. For this guide, we will be adding `csv` and `md` files to be included in our workflow when creating, for example, a `DigitalDocument` object.
+A guide to walk users through how to modify the Webform `Descriptive Metadata` to allow additional file extensions to be ingested into Archipelago.
+
+## Context
+
+When creating, for example, a `DigitalDocument` Object in Archipelago and you reach the step to upload your documents, you will see a section outlining the maximum number of files, the maximum file size and the allowed file extensions that can be uploaded. Let's say this `DigitalDocument` Object contains a data set saved as a `csv` file. Well, if you look below at the screenshot of the default settings shipped with the Webform `Descriptive Metadata`, you'll notice that `csv` is not included in the allowed file extensions. Archipelago has no restrictions on what types of files can be uploaded into a repository however, some use cases require a little configuring to fit a specific need. This guide will walk users through the steps to modify a webform to allow additional file extensions to be included during ingest.
+
+![Default Step 4](../imgs/modifyingfileextensionsinwebform/01_default-step-4.jpg)
 
 **Prerequisites for following this guide:**
-- Running Archipelago (http://localhost:8001)
+- Running Archipelago (on http://localhost:8001 if you followed the [deployment guide](https://github.com/esmero/archipelago-deployment#archipelago-docker-deployment) verbatim)
 - Admin credentials
 
 ## Let's begin!
 
-### Admin log in
-
-First thing we want to do is log in with our admin credentials. Assuming that you have followed the [deployment guide](https://github.com/esmero/archipelago-deployment#archipelago-docker-deployment) verbatim, let's open `http://localhost:8001` and log in with the admin credentials:
-
-- user: admin
-- pass: archipelago
-
-![Log In](../imgs/modifyingfileextensionsinwebform/01_admin-login.jpg)
-
-Once logged in, you'll see your admin user's profile page. Take note of the tool bar at the top. That `Manage` button is going to be our first friend in this guide.
-
-![Logged In](../imgs/modifyingfileextensionsinwebform/02_admin-logged-in.jpg)
-
 ### Managing Webforms
 
-Let's click on `Manage`, then `Structure` and when the page loads, scroll down and you'll find `Webforms`. Go ahead and click `Webforms`.
+Once logged in as an admin, the first thing we need to do is navigate to the Wbeforms page so we can edit the Webform `Descriptive Metadata.` Click on `Manage`, then `Structure` and when the page loads, scroll down and click `Webforms`.
 
 ![Manage > Structure > Webforms](../imgs/modifyingfileextensionsinwebform/03_manage-structure-webforms.jpg)
 
-Here is where all of the Webforms inside your Archipelago live. In this screenshot, you'll see that I've begun creating a few custom webforms (`Digital Object Collection Webform`, `My Favorite Webform` and `Student Webform`) to suit some of my repository needs. However, let's focus on the default wenform shipped with Archipelago: `Descriptive Metadata`. This will be the webform we're going to modify. Go ahead and click `Build` on under the `OPERATIONS` column.
+This is where all of the Webforms inside your Archipelago live. In this screenshot you'll notice a few custom webforms that have been created to fit the needs of this particular repository: `Digital Object Collection Webform`, `My Favorite Webform` and `Student Webform`. For this guide we're going to edit the default Webform `Descriptive Metadata`. Go ahead and click `Build` under the `OPERATIONS` column for `Descriptive Metadata`.
 
 ![Descriptive Metadata](../imgs/modifyingfileextensionsinwebform/04_webform-page.jpg)
 
 ### Step 3: Editing Elements
 
-Here we see all of the elements in our Webform: *Title*, *Media type*, *Description*, *Linked Data* elements, etc. The element that we want to edit is `Upload Associated Documents`. Go ahead and click on `Edit` under the `OPERATIONS` column.
+Here we see all of the elements in `Descriptive Metadata`; *Title*, *Media type*, *Description*, *Linked Data* elements, etc. The element that we want to edit is `Upload Associated Documents` as this is the field you will use to upload `pdf`, `doc`, `rtf`, `txt`, etc. files during the ingest workflow.  Go ahead and click on `Edit` under the `OPERATIONS` column.
 
-![Upload Associated Documents](../imgs/modifyingfileextensionsinwebform/05_upload-associated-documents.jpg)
+![Upload Associated Documents element](../imgs/modifyingfileextensionsinwebform/05_upload-associated-documents.jpg)
 
-A new screen will pop up named `Edit Upload Associated Documents element`. Inside, among many other things, you'll find a block titled `File Settings` and inside that block you'll see a field titled `Allowed file extensions`. This is where we'll modify which file extensions are allowed to be uploaded.
+A new screen will pop up named `Edit Upload Associated Documents element`. This is where you configure can configure maximum number of values (i.e. files - under `ELEMENT SETTINGS`), the maximum file size and, what we want to do, edit the allowed file extensions for this element. The latter both exist under `FILE SETTINGS`, high lighted in the screenshot below.
 
-![File Settings > Allowed File Extensions](../imgs/modifyingfileextensionsinwebform/06_file-settings_allowed-file-extensions.jpg)
+![Edit Upload Associated Documents element](../imgs/modifyingfileextensionsinwebform/06_edit-upload-associated-documents-element.jpg)
 
-Let's add `csv` and `md` as file types we want to allow to be upload with for the `Upload Associated Documents` element.
+When you scroll down you'll see the `Maximum file size` and `Allowed file extensions` fields. This is where we will add the `csv` file extension and where you can also edit the maximum file size allowed to be uploaded. You can see in the screenshot, this repository is configured to allow the maximum.
 
-![Add csv and md](../imgs/modifyingfileextensionsinwebform/07_add-csv-md.jpg)
+**Please note:** All file extensions are separated by a space; no `,` or `.` between the values (i.e. file extensions).
 
-**Two things to note**
-- All file extensions are separated by a space; no `,` or `.` between the values (i.e. file extensions).
-- Notice that above the `Allowed file extensions` is a `Maximum file size` field. This is where you can change the minimum or maximum file size allowed for ingest.
+Once you've added all the file extensions your project needs, scroll down to the bottom of `Edit Upload Associated Documents element` and click `Save`.
 
-Scroll down on this screen and click `Save`.
+![Add csv](../imgs/modifyingfileextensionsinwebform/07_add-csv.jpg)
 
-![Save](../imgs/modifyingfileextensionsinwebform/08_save.jpg)
-
-Now, **this step is imperative for saving your changes**, scroll to the bottom of your elements list page and click `Save elements`. So again, first we hit `Save` at the bottom of the `Edit Upload Associated Documents element` page (where we added which file extensions are allowed to be uploaded) and then scroll to the bottom of the Webform elements page and click `Save elements`.
+**This next step is imperative for saving your changes**, scroll to the bottom of your elements list page and click `Save elements` in order to persist all changes made.
 
 ![Save Elements](../imgs/modifyingfileextensionsinwebform/09_save-elements.jpg)
 
 ### Complete
 
-Woohoo! Now when you go to ingest a `DigitalDocument` object, you will be able to add `csv` and `md` files. 🍓
+Woohoo! Now when you go to ingest a `DigitalDocument` object, you will be able to add `csv` files. 🍓
 
 ![Complete](../imgs/modifyingfileextensionsinwebform/10_complete.jpg)
 
-### Final recap and "What if I want to...?"
+### Recap + "What if I want to...?"
 
-When logged in as an admin, we went to *Manage > Structure > Webforms* and click `Build` under the OPERATIONS column for `Descriptive Metadata` to edit the elements in the Webform (shortcut: /admin/structure/webform/manage/descriptive_metadata). Then we click on `Upload Associated Documents` to edit the element, scroll down to the *Allowed file extensions* field and add `csv` and `md` without `.` or `,` separating the values. Click `Save` at the bottom of that page and then `Save elements` at the bottom of the Webform page.
+When logged in as an admin, we go to *Manage > Structure > Webforms* and click on `Build` under the `OPERATIONS` column of `Descriptive Metadata` (shortcut: /admin/structure/webform/manage/descriptive_metadata). Then we click on `Upload Associated Documents` to edit the element, scroll down to the *Allowed file extensions* field and add `csv` without `.` or `,` separating the values. Click `Save` at the bottom of that page and then `Save elements` at the bottom of the Webform page.
 
 That's great, but what if I want to upload a `wav` or `aiff` file for `MusicRecording`? Currently `mp3` is the only allowed audio file extension.
 
