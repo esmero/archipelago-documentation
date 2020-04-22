@@ -1,26 +1,26 @@
 # Customizing Webforms: Modifying allowable file extensions
 
-A guide to walk users through how to modify the Webform `Descriptive Metadata` to allow additional file extensions to be ingested into Archipelago. This is the default Webform shipped by following [archipelago-deployment](https://github.com/esmero/archipelago-deployment).
+A guide to walk users through how to modify the Webform `Descriptive Metadata` to allow additional file extensions to be ingested into Archipelago. This is the default Webform with Archipelago by following [archipelago-deployment](https://github.com/esmero/archipelago-deployment).
 
 ## Context
 
-When creating an Archipelago Digital Object (ADO), there is a step during the ingest to upload the files associated with your ADO. You may notice there is a section on the Webform outlining the maximum number of files allowed, the maximum file size allowed, and the allowed file extensions that can be uploaded.
+When creating an Archipelago Digital Object (ADO), on Step 4 of the ingest, `Attach Files`, there is a step during the ingest to upload the files associated with your ADO. There will be a section on the Webform outlining the maximum number of files allowed, the maximum file size allowed, and the allowed file extensions that can be uploaded.
 
-Let's say we are creating an ADO with the media type `DigitalDocument` and this ADO contains a data set saved as a `csv` file. Archipelago has no restrictions on what file extensions can be uploaded, however some use cases will require a little configuring to  fit a specific need. This guide will walk users through the steps to modify the default Webform shipped with Archipelago, `Descriptive Metadata`, to allow additional file extensions to be included during an ingest.
+Let's say we are creating an ADO with the media type `DigitalDocument` and this ADO contains a data set saved as a `csv` file, but when we get to Step 4 of the ingest workflow we find that `csv` is not an allowed file extension. Fortunately, Archipelago has no restrictions on what file extensions can be uploaded, but some use cases will require a little configuring to  fit a specific need. This guide will walk users through the steps to modify the default Webform, `Descriptive Metadata`, to allow additional file extensions to be included during an ingest.
 
 **Prerequisites for following this guide:**
-- Running Archipelago (on http://localhost:8001 if you followed the [deployment guide](https://github.com/esmero/archipelago-deployment#archipelago-docker-deployment) verbatim)
+- Running instance of Archipelago (on http://localhost:8001 if you followed the [deployment guide](https://github.com/esmero/archipelago-deployment#archipelago-docker-deployment) verbatim)
 - Admin credentials
 
 ## Let's begin!
 
 ### Managing Webforms
 
-Once logged in as `admin`, the first thing we need to do is navigate to the Wbeforms page so we can edit the Webform `Descriptive Metadata.` Click on `Manage`, then `Structure` and when the page loads, scroll down and click `Webforms`.
+Once logged in as `admin`, the first thing we need to do is navigate to the Webforms page so we can edit the Webform `Descriptive Metadata.` Click on `Manage`, then `Structure` and when the page loads, scroll down and click `Webforms`.
 
 ![Manage > Structure > Webforms](../imgs/modifyingfileextensionsinwebform/02_manage-structure-webforms.jpg)
 
-This is where all of the Webforms inside your Archipelago live. For this guide we're going to edit the Webform `Descriptive Metadata`, which is the default Webform shipped with Archipelago. Go ahead and click `Build` under the `OPERATIONS` column for `Descriptive Metadata`.
+This is where all of the Webforms inside your Archipelago live. For this guide we're going to edit the Webform `Descriptive Metadata`. Go ahead and click `Build` under the `OPERATIONS` column for `Descriptive Metadata`.
 
 ![Descriptive Metadata](../imgs/modifyingfileextensionsinwebform/03_webform-page.jpg)
 
@@ -30,7 +30,7 @@ Here we see all of the elements in `Descriptive Metadata`; *Title*, *Media type*
 
 ![Upload Associated Documents element](../imgs/modifyingfileextensionsinwebform/04_upload-associated-documents.jpg)
 
-A new screen will pop up named `Edit Upload Associated Documents element`. This is where you configure can configure the maximum number of values (under `ELEMENT SETTINGS`), the maximum file size and also edit the allowed file extensions for this element, which is what we'll be doing. The latter both exist under `FILE SETTINGS`, high lighted in the screenshot below.
+A new screen will pop up named `Edit Upload Associated Documents element`. This is where you configure can configure the maximum number of values (under `ELEMENT SETTINGS`), the maximum file size and also edit the allowed file extensions for this element, which is what we'll be doing. The latter both exist under `FILE SETTINGS` section, highlighted in the screenshot below.
 
 ![Edit Upload Associated Documents element](../imgs/modifyingfileextensionsinwebform/05_edit-upload-associated-documents-element.jpg)
 
@@ -46,7 +46,7 @@ Once you've added all the file extensions your project needs, scroll down to the
 
 ### Complete
 
-Woohoo! Now when you go to ingest a `DigitalDocument` object, you will be able to add `csv` files. 🍓
+Woohoo! Now when you are ingesting a `DigitalDocument` object, you will be able to add `csv` files! 🍓
 
 ![Complete](../imgs/modifyingfileextensionsinwebform/08_complete.jpg)
 
