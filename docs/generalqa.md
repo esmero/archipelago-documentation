@@ -26,7 +26,7 @@ A: You need to enable the necessary Twig modules.
   - Bamboo Twig - Path & Url
   - Bamboo Twig - Token
 
-![BambooTwigInstall](..imgs/generalqa/BambooTwigInstall.jpg)
+![BambooTwigInstall](../imgs/generalqa/BambooTwigInstall.jpg)
 
 4. Click `Install`.
 
