@@ -6,12 +6,12 @@ To contribute to this section, please review our [Code of Conduct](CODE_OF_CONDU
 
 ---
 
-## Twig Modules configuration
-Q: When attempting to save a Twig template for a Metadata Display, I receive an error message related to “unknown” Twig functions, such as:
+## Twig Modules Configuration
+**Q:** When attempting to save a Twig template for a Metadata Display, I receive an error message related to an `Unknown "bamboo_load_entity" function`.
 
 ![BambooTwigError](../imgs/generalqa/BambooTwigError.jpg)
 
-A: You need to enable the necessary Twig modules.
+**A:** You need to enable the necessary Twig modules.
 
 1. Naviagte to /admin/modules
 
