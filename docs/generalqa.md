@@ -36,4 +36,4 @@ To contribute to this section, please review our [Code of Conduct](CODE_OF_CONDU
 
 Additional general discussions may be found on the [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons)  
 
-Return to [Archipelago Documentation](https://github.com/esmero/archipelago-documentation/tree/8.x-1.0-beta1).
+Return to [Archipelago Documentation](../README.md).
