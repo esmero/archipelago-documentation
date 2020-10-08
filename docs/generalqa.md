@@ -9,7 +9,7 @@ To contribute to this section, please review our [Code of Conduct](CODE_OF_CONDU
 ## Twig Modules configuration
 Q: When attempting to save a Twig template for a Metadata Display, I receive an error message related to “unknown” Twig functions, such as:
 
-![BambooTwigError](../imgs/BambooTwigError.jpg)
+![BambooTwigError](../imgs/generalqa/BambooTwigError.jpg)
 
 A: You need to enable the necessary Twig modules.
 
@@ -17,7 +17,7 @@ A: You need to enable the necessary Twig modules.
 
 2. In the “Enter a part of the module name or description” box, enter “bam” to filter for the related Bamboo Twig modules. Alternatively, scroll down to the Bamboo Twig modules section on this page.
 
-![EnterModulePart](../imgs/EnterModulePart.jpg)
+![EnterModulePart](../imgs/generalqa/EnterModulePart.jpg)
 
 3. Check the box next to each of the following to enable (some may already be enabled):
 
@@ -26,7 +26,7 @@ A: You need to enable the necessary Twig modules.
   - Bamboo Twig - Path & Url
   - Bamboo Twig - Token
 
-![BambooTwigInstall](..imgs/BambooTwigInstall.jpg)
+![BambooTwigInstall](..imgs/generalqa/BambooTwigInstall.jpg)
 
 4. Click `Install`.
 
