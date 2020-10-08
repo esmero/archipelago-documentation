@@ -13,7 +13,7 @@ To contribute to this section, please review our [Code of Conduct](CODE_OF_CONDU
 
 **A:** You need to enable the necessary Twig modules.
 
-1. Naviagte to /admin/modules
+1. Naviate to: yoursite/admin/modules
 
 2. In the “Enter a part of the module name or description” box, enter “bam” to filter for the related Bamboo Twig modules. Alternatively, scroll down to the Bamboo Twig modules section on this page.
 
