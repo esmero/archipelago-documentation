@@ -80,6 +80,8 @@ Now that you have Archipelago running, the following guides will help you master
 * [How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)](docs/webformsasinput.md)
 * [Customizing Webforms: Modifying allowable file extensions](docs/modifyingfileextensionsinwebform.md)
 * [Debugging PHP in Archipelago](docs/xdebug.md)
+* [Archipelago's File Persistence Strategy](docs/archifilepersistencestrategy.md)
+* [How to Setup SSL for Docker/Archipelago](sslsetup.md)
 * [General Q&A](docs/generalqa.md)
 
 # Contributing
