@@ -81,6 +81,7 @@ Now that you have Archipelago running, the following guides will help you master
 * [Customizing Webforms: Modifying allowable file extensions](docs/modifyingfileextensionsinwebform.md)
 * [Debugging PHP in Archipelago](docs/xdebug.md)
 * [General Q&A](docs/generalqa.md)
+* [How to Setup SSL for Docker/Archipelago](sslsetup.md)
 
 # Contributing
 Archipelago welcomes and appreciates any type of contribution, from use cases and needs, questions, documentation, devops and configuration and -- of course -- code, fixes, or new features. To make the process less painful, we recommend you first to read our documentation and deploy a local instance. After that please follow [this set of guidelines](docs/giveortake.md) to help you get started.
