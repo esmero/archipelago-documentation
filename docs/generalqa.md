@@ -34,6 +34,64 @@ To contribute to this section, please review our [Code of Conduct](CODE_OF_CONDU
 
 ---
 
+## SMTP Configuration
+**Q:** How can I enable SMTP for Archipelago?
+
+**A:** For standard demo deployments, SMTP is not setup to send emails. To enable SMTP:
+
+1. Enter the following commands in your terminal.
+_Note: make sure docker is running. Optionally, you can verify that all Archipelago containers are present by entering the `docker ps` command first_.
+
+```Shell
+docker exec -ti esmero-php bash -c 'php -dmemory_limit=-1 /usr/bin/composer require drupal/smtp:^1.0'
+docker exec -ti esmero-php bash -c 'drush en -y smtp'
+```
+
+
+2. Check that the SMTP module has been enabled by navigating (as admin user) to the EXTEND module menu item (`localhost:8001/admin/modules`). You should see "SMTP Authentication Support" listed.
+
+3. Navigate to `localhost:8001/admin/config/system/smtp` to configure the SMTP settings.
+
+<details><summary>This screen shot shows settings if a GMAIL account is used.</summary>
+
+<span>
+
+![SMTPconfiguration](../imgs/generalqa/SMTPconfiguration.jpg)
+
+</span>
+</details>
+<br>
+
+4. Save your settings, then test by adding a recipient address in the “SEND TEST E-MAIL” field.
+
+_Note: Depending on your email provider, you may also need to enable “less secure” applications in your account settings (such as here for Google email accounts: https://myaccount.google.com/lesssecureapps)_
+
+---
+
+## Min.io logging
+**Q:** How can i see my minio (s3) docker container's realtime traffic and requests?
+
+**A:** For standard demo deployments, mini.io storage server runs on the `esmero-minio` docker container. Steps are:
+
+1. Install the `mc` binaries (minio client) for your platform following [this instructions](https://docs.min.io/docs/minio-client-quickstart-guide.html). e.g for OSX run on your terminal:
+
+```SHELL
+brew install minio/stable/mc
+mc alias set esmero-minio http://localhost:9000 user password
+```
+
+with `http://localhost:9000` being your current machines mini.io URL and exposed port,  `user` being your username (defaults to `minio`) and your original choosen `password` (defaults to `minio123`)
+
+2. Run a `trace` to watch realtime activity on your terminal:
+
+```SHELL
+mc admin trace -v -a --debug  --insecure --no-color esmero-minio
+```
+
+_Note: `mc` client is also AWS S3 compatible and can be used to move/copy/delete files on the local instance and to/from a remote AWS storage
+
+---
+
 Additional general discussions may be found on the [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons)  
 
 Return to [Archipelago Documentation](../README.md).
