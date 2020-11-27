@@ -1,5 +1,4 @@
 # Your First Digital Object
-[![Google Groups](https://img.icons8.com/wired/32/000000/google-groups.png)](https://groups.google.com/forum/#!forum/archipelago-commons)
 
 You followed every [Deployment step](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC1/README.md) and you have now a local ``Archipelago`` instance. Great!
 

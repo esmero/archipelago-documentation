@@ -97,7 +97,7 @@ And then with `🍓Erdbeere` (the Formatter for Custom Metadata Templates) there
 
 ![Erdbeere](../imgs/strawberryfield-formatters/07_erdbeere.jpg)
 
-More information about Managing Metadata Displays with Twig Templates can be found [here](../docs/metadatatwigs.md).
+More information about Managing Metadata Displays with Twig Templates can be found [here](docs/metadatatwigs.md).
 
 ---
 

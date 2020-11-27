@@ -40,7 +40,7 @@ This templating system is exposed to Archipelago users through the UI and stored
 
 Templates or recipes can be shared, exported, ingested, updated, and adapted in many ways. Fast changes are possible without having to wait for the next mayor release of Archipelago or your favorited Metadata Schema Specs Committee agreeing on the next or the last version. Of course, this module not only handles metadata but media assets too, extracting local or remote URIs and files from your metadata and rendering them as media viewers: books, 3D models, images, panoramas, A/V with IIIF in its soul.
 
-You can learn more about what [format_strawberryfield](strawberryfield-formatters.md) can do and what many other possibilities are exposed through our [templating system](../docs/metadatatwigs.md).
+You can learn more about what [format_strawberryfield](strawberryfield-formatters.md) can do and what many other possibilities are exposed through our [templating system](docs/metadatatwigs.md).
 
 ---
 
