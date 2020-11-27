@@ -39,7 +39,7 @@ Now that you have Archipelago running, the following guides will help you master
 * [_(*Work-In-Progress Page)_ Managing Metadata Displays with Twig](docs/metadatatwigs.md)
 * [General Q&A](docs/generalqa.md)
 * [Debugging PHP in Archipelago](docs/xdebug.md)
-* [Archipelago's File Persistence Strategy](docs/archifilepersistencestratgey.md)
+* [Archipelago's File Persistence Strategy](docs/archifilepersistencestrategy.md)
 * [_(*Work-In-Progress Page)_ How to Setup SSL for Docker/Archipelago](docs/sslsetup.md)
 
 ## Archipelagos in the Wild
