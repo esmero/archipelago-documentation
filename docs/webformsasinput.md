@@ -1,6 +1,6 @@
 # Webforms as input method for Archipelago Digital Objects (ADO)
 
-Drupal 8/9 provides a lot of out-of-the-box functionality to setup the way Content Entities (Nodes or in our case ADOs) are exposed to users with the proper credentials. That functionality lives under the "Display Modes" and can be accessed at `admin/structure/display-modes`.
+Drupal 8/9 provides a lot of out-of-the-box functionality to setup the way Content Entities (Nodes or in our case ADOs) are exposed to users with the proper credentials. That functionality lives under the "Display Modes" and can be accessed at `yoursite/admin/structure/display-modes`.
 
 ![Display Modes](../imgs/display-modes.jpg)
 
@@ -17,15 +17,15 @@ First, formatting output (basically building the front facing page for each cont
 
 The main difference, other than their purpose (Output v/s Input) is that, on View Modes, the settings you apply to each field are associated to "Formatters" and on Form Modes, the settings you apply to each field are connected to "Widgets".
 
-So, resuming, this is what lives under the Concept of a "Display Mode": 
+So, resuming, this is what lives under the Concept of a "Display Mode":
 
 ## View Mode
 ![See all your View Modes](../imgs/view-modes.jpg)
 
 - Each field attached to a Content Entity can have a Formatter applied and most of them have configuration options.
 - Formatters do one thing right: they take the raw, stored value and make it "visible" inside Drupal.
-- Which formatters are available will depend on the "type" of field the Content Entity has. 
-  - E.g A Node title/Label will have a Title formatter with the option of just displaying a text or a text with a link to the entity. 
+- Which formatters are available will depend on the "type" of field the Content Entity has.
+  - E.g A Node title/Label will have a Title formatter with the option of just displaying a text or a text with a link to the entity.
   - More Complex and fun Fields, like the ones of type `SBF` will provide a large list of possible `Formatters`, like IIIF driven viewers, Video formatters, Metadata Display (Twig template driven) ones, etc. This is because a SBF type of field has much more than just a text value, it contains a full graph of metadata and properties, inclusive links to Files and provenance metadata.
 
 ## Form Mode
@@ -33,12 +33,12 @@ So, resuming, this is what lives under the Concept of a "Display Mode":
 
 - Each field attached to a Content Entity can have a Widget applied and most of them have configuration options.
 - Widgets do one thing right: they expose some type of Form/UI interaction that allows a user to input data into the Entity, under that specific field. And of course they make sure that what you input is validated and saved (if good) correctly.
-- Which Widgets are available will depend on the "type" of field the Content Entity has. 
+- Which Widgets are available will depend on the "type" of field the Content Entity has.
   - Example: A `Node` Title will have a single Text Input with some options, like the size of the Textfield used to feed it.
   - More Complex and fun fields, like the ones of type `SBF` (strawberryfield), will provide a larger list of possible Widgets, ranging from raw JSON input (which you could select if your data was already in the right format) to the reason we are reading this: `Webform driven Widgets`. These Widgets include:
    - ones the _webform_strawberryfield_ Drupal module provides
    - ones that use an existing Webform (which are also Entitites!) which either 1) you created or 2) we provided as a setting
-   
+
 If you chose a widget other than the raw JSON, the widget will take the raw JSON to build, massage and enrich the data so that it can be presented in a visual format by the SBF. This is because a SBF type of field has much more than just a text value. It contains a full graph of metadata and properties, inclusive links to Files and provenance metadata, which for example allows us to use an Upload field directly in the attached/configured webform.
 - Form modes also have an additional benefit. Each one can have fine grained permissions. That way you can have many different Form Modes, but allow only certain ones to be visible, or usable by users of a given Drupal Role.
 
@@ -59,7 +59,7 @@ You can see that for every existent Content Type, there is a drop down menu with
 
 On the top you will see all your View Modes Listed, with the `Default` one selected and expanded.
 The Table that follows has one row per Field attached/part of this Content Type. Some of the fields are part of the Content Type itself, in this case Digital Object (bundled) and some other ones are common to every Content Entity derived from a Node.
-The "Field" column contains each field name (not their type, reason why you don't see Strawberry Field there!) but we can tell you right now that there is one, named "Descriptive Metadata", that is of `SBF` type. 
+The "Field" column contains each field name (not their type, reason why you don't see Strawberry Field there!) but we can tell you right now that there is one, named "Descriptive Metadata", that is of `SBF` type.
 
 <details><summary>Wait! Which are the fields in my Content Type?</summary>
 <span>
@@ -74,9 +74,9 @@ Well. Some of them are base fields, part of what a Drupal Node is: base field me
 
 But there are also some fields very particular to Archipelago: You can see there are also ones named
 "Formatter Object Metadata", "Media" and one named "Static Media"!. Where does come from? Those are also Strawberryfields. It sounds confusing but it is really simple. They are really not "fields" in the sense of having different data than "Descriptive Metadata". Those are In Memory, realtime, copies of the "Descriptive Metadata" SBF field and are there to overcome one limitation of Drupal 8:
->Each Field can have a single "Formatter" setup per field. 
+>Each Field can have a single "Formatter" setup per field.
 
-But we want to re-usue the JSON data to show a Viewer, Show Metadata as HTML directly on the ADO/NODE landing page, and we want also to, for example, format sometimes images as Thumbnails and not using a IIIF viewer only. This CopyFields (Legal term) have also a nice Performance advantage. Drupal needs to fetch only once the data from the real Field, "Descriptive Metadata", from the database. And then just makes the data available in real time to its copies. That makes all fast, very very fast! And of course flexible. As you dig more into Archipelago you will see the benefits of this approach. Finally, if you need to, you can make more CopyFields. But the reality is, there is a single, only one, SBF in each Digital Object and its named "Descriptive Metadata". 
+But we want to re-usue the JSON data to show a Viewer, Show Metadata as HTML directly on the ADO/NODE landing page, and we want also to, for example, format sometimes images as Thumbnails and not using a IIIF viewer only. This CopyFields (Legal term) have also a nice Performance advantage. Drupal needs to fetch only once the data from the real Field, "Descriptive Metadata", from the database. And then just makes the data available in real time to its copies. That makes all fast, very very fast! And of course flexible. As you dig more into Archipelago you will see the benefits of this approach. Finally, if you need to, you can make more CopyFields. But the reality is, there is a single, only one, SBF in each Digital Object and its named "Descriptive Metadata".
 
 </span>
 </details>
@@ -154,8 +154,12 @@ There are two ways of doing that:
 ````
 And then reimport.
 
-Having a "type" value will make your life easier. You don't need it, but everything works smoother that way. 
+Having a "type" value will make your life easier. You don't need it, but everything works smoother that way.
 
 Since you have a single Content Type named Digital Object, having a Webform field that has as key "type", which leads to a "type" JSON key, allows you to discern the Nature of your Digital Object, book or Podcast, Image or 3D and do smart, nice things with them.
 
-Thanks for reaching the end of this chapter!
+---
+
+Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
+
+Return to the [Archipelago Documentation main page](../README.md).

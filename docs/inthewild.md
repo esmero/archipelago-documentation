@@ -1,0 +1,41 @@
+# Archipelago Community
+
+- [Archipelago Playground](http://play.archipelago.nyc)
+    _METRO's public Archipelago playground to experiment, try things out, break and reconstruct. Consider this a blank piece of paper to start a discussion._
+
+- [Empire Immersive Experiences](https://esie.space)
+    _Supported by the Western New York Library Resources Counil (WNYLRC)_
+
+- [Olin College Libraries' Pheonix Files](http://ec2-184-73-148-144.compute-1.amazonaws.com)
+
+- [Oral History Association Metadata Task Force Repository](http://oha.archipelago.nyc)
+
+- [New York State COVID-19 Personal History Initiative](https://www.nyspersonalhistory.com)
+
+- [Web Archives Interest Group](http://webarchives.archipelago.nyc)
+
+## Still Brewing
+
+The following Archipelago instances are not yet publicly-accessible. Active links will be made available in future updates, stay tuned!
+
+- [Digital Culture of Metropolitan New York (DCMNY)](http://dcmny.org)
+  *_migration to Archipelago by mid/late 2021_
+
+- Empire Archival Discovery Cooperative (EADC)
+    _Supported by the Southeastern New York Library Resources Council (SENYLRC)_
+
+- Projects in-development with shy (yet bold!) partners:
+   - Multi-institutional statewide repository
+      _*migration to Archipelago to be completed late 2021/early 2022_
+
+   - Public Library System Digital Collections
+      _*migration to Archipelago beginning mid-2021_
+
+   - College and University Digital Collections
+      _*Group of institutions; in process of migrating from various other repository platforms to Archipelago beginning 2021_
+
+---
+
+Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
+
+Return to the [Archipelago Documentation main page](../README.md).
