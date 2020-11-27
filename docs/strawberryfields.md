@@ -25,7 +25,7 @@ We also added `WIKIDATA`, `LoC`, `Getty`, and `VIAF` authority querying elements
 
 All these integrations are made to help local needs and community identities to survive the never-ending race for the next metadata schema. They are made to prototype, plan, and grow independently of how metadata will need to be exposed yesterday or tomorrow. And we plan to add more.
 
-Explore what other features [`webform_strawberryfield`](docs/webforms.md) provides to help with ingesting, reading, and interacting with your metadata during that process.
+Explore what other features [`webform_strawberryfield`](docs/strawberryfield-formatters.md) provides to help with ingesting, reading, and interacting with your metadata during that process.
 
 ## Exposing
 ![JSONupcaststar](../imgs/jsonupcaststar_small.png)

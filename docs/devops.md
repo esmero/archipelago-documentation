@@ -12,7 +12,7 @@ At the core of the Archipelago philosophy is our commitment to both simplicity a
 
 Installation is entirely [Dockerized](https://www.docker.com) and scripted with [easy-to-follow directions](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC1/README.md).
 
-_Information related to non-Dockerized installation and configruation can be found here: [Traditional Installations](docs/tradtional-install.md)_
+_Information related to non-Dockerized installation and configruation can be found here: [Traditional Installations](docs/traditional-install.md)_
 
 ### Strawberryfield Modules at the heart of every Archipelago:
   - [Strawberryfield](https://github.com/esmero/strawberryfield)
@@ -22,7 +22,7 @@ _Information related to non-Dockerized installation and configruation can be fou
     - [Strawberry Runners](https://github.com/esmero/strawberry_runners)
     - [Archipelago Multi-Importer (AMI)](https://github.com/esmero/ami)
 
-Documentation related to the Strawberryfield modules can be found here: [Strawberryfields Forever](Strawberryfields.md)
+Documentation related to the Strawberryfield modules can be found here: [Strawberryfields Forever](docs/Strawberryfields.md)
 
 ### Archipelago also extends these powerful tools:
   - [Drupal Webform Module](https://www.drupal.org/project/webform)
