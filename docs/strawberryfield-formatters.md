@@ -76,9 +76,9 @@ There are four fields named `🍓Strawberry` and each one is a copy of the field
 
 Recall *My First Digital Object* at beginning of this document where there were 3 sections highlighted in **Red**, **Blue**, and **Green**.
 
-- In **Red** (`🍓Fragola`) there is the [Strawberry Field Formatter for IIIF media](../formatter-for-iiif-media.md) which takes the image stored in S3 to display the photograph with the image viewer.
-- In **Blue** (`🍓Erdbeere`) there is the [Strawberry Field Formatter for Custom Metadata Templates](../formatter-for-custom-metadata-templates.md) which displays the raw JSON metadata using configurable Twig templates. In this example, the default Twig template uses the JSON key `type` to display the `Type of Resource`.
-- In **Green** (`🍓Strawberry (Descriptive Metadata)`) there is the [Strawberry Default Formatter](../strawberry-default-formatter.md) which is used to display the Raw JSON Metadata.
+- In **Red** (`🍓Fragola`) there is the [Strawberry Field Formatter for IIIF media](tbd.md) which takes the image stored in S3 to display the photograph with the image viewer.
+- In **Blue** (`🍓Erdbeere`) there is the [Strawberry Field Formatter for Custom Metadata Templates](tbd.md) which displays the raw JSON metadata using configurable Twig templates. In this example, the default Twig template uses the JSON key `type` to display the `Type of Resource`.
+- In **Green** (`🍓Strawberry (Descriptive Metadata)`) there is the [Strawberry Default Formatter](tbd.md) which is used to display the Raw JSON Metadata.
 
 ![Strawberry Fields](../imgs/strawberryfield-formatters/04_strawberryfields.jpg)
 
@@ -97,7 +97,7 @@ And then with `🍓Erdbeere` (the Formatter for Custom Metadata Templates) there
 
 ![Erdbeere](../imgs/strawberryfield-formatters/07_erdbeere.jpg)
 
-More information about Managing Metadata Displays with Twig Templates can be found [here](docs/metadatatwigs.md).
+More information about Managing Metadata Displays with Twig Templates can be found [here](metadatatwigs.md).
 
 ---
 

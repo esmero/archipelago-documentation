@@ -1,6 +1,6 @@
 # Creating Display Modes for Archipelago Digital Objects
 
-We recommend checking out our [primer on Display Modes](docs/webformsasinput.md) for a broader overview on Form Modes and View Modes for Archipelago Digital Objects (ADOs).
+We recommend checking out our [primer on Display Modes](webformsasinput.md) for a broader overview on Form Modes and View Modes for Archipelago Digital Objects (ADOs).
 
 But how do you create and enable these Display Modes in the first place? Let's find out.
 
@@ -32,7 +32,7 @@ Why would you want to create a new form mode? One common reason is to create dif
 8. Now select our new "Student Webform" tab. From here, you have many options and can configure input fields as you see fit! To finish out our specific example though, let's finally add our Student Webform to the display. Click on the settings gear icon next to the Descriptive Metadata field.
 <span>![Form mode enable](../imgs/form-mode-add-webform.png)</span>
 
-   You'll see that the default webform named "Descriptive Metadata" is entered. To add custom content to this Field Widget, start typing in the autocomplete. This example assumes you've created a webform called `Student Webform` in `yoursite/admin/structure/webform`. For info on how to create a new Webform with proper settings, see our [Webforms as input guide](docs/webformsasinput.md).
+   You'll see that the default webform named "Descriptive Metadata" is entered. To add custom content to this Field Widget, start typing in the autocomplete. This example assumes you've created a webform called `Student Webform` in `yoursite/admin/structure/webform`. For info on how to create a new Webform with proper settings, see our [Webforms as input guide](webformsasinput.md).
 
 9. After you've selected your "Student Webform" in the Field Widget setting, hit Update, and then Save at the bottom of the page.
 
@@ -79,7 +79,7 @@ Why would you want to create a new View Mode? Maybe there is a new type of media
 
 All done! This was quite a simple example, but now you are aware of how to customize your own ADO display. It can only get more complex and exciting from here.
 
-Let's recap. We created a new View Mode. We enabled this View Mode in Manage Display > Custom Display Settings for Digital Objects. We enabled new fields (in this case, just for instruction, the Author and Post date fields) to make our new View Mode unique, and learned about Disabled fields in the process. We selected our new View Mode in the Display Settings area (slightly confusing wording because yes, this is a View Mode, subset of Display Mode) during ADO creation (for more on creating new objects, see [this guide](../docs/firstobject.md)).
+Let's recap. We created a new View Mode. We enabled this View Mode in Manage Display > Custom Display Settings for Digital Objects. We enabled new fields (in this case, just for instruction, the Author and Post date fields) to make our new View Mode unique, and learned about Disabled fields in the process. We selected our new View Mode in the Display Settings area (slightly confusing wording because yes, this is a View Mode, subset of Display Mode) during ADO creation (for more on creating new objects, see [this guide](firstobject.md)).
 
 ---
 

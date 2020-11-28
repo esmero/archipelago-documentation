@@ -4,7 +4,7 @@ _*Work-In-Progress Note: This documentation page is still under construction and
 ### Archipelago Twig Templates
 
 - [Templates Shipped with Standard Archipelago Deployments](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC1/d8content/metadatadisplays)
-- [Community Created Templates]((docs/tbd.md))
+- [Community Created Templates]((tbd.md))
   *_to be shared with 1.0.0-RC1 release_
 
 ### General Information
