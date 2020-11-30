@@ -17,7 +17,7 @@ Archipelago's primary focus is to serve the greater [`GLAM community`](https://e
 
 Finally, Archipelago tries to stay humble, slim, and nimble in nature with a small code base full of inline comments and `@todos`. All of our work is driven by a clear and [concise but thoughtful planned technical roadmap --updated in tandem with new releases](https://github.com/esmero/archipelago-deployment/issues/35).
 
-Explore what makes Archipelago so different and hopefully also a well known place:
+Learn what makes Archipelago so different and hopefully also a well known place:
 * [Archipelago's Philosophy & Guiding Principles](docs/ourtake.md)
 * [Strawberryfields Forever](docs/strawberryfields.md)
 * [Software Services](docs/devops.md)
@@ -36,11 +36,11 @@ Now that you have Archipelago running, the following guides will help you master
 * [Ingesting Your First Object](docs/firstobject.md)
 * [Webforms In Archipelago](docs/webforms.md)
 * [Creating Display Modes](docs/createdisplaymodes.md)
-* [_(*Work-In-Progress Page)_ Managing Metadata Displays with Twig](docs/metadatatwigs.md)
+* [Managing Metadata Displays with Twig _(*Work-In-Progress Page)_](docs/metadatatwigs.md)
 * [General Q&A](docs/generalqa.md)
 * [Debugging PHP in Archipelago](docs/xdebug.md)
 * [Archipelago's File Persistence Strategy](docs/archifilepersistencestrategy.md)
-* [_(*Work-In-Progress Page)_ How to Setup SSL for Docker/Archipelago](docs/sslsetup.md)
+* [How to Setup SSL for Docker/Archipelago _(*Work-In-Progress Page)_](docs/sslsetup.md)
 
 ## Archipelagos in the Wild
 Explore Archipelago instances running free across digital realms.

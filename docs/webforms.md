@@ -6,7 +6,7 @@ The [Webform Strawberryfield](https://github.com/esmero/webform_strawberryfield)
 
 * [How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)](webformsasinput.md)
 * [Customizing Webforms: Modifying allowable file extensions](modifyingfileextensionsinwebform.md)
-* [_(*Work-In-Progress Page)_ Webform Templates](tbd.md)
+* [Webform Templates _(*Work-In-Progress Page)_](tbd.md)
   - Use these webforms or their elements to create a custom webform for your own repository/project needs
 
 ---
