@@ -32,7 +32,6 @@ To get a general glance of what is included and how it works, follow [this guide
 
 ## Archipelago 101 (and up)
 Now that you have Archipelago running, the following guides will help you master the basics.
-
 * [Ingesting Your First Object](docs/firstobject.md)
 * [General Q&A](docs/generalqa.md)
 * [Webforms In Archipelago _(*Work-In-Progress Documentation)_](docs/webforms.md)
