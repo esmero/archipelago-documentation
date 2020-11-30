@@ -1,10 +1,10 @@
 # Archipelago Software Services
 
-![ADOlife](../imgs/architecture_small.png)
+![ADOlife](../imgs/architecture.png)
 
 At the core of the Archipelago philosophy is our commitment to both simplicity and flexibility.
 
-### Under the hood, Archipelago is:
+### Under the hood, Archipelago's architecture is:
  - [Drupal (CMS)](https://www.drupal.org/)
  - [Solr (Search)](https://lucene.apache.org/solr/)
  - [Cantaloupe (Image Server)](https://cantaloupe-project.github.io/)
@@ -12,7 +12,7 @@ At the core of the Archipelago philosophy is our commitment to both simplicity a
 
 Installation is entirely [Dockerized](https://www.docker.com) and scripted with [easy-to-follow directions](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC1/README.md).
 
-_Information related to non-Dockerized installation and configruation can be found here: [Traditional Installations](traditional-install.md)_
+_Information related to non-Dockerized installation and configruation can be found here: [Traditional Installation Notes](traditional-install.md)_
 
 ### Strawberryfield Modules at the heart of every Archipelago:
   - [Strawberryfield](https://github.com/esmero/strawberryfield)

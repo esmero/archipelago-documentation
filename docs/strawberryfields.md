@@ -1,5 +1,5 @@
 # Strawberryfields Forever
-![Strawberries](../imgs/strawberries_small.png)
+![Strawberries](../imgs/strawberries.png)
 
 ## What Strawberry fields does, why we built it, and what issues it addresses
 
@@ -28,11 +28,11 @@ All these integrations are made to help local needs and community identities to 
 Explore what other features [`webform_strawberryfield`](strawberryfield-formatters.md) provides to help with ingesting, reading, and interacting with your metadata during that process.
 
 ## Exposing
-![JSONupcaststar](../imgs/jsonupcaststar_small.png)
+![JSONupcaststar](../imgs/jsonupcaststar.png)
 
 `Format Strawberryfield` (we had even a better name but...) deals with taking your JSON based metadata and `casting`, mashing, mixing, exposing, displaying, and transforming it to allow rich interaction for users and other systems with your digital objects.
 
-In its guts (or heart?), Archipelago does something quite simple but core to our concept of repository: it transforms in realtime the _close to your needs open schema metadata_ that lives in strawberryfield as JSON into _close to other one's fixed schema needs metadata_; any destination format, using a fast, cached templating system. A templating system easy enough to master and core to Drupal, called `Twig`:
+In its guts (or heart?), Archipelago does something quite simple but core to our concept of repository: it transforms in realtime the _close to your needs open schema metadata_ that lives in strawberryfield as JSON into _close to other one's fixed schema needs metadata_; any destination format, using a fast, cached templating system. A templating system that is core to Drupal, called `Twig`:
 - [Twig in Symfony](https://twig.symfony.com)
 - [Twig in Drupal](https://www.drupal.org/docs/theming-drupal/twig-in-drupal)
 

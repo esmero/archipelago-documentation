@@ -24,16 +24,6 @@ The following Archipelago instances are not yet publicly-accessible. Active link
 - Empire Archival Discovery Cooperative (EADC)
    - _Supported by the Southeastern New York Library Resources Council (SENYLRC)_
 
-- Projects in-development with shy (yet still bold) partners:
-   - Multi-institutional statewide repository
-      - _*migration to Archipelago to be completed late 2021/early 2022_
-
-   - Public Library System Digital Collections
-      - _*migration to Archipelago beginning mid-2021_
-
-   - College and University Digital Collections
-      - _*Group of institutions; in process of migrating from various other repository platforms to Archipelago beginning 2021_
-
 ---
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
