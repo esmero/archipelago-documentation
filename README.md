@@ -11,16 +11,16 @@ Archipelago Commons, or simply Archipelago, is an evolving Open Source Digital O
 
 Archipelago is a mix of deeply integrated custom-coded Drupal8 modules (made with care by us) and a curated and well-configured Drupal8 instance, running under a discrete and and well-planned set of service containers.
 
-Archipelago was dreamt as a multi-tenant, distributed, capable system (as its name suggests!) and can live isolated or in flocks of similar deployments, sharing storage, services, or -- even better -- just the discovery layer. Learn more about the different [`Software Services`](devops.md) used by Archipelago.
+Archipelago was dreamt as a multi-tenant, distributed, capable system (as its name suggests!) and can live isolated or in flocks of similar deployments, sharing storage, services, or -- even better -- just the discovery layer. Learn more about the different [`Software Services`](docs/devops.md) used by Archipelago.
 
 Archipelago's primary focus is to serve the greater [`GLAM community`](https://en.wikipedia.org/wiki/GLAM_(industry_sector)) by providing a flexible, consistent, and unified way of describing, storing, linking, exposing metadata and media assets. We respect identities and existing workflows. We endeavor to design Archipelago in ways that empower communities of every size and shape.
 
 Finally, Archipelago tries to stay humble, slim, and nimble in nature with a small code base full of inline comments and `@todos`. All of our work is driven by a clear and [concise but thoughtful planned technical roadmap --updated in tandem with new releases](https://github.com/esmero/archipelago-deployment/issues/35).
 
-Explore what makes Archipelago so different and hopefully also a well known place:
+Learn what makes Archipelago so different and hopefully also a well known place:
 * [Archipelago's Philosophy & Guiding Principles](docs/ourtake.md)
-* [Strawberryfields Forever](StrawberryFields.md)
-* [Software Services](devops.md)
+* [Strawberryfields Forever](docs/strawberryfields.md)
+* [Software Services](docs/devops.md)
 
 # Code of Conduct
 The Archipelago Commons community is dedicated to providing a welcoming and positive experience for all participants. To ensure this can be met for all parties, please review our [Code of Conduct](CODE_OF_CONDUCT.md).
@@ -32,19 +32,18 @@ To get a general glance of what is included and how it works, follow [this guide
 
 ## Archipelago 101 (and up)
 Now that you have Archipelago running, the following guides will help you master the basics.
-
 * [Ingesting Your First Object](docs/firstobject.md)
-* [Webforms In Archipelago](webforms.md)
-* [Creating Display Modes](docs/createdisplaymodes.md)
-* [_(*Work-In-Progress Page)_ Managing Metadata Displays with Twig](metadatatwigs.md)
 * [General Q&A](docs/generalqa.md)
+* [Webforms In Archipelago _(*Work-In-Progress Documentation)_](docs/webforms.md)
+* [Creating Display Modes](docs/createdisplaymodes.md)
+* [Managing Metadata Displays with Twig _(*Work-In-Progress Documentation)_](docs/metadatatwigs.md)
 * [Debugging PHP in Archipelago](docs/xdebug.md)
 * [Archipelago's File Persistence Strategy](docs/archifilepersistencestrategy.md)
-* [_(*Work-In-Progress Page)_ How to Setup SSL for Docker/Archipelago](sslsetup.md)
+* [How to Setup SSL for Docker/Archipelago _(*Work-In-Progress Documentation)_](docs/sslsetup.md)
 
 ## Archipelagos in the Wild
 Explore Archipelago instances running free across digital realms.
-* [Archipelago Community](inthewild.md)
+* [Archipelago Community Showcase](docs/inthewild.md)
 * [METRO + Archipelago](http://archipelago.nyc)
 
 # Contributing
@@ -53,6 +52,7 @@ Archipelago welcomes and appreciates any type of contribution, from use cases an
 ## Caring & Coding + Fixing
 * [Diego Pino](https://github.com/DiegoPino)
 * [Giancarlo Birello](https://github.com/giancarlobi)
+* [Allison Lund](https://github.com/alliomeria)
 
 ## Acknowledgments
 This software is a [Metropolitan New York Library Council](https://metro.org) Open-Source initiative and part of the Archipelago Commons project.
