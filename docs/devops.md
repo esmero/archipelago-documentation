@@ -25,6 +25,7 @@ _Information related to non-Dockerized installation and configruation can be fou
 Documentation related to the Strawberryfield modules can be found here: [Strawberryfields Forever](strawberryfields.md)
 
 ### Archipelago also extends these powerful tools:
+  - [Annotorius](https://github.com/recogito/annotorious)
   - [Drupal Webform Module](https://www.drupal.org/project/webform)
   - [International Image Interoperability Framework (IIIF)](https://iiif.io/)
   - [Internet Archive BookReader](https://github.com/internetarchive/bookreader)
