@@ -2,7 +2,7 @@
 
 This area of Archipelago documentation is reserved for general questions and answers for commonly encountered issues pertaining to Archipelago configuration settings.
 
-To contribute to this section, please review our [Code of Conduct](CODE_OF_CONDUCT.md), and after that please follow [this set of guidelines](docs/giveortake.md) to help you get started.
+To contribute to this section, please review our [Code of Conduct](../CODE_OF_CONDUCT.md), and after that please follow [this set of guidelines](giveortake.md) to help you get started.
 
 ---
 
@@ -52,7 +52,7 @@ docker exec -ti esmero-php bash -c 'drush en -y smtp'
 
 3. Navigate to `localhost:8001/admin/config/system/smtp` to configure the SMTP settings.
 
-<details><summary>This screen shot shows settings if a GMAIL account is used.</summary>
+<details><summary>This screenshot shows settings if a GMAIL account is used.</summary>
 
 <span>
 
@@ -68,8 +68,8 @@ _Note: Depending on your email provider, you may also need to enable “less sec
 
 ---
 
-## Min.io logging
-**Q:** How can i see my minio (s3) docker container's realtime traffic and requests?
+## Min.io Logging
+**Q:** How can I see my minio (S3) docker container's realtime traffic and requests?
 
 **A:** For standard demo deployments, mini.io storage server runs on the `esmero-minio` docker container. Steps are:
 
@@ -88,10 +88,10 @@ with `http://localhost:9000` being your current machines mini.io URL and exposed
 mc admin trace -v -a --debug  --insecure --no-color esmero-minio
 ```
 
-_Note: `mc` client is also AWS S3 compatible and can be used to move/copy/delete files on the local instance and to/from a remote AWS storage
+_Note: `mc` client is also AWS S3 compatible and can be used to move/copy/delete files on the local instance and to/from a remote AWS storage._
 
 ---
 
-Additional general discussions may be found on the [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons)  
+Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
-Return to [Archipelago Documentation](../README.md).
+Return to the [Archipelago Documentation main page](../README.md).

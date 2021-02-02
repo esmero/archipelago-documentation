@@ -1,7 +1,6 @@
 # Your First Digital Object
-[![Google Groups](https://img.icons8.com/wired/32/000000/google-groups.png)](https://groups.google.com/forum/#!forum/archipelago-commons)
 
-You followed every [Deployment step](https://github.com/esmero/archipelago-deployment/blob/8.x-1.0-beta1/README.md) and you have now a local ``Archipelago`` instance. Great!
+You followed every [Deployment step](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC1/README.md) and you have now a local ``Archipelago`` instance. Great!
 
 So what now? It is time to give your new repository a try and we feel the best way is to start by ingesting a simple Digital Object.
 
@@ -88,7 +87,7 @@ What you see below is a `Form Mode` in action. A multi-step Webform that will in
 
 Let's fill out the form to begin our ingest. We recommend to use similar values as the ones shown in the screen capture to make following the tutorial easier.
 
-Make sure you select `Photograph` as `Media Type` and all the fields with a red `*` are filled up. Then press `Move on to next step` at the bottom of the webform to load the next step inline. 
+Make sure you select `Photograph` as `Media Type` and all the fields with a red `*` are filled up. Then press `Move on to next step` at the bottom of the webform to load the next step inline.
 
 ![Ingest Step 1 - MyMetadata](../imgs/firstobject/05_MyMetadata.jpg)
 
@@ -156,4 +155,8 @@ Once you hit save you should see the following green messages and your first Arc
 
 Congratulations on creating your first digital object! 🍓
 
-[Back to Instructions and Guides](https://github.com/esmero/archipelago-documentation#archipelago-deployment-quickstart)
+---
+
+Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
+
+Return to the [Archipelago Documentation main page](../README.md).

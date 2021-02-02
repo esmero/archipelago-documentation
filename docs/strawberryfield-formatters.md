@@ -3,7 +3,7 @@
 This documentation will give a brief overview of Archipelago's [Strawberryfield Formatters](https://github.com/esmero/format_strawberryfield) and how they work using the default View mode `Digital Object Full View` as an example.
 
 ## At a glance
-When taking a look at your [First Digital Object](https://github.com/esmero/archipelago-documentation/blob/8.x-1.0-beta2/docs/firstobject.md) note that multiple formatters are working together to create this `Display` ( or `View mode`). Since "*My First Digital Object*" is a `Photograph` the `Display` being used is `Digital Object Full View` which, by default, uses formatters to:
+When taking a look at your [First Digital Object](https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC1/docs/firstobject.md) note that multiple formatters are working together to create this `Display` ( or `View mode`). Since "*My First Digital Object*" is a `Photograph` the `Display` being used is `Digital Object Full View` which, by default, uses formatters to:
 
 - (**Red**) Create the image viewer where users can zoom in, zoom out, fullscreen and rotate all the images associated with the ADO.
 - (**Blue**) Display the `Object Description` and `Type of Resource`.
@@ -11,22 +11,62 @@ When taking a look at your [First Digital Object](https://github.com/esmero/arch
 
 ![Image Viewer](../imgs/strawberryfield-formatters/01_my-first-digital-object.jpg)
 
+## In Greater Detail
 
-## Under the hood
-
-When editing an ADO, at the top of the Webform page there is a tab titled `Manage display` which will take us to where all the Formatters live. **Take note** that the `DISPLAY SETTINGS` show we are using the *Default* View mode.
+When editing an ADO, at the top of the Webform page there is a tab titled `Manage display` which will take us to where all the Formatters live. _Take note that the `DISPLAY SETTINGS` shown in the screenshot below are using the **Default** View mode._
 
 ![Display Settings](../imgs/strawberryfield-formatters/02_managedisplay.jpg)
 
-Once the page loads the `Default` View mode is automatically selected. However, because we are editing an object with the `Media type` `Photograph`, we need to actually need to edit the View mode `Digital Object Full View` since it is the *Default* View mode for this `Media type`.
+Once the page loads the `Default` View mode is automatically selected. However, because we are editing an object with the `Media type` `Photograph`, we need to edit the View mode `Digital Object Full View` since it is the *Default* View mode for this `Media type`.
 
-<details><summary>How to find which View mode is Default per Media type</summary>
-<div>
+#### How to find and configure which View mode is Default per Media type</summary>
 
-The **ADO Type to View mode Mapping** page tells the ADOs which View mode to use by default per Media type. This page can be accessed at */admin/config/archipelago/viewmode_mapping*.
+The **ADO Type to View mode Mapping** page tells the ADOs which View mode to use by default per Media type. This page can be accessed at `yoursite//admin/config/archipelago/viewmode_mapping`
 
-</div>
-</details></p>
+<details><summary>Formatters Shipped with Archipelago</summary>
+<span>
+
+1. Default
+2. Collection listing
+3. Digital Object Full View
+4. Digital Object with 3D Viewer
+5. Digital Object with A/V Player
+6. Digital Object with Book Reader
+7. Digital Object with Mirador Viewer
+8. Digital Object with Pannellum Panorama
+9. Digital Object with PDF Viewer
+10. Digital Object with Replay.web Webarchive Player
+11. Digital Object with Replay.web Webarchive with Navbars
+12. Digital Object with Video Player
+13. Digital Object with thumbnail and abstract
+
+</span>
+</details>
+<details><summary>Default View Mode Mappings by Media Type</summary>
+<span>
+
+|JSON (Media) Type | View Mode Name                   |  
+|----------|----------------------------------|
+|1. Video     | Digital Object with Video Player |
+|2. 3DModel   | Digital Object with 3D Viewer    |
+|3. Photograph| Digital Object Full View         |
+|4. Thesis   | Digital Object with PDF Viewer    |
+|5. Panorama   | Digital Object with Pannellum Panorama  |
+|6. Book   | Digital Object with Book Reader  |
+|7. Podcast   | Digital Object with A/V Player |
+|8. Collection   | Collection Listing |
+|9. Article   | Digital Object with PDF Viewer  |
+|10. Map   | Digital Object with Mirador Viewer  |
+|11. MusicRecording   | Digital Object with A/V Player  |
+|12. Sculpture  | Digital Object with 3D Viewer  |
+|13. VisualArtwork  | Digital Object with Video Player  |
+|14. Painting  | Digital Object with Mirador Viewer  |
+|15. WebPage  | Digital Object with Replay.web Webarchive Player |
+|16. PanoramaTour | Digital Object with Pannellum Panorama  |
+
+</span>
+</details>
+<br>
 
 ![Selecting Digital Object Full View](../imgs/strawberryfield-formatters/03_default-managedisplay.jpg)
 
@@ -36,9 +76,9 @@ There are four fields named `🍓Strawberry` and each one is a copy of the field
 
 Recall *My First Digital Object* at beginning of this document where there were 3 sections highlighted in **Red**, **Blue**, and **Green**.
 
-- In **Red** (`🍓Fragola`) there is the [Strawberry Field Formatter for IIIF media](../formatter-for-iiif-media.md) which takes the image stored in S3 to display the photograph with the image viewer.
-- In **Blue** (`🍓Erdbeere`) there is the [Strawberry Field Formatter for Custom Metadata Templates](../formatter-for-custom-metadata-templates.md) which displays the raw JSON metadata using configurable Twig templates. In this example, the default Twig template uses the JSON key `type` to display the `Type of Resource`.
-- In **Green** (`🍓Strawberry (Descriptive Metadata)`) there is the [Strawberry Default Formatter](../strawberry-default-formatter.md) which is used to display the Raw JSON Metadata.
+- In **Red** (`🍓Fragola`) there is the [Strawberry Field Formatter for IIIF media](tbd.md) which takes the image stored in S3 to display the photograph with the image viewer.
+- In **Blue** (`🍓Erdbeere`) there is the [Strawberry Field Formatter for Custom Metadata Templates](tbd.md) which displays the raw JSON metadata using configurable Twig templates. In this example, the default Twig template uses the JSON key `type` to display the `Type of Resource`.
+- In **Green** (`🍓Strawberry (Descriptive Metadata)`) there is the [Strawberry Default Formatter](tbd.md) which is used to display the Raw JSON Metadata.
 
 ![Strawberry Fields](../imgs/strawberryfield-formatters/04_strawberryfields.jpg)
 
@@ -57,4 +97,10 @@ And then with `🍓Erdbeere` (the Formatter for Custom Metadata Templates) there
 
 ![Erdbeere](../imgs/strawberryfield-formatters/07_erdbeere.jpg)
 
-Stay tuned for more in-depth documentation on all thirteen (13!) formatters shipped with Archipelago.
+More information about Managing Metadata Displays with Twig Templates can be found [here](metadatatwigs.md).
+
+---
+
+Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
+
+Return to the [Archipelago Documentation main page](../README.md).

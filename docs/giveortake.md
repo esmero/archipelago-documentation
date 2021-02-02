@@ -1,7 +1,7 @@
 # Archipelago Contribution Guide [![Google Groups](https://img.icons8.com/wired/32/000000/google-groups.png)](https://groups.google.com/forum/#!forum/archipelago-commons)
 
 
-``Archipelago`` welcomes, appreciates, and recognizes any and all types of contribution. This includes input on all use cases and needs, questions or answers, documentation, DevOps, and configurations. We also welcome general ideas, thoughts, and even dreams for the future of our repository! Of course, we also invite you to contribute PHP code, including fixes and new features. 
+``Archipelago`` welcomes, appreciates, and recognizes any and all types of contribution. This includes input on all use cases and needs, questions or answers, documentation, DevOps, and configurations. We also welcome general ideas, thoughts, and even dreams for the future of our repository! Of course, we also invite you to contribute PHP code, including fixes and new features.
 
 We will be helpful, kind, and open. We encourage discussions and always respect one another's opinions, language, gender, style, backgrounds, origins, and destinations, provided they come from the same root values of respect, as stated here. We support conflict resolution using nothing more than basic common sense. We value diversity in all its shapes, forms, colors, epoches, numbers, and kinds, with or without labels, including in-between and evolving. We always assume we can do better and that you have done a lot. Under this very basic social framework, this is how we hope you can contribute:
 
@@ -95,3 +95,9 @@ $ git push origin ISSUE-6
 
 ### Create A Pull Request
 Pull requests can be created via GitHub. [This document](https://help.github.com/articles/creating-a-pull-request/) explains in detail how to create one. After your Pull Request gets peer reviewed and approved, it can be merged. Discussion can happen and peers can ask you for modifications, fixes or more information on how to test. We will be respectful. You will be given credit for all your contributions and shown appreciation. There is no wrong and never too little. There could never be too much!
+
+---
+
+Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
+
+Return to the [Archipelago Documentation main page](../README.md).
