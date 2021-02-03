@@ -21,17 +21,6 @@ From either the main Content page or the AMI Sets List page, select the 'Start a
 If you plan of using the Google Sheets Importer option, you will need to:
   * [Configure the Google Sheets API](/docs/googleapi.md)
 
-### Ingesting New Digital Objects using Spreadsheets or Google Sheets
-
-  <details><summary>Click to view instructions</summary>
-  <span>
-  <br>
-
-  *These instructions are still Enqueued. Please stay tuned for AMI documentation updates being released early February 2021.*
-
-  </span>
-  </details>
-
 ### Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
 
   <details><summary>Click to view instructions</summary>
