@@ -34,12 +34,15 @@ To get a general glance of what is included and how it works, follow [this guide
 Now that you have Archipelago running, the following guides will help you master the basics.
 * [Ingesting Your First Object](docs/firstobject.md)
 * [General Q&A](docs/generalqa.md)
-* [Webforms In Archipelago _(*Work-In-Progress Documentation)_](docs/webforms.md)
+* [Webforms In Archipelago](docs/webforms.md)
 * [Creating Display Modes](docs/createdisplaymodes.md)
 * [Managing Metadata Displays with Twig _(*Work-In-Progress Documentation)_](docs/metadatatwigs.md)
 * [Debugging PHP in Archipelago](docs/xdebug.md)
 * [Archipelago's File Persistence Strategy](docs/archifilepersistencestrategy.md)
 * [How to Setup SSL for Docker/Archipelago _(*Work-In-Progress Documentation)_](docs/sslsetup.md)
+* [Archipelago Multi-Importer (AMI)](/docs/ami.md)
+* [Configuring Google Sheets API for AMI](/docs/googleapi.md)
+
 
 ## Archipelagos in the Wild
 Explore Archipelago instances running free across digital realms.
