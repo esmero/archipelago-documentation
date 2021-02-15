@@ -222,7 +222,7 @@ You will now see a message letting you know that 'Your source data was saved and
 
 The message will also let you know that your New AMI Set was created and provide a link to the AMI Set page.
 
-  ![AMI Step 6](/imgs/ami/AMIstep6.jpg)
+  ![AMI Step 6](/imgs/ami/AMIStep6.jpg)
 
 #### Step 7: AMI Set Processing
 
