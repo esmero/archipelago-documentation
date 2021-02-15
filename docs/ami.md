@@ -21,7 +21,7 @@ or directly at `/amiset/list`
 If you plan on using the Google Sheets Importer option, you will need to:
   * [Configure the Google Sheets API](/docs/googleapi.md)
 
-### Spreadsheet Formatting Overview
+## Spreadsheet Formatting Overview
 
 There are multiple ways a spreadsheet/CSV file can be structured to work with AMI, depending on the data transformation and mapping you will be using.
 
@@ -75,14 +75,14 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
     </span>
     </details>
 
-#### Example Spreadsheet/CSV    
+### Example Spreadsheet/CSV    
 
 This spreadsheet can be used to import a small set of Digital Objects using the same assets part of the [Two-Step Demo content ingest guide](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC1/docs/democontent.md) (These objects can also be found in the [Archipelago Deployment repository](https://github.com/esmero/archipelago-deployment)).
 
 * https://docs.google.com/spreadsheets/d/1PEhWPXrVDVvt8T1qFBbW71EyobOKT7-7eDFUwfyyxHQ/edit?usp=sharing
 * To use this spreadsheet, you can either download as a CSV file to use with the Spreadsheet Importer, or make a copy of this using your [configured Google Sheets API account](/docs/googleapi.md).
 
-#### Example JSON template
+### Example JSON template
 
 This JSON template can be used during the Data Transformation (step 3) of your AMI Import. This particular template corresponds with the metadata elements found in the Default Descriptive Metadata and Default Digital Object Collection webforms shipped with Archipelago 1.0.0-RC1.
 
@@ -146,7 +146,7 @@ To use this template, copy and paste the JSON below directly into a new Metadata
 </span>
 </details>  
 
-### Ingesting New Digital Objects using Spreadsheets or Google Sheets
+## Ingesting New Digital Objects using Spreadsheets or Google Sheets
 
 <details><summary>Click to view Instructions</summary>
 <span>
@@ -267,7 +267,7 @@ Return to the main Content page found at `/admin/content` and review your newly 
 </span>
 </details>  
 
-### Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
+## Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
 
   <details><summary>Click to view instructions</summary>
   <span>
