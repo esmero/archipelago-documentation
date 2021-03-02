@@ -2,6 +2,8 @@
 
 To allow the Archipelago Multi Importer (AMI) to read from Google spreadsheets, you first need to configure the Google Sheets API as outlined in the following instructions.
 
+_*Please note, this set of instructions will only work for individuals using Google accounts affiliated with Organizations. We are working on the separate set of instructions needed for individuals who will be using personal/general Google accounts.*_
+
 ### Generating Google OAuth2 Credentials
 
 1. Login to the [Google Developer Console](https://console.developers.google.com). You will see the API & Services Dashboard.
