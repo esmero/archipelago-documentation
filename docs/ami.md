@@ -108,7 +108,7 @@ To use this template, copy and paste the JSON below directly into a new Metadata
       "language": {{ data.language|json_encode|raw }},
       "ismemberof": [],
       "owner": {{ data.owner|json_encode|raw }},
-      "local_identifier": {{ local_identifier|json_encode|raw }},
+      "local_identifier": {{ data.local_identifier|json_encode|raw }},
       "date_published": {{ data.date_published|json_encode|raw }},
       "rights_statements": {{ data.rights_statements|json_encode|raw }},
       "rights": {{ data.rights|json_encode|raw }},
