@@ -56,6 +56,7 @@ Archipelago welcomes and appreciates any type of contribution, from use cases an
 * [Diego Pino](https://github.com/DiegoPino)
 * [Giancarlo Birello](https://github.com/giancarlobi)
 * [Allison Lund](https://github.com/alliomeria)
+* [Pedro Cambra](https://github.com/pcambra)
 
 ## Acknowledgments
 This software is a [Metropolitan New York Library Council](https://metro.org) Open-Source initiative and part of the Archipelago Commons project.
