@@ -12,7 +12,7 @@
 
 - [New York State COVID-19 Personal History Initiative](https://www.nyspersonalhistory.com)
 
-- [Web Archives Interest Group](http://webarchives.archipelago.nyc)
+- [Web Archives Interest Group](http://webarchive.archipelago.nyc)
 
 ## Still Brewing
 
