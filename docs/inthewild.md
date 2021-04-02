@@ -6,7 +6,7 @@
 - [Empire Immersive Experiences](https://esie.space)
     - _Supported by the Western New York Library Resources Counil (WNYLRC)_
 
-- [Olin College Libraries' Pheonix Files](http://ec2-184-73-148-144.compute-1.amazonaws.com)
+- [Olin College Library Pheonix Files](https://phoenixfiles.olin.edu)
 
 - [Oral History Association Metadata Task Force Repository](http://oha.archipelago.nyc)
 
