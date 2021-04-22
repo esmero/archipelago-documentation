@@ -5,7 +5,7 @@
 #### *Work-in-Progress Notes*
 
 *Please be aware that the version of AMI shipped with Archipelago 1.0.0-RC2 provides much of the core batch functions useful for getting started working with large amounts of content, but is not the full or final version of this module. This documentation page will be updated with successive AMI and Archipelago releases.*	
-## AMI Overview - 1.0.0-RC2
+## AMI Overview and Release Notes - 1.0.0-RC2
 *Notes from [Diego Pino](https://github.com/DiegoPino)*
 
 AMI provides Tabulated data ingest for ADOs with customizable input plugins. Each Spreadsheet (or Google Spreadsheet) goes through a Configuration Multi Step setup and generates at the end an AMI Set. AMI Sets then can be enqueued or directly ingested, its generated Objects purged and reingested again, its source data (generated and enriched with UUIDS) CSV replaced, improved and uploaded again and ingested. 
