@@ -10,7 +10,7 @@
 
 AMI provides Tabulated data ingest for ADOs with customizable input plugins. Each Spreadsheet (or Google Spreadsheet) goes through a Configuration Multi Step setup and generates at the end an AMI Set. AMI Sets then can be enqueued or directly ingested, its generated Objects purged and reingested again, its source data (generated and enriched with UUIDS) CSV replaced, improved and uploaded again and ingested. 
 
-<details><summary>Click to view the full AMI 1.0.0-RC2 release notes</summary>
+<details><summary>Click to read the full AMI 1.0.0-RC2 release notes.</summary>
 <span>
 
 #### Setup Steps: 
