@@ -237,7 +237,7 @@ Provide an optional ZIP file containing your assets.
    
 <details><summary>Click to view screenshot of example ZIP file creation in OSX</summary>
 <span>
-![Example ZIP OSX](imgs/ami/ExampleZipOSX.jpg)
+![Example ZIP OSX](/imgs/ami/ExampleZipOSX.jpg)
 </span>
 </details>  
 
