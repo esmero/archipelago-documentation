@@ -100,7 +100,7 @@ This spreadsheet can be used to import a small set of Digital Objects using the 
 
 This JSON template can be used during the Data Transformation (step 3) of your AMI Import. This particular template corresponds with the metadata elements found in the Default Descriptive Metadata and Default Digital Object Collection webforms shipped with Archipelago 1.0.0-RC2.
 
-  <details><summary>Click to view the example 1.0.0-RC1 AMI JSON template</summary>
+  <details><summary>Click to view the example 1.0.0-RC2 AMI JSON template</summary>
   <span>
 
 To use this template, copy and paste the JSON below directly into a new Metadata Display, found here for a local`http://localhost:8001/metadatadisplay/list` or `http://yoursite.org/metadatadisplay/list`. Select `JSON` as the 'Primary mime type this Twig Template entity will generate as output' for this new Metadata Display.
