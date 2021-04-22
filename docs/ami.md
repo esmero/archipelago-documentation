@@ -5,10 +5,13 @@
 #### *Work-in-Progress Notes*
 
 *Please be aware that the version of AMI shipped with Archipelago 1.0.0-RC2 provides much of the core batch functions useful for getting started working with large amounts of content, but is not the full or final version of this module. This documentation page will be updated with successive AMI and Archipelago releases.*	
-
 ## AMI Overview - 1.0.0-RC2
+*Notes from [Diego Pino](https://github.com/DiegoPino)*
 
 AMI provides Tabulated data ingest for ADOs with customizable input plugins. Each Spreadsheet (or Google Spreadsheet) goes through a Configuration Multi Step setup and generates at the end an AMI Set. AMI Sets then can be enqueued or directly ingested, its generated Objects purged and reingested again, its source data (generated and enriched with UUIDS) CSV replaced, improved and uploaded again and ingested. 
+
+<details><summary>Click to view the full AMI 1.0.0-RC2 release notes</summary>
+<span>
 
 #### Setup Steps: 
 AMI has Ingest, Update and Patch capabilities. AMI has a plugin system to fetch data. The data can come from multiple sources and right now (RC2) CSV/EXCEL or Google Spreadsheets are the ones enabled. Direct from Solr/OAI/API is on the works too for RC3. AMI can read files locally from the server, remotely from URLs or remotely from Private Backend Storage (S3). It does parent/children validation, makes sure that parents are ingested first, cleans broken relationships, allows arbitrary multi relations to be generated in a single ROW (ismemberof, partOf, etc)  pointing to other rows or existing ADOs (via UUIDs) and can process rows directly as JSON or preprocessed via a Metadata Display entity (twig template) capable of producing JSON output. These templates can be configured by “type”, Articles v/s 3DModel can have different ones. Even which columns contain Files can be configured at that level.
@@ -19,6 +22,8 @@ Ami Sets are special custom entities that hold an Ingest Strategy generated via 
 #### Search and Replace: 
 This module also provides a simple search/replace text VBO action (handles JSON as text) and a full blown JSONPATCH VBO action to batch modify ADOs. The last one is extremely powerful permitting multiple operations at the same time with tests. E.g replace a certain value, add another value, remove another value only if a certain test (e.g “type”:”Article” and “date_of_digital”: “2020-09-09”) matches. If any tests fail the whole operation will be canceled for that ADO. An incomplete “Webform” VBO action is present but not fully functional yet. This one allows you to choose a Webform, a certain element inside that Webform and then find and replace using the same Interface you would see while editing/adding a new ADO via the web form workflow. Should be ready by RC3.
 
+</span>
+</details>
 
 ## Getting started with AMI
 
