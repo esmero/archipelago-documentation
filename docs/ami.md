@@ -46,7 +46,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
 - Columns in your spreadsheet/CSV can be mapped to different data (files) and metadata elements (label, description, subjects, etc.).
 
 - It is recommended that different types of files are placed into separate columns--"images", "documents", "models", "videos", "audios".
-  - Filepaths can point to remote files, to existing files within your docker container, and s3 (or other storage type/location that is accessible to Archipelago).
+  - Filepaths can point to remote files, to existing files within your docker container, s3 (or other storage type/location that is accessible to Archipelago), and to paths within zip files.
       - Example path for existing file within docker container:
       `/var/www/html/d8content/myAMIimage.jpg`
       - Example s3 path:
