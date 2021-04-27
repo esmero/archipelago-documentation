@@ -5,12 +5,12 @@
 #### *Work-in-Progress Notes*
 
 *Please be aware that the version of AMI shipped with Archipelago 1.0.0-RC2 provides much of the core batch functions useful for getting started working with large amounts of content, but is not the full or final version of this module. This documentation page will be updated with successive AMI and Archipelago releases.*	
-## AMI Overview and Release Notes - 1.0.0-RC2
+## AMI Overview and Pre-Release Notes - AMI 0.1.0 (Archipelago - 1.0.0-RC2)
 *From the desk of [Diego Pino](https://github.com/DiegoPino)*
 
 AMI provides Tabulated data ingest for ADOs with customizable input plugins. Each Spreadsheet (or Google Spreadsheet) goes through a Configuration Multi Step setup and generates at the end an AMI Set. AMI Sets then can be enqueued or directly ingested, its generated Objects purged and reingested again, its source data (generated and enriched with UUIDS) CSV replaced, improved and uploaded again and ingested. 
 
-<details><summary>Click to read the full AMI 1.0.0-RC2 release notes.</summary>
+<details><summary>Click to read the full AMI 0.1.0 (Archipelago - 1.0.0-RC2) Pre-Release Notes.</summary>
 <span>
 
 #### Setup Steps: 
@@ -45,7 +45,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
 - For most standard AMI ingests, each Row of your spreadsheet/CSV will correspond to a single Digital Object or Collection.
 - Columns in your spreadsheet/CSV can be mapped to different data (files) and metadata elements (label, description, subjects, etc.).
 
-- It is recommended that different types of files are placed into separate columns--"images", "documents", "models", "videos", "audios".
+- It is recommended that different types of files are placed into separate columns--"images", "documents", "models", "videos", "audios", "text".
   - Filepaths can point to remote files, to existing files within your docker container, s3 (or other storage type/location that is accessible to Archipelago), and to paths within zip files.
       - Example path for existing file within docker container:
       `/var/www/html/d8content/myAMIimage.jpg`
@@ -69,7 +69,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
 
 - **Recommended Columns:**
   - Files as defined above
-    - `images`, `audios`, `documents`, etc.
+    - "images", "documents", "models", "videos", "audios", "text"
   - `ismemberof` and/or `ispartof` (and/or whatever predicate corresponds with the relationship you are mapping)
     - these columns can be used to connect related objects using the object-to-object relationship that matches your needs
     - these columns can hold 3 types of values
