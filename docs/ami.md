@@ -44,14 +44,14 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
   - It is recommended that filepaths are copied/stored as plain (non hyperlinked) formatted text.
 
 - **Every spreadsheet/CSV file should contain the following Columns:**
-  - `node_uuid`
-    - this can be empty
-    - if empty, Archipelago will automatically generate UUIDs
-    - can be used with existing UUIDs during migrations
   - `type`
     - the Digital Object or Digital Object Collection Type, such as 'Photograph' or 'Collection'
   - `label`
     - the title of the Digital Object or Collection
+  - **Soft-requirement* `node_uuid`
+    - this can be empty
+    - if empty, Archipelago will automatically generate UUIDs
+    - can be used with existing UUIDs during migrations
 
 - **Recommended Columns:**
   - Files as defined above
