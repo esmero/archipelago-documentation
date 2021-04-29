@@ -9,19 +9,18 @@ In its guts (or heart?), Archipelago does something quite simple but core to our
 
 This templating system is exposed to Archipelago users through the UI and stored side by side in the repository as content (we named them `Metadata Display entities`, but they not only serve display needs!) so users can fully control how metadata is transformed and published without touching their individual sources.
 
-Templates or recipes can be shared, exported, ingested, updated, and adapted in many ways. Fast changes are possible without having to wait for the next mayor release of Archipelago or your favorited Metadata Schema Specs Committee agreeing on the next or the last version. Of course, this module not only handles metadata but media assets too, extracting local or remote URIs and files from your metadata and rendering them as media viewers: books, 3D models, images, panoramas, A/V with IIIF in its soul.
+Templates or recipes can be shared, exported, ingested, updated, and adapted in many ways. Fast changes are possible without having to wait for the next major release of Archipelago or your favorited Metadata Schema Specs Committee agreeing on the next or the last version. Of course, this module not only handles metadata but media assets too, extracting local or remote URIs and files from your metadata and rendering them as media viewers: books, 3D models, images, panoramas, A/V with IIIF in its soul.
 
 You can learn more about what [format_strawberryfield](strawberryfield-formatters.md) can do and what many other possibilities are exposed through our templating system.
 
 ### Instructions and Guides
+*_Stay tuned, more to be shared with/following 1.0.0-RC2 release_
 
 * [Explanation of how Twig-Casting Works](tbd.md)
 * [Guide to basic adjustments to the default Object Description Twig template](tbd.md)
 
 ### Examples
-*_Stay tuned, more to be shared with/following 1.0.0-RC1 release_
-- [Templates Shipped with Standard Archipelago Deployments](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC1/d8content/metadatadisplays)
-- [Community Created Templates](https://github.com/esmero/archipelago-recyclables)
+- [Templates Shipped with Standard Archipelago Deployments](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC2/d8content/metadatadisplays)
 
 ---
 
