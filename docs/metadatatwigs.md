@@ -15,14 +15,14 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
 
 You can learn more about what [format_strawberryfield](strawberryfield-formatters.md) can do and what many other possibilities are exposed through our templating system.
 
+### Examples
+- [Templates Shipped with Standard Archipelago Deployments](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC2/d8content/metadatadisplays)
+
 ### Instructions and Guides
-*_Stay tuned, more to be shared with/following 1.0.0-RC2 release_
+*_Please stay tuned, more to be shared with/following 1.0.0-RC2 release_
 
 * [Explanation of how Twig-Casting Works](tbd.md)
 * [Guide to basic adjustments to the default Object Description Twig template](tbd.md)
-
-### Examples
-- [Templates Shipped with Standard Archipelago Deployments](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC2/d8content/metadatadisplays)
 
 ---
 
