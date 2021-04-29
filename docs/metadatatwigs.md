@@ -1,5 +1,7 @@
 # Managing Metadata Displays with Twig
 
+![ADOlife](../imgs/jsonupcaststar.png)
+
 ### Gist of Twigs in Archipelago
 _(*If you entered this page from the Strawberry field, this introductory section will feel quite familiar to you.)_
 
