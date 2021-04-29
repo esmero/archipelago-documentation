@@ -21,9 +21,6 @@ You can learn more about what [format_strawberryfield](strawberryfield-formatter
 ### Instructions and Guides
 *_Please stay tuned, more to be shared with/following 1.0.0-RC2 release_
 
-* [Explanation of how Twig-Casting Works](tbd.md)
-* [Guide to basic adjustments to the default Object Description Twig template](tbd.md)
-
 ---
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
