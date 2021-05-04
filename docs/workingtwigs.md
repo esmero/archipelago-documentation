@@ -190,8 +190,8 @@ Understanding the basic structure of your JSON data.
 
 #### Full Example for a Common Case:
 
-**Use case:** I have multiple LoD Subjects and want to display them in my page as a clickable ordered list but i’m a safe/careful person.
-**Twig Example:**
+- **Use case:** I have multiple LoD Subjects and want to display them in my page as a clickable ordered list but i’m a safe/careful person.
+- **Twig Example:**
 ```twig
 {% if data.subject_loc is iterable and data.subject_loc is not empty %}
 <h2>My Subjects</h2>
