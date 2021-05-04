@@ -188,7 +188,7 @@ Understanding the basic structure of your JSON data.
 	- Rendered Output:
 		- `My lower case Subject is dogs`
 
-#### Full Example for a Common Case:
+### Full Examples for Common Uses Cases:
 
 - **Use case:** I have multiple LoD Subjects and want to display them in my page as a clickable ordered list but i’m a safe/careful person.
 - **Twig Example:**
