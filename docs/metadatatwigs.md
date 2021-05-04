@@ -41,8 +41,6 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
 - Batch Ingest
 	- AMI Ingest: To transform your CSV data (one row == DATA) to Strawberry field JSON to generate an ADO
 
-You can learn even more about what `format_strawberryfield` can do and what many other possibilities are exposed through our templating system in this guide: [Starwberryfield Formatters](strawberryfield-formatters.md).
-
 ### Twig Templates Shipped with Archipelago
 **Archipelago Ships with:**
 - IIIF Manifest V3 for Images  (JSON-LD) Metadata Display
