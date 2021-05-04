@@ -65,11 +65,11 @@ You can find these templates here:
 
 While a lot of core needs and use cases are covered with the Twig Templates shipped with Archipelago, you may want to **add more Input elements** to your Webforms, which in turn will generate **new JSON Values**, which in turn you may want to **show/expose to end users**
 
-**Knowing (even if you do not plan to) how to edit or create your own **Twig templates** is important.
+**Knowing** (even if you do not plan to) how to edit or create your own **Twig templates** is important.
 
 - This guide covers the Basics of [Working With Twig in Archipelago](../docs/workingtwigs.md)
 - This section contains [Full Examples of Common Use Cases](../docs/workingtwigs.md#full-examples-for-common-uses-cases)
-- You may also want learn more about what `format_strawberryfield` can do and what many other possibilities are exposed through our templating system in this guide: [Starwberryfield Formatters](strawberryfield-formatters.md).
+- You may also want learn more about what `format_strawberryfield` can do and what many other possibilities are exposed through our templating system in this guide: [Strawberryfield Formatters](strawberryfield-formatters.md).
 
 ---
 
