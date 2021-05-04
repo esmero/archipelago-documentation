@@ -5,7 +5,7 @@ The following information can also be found in this Presentation from the "Twig 
 
 ## Prequisites (with food analogy)
 
-1. Know your Data/Metadata. What do i have? :thinking:
+1. Know your Data/Metadata. What do I have? :thinking:
 	- What do I have in my Fridge? Do I have Tofu? Do I have Peppermint :candy:? One Bunch?
 2. Know your final desired output Document: MODS, HTML, GEOJSON, etc. 
 	- What are you going to cook :cook:? Do you have a picture of the Curry :curry:? Have you ever had Curry :stew:?
