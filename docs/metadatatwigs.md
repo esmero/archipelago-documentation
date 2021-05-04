@@ -44,7 +44,7 @@ Metadata Display Entities are used for:
 You can learn even more about what `format_strawberryfield` can do and what many other possibilities are exposed through our templating system in this guide: [Starwberryfield Formatters](strawberryfield-formatters.md).
 
 ### Instructions and Examples
-- [Working With Twig in Archipelago](../workingtwigs.md)
+- [Working With Twig in Archipelago](../docs/workingtwigs.md)
 - [Templates Shipped with Standard Archipelago Deployments](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC2/d8content/metadatadisplays)
 
 ---
