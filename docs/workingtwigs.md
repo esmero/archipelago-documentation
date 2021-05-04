@@ -67,19 +67,22 @@ _All examples shown below are using the following JSON snipped from [Laddie the 
 Understanding the basic structure of your JSON data. 
 
 1. Single JSON Value.
-![KnowYourData1](../imgs/KnowYourData1.png)
+
+	![KnowYourData1](../imgs/KnowYourData1.png)
 	- For `"type": "Photograph"`
 		- "type" = JSON Key or Property
 		- "Photograph" = Single JSON Value (string)
 
 2.	Multiple JSON Values (Array of Enumeration of **Strings**)
-![KnowYourData2](../imgs/KnowYourData2.png)
+
+	![KnowYourData2](../imgs/KnowYourData2.png)
 	- For `"language": ["English","Spanish"]`
 		- "language" = JSON Key or Property
 		- "["English","Spanish"]" = Multiple JSON Values (Array of Enumeration of **Strings**)
 
 3. Multiple JSON Values	(Array of Enumeration of **Objects**)
-![KnowYourData3](../imgs/KnowYourData3.png)
+
+	![KnowYourData3](../imgs/KnowYourData3.png)
 	- For `"subject_loc":[{"uri":"http://..","label":"Dogs"},{"uri":"http://..","label":"Pets"}]`
 		- "subject_loc" = JSON Key or Property
 		- [{"uri":"http://..","label":"Dogs"},{"uri":"http://..","label":"Pets"}] =
