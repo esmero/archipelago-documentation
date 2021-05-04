@@ -187,6 +187,28 @@ Understanding the basic structure of your JSON data.
 	```
 	- Rendered Output:
 		- `My lower case Subject is dogs`
+
+#### Full Example for a Common Case:
+
+**Use case:** I have multiple LoD Subjects and want to display them in my page as a clickable ordered list but i’m a safe/careful person.
+	```twig
+	{% if data.subject_loc is iterable and data.subject_loc is not empty %}
+	<h2>My Subjects</h2>
+	<ul>
+	   {% for subject in data.subject_loc %}
+	   <li>
+	      <a href=”{{ subject.uri }}” title=”{{ subject.label|capitalize }}” target=”_blank”>
+	      {{ subject.label }}
+	      </a>
+	   </li> 
+	   {% endfor %}
+	</ul>
+	{% endif %}
+	```
+## And now it's your turn!
+
+We hope you found the information presented here to be helpful in getting started working with Twigs in Archipelago. Click here to return to the main [Twigs in Archipelago documentation](../docs/metadatatwigs.md). Happy Twigging!
+
 ---
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
