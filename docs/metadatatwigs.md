@@ -43,9 +43,33 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
 
 You can learn even more about what `format_strawberryfield` can do and what many other possibilities are exposed through our templating system in this guide: [Starwberryfield Formatters](strawberryfield-formatters.md).
 
+### Twig Templates Shipped with Archipelago
+**Archipelago Ships with:**
+- IIIF Manifest V3 for Images  (JSON-LD) Metadata Display
+- IIIF Manifest V2 for Images and Documents (JSON-LD) Metadata Display
+- GEOJSON (JSON) Metadata Display
+- A LoD Display (HTML) Metadata Display
+- A General ADO Description (HTML) Metadata Display
+- A Schema.org (JSON-LD) Metadata Display
+- A Thumbnails (HTML) Metadata Display
+- An AMI (JSON) Ingest Template
+etc.
+
+You can find these templates here:
+- On Github: [Templates Shipped with Standard Archipelago Deployments](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC2/d8content/metadatadisplays)
+- In your local instance: http://localhost:8001/metadatadisplay/list
+
+**Archipelago (the humans) will keep adding and refining these with every release.**
+
 ### Instructions and Examples
-- [Working With Twig in Archipelago](../docs/workingtwigs.md)
-- [Templates Shipped with Standard Archipelago Deployments](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC2/d8content/metadatadisplays)
+
+While a lot of core needs and use cases are covered with the Twig Templates shipped with Archipelago, you may want to **add more Input elements** to your Webforms, which in turn will generate **new JSON Values**, which in turn you may want to **show/expose to end users**
+
+**Knowing (even if you do not plan to) how to edit or create your own **Twig templates** is important.
+
+- This guide covers the Basics of [Working With Twig in Archipelago](../docs/workingtwigs.md)
+- This section contains [Full Examples of Common Use Cases](../docs/workingtwigs.md#full-examples-for-common-uses-cases)
+- You may also want learn more about what `format_strawberryfield` can do and what many other possibilities are exposed through our templating system in this guide: [Starwberryfield Formatters](strawberryfield-formatters.md).
 
 ---
 
