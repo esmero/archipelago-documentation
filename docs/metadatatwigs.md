@@ -61,7 +61,7 @@ You can find these templates here:
 
 ### Instructions and Examples
 
-While a lot of core needs and use cases are covered with the Twig Templates shipped with Archipelago, you may want to **add more Input elements** to your Webforms, which in turn will generate **new JSON Values**, which in turn you may want to **show/expose to end users**
+While a lot of core needs and use cases are covered with the Twig Templates shipped with Archipelago, you may want to **add more Input elements** to your Webforms, which in turn will generate **new JSON Values**, which in turn you may want to **show/expose to end users**.
 
 **Knowing** (even if you do not plan to) how to edit or create your own **Twig templates** is important.
 
