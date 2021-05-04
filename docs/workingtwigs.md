@@ -5,14 +5,14 @@ The following information can also be found in this Presentation from the "Twig 
 
 ## Prequisites (with food analogy)
 
-1. Know your Data/Metadata. What do i have?
-	- What do i have in my Fridge? Do i have Tofu? Do i have Peppermint? One Bunch?
+1. Know your Data/Metadata. What do i have? :thinking:
+	- What do I have in my Fridge? Do I have Tofu? Do I have Peppermint :candy:? One Bunch?
 2. Know your final desired output Document: MODS, HTML, GEOJSON, etc. 
-	- What are you going to cook? Do you have a picture of the Curry? Have you ever had Curry?
+	- What are you going to cook :cook:? Do you have a picture of the Curry :curry:? Have you ever had Curry :stew:?
 3. Know your Twig Basics
-	- How to cut and dice, steam and sauté
+	- How to cut and dice :knife:, steam and sauté :bowl_with_spoon:
 4. Do not be afraid
-	- You can’t get burned here and Ingredients do not expire!
+	- You can’t get burned :fire: here and Ingredients :strawberry: do not expire!
 
 #### Note about the Examples:
 _All examples shown below are using the following JSON snipped from [Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?]](https://archipelago.nyc/do/17355bdb-d784-4037-96fe-5c160296e639)._
