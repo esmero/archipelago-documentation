@@ -13,6 +13,10 @@ The following information can also be found in this Presentation from the "Twig 
 	- How to cut and dice :knife:, steam and sauté :bowl_with_spoon:
 4. Do not be afraid
 	- You can’t get burned :fire: here and Ingredients :strawberry: do not expire!
+5. Ask for help. Slack/Google Groups/Postcards :email: :mailbox_with_mail:
+	- Seeing others cook helps and also motivates. Others may share some spices. :hot_pepper:
+6. Use and Share your findings!
+	- Eat what you cook. :cookie: Share with friends and family. :cake:
 
 #### Note about the Examples:
 _All examples shown below are using the following JSON snipped from [Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?]](https://archipelago.nyc/do/17355bdb-d784-4037-96fe-5c160296e639)._
