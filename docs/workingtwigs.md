@@ -199,7 +199,7 @@ Understanding the basic structure of your JSON data.
 <ul>
    {% for subject in data.subject_loc %}
    <li>
-      <a href=”{{ subject.uri }}” title=”{{ subject.label|capitalize }}” target=”_blank”>
+      <a href="{{ subject.uri }}" title="{{ subject.label|capitalize }}" target="_blank">
       {{ subject.label }}
       </a>
    </li> 
@@ -258,7 +258,7 @@ You want to create a New Metadata Display(HTML) or a new (XML) Schema based form
 4. Put your nice glasses :nerd_face: on. What do you see? What data in your Frame do you have in your ADO (data)?
 5. Start nimble. Selected the `data.label` info, check where your **Frame** uses a _Title_ or a _Label_. Remove that text (cmd+x) and replace with a ``{{ data.label }}``. Press Preview. Do you see your title?
 6. Keep doing **6**, over and over. Leave complex values for the end. (e.g `data.subject_loc`)
-7. Document your changes `{# i added this because .. #}`
+7. Document your changes `{# I added this because .. #}`
 8. Save
 
 Once the Template is in place you can use it in a _Formatter_, as _Endpoint_, in your _Search Results_ or just keep it around until you and the world are ready!
