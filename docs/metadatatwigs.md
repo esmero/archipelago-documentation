@@ -16,14 +16,14 @@ Twig is a template engine for PHP part of Symfony framework.
 ### Where is Twig used in Archipelago?
 This templating system is exposed to Archipelago users through the UI and stored side by side in the repository as content (we named them `Metadata Display entities`, but they not only serve display needs!) so users can fully control how metadata is transformed and published without touching their individual sources.
 
-In standard **Drupal**/8/9/10 environments, Twig drives every **Page**.
+Twig drives **every** Page in a Drupal 8/9/10 environment.
 - Twig templates are normally files (.twig.html) that live in your Code.
 - Modules provide Templates, Themes provide Templates
 
-In **Archipelago**, Twig drives every aspect of **your ADO exposure** to the world.
-- Strawberryfield Metadata (JSON, your Data) is passed through a Metadata Display Entity which holds:
-- A Twig template (so you do not need to edit Files)
-- A desired output serialization format (the Output Document)
+Twig drives **every** aspect of your ADO exposure to the world in Archipelago and even batch Ingest.
+- Strawberryfield Metadata (JSON, your Data) is passed through a **Metadata Display Entity** which holds:
+	- A Twig template (so you do not need to edit Files)
+	- A desired output serialization format (the Output Document)
 
 ### Twig Templates as Metadata Display Entities
 Templates or recipes can be shared, exported, ingested, updated, and adapted in many ways. Fast changes are possible without having to wait for the next major release of Archipelago or your favorited Metadata Schema Specs Committee agreeing on the next or the last version. Of course, this module not only handles metadata but media assets too, extracting local or remote URIs and files from your metadata and rendering them as media viewers: books, 3D models, images, panoramas, A/V with IIIF in its soul.
