@@ -218,6 +218,22 @@ Understanding the basic structure of your JSON data.
 </p>
 {% endif %}
 ```
+**Use Case #3 (Full Curry):** {# May 4th 2021 @dpino: I have sometimes a user provided creation date. I want to show it in beautiful human readable language but fallback to automatic date if absent. I also want in the last case to show it was either “created” or “updated” #}
+
+**Twig Example for Use Case #3:**
+```twig
+{% if data.date_created is not empty %}
+<h2>Date {{ data.label }} was created:</h2>
+<p>
+  {{ data.date_created|date("F jS \\o\\f Y \\a\\t g:ia") }}
+</p>
+{% else %}
+<h2>Date {{ data.label }} was {{ attribute(data, 'as:generator').type|lower }}d  in this repository:</h2>
+<p>
+  {{  attribute(data, 'as:generator').endTime|date("F jS \\o\\f Y \\a\\t g:ia") }}
+</p>
+{% endif %}
+```
 
 ## And now it's your turn!
 
