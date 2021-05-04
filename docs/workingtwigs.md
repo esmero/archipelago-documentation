@@ -218,7 +218,20 @@ Understanding the basic structure of your JSON data.
 </p>
 {% endif %}
 ```
-**Use Case #3 (Full Curry):** {# May 4th 2021 @dpino: I have sometimes a user provided creation date. I want to show it in beautiful human readable language but fallback to automatic date if absent. I also want in the last case to show it was either “created” or “updated” #}
+**Use Case #3 (Full Curry):** {# May 4th 2021 @dpino: I have sometimes a user provided creation date. I want to show it in beautiful human readable language but fallback to automatic date if absent. I also want in the last case to show it was either “created” or “updated”. #}
+```json
+    "as:generator": {
+        "type": "Update",
+        "actor": {
+            "url": "https:\/\/archipelago.nyc\/form\/descriptive-metadata",
+            "name": "descriptive_metadata",
+            "type": "Service"
+        },
+        "endTime": "2021-03-17T13:24:01-04:00",
+        "summary": "Generator",
+        "@context": "https:\/\/www.w3.org\/ns\/activitystreams"
+    }
+```
 
 **Twig Example for Use Case #3:**
 ```twig
