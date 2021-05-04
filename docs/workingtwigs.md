@@ -1,7 +1,7 @@
 # Working with Twig in Archipelago
 
 The following information can also be found in this Presentation from the "Twig Templates and Archipelago" Spring 2021 Workshop:
-- [Twig Templates and Archipelago](https://docs.google.com/presentation/d/1qgYYESR1eMWuPXkpFwLnFiWXVZAf9Lhhaafq6Z3E138/edit?usp=sharing)
+- [Twig Templates and Archipelago](http://tinyurl.com/archipelagoandtwig)
 
 ## Prequisites (with food analogy)
 
