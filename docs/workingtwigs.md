@@ -17,14 +17,20 @@ The following information can also be found in this Presentation from the "Twig 
 ##### Note about the Examples:
 _All examples shown below are using the following JSON snipped from [Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?]](https://archipelago.nyc/do/17355bdb-d784-4037-96fe-5c160296e639)._
 
+<details><summary>Click to view image of the JSON snippet.</summary>
+  <span>
+
 ![LaddieJSON](../imgs/LaddieJSON.png)
+
+</span>
+</details> 
 
 <details><summary>Click to view this snippet as JSON.</summary>
   <span>
 
 ```json
 {
-	"type": "Photograph",
+    "type": "Photograph",
     "label": "Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?]",
     "owner": "New-York Historical Society, 170 Central Park West, New York, NY 10024, 212-873-3400.",
     "rights": "This digital image may be used for educational or scholarly purposes without restriction. Commercial and other uses of the item are prohibited without prior written permission from the New-York Historical Society. For more information, please visit the New-York Historical Society's Rights and Reproductions Department web page at http:\/\/www.nyhistory.org\/about\/rights-reproductions",
