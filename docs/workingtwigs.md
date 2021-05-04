@@ -109,6 +109,8 @@ Understanding the basic structure of your JSON data.
 		- `data.subject_loc.uri` will contain `"http://id.loc.gov/…"`
 		- `data.subject_loc.label` will contain "Dog"
 
+- Please note: you also have access to other info in your **context** `node`: such as`node.id` is the Drupal ID of your Current ADO; Also `is_front`, `language`, `is_admin`, `logged_in` and more!
+
 #### Twig Statements and Printing 
 - https://twig.symfony.com/doc/3.x/templates.html
 - Simple examples using Printing Statements
@@ -172,7 +174,7 @@ Understanding the basic structure of your JSON data.
 		- `My lower case Subject is dogs`
 	- Assignment, Filter, and Loop uage:	
 		- **set** is an assignment 
-		- | is a pipe, used after a value to apply a filter.
+		- | is a pipe, used after a value to apply a **filter**.
 		- **lower** is a filter
 		- Inside the loop you have have access to **subject** and **label_lowercase**
 
@@ -222,6 +224,10 @@ Understanding the basic structure of your JSON data.
 </p>
 {% endif %}
 ```
+**Note about `date` in this Use Case #2 Twig Example:** 
+- **date()** is a function
+- It uses a [“Date Format Pattern”](https://www.php.net/manual/en/datetime.formats.date.php) as argument.
+
 **Use Case #3 (Full Curry):** {# May 4th 2021 @dpino: I have sometimes a user provided creation date. I want to show it in beautiful human readable language but fallback to automatic date if absent. I also want in the last case to show it was either “created” or “updated”. #}
 ```json
     "as:generator": {
