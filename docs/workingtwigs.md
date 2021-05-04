@@ -209,7 +209,7 @@ Understanding the basic structure of your JSON data.
 ```
 **Use case #2:** I have sometimes a publication date. I want to show it in beautiful human readable language.
 
-**Twig Example for Use Case #1:**
+**Twig Example for Use Case #2:**
 ```twig
 {% if data.date_published is not empty %}
 <h2>Date {{ data.label }} was published:</h2>
