@@ -248,6 +248,21 @@ Understanding the basic structure of your JSON data.
 {% endif %}
 ```
 
+### A Recommended Workflow
+
+You want to create a New Metadata Display(HTML) or a new (XML) Schema based format?
+
+1. Get yourself an example **document (Frame)**. If **HTML** copy the source. If **XML** copy the full XML thing (cmd+c)
+2. Create a new **Metadata Display Entity**. Copy the content (text) of your Frame into the Edit window (cmd+v)
+3. Select an existing (as complete as possible) ADO to use as preview, press Preview
+4. Put your nice glasses :nerd: on. What do you see? What data in your Frame do you have in your ADO (data)?
+5. Start nimble. Selected the `data.label` info, check where your **Frame** uses a _Title_ or a _Label_. Remove that text (cmd+x) and replace with a ``{{ data.label }}``. Press Preview. Do you see your title?
+6. Keep doing **6**, over and over. Leave complex values for the end. (e.g `data.subject_loc`)
+7. Document your changes `{# i added this because .. #}`
+8. Save
+
+Once the Template is in place you can use it in a _Formatter_, as _Endpoint_, in your _Search Results_ or just keep it around until you and the world are ready!
+
 ## And now it's your turn!
 
 We hope you found the information presented here to be helpful in getting started working with Twigs in Archipelago. Click here to return to the main [Twigs in Archipelago documentation](../docs/metadatatwigs.md). Happy Twigging!
