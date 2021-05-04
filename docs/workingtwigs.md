@@ -207,6 +207,18 @@ Understanding the basic structure of your JSON data.
 </ul>
 {% endif %}
 ```
+**Use case #2:** I have sometimes a publication date. I want to show it in beautiful human readable language.
+
+**Twig Example for Use Case #1:**
+```twig
+{% if data.date_published is not empty %}
+<h2>Date {{ data.label }} was published:</h2>
+<p>
+{{ data.date_published|date("F jS \\o\\f Y \\a\\t g:ia") }}
+</p>
+{% endif %}
+```
+
 ## And now it's your turn!
 
 We hope you found the information presented here to be helpful in getting started working with Twigs in Archipelago. Click here to return to the main [Twigs in Archipelago documentation](../docs/metadatatwigs.md). Happy Twigging!
