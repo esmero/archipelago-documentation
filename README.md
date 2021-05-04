@@ -36,13 +36,12 @@ Now that you have Archipelago running, the following guides will help you master
 * [General Q&A](docs/generalqa.md)
 * [Webforms In Archipelago](docs/webforms.md)
 * [Creating Display Modes](docs/createdisplaymodes.md)
-* [Managing Metadata Displays with Twig _(*Work-In-Progress Documentation)_](docs/metadatatwigs.md)
+* [Twig Templates and Archipelago (*Work-In-Progress Documentation)_](docs/metadatatwigs.md)
 * [Debugging PHP in Archipelago](docs/xdebug.md)
 * [Archipelago's File Persistence Strategy](docs/archifilepersistencestrategy.md)
 * [How to Setup SSL for Docker/Archipelago _(*Work-In-Progress Documentation)_](docs/sslsetup.md)
 * [Archipelago Multi-Importer (AMI)](/docs/ami.md)
 * [Configuring Google Sheets API for AMI](/docs/googleapi.md)
-
 
 ## Archipelagos in the Wild
 Explore Archipelago instances running free across digital realms.
@@ -56,7 +55,6 @@ Archipelago welcomes and appreciates any type of contribution, from use cases an
 * [Diego Pino](https://github.com/DiegoPino)
 * [Giancarlo Birello](https://github.com/giancarlobi)
 * [Allison Lund](https://github.com/alliomeria)
-* [Pedro Cambra](https://github.com/pcambra)
 
 ## Acknowledgments
 This software is a [Metropolitan New York Library Council](https://metro.org) Open-Source initiative and part of the Archipelago Commons project.
