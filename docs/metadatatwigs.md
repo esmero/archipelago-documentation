@@ -69,6 +69,7 @@ While a lot of core needs and use cases are covered with the Twig Templates ship
 
 - This guide covers the Basics of [Working With Twig in Archipelago](../docs/workingtwigs.md)
 - This section contains [Full Examples of Common Use Cases](../docs/workingtwigs.md#full-examples-for-common-uses-cases)
+- This section covers a [Recommended Workflow](../docs/workingtwigs.md#a-recommended-workflow)
 - You may also want learn more about what `format_strawberryfield` can do and what many other possibilities are exposed through our templating system in this guide: [Strawberryfield Formatters](strawberryfield-formatters.md).
 
 ---
