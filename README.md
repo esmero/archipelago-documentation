@@ -36,7 +36,7 @@ Now that you have Archipelago running, the following guides will help you master
 * [General Q&A](docs/generalqa.md)
 * [Webforms In Archipelago](docs/webforms.md)
 * [Creating Display Modes](docs/createdisplaymodes.md)
-* [Twig Templates and Archipelago (*Work-In-Progress Documentation)_](docs/metadatatwigs.md)
+* [Twig Templates and Archipelago _(*Work-In-Progress Documentation)_](docs/metadatatwigs.md)
 * [Debugging PHP in Archipelago](docs/xdebug.md)
 * [Archipelago's File Persistence Strategy](docs/archifilepersistencestrategy.md)
 * [How to Setup SSL for Docker/Archipelago _(*Work-In-Progress Documentation)_](docs/sslsetup.md)
