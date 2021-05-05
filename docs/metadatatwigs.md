@@ -14,7 +14,7 @@ Twig is a template engine for PHP part of Symfony framework.
 	- Processor: Allows you to use a rich and expressive language to pick, check, iterate, transform and output your data inside the Template. We refer to this as “casting”.
 		
 ### Where is Twig used in Archipelago?
-This templating system is exposed to Archipelago users through the UI and is stored alongside in the repository as content so that users can fully control how metadata is transformed and published without touching their individual sources. We named these `Metadata Display entities`, but they not only serve more than just display needs.
+This templating system is exposed to Archipelago users through the UI, and is stored in the repository as content. This setup empowers users to fully control how metadata is transformed and published without touching their individual sources or needing to manage hard-coded configurations. We named these readily accessible and powerful templates `Metadata Display entities`, but they serve more than just display needs.
 
 Twig drives **every** Page in a Drupal 8/9/10 environment.
 - Twig templates are normally files (.twig.html) that live in your Code.
@@ -26,7 +26,7 @@ Twig drives **every** aspect of your ADO exposure to the world in Archipelago an
 	- A desired output serialization format (the Output Document)
 
 ### Twig Templates as Metadata Display Entities
-Templates or recipes can be shared, exported, ingested, updated, and adapted in many ways. This means you can make changes quickly without having to wait for the next major release of Archipelago or your favorite Metadata Schema Specs Committee agreeing to implement the next or the last version. This module not only handles metadata but media assets as well It will extract local or remote URIs and files from your metadata and rende them as media viewers: books, 3D models, images, panoramas, A/V, all with IIIF in its soul.
+Templates or recipes can be shared, exported, ingested, updated, and adapted in many ways. This means you can make changes quickly without having to wait for the next major release of Archipelago or your favorite Metadata Schema Specs Committee’s agreement to implement the next or the last version. This module not only handles metadata but media assets as well. It will extract local or remote URIs and files from your metadata and render them as media viewers: books, 3D models, images, panoramas, A/V, all with IIIF in its soul.
 
 **Metadata Display Entities** are used for:
 - Display:
