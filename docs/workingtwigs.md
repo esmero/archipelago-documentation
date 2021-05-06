@@ -157,7 +157,7 @@ Understanding the basic structure of your JSON data.
 		{% endfor %}`
 		````
 	- Rendered Output:
-		- * Subject Dogs found at position 0`
+		- `* Subject Dogs found at position 0`
 	- Loop usage:	
 		- **for** is a loop
 		- Inside the loop you have access to **key**, **subject**
