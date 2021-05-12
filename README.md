@@ -30,7 +30,7 @@ The Archipelago Commons community is dedicated to providing a welcoming and posi
 To get a general glance of what is included and how it works, follow [this guide](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/README.md) to deploy our latest beta locally using `Docker` with OSX or Ubuntu 18.04.
 
 ## Archipelago 101 (and up)
-Now that you have a general understanding of [Archipelago's architecture]((https://github.com/esmero/archipelago-documentation#archipelago-commons-intro), have a local Archipelago running, the following guides will help you master the basics.
+Now that you have a general understanding of [Archipelago's architecture](https://github.com/esmero/archipelago-documentation#archipelago-commons-intro), have a local Archipelago running, the following guides will help you master the basics.
 
 _Site Adminstration & Configuration_
 * [Archipelago's File Persistence Strategy](docs/archifilepersistencestrategy.md)
