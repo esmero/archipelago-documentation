@@ -2,7 +2,6 @@
 * [What is Archipelago?](https://github.com/esmero/archipelago-documentation#archipelago-commons-intro)
 * [Code of Conduct](https://github.com/esmero/archipelago-documentation#code-of-conduct)
 * [Instructions and Guides](https://github.com/esmero/archipelago-documentation#instructions-and-guides)
-* [Archipelagos in the Wild](https://github.com/esmero/archipelago-documentation#archipelagos-in-the-wild)
 * [Contributing](https://github.com/esmero/archipelago-documentation#contributing)
 
 # Archipelago Commons Intro
@@ -28,20 +27,24 @@ The Archipelago Commons community is dedicated to providing a welcoming and posi
 # Instructions and Guides
 
 ## Archipelago Deployment Quickstart
-To get a general glance of what is included and how it works, follow [this guide](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC1/README.md) to deploy our latest beta locally using `Docker` with OSX or Ubuntu 18.04.
+To get a general glance of what is included and how it works, follow [this guide](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/README.md) to deploy our latest beta locally using `Docker` with OSX or Ubuntu 18.04.
 
 ## Archipelago 101 (and up)
-Now that you have Archipelago running, the following guides will help you master the basics.
-* [Ingesting Your First Object](docs/firstobject.md)
-* [General Q&A](docs/generalqa.md)
-* [Webforms In Archipelago](docs/webforms.md)
-* [Creating Display Modes](docs/createdisplaymodes.md)
-* [Twig Templates and Archipelago](docs/metadatatwigs.md)
-* [Debugging PHP in Archipelago](docs/xdebug.md)
+Now that you have a general understanding of [Archipelago's architecture]((https://github.com/esmero/archipelago-documentation#archipelago-commons-intro), have a local Archipelago running, the following guides will help you master the basics.
+
+_Site Adminstration & Configuration
 * [Archipelago's File Persistence Strategy](docs/archifilepersistencestrategy.md)
 * [How to Setup SSL for Docker/Archipelago _(*Work-In-Progress Documentation)_](docs/sslsetup.md)
-* [Archipelago Multi-Importer (AMI)](/docs/ami.md)
+* [Debugging PHP in Archipelago](docs/xdebug.md)
+* [Creating Display Modes](docs/createdisplaymodes.md)
 * [Configuring Google Sheets API for AMI](/docs/googleapi.md)
+* [General Q&A](docs/generalqa.md)
+
+_Content Creation, Metadata and Cataloging, General Workflows_
+* [Ingesting Your First Object](docs/firstobject.md)
+* [Webforms In Archipelago](docs/webforms.md)
+* [Twig Templates and Archipelago](docs/metadatatwigs.md)
+* [Archipelago Multi-Importer (AMI)](/docs/ami.md)
 
 ## Archipelagos in the Wild
 Explore Archipelago instances running free across digital realms.
