@@ -51,6 +51,9 @@ _Digital Objects and Collections Creation, Metadata and Cataloging, General Work
 * [Twig Templates and Archipelago](docs/metadatatwigs.md) _(how Twig is used in Archipelago)_
   * [Working With Twig in Archipelago](docs/workingtwigs.md) _(getting started with custom Twig templates)_
 * [Archipelago Multi-Importer (AMI)](/docs/ami.md)
+  * [Spreadsheet Formatting Overview](docs/ami.md#spreadsheet-formatting-overview)
+  * [Ingesting New Digital Objects using Spreadsheets or Google Sheets](docs/ami.md#ingesting-new-digital-objects-using-spreadsheets-or-google-sheets)
+  * [Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets](docs/ami.md#ingesting-new-digital-objects-and-collections-using-spreadsheets-or-google-sheets)
 
 ## Archipelago Presentations and Documents
 * [Archipelago : an empathic Digital Repository Architecture](https://tinyurl.com/archipelago-brief-presentation)
