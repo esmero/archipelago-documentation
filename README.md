@@ -58,7 +58,7 @@ _Digital Objects and Collections Creation, Metadata and Cataloging, General Work
 * [Twig Templates and Archipelago](http://tinyurl.com/archipelagoandtwig)
 * [Archipelago 1.0.0-RC2 Specs and features](https://tinyurl.com/ArchipelagoRC2specs)
 
-## Archipelagos in the Wild
+# Archipelagos in the Wild
 Explore Archipelago instances running free across digital realms.
 * [Archipelago Community Showcase](docs/inthewild.md)
 * [METRO + Archipelago](http://archipelago.nyc)
