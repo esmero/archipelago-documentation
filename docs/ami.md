@@ -93,7 +93,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
 
 This spreadsheet can be used to import a small set of Digital Objects using the same assets part of the [Two-Step Demo content ingest guide](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC1/docs/democontent.md) (these objects can also be found in the [Archipelago Deployment repository](https://github.com/esmero/archipelago-deployment)).
 
-* https://docs.google.com/spreadsheets/d/1PEhWPXrVDVvt8T1qFBbW71EyobOKT7-7eDFUwfyyxHQ/edit?usp=sharing
+* https://docs.google.com/spreadsheets/d/10IAgDZ1_fGVd_2g1GyUYs0SrnkAfvVtTwukEaIEny5Y/edit?usp=sharing
 * To use this spreadsheet, you can either download as a CSV file to use with the Spreadsheet Importer, or make a copy of this using your [configured Google Sheets API account](/docs/googleapi.md).
 
 ### Example JSON template
