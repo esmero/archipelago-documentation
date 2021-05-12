@@ -37,13 +37,18 @@ _Site Adminstration & Configuration_
 * [How to Setup SSL for Docker/Archipelago _(*Work-In-Progress Documentation)_](docs/sslsetup.md)
 * [Debugging PHP in Archipelago](docs/xdebug.md)
 * [Creating Display Modes](docs/createdisplaymodes.md)
+* [Strawberryfield Formatters](docs/strawberryfield-formatters.md)
 * [Configuring Google Sheets API for AMI](/docs/googleapi.md)
 * [General Q&A](docs/generalqa.md)
 
-_Content Creation, Metadata and Cataloging, General Workflows_
+_Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows_
 * [Ingesting Your First Object](docs/firstobject.md)
 * [Webforms In Archipelago](docs/webforms.md)
-* [Twig Templates and Archipelago](docs/metadatatwigs.md)
+  * [How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)](docs/webformsasinput.md)
+  * [Customizing Webforms: Modifying allowable file extensions](docs/modifyingfileextensionsinwebform.md)
+  * [Archipelago Custom Webform Elements](docs/customwebformelements.md)
+* [Twig Templates and Archipelago](docs/metadatatwigs.md) _(how Twig is used in Archipelago)_
+  * [Working With Twig in Archipelago](docs/workingtwigs.md) _(getting started with custom Twig templates)_
 * [Archipelago Multi-Importer (AMI)](/docs/ami.md)
 
 ## Archipelagos in the Wild
