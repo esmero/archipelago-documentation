@@ -2,6 +2,7 @@
 * [What is Archipelago?](https://github.com/esmero/archipelago-documentation#archipelago-commons-intro)
 * [Code of Conduct](https://github.com/esmero/archipelago-documentation#code-of-conduct)
 * [Instructions and Guides](https://github.com/esmero/archipelago-documentation#instructions-and-guides)
+* [Archipelago Presentations and Documents](https://github.com/esmero/archipelago-documentation#archipelago-presentations-and-documents)
 * [Contributing](https://github.com/esmero/archipelago-documentation#contributing)
 
 # Archipelago Commons Intro
@@ -50,6 +51,12 @@ _Digital Objects and Collections Creation, Metadata and Cataloging, General Work
 * [Twig Templates and Archipelago](docs/metadatatwigs.md) _(how Twig is used in Archipelago)_
   * [Working With Twig in Archipelago](docs/workingtwigs.md) _(getting started with custom Twig templates)_
 * [Archipelago Multi-Importer (AMI)](/docs/ami.md)
+
+## Archipelago Presentations and Documents
+* [Archipelago : an empathic Digital Repository Architecture](https://tinyurl.com/archipelago-brief-presentation)
+* [Working with Archipelago Multi-Importer](https://tinyurl.com/workingwithAMI)
+* [Twig Templates and Archipelago](http://tinyurl.com/archipelagoandtwig)
+* [Archipelago 1.0.0-RC2 Specs and features](https://tinyurl.com/ArchipelagoRC2specs)
 
 ## Archipelagos in the Wild
 Explore Archipelago instances running free across digital realms.
