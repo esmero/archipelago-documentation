@@ -55,7 +55,7 @@ _Digital Objects and Collections Creation, Metadata and Cataloging, General Work
   * [Ingesting New Digital Objects using Spreadsheets or Google Sheets](docs/ami.md#ingesting-new-digital-objects-using-spreadsheets-or-google-sheets)
   * [Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets](docs/ami.md#ingesting-new-digital-objects-and-collections-using-spreadsheets-or-google-sheets)
 
-## Archipelago Presentations and Documents
+# Archipelago Presentations and Documents
 * [Archipelago : an empathic Digital Repository Architecture](https://tinyurl.com/archipelago-brief-presentation)
 * [Working with Archipelago Multi-Importer](https://tinyurl.com/workingwithAMI)
 * [Twig Templates and Archipelago](http://tinyurl.com/archipelagoandtwig)
