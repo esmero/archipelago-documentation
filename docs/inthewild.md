@@ -14,6 +14,8 @@
 
 - [Web Archives Interest Group](https://webarchive.archipelago.nyc)
 
+_*Please reach out to [Allison Lund](https://github.com/alliomeria) if you have a public Archipelago instance you'd like to share here. Thank you!_
+
 ## Still Brewing
 
 The following Archipelago instances are not yet publicly-accessible. Active links will be made available in future updates, stay tuned!
