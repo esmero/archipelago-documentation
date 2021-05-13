@@ -23,7 +23,7 @@ The following Archipelago instances are not yet publicly-accessible. Active link
 - [Digital Culture of Metropolitan New York (DCMNY)](http://dcmny.org)
   - *_migration to Archipelago by mid/late 2021_
 
-- Empire Archival Discovery Cooperative (EADC)
+- [Empire Archival Discovery Cooperative (EADC) Finding Aid Toolkit](https://archipelago.senylrc.org/)
    - _Supported by the Southeastern New York Library Resources Council (SENYLRC)_
 
 ---
