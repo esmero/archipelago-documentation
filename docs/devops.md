@@ -16,11 +16,10 @@ _Information related to non-Dockerized installation and configruation can be fou
 
 ### Strawberryfield Modules at the heart of every Archipelago:
   - [Strawberryfield](https://github.com/esmero/strawberryfield)
-  - [Strawberryfield Formatters](https://github.com/esmero/format_strawberryfield)
+  - [Format Strawberryfield](https://github.com/esmero/format_strawberryfield)
   - [Webform Strawberryfield](https://github.com/esmero/webform_strawberryfield)
-  - In-development Modules _(*Additional information for these modules will be made available following initial public releases.)_
-    - [Strawberry Runners](https://github.com/esmero/strawberry_runners)
-    - [Archipelago Multi-Importer (AMI)](https://github.com/esmero/ami)
+  - [Strawberry Runners](https://github.com/esmero/strawberry_runners)
+  - [Archipelago Multi-Importer (AMI)](https://github.com/esmero/ami)
 
 Documentation related to the Strawberryfield modules can be found here: [Strawberryfields Forever](strawberryfields.md)
 
