@@ -41,6 +41,7 @@ _Site Adminstration & Configuration_
 * [Strawberryfield Formatters](docs/strawberryfield-formatters.md)
 * [Configuring Google Sheets API for AMI](/docs/googleapi.md)
 * [General Q&A](docs/generalqa.md)
+  * Twig Modules Configuration; SMTP Configuration; Min.io Logging
 
 _Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows_
 * [Ingesting Your First Object](docs/firstobject.md)
