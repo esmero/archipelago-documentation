@@ -9,7 +9,7 @@
 
 Archipelago Commons, or simply Archipelago, is an evolving Open Source Digital Objects Repository / DAM Server Architecture based on the popular CMS [`Drupal8/9`](https://www.drupal.org) and released under [`GLP V.3 License`](https://www.gnu.org/licenses/gpl-3.0.txt).
 
-Archipelago is a mix of deeply integrated custom-coded Drupal8 modules (made with care by us) and a curated and well-configured Drupal8 instance, running under a discrete and and well-planned set of service containers.
+Archipelago is a mix of deeply integrated custom-coded Drupal modules (made with care by us) and a curated and well-configured Drupal instance, running under a discrete and well-planned set of service containers.
 
 Archipelago was dreamt as a multi-tenant, distributed, capable system (as its name suggests!) and can live isolated or in flocks of similar deployments, sharing storage, services, or -- even better -- just the discovery layer. Learn more about the different [`Software Services`](docs/devops.md) used by Archipelago.
 
