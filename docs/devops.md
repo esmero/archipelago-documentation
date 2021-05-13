@@ -10,7 +10,7 @@ At the core of the Archipelago philosophy is our commitment to both simplicity a
  - [Cantaloupe (Image Server)](https://cantaloupe-project.github.io/)
  - [S3 Storage (Mini.io or any other S3 flavor)](https://min.io/)
 
-Installation is entirely [Dockerized](https://www.docker.com) and scripted with [easy-to-follow directions](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC1/README.md).
+Installation is entirely [Dockerized](https://www.docker.com) and scripted with [easy-to-follow directions](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/README.md).
 
 _Information related to non-Dockerized installation and configruation can be found here: [Traditional Installation Notes](traditional-install.md)_
 
