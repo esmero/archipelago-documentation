@@ -4,7 +4,7 @@
     - _METRO's public Archipelago playground to experiment, try things out, break and reconstruct. Consider this a blank piece of paper to start a discussion._
 
 - [Empire Immersive Experiences](https://esie.space)
-    - _Supported by the Western New York Library Resources Counil (WNYLRC)_
+    - _Supported by the Western New York Library Resources Council (WNYLRC)_
 
 - [Olin College Library Pheonix Files](https://phoenixfiles.olin.edu)
 
@@ -14,17 +14,20 @@
 
 - [Web Archives Interest Group](https://webarchive.archipelago.nyc)
 
-_*Please reach out to [Allison Lund](https://github.com/alliomeria) if you have a public Archipelago instance you'd like to share here. Thank you!_
 
 ## Still Brewing
 
-The following Archipelago instances are not yet publicly-accessible. Active links will be made available in future updates, stay tuned!
+The following Archipelago instances are still brewing. Please be aware that the following links may change, and stay tuned for future updates.
 
 - [Digital Culture of Metropolitan New York (DCMNY)](http://dcmny.org)
-  - *_migration to Archipelago by mid/late 2021_
+  - *_migration to Archipelago began Spring 2021_
 
 - [Empire Archival Discovery Cooperative (EADC) Finding Aid Toolkit](https://archipelago.senylrc.org/)
    - _Supported by the Southeastern New York Library Resources Council (SENYLRC)_
+
+
+
+_*Please reach out to [Allison Lund](https://github.com/alliomeria) if you have a public Archipelago instance you'd like to share here. Thank you!_
 
 ---
 
