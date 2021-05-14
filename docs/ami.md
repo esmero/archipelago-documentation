@@ -70,6 +70,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
 - **Recommended Columns:**
   - Files as defined above
     - "images", "documents", "models", "videos", "audios", "text"
+    - .warc/.wacz files should be placed in a column "upload_associated_warcs"
   - `ismemberof` and/or `ispartof` (and/or whatever predicate corresponds with the relationship you are mapping)
     - these columns can be used to connect related objects using the object-to-object relationship that matches your needs
     - these columns can hold 3 types of values
