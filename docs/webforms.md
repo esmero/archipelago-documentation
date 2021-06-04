@@ -14,10 +14,10 @@ Use these webforms or their elements to create a custom webform for your own rep
 
 * Archipelago Default Deployment Webforms
   * [Descriptive Metadata](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC1/config/sync/webform.webform.descriptive_metadata.yml)
-    * [Corresponding Schema.org Type Options](https://github.com/esmero/archipelago-deployment/blob/2.0.0-RC1/config/sync/webform.webform_options.schema_org_creative_works.yml)
+    * [Corresponding Schema.org Type Options](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/config/sync/webform.webform_options.schema_org_creative_works.yml)
 
   * [Digital Object Collection](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC1/config/sync/webform.webform.digital_object_collection.yml)
-    * [Corresponding Schema.org Type Options](https://github.com/esmero/archipelago-deployment/blob/2.0.0-RC1/config/sync/webform.webform_options.schema_org_cw_collections.yml)
+    * [Corresponding Schema.org Type Options](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/config/sync/webform.webform_options.schema_org_cw_collections.yml)
 
 * [Community Created Webforms](tbd.md)
 
