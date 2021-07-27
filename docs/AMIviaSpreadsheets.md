@@ -1,5 +1,7 @@
 # Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
 
+Ingesting Only Digital Objects or Both Digital Objects and Collections uses similar processes, with a few key differences. [Click here](/docs/AMIviaSpreadsheets.md#ingesting-both-new-digital-objects-and-collections-in-the-same-spreadsheet) to jump to the [Ingesting Both New Digital Objects and Collections section](/docs/AMIviaSpreadsheets.md#ingesting-both-new-digital-objects-and-collections-in-the-same-spreadsheet) of this guide page.
+
 ## Ingesting _Only_ New Digital Objects
 
 From either the main Content page or the AMI Sets List page, select the 'Start an AMI set' button to begin.
