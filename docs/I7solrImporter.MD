@@ -2,12 +2,12 @@
 
 From either the main Content page or the AMI Sets List page, select the 'Start an AMI set' button to begin.
 
-#### Step 1: Plugin Selection
+## Step 1: Plugin Selection
 Select the Islandora 7 Solr Importer from the dropdown menu.
 
 ![Islandora Solr Importer Step 11](/imgs/ami/I7step1.jpg)
   
-#### Step 2, section 1: Solr Server Configuration
+## Step 2, section 1: Solr Server Configuration
 You will only have the option to select 'Create New ADOs' as the Operation you would like to perform.
 
 For the Solr Server Configuration section, you will need to provide all of the following information:
@@ -28,7 +28,7 @@ For larger collections, you may wish to create multiple/split AMI ingest sets by
 
 ![Islandora Solr Importer Step 2 Section 1](/imgs/ami/I7step2_section1.jpg)
 
-#### Step 2, section 2: Islandora Mappings
+## Step 2, section 2: Islandora Mappings
 
 In this step you will need to make determinations on how you would like to map your Islandora 7 digital objects to your Archipelago repository.
 
@@ -43,7 +43,7 @@ In this step you will need to make determinations on how you would like to map y
 
 - You can also specify an ADO (Object or Collection) to be used the Parent of Imported Objects. By selecting an existing ADO (Object or Collection) here using the autocomplete/search, the generated AMI set .csv file will contain an 'ismemberof' column containing the UUID of the selected ADO for every row.
 
-#### Step 3: Data Transformation Selections
+## Step 3: Data Transformation Selections
 Select the data transformation approach--how your source data will be transformed into ADO (Archipelago Digital Object) Metadata.
 
 - You will have 3 options for your data transformation approach:
@@ -65,7 +65,7 @@ Select the data transformation approach--how your source data will be transforme
 
 ![AMI Step 3 Data Transformation Mappings](/imgs/ami/AMIstep3JSONtemplateDataTransformation.jpg)
 
-#### Step 4: Global ADO Mappings
+## Step 4: Global ADO Mappings
 Select your global ADO mappings.
   - Even if empty (no values), select `node_uuid` and any relationship predicate columns (such as `ismemberof`).
   - By default, the option to automatically assigns UUIDs is selected. If you have existing UUIds, unselect this option.
@@ -78,7 +78,7 @@ Select your global ADO mappings.
 
 ![AMI Step 4 Global ADO Mappings](/imgs/ami/AMIstep4GlobalADOmappings.jpg)
 
-#### Step 5: ZIP upload
+## Step 5: ZIP upload
 
 For standard Spreadsheet or Google Sheets AMI ingests, you would use this step to provide an optional ZIP file containing your assets. 
 
@@ -86,13 +86,13 @@ For your Islandora 7 Solr Importer process, the generated AMI set .csv file will
 
 ![AMI Step 5 Zip](/imgs/ami/AMIstep5zip.jpg) 
  
-#### Step 6: Batch fetching from Solr
+## Step 6: Batch fetching from Solr
  
 During this step, AMI will fetch the specified digital objects from the remote Solr source. This is generally a quick process, but be aware that settings in the remote Solr source can impact the response time.
 
 ![Islandora Solr Importer Step Batch Solr Fetching](/imgs/ami/AMIstep4GlobalADOmappings.jpg)
 
-#### Step 7: AMI Set Confirmation
+## Step 7: AMI Set Confirmation
 
 You will now see a message letting your know your "New AMI Set was created". You will be able to review the generated .csv file directly from this page under Source Data File.
 
@@ -100,7 +100,7 @@ You will now see a message letting your know your "New AMI Set was created". You
   
 While you may immediately select "Process" from this AMI Set Confirmation page to use the Islandora 7 Importer generated .csv file as-is to ingest the ADOs in your AMI set, it is strongly recommended that you review the .csv file first. AMI is configured to trim unecessary (for Archipelago) and de-duplicate redundant Solr source data, but you may wish to pare down the sourced data even further and/or conduct general metadata review and cleanup before migrating your content. You will also likely want to make adjustments to your AMI Ingest JSON Template based on your review, depending on the variation of metadata columns/keys found in your source repostiory. 
 
-#### Step 8: AMI Set Processing
+## Step 8: AMI Set Processing
 
 Whether you have chosen to review your .csv file or not, your newly created AMI Set will now need to be Processed.
 
@@ -122,7 +122,7 @@ You may also select `Process` from the `Operations` menu for the AMI set from th
   
 If you chose to 'Confirm" and Process your AMI Set immediately, proceed to Step 9: Processing and ADO Creation.   
 
-#### Step 9: Queue Manager (if not Processing immediately)
+## Step 9: Queue Manager (if not Processing immediately)
 
 If you chose to place your AMI set in the Queue to Process in step 7, you may need to navigate to the Queue Manager found at `/admin/config/system/queue-ui`. (Be sure to select the `Queue Manager` under the System section, not the `Queue Manager for Hydroponic Service` under the Archipelago section). If the Queue operations for your Archipelago instance have been configured, you can simply leave your AMI Set in the Queue for Processing on the preconfigured schedule.
 
@@ -132,7 +132,7 @@ To Process your AMI Set immediately from the Queue Manager page, select the chec
 
   ![AMI Queue Manager Batch](/imgs/ami/AMIqueueMgrBatchProcess.jpg)
 
-#### Step 10: Processing and ADO Creation
+## Step 10: Processing and ADO Creation
 
 Your AMI set will now be Processed. You can follow the set's progress through the `Processing queues` loading screen.
 
@@ -144,7 +144,7 @@ After your AMI set is Processed, you will receive confirmation messages letting 
   
 From this message, you can click on each ADO title to review the new created Digital Object (or Collection) if you wish. Or, you may proceed to step 10.  
 
-#### Step 11: Review your newly created Digital Objects
+## Step 11: Review your newly created Digital Objects
 
 Return to the main Content page found at `/admin/content` and review your newly created Digital Objects. After ensuring that files and metadata elements were mapped correctly, you may choose to change the Status for your Digital Objects to 'Published'. Celebrate your AMI success with a fresh coffee, tea, or cookie!
   
@@ -153,6 +153,3 @@ Return to the main Content page found at `/admin/content` and review your newly 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
 Return to the [Archipelago Documentation main page](../README.md).
-  
-  
-  
