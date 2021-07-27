@@ -11,7 +11,7 @@ You can access AMI through the `AMI Sets` tab on the main Content page found at 
 ## AMI Instructions and Guides
 - [Spreadsheet Formatting Overview](/docs/AMIspreadsheet.md)
   - *Example Spreadsheet/CSV and Example JSON Ingest Template found on this page below*
-- [Ingesting Digital Objects and Collections using Spreadsheets or Google Sheets](/docs/AMIviaSpreadsheets) 
+- [Ingesting Digital Objects and Collections using Spreadsheets or Google Sheets](/docs/AMIviaSpreadsheets.md) 
 - [Configuration for Google Sheets API](/docs/googleapi.md)
 	- *Please note: frequent changes to the Google Sheets API specifications may impact the configurations needed. Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions/issues.*
 - [Using the Islandora 7 Solr Importer](/docs/I7solrImporter.md)
