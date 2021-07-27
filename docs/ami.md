@@ -14,7 +14,7 @@ You can access AMI through the `AMI Sets` tab on the main Content page found at 
 - [Ingesting Digital Objects and Collections using Spreadsheets or Google Sheets](/docs/AMIviaSpreadsheets.md) 
 - [Configuration for Google Sheets API](/docs/googleapi.md)
 	- *Please note: frequent changes to the Google Sheets API specifications may impact the configurations needed. Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions/issues.*
-- [Using the Islandora 7 Solr Importer](/docs/I7solrImporter.md)
+- [Using the Islandora 7 Solr Importer](/docs/I7solrImporter.MD)
 
 ## AMI Overview and Pre-Release Notes - AMI 0.1.0 (Archipelago - 1.0.0-RC2)
 *From the desk of [Diego Pino](https://github.com/DiegoPino)*
