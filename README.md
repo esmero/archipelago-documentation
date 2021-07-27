@@ -39,7 +39,7 @@ _Site Adminstration & Configuration_
 * [Debugging PHP in Archipelago](docs/xdebug.md)
 * [Creating Display Modes](docs/createdisplaymodes.md)
 * [Strawberryfield Formatters](docs/strawberryfield-formatters.md)
-* [Configuring Google Sheets API for AMI](/docs/googleapi.md)
+* [Configuration for Google Sheets API](docs/googleapi.md)
 * [General Q&A](docs/generalqa.md)
   * [Twig Modules Configuration](docs/generalqa.md#twig-modules-configuration), [SMTP Configuration](docs/generalqa.md#smtp-configuration), [Min.io Logging](https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC2/docs/generalqa.md#minio-logging)
 
@@ -51,10 +51,10 @@ _Digital Objects and Collections Creation, Metadata and Cataloging, General Work
   * [Archipelago Custom Webform Elements](docs/customwebformelements.md)
 * [Twig Templates and Archipelago](docs/metadatatwigs.md) _(how Twig is used in Archipelago)_
   * [Working With Twig in Archipelago](docs/workingtwigs.md) _(getting started with custom Twig templates)_
-* [Archipelago Multi-Importer (AMI)](/docs/ami.md)
-  * [Spreadsheet Formatting Overview](docs/ami.md#spreadsheet-formatting-overview)
-  * [Ingesting New Digital Objects using Spreadsheets or Google Sheets](docs/ami.md#ingesting-new-digital-objects-using-spreadsheets-or-google-sheets)
-  * [Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets](docs/ami.md#ingesting-new-digital-objects-and-collections-using-spreadsheets-or-google-sheets)
+* [Archipelago Multi-Importer (AMI)](docs/ami.md)
+  * [Spreadsheet Formatting Overview](docs/AMIspreadsheet.md)
+  * [Ingesting Digital Objects and Collections using Spreadsheets or Google Sheets](docs/AMIviaSpreadsheets.md) 
+  * [Using the Islandora 7 Solr Importer plugin](docs/I7solrImporter.MD)
 
 # Archipelago Presentations and Documents
 * [Archipelago : an empathic Digital Repository Architecture](https://tinyurl.com/archipelago-brief-presentation)
