@@ -33,7 +33,7 @@ To get a general glance of what is included and how it works, follow [this guide
 ## Archipelago 101 (and up)
 Now that you have a general understanding of [Archipelago's architecture](https://github.com/esmero/archipelago-documentation#archipelago-commons-intro), and have a [local Archipelago](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/README.md) running, the following guides will help you master the basics.
 
-_Site Adminstration & Configuration_
+_Site Administration & Configuration_
 * [Archipelago's File Persistence Strategy](docs/archifilepersistencestrategy.md)
 * [How to Setup SSL for Docker/Archipelago _(*Work-In-Progress Documentation)_](docs/sslsetup.md)
 * [Debugging PHP in Archipelago](docs/xdebug.md)
