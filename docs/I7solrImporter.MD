@@ -11,13 +11,13 @@ Select the Islandora 7 Solr Importer from the dropdown menu.
 You will only have the option to select 'Create New ADOs' as the Operation you would like to perform.
 
 For the Solr Server Configuration section, you will need to provide all of the following information:
-	- PID of the Islandora Collection Members you want to fetch (example: islandora:root)
-	- Host of your Solr Server (example: repositorydomain.org)
-	- Port (example: 8080)
-	- Path (example: /)
-	- Type of Solr Deployment
-		- Either Single Solr Server (most common) or Solr Cloud Ensemble
-	- Core (example: islandora)
+- PID of the Islandora Collection Members you want to fetch (example: islandora:root)
+- Host of your Solr Server (example: repositorydomain.org)
+- Port (example: 8080)
+- Path (example: /)
+- Type of Solr Deployment
+	- Either Single Solr Server (most common) or Solr Cloud Ensemble
+- Core (example: islandora)
 
 You will also need to select Starting Row you would like to begin fetching results from, and the Number of Rows to fetch. 
 
