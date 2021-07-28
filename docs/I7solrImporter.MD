@@ -44,12 +44,12 @@ In this step you will need to make determinations on how you would like to map y
 - You can also specify an ADO (Object or Collection) to be used the Parent of Imported Objects. By selecting an existing ADO (Object or Collection) here using the autocomplete/search, the generated AMI set .csv file will contain an 'ismemberof' column containing the UUID of the selected ADO for every row.
 
 ## Step 3: Data Transformation Selections
-Select the data transformation approach--how your source data will be transformed into ADO (Archipelago Digital Object) Metadata.
+Select the data transformation approach--how your source data will be transformed into ADO (Archipelago Digital Object) Metadata. As noted in the list below, **'Custom (Expert Mode)'** is the recommended choice for AMI sets generated using the Islandora 7 Solr Impoter plugin.
 
 - You will have 3 options for your data transformation approach:
   1. Direct
     - Columns from your spreadsheet source will be cast directly to ADO metadata (JSON), without transformation/further processing (only intended for use with simple data strings).
-  2. Custom (Expert Mode) *Recommended choice for AMI sets generated using the Islandora 7 Solr Importer plugin*
+  2. Custom (Expert Mode) **Recommended choice for AMI sets generated using the Islandora 7 Solr Importer plugin**
     - Provides very granular custom data transformation and mapping options
     - Needs to be used if importing Digital Objects and Digital Object Collections at the same time/from same spreadsheet source (see separate instructions below).
   3. Template
