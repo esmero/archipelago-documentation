@@ -1,6 +1,6 @@
 # Annotations in Archipelago
 
-Archipelago extends [Annotorius](https://github.com/recogito/annotorious) to provide W3C-compliant Web Annotations for Digital Objects. These annotations can be added per image (when multiple), edited for text and shape adjustments, and saved/discarded using the regular Edit mode (bonus: temp storage that persists when you log out and come back in your session). Archipelago also exposes a full API for WebAnnotations, that keeps track of which Images (referenced in the [Strawberryfield](../docs/strawberryfields.md) @ `as:image`) were annotated and creates the W3C valid entries inside your Digital Object's JSON.
+Archipelago extends [Annotorius](https://github.com/recogito/annotorious) to provide W3C-compliant Web Annotations for Digital Objects. These annotations can be added per image (when multiple), edited for text and shape adjustments, and saved/discarded using the regular Edit mode (bonus: temp storage that persists when you log out and come back in your session). Archipelago also exposes a full API for WebAnnotations, that keeps track of which Images (referenced in the [Strawberryfield](../docs/strawberryfields.md) @ `as:image`) were annotated and creates the W3C valid entries inside your Digital Object's JSON (@ `ap:annotationCollection`).
 
 ### Enabling Annotations
 1. Navigate to Admin --> Structure --> Content types --> Digital Object --> Manage Display and select the "Digital Object Full view" mode. `https://yoursite.org/admin/structure/types/manage/digital_object/display/digital_object_viewmode_fullitem`
