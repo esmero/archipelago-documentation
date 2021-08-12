@@ -20,10 +20,10 @@ You are now ready to get started adding annotations!
 3. To add a new annotation, select and hold the Shift key. Click and then drag to apply either a Rectangular box or multi-point Polygon shape.
 4. Double click to exit the annotation drawing mode.
 5. Enter the text for your annotation in the pop-up window.
-	![annotations edit delete save](../imgs/annotations_edit_delete_save.jpg)
+	![annotations edit](../imgs/annotations_edit.jpg)
 5. Click the "Ok" button when you are ready.
 6. To save your annotation (or annotations if you created multiple), navigate to the main content "Edit" tab, where you will see a message about Unsaved Web Annotation Changes.
-	![annotations edit save](../imgs/annotations_edit_save.jpg)
+	![annotations edit delete save](../imgs/annotations_edit_delete_save.jpg)
 7. Select "Save" to preserve your Annotation(s). They will now become part of your Digital Object's JSON, found under the `ap:annotationCollection` key.
 	- Pressing the "Discard" button will discard only the unsaved Annotations, and will reload the page.
 
@@ -32,7 +32,7 @@ You are now ready to get started adding annotations!
 2. Click within the Annotation and select the downwards arrow in the upper right-hand corner of the pop-up window.
 3. Select either the "Edit" option and Edit the Annotation as desired; Or select the "Delete" option.
 	![annotations edit delete](../imgs/annotations_edit_delete.jpg)
-4. To preserve your editing or deleting actions, navigate to the main content "Edit" tab, where you will see a message about Unsaved Web Annotation Changes. (see screenshot in Step 6 of the Adding and saving Annotations instructions above)
+4. To preserve your editing or deleting actions, navigate to the main content "Edit" tab, where you will see a message about Unsaved Web Annotation Changes. _(See screenshot in Step 6 of the Adding and saving Annotations instructions above.)_
 5. Select "Save" to preserve your Annotation(s) edits or deletions. Pressing the "Discard" button will discard only the unsaved Annotations changes, and will reload the page.
 	
 ---
