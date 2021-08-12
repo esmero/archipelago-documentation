@@ -12,7 +12,7 @@ _Note: For any image-based Digital Objects you would like to apply annotations t
 	![annotations step 2](../imgs/annotations_step2.jpg)
    - _Learn more about the JSON format of WebAnnotations here: https://www.w3.org/TR/annotation-model/#index-of-json-keys._
 3. Under **"What tool to enable"**, select either the Rectangular or Polygon (freehand drawing) tool for your annotation style.
-4. Select the 'Update' button in this configurations section.
+4. Select the 'Update' button.
 5. Also **Save** your settings using the button at the bottom of the page.
 
 :tada: You are now ready to get started adding annotations! :tada:
