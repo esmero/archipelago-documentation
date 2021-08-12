@@ -34,7 +34,7 @@ _Note: For any image-based Digital Objects you would like to apply annotations t
 2. Click within the Annotation and select the downwards arrow in the upper right-hand corner of the pop-up window.
 3. Select either the "Edit" option and Edit the Annotation as desired; Or select the "Delete" option.
 	![annotations edit delete](../imgs/annotations_edit_delete.jpg)
-4. To preserve your editing or deleting actions, navigate to the main Digital Object "Edit" tab, where you will see a message about Unsaved Web Annotation Changes. _(See screenshot in Step 6 of the Adding and saving Annotations instructions above.)_
+4. To preserve your editing or deleting actions, navigate to the main Digital Object "Edit" tab, where you will see a message about Unsaved Web Annotation Changes. _(See screenshot in Step 6 of [Adding and saving Annotations](https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC3/docs/annotations.md#adding-and-saving-annotations) above.)_
 5. Select "Save" to preserve your Annotation(s) edits or deletions. Pressing the "Discard" button will discard only the unsaved Annotations changes, and will reload the page.
 	
 ---
