@@ -42,6 +42,7 @@ _Site Administration & Configuration_
 * [Configuration for Google Sheets API](docs/googleapi.md)
 * [General Q&A](docs/generalqa.md)
   * [Twig Modules Configuration](docs/generalqa.md#twig-modules-configuration), [SMTP Configuration](docs/generalqa.md#smtp-configuration), [Min.io Logging](https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC2/docs/generalqa.md#minio-logging)
+* [Annotations in Archipelago](docs/annotations.md)
 
 _Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows_
 * [Ingesting Your First Object](docs/firstobject.md)
