@@ -24,7 +24,7 @@ _Note: For any image-based Digital Objects you would like to apply annotations t
 4. Enter the text for your annotation in the pop-up window.
 	![annotations edit](../imgs/annotations_edit.jpg)
 5. Click the "Ok" button when you are ready.
-6. To save your annotation (or annotations if you created multiple), navigate to the main content "Edit" tab, where you will see a message about Unsaved Web Annotation Changes.
+6. To save your annotation (or annotations if you created multiple), navigate to the main Digital Object "Edit" tab, where you will see a message about Unsaved Web Annotation Changes.
 	![annotations edit delete save](../imgs/annotations_edit_delete_save.jpg)
 7. Select "Save" to preserve your Annotation(s). They will now become part of your Digital Object's JSON, found under the `ap:annotationCollection` key.
 	- _*Pressing the "Discard" button will discard only the unsaved Annotations, and will reload the page._
@@ -34,7 +34,7 @@ _Note: For any image-based Digital Objects you would like to apply annotations t
 2. Click within the Annotation and select the downwards arrow in the upper right-hand corner of the pop-up window.
 3. Select either the "Edit" option and Edit the Annotation as desired; Or select the "Delete" option.
 	![annotations edit delete](../imgs/annotations_edit_delete.jpg)
-4. To preserve your editing or deleting actions, navigate to the main content "Edit" tab, where you will see a message about Unsaved Web Annotation Changes. _(See screenshot in Step 6 of the Adding and saving Annotations instructions above.)_
+4. To preserve your editing or deleting actions, navigate to the main Digital Object "Edit" tab, where you will see a message about Unsaved Web Annotation Changes. _(See screenshot in Step 6 of the Adding and saving Annotations instructions above.)_
 5. Select "Save" to preserve your Annotation(s) edits or deletions. Pressing the "Discard" button will discard only the unsaved Annotations changes, and will reload the page.
 	
 ---
