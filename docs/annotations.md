@@ -16,7 +16,8 @@ You are now ready to get started adding annotations!
 
 ### Adding and saving Annotations
 1. Navigate to the image-based Digital Object you would like to apply annotations to.
-	- _Please note: the Digital Object type must be setup to display the image file(s) using the Open SeaDragon viewer. Stay tuned for updates announcing web annotation integration for Mirador 3._
+	- _Note: the Digital Object `type` must be setup to display the image file(s) using the Open SeaDragon viewer. More information about about Managing Display Modes in Archipelago can be found [here](../docs/webformsasinput.md#manage-display). 
+	- Stay tuned for updates announcing web annotation integration for Mirador 3._
 3. To add a new annotation, select and hold the Shift key. Click and then drag to apply either a Rectangular box or multi-point Polygon shape.
 4. Double click to exit the annotation drawing mode.
 5. Enter the text for your annotation in the pop-up window.
@@ -25,10 +26,10 @@ You are now ready to get started adding annotations!
 6. To save your annotation (or annotations if you created multiple), navigate to the main content "Edit" tab, where you will see a message about Unsaved Web Annotation Changes.
 	![annotations edit delete save](../imgs/annotations_edit_delete_save.jpg)
 7. Select "Save" to preserve your Annotation(s). They will now become part of your Digital Object's JSON, found under the `ap:annotationCollection` key.
-	- Pressing the "Discard" button will discard only the unsaved Annotations, and will reload the page.
+	- _*Pressing the "Discard" button will discard only the unsaved Annotations, and will reload the page._
 
 ### Editing and Deleting Annotations
-1. Navigate to the Image-based Digital Object you would whose Annotation(s) you want to edit or delete.
+1. Navigate to the image-based Digital Object you would whose annotation(s) you want to edit or delete.
 2. Click within the Annotation and select the downwards arrow in the upper right-hand corner of the pop-up window.
 3. Select either the "Edit" option and Edit the Annotation as desired; Or select the "Delete" option.
 	![annotations edit delete](../imgs/annotations_edit_delete.jpg)
