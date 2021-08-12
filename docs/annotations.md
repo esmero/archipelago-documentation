@@ -2,7 +2,7 @@
 
 Archipelago extends [Annotorius](https://github.com/recogito/annotorious) to provide W3C-compliant Web Annotations for Digital Objects. These annotations can be added per image (when multiple), edited for text and shape adjustments, and saved/discarded using the regular Edit mode (bonus: temp storage that persists when you log out and come back in your session). Archipelago also exposes a full API for WebAnnotations, that keeps track of which Images (referenced in the [Strawberryfield](../docs/strawberryfields.md) @ `as:image`) were annotated and creates the W3C valid entries inside your Digital Object's JSON (@ `ap:annotationCollection`).
 
-_Note: For any image-based Digital Objects you would like to apply annotations to, the Digital Object `type` must be setup to display the image file(s) using the Open SeaDragon viewer. More information about about Managing Display Modes in Archipelago can be found [here](../docs/webformsasinput.md#manage-display). Please stay tuned for updates announcing web annotation integration for Mirador 3._
+_Important Note: For any image-based Digital Objects you would like to apply annotations to, the Digital Object `type` must be setup to display the image file(s) using the Open SeaDragon viewer. More information about about Managing Display Modes in Archipelago can be found [here](../docs/webformsasinput.md#manage-display). Please stay tuned for updates announcing web annotation integration for Mirador 3._
 
 ### Enabling Annotations
 1. Navigate to Admin --> Structure --> Content types --> Digital Object --> Manage Display and select the "Digital Object Full view" mode. `https://yoursite.org/admin/structure/types/manage/digital_object/display/digital_object_viewmode_fullitem`
