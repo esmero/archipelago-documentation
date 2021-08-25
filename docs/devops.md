@@ -1,6 +1,6 @@
 # Archipelago Software Services
 
-![ADOlife](../imgs/architecture.png)
+![ADOlife](../imgs/architecture_white_background.png)
 
 At the core of the Archipelago philosophy is our commitment to both simplicity and flexibility.
 
@@ -11,6 +11,15 @@ At the core of the Archipelago philosophy is our commitment to both simplicity a
  - [S3 Storage (Mini.io or any other S3 flavor)](https://min.io/)
 
 Installation is entirely [Dockerized](https://www.docker.com) and scripted with [easy-to-follow directions](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/README.md).
+* Docker containers are as follows:
+  Container | Purpose | Description
+  --- | --- | ---
+  esmero-web | NGNIX | Routes calls to esmero-php
+  esmero-php | PHP-FPM | Has all binaries for postprocessing/exif/ocr/etc. Runs PHP code. 
+  esmero-db | Database | AMD and INTEL processors: MYSQL 8<br />ARM processors: MariaDB 
+  esmero-minio | Storage                     | S3 API compatible Backend file and ADO as file storage. In a local it will do all the S3 stuff, on a live instance it can server as file routing to AWS S3, Azure Blob Storage, etc. 
+  esmero-solr | Solr |Currently version 8.8.2
+  esmero-nlp | Natural Language Processing | NLP64 server for entity extraction, language detection, etc. 
 
 _Information related to non-Dockerized installation and configruation can be found here: [Traditional Installation Notes](traditional-install.md)_
 
