@@ -1,6 +1,6 @@
 # Archipelago Software Services
 
-![ADOlife](../imgs/architecture.png)
+![ADOlife](../imgs/architecture_white_background.png)
 
 At the core of the Archipelago philosophy is our commitment to both simplicity and flexibility.
 
