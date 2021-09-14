@@ -100,12 +100,12 @@ Understanding the basic structure of your JSON data.
 - **All your** JSON Strawberryfield Metadata is accessible inside a Variable named _data_ in your twig template. 
 
 - You can access the _values_ by using `data DOT Property (attribute) Name`.
-	- In the Laddie the Dog example shown above:
+	- In the Laddie the Dog example [shown above (originally)](https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC3/docs/workingtwigs.md#note-about-the-examples):
 		- `data.type` will contain "Photograph"
 		- `data.language` will contain [ "English" ]
 		- `data.language[0]` will contain "English" 
 			- 0 means first entry in an Array or Enumeration
-		- `data.subject_loc` will contain [{ "uri":"http…","label": "Dog" }]
+		- `data.subject_loc` will contain [{ "uri":"http://id.loc.gov/…","label": "Dog" }]
 		- `data.subject_loc.uri` will contain `"http://id.loc.gov/…"`
 		- `data.subject_loc.label` will contain "Dog"
 
