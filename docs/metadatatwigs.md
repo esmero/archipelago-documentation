@@ -43,18 +43,27 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
 
 ### Twig Templates Shipped with Archipelago
 **Archipelago Ships with:**
-- IIIF Manifest V3 for Images  (JSON-LD) Metadata Display
+- IIIF Manifest V3 for Images (JSON-LD) Metadata Display
 - IIIF Manifest V2 for Images and Documents (JSON-LD) Metadata Display
-- GEOJSON (JSON) Metadata Display
-- A LoD Display (HTML) Metadata Display
+- IIIF Manifest V3 for Collections (JSON-LD) Metadata Display
+- IIIF Manifest V3 for Creative Work Series/Compound Objects Parent and Children (JSON-LD) Metadata Displays
 - A General ADO Description (HTML) Metadata Display
-- A Schema.org (JSON-LD) Metadata Display
-- A Thumbnails (HTML) Metadata Display
+- A Linked Data Display (HTML) Metadata Display
+- GEOJSON (JSON) Metadata Display
 - An AMI (JSON) Ingest Template
+- A Multiple Thumbnails via IIIF and Fontawesome (HTML) Metadata Display
+- A Metadata Abstract for Search Results (HTML) Metadata Display
+- A Simple Dublin Core (XML) Metadata Display
+- MODS 3.7 (XML) Metadata Display
+- A Schema.org (JSON-LD) Metadata Display
+- Carousel (in Bootstrap) for Images (HTML) Metadata Display 
 
 You can find these templates here:
-- On Github: [Templates Shipped with Standard Archipelago Deployments](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC3/d8content/metadatadisplays)
+- On Github:
+	- [Local Deployment](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC3/d8content/metadatadisplays)
+	- [Live/Production Deployment](https://github.com/esmero/archipelago-deployment-live/tree/1.0.0-RC3/drupal/d8content/metadatadisplays)
 - In your local instance: http://localhost:8001/metadatadisplay/list
+- In your live instance: https://yourdomain.org/metadatadisplay/list
 
 **Archipelago (the humans) will keep adding and refining these with every release.**
 
