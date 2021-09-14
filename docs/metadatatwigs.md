@@ -54,7 +54,7 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
 etc.
 
 You can find these templates here:
-- On Github: [Templates Shipped with Standard Archipelago Deployments](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC2/d8content/metadatadisplays)
+- On Github: [Templates Shipped with Standard Archipelago Deployments](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC3/d8content/metadatadisplays)
 - In your local instance: http://localhost:8001/metadatadisplay/list
 
 **Archipelago (the humans) will keep adding and refining these with every release.**
