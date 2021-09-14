@@ -51,7 +51,6 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
 - A Schema.org (JSON-LD) Metadata Display
 - A Thumbnails (HTML) Metadata Display
 - An AMI (JSON) Ingest Template
-etc.
 
 You can find these templates here:
 - On Github: [Templates Shipped with Standard Archipelago Deployments](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC3/d8content/metadatadisplays)
