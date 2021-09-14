@@ -124,7 +124,7 @@ Understanding the basic structure of your JSON data.
 	- Multiple JSON Values Example:
 		- Twig template:
 		```twig
-		Hello I was classified as "{{ data.subject_loc.label }}" and very happy to meet you
+		Hello I was classified as "{{ data.subject_loc[0].label }}" and very happy to meet you
 		````
 		- Rendered Output:
 			- `Hello I was classified as "Dogs" and very happy to meet you`
