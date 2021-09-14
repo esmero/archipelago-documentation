@@ -105,8 +105,8 @@ Understanding the basic structure of your JSON data.
 		- `data.language` will contain [ "English" ]
 		- `data.language[0]` will contain "English" 
 			- 0 means first entry in an Array or Enumeration
-		- `data.subject_loc` will contain [{ "uri":"http://id.loc.gov/…","label": "Dog" }]
-		- `data.subject_loc.uri` will contain `"http://id.loc.gov/…"`
+		- `data.subject_loc` will contain [{ "uri":"http://..","label": "Dog" }]
+		- `data.subject_loc.uri` will contain `"http://.."`
 		- `data.subject_loc.label` will contain "Dog"
 
 - Please note: you also have access to other info in your **context** `node`: such as`node.id` is the Drupal ID of your Current ADO; Also `is_front`, `language`, `is_admin`, `logged_in` and more!
