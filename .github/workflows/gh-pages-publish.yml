@@ -1,4 +1,4 @@
-name: gh-pages 
+name: gh-pages-publish
 on:
   push:
     branches: 
