@@ -13,7 +13,7 @@ This document describes how to enable Xdebug for local PHP development using the
    <br>To stop the containers in the future, run `docker-compose -f docker-compose.yml -f docker-compose.dev.yml down`.
 
     <br>_(To make these commands easier to remember, consider making bash aliases in your .bashrc file.)_
-    <br>_(If you are running your development on a Linux system, you may need to make a modification to your xdebug configuration file on the esmero-php-dev container. See appendex at the bottom of this page. )
+    <br>_(If you are running your development on a Linux system, you may need to make a modification to your xdebug configuration file on the esmero-php-dev container. See appendix at the bottom of this page. )
 
     <br>So we have reloaded the containers and now you are ready for Part 2.
 
