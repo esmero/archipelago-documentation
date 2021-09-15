@@ -21,7 +21,7 @@ This document describes how to enable Xdebug for local PHP development using the
 
 1. In PHPStorm, open your `archipelago-deployment` project.
 
-2. Go to `Preferences > Languages & Frameworks > PHP > Debug`. In this window there is an Xdebug section. Use these settings:
+2. Go to `Preferences > Languages & Frameworks > PHP > Debug` or `Settings > PHP > Servers`. In this window there is an Xdebug section. Use these settings:
     - Debug port: `9003`. (do NOT use the default, 9000)
     - Can accept external connections: yes, select checkbox
     - (optional) Break at first line in PHP scripts: uncheck. If you leave this selected, you will have to manually step through a breakpoint from Drupal's main index.php file on every request, which is quite annoying. However, leaving this box checked can be useful for making sure the connection is working at first, before you have set any internal breakpoints.
