@@ -1,4 +1,4 @@
-site_name: Archipelago Documentation Test
+site_name: Archipelago Documentation
 theme:
   name: material
 markdown_extensions:
