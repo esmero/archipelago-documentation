@@ -4,6 +4,8 @@ site_description: Project documentation for Archipelago.
 site_author: The Digital Services Team at Metropolitan New York Library Council
 theme:
   name: material
+  favicon: images/strawberries_color.png
+  logo: images/strawberries_color.png
 markdown_extensions:
   - admonition
   - pymdownx.details
