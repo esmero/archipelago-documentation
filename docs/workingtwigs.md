@@ -100,13 +100,13 @@ Understanding the basic structure of your JSON data.
 - **All your** JSON Strawberryfield Metadata is accessible inside a Variable named _data_ in your twig template. 
 
 - You can access the _values_ by using `data DOT Property (attribute) Name`.
-	- In the Laddie the Dog example shown above:
+	- In the Laddie the Dog example [shown above (originally)](https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC3/docs/workingtwigs.md#note-about-the-examples):
 		- `data.type` will contain "Photograph"
 		- `data.language` will contain [ "English" ]
 		- `data.language[0]` will contain "English" 
 			- 0 means first entry in an Array or Enumeration
-		- `data.subject_loc` will contain [{ "uri":"http…","label": "Dog" }]
-		- `data.subject_loc.uri` will contain `"http://id.loc.gov/…"`
+		- `data.subject_loc` will contain [{ "uri":"http://..","label": "Dog" }]
+		- `data.subject_loc.uri` will contain `"http://.."`
 		- `data.subject_loc.label` will contain "Dog"
 
 - Please note: you also have access to other info in your **context** `node`: such as`node.id` is the Drupal ID of your Current ADO; Also `is_front`, `language`, `is_admin`, `logged_in` and more!
@@ -121,10 +121,11 @@ Understanding the basic structure of your JSON data.
 		 ````
 		- Rendered output:
 			- `Hello I am a Photograph and very happy to meet you`
+
 	- Multiple JSON Values Example:
 		- Twig template:
 		```twig
-		Hello I was classified as "{{ data.subject_loc.label }}" and very happy to meet you
+		Hello I was classified as "{{ data.subject_loc[0].label }}" and very happy to meet you
 		````
 		- Rendered Output:
 			- `Hello I was classified as "Dogs" and very happy to meet you`
@@ -144,6 +145,7 @@ Understanding the basic structure of your JSON data.
 		```
 	- Rendered Output:
 		- `Hey I have a Subject Key`
+
 	- Conditionals, Operator, and Test usage:
 		- **If/else** are conditionals
 		- **is** is an operator
@@ -152,26 +154,28 @@ Understanding the basic structure of your JSON data.
 - Example 2:
 	- Twig template:
 		```twig
-		`{% for key, subject in data.subject_loc %}
+		{% for key, subject in data.subject_loc %}
 		* Subject {{ subject.label }} found at position {{ key }}
-		{% endfor %}`
+		{% endfor %}
 		````
 	- Rendered Output:
 		- `* Subject Dogs found at position 0`
+	
 	- Loop usage:	
 		- **for** is a loop
 		- Inside the loop you have access to **key**, **subject**
 
-- Example 3
+- Example 3:
 	- Twig template:
 		```twig
-		`{% for subject in data.subject_loc %}
+		{% for subject in data.subject_loc %}
 		{% set label_lowercase = subject.label|lower %}
 		My lower case Subject is {{ label_lowercase }}
-		{% endfor %}`
+		{% endfor %}
 		````
 	- Rendered Output:
 		- `My lower case Subject is dogs`
+
 	- Assignment, Filter, and Loop uage:	
 		- **set** is an assignment 
 		- | is a pipe, used after a value to apply a **filter**.
@@ -196,7 +200,7 @@ Understanding the basic structure of your JSON data.
 
 ### Full Examples for Common Uses Cases:
 
-**Use case #1:** I have multiple LoD Subjects and want to display them in my page as a clickable ordered list but i’m a safe/careful person.
+**Use case #1:** I have multiple LoD Subjects and want to display them in my page as a clickable ordered list but I’m a safe/careful person.
 
 **Twig Example for Use Case #1:**
 ```twig
@@ -260,16 +264,16 @@ Understanding the basic structure of your JSON data.
 
 ### A Recommended Workflow
 
-You want to create a New Metadata Display(HTML) or a new (XML) Schema based format?
+You want to create a New Metadata Display (HTML) or a new (XML) Schema based format?
 
-1. Get yourself an example **document (Frame)**. If **HTML** copy the source. If **XML** copy the full XML thing (cmd+c)
-2. Create a new **Metadata Display Entity**. Copy the content (text) of your Frame into the Edit window (cmd+v)
-3. Select an existing (as complete as possible) ADO to use as preview, press Preview
+1. Get yourself an example **document (Frame)**. If **HTML** copy the source. If **XML** copy the full XML. (cmd+c)
+2. Create a new **Metadata Display Entity**. Copy the content (text) of your Frame into the Edit window. (cmd+v)
+3. Select an existing (as complete as possible) ADO to use as preview, press Preview.
 4. Put your nice glasses :nerd_face: on. What do you see? What data in your Frame do you have in your ADO (data)?
 5. Start nimble. Selected the `data.label` info, check where your **Frame** uses a _Title_ or a _Label_. Remove that text (cmd+x) and replace with a ``{{ data.label }}``. Press Preview. Do you see your title?
 6. Keep doing **6**, over and over. Leave complex values for the end. (e.g `data.subject_loc`)
-7. Document your changes `{# I added this because .. #}`
-8. Save
+7. Document your changes. `{# I added this because .. #}`
+8. Save.
 
 Once the Template is in place you can use it in a _Formatter_, as _Endpoint_, in your _Search Results_ or just keep it around until you and the world are ready!
 
