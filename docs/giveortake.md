@@ -1,5 +1,4 @@
-# Archipelago Contribution Guide [![Google Groups](https://img.icons8.com/wired/32/000000/google-groups.png)](https://groups.google.com/forum/#!forum/archipelago-commons)
-
+# Archipelago Contribution Guide
 
 ``Archipelago`` welcomes, appreciates, and recognizes any and all types of contribution. This includes input on all use cases and needs, questions or answers, documentation, DevOps, and configurations. We also welcome general ideas, thoughts, and even dreams for the future of our repository! Of course, we also invite you to contribute PHP code, including fixes and new features.
 

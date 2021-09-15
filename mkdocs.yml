@@ -8,3 +8,17 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/esmero
+      name: Archipelago Commons + esmero
+    - icon: fontawesome/brands/slack
+      link: https://archipelagocommons.slack.com
+      name: Archipelago Commons Slack Channe
+    - icon: material/forum-outline
+      link: https://groups.google.com/g/archipelago-commons
+      name: Archipelago Commons Google Group

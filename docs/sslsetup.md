@@ -1,4 +1,5 @@
-## How to Setup SSL for Docker/Archipelago
+# How to Setup SSL for Docker/Archipelago
+
 _*Work-In-Progress Note* This documentation page is still under construction and content may change with future updates. Please use caution when implementing any instructions referenced herein, as there may be missing steps or corresponding configuration files. Thank you for your patience as we continue to update Archipelago's documentation._
 
 The steps found below describe one potential manual SSL configuration for Archipelago deployments. A `git clone` deployment option will be available for future releases.
