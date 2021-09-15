@@ -14,7 +14,7 @@
     
     
       
-        <title>Archipelago Documentation Test</title>
+        <title>Archipelago Documentation</title>
       
     
     
@@ -72,7 +72,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Archipelago Documentation Test" class="md-header__button md-logo" aria-label="Archipelago Documentation Test" data-md-component="logo">
+    <a href="." title="Archipelago Documentation" class="md-header__button md-logo" aria-label="Archipelago Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -85,7 +85,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Archipelago Documentation Test
+            Archipelago Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -156,13 +156,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Archipelago Documentation Test" class="md-nav__button md-logo" aria-label="Archipelago Documentation Test" data-md-component="logo">
+    <a href="." title="Archipelago Documentation" class="md-nav__button md-logo" aria-label="Archipelago Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    Archipelago Documentation Test
+    Archipelago Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -581,10 +581,12 @@
 <p>Archipelago was dreamt as a multi-tenant, distributed, capable system (as its name suggests!) and can live isolated or in flocks of similar deployments, sharing storage, services, or -- even better -- just the discovery layer. Learn more about the different <a href="devops/"><code>Software Services</code></a> used by Archipelago.</p>
 <p>Archipelago's primary focus is to serve the greater <a href="https://en.wikipedia.org/wiki/GLAM_(industry_sector)"><code>GLAM community</code></a> by providing a flexible, consistent, and unified way of describing, storing, linking, exposing metadata and media assets. We respect identities and existing workflows. We endeavor to design Archipelago in ways that empower communities of every size and shape.</p>
 <p>Finally, Archipelago tries to stay humble, slim, and nimble in nature with a small code base full of inline comments and <code>@todos</code>. All of our work is driven by a clear and <a href="https://github.com/esmero/archipelago-deployment/issues/103">concise but thoughtful planned technical roadmap --updated in tandem with new releases</a>.</p>
-<p>Learn what makes Archipelago so different and hopefully also a well known place:
-* <a href="ourtake/">Archipelago's Philosophy &amp; Guiding Principles</a>
-* <a href="strawberryfields/">Strawberryfields Forever</a>
-* <a href="devops/">Software Services</a></p>
+<p>Learn what makes Archipelago so different and hopefully also a well known place:</p>
+<ul>
+<li><a href="ourtake/">Archipelago's Philosophy &amp; Guiding Principles</a></li>
+<li><a href="strawberryfields/">Strawberryfields Forever</a></li>
+<li><a href="devops/">Software Services</a></li>
+</ul>
 <h1 id="code-of-conduct">Code of Conduct</h1>
 <p>The Archipelago Commons community is dedicated to providing a welcoming and positive experience for all participants. To ensure this can be met for all parties, please review our <a href="CODE_OF_CONDUCT/">Code of Conduct</a>.</p>
 <h1 id="instructions-and-guides">Instructions and Guides</h1>
@@ -592,27 +594,39 @@
 <p>To get a general glance of what is included and how it works, follow <a href="https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/README.md">this guide</a> to deploy our latest beta locally using <code>Docker</code> with OSX or Ubuntu 18/20.04.</p>
 <h2 id="archipelago-101-and-up">Archipelago 101 (and up)</h2>
 <p>Now that you have a general understanding of <a href="#archipelago-commons-intro">Archipelago's architecture</a>, and have a <a href="https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/README.md">local Archipelago</a> running, the following guides will help you master the basics.</p>
-<p><em>Site Adminstration &amp; Configuration</em>
-* <a href="archifilepersistencestrategy/">Archipelago's File Persistence Strategy</a>
-* <a href="sslsetup/">How to Setup SSL for Docker/Archipelago <em>(*Work-In-Progress Documentation)</em></a>
-* <a href="xdebug/">Debugging PHP in Archipelago</a>
-* <a href="createdisplaymodes/">Creating Display Modes</a>
-* <a href="strawberryfield-formatters/">Strawberryfield Formatters</a>
-* <a href="googleapi/">Configuring Google Sheets API for AMI</a>
-* <a href="generalqa/">General Q&amp;A</a>
-  * <a href="generalqa/#twig-modules-configuration">Twig Modules Configuration</a>, <a href="generalqa/#smtp-configuration">SMTP Configuration</a>, <a href="https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC2/docs/generalqa.md#minio-logging">Min.io Logging</a></p>
-<p><em>Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows</em>
-* <a href="firstobject/">Ingesting Your First Object</a>
-* <a href="webforms/">Webforms In Archipelago</a>
-  * <a href="webformsasinput/">How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)</a>
-  * <a href="modifyingfileextensionsinwebform/">Customizing Webforms: Modifying allowable file extensions</a>
-  * <a href="customwebformelements/">Archipelago Custom Webform Elements</a>
-* <a href="metadatatwigs/">Twig Templates and Archipelago</a> <em>(how Twig is used in Archipelago)</em>
-  * <a href="workingtwigs/">Working With Twig in Archipelago</a> <em>(getting started with custom Twig templates)</em>
-* <a href="ami/">Archipelago Multi-Importer (AMI)</a>
-  * <a href="ami/#spreadsheet-formatting-overview">Spreadsheet Formatting Overview</a>
-  * <a href="ami/#ingesting-new-digital-objects-using-spreadsheets-or-google-sheets">Ingesting New Digital Objects using Spreadsheets or Google Sheets</a>
-  * <a href="ami/#ingesting-new-digital-objects-and-collections-using-spreadsheets-or-google-sheets">Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets</a></p>
+<p><em>Site Adminstration &amp; Configuration</em></p>
+<ul>
+<li><a href="archifilepersistencestrategy/">Archipelago's File Persistence Strategy</a></li>
+<li><a href="sslsetup/">How to Setup SSL for Docker/Archipelago <em>(*Work-In-Progress Documentation)</em></a></li>
+<li><a href="xdebug/">Debugging PHP in Archipelago</a></li>
+<li><a href="createdisplaymodes/">Creating Display Modes</a></li>
+<li><a href="strawberryfield-formatters/">Strawberryfield Formatters</a></li>
+<li><a href="googleapi/">Configuring Google Sheets API for AMI</a></li>
+<li><a href="generalqa/">General Q&amp;A</a><ul>
+<li><a href="generalqa/#twig-modules-configuration">Twig Modules Configuration</a>, <a href="generalqa/#smtp-configuration">SMTP Configuration</a>, <a href="https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC2/docs/generalqa.md#minio-logging">Min.io Logging</a></li>
+</ul>
+</li>
+</ul>
+<p><em>Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows</em></p>
+<ul>
+<li><a href="firstobject/">Ingesting Your First Object</a></li>
+<li><a href="webforms/">Webforms In Archipelago</a><ul>
+<li><a href="webformsasinput/">How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)</a></li>
+<li><a href="modifyingfileextensionsinwebform/">Customizing Webforms: Modifying allowable file extensions</a></li>
+<li><a href="customwebformelements/">Archipelago Custom Webform Elements</a></li>
+</ul>
+</li>
+<li><a href="metadatatwigs/">Twig Templates and Archipelago</a> <em>(how Twig is used in Archipelago)</em><ul>
+<li><a href="workingtwigs/">Working With Twig in Archipelago</a> <em>(getting started with custom Twig templates)</em></li>
+</ul>
+</li>
+<li><a href="ami/">Archipelago Multi-Importer (AMI)</a><ul>
+<li><a href="ami/#spreadsheet-formatting-overview">Spreadsheet Formatting Overview</a></li>
+<li><a href="ami/#ingesting-new-digital-objects-using-spreadsheets-or-google-sheets">Ingesting New Digital Objects using Spreadsheets or Google Sheets</a></li>
+<li><a href="ami/#ingesting-new-digital-objects-and-collections-using-spreadsheets-or-google-sheets">Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets</a></li>
+</ul>
+</li>
+</ul>
 <h1 id="archipelago-presentations-and-documents">Archipelago Presentations and Documents</h1>
 <ul>
 <li><a href="https://tinyurl.com/archipelago-brief-presentation">Archipelago : an empathic Digital Repository Architecture</a></li>

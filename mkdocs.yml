@@ -1,7 +1,4 @@
 site_name: Archipelago Documentation
-site_url: https://docs.archipelago.nyc
-site_description: Project documentation for Archipelago.
-site_author: The Digital Services Team at Metropolitan New York Library Council
 theme:
   name: material
 markdown_extensions:
