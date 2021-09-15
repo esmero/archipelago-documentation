@@ -1,6 +1,6 @@
 # Archipelago's File Persistence Strategy
 
-![ADOlife](../imgs/ADOlife.jpg)
+![ADOlife](images/ADOlife.jpg)
 
 ### How are files for Archipelago Digital Objects (ADOs) persisted? (What happens with those fishtanks?)
 A few Event Subscribers/Data describing logics happen in a certain order:
@@ -27,4 +27,4 @@ Discussions related to Archipelago's file persistence strategy and planned poten
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
-Return to the [Archipelago Documentation main page](../README.md).
+Return to the [Archipelago Documentation main page](index.md).

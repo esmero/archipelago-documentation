@@ -2,14 +2,14 @@
 
 This area of Archipelago documentation is reserved for general questions and answers for commonly encountered issues pertaining to Archipelago configuration settings.
 
-To contribute to this section, please review our [Code of Conduct](../CODE_OF_CONDUCT.md), and after that please follow [this set of guidelines](giveortake.md) to help you get started.
+To contribute to this section, please review our [Code of Conduct](CODE_OF_CONDUCT.md), and after that please follow [this set of guidelines](giveortake.md) to help you get started.
 
 ---
 
 ## Twig Modules Configuration
 **Q:** When attempting to save a Twig template for a Metadata Display, I receive an error message related to an `Unknown "bamboo_load_entity" function`.
 
-![BambooTwigError](../imgs/generalqa/BambooTwigError.jpg)
+![BambooTwigError](images/generalqa/BambooTwigError.jpg)
 
 **A:** You need to enable the necessary Twig modules.
 
@@ -17,7 +17,7 @@ To contribute to this section, please review our [Code of Conduct](../CODE_OF_CO
 
 2. In the “Enter a part of the module name or description” box, enter “bam” to filter for the related Bamboo Twig modules. Alternatively, scroll down to the Bamboo Twig modules section on this page.
 
-![EnterModulePart](../imgs/generalqa/EnterModulePart.jpg)
+![EnterModulePart](images/generalqa/EnterModulePart.jpg)
 
 3. Check the box next to each of the following to enable (some may already be enabled):
 
@@ -26,7 +26,7 @@ To contribute to this section, please review our [Code of Conduct](../CODE_OF_CO
   - Bamboo Twig - Path & Url
   - Bamboo Twig - Token
 
-![BambooTwigInstall](../imgs/generalqa/BambooTwigInstall.jpg)
+![BambooTwigInstall](images/generalqa/BambooTwigInstall.jpg)
 
 4. Click `Install`.
 
@@ -52,15 +52,9 @@ docker exec -ti esmero-php bash -c 'drush en -y smtp'
 
 3. Navigate to `localhost:8001/admin/config/system/smtp` to configure the SMTP settings.
 
-<details><summary>This screenshot shows settings if a GMAIL account is used.</summary>
+??? info "This screenshot shows settings if a GMAIL account is used."
 
-<span>
-
-![SMTPconfiguration](../imgs/generalqa/SMTPconfiguration.jpg)
-
-</span>
-</details>
-<br>
+    ![SMTPconfiguration](images/generalqa/SMTPconfiguration.jpg)
 
 4. Save your settings, then test by adding a recipient address in the “SEND TEST E-MAIL” field.
 
@@ -94,4 +88,4 @@ _Note: `mc` client is also AWS S3 compatible and can be used to move/copy/delete
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
-Return to the [Archipelago Documentation main page](../README.md).
+Return to the [Archipelago Documentation main page](index.md).

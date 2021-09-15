@@ -22,7 +22,7 @@ This document describes how to enable Xdebug for local PHP development using the
     - (optional) Break at first line in PHP scripts: uncheck. If you leave this selected, you will have to manually step through a breakpoint from Drupal's main index.php file on every request, which is quite annoying. However, leaving this box checked can be useful for making sure the connection is working at first, before you have set any internal breakpoints.
 
     Your settings should look like this. Hit APPLY and OK.
-    ![Debug](../imgs/xdebug/debug-settings.png)    
+    ![Debug](images/xdebug/debug-settings.png)    
 
 3. Go to `Preferences > Languages & Frameworks > PHP > Servers`. We will create a new server here. Use these settings:
     - Name: `docker-debug-server`
@@ -34,39 +34,39 @@ This document describes how to enable Xdebug for local PHP development using the
 
     Hit APPLY and OK and close the window.
 
-    ![Debug](../imgs/xdebug/server-settings-2.png)    
+    ![Debug](images/xdebug/server-settings-2.png)    
 
  4. Go to `Run > Edit Configurations`. Hit the `+` Button to create a new PHP Remote Debug. Name whatever you want, I called mine `docker`. Use these settings:
     - Filter debug connection by IDE Key: yes, select the checkbox
     - Server: select `docker-debug-server` from dropdown (we created this in step 3)
     - IDE Key: `archipelago` (this matches the key set in our container)
 
-    ![Debug](../imgs/xdebug/edit-configurations.png)    
+    ![Debug](images/xdebug/edit-configurations.png)    
 
  5. Validate your connection. With  `Run > Edit Configurations` still open, you can hit the link that says "Validate". Use these settings in the following validation window:
     - Path to create validation script `<your local path>/archipelago-deployment/web`
     - Url to validation script: `http://localhost:8001`
 
     Hit VALIDATE. You should get a series of green check marks. If you get a warning about missing `php.ini` file, that is OK, our file has a different name in the container (`xdebug.ini`) and is still being read correctly.
-    ![Debug](../imgs/xdebug/validate-2.png)    
+    ![Debug](images/xdebug/validate-2.png)    
 
  # Set up Browser Bookmarklets
 
  1. We are still in the `archipelago-deployment` repository. Find the `/xdebug` folder. Inside is a file  `js-bookmarks-for-xdebug.txt`. This text file contains Javascript that you can copy and paste into your browser's bookmarks manager. Paste the JS snippet into the URL for the bookmark. Create 2 bookmarks: Start, and Stop.
-     ![Debug](../imgs/xdebug/bookmarks.png)
-     ![Debug](../imgs/xdebug/bookmarks2.png)   
-     ![Debug](../imgs/xdebug/bookmarks3.png)   
+     ![Debug](images/xdebug/bookmarks.png)
+     ![Debug](images/xdebug/bookmarks2.png)   
+     ![Debug](images/xdebug/bookmarks3.png)   
 
  We will use these bookmarks to Start and Stop debugging sessions from the browser.
 
  # Actually Debugging!
  1. Hit the button (top right bar of PHPStorm) that looks like a telephone, for `Start Listening for PHP Debug Connections`.
 
-      ![Debug](../imgs/xdebug/telephone.png)
+      ![Debug](images/xdebug/telephone.png)
 
  2. Now, you can use `Run > Debug` and select the `docker` named configuration that we created in the previous steps. The debugging console will appear. It will say it is waiting for incoming connection from 'archipelago'
  .
-       ![Debug](../imgs/xdebug/waiting.png)
+       ![Debug](images/xdebug/waiting.png)
 
  3. Right now the debugging session is not enabled. Browse to  `localhost:8001`. Hit the `Start Debugging` bookmark you created in the previous session. This loads a cookie called `XDEBUG_SESSION`, with the value `archipelago` that can communicate with PHPStorm.
 
@@ -88,4 +88,4 @@ Xdebug makes accessing variables in Drupal kind of great. Many possibilities, in
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
-Return to the [Archipelago Documentation main page](../README.md).
+Return to the [Archipelago Documentation main page](index.md).

@@ -1,6 +1,6 @@
 # Archipelago Software Services
 
-![ADOlife](../imgs/architecture_white_background.png)
+![ADOlife](images/architecture_white_background.png)
 
 At the core of the Archipelago philosophy is our commitment to both simplicity and flexibility.
 
@@ -47,4 +47,4 @@ Documentation related to the Strawberryfield modules can be found here: [Strawbe
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
-Return to the [Archipelago Documentation main page](../README.md).
+Return to the [Archipelago Documentation main page](index.md).
