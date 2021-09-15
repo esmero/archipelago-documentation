@@ -1,0 +1,767 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Project documentation for Archipelago.">
+      
+      
+      
+        <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
+      
+      
+        <link rel="canonical" href="https://docs.archipelago.nyc/strawberryfields/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>Strawberryfields Forever - Archipelago Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#strawberryfields-forever" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Archipelago Documentation" class="md-header__button md-logo" aria-label="Archipelago Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Archipelago Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Strawberryfields Forever
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Archipelago Documentation" class="md-nav__button md-logo" aria-label="Archipelago Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Archipelago Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Documentation Menu
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CODE_OF_CONDUCT/" class="md-nav__link">
+        Archipelago - code of conduct / anti-harassment policy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ami/" class="md-nav__link">
+        Archipelago Multi-Importer (AMI)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archifilepersistencestrategy/" class="md-nav__link">
+        Archipelago's File Persistence Strategy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../createdisplaymodes/" class="md-nav__link">
+        Creating Display Modes for Archipelago Digital Objects
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customwebformelements/" class="md-nav__link">
+        Archipelago Custom Webform Elements
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops/" class="md-nav__link">
+        Archipelago Software Services
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firstobject/" class="md-nav__link">
+        Your First Digital Object
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa/" class="md-nav__link">
+        General Q&A
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../giveortake/" class="md-nav__link">
+        Archipelago Contribution Guide [![Google Groups](https://img.icons8.com/wired/32/000000/google-groups.png)](https://groups.google.com/forum/#!forum/archipelago-commons)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../googleapi/" class="md-nav__link">
+        Configuration for Google Sheets API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inthewild/" class="md-nav__link">
+        Archipelago Community
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadatatwigs/" class="md-nav__link">
+        Twig Templates and Archipelago
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modifyingfileextensionsinwebform/" class="md-nav__link">
+        Customizing Webforms: Modifying allowable file extensions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourtake/" class="md-nav__link">
+        Archipelago's Philosophy & Guiding Principles
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sslsetup/" class="md-nav__link">
+        Sslsetup
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strawberryfield-formatters/" class="md-nav__link">
+        Strawberryfield Formatters
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Strawberryfields Forever
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Strawberryfields Forever
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-strawberry-fields-does-why-we-built-it-and-what-issues-it-addresses" class="md-nav__link">
+    What Strawberry fields does, why we built it, and what issues it addresses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nothing-is-real" class="md-nav__link">
+    Nothing Is Real
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingesting" class="md-nav__link">
+    Ingesting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exposing" class="md-nav__link">
+    Exposing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tbd/" class="md-nav__link">
+        Documentation Update Needed
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../traditional-install/" class="md-nav__link">
+        Traditional install
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webforms/" class="md-nav__link">
+        Webforms
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webformsasinput/" class="md-nav__link">
+        Webforms as input method for Archipelago Digital Objects (ADO)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workingtwigs/" class="md-nav__link">
+        Working with Twig in Archipelago
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdebug/" class="md-nav__link">
+        Debugging PHP in Archipelago
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-strawberry-fields-does-why-we-built-it-and-what-issues-it-addresses" class="md-nav__link">
+    What Strawberry fields does, why we built it, and what issues it addresses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nothing-is-real" class="md-nav__link">
+    Nothing Is Real
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingesting" class="md-nav__link">
+    Ingesting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exposing" class="md-nav__link">
+    Exposing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="strawberryfields-forever">Strawberryfields Forever</h1>
+<p><img alt="Strawberries" src="../images/strawberries.png" /></p>
+<h2 id="what-strawberry-fields-does-why-we-built-it-and-what-issues-it-addresses">What Strawberry fields does, why we built it, and what issues it addresses</h2>
+<p>Archipelago integrates transparently into the Drupal 8 ecosystem using its Core Content Entity System (Nodes), Discovery (Search API) and in general all its Core Components plus a few well maintained external ones.</p>
+<p>By design (and because we think its imperative), Archipelago takes full charge of the metadata layer and associated media assets by implementing a highly configurable, smart Drupal field written in JSON named <a href="https://github.com/esmero/strawberryfield/tree/1.0.0-RC2"><code>Strawberryfield</code></a> that attaches to any content.</p>
+<p>All of JSON's internals, keys, paths, and values are dynamically exposed to the rest of the ecosystem. Strawberryfield even remembers its structure as data evolves by storing JSON paths of every little detail.</p>
+<h2 id="nothing-is-real">Nothing Is Real</h2>
+<p>Archipelago includes additional companion modules, <a href="https://github.com/esmero/webform_strawberryfield/tree/1.0.0-RC2"><code>Webform_strawberryfield</code></a> and <a href="https://github.com/esmero/webform_strawberryfield/tree/1.0.0-RC2"><code>Format_strawberryfield</code></a> that extend the core metadata capabilities of the main <a href="https://github.com/esmero/strawberryfield/tree/1.0.0-RC2"><code>Strawberryfield</code></a> module and allow the same flexibility to be exposed during ingest and viewing of digital objects.</p>
+<p>The in-development <a href="https://github.com/esmero/strawberry_runners"><code>Strawberry Runners</code></a> and <a href="https://github.com/esmero/ami"><code>AMI</code></a> modules further extend Archipelago's capabilities. Additional information related to these modules will be made available following initial public releases.</p>
+<h2 id="ingesting">Ingesting</h2>
+<p><code>Webform Strawberryfield</code> (we had a better name) extends and integrates into the <a href="https://www.drupal.org/project/webform"><code>amazing Drupal Webform module</code></a> to allow Archipelago users to build any possible metadata and media, ingest and edit, workflows directly via the UI using webforms.</p>
+<p>By not having a hardcoded ingest method, Archipelago can be used outside the GLAM community too, as a pure data repository in biological sciences, digital humanities, archives, or even as a mixed, multidisciplinary/cross-domain system.</p>
+<p>We also added <code>WIKIDATA</code>, <code>LoC</code>, <code>Getty</code>, and <code>VIAF</code> authority querying elements to aid in linking to external Linked Open Data sources.</p>
+<p>All these integrations are made to help local needs and community identities to survive the never-ending race for the next metadata schema. They are made to prototype, plan, and grow independently of how metadata will need to be exposed yesterday or tomorrow. And we plan to add more.</p>
+<p>Explore what other features <a href="../strawberryfield-formatters/"><code>webform_strawberryfield</code></a> provides to help with ingesting, reading, and interacting with your metadata during that process.</p>
+<h2 id="exposing">Exposing</h2>
+<p><img alt="JSONupcaststar" src="../images/jsonupcaststar.png" /></p>
+<p><code>Format Strawberryfield</code> (we had even a better name but...) deals with taking your JSON based metadata and <code>casting</code>, mashing, mixing, exposing, displaying, and transforming it to allow rich interaction for users and other systems with your digital objects.</p>
+<p>In its guts (or heart?), Archipelago does something quite simple but core to our concept of repository: it transforms in realtime the <em>close to your needs open schema metadata</em> that lives in strawberryfield as JSON into <em>close to other one's fixed schema needs metadata</em>; any destination format, using a fast, cached templating system. A templating system that is core to Drupal, called <code>Twig</code>:
+- <a href="https://twig.symfony.com">Twig in Symfony</a>
+- <a href="https://www.drupal.org/docs/theming-drupal/twig-in-drupal">Twig in Drupal</a></p>
+<p>This templating system is exposed to Archipelago users through the UI and stored side by side in the repository as content (we named them <code>Metadata Display entities</code>, but they not only serve display needs!) so users can fully control how metadata is transformed and published without touching their individual sources.</p>
+<p>Templates or recipes can be shared, exported, ingested, updated, and adapted in many ways. Fast changes are possible without having to wait for the next mayor release of Archipelago or your favorited Metadata Schema Specs Committee agreeing on the next or the last version. Of course, this module not only handles metadata but media assets too, extracting local or remote URIs and files from your metadata and rendering them as media viewers: books, 3D models, images, panoramas, A/V with IIIF in its soul.</p>
+<p>You can learn more about what <a href="../strawberryfield-formatters/">format_strawberryfield</a> can do and what many other possibilities are exposed through our <a href="../metadatatwigs/">templating system</a>.</p>
+<hr />
+<p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
+<p>Return to the <a href="..">Archipelago Documentation main page</a>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../strawberryfield-formatters/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Strawberryfield Formatters" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Strawberryfield Formatters
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../tbd/" class="md-footer__link md-footer__link--next" aria-label="Next: Documentation Update Needed" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Documentation Update Needed
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+    
+  </body>
+</html>
