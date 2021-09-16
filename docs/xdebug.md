@@ -41,7 +41,7 @@ This document describes how to enable Xdebug for local PHP development using the
 
     ![Debug](../imgs/xdebug/server-settings-2.png)    
 
- 4. Go to `Run > Edit Configurations`. Hit the `+` Button to create a new PHP Remote Debug. Name whatever you want, I called mine `docker`. Use these settings:
+ 4. Go to `Run > Edit Configurations`. Hit the `+` Button to create a new PHP Remote Debug. Name whatever you want, I called mine `Archipelago`. Use these settings:
     - Filter debug connection by IDE Key: yes, select the checkbox
     - Server: select `docker-debug-server` from dropdown (we created this in step 3)
     - IDE Key: `archipelago` (this matches the key set in our container)
