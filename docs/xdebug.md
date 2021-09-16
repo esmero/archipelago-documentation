@@ -102,7 +102,7 @@ If you are developing on a linux machine, you may need to make a change to the x
     xdebug.discover_client_host = 1
     xdebug.start_with_request=yes
     ```
-3. Make a bind mount to this file in your docker-compose-dev.yml file:
+3. Make a bind mount to this file in your docker-compose.dev.yml file:
     ```yml
       php-debug:
       ...
