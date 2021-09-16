@@ -93,7 +93,7 @@ Return to the [Archipelago Documentation main page](../README.md).
 ### Appendix: XDebug on a linux host
 
 If you are developing on a linux machine, you may need to make a change to the xdebug configuration file.
-1. Create a new file in the `/xdebug` folder called `xdebug.ini` and enter the following text:
+1. Create a new file in the `/archipelago-deployment/xdebug` folder called `xdebug.ini` and enter the following text:
     ```
     zend_extension=xdebug
     
