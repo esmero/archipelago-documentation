@@ -1,6 +1,6 @@
 # Archipelago Contribution Guide
 
-``Archipelago`` welcomes, appreciates, and recognizes any and all types of contribution. This includes input on all use cases and needs, questions or answers, documentation, DevOps, and configurations. We also welcome general ideas, thoughts, and even dreams for the future of our repository! Of course, we also invite you to contribute PHP code, including fixes and new features.
+`Archipelago` welcomes, appreciates, and recognizes any and all types of contribution. This includes input on all use cases and needs, questions or answers, documentation, DevOps, and configurations. We also welcome general ideas, thoughts, and even dreams for the future of our repository! Of course, we also invite you to contribute PHP code, including fixes and new features.
 
 We will be helpful, kind, and open. We encourage discussions and always respect one another's opinions, language, gender, style, backgrounds, origins, and destinations, provided they come from the same root values of respect, as stated here. We support conflict resolution using nothing more than basic common sense. We value diversity in all its shapes, forms, colors, epoches, numbers, and kinds, with or without labels, including in-between and evolving. We always assume we can do better and that you have done a lot. Under this very basic social framework, this is how we hope you can contribute:
 
@@ -8,15 +8,15 @@ We will be helpful, kind, and open. We encourage discussions and always respect 
 
 Archipelago has 5 active GitHub repositories
 
-- [Strawberryfield](https://github.com/esmero/strawberryfield/tree/8.x-1.0-beta1)
+- [Strawberryfield](https://github.com/esmero/strawberryfield)
   What? Code: Deals with metadata storage and exposure to Drupal. Events/Subscribers that trigger when content is modified. The way internal pieces of JSON are exposed to the rest of the ecosystem. Core to all of what Archipeleago is as a concept. One of its Drupal forms is a Field.
-- [Webform Strawberryfield](https://github.com/esmero/webform_strawberryfield/tree/8.x-1.0-beta1)
+- [Webform Strawberryfield](https://github.com/esmero/webform_strawberryfield)
   What? Code: Deals with UI based ingest of content using webforms. How files and media are attached to JSON, how tech md is extracted, and any interaction that happens during the edit and ingest processes via a form. In its Drupal form it provides a Field Widget for `Strawberryfield`.
-- [Format Strawberryfield](https://github.com/esmero/format_strawberryfield/tree/8.x-1.0-beta1)
+- [Format Strawberryfield](https://github.com/esmero/format_strawberryfield)
   What? Code: Deals with exposing and transforming the JSON when navigating the site. What is displayed, how it is displayed. Provides templating, metadata display entities via Twig, and direct file downloads. In its Drupal form it provides many field formatters for Strawberryfield` and a content entity for the Twig templates.
-- [Archipelago Deployment](https://github.com/esmero/archipelago-deployment/tree/8.x-1.0-beta1)
+- [Archipelago Deployment](https://github.com/esmero/archipelago-deployment)
   What? DevOps: Docker-compose deployment strategy, including a full skeleton project with persistence folders for Min.io, DB, Solr, Cantaloupe and Drupal 8. Includes initial deployment configurations, which modules are enabled, how things look in Drupal 8 and some scripts plus the deployment documentation for both OSX and Linux.
-- [Archipelago Documentation](https://github.com/esmero/archipelago-documentation/tree/8.x-1.0-beta1)
+- [Archipelago Documentation](https://github.com/esmero/archipelago-documentation)
   What? Documentation: This guide and whatever we manage to write to explain Archipelago goes here.
 
 ## Questions, Answers and In Transit Between Both Ends
@@ -26,11 +26,11 @@ We host a community interaction channel, our [google group](https://groups.googl
 
 ## Documentation Workflow
 
-Documentation is an evolving effort, and we need help. This guide lives in GitHub in [Archipelago Documentation](https://github.com/esmero/archipelago-documentation/tree/8.x-1.0-beta1). Documentation and Development Worklfow both work the same way, so keep reading!
+Documentation is an evolving effort, and we need help. This guide lives in GitHub in [Archipelago Documentation](https://github.com/esmero/archipelago-documentation). Documentation and Development Worklfow both work the same way, so keep reading!
 
 ## Development Workflow
 
-Start by reading open ISSUES (so you don't end up redoing what someone else is already working on) and looking at our [Roadmap for version 8.x-1.0](https://github.com/esmero/archipelago-deployment/issues/5). If the solution to your problem is not there or if there is an unchecked element in the roadmap, this is a great opportunity to help by creating a new ISSUE.
+Start by reading open ISSUES (so you don't end up redoing what someone else is already working on) and looking at our [Roadmap for version 1.0.0-RC2](https://github.com/esmero/archipelago-deployment/issues/103). If the solution to your problem is not there or if there is an unchecked element in the roadmap, this is a great opportunity to help by creating a new ISSUE.
 
 Next, start by opening an GitHub ISSUE in any of the 5 GitHub repositories, depending on what it is you are trying to do.
 
@@ -45,7 +45,7 @@ The gist is:
 
 As a best practice, we encourage pull requests to discuss/fix existing code, new code, and documention changes.
 
-For the full step-by-step workflow, we will use [Archipelago Documentation](https://github.com/esmero/archipelago-documentation/tree/8.x-1.0-beta1) and the `8.x-1.0-beta1` branch as example. The same applies to any of the other repositories: just change the remote urls and use the most current branch name.
+For the full step-by-step workflow, we will use [Archipelago Documentation](https://github.com/esmero/archipelago-documentation) and the `1.0.0-RC2` branch as example. The same applies to any of the other repositories: just change the remote urls and use the most current branch name.
 
 ### Example: Set Up Archipelago Documentation GitHub Repository
 Fork the [Archipelago Documentation Upstream](https://github.com/esmero/archipelago-documentation/fork) source repository to your own personal GitHub account (e.g. YOU). Copy the URL of your Archipelago Documentation fork (you will need it for the `git clone` command below).
@@ -53,14 +53,14 @@ Fork the [Archipelago Documentation Upstream](https://github.com/esmero/archipel
 ```Shell
 $ git clone https://github.com/YOU/archipelago-documentation
 $ cd archipelago-documentation
-$ git checkout 8.x-1.0-beta1
+$ git checkout 1.0.0-RC2
 ```
 
 ### Set Up Git Remote As ``upstream``
 ```Shell
 $ git remote add upstream https://github.com/esmero/archipelago-documentation
 $ git fetch upstream
-$ git merge upstream/8.x-1.0-beta1
+$ git merge upstream/1.0.0-RC2
 ...
 ```
 

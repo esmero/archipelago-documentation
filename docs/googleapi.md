@@ -75,7 +75,7 @@ _*Please note, this set of instructions will only work for individuals using Goo
 
 ![Google Consent](images/googleapi/16_GoogleConsent.jpg)
 
-* On the Google API Client Listing page, your AMI client listing should now have 'Yes' under 'Is Authenticated'. You are now ready to use Google Sheets with AMI! Return to the [main AMI documentation page](ami.md) to get started.
+* On the Google API Client Listing page, your AMI client listing should now have 'Yes' under 'Is Authenticated'. You are now ready to use Google Sheets with AMI! Return to the [main AMI documentation page](ami_index.md) to get started.
 
 ---
 

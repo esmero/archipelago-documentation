@@ -1,123 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://docs.archipelago.nyc/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/CODE_OF_CONDUCT/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/CODE_OF_CONDUCT/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/ami/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/about/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/archifilepersistencestrategy/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/acknowledgments/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/createdisplaymodes/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/ami_index/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/customwebformelements/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/ami_ingest_dos/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/devops/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/ami_ingest_dos_collections/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/firstobject/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/ami_spreadsheet_overview/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/generalqa/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/archifilepersistencestrategy/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/giveortake/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/communityshowcase/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/googleapi/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/contributing/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/inthewild/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/createdisplaymodes/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/metadatatwigs/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/customwebformelements/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/modifyingfileextensionsinwebform/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/democontent/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/ourtake/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/devops/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/sslsetup/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/firstobject/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/strawberryfield-formatters/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/generalqa_index/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/strawberryfields/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/generalqa_minio_logging/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/tbd/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/generalqa_smtp_configuration/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/traditional-install/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/generalqa_twig_modules_configuration/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/webforms/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/giveortake/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/webformsasinput/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/googleapi/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/workingtwigs/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/inthewild/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.archipelago.nyc/xdebug/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/metadatatwigs/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/modifyingfileextensionsinwebform/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/osx/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/ourtake/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/presentations_docs/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/quickstart/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/sslsetup/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/strawberryfield-formatters/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/strawberryfields/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/tbd/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/traditional-install/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/ubuntu/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/webforms/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/webformsasinput/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/workingtwigs/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0-RC2-publish/xdebug/</loc>
+         <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
