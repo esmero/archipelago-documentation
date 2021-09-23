@@ -8,10 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-          fetch-depth: 0
       - run: pip install mkdocs-material mike
       - run: git config --global user.name aksm
       - run: git config --global user.email albert.min@gmail.com
