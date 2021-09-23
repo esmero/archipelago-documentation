@@ -13,7 +13,7 @@
         <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
       
       
-        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC2-publish/ubuntu/">
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/ubuntu/">
       
       <link rel="icon" href="../images/strawberries_color.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
@@ -1245,7 +1245,7 @@ docker rm esmero-minio
 </code></pre></div>
 <p>Ok, now we are ready to start.</p>
 <h2 id="step-1-deployment">Step 1: Deployment</h2>
-<h5 id="prefer-to-watch-a-video-of-how-to-install-go-to-our-user-contributed-documentation">Prefer to watch a video of how to install? Go to our <a href="#user-contributed-documentation-a-video"><code>user contributed documentation</code></a>!</h5>
+<h5 id="prefer-to-watch-a-video-of-how-to-install-go-to-our-user-contributed-documentation">Prefer to watch a video of how to install? Go to our <a href="https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC1/docs/ubuntu.md#user-contributed-documentation"><code>user contributed documentation</code></a>!</h5>
 <h4 id="important">IMPORTANT</h4>
 <p>If you run <code>docker-compose</code> as root user (using <code>sudo</code>) some enviromental variables, like the current folder used inside the <code>docker-compose.yml</code> to mount the Volumens will not work and you will see a bunch of errors.</p>
 <p>There are two possible solutions.
@@ -1256,7 +1256,7 @@ use: <code>- ".:/var/www/html:cached"</code></p>
 <p>Now that you got it, lets deploy:</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/esmero/archipelago-deployment.git archipelago-deployment
 <span class="nb">cd</span> archipelago-deployment
-git checkout <span class="m">1</span>.0.0-RC2
+git checkout <span class="m">1</span>.0.0-RC3
 </code></pre></div>
 <p>And now a hard choice. Which docker-compose/ensemble? Edge? Stable? Legacy? So many choices.
 For latest/modern stack PHP7.4/Solr8.8/MySQL8 we recommend:</p>
@@ -1313,13 +1313,12 @@ You are done! Open your most loved Web Browser and point it to http://localhost:
 <p>If you see any issues or errors or need help with a step, please let us know (ASAP!). You can either open an <code>issue</code> in this repository or use the <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Google Group</a>. We are here to help.</p>
 <p>If you like this, let us know!</p>
 <h3 id="user-contributed-documentation-a-video">User contributed documentation (A Video!):</h3>
-<p><em>Installing Archipelago on AWS Ubuntu</em> by <a href="https://github.com/senyzspalding">Zach Spalding</a>: <a href="https://youtu.be/RBy7UMxSmyQ">https://youtu.be/RBy7UMxSmyQ</a></p>
+<p><em>Installing Archipelago on AWS Ubuntu</em> by <a href="https://github.com/senyzspalding">Zach Spalding</a>: https://youtu.be/RBy7UMxSmyQ</p>
 <h2 id="caring-coding-fixing-testing">Caring &amp; Coding + Fixing + Testing</h2>
 <ul>
 <li><a href="https://github.com/DiegoPino">Diego Pino</a></li>
 <li><a href="https://github.com/giancarlobi">Giancarlo Birello</a></li>
 <li><a href="https://github.com/alliomeria">Allison Lund</a></li>
-<li><a href="https://github.com/aksm">Albert Min</a></li>
 </ul>
 <h2 id="license">License</h2>
 <p><a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3</a></p>

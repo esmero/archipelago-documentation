@@ -13,7 +13,7 @@
         <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
       
       
-        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC2-publish/quickstart/">
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/quickstart/">
       
       <link rel="icon" href="../images/strawberries_color.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
@@ -1078,17 +1078,17 @@
                 
                 <h1 id="archipelago-docker-deployment">Archipelago Docker Deployment</h1>
 <p><strong>Updated:</strong> May 16th 2021</p>
-<p>This repository serves as bootstrap for a Archipelago 1.0.0-RC2 deployment via Docker using and provides this time many more options:</p>
+<p>This repository serves as bootstrap for a Archipelago 1.0.0-RC3 deployment via Docker using and provides this time many more options:</p>
 <ul>
-<li>minio.io (RELEASE.2021-06-07T21-40-51Z) S3/Azure/Local/Remote alternative and also Gateway to many others.</li>
+<li>minio.io (latest) S3/Azure/Local/Remote alternative and also Gateway to many others.</li>
 <li>Apache Solr 8.8.2 (or 7.5 if you go legacy) with the wizardly Solr OCR Highlight library <a href="https://github.com/dbmdz/solr-ocrhighlighting/releases/tag/0.5.0">v0.5</a> build by the Developement Team at the <a href="https://github.com/dbmdz">Bavarian State Library</a>. Thanks Johannes Baiter!</li>
 <li>Mysql 8.0.22 (or Mysql 5.7 if you go legacy)</li>
 <li>Ngnix 11</li>
 <li>Custom PHP FPM 7.4 zuper-tunned for Drupal 8/9 (or 7.3 FPM if you go legacy) with WARC to WACZ processing and Composer 2.0</li>
 <li>Natural Language Processing via NPLWEB64</li>
 <li>Cantaloupe 4.1.9 as IIIF Server with Video Frame extraction and PDF support</li>
-<li>A Skeleton Project setup to run latest Version of Drupal (8.9.14) and strawberryfield modules &amp; friends on 1.0.0-RC2</li>
-<li>Official <em>Drupal 9 ready</em> release again. D9.1 this time. It has its own branch to avoid cluttering this one too much. Look for 1.0.0-RC2D9</li>
+<li>A Skeleton Project setup to run latest Version of Drupal (8.9.14) and strawberryfield modules &amp; friends on 1.0.0-RC3</li>
+<li>Official <em>Drupal 9 ready</em> release again. D9.1 this time. It has its own branch to avoid cluttering this one too much. Look for 1.0.0-RC3D9</li>
 </ul>
 <p>The skeleton project contains all the pieces needed to run a local deployment of a vanilla Archipelago including (<em>YES</em>!) content provided as optional feature from <a href="https://github.com/esmero/archipelago-recyclables">archipelago-recyclables</a></p>
 <h1 id="starting-from-cero">Starting from CERO</h1>
@@ -1099,8 +1099,8 @@
 <p><a href="../ubuntu/">Step by Step deployment on Ubuntu</a></p>
 <h2 id="more-fun-if-you-add-content">More fun if you add content:</h2>
 <p><a href="../democontent/">One-Step Demo content ingest</a></p>
-<h2 id="100-rc2">1.0.0-RC2</h2>
-<p>We have been working hard on 1.0.0-RC2 and we may have delayed this a little more than expected. As you may have read (or heard) we take Release Candidates seriously and wanted to advance core features before closing the cycle. There are many bug fixes, improvements, AMI, invisible and visible workflow changes, smarter processing, and most important all made to allow you to extend Archipelago even more. We ship now with a lot more Site Building (fancy word for settings views, field formatters, Solr, etc in Drupal)to make starting with Archipelago or becoming a permanent resident of your own group of always sunny islands fun.</p>
+<h2 id="100-rc3">1.0.0-RC3</h2>
+<p>We have been working hard on 1.0.0-RC3 and we may have delayed this a little more than expected. As you may have read (or heard) we take Release Candidates seriously and wanted to advance core features before closing the cycle. There are many bug fixes, improvements, AMI, invisible and visible workflow changes, smarter processing, and most important all made to allow you to extend Archipelago even more. We ship now with a lot more Site Building (fancy word for settings views, field formatters, Solr, etc in Drupal)to make starting with Archipelago or becoming a permanent resident of your own group of always sunny islands fun.</p>
 <p>You get (yet) again fresh, strange, bizarre, unusual and/or amazing features that were not even asked for! We still work hard to not deviate from our own roadmap, keeping the North Star always visible while navigating these stormy waters, to make UI/UX clearer to understand, code less redundant and easier to follow, to cover (so close) every Media/and LoD base we could wish for. This Archipelago feels like a beach day everyday we use it and manages from time to time produce wonderful surprises. It is our little tiny secret garden/pumpkin/working-bee/undiscovered-magical-islands and we are happy we see it as our own home. A child with grown-up Repository responsabilities, a planned and consistent Architecture Implementation (and still a novell one, cute, cozy and simple) that can cover, mix and match GLAM, IR, Data and Scientific/Research/Museum Tech/Education needs, metadata and media in any shape.</p>
 <p>Ambitions never end to be enorm (we try to be humble) and we are always a bit quite tired (same as with Beta1, Beta2, Beta3 and RC1). Who knew we could write so much code and deploy and test over and over? We know the Horizon is still far away and we may never end sailing towards it.</p>
 <p>No need to tell you that 2020 and 2021 so far have been strange years and there is and will be constant reflecting on past times. Many many more Archipelagos have been emerging from the depths of the sea (and the shallow Internet) and a few already are blooming rich in local flora and fauna. We want to keep learning and sharing and you to keep asking, we may make mistakes while doing so, but our conviction that all still fits together and makes sense not only for us but most important for others is very strong.</p>
@@ -1111,7 +1111,6 @@
 <li><a href="https://github.com/DiegoPino">Diego Pino</a></li>
 <li><a href="https://github.com/giancarlobi">Giancarlo Birello</a></li>
 <li><a href="https://github.com/alliomeria">Allison Lund</a></li>
-<li><a href="https://github.com/aksm">Albert Min</a></li>
 </ul>
 <h2 id="acknowledgments">Acknowledgments</h2>
 <p>This software is a <a href="https://metro.org">Metropolitan New York Library Council</a> Open-Source initiative and part of the Archipelago Commons project.</p>

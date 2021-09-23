@@ -78,7 +78,7 @@ Ok, now we are ready to start.
 
 ## Step 1: Deployment
 
-##### Prefer to watch a video of how to install? Go to our [`user contributed documentation`](#user-contributed-documentation-a-video)!
+##### Prefer to watch a video of how to install? Go to our [`user contributed documentation`](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC1/docs/ubuntu.md#user-contributed-documentation)!
 
 #### IMPORTANT
 
@@ -96,7 +96,7 @@ Now that you got it, lets deploy:
 ```Shell
 git clone https://github.com/esmero/archipelago-deployment.git archipelago-deployment
 cd archipelago-deployment
-git checkout 1.0.0-RC2
+git checkout 1.0.0-RC3
 ```
 
 And now a hard choice. Which docker-compose/ensemble? Edge? Stable? Legacy? So many choices.
@@ -199,14 +199,13 @@ If you like this, let us know!
 
 ### User contributed documentation (A Video!):
 
-_Installing Archipelago on AWS Ubuntu_ by [Zach Spalding](https://github.com/senyzspalding): <https://youtu.be/RBy7UMxSmyQ>
+_Installing Archipelago on AWS Ubuntu_ by [Zach Spalding](https://github.com/senyzspalding): https://youtu.be/RBy7UMxSmyQ
 
 ## Caring & Coding + Fixing + Testing
 
 * [Diego Pino](https://github.com/DiegoPino)
 * [Giancarlo Birello](https://github.com/giancarlobi)
 * [Allison Lund](https://github.com/alliomeria)
-* [Albert Min](https://github.com/aksm)
 
 ## License
 

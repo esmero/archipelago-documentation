@@ -13,7 +13,7 @@
         <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
       
       
-        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC2-publish/giveortake/">
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/giveortake/">
       
       <link rel="icon" href="../images/strawberries_color.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
@@ -1306,17 +1306,17 @@
 - Make a new branch out of that one and name it ISSUE-#issuenumber. E.g if #issuenumber is 6, name your branch ISSUE-6.
 - Make changes in that branch and send a pull request.</p>
 <p>As a best practice, we encourage pull requests to discuss/fix existing code, new code, and documention changes.</p>
-<p>For the full step-by-step workflow, we will use <a href="https://github.com/esmero/archipelago-documentation">Archipelago Documentation</a> and the <code>1.0.0-RC2</code> branch as example. The same applies to any of the other repositories: just change the remote urls and use the most current branch name.</p>
+<p>For the full step-by-step workflow, we will use <a href="https://github.com/esmero/archipelago-documentation">Archipelago Documentation</a> and the <code>1.0.0-RC3</code> branch as example. The same applies to any of the other repositories: just change the remote urls and use the most current branch name.</p>
 <h3 id="example-set-up-archipelago-documentation-github-repository">Example: Set Up Archipelago Documentation GitHub Repository</h3>
 <p>Fork the <a href="https://github.com/esmero/archipelago-documentation/fork">Archipelago Documentation Upstream</a> source repository to your own personal GitHub account (e.g. YOU). Copy the URL of your Archipelago Documentation fork (you will need it for the <code>git clone</code> command below).</p>
 <div class="highlight"><pre><span></span><code>$ git clone https://github.com/YOU/archipelago-documentation
 $ <span class="nb">cd</span> archipelago-documentation
-$ git checkout <span class="m">1</span>.0.0-RC2
+$ git checkout <span class="m">1</span>.0.0-RC3
 </code></pre></div>
 <h3 id="set-up-git-remote-as-upstream">Set Up Git Remote As <code>upstream</code></h3>
 <div class="highlight"><pre><span></span><code>$ git remote add upstream https://github.com/esmero/archipelago-documentation
 $ git fetch upstream
-$ git merge upstream/1.0.0-RC2
+$ git merge upstream/1.0.0-RC3
 ...
 </code></pre></div>
 <h3 id="create-your-issue-branch">Create Your ISSUE Branch</h3>

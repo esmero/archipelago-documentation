@@ -72,7 +72,7 @@ Ok, now we are ready to start.
 ```Shell
 git clone https://github.com/esmero/archipelago-deployment.git archipelago-deployment
 cd archipelago-deployment
-git checkout 1.0.0-RC2
+git checkout 1.0.0-RC3
 cp docker-compose-osx.yml docker-compose.yml
 docker-compose up -d
 ```
@@ -149,7 +149,6 @@ If you like this, let us know!
 * [Diego Pino](https://github.com/DiegoPino)
 * [Giancarlo Birello](https://github.com/giancarlobi)
 * [Allison Lund](https://github.com/alliomeria)
-* [Albert Min](https://github.com/aksm)
 
 ## License
 

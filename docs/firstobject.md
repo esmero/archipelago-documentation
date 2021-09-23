@@ -1,6 +1,6 @@
 # Your First Digital Object
 
-You followed every [Deployment step](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/README.md) and you have now a local ``Archipelago`` instance. Great!
+You followed every [Deployment step](quickstart.md) and you have now a local ``Archipelago`` instance. Great!
 
 So what now? It is time to give your new repository a try and we feel the best way is to start by ingesting a simple Digital Object.
 

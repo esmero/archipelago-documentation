@@ -13,7 +13,7 @@
         <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
       
       
-        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC2-publish/strawberryfields/">
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/strawberryfields/">
       
       <link rel="icon" href="../images/strawberries_color.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
@@ -1167,10 +1167,10 @@
 <p><img alt="Strawberries" src="../images/strawberries.png" /></p>
 <h2 id="what-strawberry-fields-does-why-we-built-it-and-what-issues-it-addresses">What Strawberry fields does, why we built it, and what issues it addresses</h2>
 <p>Archipelago integrates transparently into the Drupal 8 ecosystem using its Core Content Entity System (Nodes), Discovery (Search API) and in general all its Core Components plus a few well maintained external ones.</p>
-<p>By design (and because we think its imperative), Archipelago takes full charge of the metadata layer and associated media assets by implementing a highly configurable, smart Drupal field written in JSON named <a href="https://github.com/esmero/strawberryfield/tree/1.0.0-RC2"><code>Strawberryfield</code></a> that attaches to any content.</p>
+<p>By design (and because we think its imperative), Archipelago takes full charge of the metadata layer and associated media assets by implementing a highly configurable, smart Drupal field written in JSON named <a href="https://github.com/esmero/strawberryfield/tree/1.0.0-RC3"><code>Strawberryfield</code></a> that attaches to any content.</p>
 <p>All of JSON's internals, keys, paths, and values are dynamically exposed to the rest of the ecosystem. Strawberryfield even remembers its structure as data evolves by storing JSON paths of every little detail.</p>
 <h2 id="nothing-is-real">Nothing Is Real</h2>
-<p>Archipelago includes additional companion modules, <a href="https://github.com/esmero/webform_strawberryfield/tree/1.0.0-RC2"><code>Webform_strawberryfield</code></a> and <a href="https://github.com/esmero/webform_strawberryfield/tree/1.0.0-RC2"><code>Format_strawberryfield</code></a> that extend the core metadata capabilities of the main <a href="https://github.com/esmero/strawberryfield/tree/1.0.0-RC2"><code>Strawberryfield</code></a> module and allow the same flexibility to be exposed during ingest and viewing of digital objects.</p>
+<p>Archipelago includes additional companion modules, <a href="https://github.com/esmero/webform_strawberryfield/tree/1.0.0-RC3"><code>Webform_strawberryfield</code></a> and <a href="https://github.com/esmero/webform_strawberryfield/tree/1.0.0-RC3"><code>Format_strawberryfield</code></a> that extend the core metadata capabilities of the main <a href="https://github.com/esmero/strawberryfield/tree/1.0.0-RC3"><code>Strawberryfield</code></a> module and allow the same flexibility to be exposed during ingest and viewing of digital objects.</p>
 <p>The in-development <a href="https://github.com/esmero/strawberry_runners"><code>Strawberry Runners</code></a> and <a href="https://github.com/esmero/ami"><code>AMI</code></a> modules further extend Archipelago's capabilities. Additional information related to these modules will be made available following initial public releases.</p>
 <h2 id="ingesting">Ingesting</h2>
 <p><code>Webform Strawberryfield</code> (we had a better name) extends and integrates into the <a href="https://www.drupal.org/project/webform"><code>amazing Drupal Webform module</code></a> to allow Archipelago users to build any possible metadata and media, ingest and edit, workflows directly via the UI using webforms.</p>

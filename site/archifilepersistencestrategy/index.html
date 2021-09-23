@@ -13,7 +13,7 @@
         <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
       
       
-        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC2-publish/archifilepersistencestrategy/">
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/archifilepersistencestrategy/">
       
       <link rel="icon" href="../images/strawberries_color.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
@@ -1135,8 +1135,8 @@
 </li>
 <li>
 <p>If the webform is involved, Archipelago acts quickly and calls directly (before the Node even exists) the file classifier, that will:
- 2.1. Add/complement a <code>as:somefiletype</code> JSON structure into the main <code>ADO</code> SBF <code>JSON</code>, with info about the file, checksums, size, Drupal fids, uuid, etc. This is a <a href="https://github.com/esmero/strawberryfield/blob/1.0.0-RC2/src/StrawberryfieldFilePersisterService.php#L326">heavy function</a> part of the <code>StrawberryfieldFilePersisterService</code>. It does a lot, making use of optimized logic, but may do more in the future to handle too-many/too-big files needs (FYI: solution will be simple, add to a queue and process later).
- 2.2. The most (yes) important info added here is the <a href="https://github.com/esmero/strawberryfield/blob/1.0.0-RC2/src/StrawberryfieldFilePersisterService.php#L212">desired</a> future storage location of the file.</p>
+ 2.1. Add/complement a <code>as:somefiletype</code> JSON structure into the main <code>ADO</code> SBF <code>JSON</code>, with info about the file, checksums, size, Drupal fids, uuid, etc. This is a <a href="https://github.com/esmero/strawberryfield/blob/1.0.0-RC3/src/StrawberryfieldFilePersisterService.php">heavy function</a> part of the <code>StrawberryfieldFilePersisterService</code>. It does a lot, making use of optimized logic, but may do more in the future to handle too-many/too-big files needs (FYI: solution will be simple, add to a queue and process later).
+ 2.2. The most (yes) important info added here is the <a href="https://github.com/esmero/strawberryfield/blob/1.0.0-RC3/src/StrawberryfieldFilePersisterService.php">desired</a> future storage location of the file.</p>
 </li>
 <li>
 <p>The user finishes the form, saves and and confirms the ADO creation, and finally all the Node events fire.</p>

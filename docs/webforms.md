@@ -13,11 +13,11 @@ The [Webform Strawberryfield](https://github.com/esmero/webform_strawberryfield)
 Use these webforms or their elements to create a custom webform for your own repository/project needs
 
 * Archipelago Default Deployment Webforms
-  * [Descriptive Metadata](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/config/sync/webform.webform.descriptive_metadata.yml)
-    * [Corresponding Schema.org Type Options](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/config/sync/webform.webform_options.schema_org_creative_works.yml)
+  * [Descriptive Metadata](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC3/config/sync/webform.webform.descriptive_metadata.yml)
+    * [Corresponding Schema.org Type Options](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC3/config/sync/webform.webform_options.schema_org_creative_works.yml)
 
-  * [Digital Object Collection](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/config/sync/webform.webform.digital_object_collection.yml)
-    * [Corresponding Schema.org Type Options](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/config/sync/webform.webform_options.schema_org_cw_collections.yml)
+  * [Digital Object Collection](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC3/config/sync/webform.webform.digital_object_collection.yml)
+    * [Corresponding Schema.org Type Options](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC3/config/sync/webform.webform_options.schema_org_cw_collections.yml)
 
 * [Community Created Webforms](tbd.md)
 
