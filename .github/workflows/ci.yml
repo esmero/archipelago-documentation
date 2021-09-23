@@ -2,7 +2,7 @@ name: ci
 on:
   push:
     branches: 
-      - 1.0.0-RC2-publish
+      - 1.0.0-RC2
 jobs:
   deploy:
     runs-on: ubuntu-latest
