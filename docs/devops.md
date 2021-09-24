@@ -1,6 +1,6 @@
 # Archipelago Software Services
 
-![ADOlife](../imgs/architecture_white_background.png)
+![ADOlife](images/architecture_white_background.png)
 
 At the core of the Archipelago philosophy is our commitment to both simplicity and flexibility.
 
@@ -10,7 +10,7 @@ At the core of the Archipelago philosophy is our commitment to both simplicity a
  - [Cantaloupe (Image Server)](https://cantaloupe-project.github.io/)
  - [S3 Storage (Mini.io or any other S3 flavor)](https://min.io/)
 
-Installation is entirely [Dockerized](https://www.docker.com) and scripted with [easy-to-follow directions](https://github.com/esmero/archipelago-deployment/blob/1.0.0-RC2/README.md).
+Installation is entirely [Dockerized](https://www.docker.com) and scripted with [easy-to-follow directions](quickstart.md).
 * Docker containers are as follows:
   Container | Purpose | Description
   --- | --- | ---
@@ -47,4 +47,4 @@ Documentation related to the Strawberryfield modules can be found here: [Strawbe
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
-Return to the [Archipelago Documentation main page](../README.md).
+Return to the [Archipelago Documentation main page](index.md).

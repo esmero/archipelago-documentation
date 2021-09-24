@@ -13,4 +13,4 @@ Thank you for your patience as we continue to update Archipelago's documentation
 
 ---
 
-Return to [Archipelago Documentation](../README.md).
+Return to [Archipelago Documentation](index.md).
