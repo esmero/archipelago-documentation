@@ -1,17 +1,17 @@
 # Strawberryfields Forever
-![Strawberries](../imgs/strawberries.png)
+![Strawberries](images/strawberries.png)
 
 ## What Strawberry fields does, why we built it, and what issues it addresses
 
 Archipelago integrates transparently into the Drupal 8 ecosystem using its Core Content Entity System (Nodes), Discovery (Search API) and in general all its Core Components plus a few well maintained external ones.
 
-By design (and because we think its imperative), Archipelago takes full charge of the metadata layer and associated media assets by implementing a highly configurable, smart Drupal field written in JSON named [`Strawberryfield`](https://github.com/esmero/strawberryfield/tree/1.0.0-RC2) that attaches to any content.
+By design (and because we think its imperative), Archipelago takes full charge of the metadata layer and associated media assets by implementing a highly configurable, smart Drupal field written in JSON named [`Strawberryfield`](https://github.com/esmero/strawberryfield/tree/1.0.0-RC3) that attaches to any content.
 
 All of JSON's internals, keys, paths, and values are dynamically exposed to the rest of the ecosystem. Strawberryfield even remembers its structure as data evolves by storing JSON paths of every little detail.
 
 ## Nothing Is Real
 
-Archipelago includes additional companion modules, [`Webform_strawberryfield`](https://github.com/esmero/webform_strawberryfield/tree/1.0.0-RC2) and [`Format_strawberryfield`](https://github.com/esmero/webform_strawberryfield/tree/1.0.0-RC2) that extend the core metadata capabilities of the main [`Strawberryfield`](https://github.com/esmero/strawberryfield/tree/1.0.0-RC2) module and allow the same flexibility to be exposed during ingest and viewing of digital objects.
+Archipelago includes additional companion modules, [`Webform_strawberryfield`](https://github.com/esmero/webform_strawberryfield/tree/1.0.0-RC3) and [`Format_strawberryfield`](https://github.com/esmero/webform_strawberryfield/tree/1.0.0-RC3) that extend the core metadata capabilities of the main [`Strawberryfield`](https://github.com/esmero/strawberryfield/tree/1.0.0-RC3) module and allow the same flexibility to be exposed during ingest and viewing of digital objects.
 
 The in-development [`Strawberry Runners`](https://github.com/esmero/strawberry_runners) and [`AMI`](https://github.com/esmero/ami) modules further extend Archipelago's capabilities. Additional information related to these modules will be made available following initial public releases.
 
@@ -28,7 +28,7 @@ All these integrations are made to help local needs and community identities to 
 Explore what other features [`webform_strawberryfield`](strawberryfield-formatters.md) provides to help with ingesting, reading, and interacting with your metadata during that process.
 
 ## Exposing
-![JSONupcaststar](../imgs/jsonupcaststar.png)
+![JSONupcaststar](images/jsonupcaststar.png)
 
 `Format Strawberryfield` (we had even a better name but...) deals with taking your JSON based metadata and `casting`, mashing, mixing, exposing, displaying, and transforming it to allow rich interaction for users and other systems with your digital objects.
 
@@ -46,4 +46,4 @@ You can learn more about what [format_strawberryfield](strawberryfield-formatter
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
-Return to the [Archipelago Documentation main page](../README.md).
+Return to the [Archipelago Documentation main page](index.md).

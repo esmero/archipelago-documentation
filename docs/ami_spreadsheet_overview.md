@@ -13,7 +13,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
       `s3://myAMIuploads/myAMIdocument.pdf`
       - Example remote filepath:
       `https://dogsaregreat.edu/dogs.tiff`
-  - **Multiple files (of the same type) can be placed in a single cell, separated by a semicolon ( ; ).
+  - **Multiple files (of the same type) can be placed in a single cell, separated by a semicolon ( ; ).**
   - For Digital Objects comprised of multiple types of files, such as an Oral History Interview with an audio file and a PDF transcript file, you can place different file types within different corresponding columns for the same Row.
   - It is recommended that filepaths are copied/stored as plain (non hyperlinked) formatted text.
 
@@ -22,7 +22,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
     - the Digital Object or Digital Object Collection Type, such as 'Photograph' or 'Collection'
   - `label`
     - the title of the Digital Object or Collection
-  - **Soft-requirement* `node_uuid`
+  - **Soft-requirement** `node_uuid`
     - this can be empty
     - if empty, Archipelago will automatically generate UUIDs
     - can be used with existing UUIDs during migrations
@@ -41,13 +41,14 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
   - Metadata - for all the rich, detailed information associated with your Digital Objects and Collections
     - Every Column header will become a JSON Key and each cell a JSON value for that Key
     - You can use direct JSON snippets such as:
-    ````
-    [{"uri": "http://id.loc.gov/authorities/subjects/sh95008857","label": "Digital libraries"}]
-    ````
+
+      ````json
+      [{"uri": "http://id.loc.gov/authorities/subjects/sh95008857","label": "Digital libraries"}]
+      ````
     - If you have an advanced twig template with the necessary logic, you can place data in cells that can be parsed and structured in various ways (such as multiple values separated by semicolons split accordingly, capitalization of values based on defined patterns, etc.)
 
 ---
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
-Return to the [Archipelago Documentation main page](../README.md).
+Return to the [Archipelago Documentation main page](index.md).

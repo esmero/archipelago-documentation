@@ -1,6 +1,6 @@
 # Twig Templates and Archipelago
 
-![ADOlife](../imgs/jsonupcaststar.png)
+![ADOlife](images/jsonupcaststar.png)
 
 Archipelago uses a fast, cached templating system that is core to Drupal, called `Twig`. In its guts (or its heart?) Archipelago uses this system to transform the _close to your needs open schema metadata_ that lives in every `strawberryfield` as JSON into _close to other one's fixed schema needs metadata_. This is quite simple, but it is an essential component of our vision of how a repository should manage metadata.
 
@@ -59,9 +59,13 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
 - Carousel (in Bootstrap) for Images (HTML) Metadata Display 
 
 You can find these templates here:
+<<<<<<< HEAD
 - On Github:
 	- [Local Deployment](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC3/d8content/metadatadisplays)
 	- [Live/Production Deployment](https://github.com/esmero/archipelago-deployment-live/tree/1.0.0-RC3/drupal/d8content/metadatadisplays)
+=======
+- On Github: [Templates Shipped with Standard Archipelago Deployments](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC3/d8content/metadatadisplays)
+>>>>>>> origin/1.0.0-RC3
 - In your local instance: http://localhost:8001/metadatadisplay/list
 - In your live instance: https://yourdomain.org/metadatadisplay/list
 
@@ -73,13 +77,13 @@ While a lot of core needs and use cases are covered with the Twig Templates ship
 
 **Knowing** (even if you do not plan to) how to edit or create your own **Twig templates** is important.
 
-- This guide covers the Basics of [Working With Twig in Archipelago](../docs/workingtwigs.md)
-- This section contains [Full Examples of Common Use Cases](../docs/workingtwigs.md#full-examples-for-common-uses-cases)
-- This section covers a [Recommended Workflow](../docs/workingtwigs.md#a-recommended-workflow)
+- This guide covers the Basics of [Working With Twig in Archipelago](workingtwigs.md)
+- This section contains [Full Examples of Common Use Cases](workingtwigs.md#full-examples-for-common-uses-cases)
+- This section covers a [Recommended Workflow](workingtwigs.md#a-recommended-workflow)
 - You may also want learn more about what `format_strawberryfield` can do and what many other possibilities are exposed through our templating system in this guide: [Strawberryfield Formatters](strawberryfield-formatters.md).
 
 ---
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
-Return to the [Archipelago Documentation main page](../README.md).
+Return to the [Archipelago Documentation main page](index.md).

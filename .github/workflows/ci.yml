@@ -1,0 +1,20 @@
+name: ci 
+on:
+  push:
+    branches: 
+      - 1.0.0-RC3
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs-material mike
+      - run: git config --global user.name aksm
+      - run: git config --global user.email albert.min@gmail.com
+      - run: git fetch origin gh-pages --depth=1
+      - run: mike deploy --push 1.0.0-RC3 latest
