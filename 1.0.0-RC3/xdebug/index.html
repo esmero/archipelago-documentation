@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/xdebug/">
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.1">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8b42a75e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1c75ef36.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -682,8 +682,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../googleapi/" class="md-nav__link">
-        Configuring Google Sheets API for AMI
+      <a href="../annotations/" class="md-nav__link">
+        Annotations
       </a>
     </li>
   
@@ -1030,10 +1030,6 @@
         
           
         
-          
-        
-          
-        
       
       
         <label class="md-nav__link" for="__nav_4_2_2_4">
@@ -1067,6 +1063,42 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2_2_4_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_2_4_2">
+          AMI Instructions and Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AMI Instructions and Guides" data-md-level="5">
+        <label class="md-nav__title" for="__nav_4_2_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          AMI Instructions and Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../ami_spreadsheet_overview/" class="md-nav__link">
         Spreadsheet Formatting Overview
@@ -1082,8 +1114,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../ami_ingest_dos/" class="md-nav__link">
-        Ingesting New Digital Objects using Spreadsheets or Google Sheets
+      <a href="../AMIviaSpreadsheets/" class="md-nav__link">
+        Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
       </a>
     </li>
   
@@ -1096,9 +1128,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../ami_ingest_dos_collections/" class="md-nav__link">
-        Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
+      <a href="../googleapi/" class="md-nav__link">
+        Configuration for Google Sheets API
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../I7solrImporter/" class="md-nav__link">
+        Using the Islandora 7 Solr Importer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1354,21 +1407,26 @@
 <p>This document describes how to enable Xdebug for local PHP development using the PHPStorm IDE and a docker container running the Archipelago <code>esmero-php:development</code> image. It involves interacting with the <a href="https://github.com/esmero/archipelago-docker-images">esmero/archipelago-docker-images</a> repo and the <a href="https://github.com/esmero/archipelago-deployment">esmero/archipelago-deployment</a> repo.</p>
 <h2 id="part-1-docker">Part 1: Docker</h2>
 <ol>
-<li>Run the following commands from your <code>/archipelago-deployment</code> directory:</li>
-</ol>
+<li>
+<p>Run the following commands from your <code>/archipelago-deployment</code> directory:</p>
 <p><code>docker-compose down</code> \
-   <code>docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d</code></p>
-<p>This version of <code>docker-compose up</code> uses an override file to modify our services. <code>docker-compose.dev.yml</code> we now have an extra PHP container called <code>esmero-php-debug</code>. To stop the containers in the future, run <code>docker-compose -f docker-compose.yml -f docker-compose.dev.yml down</code>.</p>
-<p>So we have reloaded the containers and now you are ready for Part 2.</p>
+<code>docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d</code></p>
+<p><br>This version of <code>docker-compose up</code> uses an override file to modify our services. <code>docker-compose.dev.yml</code> we now have an extra PHP container called <code>esmero-php-debug</code>. </p>
+<p><br>To stop the containers in the future, run <code>docker-compose -f docker-compose.yml -f docker-compose.dev.yml down</code>.</p>
+<p><br><em>(To make these commands easier to remember, consider making bash aliases in your .bashrc file.)</em>
+<br><em>(If you are running your development on a Linux system, you may need to make a modification to your xdebug configuration file on the esmero-php-dev container. See appendix at the bottom of this page.)</em></p>
+<p><br>So we have reloaded the containers and now you are ready for Part 2.</p>
+</li>
+</ol>
 <h2 id="part-2-phpstorm">Part 2: PHPStorm</h2>
 <ol>
 <li>
 <p>In PHPStorm, open your <code>archipelago-deployment</code> project.</p>
 </li>
 <li>
-<p>Go to <code>Preferences &gt; Languages &amp; Frameworks &gt; PHP &gt; Debug</code>. In this window there is an Xdebug section. Use these settings:</p>
+<p>Go to <code>Preferences &gt; Languages &amp; Frameworks &gt; PHP &gt; Debug</code> or <code>Settings &gt; PHP &gt; Servers</code>. In this window there is an Xdebug section. Use these settings:</p>
 <ul>
-<li>Debug port: <code>9999</code>. (do NOT use the default, 9000)</li>
+<li>Debug port: <code>9003</code>. (do NOT use the default, 9000)</li>
 <li>Can accept external connections: yes, select checkbox</li>
 <li>(optional) Break at first line in PHP scripts: uncheck. If you leave this selected, you will have to manually step through a breakpoint from Drupal's main index.php file on every request, which is quite annoying. However, leaving this box checked can be useful for making sure the connection is working at first, before you have set any internal breakpoints.</li>
 </ul>
@@ -1389,13 +1447,16 @@
 <p><img alt="Debug" src="../images/xdebug/server-settings-2.png" />    </p>
 </li>
 <li>
-<p>Go to <code>Run &gt; Edit Configurations</code>. Hit the <code>+</code> Button to create a new PHP Remote Debug. Name whatever you want, I called mine <code>docker</code>. Use these settings:</p>
+<p>Go to <code>Run &gt; Edit Configurations</code>. Hit the <code>+</code> Button to create a new PHP Remote Debug. Name whatever you want, I called mine <code>Archipelago</code>. Use these settings:</p>
 <ul>
 <li>Filter debug connection by IDE Key: yes, select the checkbox</li>
 <li>Server: select <code>docker-debug-server</code> from dropdown (we created this in step 3)</li>
 <li>IDE Key: <code>archipelago</code> (this matches the key set in our container)</li>
 </ul>
 <p><img alt="Debug" src="../images/xdebug/edit-configurations.png" />    </p>
+</li>
+<li>
+<p>Note: If you try to validate your connection, it will fail. But that's ok.</p>
 </li>
 <li>
 <p>Validate your connection. With  <code>Run &gt; Edit Configurations</code> still open, you can hit the link that says "Validate". Use these settings in the following validation window:</p>
@@ -1407,42 +1468,67 @@
 <img alt="Debug" src="../images/xdebug/validate-2.png" />    </p>
 </li>
 </ol>
-<p># Set up Browser Bookmarklets</p>
-<ol>
-<li>We are still in the <code>archipelago-deployment</code> repository. Find the <code>/xdebug</code> folder. Inside is a file  <code>js-bookmarks-for-xdebug.txt</code>. This text file contains Javascript that you can copy and paste into your browser's bookmarks manager. Paste the JS snippet into the URL for the bookmark. Create 2 bookmarks: Start, and Stop.
-     <img alt="Debug" src="../images/xdebug/bookmarks.png" />
-     <img alt="Debug" src="../images/xdebug/bookmarks2.png" /> <br />
-<img alt="Debug" src="../images/xdebug/bookmarks3.png" />   </li>
-</ol>
-<p>We will use these bookmarks to Start and Stop debugging sessions from the browser.</p>
-<p># Actually Debugging!
- 1. Hit the button (top right bar of PHPStorm) that looks like a telephone, for <code>Start Listening for PHP Debug Connections</code>.</p>
-<pre><code>  ![Debug](images/xdebug/telephone.png)
-</code></pre>
+<h1 id="set-up-browser-integration">Set up Browser Integration</h1>
 <ol>
 <li>
-<p>Now, you can use <code>Run &gt; Debug</code> and select the <code>docker</code> named configuration that we created in the previous steps. The debugging console will appear. It will say it is waiting for incoming connection from 'archipelago'
- .
-       <img alt="Debug" src="../images/xdebug/waiting.png" /></p>
+<p>We have had success using the <a href="https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en">XDebug Helper</a> extension in Chrome. Once you have the extension installed, right-click on the bug icon in the top right of your chrome browser window and select "Options" to configure the IDE key. Under "IDE", select "Other", and in the text box, enter "archipelago"</p>
+<p><img alt="Debug" src="../images/xdebug/xdebut-helper-menu.png" title="XDebug Helper Options" />
+<img alt="Debug" src="../images/xdebug/xdebug-helper-set-key.png" title="XDebug Helper IDE Key" /></p>
+</li>
+</ol>
+<h1 id="actually-debugging">Actually Debugging!</h1>
+<ol>
+<li>
+<p>Hit the button (top right bar of PHPStorm) that looks like a telephone, for <code>Start Listening for PHP Debug Connections</code>.</p>
+<p><img alt="Debug" src="../images/xdebug/telephone.png" /></p>
 </li>
 <li>
-<p>Right now the debugging session is not enabled. Browse to  <code>localhost:8001</code>. Hit the <code>Start Debugging</code> bookmark you created in the previous session. This loads a cookie called <code>XDEBUG_SESSION</code>, with the value <code>archipelago</code> that can communicate with PHPStorm.</p>
+<p>Now, you can use <code>Run &gt; Debug</code> and select the <code>Archipelago</code> named configuration that we created in the previous steps. The debugging console will appear. It will say it is waiting for incoming connection from 'archipelago'
+ .</p>
+<p><img alt="Debug" src="../images/xdebug/phpstorm-run-xdebug-archipelago-menu.png" />
+<img alt="Debug" src="../images/xdebug/waiting-archipelago.png" />
+<img alt="Debug" src="../images/xdebug/waiting.png" /></p>
+</li>
+<li>
+<p>Right now the debugging session is not enabled. Browse to  <code>localhost:8001</code>. Click on the gray XDebug Helper icon at the top right of your window and select the green "Debug" button. This will tell chrome to set the xdebug session key when you reload the page.</p>
 </li>
 <li>
 <p>Now set a breakpoint in your code, and refresh the page.
  If you have breakpoints set, either manually, or from leaving "Break at first line in PHP scripts" checked, you should have output now in the debugger.</p>
 </li>
 <li>
-<p>If you are done actively debugging, it is best to hit the <code>Stop Debugging</code> bookmark we also created in the previous step. This will greatly improve speed and performance for your app in development. When you need to debug, just turn on debugging using the bookmarks again.</p>
+<p>If you are done actively debugging, it is best to click the green XDebug Helper icon and select "Disable". This will greatly improve speed and performance for your app in development. When you need to debug, just turn on debugging using the XDebug Helper button again.</p>
 </li>
 <li>
 <p>If you would like to see the output of your xdebug logs, run the following script:
- <code>docker exec -ti esmero-php bash -c 'tail -f /tmp/xdebug.log &gt; /proc/1/fd/2'</code></p>
-<p>Then, you can use the typical docker logs command on the <code>esmero-php</code> container, and you will see the xdebug output:
-<code>docker logs esmero-php -f</code></p>
+   <code>docker exec -ti esmero-php bash -c 'tail -f /tmp/xdebug.log &gt; /proc/1/fd/2'</code></p>
 </li>
 </ol>
+<p>Then, you can use the typical docker logs command on the <code>esmero-php</code> container, and you will see the xdebug output:
+   <code>docker logs esmero-php -f</code></p>
 <p>Xdebug makes accessing variables in Drupal kind of great. Many possibilities, including debugging for Twig templates. Happy debugging!</p>
+<hr />
+<h3 id="appendix-xdebug-on-a-linux-host">Appendix: XDebug on a linux host</h3>
+<p>If you are developing on a linux machine, you may need to make a change to the xdebug configuration file.</p>
+<ol>
+<li>Create a new file in the <code>/archipelago-deployment/xdebug</code> folder called <code>xdebug.ini</code> and enter the following text:
+    <div class="highlight"><pre><span></span><code>zend_extension=xdebug
+
+[xdebug]
+xdebug.mode=develop,debug
+xdebug.discover_client_host = 1
+xdebug.start_with_request=yes
+</code></pre></div></li>
+<li>Make a bind mount to this file in your docker-compose.dev.yml file:
+    <div class="highlight"><pre><span></span><code>  php-debug:
+  ...
+    volumes:
+  - ${PWD}:/var/www/html:cached
+    # Bind mount custom xdebug configuration file...
+  - ${PWD}/xdebug/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+</code></pre></div></li>
+<li>Restart your docker containers using the method described at the top of this page.</li>
+</ol>
 <hr />
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
 <p>Return to the <a href="..">Archipelago Documentation main page</a>.</p>
@@ -1545,10 +1631,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.f8263e09.min.js", "version": {"provider": "mike", "default": "default"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.e99e714c.min.js", "version": {"provider": "mike", "default": "default"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      <script src="../assets/javascripts/bundle.c7d1b464.min.js"></script>
       
     
   </body>

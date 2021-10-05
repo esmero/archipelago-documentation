@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/workingtwigs/">
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.1">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8b42a75e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1c75ef36.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -633,8 +633,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../googleapi/" class="md-nav__link">
-        Configuring Google Sheets API for AMI
+      <a href="../annotations/" class="md-nav__link">
+        Annotations
       </a>
     </li>
   
@@ -1093,10 +1093,6 @@
         
           
         
-          
-        
-          
-        
       
       
         <label class="md-nav__link" for="__nav_4_2_2_4">
@@ -1130,6 +1126,42 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2_2_4_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_2_4_2">
+          AMI Instructions and Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AMI Instructions and Guides" data-md-level="5">
+        <label class="md-nav__title" for="__nav_4_2_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          AMI Instructions and Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../ami_spreadsheet_overview/" class="md-nav__link">
         Spreadsheet Formatting Overview
@@ -1145,8 +1177,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../ami_ingest_dos/" class="md-nav__link">
-        Ingesting New Digital Objects using Spreadsheets or Google Sheets
+      <a href="../AMIviaSpreadsheets/" class="md-nav__link">
+        Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
       </a>
     </li>
   
@@ -1159,9 +1191,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../ami_ingest_dos_collections/" class="md-nav__link">
-        Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
+      <a href="../googleapi/" class="md-nav__link">
+        Configuration for Google Sheets API
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../I7solrImporter/" class="md-nav__link">
+        Using the Islandora 7 Solr Importer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1577,15 +1630,15 @@
 <li>
 <p>You can access the <em>values</em> by using <code>data DOT Property (attribute) Name</code>.</p>
 <ul>
-<li>In the Laddie the Dog example shown above:<ul>
+<li>In the Laddie the Dog example <a href="https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC3/docs/workingtwigs.md#note-about-the-examples">shown above (originally)</a>:<ul>
 <li><code>data.type</code> will contain "Photograph"</li>
 <li><code>data.language</code> will contain [ "English" ]</li>
 <li><code>data.language[0]</code> will contain "English" <ul>
 <li>0 means first entry in an Array or Enumeration</li>
 </ul>
 </li>
-<li><code>data.subject_loc</code> will contain [{ "uri":"http…","label": "Dog" }]</li>
-<li><code>data.subject_loc.uri</code> will contain <code>"http://id.loc.gov/…"</code></li>
+<li><code>data.subject_loc</code> will contain [{ "uri":"http://..","label": "Dog" }]</li>
+<li><code>data.subject_loc.uri</code> will contain <code>"http://.."</code></li>
 <li><code>data.subject_loc.label</code> will contain "Dog"</li>
 </ul>
 </li>
@@ -1598,8 +1651,12 @@
 <h4 id="twig-statements-and-printing">Twig Statements and Printing</h4>
 <ul>
 <li>https://twig.symfony.com/doc/3.x/templates.html</li>
-<li>Simple examples using Printing Statements<ul>
-<li>Single JSON Value Example:<ul>
+<li>
+<p>Simple examples using Printing Statements</p>
+<ul>
+<li>
+<p>Single JSON Value Example:</p>
+<ul>
 <li>Twig template: 
  ```twig
  Hello I am a {{ data.type }} and very happy to meet you
@@ -1610,10 +1667,12 @@
 </li>
 </ul>
 </li>
-<li>Multiple JSON Values Example:<ul>
+<li>
+<p>Multiple JSON Values Example:</p>
+<ul>
 <li>Twig template:
 ```twig
-Hello I was classified as "{{ data.subject_loc.label }}" and very happy to meet you
+Hello I was classified as "{{ data.subject_loc[0].label }}" and very happy to meet you
 ````</li>
 <li>Rendered Output:<ul>
 <li><code>Hello I was classified as "Dogs" and very happy to meet you</code></li>
@@ -1640,11 +1699,15 @@ Hello I was classified as "{{ data.subject_loc.label }}" and very happy to meet 
 <span class="x">Ups no Subject Key</span>
 <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div></li>
-<li>Rendered Output:<ul>
+<li>
+<p>Rendered Output:</p>
+<ul>
 <li><code>Hey I have a Subject Key</code></li>
 </ul>
 </li>
-<li>Conditionals, Operator, and Test usage:<ul>
+<li>
+<p>Conditionals, Operator, and Test usage:</p>
+<ul>
 <li><strong>If/else</strong> are conditionals</li>
 <li><strong>is</strong> is an operator</li>
 <li><strong>defined</strong> is a test </li>
@@ -1656,17 +1719,22 @@ Hello I was classified as "{{ data.subject_loc.label }}" and very happy to meet 
 <p>Example 2:</p>
 <ul>
 <li>Twig template:
-    <code>``twig</code>{% for key, subject in data.subject_loc %}<ul>
+    ```twig
+    {% for key, subject in data.subject_loc %}<ul>
 <li>Subject {{ subject.label }} found at position {{ key }}
-{% endfor %}`
+{% endfor %}
 ````</li>
 </ul>
 </li>
-<li>Rendered Output:<ul>
+<li>
+<p>Rendered Output:</p>
+<ul>
 <li><code>* Subject Dogs found at position 0</code></li>
 </ul>
 </li>
-<li>Loop usage:   <ul>
+<li>
+<p>Loop usage:   </p>
+<ul>
 <li><strong>for</strong> is a loop</li>
 <li>Inside the loop you have access to <strong>key</strong>, <strong>subject</strong></li>
 </ul>
@@ -1674,19 +1742,24 @@ Hello I was classified as "{{ data.subject_loc.label }}" and very happy to meet 
 </ul>
 </li>
 <li>
-<p>Example 3</p>
+<p>Example 3:</p>
 <ul>
 <li>Twig template:
-    <code>``twig</code>{% for subject in data.subject_loc %}
+    ```twig
+    {% for subject in data.subject_loc %}
     {% set label_lowercase = subject.label|lower %}
     My lower case Subject is {{ label_lowercase }}
-    {% endfor %}`
+    {% endfor %}
     ````</li>
-<li>Rendered Output:<ul>
+<li>
+<p>Rendered Output:</p>
+<ul>
 <li><code>My lower case Subject is dogs</code></li>
 </ul>
 </li>
-<li>Assignment, Filter, and Loop uage:    <ul>
+<li>
+<p>Assignment, Filter, and Loop uage:    </p>
+<ul>
 <li><strong>set</strong> is an assignment </li>
 <li>| is a pipe, used after a value to apply a <strong>filter</strong>.</li>
 <li><strong>lower</strong> is a filter</li>
@@ -1717,7 +1790,7 @@ Hello I was classified as "{{ data.subject_loc.label }}" and very happy to meet 
 </li>
 </ul>
 <h3 id="full-examples-for-common-uses-cases">Full Examples for Common Uses Cases:</h3>
-<p><strong>Use case #1:</strong> I have multiple LoD Subjects and want to display them in my page as a clickable ordered list but i’m a safe/careful person.</p>
+<p><strong>Use case #1:</strong> I have multiple LoD Subjects and want to display them in my page as a clickable ordered list but I’m a safe/careful person.</p>
 <p><strong>Twig Example for Use Case #1:</strong>
 <div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.subject_loc</span> <span class="k">is</span> <span class="nf">iterable</span> <span class="k">and</span> <span class="nv">data.subject_loc</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">&lt;h2&gt;My Subjects&lt;/h2&gt;</span>
@@ -1771,16 +1844,16 @@ Hello I was classified as "{{ data.subject_loc.label }}" and very happy to meet 
 <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div></p>
 <h3 id="a-recommended-workflow">A Recommended Workflow</h3>
-<p>You want to create a New Metadata Display(HTML) or a new (XML) Schema based format?</p>
+<p>You want to create a New Metadata Display (HTML) or a new (XML) Schema based format?</p>
 <ol>
-<li>Get yourself an example <strong>document (Frame)</strong>. If <strong>HTML</strong> copy the source. If <strong>XML</strong> copy the full XML thing (cmd+c)</li>
-<li>Create a new <strong>Metadata Display Entity</strong>. Copy the content (text) of your Frame into the Edit window (cmd+v)</li>
-<li>Select an existing (as complete as possible) ADO to use as preview, press Preview</li>
+<li>Get yourself an example <strong>document (Frame)</strong>. If <strong>HTML</strong> copy the source. If <strong>XML</strong> copy the full XML. (cmd+c)</li>
+<li>Create a new <strong>Metadata Display Entity</strong>. Copy the content (text) of your Frame into the Edit window. (cmd+v)</li>
+<li>Select an existing (as complete as possible) ADO to use as preview, press Preview.</li>
 <li>Put your nice glasses <img alt="🤓" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f913.svg" title=":nerd_face:" /> on. What do you see? What data in your Frame do you have in your ADO (data)?</li>
 <li>Start nimble. Selected the <code>data.label</code> info, check where your <strong>Frame</strong> uses a <em>Title</em> or a <em>Label</em>. Remove that text (cmd+x) and replace with a <code>{{ data.label }}</code>. Press Preview. Do you see your title?</li>
 <li>Keep doing <strong>6</strong>, over and over. Leave complex values for the end. (e.g <code>data.subject_loc</code>)</li>
-<li>Document your changes <code>{# I added this because .. #}</code></li>
-<li>Save</li>
+<li>Document your changes. <code>{# I added this because .. #}</code></li>
+<li>Save.</li>
 </ol>
 <p>Once the Template is in place you can use it in a <em>Formatter</em>, as <em>Endpoint</em>, in your <em>Search Results</em> or just keep it around until you and the world are ready!</p>
 <h2 id="and-now-its-your-turn">And now it's your turn!</h2>
@@ -1887,10 +1960,10 @@ Hello I was classified as "{{ data.subject_loc.label }}" and very happy to meet 
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.f8263e09.min.js", "version": {"provider": "mike", "default": "default"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.e99e714c.min.js", "version": {"provider": "mike", "default": "default"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      <script src="../assets/javascripts/bundle.c7d1b464.min.js"></script>
       
     
   </body>
