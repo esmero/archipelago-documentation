@@ -25,7 +25,7 @@ docker exec -ti esmero-php bash -c 'drush en -y smtp'
 
 _Note: Depending on your email provider, you may also need to enable “less secure” applications in your account settings (such as here for Google email accounts: https://myaccount.google.com/lesssecureapps)_
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

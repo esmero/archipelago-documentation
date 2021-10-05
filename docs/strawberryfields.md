@@ -1,4 +1,5 @@
 # Strawberryfields Forever
+
 ![Strawberries](images/strawberries.png)
 
 ## What Strawberry fields does, why we built it, and what issues it addresses
@@ -28,6 +29,7 @@ All these integrations are made to help local needs and community identities to 
 Explore what other features [`webform_strawberryfield`](strawberryfield-formatters.md) provides to help with ingesting, reading, and interacting with your metadata during that process.
 
 ## Exposing
+
 ![JSONupcaststar](images/jsonupcaststar.png)
 
 `Format Strawberryfield` (we had even a better name but...) deals with taking your JSON based metadata and `casting`, mashing, mixing, exposing, displaying, and transforming it to allow rich interaction for users and other systems with your digital objects.
@@ -42,7 +44,7 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
 
 You can learn more about what [format_strawberryfield](strawberryfield-formatters.md) can do and what many other possibilities are exposed through our [templating system](metadatatwigs.md).
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

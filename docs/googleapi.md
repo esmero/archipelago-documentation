@@ -61,10 +61,6 @@ To allow the Archipelago Multi Importer (AMI) to read from Google spreadsheets, 
 
     ![OauthClientID Details](images/googleapi/12_ClientIDdetails.jpg)
 
-### Configuring Google API Client Listing in Archipelago
-
-13. In your Archipelago, navigate to the Google API Client Listing found under `/admin/config` (here, in a local instance: `http://localhost:8001/admin/config`).  
-
     ![Google API Client Listing](images/googleapi/13_GoogleApiClientListing.jpg)
 
 14. On the 'Add Google Api Client account' configuration page, enter the following information using your `Client ID` and `Client Secret`. 'Developer Key' is optional. Select `Google Sheets API` under 'Services' and `https://www,googleapis.com/auth/spreadsheets.readonly` under 'Scopes'. Check the box for `Is Access Type Offline`. Select the Save button.
@@ -81,7 +77,7 @@ To allow the Archipelago Multi Importer (AMI) to read from Google spreadsheets, 
 
 * On the Google API Client Listing page, your AMI client listing should now have 'Yes' under 'Is Authenticated'. You are now ready to use Google Sheets with AMI! Return to the [main AMI documentation page](ami_index.md) to get started.
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

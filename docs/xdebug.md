@@ -54,12 +54,12 @@ This document describes how to enable Xdebug for local PHP development using the
     - Path to create validation script `<your local path>/archipelago-deployment/web`
     - Url to validation script: `http://localhost:8001`
 
-      Hit VALIDATE. You should get a series of green check marks. If you get a warning about missing `php.ini` file, that is OK, our file has a different name in the container (`xdebug.ini`) and is still being read correctly.
-      ![Debug](images/xdebug/validate-2.png)    
+    Hit VALIDATE. You should get a series of green check marks. If you get a warning about missing `php.ini` file, that is OK, our file has a different name in the container (`xdebug.ini`) and is still being read correctly.
+    ![Debug](images/xdebug/validate-2.png)    
 
 # Set up Browser Integration
 
- 1. We have had success using the [XDebug Helper](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en) extension in Chrome. Once you have the extension installed, right-click on the bug icon in the top right of your chrome browser window and select "Options" to configure the IDE key. Under "IDE", select "Other", and in the text box, enter "archipelago"
+1. We have had success using the [XDebug Helper](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en) extension in Chrome. Once you have the extension installed, right-click on the bug icon in the top right of your chrome browser window and select "Options" to configure the IDE key. Under "IDE", select "Other", and in the text box, enter "archipelago"
 
     ![Debug](images/xdebug/xdebut-helper-menu.png "XDebug Helper Options")
     ![Debug](images/xdebug/xdebug-helper-set-key.png "XDebug Helper IDE Key")
@@ -93,7 +93,7 @@ This document describes how to enable Xdebug for local PHP development using the
 
 Xdebug makes accessing variables in Drupal kind of great. Many possibilities, including debugging for Twig templates. Happy debugging!
 
----
+___
 
 ### Appendix: XDebug on a linux host
 
@@ -119,7 +119,7 @@ If you are developing on a linux machine, you may need to make a change to the x
     ```
 4. Restart your docker containers using the method described at the top of this page.
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

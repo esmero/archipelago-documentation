@@ -20,17 +20,17 @@
 The following Archipelago instances are still brewing. Please be aware that the following links may change, and stay tuned for future updates.
 
 - [Digital Culture of Metropolitan New York (DCMNY)](http://dcmny.org)
-  - *_migration to Archipelago began Spring 2021_
+    - *_migration to Archipelago began Spring 2021_
 
 - [Empire Archival Discovery Cooperative (EADC) Finding Aid Toolkit](https://archipelago.senylrc.org/)
-   - _Supported by the Southeastern New York Library Resources Council (SENYLRC)_
+    - _Supported by the Southeastern New York Library Resources Council (SENYLRC)_
 
 
 
 
 _*Please reach out to [Allison Lund](https://github.com/alliomeria) if you have a public Archipelago instance you'd like to share here. Thank you!_
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

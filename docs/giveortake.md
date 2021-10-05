@@ -48,6 +48,7 @@ As a best practice, we encourage pull requests to discuss/fix existing code, new
 For the full step-by-step workflow, we will use [Archipelago Documentation](https://github.com/esmero/archipelago-documentation) and the `1.0.0-RC3` branch as example. The same applies to any of the other repositories: just change the remote urls and use the most current branch name.
 
 ### Example: Set Up Archipelago Documentation GitHub Repository
+
 Fork the [Archipelago Documentation Upstream](https://github.com/esmero/archipelago-documentation/fork) source repository to your own personal GitHub account (e.g. YOU). Copy the URL of your Archipelago Documentation fork (you will need it for the `git clone` command below).
 
 ```Shell
@@ -56,7 +57,8 @@ $ cd archipelago-documentation
 $ git checkout 1.0.0-RC3
 ```
 
-### Set Up Git Remote As ``upstream``
+### Set Up Git Remote As `upstream`
+
 ```Shell
 $ git remote add upstream https://github.com/esmero/archipelago-documentation
 $ git fetch upstream
@@ -65,6 +67,7 @@ $ git merge upstream/1.0.0-RC3
 ```
 
 ### Create Your ISSUE Branch
+
 Before making changes, make sure you create a branch using the ISSUE number you created for these contributions.
 
 ```Shell
@@ -72,6 +75,7 @@ $ git checkout -b ISSUE-6
 ```
 
 ### Do Some Clean Up and Test Locally
+
 After your code changes, make sure
 
 - If modifying `PHP`, run `phpcs --standard=Drupal yourchanged.file.php`. We (try our best to) use Drupal 8 coding standards.
@@ -81,21 +85,24 @@ After your code changes, make sure
 
 
 ### Commit Changes
+
 After verification, commit your changes. This is [very good post](https://chris.beams.io/posts/git-commit/) on how to write commit messages.
 ```Shell
 $ git commit -am 'Fix that Strawberry'
 ```
 
 ### Push To The Branch
+
 Push your locally committed changes to the remote origin (your fork)
 ```Shell
 $ git push origin ISSUE-6
 ```
 
 ### Create A Pull Request
+
 Pull requests can be created via GitHub. [This document](https://help.github.com/articles/creating-a-pull-request/) explains in detail how to create one. After your Pull Request gets peer reviewed and approved, it can be merged. Discussion can happen and peers can ask you for modifications, fixes or more information on how to test. We will be respectful. You will be given credit for all your contributions and shown appreciation. There is no wrong and never too little. There could never be too much!
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

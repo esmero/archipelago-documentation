@@ -6,7 +6,7 @@
 * [Archipelago Digital Objects Repository (an) architecture to last (DrupalCon North America 2021)](https://tinyurl.com/archipelagoDCNA)
 * [Archipelago 1.0.0-RC2 Specs and features](https://tinyurl.com/ArchipelagoRC2specs)
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

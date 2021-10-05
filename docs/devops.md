@@ -47,7 +47,7 @@ Documentation related to the Strawberryfield modules can be found here: [Strawbe
 - [Solr OCR Highlighting](https://github.com/dbmdz/solr-ocrhighlighting)
 - Twig Templating [In Symfony](https://twig.symfony.com) / [In Drupal](https://www.drupal.org/docs/theming-drupal/twig-in-drupal)
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

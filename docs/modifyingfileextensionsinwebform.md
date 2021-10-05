@@ -68,7 +68,7 @@ When logged in as an admin, we go to *Manage > Structure > Webforms* and click o
     
     ![Conditionals](images/modifyingfileextensionsinwebform/09_conditionals.jpg)
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

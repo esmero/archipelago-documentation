@@ -8,7 +8,7 @@ For those who prefer classic approaches to system installation and configuration
 
 Please stay tuned for additional future updates. Thank you!
 
----
+___
 
 Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

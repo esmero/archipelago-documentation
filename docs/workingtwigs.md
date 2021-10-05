@@ -274,7 +274,7 @@ Once the Template is in place you can use it in a _Formatter_, as _Endpoint_, in
 
 We hope you found the information presented here to be helpful in getting started working with Twigs in Archipelago. Click here to return to the main [Twigs in Archipelago documentation](metadatatwigs.md). Happy Twigging!
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

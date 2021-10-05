@@ -30,6 +30,16 @@ AMI provides Tabulated data ingest for ADOs with customizable input plugins. Eac
 
 **Please be aware that the version of AMI shipped with Archipelago 1.0.0-RC3 provides much of the core batch functions useful for getting started working with large amounts of content, but is not the full or final version of this module. This documentation page will be updated with successive AMI and Archipelago releases.**
 
+## Getting started with AMI
+
+You can access AMI through the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`.
+
+  ![AMI Sets List](images/ami/AMIsetsList.jpg)
+
+## Google Sheets API Congifuration
+
+If you plan on using the Google Sheets Importer option, you will need to [Configure the Google Sheets API](googleapi.md).
+
 ### Example Spreadsheet/CSV
 
 This spreadsheet can be used to import a small set of Digital Objects using the same assets part of the [Two-Step Demo content ingest guide](democontent.md) (these objects can also be found in the [Archipelago Deployment repository](https://github.com/esmero/archipelago-deployment)).
@@ -97,7 +107,7 @@ This JSON template can be used during the Data Transformation (step 3) of your A
       }
     ```
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

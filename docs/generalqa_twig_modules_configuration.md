@@ -25,7 +25,7 @@
 
 5. After receiving the successful installation confirmation, check to make sure you are now able to save your Twig template without receiving an error message.
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
