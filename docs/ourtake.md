@@ -14,7 +14,7 @@ In the meantime, please consider reviewing this presentation created by Archipel
 - [Archipelago : an empathic Digital Repository Architecture](https://tinyurl.com/archipelago-brief-presentation)
 
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

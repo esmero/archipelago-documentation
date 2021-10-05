@@ -18,7 +18,7 @@ nav:
         - Debugging PHP in Archipelago: xdebug.md
         - Creating Display Modes: createdisplaymodes.md
         - Strawberryfield Formatters: strawberryfield-formatters.md
-        - Configuring Google Sheets API for AMI: googleapi.md
+        - Annotations: annotations.md
         - General Q&A:
           - generalqa_index.md
           - Twig Modules Configuration: generalqa_twig_modules_configuration.md
@@ -36,9 +36,11 @@ nav:
           - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
         - Archipelago Multi-Importer (AMI):
           - ami_index.md
-          - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
-          - Ingesting New Digital Objects using Spreadsheets or Google Sheets: ami_ingest_dos.md
-          - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: ami_ingest_dos_collections.md
+          - AMI Instructions and Guides:
+            - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
+            - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
+            - Configuration for Google Sheets API: googleapi.md
+            - Using the Islandora 7 Solr Importer: I7solrImporter.md
   - Archipelago Presentations and Documents: presentations_docs.md
   - Archipelagos in the Wild: inthewild.md
   - Contributing:

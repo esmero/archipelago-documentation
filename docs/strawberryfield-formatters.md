@@ -3,6 +3,7 @@
 This documentation will give a brief overview of Archipelago's [Strawberryfield Formatters](https://github.com/esmero/format_strawberryfield) and how they work using the default View mode `Digital Object Full View` as an example.
 
 ## At a glance
+
 When taking a look at your [First Digital Object](https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC1/docs/firstobject.md) note that multiple formatters are working together to create this `Display` ( or `View mode`). Since "*My First Digital Object*" is a `Photograph` the `Display` being used is `Digital Object Full View` which, by default, uses formatters to:
 
 - (**Red**) Create the image viewer where users can zoom in, zoom out, fullscreen and rotate all the images associated with the ADO.
@@ -91,7 +92,7 @@ And then with `🍓Erdbeere` (the Formatter for Custom Metadata Templates) there
 
 More information about Managing Metadata Displays with Twig Templates can be found [here](metadatatwigs.md).
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

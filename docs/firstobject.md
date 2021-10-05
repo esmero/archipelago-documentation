@@ -8,9 +8,9 @@ So what now? It is time to give your new repository a try and we feel the best w
 
 ## Requirements
 
- - Running Archipelago (http://localhost:8001)
- - 20 minutes of your time.
- - Open Mind.
+- Running Archipelago (http://localhost:8001)
+- 20 minutes of your time.
+- Open Mind.
 
 ## Welcome!
 
@@ -147,7 +147,7 @@ Once you hit save you should see the following green messages and your first Arc
 
 Congratulations on creating your first digital object! 🍓
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

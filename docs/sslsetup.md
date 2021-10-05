@@ -13,19 +13,19 @@ This process takes less than 10 minutes of reading YML files and editing a few f
 1. Inside a /persistent partition, establish the following folder structure.
 _Note: you can keep the existing folder structure if you so choose. A benefit of the following structure is that it decouples the git clone of archipelago-deployment, which is made to be self sustainable and good for coding or smaller deployments._
 
-```Shell
-[ec2-user@ip-17x-xx-x-xxx persistent]$ ls -lah
-total 64K
-drwxr-xr-x 14 root           root  4.0K Oct  5 23:11 .
-dr-xr-xr-x 19 root           root  275 Dec 15  2019 ..
-drwxr-xr-x  8  		999  999   4096 Oct 13 20:07 db
-drwxr-xr-x 13 root           root  4.0K Oct  5 23:03 drupal8
-drwxr-xr-x  5           100  100   4.0K Feb 23  2020 iiifcache
-drwxr-xr-x  2 root           root  4.0K Feb 23  2020 iiifconfig
-drwxr-xr-x  4 root           root  4.0K Oct  5 22:45 nginx_conf
-drwxr-xr-x  3 root           root  4.0K Feb 26  2019 solrconfig
-drwxr-xr-x  3           8983 8983  4.0K Feb 26  2019 solrcore
-```
+    ```Shell
+    [ec2-user@ip-17x-xx-x-xxx persistent]$ ls -lah
+    total 64K
+    drwxr-xr-x 14 root           root  4.0K Oct  5 23:11 .
+    dr-xr-xr-x 19 root           root  275 Dec 15  2019 ..
+    drwxr-xr-x  8  		999  999   4096 Oct 13 20:07 db
+    drwxr-xr-x 13 root           root  4.0K Oct  5 23:03 drupal8
+    drwxr-xr-x  5           100  100   4.0K Feb 23  2020 iiifcache
+    drwxr-xr-x  2 root           root  4.0K Feb 23  2020 iiifconfig
+    drwxr-xr-x  4 root           root  4.0K Oct  5 22:45 nginx_conf
+    drwxr-xr-x  3 root           root  4.0K Feb 26  2019 solrconfig
+    drwxr-xr-x  3           8983 8983  4.0K Feb 26  2019 solrcore
+    ```
 To get to this point, create a git clone of archipelago deployment and then copy the content of the /persistent out of the repo folder into this structure. The original (or what is left) archipelago-deployment ends inside a drupal8 folder here.
 
 2. Copy and paste the following to create a local copy of this file:
@@ -251,62 +251,63 @@ To get to this point, create a git clone of archipelago deployment and then copy
 
 4. Create the following folder:
 
-```Shell
-/persistent/nginx_conf/conf.d/
-```
+    ```Shell
+    /persistent/nginx_conf/conf.d/
+    ```
 
 5. Place the ngnix.conf file inside the `/conf.d/` folder.
 
 6. Create also this other folder:
 
-```Shell
-/persistent/nginx_conf/certbot_extra_domains/
-```
+    ```Shell
+    /persistent/nginx_conf/certbot_extra_domains/
+    ```
 
 7. Inside the `/certbot_extra_domains/` folder, create a text file named the same way as your domain (which can/or not contain additional subdomains but needs to exist).
 
-```Shell
-cat  /persistent/nginx_conf/certbot_extra_domains/yoursite.org
-```
-
-```Shell
-drwxr-xr-x 2 root root 4.0K Oct  5 22:46 .
-drwxr-xr-x 4 root root 4.0K Oct  5 22:45 ..
--rw-r--r-- 1 root root   48 Oct  5 22:46 yoursite.org
-```
-
-_Optionally, create additional subdomains if needed._
-
-```Shell
-cat  /persistent/nginx_conf/certbot_extra_domains/yoursite.org
-subdomain.yoursite.org
-anothersub.yoursite.org
-```
+    ```Shell
+    cat  /persistent/nginx_conf/certbot_extra_domains/yoursite.org
+    ```
+    
+    ```Shell
+    drwxr-xr-x 2 root root 4.0K Oct  5 22:46 .
+    drwxr-xr-x 4 root root 4.0K Oct  5 22:45 ..
+    -rw-r--r-- 1 root root   48 Oct  5 22:46 yoursite.org
+    ```
+    
+    _Optionally, create additional subdomains if needed._
+    
+    ```Shell
+    cat  /persistent/nginx_conf/certbot_extra_domains/yoursite.org
+    subdomain.yoursite.org
+    anothersub.yoursite.org
+    ```
 
 8. Make sure you have edited the `docker-compose.yml` and `ngnix.conf` files you created to match your own information. Also make sure to also adjust the paths if you do not want the /persistent approach described in Step 1.
 
 9. Run the following commands:
 
-```Shell
-docker -compose up -d
-docker ps
-```
-You should see this:
-
-```Shell
-b5a04747ee06        staticfloat/nginx-certbot    "/bin/bash /scripts/…"   8 days ago          Up 8 days           0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp   esmero-web
-84afae094b57        esmero/php-7.3-fpm:latest    "docker-php-entrypoi…"   8 days ago          Up 8 days           9000/tcp                                   esmero-php
-13a9214acfd0        esmero/cantaloupe-s3:4.1.6   "sh -c 'java -Dcanta…"   8 days ago          Up 8 days           0.0.0.0:8183->8182/tcp                     esmero-cantaloupe
-044dd5bc7245        mysql:5.7                    "docker-entrypoint.s…"   8 days ago          Up 8 days           3306/tcp, 33060/tcp                        esmero-db
-31f4f0f45acc        solr:7.5.0                   "docker-entrypoint.s…"   8 days ago          Up 8 days           0.0.0.0:8983->8983/tcp                     esmero-solr
-```
+    ```Shell
+    docker -compose up -d
+    docker ps
+    ```
+    You should see this:
+    
+    ```Shell
+    b5a04747ee06        staticfloat/nginx-certbot    "/bin/bash /scripts/…"   8 days ago          Up 8 days           0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp   esmero-web
+    84afae094b57        esmero/php-7.3-fpm:latest    "docker-php-entrypoi…"   8 days ago          Up 8 days           9000/tcp                                   esmero-php
+    13a9214acfd0        esmero/cantaloupe-s3:4.1.6   "sh -c 'java -Dcanta…"   8 days ago          Up 8 days           0.0.0.0:8183->8182/tcp                     esmero-cantaloupe
+    044dd5bc7245        mysql:5.7                    "docker-entrypoint.s…"   8 days ago          Up 8 days           3306/tcp, 33060/tcp                        esmero-db
+    31f4f0f45acc        solr:7.5.0                   "docker-entrypoint.s…"   8 days ago          Up 8 days           0.0.0.0:8983->8983/tcp                     esmero-solr
+    ```
 
 10.SSL has now been configured for your Archipelago instance.
 
 ### User contributed documentation:
+
 _Adding SSL to Archipelago running docker_ by [Zachary Spalding](https://github.com/senyzspalding): https://youtu.be/rfH5TLzIRIQ
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 

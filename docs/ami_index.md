@@ -1,10 +1,12 @@
 # Archipelago Multi-Importer (AMI)
 
-[Archipelago Multi-Importer (AMI)](https://github.com/esmero/ami) is a module for batch/bulk/mass ingests of Archipelago digital objects (ADOs) and collections. AMI also enables you to perform batch administrative actions, such as updating, patching/revising, or deleting digital objects and collections.
+[Archipelago Multi-Importer (AMI)](https://github.com/esmero/ami) is a module for batch/bulk/mass ingests of Archipelago digital objects (ADOs) and collections. AMI also enables you to perform batch administrative actions, such as updating, patching/revising, or deleting digital objects and collections. AMI's Solr Importer plugin can be used to create AMI ingests and migrating content from existing Solr-sourcable digital repositories (such as Islandora 7).
 
-#### *Work-in-Progress Notes*
+## Getting started with AMI
 
-*Please be aware that the version of AMI shipped with Archipelago 1.0.0-RC3 provides much of the core batch functions useful for getting started working with large amounts of content, but is not the full or final version of this module. This documentation page will be updated with successive AMI and Archipelago releases.*
+You can access AMI through the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`.
+
+  ![AMI Sets List](images/ami/AMIsetsList.jpg)
 
 ## AMI Overview and Pre-Release Notes - AMI 0.1.0 (Archipelago - 1.0.0-RC3)
 
@@ -26,6 +28,7 @@ AMI provides Tabulated data ingest for ADOs with customizable input plugins. Eac
     
     This module also provides a simple search/replace text VBO action (handles JSON as text) and a full blown JSONPATCH VBO action to batch modify ADOs. The last one is extremely powerful permitting multiple operations at the same time with tests. E.g replace a certain value, add another value, remove another value only if a certain test (e.g “type”:”Article” and “date_of_digital”: “2020-09-09”) matches. If any tests fail the whole operation will be canceled for that ADO. An incomplete “Webform” VBO action is present but not fully functional yet. This one allows you to choose a Webform, a certain element inside that Webform and then find and replace using the same Interface you would see while editing/adding a new ADO via the web form workflow. Should be ready by RC3.
 
+**Please be aware that the version of AMI shipped with Archipelago 1.0.0-RC3 provides much of the core batch functions useful for getting started working with large amounts of content, but is not the full or final version of this module. This documentation page will be updated with successive AMI and Archipelago releases.**
 
 ## Getting started with AMI
 
@@ -36,60 +39,6 @@ You can access AMI through the `AMI Sets` tab on the main Content page found at 
 ## Google Sheets API Congifuration
 
 If you plan on using the Google Sheets Importer option, you will need to [Configure the Google Sheets API](googleapi.md).
-
-## Spreadsheet Formatting Overview
-
-There are multiple ways a spreadsheet/CSV file can be structured to work with AMI, depending on the data transformation and mapping you will be using.
-
-
-??? info "Click to view Basic Requirements and Recommended Options"
-
-    - For most standard AMI ingests, each Row of your spreadsheet/CSV will correspond to a single Digital Object or Collection.
-    - Columns in your spreadsheet/CSV can be mapped to different data (files) and metadata elements (label, description, subjects, etc.).
-    
-    - It is recommended that different types of files are placed into separate columns--"images", "documents", "models", "videos", "audios", "text".
-        - Filepaths can point to remote files, to existing files within your docker container, s3 (or other storage type/location that is accessible to Archipelago), and to paths within zip files.
-            - Example path for existing file within docker container:
-              `/var/www/html/d8content/myAMIimage.jpg`
-            - Example s3 path:
-              `s3://myAMIuploads/myAMIdocument.pdf`
-            - Example remote filepath:
-              `https://dogsaregreat.edu/dogs.tiff`
-        - **Multiple files (of the same type) can be placed in a single cell, separated by a semicolon ( ; ).
-        - For Digital Objects comprised of multiple types of files, such as an Oral History Interview with an audio file and a PDF transcript file, you can place different file types within different corresponding columns for the same Row.
-        - It is recommended that filepaths are copied/stored as plain (non hyperlinked) formatted text.
-    
-    - **Every spreadsheet/CSV file should contain the following Columns:**
-        - `type`
-            - the Digital Object or Digital Object Collection Type, such as 'Photograph' or 'Collection'
-        - `label`
-            - the title of the Digital Object or Collection
-        - **Soft-requirement* `node_uuid`
-            - this can be empty
-            - if empty, Archipelago will automatically generate UUIDs
-            - can be used with existing UUIDs during migrations
-    
-    - **Recommended Columns:**
-        - Files as defined above
-            - "images", "documents", "models", "videos", "audios", "text"
-            - .warc/.wacz files should be placed in a column "upload_associated_warcs"
-        - `ismemberof` and/or `ispartof` (and/or whatever predicate corresponds with the relationship you are mapping)
-            - these columns can be used to connect related objects using the object-to-object relationship that matches your needs
-            - these columns can hold 3 types of values
-                - empty (no value)
-                - an integer to connect an object to another object's corresponding row in the same spreadsheet/CSV
-                    - Ex: Row 2 corresponds to a Digital Object Collection; for a Digital Object corresponding to Row 3, the 'ismemberof' column contains a value of '2'. The Digital Object in Row 3 would be ingested as a member of the Digital Object Collection in Row 2.
-                - a UUID to connect with an already ingested object
-        - Metadata—for all the rich, detailed information associated with your Digital Objects and Collections
-            - Every Column header will become a JSON Key and each cell a JSON value for that Key
-            - You can use direct JSON snippets such as:
- 
-              ````json
-              [{"uri": "http://id.loc.gov/authorities/subjects/sh95008857","label": "Digital libraries"}]
-              ````
- 
-            - If you have an advanced twig template with the necessary logic, you can place data in cells that can be parsed and structured in various ways (such as multiple values separated by semicolons split accordingly, capitalization of values based on defined patterns, etc.)
-
 
 ### Example Spreadsheet/CSV
 
@@ -158,7 +107,7 @@ This JSON template can be used during the Data Transformation (step 3) of your A
       }
     ```
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
