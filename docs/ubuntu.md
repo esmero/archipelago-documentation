@@ -1,3 +1,11 @@
+---
+title: Installing Archipelago on Ubuntu 18.04 or 20.04
+tags:
+  - archipelago-deployment
+  - Ubuntu 18.04
+  - Ubuntu 20.04
+  - Linux
+---
 # Installing Archipelago on Ubuntu 18.04 or 20.04
 
 ## About running terminal commands

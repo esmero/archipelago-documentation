@@ -1,3 +1,9 @@
+---
+title: Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
+tags:
+  - AMI
+  - Archipelago Multi Importer
+---
 # Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
 
 Ingesting Only Digital Objects or Both Digital Objects and Collections uses similar processes, with a few key differences. [Click here](#ingesting-both-new-digital-objects-and-collections-in-the-same-spreadsheet) to jump to the [Ingesting Both New Digital Objects and Collections section](#ingesting-both-new-digital-objects-and-collections-in-the-same-spreadsheet) of this guide page.
