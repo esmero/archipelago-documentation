@@ -4,7 +4,7 @@ This documentation will give a brief overview of Archipelago's [Strawberryfield 
 
 ## At a glance
 
-When taking a look at your [First Digital Object](https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC1/docs/firstobject.md) note that multiple formatters are working together to create this `Display` ( or `View mode`). Since "*My First Digital Object*" is a `Photograph` the `Display` being used is `Digital Object Full View` which, by default, uses formatters to:
+When taking a look at your [First Digital Object](firstobject.md) note that multiple formatters are working together to create this `Display` ( or `View mode`). Since "*My First Digital Object*" is a `Photograph` the `Display` being used is `Digital Object Full View` which, by default, uses formatters to:
 
 - (**Red**) Create the image viewer where users can zoom in, zoom out, fullscreen and rotate all the images associated with the ADO.
 - (**Blue**) Display the `Object Description` and `Type of Resource`.
@@ -76,6 +76,7 @@ Recall *My First Digital Object* at beginning of this document where there were 
 ![Strawberry Fields](images/strawberryfield-formatters/04_strawberryfields.jpg)
 
 ## At the end of the day
+
 The decision for how your metadata is displayed is totally in your control.
 
 Under the `WIDGET` column, there is a quick description/overview of what the formatter is doing.

@@ -16,11 +16,12 @@ Happy deploying!
 ## Prerequisites (Don't skip)
 
 ### OSX: 
+
 - [Install Docker for Mac](https://docs.docker.com/docker-for-mac/)
-  - For OSX `Catalina` or `Big Sur` on Intel (i5/i7) the tested version is: `3.3.3(64133)`. You may go newer of course.
-  - For `Big Sur` and `Apple Silicon M1` Chips please read https://docs.docker.com/docker-for-mac/apple-silicon/. You may need to enable manual compatibility mode in your `docker-compose.yml` file for the `esmero-php` and `esmero-cantaloupe` containers.
-  - In `Preferences` -> `General`: check `Use gRPC FUSE for file sharing` and restart. Specially if you are using your `$HOME` folder for deploying e.g `/Users/username`
-  - In `Preferences` -> `Resources`: 4 Gbytes of RAM is the recommended minimun and works, 8 Gbytes is faster and snappier.
+    - For OSX `Catalina` or `Big Sur` on Intel (i5/i7) the tested version is: `3.3.3(64133)`. You may go newer of course.
+    - For `Big Sur` and `Apple Silicon M1` Chips please read https://docs.docker.com/docker-for-mac/apple-silicon/. You may need to enable manual compatibility mode in your `docker-compose.yml` file for the `esmero-php` and `esmero-cantaloupe` containers.
+    - In `Preferences` -> `General`: check `Use gRPC FUSE for file sharing` and restart. Specially if you are using your `$HOME` folder for deploying e.g `/Users/username`
+    - In `Preferences` -> `Resources`: 4 Gbytes of RAM is the recommended minimun and works, 8 Gbytes is faster and snappier.
 - [Install Github Desktop](https://desktop.github.com)
 - At least 10 Gbytes of free space (to get started)
 - Being able to open a terminal
@@ -36,36 +37,36 @@ If so, let's give that hard working repository a break first. If not, skip to [S
 
 - Open a terminal (you have that already right?) and go to your previous download/git clone folder and run:
 
-```Shell
-docker-compose down
-docker-compose rm
-```
+    ```Shell
+    docker-compose down
+    docker-compose rm
+    ```
 
 - Can't remember where you downloaded it? Ok. We can deal with that!
 
-Let's stop the containers gracefully first, run: 
-
-```Shell
-docker stop esmero-web
-docker stop esmero-solr
-docker stop esmero-db
-docker stop esmero-cantaloupe 
-docker stop esmero-php
-docker stop esmero-minio
-```
-
-Now we need to remove them, run:
-
-```Shell
-docker rm esmero-web
-docker rm esmero-solr
-docker rm esmero-db
-docker rm esmero-cantaloupe
-docker rm esmero-php
-docker rm esmero-minio
-```
-
-Ok, now we are ready to start.
+    Let's stop the containers gracefully first, run: 
+    
+    ```Shell
+    docker stop esmero-web
+    docker stop esmero-solr
+    docker stop esmero-db
+    docker stop esmero-cantaloupe 
+    docker stop esmero-php
+    docker stop esmero-minio
+    ```
+    
+    Now we need to remove them, run:
+    
+    ```Shell
+    docker rm esmero-web
+    docker rm esmero-solr
+    docker rm esmero-db
+    docker rm esmero-cantaloupe
+    docker rm esmero-php
+    docker rm esmero-minio
+    ```
+    
+    Ok, now we are ready to start.
 
 ## Step 1: Docker Deployment
 
@@ -76,6 +77,7 @@ git checkout 1.0.0-RC3
 cp docker-compose-osx.yml docker-compose.yml
 docker-compose up -d
 ```
+
 Note: If you are running from an external Drive or a partition/filesystem that is `Case Sensitive` and is not syncing automatically to `Apple Cloud` you can also use docker-compose-linux.yml
 Note2: `docker-compose.yml` is git ignored in case you make local adjustments or changes to it. 
 
@@ -98,6 +100,7 @@ The following will run composer inside the esmero-php container to download all 
 ```Shell
 docker exec -ti esmero-php bash -c "composer install"
 ```
+
 Once that command finishes run our setup script:
 
 ```Shell
@@ -132,6 +135,7 @@ Archipelago is more fun without having to start writing Metadata Displays (in Tw
 ```Shell
 docker exec -ti esmero-php bash -c 'scripts/archipelago/deploy.sh'
 ```
+
 Open your most loved Web Browser and point it to http://localhost:8001
 
 Note: It can take some time to start the first time (Drupal needs some warming up). 
@@ -149,9 +153,10 @@ If you like this, let us know!
 * [Diego Pino](https://github.com/DiegoPino)
 * [Giancarlo Birello](https://github.com/giancarlobi)
 * [Allison Lund](https://github.com/alliomeria)
+* [Albert Min](https://github.com/aksm)
 
 ## License
 
-[GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt)
+[GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt)
 
 

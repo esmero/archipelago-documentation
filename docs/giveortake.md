@@ -39,6 +39,7 @@ Please be concise with the title of your ISSUE so that it is easy to understand.
 Once you are done and you feel comfortable working to make a change yourself, take note of the `ISSUE number` (lets name it `#issuenumber`).
 
 The gist is:
+
 - Fork the GitHub repository where you created the ISSUE, decide which branch you want to change.
 - Make a new branch out of that one and name it ISSUE-#issuenumber. E.g if #issuenumber is 6, name your branch ISSUE-6.
 - Make changes in that branch and send a pull request.
@@ -87,6 +88,7 @@ After your code changes, make sure
 ### Commit Changes
 
 After verification, commit your changes. This is [very good post](https://chris.beams.io/posts/git-commit/) on how to write commit messages.
+
 ```Shell
 $ git commit -am 'Fix that Strawberry'
 ```
@@ -94,6 +96,7 @@ $ git commit -am 'Fix that Strawberry'
 ### Push To The Branch
 
 Push your locally committed changes to the remote origin (your fork)
+
 ```Shell
 $ git push origin ISSUE-6
 ```

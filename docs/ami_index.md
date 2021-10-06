@@ -6,7 +6,7 @@
 
 You can access AMI through the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`.
 
-  ![AMI Sets List](images/ami/AMIsetsList.jpg)
+![AMI Sets List](images/ami/AMIsetsList.jpg)
 
 ## AMI Overview and Pre-Release Notes - AMI 0.1.0 (Archipelago - 1.0.0-RC3)
 
@@ -34,7 +34,7 @@ AMI provides Tabulated data ingest for ADOs with customizable input plugins. Eac
 
 You can access AMI through the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`.
 
-  ![AMI Sets List](images/ami/AMIsetsList.jpg)
+![AMI Sets List](images/ami/AMIsetsList.jpg)
 
 ## Google Sheets API Congifuration
 

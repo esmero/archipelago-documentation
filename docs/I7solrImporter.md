@@ -13,6 +13,7 @@ Select the Islandora 7 Solr Importer from the dropdown menu.
 You will only have the option to select 'Create New ADOs' as the Operation you would like to perform.
 
 For the Solr Server Configuration section, you will need to provide all of the following information:
+
 - PID of the Islandora Collection Members you want to fetch _(example: islandora:root)_
 - Host of your Solr Server _(example: repositorydomain.org)_
 - Port _(example: 8080)_
@@ -26,6 +27,7 @@ You will also need to select Starting Row you would like to begin fetching resul
 The Starting Row is an offset and defaults to 0, which is the most common (and recommended) approach. For the Total Number of Rows to Fetch, setting this to empty or null will automatically (refresh when selecting 'Next' button at bottom of page) prefill with the real Number Rows found by the Solr Query invoked. If you set this number higher than the actual results we will only fetch what can be fetched.
 
 For larger collections, you may wish to create multiple/split AMI ingest sets by selecting a specified number of rows. 
+
 - As an example, for a collection of 1500 objects that you wanted to split into three AMI ingests of 500 objects, you would specify the Starting Row as 0 for the first set and Number of Rows as 500. For the second set, your Starting Row would be Row 501; for the third set, 1001). In this example, the Number of Rows would always be 500.
 
     ![Islandora Solr Importer Step 2 Section 1](images/ami/I7step2_section1.jpg)
@@ -71,6 +73,7 @@ Select the data transformation approach--how your source data will be transforme
 ## Step 4: Global ADO Mappings
 
 Select your global ADO mappings.
+
 - Even if empty (no values), select `node_uuid` and any relationship predicate columns (such as `ismemberof`).
 - By default, the option to automatically assigns UUIDs is selected. If you have existing UUIds, unselect this option.
 - Select the corresponding Columns for the Required ADO mappings.
@@ -88,19 +91,19 @@ For standard Spreadsheet or Google Sheets AMI ingests, you would use this step t
 
 For your Islandora 7 Solr Importer process, the generated AMI set .csv file will contain the necessary URLs to the corresponding Islandora 7 file datastreams for each object as needed. Select next to skip this ZIP upload step and proceed. 
 
-    ![AMI Step 5 Zip](images/ami/AMIstep5zip.jpg) 
+![AMI Step 5 Zip](images/ami/AMIstep5zip.jpg) 
  
 ## Step 6: Batch fetching from Solr
  
 During this step, AMI will fetch the specified digital objects from the remote Solr source. This is generally a quick process, but be aware that settings in the remote Solr source can impact the response time.
 
-    ![Islandora Solr Importer Step Batch Solr Fetching](images/ami/AMIstep4GlobalADOmappings.jpg)
+![Islandora Solr Importer Step Batch Solr Fetching](images/ami/AMIstep4GlobalADOmappings.jpg)
 
 ## Step 7: AMI Set Confirmation
 
 You will now see a message letting your know your "New AMI Set was created". You will be able to review the generated .csv file directly from this page under Source Data File.
 
-    ![Islandora Solr Importer Step 7 Set Creation](images/ami/I7step7_setCreated.jpg)
+![Islandora Solr Importer Step 7 Set Creation](images/ami/I7step7_setCreated.jpg)
   
 While you may immediately select "Process" from this AMI Set Confirmation page to use the Islandora 7 Importer generated .csv file as-is to ingest the ADOs in your AMI set, it is strongly recommended that you review the .csv file first. AMI is configured to trim unecessary (for Archipelago) and de-duplicate redundant Solr source data, but you may wish to pare down the sourced data even further and/or conduct general metadata review and cleanup before migrating your content. You will also likely want to make adjustments to your AMI Ingest JSON Template based on your review, depending on the variation of metadata columns/keys found in your source repostiory. 
 
@@ -110,7 +113,7 @@ Whether you have chosen to review your .csv file or not, your newly created AMI 
 
 On the main AMI set page, you can review the configurations and Source Data File for your set (determined by your selections in the preceeding steps).
 
-    ![AMI Set Admin Review](images/ami/AMIsetAdminReview.jpg)
+![AMI Set Admin Review](images/ami/AMIsetAdminReview.jpg)
 
 To Process this set, navigate to the `Process` tab. You will have two options related to the Processing outcome for your AMI Set. 
 
@@ -123,7 +126,7 @@ To Process this set, navigate to the `Process` tab. You will have two options re
 
 You may also select `Process` from the `Operations` menu for the AMI set from the main `AMI sets` page.
 
-    ![AMI Sets Admin Process Operations Menu](images/ami/AMISetAdminProcessOpsMenu.jpg)
+![AMI Sets Admin Process Operations Menu](images/ami/AMISetAdminProcessOpsMenu.jpg)
   
 If you chose to 'Confirm" and Process your AMI Set immediately, proceed to Step 9: Processing and ADO Creation.   
 
@@ -131,21 +134,21 @@ If you chose to 'Confirm" and Process your AMI Set immediately, proceed to Step 
 
 If you chose to place your AMI set in the Queue to Process in step 7, you may need to navigate to the Queue Manager found at `/admin/config/system/queue-ui`. (Be sure to select the `Queue Manager` under the System section, not the `Queue Manager for Hydroponic Service` under the Archipelago section). If the Queue operations for your Archipelago instance have been configured, you can simply leave your AMI Set in the Queue for Processing on the preconfigured schedule.
 
-    ![AMI Queue Manager](images/ami/AMIqueueMgr.jpg)
+![AMI Queue Manager](images/ami/AMIqueueMgr.jpg)
 
 To Process your AMI Set immediately from the Queue Manager page, select the checkbox next to the 'AMI Digital Object Ingester Queue Worker'. Keep the `Action` menu set to `Batch Process` and click the `Apply to selected items` button.
 
-    ![AMI Queue Manager Batch](images/ami/AMIqueueMgrBatchProcess.jpg)
+![AMI Queue Manager Batch](images/ami/AMIqueueMgrBatchProcess.jpg)
 
 ## Step 10: Processing and ADO Creation
 
 Your AMI set will now be Processed. You can follow the set's progress through the `Processing queues` loading screen.
 
-    ![AMI Processing Queues](images/ami/AMIprocessingQueue.jpg)
+![AMI Processing Queues](images/ami/AMIprocessingQueue.jpg)
 
 After your AMI set is Processed, you will receive confirmation messages letting you know your Digital Objects were successfully created. 
 
-    ![AMI Set Succes](images/ami/AMIsetSuccessRC2.jpg)
+![AMI Set Succes](images/ami/AMIsetSuccessRC2.jpg)
   
 From this message, you can click on each ADO title to review the new created Digital Object (or Collection) if you wish. Or, you may proceed to step 10.  
 

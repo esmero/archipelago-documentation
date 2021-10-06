@@ -56,8 +56,9 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
     #### Step 1: Plugin Selection
     
     Select the Plugin type you will be using from the dropdown menu.
+
     - Google Sheets Importer
-    - Spreadsheet Importer  (if using local CSV file)
+    - Spreadsheet Importer (if using local CSV file)
     
         ![Plugin Importer Select](images/ami/PluginImporterSelect.jpg)
     
@@ -122,6 +123,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
     #### Step 5: ZIP upload
     
     Provide an optional ZIP file containing your assets.
+
     - You may choose to upload a ZIP file containing all or some of the corresponding files specified in your csv/spreadsheet.
     - The file upload size restrictions specified in your Archipelago instance will apply here (512MB maximum by default). 
     
@@ -139,7 +141,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
     
     The message will also let you know that your New AMI Set was created and provide a link to the AMI Set page.
     
-        ![AMI Step 6](images/ami/AMIStep6.jpg)
+    ![AMI Step 6](images/ami/AMIStep6.jpg)
     
     #### Step 7: AMI Set Processing
     
@@ -147,9 +149,10 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
     
     If you clicked on the 'see it here' link in Step 6, you will be brought to the AMI Set page for review. From this page you can review the JSON configuration for your set (determined by your selections in the preceeding steps).
     
-        ![AMI Set Admin Review](images/ami/AMIsetAdminReview.jpg)
+    ![AMI Set Admin Review](images/ami/AMIsetAdminReview.jpg)
     
     To Process this set, navigate to the `Process` tab. You will have two options related to the Processing outcome for your AMI Set. 
+
     - Option 1: Select the "Desired ADOS Statuses After Process" for both Digital Objects (and Digital Object Collections, if also part of your ingest).
         - The Statuses you have available will reflect the publication workflow/moderation states (such as Draft, Published, Archived/Unpublished) setup in your Archipelago instance, and the permissions associated your user account.	
     - Option 2: You may choose to check the option to 'Enqueue but do not process Batch' to place the AMI set in the Queue to Process. *For the AMI version shipped with Archipelago 1.0.0-RC3, the option to 'Enqueue' for scheduled/future Processing should only be used if the Queue operations for your Archipelago instance are configured. Please return to this page for updated Enqueueing instructions that will accompany future releases.*
@@ -159,7 +162,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
     
     You may also select `Process` from the `Operations` menu for the AMI set from the main `AMI sets` page.
     
-        ![AMI Sets Admin Process Operations Menu](images/ami/AMISetAdminProcessOpsMenu.jpg)
+    ![AMI Sets Admin Process Operations Menu](images/ami/AMISetAdminProcessOpsMenu.jpg)
       
     If you chose to 'Confirm" and Process your AMI Set immediately, proceed to Step 9: Processing and ADO Creation.   
     
@@ -167,21 +170,21 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
     
     If you chose to place your AMI set in the Queue to Process in step 7, you may need to navigate to the Queue Manager found at `/admin/config/system/queue-ui`. (Be sure to select the `Queue Manager` under the System section, not the `Queue Manager for Hydroponic Service` under the Archipelago section). If the Queue operations for your Archipelago instance have been configured, you can simply leave your AMI Set in the Queue for Processing on the preconfigured schedule.
     
-        ![AMI Queue Manager](images/ami/AMIqueueMgr.jpg)
+    ![AMI Queue Manager](images/ami/AMIqueueMgr.jpg)
     
     To Process your AMI Set immediately from the Queue Manager page, select the checkbox next to the 'AMI Digital Object Ingester Queue Worker'. Keep the `Action` menu set to `Batch Process` and click the `Apply to selected items` button.
     
-        ![AMI Queue Manager Batch](images/ami/AMIqueueMgrBatchProcess.jpg)
+    ![AMI Queue Manager Batch](images/ami/AMIqueueMgrBatchProcess.jpg)
     
     #### Step 9: Processing and ADO Creation
     
     Your AMI set will now be Processed. You can follow the set's progress through the `Processing queues` loading screen.
     
-        ![AMI Processing Queues](images/ami/AMIprocessingQueue.jpg)
+    ![AMI Processing Queues](images/ami/AMIprocessingQueue.jpg)
     
     After your AMI set is Processed, you will receive confirmation messages letting you know your Digital Objects were successfully created. 
     
-        ![AMI Set Succes](images/ami/AMIsetSuccessRC2.jpg)
+    ![AMI Set Succes](images/ami/AMIsetSuccessRC2.jpg)
       
     From this message, you can click on each ADO title to review the new created Digital Object (or Collection) if you wish. Or, you may proceed to step 10.  
     
