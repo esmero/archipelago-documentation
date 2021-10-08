@@ -1,5 +1,7 @@
 # Archipelago Contribution Guide
 
+Archipelago welcomes and appreciates any type of contribution, from use cases and needs, questions, documentation, devops and configuration and -- of course -- code, fixes, or new features. To make the process less painful, we recommend you first to read our documentation and deploy a local instance. After that please follow the guidelines below to help you get started.
+
 `Archipelago` welcomes, appreciates, and recognizes any and all types of contribution. This includes input on all use cases and needs, questions or answers, documentation, DevOps, and configurations. We also welcome general ideas, thoughts, and even dreams for the future of our repository! Of course, we also invite you to contribute PHP code, including fixes and new features.
 
 We will be helpful, kind, and open. We encourage discussions and always respect one another's opinions, language, gender, style, backgrounds, origins, and destinations, provided they come from the same root values of respect, as stated here. We support conflict resolution using nothing more than basic common sense. We value diversity in all its shapes, forms, colors, epoches, numbers, and kinds, with or without labels, including in-between and evolving. We always assume we can do better and that you have done a lot. Under this very basic social framework, this is how we hope you can contribute:
