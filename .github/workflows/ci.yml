@@ -1,5 +1,4 @@
 name: ci 
-# just testing
 on:
   push:
     branches: 

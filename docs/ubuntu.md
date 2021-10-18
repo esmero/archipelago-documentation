@@ -136,7 +136,7 @@ You need to make sure Docker can read/write to your local Drive a.k.a mounted vo
 This means in practice running:
 
 ```Shell
-sudo chown -R 100:100 persistent/iiifcache
+sudo chown -R 8183:8183 persistent/iiifcache
 sudo chown -R 8983:8983 persistent/solrcore
 ```
 
