@@ -29,6 +29,7 @@ This is the recommended, simplest way for this release. There are a too many, to
 [Step by Step deployment on Ubuntu](ubuntu.md)
 
 ## More fun if you add content:
+
 [One-Step Demo content ingest](democontent.md)
 
 ## 1.0.0-RC3
@@ -50,6 +51,7 @@ If you like it or not, want new features or want to part of making this better, 
 * [Diego Pino](https://github.com/DiegoPino)
 * [Giancarlo Birello](https://github.com/giancarlobi)
 * [Allison Lund](https://github.com/alliomeria)
+* [Albert Min](https://github.com/aksm)
 
 ## Acknowledgments
 

@@ -1,24 +1,26 @@
 # Working with Twig in Archipelago
 
 The following information can also be found in this Presentation from the "Twig Templates and Archipelago" Spring 2021 Workshop:
-- [Twig Templates and Archipelago](http://tinyurl.com/archipelagoandtwig)
+
+- [Twig Templates and Archipelago](https://tinyurl.com/archipelagoandtwig)
 
 ## Prequisites (with food analogy)
 
 1. Know your Data/Metadata. What do I have? :thinking:
-	- What do I have in my Fridge? Do I have Tofu? Do I have Peppermint :candy:? One Bunch?
+    - What do I have in my Fridge? Do I have Tofu? Do I have Peppermint :candy:? One Bunch?
 2. Know your final desired output Document: MODS, HTML, GEOJSON, etc. 
-	- What are you going to cook :cook:? Do you have a picture of the Curry :curry:? Have you ever had Curry :stew:?
+    - What are you going to cook :cook:? Do you have a picture of the Curry :curry:? Have you ever had Curry :stew:?
 3. Know your Twig Basics
-	- How to cut and dice :knife:, steam and sauté :bowl_with_spoon:
+    - How to cut and dice :knife:, steam and sauté :bowl_with_spoon:
 4. Do not be afraid
-	- You can’t get burned :fire: here and Ingredients :strawberry: do not expire!
+    - You can’t get burned :fire: here and Ingredients :strawberry: do not expire!
 5. Ask for help. Slack/Google Groups/Postcards :email: :mailbox_with_mail:
-	- Seeing others cook helps and also motivates. Others may share some spices. :hot_pepper:
+    - Seeing others cook helps and also motivates. Others may share some spices. :hot_pepper:
 6. Use and Share your findings!
-	- Eat what you cook. :cookie: Share with friends and family. :cake:
+    - Eat what you cook. :cookie: Share with friends and family. :cake:
 
 #### Note about the Examples:
+
 _All examples shown below are using the following JSON snipped from [Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?]](https://archipelago.nyc/do/17355bdb-d784-4037-96fe-5c160296e639)._
 
 ??? info "Click to view image of the JSON snippet."
@@ -65,26 +67,28 @@ Understanding the basic structure of your JSON data.
 
 1. Single JSON Value.
 
-	![KnowYourData1](images/KnowYourData1.png)
-	- For `"type": "Photograph"`
-		- "type" = JSON Key or Property
-		- "Photograph" = Single JSON Value (string)
+    ![KnowYourData1](images/KnowYourData1.png)
+
+    - For `"type": "Photograph"`
+        - "type" = JSON Key or Property
+        - "Photograph" = Single JSON Value (string)
 
 2. Multiple JSON Values (Array of Enumeration of **Strings**)
 
-	![KnowYourData2](images/KnowYourData2.png)
-	- For `"language": ["English","Spanish"]`
-		- "language" = JSON Key or Property
-		- "["English","Spanish"]" = Multiple JSON Values (Array of Enumeration of **Strings**)
+    ![KnowYourData2](images/KnowYourData2.png)
+    - For `"language": ["English","Spanish"]`
+        - "language" = JSON Key or Property
+        - "["English","Spanish"]" = Multiple JSON Values (Array of Enumeration of **Strings**)
 
 3. Multiple JSON Values	(Array of Enumeration of **Objects**)
 
-	![KnowYourData3](images/KnowYourData3.png)
-	- For `"subject_loc":[{"uri":"http://..","label":"Dogs"},{"uri":"http://..","label":"Pets"}]`
-		- "subject_loc" = JSON Key or Property
-		- [{"uri":"http://..","label":"Dogs"},{"uri":"http://..","label":"Pets"}] =
-			- **Object** with two JSON Keys. Each one with a single Value
-			- Multiple JSON Values (Array of Enumeration of **Objects**)
+    ![KnowYourData3](images/KnowYourData3.png)
+
+    - For `"subject_loc":[{"uri":"http://..","label":"Dogs"},{"uri":"http://..","label":"Pets"}]`
+        - "subject_loc" = JSON Key or Property
+        - [{"uri":"http://..","label":"Dogs"},{"uri":"http://..","label":"Pets"}] =
+            - **Object** with two JSON Keys. Each one with a single Value
+            - Multiple JSON Values (Array of Enumeration of **Objects**)
 
 ## Getting Started with the Twig Language in Archipelago
 
@@ -93,109 +97,124 @@ Understanding the basic structure of your JSON data.
 - **All your** JSON Strawberryfield Metadata is accessible inside a Variable named _data_ in your twig template. 
 
 - You can access the _values_ by using `data DOT Property (attribute) Name`.
-	- In the Laddie the Dog example [shown above (originally)](https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC3/docs/workingtwigs.md#note-about-the-examples):
-		- `data.type` will contain "Photograph"
-		- `data.language` will contain [ "English" ]
-		- `data.language[0]` will contain "English" 
-			- 0 means first entry in an Array or Enumeration
-		- `data.subject_loc` will contain [{ "uri":"http://..","label": "Dog" }]
-		- `data.subject_loc.uri` will contain `"http://.."`
-		- `data.subject_loc.label` will contain "Dog"
+    - In the Laddie the Dog example [shown above (originally)](https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC3/docs/workingtwigs.md#note-about-the-examples):
+        - `data.type` will contain "Photograph"
+        - `data.language` will contain [ "English" ]
+        - `data.language[0]` will contain "English" 
+        	- 0 means first entry in an Array or Enumeration
+        - `data.subject_loc` will contain [{ "uri":"http://..","label": "Dog" }]
+        - `data.subject_loc.uri` will contain `"http://.."`
+        - `data.subject_loc.label` will contain "Dog"
 
 - Please note: you also have access to other info in your **context** `node`: such as`node.id` is the Drupal ID of your Current ADO; Also `is_front`, `language`, `is_admin`, `logged_in` and more!
 
 #### Twig Statements and Printing 
-- https://twig.symfony.com/doc/3.x/templates.html
-- Simple examples using Printing Statements
-	- Single JSON Value Example:
-		- Twig template: 
-		 ```twig
-		 Hello I am a {{ data.type }} and very happy to meet you
-		 ````
-		- Rendered output:
-			- `Hello I am a Photograph and very happy to meet you`
 
-	- Multiple JSON Values Example:
-		- Twig template:
-		```twig
-		Hello I was classified as "{{ data.subject_loc[0].label }}" and very happy to meet you
-		````
-		- Rendered Output:
-			- `Hello I was classified as "Dogs" and very happy to meet you`
+- <https://twig.symfony.com/doc/3.x/templates.html>
+- Simple examples using Printing Statements
+- Single JSON Value Example:
+    - Twig template: 
+
+        ```twig
+        Hello I am a {{ data.type }} and very happy to meet you
+        ```
+
+    - Rendered output:
+        - `Hello I am a Photograph and very happy to meet you`
+
+- Multiple JSON Values Example:
+    - Twig template:
+
+        ```twig
+        Hello I was classified as "{{ data.subject_loc[0].label }}" and very happy to meet you
+        ```
+
+    - Rendered Output:
+        - `Hello I was classified as "Dogs" and very happy to meet you`
 
 #### Twig Statements and Executing
-- https://twig.symfony.com/doc/3.x/tags/if.html
+
+- <https://twig.symfony.com/doc/3.x/tags/if.html>
 - Rendered Output based upon different Twig `conditionals`, `operators`, `tests`, `assignments`, and `filters`
 
 - Example 1:
-	- Twig template:
-		```twig
-		{% if data.subject_loc is defined %}
-		Hey I have a Subject Key
-		{% else %}
-		Ups no Subject Key
-		{% endif %}
-		```
-	- Rendered Output:
-		- `Hey I have a Subject Key`
+    - Twig template:
 
-	- Conditionals, Operator, and Test usage:
-		- **If/else** are conditionals
-		- **is** is an operator
-		- **defined** is a test	
+        ```twig
+        {% if data.subject_loc is defined %}
+        Hey I have a Subject Key
+        {% else %}
+        Ups no Subject Key
+        {% endif %}
+        ```
+
+    - Rendered Output:
+        - `Hey I have a Subject Key`
+    
+    - Conditionals, Operator, and Test usage:
+        - **If/else** are conditionals
+        - **is** is an operator
+        - **defined** is a test	
 
 - Example 2:
-	- Twig template:
-		```twig
-		{% for key, subject in data.subject_loc %}
-		* Subject {{ subject.label }} found at position {{ key }}
-		{% endfor %}
-		````
-	- Rendered Output:
-		- `* Subject Dogs found at position 0`
-	
-	- Loop usage:	
-		- **for** is a loop
-		- Inside the loop you have access to **key**, **subject**
+    - Twig template:
+
+        ```twig
+        {% for key, subject in data.subject_loc %}
+        * Subject {{ subject.label }} found at position {{ key }}
+        {% endfor %}
+        ```
+
+    - Rendered Output:
+        - `* Subject Dogs found at position 0`
+    
+    - Loop usage:	
+        - **for** is a loop
+        - Inside the loop you have access to **key**, **subject**
 
 - Example 3:
-	- Twig template:
-		```twig
-		{% for subject in data.subject_loc %}
-		{% set label_lowercase = subject.label|lower %}
-		My lower case Subject is {{ label_lowercase }}
-		{% endfor %}
-		````
-	- Rendered Output:
-		- `My lower case Subject is dogs`
+    - Twig template:
 
-	- Assignment, Filter, and Loop uage:	
-		- **set** is an assignment 
-		- | is a pipe, used after a value to apply a **filter**.
-		- **lower** is a filter
-		- Inside the loop you have have access to **subject** and **label_lowercase**
+        ```twig
+        {% for subject in data.subject_loc %}
+        {% set label_lowercase = subject.label|lower %}
+        My lower case Subject is {{ label_lowercase }}
+        {% endfor %}
+        ```
+
+    - Rendered Output:
+        - `My lower case Subject is dogs`
+    
+    - Assignment, Filter, and Loop uage:	
+        - **set** is an assignment 
+        - | is a pipe, used after a value to apply a **filter**.
+        - **lower** is a filter
+        - Inside the loop you have have access to **subject** and **label_lowercase**
 
 - Example 4:
-	- Twig template: 
-	```twig
-	{% for subject in data.subject_loc %}
-	  {% set label_lowercase = subject.label|lower %}
-	My lower case Subject is {{ label_lowercase }}
-	{% endfor %}
-	{# 
-	 This won’t display because it was assigned inside 
-	 The For Loop
-	#}
-	{{ label_lowercase }}
-	```
-	- Rendered Output:
-		- `My lower case Subject is dogs`
+    - Twig template: 
+
+        ```twig
+        {% for subject in data.subject_loc %}
+          {% set label_lowercase = subject.label|lower %}
+        My lower case Subject is {{ label_lowercase }}
+        {% endfor %}
+        {# 
+         This won’t display because it was assigned inside 
+         The For Loop
+        #}
+        {{ label_lowercase }}
+        ```
+
+    - Rendered Output:
+        - `My lower case Subject is dogs`
 
 ### Full Examples for Common Uses Cases:
 
 **Use case #1:** I have multiple LoD Subjects and want to display them in my page as a clickable ordered list but I’m a safe/careful person.
 
 **Twig Example for Use Case #1:**
+
 ```twig
 {% if data.subject_loc is iterable and data.subject_loc is not empty %}
 <h2>My Subjects</h2>
@@ -210,9 +229,11 @@ Understanding the basic structure of your JSON data.
 </ul>
 {% endif %}
 ```
+
 **Use case #2:** I have sometimes a publication date. I want to show it in beautiful human readable language.
 
 **Twig Example for Use Case #2:**
+
 ```twig
 {% if data.date_published is not empty %}
 <h2>Date {{ data.label }} was published:</h2>
@@ -221,11 +242,14 @@ Understanding the basic structure of your JSON data.
 </p>
 {% endif %}
 ```
+
 **Note about `date` in this Use Case #2 Twig Example:** 
+
 - **date()** is a function
 - It uses a [“Date Format Pattern”](https://www.php.net/manual/en/datetime.formats.date.php) as argument.
 
 **Use Case #3 (Full Curry):** {# May 4th 2021 @dpino: I have sometimes a user provided creation date. I want to show it in beautiful human readable language but fallback to automatic date if absent. I also want in the last case to show it was either “created” or “updated”. #}
+
 ```json
     "as:generator": {
         "type": "Update",
@@ -241,6 +265,7 @@ Understanding the basic structure of your JSON data.
 ```
 
 **Twig Example for Use Case #3:**
+
 ```twig
 {% if data.date_created is not empty %}
 <h2>Date {{ data.label }} was created:</h2>

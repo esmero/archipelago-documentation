@@ -9,7 +9,8 @@ When creating an Archipelago Digital Object (ADO), on Step 4 of the ingest, `Att
 Let's say we are creating an ADO with the media type `DigitalDocument` and this ADO contains a data set saved as a `csv` file, but when we get to Step 4 of the ingest workflow we find that `csv` is not an allowed file extension. Fortunately, Archipelago has no restrictions on what file extensions can be uploaded, but some use cases will require a little configuring to fit a specific need. This guide will walk users through the steps to modify the default Webform, `Descriptive Metadata`, to allow additional file extensions to be included during an ingest.
 
 **Prerequisites for following this guide:**
-- Running instance of Archipelago (on http://localhost:8001 if you followed the [deployment guide](https://github.com/esmero/archipelago-deployment#archipelago-docker-deployment) verbatim)
+
+- Running instance of Archipelago (on http://localhost:8001 if you followed the [deployment guide](quickstart.md#archipelago-docker-deployment) verbatim)
 - Admin credentials
 
 ## Let's begin!

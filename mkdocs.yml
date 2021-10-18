@@ -9,6 +9,7 @@ nav:
     - Strawberryfields Forever: strawberryfields.md
     - Software Services: devops.md
   - Code of Conduct: CODE_OF_CONDUCT.md
+  - Tags: tags.md
   - Instructions and Guides:
     - Archipelago Deployment Quickstart: quickstart.md
     - Archipelago 101:
@@ -43,10 +44,8 @@ nav:
             - Using the Islandora 7 Solr Importer: I7solrImporter.md
   - Archipelago Presentations and Documents: presentations_docs.md
   - Archipelagos in the Wild: inthewild.md
-  - Contributing:
-    - contributing.md
-    - Contribution Guide:
-      - giveortake.md
+  - Contribution Guide:
+    - giveortake.md
   - About This Documentation: about.md
   - Care & Coding + Fixing / Acknowledgments / License: acknowledgments.md
 theme:
@@ -56,7 +55,6 @@ theme:
   features:
     - navigation.instant
     - navigation.top
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.indexes
@@ -64,6 +62,7 @@ theme:
     - search.highlight
     - search.share
 plugins:
+  - tags
   - search:
       lang: en
   - mike:
@@ -73,6 +72,7 @@ plugins:
       canonical_version: null
 markdown_extensions:
   - admonition
+  - meta
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.emoji:

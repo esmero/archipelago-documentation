@@ -20,32 +20,33 @@ The main difference, other than their purpose (Output v/s Input) is that, on Vie
 So, resuming, this is what lives under the Concept of a "Display Mode":
 
 ## View Mode
+
 ![See all your View Modes](images/view-modes.jpg)
 
 - Each field attached to a Content Entity can have a Formatter applied and most of them have configuration options.
 - Formatters do one thing right: they take the raw, stored value and make it "visible" inside Drupal.
 - Which formatters are available will depend on the "type" of field the Content Entity has.
-  - E.g A Node title/Label will have a Title formatter with the option of just displaying a text or a text with a link to the entity.
-  - More Complex and fun Fields, like the ones of type `SBF` will provide a large list of possible `Formatters`, like IIIF driven viewers, Video formatters, Metadata Display (Twig template driven) ones, etc. This is because a SBF type of field has much more than just a text value, it contains a full graph of metadata and properties, inclusive links to Files and provenance metadata.
+    - E.g A Node title/Label will have a Title formatter with the option of just displaying a text or a text with a link to the entity.
+    - More Complex and fun Fields, like the ones of type `SBF` will provide a large list of possible `Formatters`, like IIIF driven viewers, Video formatters, Metadata Display (Twig template driven) ones, etc. This is because a SBF type of field has much more than just a text value, it contains a full graph of metadata and properties, inclusive links to Files and provenance metadata.
 
 ## Form Mode
+
 ![Form Modes](images/form-modes.jpg)
 
 - Each field attached to a Content Entity can have a Widget applied and most of them have configuration options.
 - Widgets do one thing right: they expose some type of Form/UI interaction that allows a user to input data into the Entity, under that specific field. And of course they make sure that what you input is validated and saved (if good) correctly.
 - Which Widgets are available will depend on the "type" of field the Content Entity has.
-  - Example: A `Node` Title will have a single Text Input with some options, like the size of the Textfield used to feed it.
-  - More Complex and fun fields, like the ones of type `SBF` (strawberryfield), will provide a larger list of possible Widgets, ranging from raw JSON input (which you could select if your data was already in the right format) to the reason we are reading this: `Webform driven Widgets`. These Widgets include:
-   - ones the _webform_strawberryfield_ Drupal module provides
-   - ones that use an existing Webform (which are also Entitites!) which either 1) you created or 2) we provided as a setting
+    - Example: A `Node` Title will have a single Text Input with some options, like the size of the Textfield used to feed it.
+    - More Complex and fun fields, like the ones of type `SBF` (strawberryfield), will provide a larger list of possible Widgets, ranging from raw JSON input (which you could select if your data was already in the right format) to the reason we are reading this: `Webform driven Widgets`. These Widgets include:
+        - ones the _webform_strawberryfield_ Drupal module provides
+        - ones that use an existing Webform (which are also Entitites!) which either 1) you created or 2) we provided as a setting
 
-If you chose a widget other than the raw JSON, the widget will take the raw JSON to build, massage and enrich the data so that it can be presented in a visual format by the SBF. This is because a SBF type of field has much more than just a text value. It contains a full graph of metadata and properties, inclusive links to Files and provenance metadata, which for example allows us to use an Upload field directly in the attached/configured webform.
+    If you chose a widget other than the raw JSON, the widget will take the raw JSON to build, massage and enrich the data so that it can be presented in a visual format by the SBF. This is because a SBF type of field has much more than just a text value. It contains a full graph of metadata and properties, inclusive links to Files and provenance metadata, which for example allows us to use an Upload field directly in the attached/configured webform.
 - Form modes also have an additional benefit. Each one can have fine grained permissions. That way you can have many different Form Modes, but allow only certain ones to be visible, or usable by users of a given Drupal Role.
 
 # I think i get this...but how can i use this knowledge now?
 
 Good question! So, to enable, configure, and customize these Display Modes you have to navigate to your `Content Type` Configuration page in your running Archipelago. This is found at `/admin/structure/types`. Note: the way things are named in Drupal can be confusing to even the most deeply committed Drupal user, so bear in mind some terms will change. Feel free to read and re-read.
-
 
 ![Display Mode Managment for Content Types](images/managing-display-modes.jpg)
 
@@ -55,6 +56,7 @@ You can see that for every existent Content Type, there is a drop down menu with
 - Manage Form Display: will lead you to configuration page where you can setup each View Mode and its settings for a given Content Type
 
 ## Manage Display
+
 ![Manage Display](images/manage-display.jpg)
 
 On the top you will see all your View Modes Listed, with the `Default` one selected and expanded.
@@ -82,6 +84,7 @@ You can also simply not care about the type and trust the UI. It will just show 
 You can play with this, experiment and change some settings to get more comfortable. We humbly propose you that you complete this info with the official Drupal 8 Documentation and also apply custom settings to your own, custom View Mode so you don't end changing base, expected functionality while you are still learning.
 
 ## Manage Form Display
+
 ![Manage Display](images/manage-form-display.jpg)
 
 On the top you will see all your Form Modes Listed, with the `Default` one selected and expanded.
@@ -112,6 +115,7 @@ But we know you did not do that (where is the fun there right?). So lets setup o
 ### General Settings
 
 ![Webform General Settings](images/webform-general-settings.jpg)
+
 Gist here is (look at the screenshot and copy the settings):
 
 - GENERAL Settings: Check "Disable saving of submissions" option. You won't need this form to generate a Native Webform Submission entry.
@@ -120,11 +124,15 @@ Gist here is (look at the screenshot and copy the settings):
 ### Confirmation Settings
 
 ![Webform Confirmation Settings](images/webform-confirmation-settings.jpg)
+
 Gist here is (again, look at the screenshot and copy the settings):
+
 - Select "Inline Confirmation". You don't want Webform to send your user to another page while they are still ingesting their ADOs.
 
 ### Handler
+
 ![Webform Handler Settings](images/webform-handler-settings.jpg)
+
 The glue, the piece of resistance. The handler is the one that knows how to talk to a SBF. In simple words, the handler (any handler) provides functionality that does something with a Webform Submission. The one that you want to select here, is the "Strawberryfield harvester" handler. Add it, name it whatever you like (or copy what you see in the screenshot) and make sure you select, if running using our deployment strategy, "S3 File System" as the option for "Permanent Destination for uploaded files". The wording is tricky there, its not really Permanent, since that is handled by Archipelago, but more to Temporary, while working in ingesting an Object, destination for the Webform. Its not really wrong neither. Its permanent for the Webform, but we have better plans for the files and metadata!
 
 Save your settings. And you are ready to roll. That webform can now be used as a Setting for any of the StrawberryField Widgets that use Webforms.
@@ -135,24 +143,26 @@ There are two ways of doing that:
 
 - You can copy how it is setup from the provided Webform's Elements, from the main Descriptive Metadata Webform and then add one "select" element to yours using the same "type" "key".Important in Archipelago is always the key value since that is what builds the JSON for your metadata. The Description can be any, but for UI consistency you could want to keep it the same across all your webforms.
 
-![Type Webform Element](images/type_webform_element.jpg)
+    ![Type Webform Element](images/type_webform_element.jpg)
 
 - Or, advanced, you can use the import/export capabilities (Webforms are just YAML files!) and export/copy your custom one as text, add the following element before or after some existing elements there
-```YAML
- type:
-      '#type': select
-      '#title': 'Media Type'
-      '#options': schema_org_creative_works
-      '#required': true
-      '#label_attributes':
-        class:
-          - custom-form-input-heading
-````
-And then reimport.
 
-Having a "type" value will make your life easier. You don't need it, but everything works smoother that way.
-
-Since you have a single Content Type named Digital Object, having a Webform field that has as key "type", which leads to a "type" JSON key, allows you to discern the Nature of your Digital Object, book or Podcast, Image or 3D and do smart, nice things with them.
+    ```YAML
+     type:
+          '#type': select
+          '#title': 'Media Type'
+          '#options': schema_org_creative_works
+          '#required': true
+          '#label_attributes':
+            class:
+              - custom-form-input-heading
+    ```
+    
+    And then reimport.
+    
+    Having a "type" value will make your life easier. You don't need it, but everything works smoother that way.
+    
+    Since you have a single Content Type named Digital Object, having a Webform field that has as key "type", which leads to a "type" JSON key, allows you to discern the Nature of your Digital Object, book or Podcast, Image or 3D and do smart, nice things with them.
 
 ___
 

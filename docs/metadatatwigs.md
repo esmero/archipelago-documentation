@@ -7,6 +7,7 @@ Archipelago uses a fast, cached templating system that is core to Drupal, called
 ### What is Twig?
 
 Twig is a template engine for PHP part of Symfony framework.
+
 - [Twig in Symfony](https://twig.symfony.com)
 - [Twig in Drupal](https://www.drupal.org/docs/theming-drupal/twig-in-drupal)
 - A template engine is a processor. It allows you to mix and process _templates_ with _data_ to generate an output _document_.
@@ -19,10 +20,12 @@ Twig is a template engine for PHP part of Symfony framework.
 This templating system is exposed to Archipelago users through the UI, and is stored in the repository as content. This setup empowers users to fully control how metadata is transformed and published without touching their individual sources or needing to manage hard-coded configurations. We named these readily accessible and powerful templates `Metadata Display entities`, but they serve more than just display needs.
 
 Twig drives **every** Page in a Drupal 8/9/10 environment.
+
 - Twig templates are normally files (.twig.html) that live in your Code.
 - Modules provide Templates, Themes provide Templates
 
 Twig drives **every** aspect of your ADO exposure to the world in Archipelago and even batch Ingest.
+
 - Strawberryfield Metadata (JSON, your Data) is passed through a **Metadata Display Entity** which holds:
     - A Twig template (so you do not need to edit Files)
     - A desired output serialization format (the Output Document)
@@ -32,6 +35,7 @@ Twig drives **every** aspect of your ADO exposure to the world in Archipelago an
 Templates or recipes can be shared, exported, ingested, updated, and adapted in many ways. This means you can make changes quickly without having to wait for the next major release of Archipelago or your favorite Metadata Schema Specs Committee’s agreement to implement the next or the last version. This module not only handles metadata but media assets as well. It will extract local or remote URIs and files from your metadata and render them as media viewers: books, 3D models, images, panoramas, A/V, all with IIIF in its soul.
 
 **Metadata Display Entities** are used for:
+
 - Display:
     - ADO landing pages (via Drupal Field Formatter)
     - IIIF or JSON driven viewers (via Drupal Field Formatter and using Exposed Metadata Endpoints)
@@ -47,6 +51,7 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
 ### Twig Templates Shipped with Archipelago
 
 **Archipelago Ships with:**
+
 - IIIF Manifest V3 for Images (JSON-LD) Metadata Display
 - IIIF Manifest V2 for Images and Documents (JSON-LD) Metadata Display
 - IIIF Manifest V3 for Collections (JSON-LD) Metadata Display
@@ -63,6 +68,7 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
 - Carousel (in Bootstrap) for Images (HTML) Metadata Display 
 
 You can find these templates here:
+
 - On Github:
     - [Local Deployment](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC3/d8content/metadatadisplays)
     - [Live/Production Deployment](https://github.com/esmero/archipelago-deployment-live/tree/1.0.0-RC3/drupal/d8content/metadatadisplays)
