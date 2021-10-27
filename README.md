@@ -2,11 +2,13 @@
 
 This repository holds the source for the [Official Archipelago Documentation](https://docs.archipelago.nyc).
 
-We recommend you use the Official Webpage, but you can also find here the [same documentation as Github Markdown](docs/index.md).
+We recommend you use the Official Documentation site, but you can also find here the [same documentation on Github as Markdown pages](docs/).
+
+The Legacy homepage of the Github Documentation version can be found [here](docs/legacyreadme.md).
 
 # What is Archipelago
 
-Archipelago Commons, or simply Archipelago, is an evolving Open Source Digital Objects Repository / DAM Server Architecture based on the popular CMS [`Drupal8/9`](https://www.drupal.org) and released under [`GPL V.3 License`](https://www.gnu.org/licenses/gpl-3.0.txt).
+Archipelago Commons, or simply Archipelago, is an evolving Open Source Digital Objects Repository / DAM Server Architecture based on the popular CMS [`Drupal 8/9`](https://www.drupal.org) and released under [`GPL V.3 License`](https://www.gnu.org/licenses/gpl-3.0.txt).
 
 Archipelago is a mix of deeply integrated custom-coded Drupal modules (made with care by us) and a curated and well-configured Drupal instance, running under a discrete and well-planned set of service containers.
 
