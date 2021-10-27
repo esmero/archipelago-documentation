@@ -11,11 +11,12 @@ To get here we had to do a full stop first. Look around. Questioning everything 
 Because this topic is near and dear to our hearts, we are taking extra care with writing this important document. Please stay tuned for the full, verbose, heartfelt, and detailed long story of Archipelago's origins, development, future hopes and dreams.
 
 In the meantime, please consider reviewing this presentation created by Archipelago's Lead Architect [Diego Pino](https://github.com/DiegoPino) which captures the essence of Archipelago's philosophy and guiding principles:
+
 - [Archipelago : an empathic Digital Repository Architecture](https://tinyurl.com/archipelago-brief-presentation)
 
 
----
+___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
-Return to the [Archipelago Documentation main page](../README.md).
+Return to the [Archipelago Documentation main page](index.md).

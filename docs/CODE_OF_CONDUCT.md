@@ -6,14 +6,12 @@ This Code of Conduct governs how we behave in public or in private. We expect it
 
 We ask that all community members adhere to the following expectations:
 
-
-
-*   METRO and Archipelago have a zero-tolerance policy for verbal, physical, and sexual harassment. Anyone who is asked to stop a hostile or harassing behavior is expected to do so immediately. [Here](https://www1.nyc.gov/assets/cchr/downloads/pdf/materials/SexHarass_Factsheet-English.pdf), for reference, are New York State’s requirements.
+* METRO and Archipelago have a zero-tolerance policy for verbal, physical, and sexual harassment. Anyone who is asked to stop a hostile or harassing behavior is expected to do so immediately. [Here](https://www1.nyc.gov/assets/cchr/downloads/pdf/materials/SexHarass_Factsheet-English.pdf), for reference, are New York State’s requirements.
 
     Harassment includes: Offensive verbal comments related to sex, gender, ethnicity, nationality, socioeconomic status, sexual orientation, disability, physical appearance, body size, age, race, religion; sexual or discriminatory images in public spaces; deliberate intimidation; stalking; harassing photography or recording; sustained disruption of talks or other events; inappropriate physical contact; and unwelcome sexual attention.
 
-*   Participation in discussions and activities should be respectful at all times. Please refrain from making inappropriate comments. Create opportunities for all people to speak, exercising tolerance of the perspectives and opinions of others. When we disagree, we do this in a polite and professional manner. We may not always agree. When frustrated, we back away and look for good intentions, not reasons to be more frustrated. When we see a flaw in a contribution, we offer guidance on how to fix it.
-*   METRO and Archipelago honor the ability to be anonymous. If a person is going by their handle, a pseudonym, or doesn’t wish to use their name, please respect their wishes and privacy. This also includes ‘outing’ someone’s workplace, their age, their gender, their real name, etc, without their consent. We take people’s privacy and their comfort very seriously.
+* Participation in discussions and activities should be respectful at all times. Please refrain from making inappropriate comments. Create opportunities for all people to speak, exercising tolerance of the perspectives and opinions of others. When we disagree, we do this in a polite and professional manner. We may not always agree. When frustrated, we back away and look for good intentions, not reasons to be more frustrated. When we see a flaw in a contribution, we offer guidance on how to fix it.
+* METRO and Archipelago honor the ability to be anonymous. If a person is going by their handle, a pseudonym, or doesn’t wish to use their name, please respect their wishes and privacy. This also includes ‘outing’ someone’s workplace, their age, their gender, their real name, etc, without their consent. We take people’s privacy and their comfort very seriously.
 
 
 ## Protocol for Conflict Resolution
@@ -28,7 +26,7 @@ If you are being harassed, notice that someone else is being harassed, or have a
 
 ### Escalation
 
-If the offender insists that they did not offend, if offender is actively harassing you, or if direct engagement is not a good option for you at this time, then you will need a third party to step in. To report any violation of the following code of conduct or if you have any questions or suggestions about this code of conduct, please contact archipelago-community@metro.org or [fill out this form anonymously](http://archipelago.nyc/code-of-conduct). This will be sent to leadership at METRO and the advisory board member currently acting as the Code of Conduct liaison. Our enforcement guidelines work in accordance with those published at the [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct). 
+If the offender insists that they did not offend, if offender is actively harassing you, or if direct engagement is not a good option for you at this time, then you will need a third party to step in. To report any violation of the following code of conduct or if you have any questions or suggestions about this code of conduct, please contact <archipelago-community@metro.org> or [fill out this form anonymously](http://archipelago.nyc/code-of-conduct). This will be sent to leadership at METRO and the advisory board member currently acting as the Code of Conduct liaison. Our enforcement guidelines work in accordance with those published at the [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct). 
 
 Upon review, if METRO leadership and the Code of Conduct Liaison determine that the incident constitutes harassment they may take any action they deem appropriate, including warning the offender, expulsion from the meeting or other community channels, or contacting a higher authority such as a representative from the offender's institution.
 

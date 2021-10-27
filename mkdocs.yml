@@ -1,0 +1,94 @@
+site_name: Archipelago Documentation
+site_url: https://docs.archipelago.nyc
+site_description: Project documentation for Archipelago.
+site_author: The Digital Services Team at Metropolitan New York Library Council
+nav:
+  - Home: index.md
+  - About Archipelago:
+    - Archipelago's Philosophy & Guiding Principles: ourtake.md
+    - Strawberryfields Forever: strawberryfields.md
+    - Software Services: devops.md
+  - Code of Conduct: CODE_OF_CONDUCT.md
+  - Tags: tags.md
+  - Instructions and Guides:
+    - Archipelago Deployment Quickstart: quickstart.md
+    - Archipelago 101:
+      - Site Administration & Configuration:
+        - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
+        - How to Set Up SSL for Docker/Archipelago: sslsetup.md
+        - Debugging PHP in Archipelago: xdebug.md
+        - Creating Display Modes: createdisplaymodes.md
+        - Strawberryfield Formatters: strawberryfield-formatters.md
+        - Annotations: annotations.md
+        - General Q&A:
+          - generalqa_index.md
+          - Twig Modules Configuration: generalqa_twig_modules_configuration.md
+          - SMTP Configuration: generalqa_smtp_configuration.md
+          - Min.io Logging: generalqa_minio_logging.md
+      - Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows:
+        - Ingesting Your First Object: firstobject.md
+        - Webforms in Archipelago:
+          - webforms.md
+          - How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO): webformsasinput.md
+          - Customizing Webforms (Modifying allowable file extensions): modifyingfileextensionsinwebform.md
+          - Archipelago Custom Webform Elements: customwebformelements.md
+        - Twig Templates and Archipelago:
+          - metadatatwigs.md
+          - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
+        - Archipelago Multi-Importer (AMI):
+          - ami_index.md
+          - AMI Instructions and Guides:
+            - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
+            - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
+            - Configuration for Google Sheets API: googleapi.md
+            - Using the Islandora 7 Solr Importer: I7solrImporter.md
+  - Archipelago Presentations and Documents: presentations_docs.md
+  - Archipelagos in the Wild: inthewild.md
+  - Contribution Guide:
+    - giveortake.md
+  - About This Documentation: about.md
+  - Care & Coding + Fixing / Acknowledgments / License: acknowledgments.md
+theme:
+  name: material
+  favicon: images/strawberries_color.png
+  logo: images/strawberries_color.png
+  features:
+    - navigation.instant
+    - navigation.top
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+plugins:
+  - tags
+  - search:
+      lang: en
+  - mike:
+      version_selector: true
+      css_dir: css
+      javascript_dir: js
+      canonical_version: null
+markdown_extensions:
+  - admonition
+  - meta
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/esmero
+      name: Archipelago Commons + esmero
+    - icon: material/forum-outline
+      link: https://groups.google.com/g/archipelago-commons
+      name: Archipelago Commons Google Group
+    - icon: fontawesome/brands/slack
+      link: https://archipelagocommons.slack.com
+      name: Archipelago Commons Slack Channe
+  version:
+    provider: mike
+    default: default
