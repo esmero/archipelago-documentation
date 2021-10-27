@@ -1,3 +1,10 @@
+---
+title: Archipelago Multi-Importer (AMI)
+tags:
+  - AMI
+  - Archipelago Multi Importer
+---
+
 # Using the Islandora 7 Solr Importer
 
 From either the main Content page or the AMI Sets List page, select the 'Start an AMI set' button to begin.
