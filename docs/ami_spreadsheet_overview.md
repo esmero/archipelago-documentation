@@ -1,3 +1,10 @@
+---
+title: Spreadsheet Formatting Overview
+tags:
+  - AMI
+  - Archipelago Multi Importer
+---
+
 ## Spreadsheet Formatting Overview
 
 There are multiple ways a spreadsheet/CSV file can be structured to work with AMI, depending on the data transformation and mapping you will be using.
