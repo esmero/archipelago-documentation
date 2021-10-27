@@ -1,3 +1,10 @@
+---
+title: Archipelago Multi-Importer (AMI)
+tags:
+  - AMI
+  - Archipelago Multi Importer
+---
+
 # Archipelago Multi-Importer (AMI)
 
 [Archipelago Multi-Importer (AMI)](https://github.com/esmero/ami) is a module for batch/bulk/mass ingests of Archipelago digital objects (ADOs) and collections. AMI also enables you to perform batch administrative actions, such as updating, patching/revising, or deleting digital objects and collections.
