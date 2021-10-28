@@ -12,6 +12,11 @@ nav:
   - Tags: tags.md
   - Instructions and Guides:
     - Archipelago Deployment Quickstart: quickstart.md
+    - Archipelago-Deployment-Live:
+      - Deployment: archipelago-deployment-live.md
+      - Github Workflow: gitworkflow.md
+      - Moving from archipelago-deployment to archipelago-deployment-live: moveToLive.md
+      - Upgrading Drupal 8 to Drupal 9: upgradeFromD8ToD9.md
     - Archipelago 101:
       - Site Administration & Configuration:
         - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
