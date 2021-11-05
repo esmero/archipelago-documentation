@@ -1,18 +1,19 @@
 ---
-title: "Archipelago-deployment: upgrading Drupal 8 to Drupal 9"
+title: "Archipelago-deployment-live: upgrading Drupal 8 to Drupal 9"
 tags:
-  - Archipelago-deployment
+  - Archipelago-deployment-live
   - Drupal 8
   - Drupal 9
 ---
 
-# Archipelago-deployment: upgrading Drupal 8 to Drupal 9
+# Archipelago-deployment-live: upgrading Drupal 8 to Drupal 9
 
 ## What is this documentation for?
 
-If you already have a well set up and well loved Archipelago (RC2 or your own custom version) running Drupal 8 (D8), this documentation will allow you to update to Drupal 9 (D9) without major issues.
+If you already have a well setup and well loved Archipelago (RC2 or your own custom version) running Drupal 8 (D8), this documentation will allow you to update to Drupal 9 (D9) without major issues.
 
-D8 will no longer be supported by the end of November 2021. D9 has been around for a little while, and even if every module is not supported yet, what you need and want for **Archipelago** has long been ready for D9.
+D8 will be no longer supported by the end of November 2021. D9 has been around for a little while and even if not every module is supported yet, what you need and want for **Archipelago** has been since a long time
+D9 ready. 
 
 ## Requirements
 
@@ -23,13 +24,14 @@ D8 will no longer be supported by the end of November 2021. D9 has been around f
 
 ## Backing up
 
-Backups are always going to be your best friends. Archipelago's code, database, and settings are mostly self-contained in your current `archipelago-deployment` repo folder, and backing up is simple because of that.
+Backups are always going to be your best friends. Archipelago's code, Database and settings are mostly self contained in your current `archipelago-deployment-live` repo folder and backing up is because of that simple
 
 ### Step 1:
 
-Shutdown your `docker-compose` ensemble. Move to your `archipelago-deployment` folder and run this:
+Shutdown your `docker-compose` ensemble. Move to your `archipelago-deployment-live` folder and run this:
 
 ```Shell
+cd deploy/ec2-docker
 docker-compose down
 ```
 
@@ -47,18 +49,20 @@ Now let's tar.gz the whole ensemble with data and configs. As an example we will
 As a good practice we append the **current date **(YEAR-DAY-MONTH) to the filename. Here we assume today is September 1st of 2021.
 
 ```Shell
-sudo tar -czvpf $HOME/archipelago-deployment-backup-20210109.tar.gz ../archipelago-deployment
+
+sudo tar -czvpf $HOME/archipelago-deployment-live-backup-20210109.tar.gz ../../../archipelago-deployment-live
+
 ```
 
 The process may take a few minutes. Now let's verify all is there and the `tar.gz` is not corrupt.
 
 ```Shell
-tar -tvvf $HOME/archipelago-deployment-backup-20210109.tar.gz 
+tar -tvvf $HOME/archipelago-deployment-live-backup-20210109.tar.gz 
 ```
 
 You will see a listing of files. If corrupt (do you have enough space? did your ssh connection drop?) you will see:
 
-```
+```Shell
 tar: Unrecognized archive format
 ```
 
@@ -74,12 +78,13 @@ docker-compose up -d
 
 ### Step 1:
 
-Navigate to your current `archipelago-deployment` repo folder and open up the file `permissions` for some of your most protected Drupal files.
+Navigate to your current `archipelago-deployment-live` repo folder and open up the file `permissions` for some of your most protected Drupal files.
 
 ```Shell
-sudo chmod 777 web/sites/default
-sudo chmod 666 web/sites/default/*settings.php
-sudo chmod 666 web/sites/default/*services.yml
+cd ../../
+sudo chmod 777 drupal/web/sites/default
+sudo chmod 666 drupal/web/sites/default/*settings.php
+sudo chmod 666 drupal/web/sites/default/*services.yml
 ```
 
 ### Step 2:
@@ -103,7 +108,7 @@ docker exec -ti esmero-php bash -c "composer require symfony/yaml:^4  --update-w
 docker exec -ti esmero-php bash -c "composer require drupal/webform:^6  --update-with-dependencies --no-update"
 docker exec -ti esmero-php bash -c "composer require drupal/google_api_client:3.2 --update-with-dependencies --no-update"
 docker exec -ti esmero-php bash -c "composer require drupal/bootstrap_barrio:5.1 --update-with-dependencies --no-update"
-docker exec -ti esmero-php bash -c "composer require 'drupal/role_theme_switcher:^1.1'' --update-with-dependencies --no-update"
+docker exec -ti esmero-php bash -c "composer require 'drupal/role_based_theme_switcher:^9' --update-with-dependencies --no-update"
 ```
 
 *Note:* We are fixing `drupal/bootstrap_barrio` to an exact version (5.1) because 5.5 and later are now Bootstrap 5 and `archipelago_subtheme` is still Bootstrap 4. 
@@ -115,6 +120,7 @@ docker exec -ti esmero-php bash -c "composer remove drupal/config_installer  --u
 docker exec -ti esmero-php bash -c "composer remove drupal/jsonapi_earlyrendering_workaround --no-update"
 docker exec -ti esmero-php bash -c "composer remove drupal/markdown --no-update"
 docker exec -ti esmero-php bash -c "composer remove drupal/module_missing_message_fixer --no-update "
+docker exec -ti esmero-php bash -c "composer remove drupal/role_theme_switcher --no-update"
 docker exec -ti esmero-php bash -c "composer remove drupal/key_value --no-update"
 docker exec -ti esmero-php bash -c "composer remove drupal/olivero --no-update"
 ```
@@ -125,7 +131,7 @@ And we uninstall those from Drupal too (IMPORTANT)
 docker exec -ti esmero-php bash -c " drush pm-uninstall module_missing_message_fixer"
 docker exec -ti esmero-php bash -c " drush pm-uninstall jsonapi_earlyrendering_workaround"
 docker exec -ti esmero-php bash -c " drush pm-uninstall markdown"
-docker exec -ti esmero-php bash -c " drush pm-uninstall webprofiler"
+docker exec -ti esmero-php bash -c " drush pm-uninstall role_theme_switcher"
 docker exec -ti esmero-php bash -c " drush pm-uninstall key_value"
 ```
 
@@ -174,8 +180,9 @@ docker exec -ti esmero-php bash -c " drush pm-uninstall the_module_name"
 
 We will now ask Drupal to update its internal Configs and databases and enable a few last minute modules. In case for some odd dependecy issue you end up running an older version of D9, the following commands will bring you up to date.
 
- ```Shell  
+```Shell  
 docker exec -ti esmero-php bash -c "drush updatedb"
+docker exec -ti esmero-php bash -c "drush en role_based_theme_switcher"
 docker exec -ti esmero-php bash -c "composer require drupal/core:^9.2 drupal/core-dev:^9.2 -W"
 docker exec -ti esmero-php bash -c "composer require drupal/jquery_ui drupal/jquery_ui_datepicker"
 docker exec -ti esmero-php bash -c "drush en jquery_ui jquery_ui_datepicker"
@@ -193,9 +200,9 @@ docker exec -ti esmero-php bash -c "drush updatedb"
 Good! If you made it this far you are almost ready (are we ever ready?). Now to restore permissions for your important protected Drupal files, and  then you should be ready to (hopefully) stay in the Drupal 9 realm for a few years!
 
 ```Shell
-sudo chmod 755 web/sites/default
-sudo chmod 644 web/sites/default/*settings.php
-sudo chmod 644 web/sites/default/*services.yml
+sudo chmod 755 drupal/web/sites/default
+sudo chmod 644 drupal/web/sites/default/*settings.php
+sudo chmod 644 drupal/web/sites/default/*services.yml
 ```
 
 Please log into your Archipelago and test/check all is working. Your Configurations will have changed (the .yml files) so it's a good moment to get yourself a package of those and after checking them you can export them.
@@ -206,13 +213,14 @@ Type to get all the options.
 docker exec -ti esmero-php bash -c "drush cex --help"
 ```
 
-If you run this comman directly it will overwrite your `config/sync` folder, so it may be a good idea to double check OR if you are keeping `configs` in an alternate folder to add the `--destination[=DESTINATION]` flag to the command at the end.
+If you run this comman directly it will overwrite your `drupal/config/sync` folder, so it may be a good idea to double check OR if you are keeping `configs` in an alternate folder to add the `--destination[=DESTINATION]` flag to the command at the end.
 
 ```Shell
 docker exec -ti esmero-php bash -c "drush cex"
 ```
+
 ___
 
-Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback, or open an ISSUE in this [Archipelago Deployment Repository](https://github.com/esmero/archipelago-deployment/).
+Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback, or open an ISSUE in this [Archipelago Deployment Live Repository](https://github.com/esmero/archipelago-deployment-live/).
 
-Return to [Archipelago Deployment](index.md).
+Return to [Archipelago Live Deployment](archipelago-deployment-live.md).
