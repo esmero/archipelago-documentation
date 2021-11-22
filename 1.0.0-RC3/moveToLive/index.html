@@ -1,0 +1,2386 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Project documentation for Archipelago.">
+      
+      
+      
+        <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
+      
+      
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/moveToLive/">
+      
+      <link rel="icon" href="../images/strawberries_color.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Moving from archipelago-deployment to archipelago-deployment-live - Archipelago Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#moving-from-archipelago-deployment-to-archipelago-deployment-live" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Archipelago Documentation" class="md-header__button md-logo" aria-label="Archipelago Documentation" data-md-component="logo">
+      
+  <img src="../images/strawberries_color.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Archipelago Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Moving from archipelago-deployment to archipelago-deployment-live
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Archipelago Documentation" class="md-nav__button md-logo" aria-label="Archipelago Documentation" data-md-component="logo">
+      
+  <img src="../images/strawberries_color.png" alt="logo">
+
+    </a>
+    Archipelago Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          About Archipelago
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About Archipelago" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          About Archipelago
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourtake/" class="md-nav__link">
+        Archipelago's Philosophy & Guiding Principles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strawberryfields/" class="md-nav__link">
+        Strawberryfields Forever
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops/" class="md-nav__link">
+        Software Services
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CODE_OF_CONDUCT/" class="md-nav__link">
+        Code of Conduct
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags.html" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Instructions and Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Instructions and Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Instructions and Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" data-md-state="indeterminate" type="checkbox" id="__nav_5_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Archipelago-Deployment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Archipelago-Deployment" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Archipelago-Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        Quickstart
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgradeFromD8ToD9/" class="md-nav__link">
+        Upgrading Drupal 8 to Drupal 9
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Archipelago-Deployment-Live
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Archipelago-Deployment-Live" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Archipelago-Deployment-Live
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live/" class="md-nav__link">
+        Deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitworkflow/" class="md-nav__link">
+        Github Workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Moving from archipelago-deployment to archipelago-deployment-live
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Moving from archipelago-deployment to archipelago-deployment-live
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-this-documentation-for" class="md-nav__link">
+    What is this documentation for?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-this-documentation-not-for" class="md-nav__link">
+    What is this documentation not for?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differences-between-both-deployments-strategies" class="md-nav__link">
+    Differences between both deployments strategies.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commonalities-between-both-deployments-strategies" class="md-nav__link">
+    Commonalities between both deployments strategies.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-new-repo-in-place" class="md-nav__link">
+    Getting the new repo in place
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backing-up" class="md-nav__link">
+    Backing up
+  </a>
+  
+    <nav class="md-nav" aria-label="Backing up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    Step 1:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    Step 2:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    Step 3:
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-2_1" class="md-nav__link">
+    Step 2:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3_1" class="md-nav__link">
+    Step 3:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-web" class="md-nav__link">
+    The Web
+  </a>
+  
+    <nav class="md-nav" aria-label="The Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copying-the-web-into-the-new-structure" class="md-nav__link">
+    Copying the Web into the new Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Copying the Web into the new Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_1" class="md-nav__link">
+    Step 1:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl-enviromentals-configurations-settings-and-docker" class="md-nav__link">
+    SSL, Enviromentals, Configurations, Settings and Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shutdown-the-old-one-start-the-new-one" class="md-nav__link">
+    Shutdown the old one, start the new one
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgradeLiveFromD8ToD9/" class="md-nav__link">
+        Upgrading Drupal 8 to Drupal 9
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" data-md-state="indeterminate" type="checkbox" id="__nav_5_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          Archipelago 101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Archipelago 101" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Archipelago 101
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1">
+          Site Administration & Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Site Administration & Configuration" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Site Administration & Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archifilepersistencestrategy/" class="md-nav__link">
+        Archipelago's File Persistence Strategy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sslsetup/" class="md-nav__link">
+        How to Set Up SSL for Docker/Archipelago
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdebug/" class="md-nav__link">
+        Debugging PHP in Archipelago
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../createdisplaymodes/" class="md-nav__link">
+        Creating Display Modes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strawberryfield-formatters/" class="md-nav__link">
+        Strawberryfield Formatters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotations/" class="md-nav__link">
+        Annotations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_1_7" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_1_7" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1_7">
+          General Q&A
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General Q&A" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_3_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          General Q&A
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_index/" class="md-nav__link">
+        General Q&A
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_twig_modules_configuration/" class="md-nav__link">
+        Twig Modules Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_smtp_configuration/" class="md-nav__link">
+        SMTP Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_minio_logging/" class="md-nav__link">
+        Min.io Logging
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2">
+          Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firstobject/" class="md-nav__link">
+        Ingesting Your First Object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2_2">
+          Webforms in Archipelago
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Webforms in Archipelago" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Webforms in Archipelago
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webforms/" class="md-nav__link">
+        Webforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webformsasinput/" class="md-nav__link">
+        How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modifyingfileextensionsinwebform/" class="md-nav__link">
+        Customizing Webforms (Modifying allowable file extensions)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customwebformelements/" class="md-nav__link">
+        Archipelago Custom Webform Elements
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_2_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2_3">
+          Twig Templates and Archipelago
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Twig Templates and Archipelago" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Twig Templates and Archipelago
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadatatwigs/" class="md-nav__link">
+        Twig Templates and Archipelago
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workingtwigs/" class="md-nav__link">
+        Working With Twig in Archipelago (getting started with custom Twig templates)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2_4" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_2_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2_4">
+          Archipelago Multi-Importer (AMI)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Archipelago Multi-Importer (AMI)" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Archipelago Multi-Importer (AMI)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ami_index/" class="md-nav__link">
+        Archipelago Multi-Importer (AMI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_2_4_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2_4_2">
+          AMI Instructions and Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AMI Instructions and Guides" data-md-level="5">
+        <label class="md-nav__title" for="__nav_5_3_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          AMI Instructions and Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ami_spreadsheet_overview/" class="md-nav__link">
+        Spreadsheet Formatting Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AMIviaSpreadsheets/" class="md-nav__link">
+        Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../googleapi/" class="md-nav__link">
+        Configuration for Google Sheets API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../I7solrImporter/" class="md-nav__link">
+        Using the Islandora 7 Solr Importer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentations_docs/" class="md-nav__link">
+        Archipelago Presentations and Documents
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inthewild/" class="md-nav__link">
+        Archipelagos in the Wild
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Contribution Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contribution Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Contribution Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../giveortake/" class="md-nav__link">
+        Archipelago Contribution Guide
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        About This Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acknowledgments/" class="md-nav__link">
+        Care & Coding + Fixing / Acknowledgments / License
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-this-documentation-for" class="md-nav__link">
+    What is this documentation for?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-this-documentation-not-for" class="md-nav__link">
+    What is this documentation not for?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differences-between-both-deployments-strategies" class="md-nav__link">
+    Differences between both deployments strategies.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commonalities-between-both-deployments-strategies" class="md-nav__link">
+    Commonalities between both deployments strategies.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-new-repo-in-place" class="md-nav__link">
+    Getting the new repo in place
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backing-up" class="md-nav__link">
+    Backing up
+  </a>
+  
+    <nav class="md-nav" aria-label="Backing up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    Step 1:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    Step 2:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    Step 3:
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-2_1" class="md-nav__link">
+    Step 2:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3_1" class="md-nav__link">
+    Step 3:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-web" class="md-nav__link">
+    The Web
+  </a>
+  
+    <nav class="md-nav" aria-label="The Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copying-the-web-into-the-new-structure" class="md-nav__link">
+    Copying the Web into the new Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Copying the Web into the new Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_1" class="md-nav__link">
+    Step 1:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl-enviromentals-configurations-settings-and-docker" class="md-nav__link">
+    SSL, Enviromentals, Configurations, Settings and Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shutdown-the-old-one-start-the-new-one" class="md-nav__link">
+    Shutdown the old one, start the new one
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="moving-from-archipelago-deployment-to-archipelago-deployment-live">Moving from <code>archipelago-deployment</code> to <code>archipelago-deployment-live</code></h1>
+<h2 id="what-is-this-documentation-for">What is this documentation for?</h2>
+<p>If you have been using/running/populating with Archipelago Digital Objects an instance that was setup using our simpler to deploy but harder to customize <a href="https://github.com/esmero/archipelago-deployment">archipelago-deployment</a> strategy 
+and can't wait to move to this one, meant for a larger (and somehow easier to maintain and upgrade on the long run) but (wait!) you do not want to ingest again, setup again, configure users, etc. You already did that! 
+If all that applies this is your documentation.</p>
+<h2 id="what-is-this-documentation-not-for">What is this documentation not for?</h2>
+<p>To install an archipelago-deployment-live from scratch or to keep (forever) syncing between the two deployment options in a quantum phase shifting eternum like a Timecrystal.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>An instance of archipelago (working, tested) installed using <code>archipelago-deployment</code> as a basis</li>
+<li>Basic knowledge and instincts on how to run Terminal Commands, copy files, run <code>composer</code>, <code>drush</code>, linux Permissions and <code>git</code> of course.</li>
+<li>Patience. You can't skip steps here. Also Patience again since you may have stretched (good) your current instance to do way more we thought it could. </li>
+<li>Time to read main Documentation of this Repo to have a basic knowledge of how this is deployed. Recommended even if you are not going to deploy one from scratch here.</li>
+<li>For Shell Commands documented here please copy line by line. Not the whole block.</li>
+</ul>
+<h2 id="differences-between-both-deployments-strategies">Differences between both deployments strategies.</h2>
+<p>In a nutshell: <code>archipelago-deployment-live</code> uses a different folder structure moving configuration storage, data storage outside of your webroot and allows a much finer control of your settings (safer) and docker containers.
+In a nutshell inside the first nutshell: <code>archipelago-deployment-live</code> also ignores more files so keeping customized versions, your own packages, your own settings around and version controlled is much easier.
+lastly: <code>archipelago-deployment-live</code> makes more use of Cloud Services, e.g so if you have been running <code>min.io</code> as local mounted storage you may now consider to move storage (files) to a cloud service like AWS S3</p>
+<h2 id="commonalities-between-both-deployments-strategies">Commonalities between both deployments strategies.</h2>
+<p>In a nutshell: Since both run same code and use the same Docker Containers the data is actually the same, all is just persisted in different places.</p>
+<h2 id="getting-the-new-repo-in-place">Getting the new repo in place</h2>
+<p>First you need to clone this repository and (hopefully) store in the same parent folder to your current <code>archipelago-deployment</code> one. For the purpose
+of this tutorial we will assume you have <code>archipelago-deployment</code> cloned in this location: <code>$HOME/archipelago-deployment</code></p>
+<p>Locate your archipelago-deployment folder in your terminal. Do an <code>ls</code> to make sure you can see the folder (not the content) and run</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/esmero/archipelago-deployment-live
+<span class="nb">cd</span> archipelago-deployment-live
+git checkout <span class="m">1</span>.0.0-RC3
+<span class="nb">cd</span> ..
+<span class="nb">cd</span> archipelago-deployment
+</code></pre></div>
+<p>Now you have side by side <code>$HOME/archipelago_deployment</code> and <code>$HOME/archipelago-deployment-live</code></p>
+<p>This will give you the base structure. </p>
+<p>Before touching anything let's start by generating a backup of your current deployment (safety first)</p>
+<h2 id="backing-up">Backing up</h2>
+<h3 id="step-1">Step 1:</h3>
+<p>Shutdown your <code>docker-compose</code> ensemble. Inside your original <code>archipelago-deployment</code> folder run this:</p>
+<div class="highlight"><pre><span></span><code>docker-compose down
+</code></pre></div>
+<h3 id="step-2">Step 2:</h3>
+<p>Verify all containers are actually down.</p>
+<div class="highlight"><pre><span></span><code>docker ps
+</code></pre></div>
+<p>The following command should return an empty listing. If anything is still running, wait a little longer and run the following comman again.</p>
+<h3 id="step-3">Step 3:</h3>
+<p>Now let's tar.gz the whole ensemble with data and configs. As an example we will save this into your <code>$HOME</code> folder. 
+As a good practice we append the <strong>current date</strong> (YEAR-DAY-MONTH) to the filename. Here we assume today is September 1st of 2021.</p>
+<div class="highlight"><pre><span></span><code>sudo tar -czvpf <span class="nv">$HOME</span>/archipelago-deployment-backup-20210109.tar.gz ../archipelago-deployment
+</code></pre></div>
+<p>The process may take a few minutes. Now let's verify all is there and the <code>tar.gz</code> is not corrupt.</p>
+<div class="highlight"><pre><span></span><code>tar -tvvf <span class="nv">$HOME</span>/archipelago-deployment-backup-20210109.tar.gz 
+</code></pre></div>
+<p>You will see a listing of files. If corrupt (do you have enough space? did your ssh connection drop?) you will see:</p>
+<div class="highlight"><pre><span></span><code>tar: Unrecognized archive format
+</code></pre></div>
+<p>Done! If you are running a public instance we can allow ourselves to start docker again to avoid down times.</p>
+<div class="highlight"><pre><span></span><code>docker-compose up -d
+<span class="sb">````</span>
+
+<span class="c1">## The directory structures</span>
+
+Now that you backed all up we can spend some minutes looking at both directory structures.
+
+If you observe both deployment strategies side by side you will inmediatelly notice the most important similarities and also differences.
+
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;archipelago-deployment Live&lt;/th&gt;
+        &lt;th&gt;archipelago-deployment&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td <span class="nv">valign</span><span class="o">=</span><span class="s2">&quot;top&quot;</span>&gt;&lt;pre&gt;.
+├── config_storage
+│   ├── iiifconfig
+│   ├── nginxconfig
+│   ├── nginxconfig_selfcert
+│   ├── php-fpm
+│   └── solrconfig
+├── data_storage
+│   ├── db
+│   ├── iiifcache
+│   ├── iiiftmp
+│   ├── letsencrypt
+│   ├── minio-data
+│   ├── ngnixcache
+│   ├── selfcert
+│   ├── solrcore
+│   └── solrlib
+├── deploy
+│   ├── azure-kubernetes
+│   ├── ec2-docker
+│   └── kubernetes
+├── docs
+└── drupal
+│   ├── config
+│   ├── d8content
+│   ├── docs
+│   ├── drush
+│   ├── patches
+│   ├── persistent
+│   ├── private
+│   ├── scripts
+│   ├── vendor
+│   ├── web
+│   └── xdebug
+&lt;/pre&gt;&lt;/td&gt;
+        &lt;td <span class="nv">valign</span><span class="o">=</span><span class="s2">&quot;top&quot;</span>&gt;&lt;pre&gt;.
+├── config
+│   └── sync
+├── d8content
+│   └── metadatadisplays
+├── docs
+├── drush
+│   ├── Commands
+│   └── sites
+├── nginxconfigford8
+├── patches
+├── persistent
+│   ├── db
+│   ├── iiifcache
+│   ├── iiifconfig
+│   ├── miniodata
+│   ├── solrconfig
+│   ├── solrcore
+│   └── solrlib
+├── private
+│   └── webform
+├── scripts
+│   ├── archipelago
+│   └── composer
+├── vendor
+│   ├── archipelago
+│   ├── asm89
+│   ├── aws
+│   ├── behat
+│   ├── bin
+│   ├── brick
+│   ├── chi-teck
+│   ├── composer
+│   ├── consolidation
+│   ├── container-interop
+│   ├── cweagans
+│   ├── data-values
+│   ├── dflydev
+│   ├── doctrine
+│   ├── drupal
+│   ├── drush
+│   ├── easyrdf
+│   ├── egulias
+│   ├── enlightn
+│   ├── erusev
+│   ├── evenement
+│   ├── ezyang
+│   ├── fabpot
+│   ├── fileeye
+│   ├── firebase
+│   ├── frictionlessdata
+│   ├── google
+│   ├── graham-campbell
+│   ├── grasmash
+│   ├── guzzlehttp
+│   ├── instaclick
+│   ├── jcalderonzumba
+│   ├── jean85
+│   ├── jmikola
+│   ├── justinrainbow
+│   ├── laminas
+│   ├── league
+│   ├── lsolesen
+│   ├── maennchen
+│   ├── markbaker
+│   ├── masterminds
+│   ├── mglaman
+│   ├── mhor
+│   ├── mikey179
+│   ├── mixnode
+│   ├── ml
+│   ├── monolog
+│   ├── mtdowling
+│   ├── myclabs
+│   ├── nesbot
+│   ├── nette
+│   ├── nikic
+│   ├── paragonie
+│   ├── pear
+│   ├── phar-io
+│   ├── phenx
+│   ├── phpdocumentor
+│   ├── phplang
+│   ├── phpmailer
+│   ├── phpoffice
+│   ├── phpoption
+│   ├── phpseclib
+│   ├── phpspec
+│   ├── phpstan
+│   ├── phpunit
+│   ├── professional-wiki
+│   ├── psr
+│   ├── psy
+│   ├── ralouphie
+│   ├── ramsey
+│   ├── react
+│   ├── sebastian
+│   ├── seld
+│   ├── sirbrillig
+│   ├── solarium
+│   ├── squizlabs
+│   ├── stack
+│   ├── strawberryfield
+│   ├── swaggest
+│   ├── symfony
+│   ├── symfony-cmf
+│   ├── theseer
+│   ├── twbs
+│   ├── twig
+│   ├── typo3
+│   ├── vlucas
+│   ├── web64
+│   ├── webflo
+│   ├── webmozart
+│   ├── wikibase
+│   ├── wikimedia
+│   └── zaporylie
+├── web
+│   ├── core
+│   ├── libraries
+│   ├── modules
+│   ├── profiles
+│   ├── sites
+│   └── themes&lt;/pre&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+<span class="c1">## The Data</span>
+
+Let<span class="s1">&#39;s start by focusing on the `data`, in our case Database, Solr and File (S3 + Private) storage. Collapsing here a few folder will make this easier to read. </span>
+<span class="s1">Marked with a `*` are matching folders that contain DB, Solr Core, the S3 min.io data (if you are using local storage) and also Drupal&#39;</span>s very own <span class="sb">`</span>private<span class="sb">`</span> folder
+
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;archipelago-deployment Live&lt;/th&gt;
+        &lt;th&gt;archipelago-deployment&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td <span class="nv">valign</span><span class="o">=</span><span class="s2">&quot;top&quot;</span>&gt;&lt;pre&gt;.
+├── config_storage
+├── data_storage
+│   ├── * db *
+│   ├── iiifcache
+│   ├── iiiftmp
+│   ├── letsencrypt
+│   ├── * minio-data *
+│   ├── ngnixcache
+│   ├── selfcert
+│   ├── solrcore
+│   └── solrlib
+├── deploy
+├── docs
+└── drupal
+│   ├── config
+│   ├── d8content
+│   ├── docs
+│   ├── drush
+│   ├── patches
+│   ├── persistent
+│   ├── * private *
+│   ├── scripts
+│   ├── vendor
+│   ├── web
+│   └── xdebug
+&lt;/pre&gt;&lt;/td&gt;
+        &lt;td <span class="nv">valign</span><span class="o">=</span><span class="s2">&quot;top&quot;</span>&gt;&lt;pre&gt;.
+├── config
+├── d8content
+├── docs
+├── drush
+├── nginxconfigford8
+├── patches
+├── persistent
+│   ├── * db *
+│   ├── iiifcache
+│   ├── iiifconfig
+│   ├── * miniodata *
+│   ├── solrconfig
+│   ├── * solrcore *
+│   └── solrlib
+├── * private *
+├── scripts
+├── vendor
+├── web
+&lt;/pre&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+<span class="c1">### Copying the Data into the new Structure</span>
+
+To <span class="k">do</span> so we need to stop docker again. This is needed because Databases sometimes keep an open Change Log and Locks <span class="k">in</span> place and <span class="k">if</span> there is any interaction, cron running, your data may end corrupted.
+
+<span class="c1">#### Step 1:</span>
+
+Shutdown your <span class="sb">`</span>docker-compose<span class="sb">`</span> ensemble. Inside your original <span class="sb">`</span>archipelago-deployment<span class="sb">`</span> folder run this:
+
+<span class="sb">```</span>Shell
+docker-compose down
+</code></pre></div>
+<h4 id="step-2_1">Step 2:</h4>
+<p>Verify all containers are actually down.</p>
+<div class="highlight"><pre><span></span><code>docker ps
+</code></pre></div>
+<h4 id="step-3_1">Step 3:</h4>
+<p>We will copy DB, min.io (File and ADO storage as files) and Drupal's private (temporary files, caches) folders to its new place</p>
+<div class="highlight"><pre><span></span><code>sudo cp -rpv persistent/db ../archipelago-deployment-live/data_storage/db
+sudo cp -rpv persistent/solrcore ../archipelago-deployment-live/data_storage/solrcore
+sudo cp -rpv persistent/miniodata ../archipelago-deployment-live/data_storage/minio-data
+sudo cp -rpv private ../archipelago-deployment-live/drupal/private
+</code></pre></div>
+<p>Running <code>-rpv</code> will copy verbosely, recursively while preserving original permissions.</p>
+<p>Done!</p>
+<p>You can now start docker-compose again</p>
+<div class="highlight"><pre><span></span><code>docker-compose up -d
+</code></pre></div>
+<h2 id="the-web">The Web</h2>
+<p>Collapsing again a few folder to aid in readability we can now focus on your actual Drupal/Archipelago Code/Web and settings. To be honest (we are) you can easily reinstall and restore all this via <code>composer</code> but we can also
+Move folders as a learning experience/time and bandwith experience. Marked with a <code>*</code> are matching folders you want to copy over.</p>
+<table>
+    <tr>
+        <th>archipelago-deployment Live</th>
+        <th>archipelago-deployment</th>
+    </tr>
+    <tr>
+        <td valign="top"><pre>.
+├── config_storage
+├── data_storage
+├── deploy
+├── docs
+└── drupal
+│   ├── * config *
+│   ├── d8content
+│   ├── docs
+│   ├── drush
+│   ├── patches
+│   ├── persistent
+│   ├── private
+│   ├── scripts
+│   ├── * vendor *
+│   ├── * web *
+│   └── xdebug
+</pre></td>
+        <td valign="top"><pre>.
+├── * config *
+│   └── sync
+├── d8content
+│   └── metadatadisplays
+├── docs
+├── drush
+│   ├── Commands
+│   └── sites
+├── nginxconfigford8
+├── patches
+├── persistent
+├── private
+├── scripts
+├── * vendor *
+├── * web *
+</pre></td>
+    </tr>
+</table>
+
+<h3 id="copying-the-web-into-the-new-structure">Copying the Web into the new Structure</h3>
+<p>No need to stop docker again. We can do this while your archipelago is still running </p>
+<h4 id="step-1_1">Step 1:</h4>
+<p>We will copy all important folders over. From your <code>archipelago-deployment</code> folder run:</p>
+<div class="highlight"><pre><span></span><code>sudo cp -rpv vendor ../archipelago-deployment-live/drupal/vendor
+sudo cp -rpv web ../archipelago-deployment-live/drupal/web
+sudo cp -rpv config ../archipelago-deployment-live/drupal/config
+</code></pre></div>
+<p>And also a few files selectively we know you are very fond of!</p>
+<p><div class="highlight"><pre><span></span><code>sudo cp -rpv composer.json ../archipelago-deployment-live/drupal/composer.json
+sudo cp -rpv composer.lock ../archipelago-deployment-live/drupal/composer.lock
+</code></pre></div>
+Done!</p>
+<h2 id="ssl-enviromentals-configurations-settings-and-docker">SSL, Enviromentals, Configurations, Settings and Docker</h2>
+<p>We are almost done. But <code>archipelago-deployment-live</code> has a different, safer way of defining SSL Certs, credentials and global settings for your Archipelago. 
+We will start first by copying settings as they are (most likely not very safe) and then we can update passwords/etc to make your system better prepared for the world.</p>
+<p>To learn more about these general settings please read <a href="../archipelago-deployment-live/#step-3-setup-your-enviromental-variables-for-dockerservices">this section of the parent Documentation</a> (who likes duplicated documentation? nobody)
+The gist here is (after reading, please do not skip) is we need to add our service definitions into an <code>.env</code> file.</p>
+<p>Coming from <code>archipelago-deployment</code> means and assuming you are running AWS Linux 2 using the suggested locations in this document, and you have a vanilla deployment and you followed <a href="../ubuntu/">these instructions</a>) that your values for <code>$HOME/archipelago-deployment-live/deploy/ec2-docker/.env</code> will be the following:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">ARCHIPELAGO_ROOT</span><span class="o">=</span>/home/ec2-user/archipelago-deployment-live
+<span class="nv">ARCHIPELAGO_EMAIL</span><span class="o">=</span>your@validemail.org
+<span class="nv">ARCHIPELAGO_DOMAIN</span><span class="o">=</span>your.domain.org
+<span class="nv">MINIO_ACCESS_KEY</span><span class="o">=</span>minio
+<span class="nv">MINIO_SECRET_KEY</span><span class="o">=</span>minio123
+<span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>esmero-db
+<span class="nv">MINIO_BUCKET_MEDIA</span><span class="o">=</span>archipelago
+<span class="nv">MINIO_FOLDER_PREFIX_MEDIA</span><span class="o">=</span>/
+<span class="nv">MINIO_BUCKET_CACHE</span><span class="o">=</span>archipelago
+<span class="nv">MINIO_FOLDER_PREFIX_CACHE</span><span class="o">=</span>/
+</code></pre></div>
+<p>If you plan on staying on local storage driven <code>min.io</code> 
+<code>MINIO_BUCKET_CACHE</code> and <code>MINIO_FOLDER_PREFIX_CACHE</code> are not going to be used. If you are planning on moving your Storage from local to Cloud driven please replace with the right (e.g AWS IAM keys and Secrets + bucket names and prefixes (folders)).
+Again, refer to the <a href="../archipelago-deployment-live/#step-3-setup-your-enviromental-variables-for-dockerservices">parent Documentation</a> for setting this up</p>
+<p>Once you have that in place (double check, if something goes wrong here we can always fine tune and fix again) we need to decide on a new docker-compose file and
+you may need to customize it depending on your choices, current and future needs.</p>
+<p>If you already have an SSL certificate and its provided by <code>CertBot</code> you can either copy the certs from your current system (will totally depend on your setup since archipelago-deployment does not provide out of the box SSL Certs) to
+<code>$HOME/archipelago-deployment-live/data_storage/letsencrypt</code></p>
+<p>A normal folder structure for that is:</p>
+<div class="highlight"><pre><span></span><code>.
+├── accounts
+│   └── acme-v02.api.letsencrypt.org
+│       └── directory
+│           └── cac9f8218ef18e4f11ec053785bbf648
+│               ├── meta.json
+│               ├── private_key.json
+│               └── regr.json
+├── archive
+│   ├── your.domain.org
+│       ├── cert1.pem
+│       ├── chain1.pem
+│       ├── fullchain1.pem
+│       └── privkey1.pem
+│ 
+├── csr
+│   ├── 0000_csr-certbot.pem
+│   ├── 0001_csr-certbot.pem
+│   ├── 0002_csr-certbot.pem
+│   └── 0003_csr-certbot.pem
+├── keys
+│   ├── 0000_key-certbot.pem
+│   ├── 0001_key-certbot.pem
+│   ├── 0002_key-certbot.pem
+│   └── 0003_key-certbot.pem
+├── live
+│   ├── README
+│   └── your.domain.org
+│      ├── cert.pem -&gt; ../../archive/your.domain.org/cert1.pem
+│      ├── chain.pem -&gt; ../../archive/your.domain.org/chain1.pem
+│      ├── fullchain.pem -&gt; ../../archive/your.domain.org/fullchain1.pem
+│      ├── privkey.pem -&gt; ../../archive/your.domain.org/privkey1.pem
+│      └── README
+├── renewal
+│   └── your.domain.org.conf
+│   
+└── renewal-hooks
+    ├── deploy
+    ├── post
+    └── pre
+</code></pre></div>
+<p>Or, if your SSL cert is up to renewal you can just let Archipelago request it for you. Renewal will happen auto-magically and you may never ever need to worry about that in the future.</p>
+<p>Finally. Let's adapt the docker-compose file we need to our previous (but still current!) <code>archipelago-deployment</code> reality</p>
+<p>Run, for x86/AMD. For ARM64/Apple M1 please check the <a href="../archipelago-deployment-live/#deployment-on-arm64v8graviton-apple-m1-system">parent Documentation</a>)</p>
+<div class="highlight"><pre><span></span><code>cp <span class="nv">$home</span>/archipelago-deployment-live/deploy/ec2-docker/docker-compose-aws-s3.yml <span class="nv">$home</span>/archipelago-deployment-live/deploy/ec2-docker/docker-compose.yml
+nano <span class="nv">$home</span>/archipelago-deployment-live/deploy/ec2-docker/docker-compose.yml
+</code></pre></div>
+<p>And replace the content with this slightly modified version. Note, we really only changed lines after this comment <code># THIS DIFFERS FROM THE NORMAL ONE...</code></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run docker-compose up -d</span>
+
+version: <span class="s1">&#39;3.5&#39;</span>
+services:
+  web:
+    container_name: esmero-web
+    image: staticfloat/nginx-certbot
+    restart: always
+    environment:
+      CERTBOT_EMAIL: <span class="si">${</span><span class="nv">ARCHIPELAGO_EMAIL</span><span class="si">}</span>
+      ENVSUBST_VARS: FQDN
+      FQDN: <span class="si">${</span><span class="nv">ARCHIPELAGO_DOMAIN</span><span class="si">}</span>
+    ports:
+      - <span class="s2">&quot;80:80&quot;</span>
+      - <span class="s2">&quot;443:443&quot;</span>
+    volumes:
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/config_storage/nginxconfig/conf.d:/etc/nginx/user.conf.d
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/config_storage/nginxconfig/certbot_extra_domains:/etc/nginx/certbot/extra_domains:ro
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/drupal:/var/www/html:cached
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/data_storage/ngnixcache:/var/cache/nginx
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/data_storage/letsencrypt:/etc/letsencrypt
+    depends_on:
+      - solr
+      - php
+      - db
+    tty: <span class="nb">true</span>
+    networks:
+      - host-net
+      - esmero-net
+  php:
+    container_name: esmero-php
+    restart: always
+    image: <span class="s2">&quot;esmero/php-7.4-fpm:1.0.0-RC2-multiarch&quot;</span>
+    tty: <span class="nb">true</span>
+    networks:
+      - host-net
+      - esmero-net
+    volumes:
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/config_storage/php-fpm/www.conf:/usr/local/etc/php-fpm.d/www.conf
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/drupal:/var/www/html:cached
+    environment:
+      MINIO_ACCESS_KEY: <span class="si">${</span><span class="nv">MINIO_ACCESS_KEY</span><span class="si">}</span>
+      MINIO_SECRET_KEY: <span class="si">${</span><span class="nv">MINIO_SECRET_KEY</span><span class="si">}</span>
+      MYSQL_ROOT_PASSWORD: <span class="si">${</span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="si">}</span>
+      MINIO_BUCKET_MEDIA: <span class="si">${</span><span class="nv">MINIO_BUCKET_MEDIA</span><span class="si">}</span>
+      MINIO_FOLDER_PREFIX_MEDIA: <span class="si">${</span><span class="nv">MINIO_FOLDER_PREFIX_MEDIA</span><span class="si">}</span>
+  solr:
+    container_name: esmero-solr
+    restart: always
+    image: <span class="s2">&quot;solr:8.8.2&quot;</span>
+    tty: <span class="nb">true</span>
+    ports:
+      - <span class="s2">&quot;8983:8983&quot;</span>
+    networks:
+      - host-net
+      - esmero-net
+    volumes:
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/data_storage/solrcore:/var/solr/data
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/config_storage/solrconfig:/drupalconfig
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/data_storage/solrlib:/opt/solr/contrib/archipelago/lib
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - drupal
+      - /drupalconfig
+  db:
+    image: mysql:8.0.22
+    command: mysqld --default-authentication-plugin<span class="o">=</span>mysql_native_password  --max_allowed_packet<span class="o">=</span>256M
+    container_name: esmero-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: <span class="si">${</span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="si">}</span>
+    networks:
+      - host-net
+      - esmero-net
+    volumes:
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/data_storage/db:/var/lib/mysql
+  nlp:
+    container_name: esmero-nlp
+    restart: always
+    image: <span class="s2">&quot;esmero/esmero-nlp:1.0&quot;</span>
+    ports:
+      - <span class="s2">&quot;6400:6400&quot;</span>
+    networks:
+      - host-net
+      - esmero-net
+  iiif:
+    container_name: esmero-cantaloupe
+    image: <span class="s2">&quot;esmero/cantaloupe-s3:4.1.9RC&quot;</span>
+    restart: always
+    ports:
+      - <span class="s2">&quot;8183:8182&quot;</span>
+    networks:
+      - host-net
+      - esmero-net
+    environment:
+      AWS_ACCESS_KEY_ID: <span class="si">${</span><span class="nv">MINIO_ACCESS_KEY</span><span class="si">}</span>
+      AWS_SECRET_ACCESS_KEY: <span class="si">${</span><span class="nv">MINIO_SECRET_KEY</span><span class="si">}</span>
+      <span class="c1"># THIS DIFFERS FROM THE STANDARD ONE AND ENABLES LOCAL FILESYSTEM CACHE INSTEAD OF AWS S3 one</span>
+      CACHE_SERVER_DERIVATIVE: FilesystemCache
+      S3SOURCE_BASICLOOKUPSTRATEGY_BUCKET_NAME: <span class="si">${</span><span class="nv">MINIO_BUCKET_MEDIA</span><span class="si">}</span>
+      S3SOURCE_BASICLOOKUPSTRATEGY_PATH_PREFIX: <span class="si">${</span><span class="nv">MINIO_FOLDER_PREFIX_MEDIA</span><span class="si">}</span>
+      S3CACHE_BUCKET_NAME: <span class="si">${</span><span class="nv">MINIO_BUCKET_CACHE</span><span class="si">}</span> 
+      S3CACHE_OBJECT_KEY_PREFIX: <span class="si">${</span><span class="nv">MINIO_FOLDER_PREFIX_CACHE</span><span class="si">}</span> 
+      XMS: 2g
+      XMX: 4g
+    volumes:
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/config_storage/iiifconfig:/etc/cantaloupe
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/data_storage/iiifcache:/var/cache/cantaloupe
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/data_storage/iiiftmp:/var/cache/cantaloupe_tmp
+  minio:
+    container_name: esmero-minio
+    restart: always
+    image: minio/minio:latest
+    volumes:
+      - <span class="si">${</span><span class="nv">ARCHIPELAGO_ROOT</span><span class="si">}</span>/data_storage/minio-data:/data:cached
+    ports:
+      - <span class="s2">&quot;9000:9000&quot;</span>
+      - <span class="s2">&quot;9001:9001&quot;</span>
+    networks:
+      - host-net
+      - esmero-net
+    environment:
+      MINIO_HTTP_TRACE: /tmp/minio-log.txt
+      MINIO_ROOT_USER: <span class="si">${</span><span class="nv">MINIO_ACCESS_KEY</span><span class="si">}</span>
+      MINIO_ROOT_PASSWORD: <span class="si">${</span><span class="nv">MINIO_SECRET_KEY</span><span class="si">}</span>
+      MINIO_ACCESS_KEY: <span class="si">${</span><span class="nv">MINIO_ACCESS_KEY</span><span class="si">}</span>
+      MINIO_SECRET_KEY: <span class="si">${</span><span class="nv">MINIO_SECRET_KEY</span><span class="si">}</span>
+      <span class="c1"># THIS DIFFERS FROM THE STANDARD ONE AND ENABLES LOCAL MINIO INSTEAD OF AWS S3 one </span>
+    command: server /data --console-address <span class="s2">&quot;:9001&quot;</span>
+networks:
+  host-net:
+    driver: bridge
+  esmero-net:
+    driver: bridge
+    internal: <span class="nb">true</span>
+</code></pre></div>
+<p>Press CNTRL-X and you are done.
+Now the final test!!</p>
+<h2 id="shutdown-the-old-one-start-the-new-one">Shutdown the old one, start the new one</h2>
+<p>So we are ready. Testing may be a hit-miss thing here. Did we cover all steps? did a command failed? Good thing is we can start the new ensemble and all our old one 
+will survive and we can come back over and over until we are ready. Let's try!</p>
+<p>We will start by shutting down the running docker-ensemble</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$HOME</span>/archipelago-deployment
+docker-compose down
+</code></pre></div>
+<p>Now let's go to our new deployment. Docker starts here in a different folder</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$HOME</span>/archipelago-deployment-live/deploy/ec2-docker
+docker-compose up
+</code></pre></div>
+<p>You may notice we removed the <code>-d</code>. Why? We want to see all the messages and notice/mark/copy any errors. E.g did the SSL CERT load correctly? Did the MYSQL import worked out?
+To avoid shutting it down while all starts, please open another Terminal and type:</p>
+<p><div class="highlight"><pre><span></span><code>docker ps
+</code></pre></div>
+And look at the up-times. Do you see any Containers restarting? (Where Created and the Status differ for a lot and Status keeps reset to 0?) A healthy deployment
+will look similar to this (</p>
+<div class="highlight"><pre><span></span><code>CONTAINER ID   IMAGE                                    COMMAND                  CREATED          STATUS         PORTS                                      NAMES
+f794c25db64c   esmero/cantaloupe-s3:4.1.9RC2-arm64      <span class="s2">&quot;sh -c &#39;java -Dcanta…&quot;</span>   <span class="m">6</span> seconds ago    Up <span class="m">3</span> seconds   <span class="m">0</span>.0.0.0:8183-&gt;8182/tcp                     esmero-cantaloupe
+5b791445720f   jonasal/nginx-certbot                    <span class="s2">&quot;/docker-entrypoint.…&quot;</span>   <span class="m">6</span> seconds ago    Up <span class="m">3</span> seconds   <span class="m">0</span>.0.0.0:80-&gt;80/tcp, <span class="m">0</span>.0.0.0:443-&gt;443/tcp   esmero-web
+e38fbbd86edf   esmero/esmero-nlp:1.0.1-RC2-arm64        <span class="s2">&quot;/usr/local/bin/entr…&quot;</span>   <span class="m">11</span> seconds ago   Up <span class="m">6</span> seconds   <span class="m">0</span>.0.0.0:6400-&gt;6400/tcp                     esmero-nlp
+c84a0a4d43e9   minio/minio:latest                       <span class="s2">&quot;/usr/bin/docker-ent…&quot;</span>   <span class="m">11</span> seconds ago   Up <span class="m">6</span> seconds   <span class="m">0</span>.0.0.0:9000-9001-&gt;9000-9001/tcp           esmero-minio
+3ec176a960c3   esmero/php-7.4-fpm:1.0.0-RC2-multiarch   <span class="s2">&quot;docker-php-entrypoi…&quot;</span>   <span class="m">11</span> seconds ago   Up <span class="m">6</span> seconds   <span class="m">9000</span>/tcp                                   esmero-php
+e762ad7ea5e2   solr:8.8.2                               <span class="s2">&quot;docker-entrypoint.s…&quot;</span>   <span class="m">11</span> seconds ago   Up <span class="m">6</span> seconds   <span class="m">0</span>.0.0.0:8983-&gt;8983/tcp                     esmero-solr
+381166d61f8c   mariadb:10.5.10-focal                    <span class="s2">&quot;docker-entrypoint.s…&quot;</span>   <span class="m">11</span> seconds ago   Up <span class="m">6</span> seconds   <span class="m">3306</span>/tcp      
+</code></pre></div>
+<p>If you feel all seems to be fine open a browser window and visit your website. See if you can log in, see ADOs. 
+If not please you can momentarely shut down this new docker-ensemble and restart the older one. Nothing is lost!
+Then with time and tea/coffee and fresh eyes come back and re-trace your steps. 95% of the issues are incorrect values in the <code>.env</code> file. The other 5% may be on us.
+If you run into any trouble please get in touch!</p>
+<p>Happy deploying!</p>
+<hr />
+<p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback, or open an ISSUE in this <a href="https://github.com/esmero/archipelago-deployment-live/">Archipelago Deployment Live Repository</a>.</p>
+<p>Return to <a href="../archipelago-deployment-live/">Archipelago Deployment Live</a>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../gitworkflow/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Github Workflow" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Github Workflow
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../upgradeLiveFromD8ToD9/" class="md-footer__link md-footer__link--next" aria-label="Next: Upgrading Drupal 8 to Drupal 9" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Upgrading Drupal 8 to Drupal 9
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/esmero" target="_blank" rel="noopener" title="Archipelago Commons + esmero" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://groups.google.com/g/archipelago-commons" target="_blank" rel="noopener" title="Archipelago Commons Google Group" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 4v7H5.17L4 12.17V4h11m1-2H3a1 1 0 0 0-1 1v14l4-4h10a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1m5 4h-2v9H6v2a1 1 0 0 0 1 1h11l4 4V7a1 1 0 0 0-1-1z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://archipelagocommons.slack.com" target="_blank" rel="noopener" title="Archipelago Commons Slack Channe" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": {"provider": "mike", "default": "default"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>
