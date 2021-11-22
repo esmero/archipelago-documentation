@@ -20,7 +20,7 @@ _Note: you can keep the existing folder structure if you so choose. A benefit of
     dr-xr-xr-x 19 root           root  275 Dec 15  2019 ..
     drwxr-xr-x  8  		999  999   4096 Oct 13 20:07 db
     drwxr-xr-x 13 root           root  4.0K Oct  5 23:03 drupal8
-    drwxr-xr-x  5           100  100   4.0K Feb 23  2020 iiifcache
+    drwxr-xr-x  5           8183  8183   4.0K Feb 23  2020 iiifcache
     drwxr-xr-x  2 root           root  4.0K Feb 23  2020 iiifconfig
     drwxr-xr-x  4 root           root  4.0K Oct  5 22:45 nginx_conf
     drwxr-xr-x  3 root           root  4.0K Feb 26  2019 solrconfig

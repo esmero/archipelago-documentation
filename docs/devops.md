@@ -14,6 +14,7 @@ At the core of the Archipelago philosophy is our commitment to both simplicity a
 Installation is entirely [Dockerized](https://www.docker.com) and scripted with [easy-to-follow directions](quickstart.md).
 
 * Docker containers are as follows:
+
   Container | Purpose | Description
   --- | --- | ---
   esmero-web | NGNIX | Routes calls to esmero-php
