@@ -243,7 +243,7 @@ docker exec esmero-php drush cim -y
 If all goes well here and you see no errors it's time to reindex `Solr` because there are new Fields. Run the following:
 
 ```Shell 
-docker exec esmero-php drush searchapi-reindex 
+docker exec esmero-php drush search-api-index 
 docker exec esmero-php drush search-api-reindex
 ```
 
