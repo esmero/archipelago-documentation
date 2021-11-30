@@ -5,9 +5,10 @@ tags:
   - Ubuntu 18.04
   - Ubuntu 20.04
   - Linux
+  - Drupal 9
 ---
 
-# Installing Archipelago on Ubuntu 18.04 or 20.04
+# Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04
 
 ## About running terminal commands
 
@@ -52,7 +53,7 @@ Git tools are included by default in Ubuntu
 
 ### Wait! Question: Do you have a previous version of Archipelago running?
 
-If so, let's give that hard working repository a break first. If not, [Step 1](#step-1-docker-deployment):
+If so, let's give that hard working repository a break first. If not, [Step 1](#step-1-deployment):
 
 - Open a terminal (you have that already right?) and go to your previous download/git clone folder and run:
 
@@ -89,7 +90,7 @@ If so, let's give that hard working repository a break first. If not, [Step 1](#
 
 ## Step 1: Deployment
 
-##### Prefer to watch a video of how to install? Go to our [`user contributed documentation`](#user-contributed-documentation-a-video)!
+##### Prefer to watch a video to see what it's like to install? Go to our [`user contributed documentation`](#user-contributed-documentation-a-video)[^1]!
 
 #### IMPORTANT
 
@@ -103,7 +104,7 @@ There are two possible solutions.
 Instead of: `- ${PWD}:/var/www/html:cached`
 use: `- ".:/var/www/html:cached"`
 
-Now that you got it, lets deploy:
+Now that you got it, let's deploy:
 
 ```Shell
 git clone https://github.com/esmero/archipelago-deployment.git archipelago-deployment
@@ -116,6 +117,7 @@ For latest/modern stack PHP7.4/Solr8.8/MySQL8 we recommend:
 
 ```Shell
 cp docker-compose-linux.yml docker-compose.yml
+docker-compose pull
 docker-compose up -d
 ```
 
@@ -126,6 +128,7 @@ If you want to stay more traditional and stick with older versions PHP7.3/Solr7.
 
 ```Shell
 cp docker-compose-legacy.yml docker-compose.yml
+docker-compose pull
 docker-compose up -d
 ```
 
@@ -136,7 +139,7 @@ You need to make sure Docker can read/write to your local Drive a.k.a mounted vo
 This means in practice running:
 
 ```Shell
-sudo chown -R 8183:8183 persistent/iiifcache
+sudo chown -R 100:100 persistent/iiifcache
 sudo chown -R 8983:8983 persistent/solrcore
 ```
 
@@ -151,17 +154,17 @@ docker exec -ti esmero-php bash -c "chown -R www-data:www-data private"
 ## Step 2: Set up your Minio S3 bucket
 
 Once all containers are up and running (you can do a `docker ps` to check),
-access `http://localhost:9000` using your most loved Web Browser with the following credentials:
+access `http://localhost:9001` using your most loved Web Browser with the following credentials:
 
 ```
 user:minio
 pass:minio123
 ```
 
-and create a bucket named "archipelago". To do so press the red/coral `+` button on the bottom-right side and press the `Bucket` icon , it has a tooltip that says "create bucket". Write `archipelago` and submit, done! That is where we will persist all your Files and also your File copies of each Digital Object. You can always go there and explore what Archipelago (well really Strawberryfield does the hard work) has persisted so you can get comfortable with our architecture.
+and create a bucket named "archipelago". To do so select `Buckets` from the left side menu and click the `Create Bucket` button at the top right. Write `archipelago` under `Bucket Name` and submit. Done! That is where we will persist all your files and also your file copies of each Digital Object. You can always go there and explore what Archipelago (well, really Strawberryfield does the hard work) has persisted so you can get comfortable with our architecture.
 
 
-## Step 3: Deploy Drupal 8.9.14 and the awesome Archipelago Modules
+## Step 3: Deploy Drupal 9.2.9 and the awesome Archipelago Modules
 
 The following will run composer inside the esmero-php container to download all dependencies and Drupal Core too.
 
@@ -182,18 +185,19 @@ Note: We say `local` because your whole Drupal web root (the one you cloned) is 
 If this is the first time you Deploy Drupal using the provided Configurations run:
 
 ```Shell
-docker exec -ti esmero-php bash -c "cd web;../vendor/bin/drush -y si --verbose config_installer  config_installer_sync_configure_form.sync_directory=/var/www/html/config/sync/ --db-url=mysql://root:esmerodb@esmero-db/drupal8 --account-name=admin --account-pass=archipelago -r=/var/www/html/web --sites-subdir=default --notify=false install_configure_form.enable_update_status_module=NULL install_configure_form.enable_update_status_emails=NULL;drush cr;chown -R www-data:www-data sites;"
+docker exec -ti -u www-data esmero-php bash -c "cd web;../vendor/bin/drush -y si --verbose --existing-config --db-url=mysql://root:esmerodb@esmero-db/drupal9 --account-name=admin --account-pass=archipelago -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;"
 ```
 
 This will give you an `admin` Drupal user with `archipelago` as password (!change this if running on a public instance!) and also set the right Docker Container owner for your Drupal installation files.
 
 Note: About Steps 2-3, you don't need to/nor should do this more than once. You can destroy/stop/update and recreated your Docker containers and start again, `git pull` and your Drupal and Data will persist once you passed `Installation complete` message. I repeat, all other container's data is persistet inside the `persistent/` folder contained in this cloned git repository. Drupal and all its code is visible, editable and stable inside your `web/` folder.
 
-## Step 4: Create a "demo "and a "jsonapi" user using drush
+## Step 4: Create a "demo "and a "jsonapi" user using drush and assign your "admin" user the Administrator Role (new for Drupal 9).
 
 ```Shell
 docker exec -ti esmero-php bash -c 'drush ucrt demo --password="demo"; drush urol metadata_pro "demo"'
 docker exec -ti esmero-php bash -c 'drush ucrt jsonapi --password="jsonapi"; drush urol metadata_api "jsonapi"'
+docker exec -ti esmero-php bash -c 'drush urol administrator "admin"'
 ```
 
 ## Step 5: Ingest some Metadata Displays to make playing much more interactive
@@ -214,9 +218,11 @@ If you see any issues or errors or need help with a step, please let us know (AS
 
 If you like this, let us know!
 
-### User contributed documentation (A Video!):
+### User contributed documentation (A Video!)[^1]:
 
 _Installing Archipelago on AWS Ubuntu_ by [Zach Spalding](https://github.com/senyzspalding): <https://youtu.be/RBy7UMxSmyQ>
+
+[^1]: You may find this user contributed tutorial video, which was created for an earlier Archipelago release, to be helpful. Please note that there are significant differences between the executed steps and that you need to follow the current release instructions in order to have a successful deployment.
 
 ## Caring & Coding + Fixing + Testing
 
@@ -228,5 +234,3 @@ _Installing Archipelago on AWS Ubuntu_ by [Zach Spalding](https://github.com/sen
 ## License
 
 [GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt)
-
-
