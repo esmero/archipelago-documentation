@@ -16,7 +16,7 @@ This repository serves as bootstrap for a Archipelago 1.0.0-RC3 deployment via D
 
 The skeleton project contains all the pieces needed to run a local deployment of a vanilla Archipelago including (*YES*!) content provided as optional feature from [archipelago-recyclables](https://github.com/esmero/archipelago-recyclables)
 
-# Starting from CERO
+# Starting from ZERO
 
 This is the recommended, simplest way for this release. There are a too many, tons of fun new features, Metadata Displays, viewers, bug fixes (yes), webform elements and improvements! We include now W3C WebAnnotations capabilities provided by the great team behind <https://recogito.github.io/annotorious/api-docs/osd-plugin/> (thanks Rainer Simon) and with complete integration in our UI and metadata backends. Also [WACZ! and replay.web](https://github.com/webrecorder/replayweb.page) both fabulous developments by the Webrecorder team (thanks Ilya Kreymer and Emma Dickson). There is more. Release will have a full feature list. Promised.
 
