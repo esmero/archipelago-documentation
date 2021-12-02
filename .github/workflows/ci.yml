@@ -18,6 +18,5 @@ jobs:
       - run: git config --global user.name aksm
       - run: git config --global user.email albert.min@gmail.com
       - run: git fetch origin gh-pages --depth=1
-      - run: mike delete --all
       - run: mike deploy --push 1.0.0-RC3 default
       - run: mike set-default 1.0.0-RC3
