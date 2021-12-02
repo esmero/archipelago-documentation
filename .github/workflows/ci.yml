@@ -20,4 +20,3 @@ jobs:
       - run: git fetch origin gh-pages --depth=1
       - run: mike delete --all
       - run: mike deploy --push 1.0.0-RC3 docs
-      - run: mike set-default 1.0.0-RC3
