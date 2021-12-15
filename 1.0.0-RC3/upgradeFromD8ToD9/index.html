@@ -15,18 +15,18 @@
         <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/upgradeFromD8ToD9/">
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.2">
     
     
       
-        <title>Archipelago-deployment: upgrading Drupal 8 to Drupal 9 - Archipelago Documentation</title>
+        <title>Archipelago-deployment: upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3) - Archipelago Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.62128196.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f7951f6f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.9204c3b2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -40,7 +40,7 @@
       
     
     
-    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"..":".."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Archipelago-deployment: upgrading Drupal 8 to Drupal 9
+              Archipelago-deployment: upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)
             
           </span>
         </div>
@@ -1680,10 +1680,10 @@
 <h1 id="archipelago-deployment-upgrading-drupal-8-to-drupal-9-100-rc2-to-100-rc3">Archipelago-deployment: upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)</h1>
 <h2 id="what-is-this-documentation-for">What is this documentation for?</h2>
 <p>If you already have a well set up and well loved Archipelago (1.0.0-RC2) running Drupal 8 (D8), this documentation will allow you to update to 1.0.0-RC3 on Drupal 9 (D9) without major issues.</p>
-<p>D8 will no longer be supported by the end of November 2021. D9 has been around for a little while, and even if every module is not supported yet, what you need and want for <strong>Archipelago</strong> has long been ready for D9. However, Archipelago is still D8 compatible if it's necessary for you to stay back a little longer.</p>
+<p>D8 is no longer supported as of the end of November 2021. D9 has been around for a little while, and even if every module is not supported yet, what you need and want for <strong>Archipelago</strong> has long been ready for D9. However, Archipelago is still D8 compatible if it's necessary for you to stay back a little longer.</p>
 <h2 id="requirements">Requirements</h2>
 <ul>
-<li>An archipelago-deployment local instance 1.0.0-RC2 (working, tested) deployed using provided instructions via Docker and running Drupal 8.</li>
+<li>An <a href="https://github.com/esmero/archipelago-deployment">archipelago-deployment</a> local instance 1.0.0-RC2 (working, tested) deployed using provided instructions via Docker and running Drupal 8.</li>
 <li>Basic knowledge and instincts (+ courage) on how to run Terminal Commands, <code>composer</code> and <code>drush</code>.</li>
 <li>Patience. You can't skip steps here.</li>
 <li>For Shell Commands documented here please copy line by line—not the whole block.</li>
@@ -1775,7 +1775,7 @@ docker compose up -d
 <p>Now we are going to tell <code>composer</code> to actually fetch the new code and dependencies using the 1.0.0-RC3 provided <code>composer.lock</code> and update the whole Drupal/PHP/JS environment.</p>
 <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;composer install&quot;</span>
 </code></pre></div>
-<p>This will fail (sorry!) for a few packages but no worries, they need to be patched and composer is not that smart. So simply run it again:</p>
+<p>This will fail (sorry!) for a few packages but no worries, they need to be patched and composer is not that smart so simply run it again:</p>
 <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;composer install&quot;</span>
 </code></pre></div>
 <p>Well done! If you see <strong>no</strong> issues and all ends in a <strong>Green colored message</strong> all is good! <a href="#step-4_1">Jump to Step 4</a></p>
@@ -1785,7 +1785,7 @@ In that case you need to check each package website's (normally https://www.drup
 <p>If so run:</p>
 <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;composer require &#39;drupal/the_module_name:^VERSION_NUMBER_THAT_WORKS_ON_DRUPAL9_&#39; --update-with-dependencies --no-update&quot;</span> and run **Step <span class="m">3</span> ** again <span class="o">(</span>and again <span class="k">until</span> all is cleared<span class="o">)</span>
 </code></pre></div>
-<p>If not: try to find a replacement module that does something simular, but in any case you may end having to remove before proceding. Give us a ping/slack/google group/open a github ISSUE if you find yourself uncertain about this. </p>
+<p>If not, try to find a replacement module that does something similar, but in any case you may end having to remove before proceding. Give us a ping/slack/google group/open a github ISSUE if you find yourself uncertain about this. </p>
 <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;composer remove drupal/the_module_name --no-update&quot;</span>
 docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot; drush pm-uninstall the_module_name&quot;</span>
 </code></pre></div>
@@ -1796,18 +1796,12 @@ docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">&#39
 docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;drush updatedb&quot;</span>
 </code></pre></div>
 <h3 id="step-5_1">Step 5:</h3>
-<p>Now the hard part. There is a manual step required here. It is a simple one but can't be skipped. Previously D8 installations had a "module/profile" driven installation. Those are not longer used or even exist as part of core, but a profile can't be changed once installed, so you have to do the following to avoid Drupal complaining about our new and simpler way of doing things (a small roll back).</p>
-<div class="highlight"><pre><span></span><code>nano config/sync/core.extension.yml 
+<p>Previously D8 installations had a "module/profile" driven installation. Those are no longer used or even exist as part of core, but a profile can't be changed once installed so you have to do the following to avoid Drupal complaining about our new and simpler way of doing things (a small roll back):</p>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;sed -i &#39;s/minimal: 1000/standard: 1000/g&#39; config/sync/core.extension.yml&quot;</span>
+docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;sed -i &#39;s/profile: minimal/profile: standard/g&#39; config/sync/core.extension.yml&quot;</span>
 </code></pre></div>
-<p>and in the editor change: (where <code>-</code> means remove and <code>+</code> means add)</p>
-<div class="highlight"><pre><span></span><code>-  minimal: 1000
-+  standard: 1000
--profile: minimal
-+profile: standard
-</code></pre></div>
-<p>And Save. Done!</p>
 <h3 id="step-6">Step 6:</h3>
-<p>Now you can Sync your new Archipelago 1.0.0-RC3 and bring all the new configs and settings in. For this you have <strong>two</strong> options (no worries, remember you made a backup!):</p>
+<p>Now you can sync your new Archipelago 1.0.0-RC3 and bring all the new configs and settings in. For this you have <strong>two</strong> options (no worries, remember you made a backup!):</p>
 <h4 id="a-partial-sync-which-will-bring-new-configs-and-update-existing-ones-but-will-not-remove-ones-that-only-exist-in-your-custom-setup-eg-new-webforms-or-view-modes">A Partial Sync, which will bring new configs and update existing ones but will <strong>not</strong> remove ones that only exist in your custom setup, e.g. new Webforms or View Modes.</h4>
 <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> esmero-php drush cim -y --partial   
 </code></pre></div>
@@ -1824,7 +1818,7 @@ docker <span class="nb">exec</span> esmero-php drush search-api-index
 <p>Recommended: If you want to add new templates and menu items 1.0.0-RC3 provides, run this:</p>
 <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">&#39;scripts/archipelago/deploy.sh&#39;</span>
 </code></pre></div>
-<p>Once that is done, you can choose to update all Metadata Displays (Twig templates) we ship with new 1.0.0-RC3 versions (heavily fixed IIIF manifest, Markdown to HTML for Metadata, better Object descriptions). But before you do this, we <strong>really</strong> recommend that you first make sure to manually (copy/paste) backup any Twig templates you have modified. If unusure, do not run the command that comes after this warning! You can always manually copy the new templates from the <code>d8content/metadatadisplays</code> folder which contains text versions (again, copy/paste) of each shipped template you can pick and use when you feel ready. </p>
+<p>Once that is done, you can choose to update all Metadata Displays (Twig templates) we ship with new 1.0.0-RC3 versions (heavily fixed IIIF manifest, Markdown to HTML for Metadata, better Object descriptions). But before you do this, we <strong>really</strong> recommend that you first make sure to manually (copy/paste) back up any Twig templates you have modified. If unsure, do not run the command that comes after this warning! You can always manually copy the new templates from the <code>d8content/metadatadisplays</code> folder which contains text versions (again, copy/paste) of each shipped template you can pick and use when you feel ready. </p>
 <p>If you are sure (like really?) you want to overwrite the ones you modified (sure, just checking?), then you can run this:</p>
 <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">&#39;scripts/archipelago/update_deployed.sh&#39;</span>
 </code></pre></div>
@@ -1925,10 +1919,10 @@ docker <span class="nb">exec</span> esmero-php drush search-api-index
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.01824240.min.js", "version": {"provider": "mike", "default": "default"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.0bbba5b5.min.js", "version": {"provider": "mike", "default": "default"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.e0abf5b0.min.js"></script>
+      <script src="../assets/javascripts/bundle.649a939e.min.js"></script>
       
     
   </body>
