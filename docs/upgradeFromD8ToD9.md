@@ -1,5 +1,5 @@
 ---
-title: "Archipelago-deployment: upgrading Drupal 8 to Drupal 9"
+title: "Archipelago-deployment: upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)"
 tags:
   - Archipelago-deployment
   - Drupal 8
@@ -12,11 +12,11 @@ tags:
 
 If you already have a well set up and well loved Archipelago (1.0.0-RC2) running Drupal 8 (D8), this documentation will allow you to update to 1.0.0-RC3 on Drupal 9 (D9) without major issues.
 
-D8 will no longer be supported by the end of November 2021. D9 has been around for a little while, and even if every module is not supported yet, what you need and want for **Archipelago** has long been ready for D9. However, Archipelago is still D8 compatible if it's necessary for you to stay back a little longer.
+D8 is no longer supported as of the end of November 2021. D9 has been around for a little while, and even if every module is not supported yet, what you need and want for **Archipelago** has long been ready for D9. However, Archipelago is still D8 compatible if it's necessary for you to stay back a little longer.
 
 ## Requirements
 
-- An archipelago-deployment local instance 1.0.0-RC2 (working, tested) deployed using provided instructions via Docker and running Drupal 8.
+- An [archipelago-deployment](https://github.com/esmero/archipelago-deployment) local instance 1.0.0-RC2 (working, tested) deployed using provided instructions via Docker and running Drupal 8.
 - Basic knowledge and instincts (+ courage) on how to run Terminal Commands, `composer` and `drush`.
 - Patience. You can't skip steps here.
 - For Shell Commands documented here please copy line by line—not the whole block.
@@ -168,7 +168,7 @@ Now we are going to tell `composer` to actually fetch the new code and dependenc
 docker exec -ti esmero-php bash -c "composer install"
 ```
 
-This will fail (sorry!) for a few packages but no worries, they need to be patched and composer is not that smart. So simply run it again:
+This will fail (sorry!) for a few packages but no worries, they need to be patched and composer is not that smart so simply run it again:
 
 ```Shell
 docker exec -ti esmero-php bash -c "composer install"
@@ -188,7 +188,7 @@ If so run:
 docker exec -ti esmero-php bash -c "composer require 'drupal/the_module_name:^VERSION_NUMBER_THAT_WORKS_ON_DRUPAL9_' --update-with-dependencies --no-update" and run **Step 3 ** again (and again until all is cleared)
 ```
 
-If not: try to find a replacement module that does something simular, but in any case you may end having to remove before proceding. Give us a ping/slack/google group/open a github ISSUE if you find yourself uncertain about this. 
+If not, try to find a replacement module that does something similar, but in any case you may end having to remove before proceding. Give us a ping/slack/google group/open a github ISSUE if you find yourself uncertain about this. 
 
 ```Shell
 docker exec -ti esmero-php bash -c "composer remove drupal/the_module_name --no-update"
@@ -207,26 +207,16 @@ docker exec -ti esmero-php bash -c "drush updatedb"
 
 ### Step 5:
 
-Now the hard part. There is a manual step required here. It is a simple one but can't be skipped. Previously D8 installations had a "module/profile" driven installation. Those are not longer used or even exist as part of core, but a profile can't be changed once installed, so you have to do the following to avoid Drupal complaining about our new and simpler way of doing things (a small roll back).
+Previously D8 installations had a "module/profile" driven installation. Those are no longer used or even exist as part of core, but a profile can't be changed once installed so you have to do the following to avoid Drupal complaining about our new and simpler way of doing things (a small roll back):
 
 ```Shell 
-nano config/sync/core.extension.yml 
+docker exec -ti esmero-php bash -c "sed -i 's/minimal: 1000/standard: 1000/g' config/sync/core.extension.yml"
+docker exec -ti esmero-php bash -c "sed -i 's/profile: minimal/profile: standard/g' config/sync/core.extension.yml"
 ```
-
-and in the editor change: (where `-` means remove and `+` means add)
-
-```
--  minimal: 1000
-+  standard: 1000
--profile: minimal
-+profile: standard
-```
-
-And Save. Done!
 
 ### Step 6:
 
-Now you can Sync your new Archipelago 1.0.0-RC3 and bring all the new configs and settings in. For this you have **two** options (no worries, remember you made a backup!):
+Now you can sync your new Archipelago 1.0.0-RC3 and bring all the new configs and settings in. For this you have **two** options (no worries, remember you made a backup!):
 
 #### A Partial Sync, which will bring new configs and update existing ones but will **not** remove ones that only exist in your custom setup, e.g. new Webforms or View Modes.
 
@@ -259,7 +249,7 @@ Recommended: If you want to add new templates and menu items 1.0.0-RC3 provides,
 docker exec -ti esmero-php bash -c 'scripts/archipelago/deploy.sh'
 ```
 
-Once that is done, you can choose to update all Metadata Displays (Twig templates) we ship with new 1.0.0-RC3 versions (heavily fixed IIIF manifest, Markdown to HTML for Metadata, better Object descriptions). But before you do this, we **really** recommend that you first make sure to manually (copy/paste) backup any Twig templates you have modified. If unusure, do not run the command that comes after this warning! You can always manually copy the new templates from the `d8content/metadatadisplays` folder which contains text versions (again, copy/paste) of each shipped template you can pick and use when you feel ready. 
+Once that is done, you can choose to update all Metadata Displays (Twig templates) we ship with new 1.0.0-RC3 versions (heavily fixed IIIF manifest, Markdown to HTML for Metadata, better Object descriptions). But before you do this, we **really** recommend that you first make sure to manually (copy/paste) back up any Twig templates you have modified. If unsure, do not run the command that comes after this warning! You can always manually copy the new templates from the `d8content/metadatadisplays` folder which contains text versions (again, copy/paste) of each shipped template you can pick and use when you feel ready. 
 
 If you are sure (like really?) you want to overwrite the ones you modified (sure, just checking?), then you can run this:
 
