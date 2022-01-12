@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/archipelago-deployment-live/">
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f7951f6f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.cd566b2a.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -546,6 +546,13 @@
           <li class="md-nav__item">
   <a href="#os" class="md-nav__link">
     OS:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-and-the-important-human-aspect" class="md-nav__link">
+    Skills and the important human aspect
   </a>
   
 </li>
@@ -1638,6 +1645,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#skills-and-the-important-human-aspect" class="md-nav__link">
+    Skills and the important human aspect
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1845,8 +1859,8 @@
 <h2 id="what-is-this-repo-for">What is this repo for?</h2>
 <p>Running Archipelago Commons on a live public instance using SSL with Blob/Object Storage backend </p>
 <ul>
-<li>Cloud based deployment. E.g AWS/Azure under Linux</li>
-<li>Self managed servers running Linux</li>
+<li>Cloud-based deployment, e.g. AWS/Azure under Linux</li>
+<li>Self-managed servers running Linux</li>
 <li>x86/AMD86 or ARM64/v8 CPU architectures</li>
 </ul>
 <h2 id="what-is-this-repo-not-for">What is this repo not for?</h2>
@@ -1868,10 +1882,17 @@
 </ul>
 <h3 id="os">OS:</h3>
 <ul>
-<li>Ubuntu 20.04 /Amazon Linux 2/Debian 10.9 / AlmaLinux (Centos replacement) matching your CPU archicture (of course)</li>
+<li>Ubuntu 20.04 /Amazon Linux 2/Debian 10.9 / AlmaLinux (Centos replacement) matching your CPU architecture (of course)</li>
 <li>Most recent <code>Docker</code> running as a service and <code>docker-compose</code></li>
-<li>Basic Unix/Linux terminal skills and a root/sudo account</li>
 </ul>
+<h3 id="skills-and-the-important-human-aspect">Skills and the important human aspect</h3>
+<ul>
+<li>Basic Unix/Linux terminal skills and a root/sudo account</li>
+<li><code>Docker</code> basics knowledge and how to manage packages in your System</li>
+<li>Knowledge of how to manage AWS/Azure or any other cloud-based provider for Computing Instances and S3 compatible Object Storage system and the associated permissions credentials to do so.</li>
+<li>To be patient. Please read everything. Do not skip steps. Do not only copy and paste commands. Explanations give context and might help you troubleshoot issues.</li>
+</ul>
+<p>Basically this guide is meant for humans with basic to medium <code>DevOps</code> background or humans with patience that are willing to troubleshoot, ask, and try again when that background is not (yet) enough. And we are here to help.</p>
 <h2 id="deployment-on-linuxx86amd-system">Deployment on Linux/X86/AMD system</h2>
 <h3 id="step-1">Step 1:</h3>
 <p>Deploy your base system</p>
@@ -1946,51 +1967,51 @@ MINIO_FOLDER_PREFIX_CACHE=iiifcache/
 <li><code>ARCHIPELAGO_DOMAIN</code>: a valid <strong>domain name</strong> for your repository. If not using your own it may be one provided by your Cloud provider. e.g http://ec2-xx-xxx-xxx-xx.compute-1.amazonaws.com. This domain will be also used to request your SSL Certificate via Certbot.</li>
 <li><code>MINIO_ACCESS_KEY</code>: If you are running a Cloud Service backed S3/Azure Storage this needs to be generated there. The user/IAM owner of this ACCESS KEY needs to have access to read/write the bucket you will configure in this same <code>.env</code>. If running local <code>min.io</code> whatever you set will be used.</li>
 <li><code>MINIO_SECRET_KEY</code>: If you are running a Cloud Service backed S3/Azure Storage this needs to generated there. The user/IAM owner of the matching SECRET_KEY needs to have access to read/write the bucket you will configure in this same <code>.env</code> file. If running local <code>min.io</code> whatever you set will be used.</li>
-<li><code>MYSQL_ROOT_PASSWORD</code>: The MYSQL 8 or Mariadb 15 password. This password will be used later also during Drupal deployment via <code>drush</code></li>
-<li><code>MINIO_BUCKET_MEDIA</code>: The name of your Persistant Storage Bucket. If using mini.io local we recommend keeping it simple. E.g <code>archipelago</code></li>
-<li><code>MINIO_FOLDER_PREFIX_MEDIA</code>: The <code>folder</code> (a prefix really) where your DO Storage and File storage will go inside the <code>MINIO_BUCKET_MEDIA</code> Bucket. <code>media/</code> is a <em>fine</em> name for this one and common in archipelago deployments.</li>
-<li><code>MINIO_BUCKET_CACHE</code>: The name of your IIIF Cache storage Bucket. May be the same as <code>MINIO_BUCKET_MEDIA</code>. If different make sure your your <code>MINIO_ACCESS_KEY</code> and/or IAM role ACL have permission to read write to this one too. </li>
-<li><code>MINIO_FOLDER_PREFIX_CACHE</code>:  The <code>folder</code> (a prefix really) where Cantaloupe will/can write its <code>iiif</code> caches. <code>iiifcache/</code> is a <em>lovely</em> name we use a lot.</li>
+<li><code>MYSQL_ROOT_PASSWORD</code>: The MYSQL 8 or Mariadb 15 password. This password will be used later also during Drupal deployment via <code>drush</code>.</li>
+<li><code>MINIO_BUCKET_MEDIA</code>: The name of your Persistant Storage Bucket. If using mini.io local we recommend keeping it simple, e.g. <code>archipelago</code>.</li>
+<li><code>MINIO_FOLDER_PREFIX_MEDIA</code>: The <code>folder</code> (a prefix really) where your DO Storage and File storage will go inside the <code>MINIO_BUCKET_MEDIA</code> Bucket. <code>media/</code> is a <em>fine</em> name for this one and common in archipelago deployments. <strong>IMPORTANT:</strong> Always terminate these with a <code>/</code>.</li>
+<li><code>MINIO_BUCKET_CACHE</code>: The name of your IIIF Cache storage Bucket. May be the same as <code>MINIO_BUCKET_MEDIA</code>. If different make sure your your <code>MINIO_ACCESS_KEY</code> and/or IAM role ACL have permission to read write to this one too.</li>
+<li><code>MINIO_FOLDER_PREFIX_CACHE</code>:  The <code>folder</code> (a prefix really) where Cantaloupe will/can write its <code>iiif</code> caches. <code>iiifcache/</code> is a <em>lovely</em> name we use a lot. <strong>IMPORTANT:</strong> Always terminate these with a <code>/</code>.</li>
 </ul>
 <p><code>IMPORTANT NOTE</code>: For AWS EC2. If your selected an <code>IAM role</code> for your server when setting it up/deploying it, <code>min.io</code> will use the AWS EC2 backed internal API to request access to your S3. This means the ROLE itself needs to have read/write access (ACL) to the given Bucket(s) and your key/secrets won't be able to override that. Please do not ignore this note. It will save you a LOT of frustration and coffee. You can also run an EC2 instace without a given IAM and in that case just the ACCESS_KEY/SECRET will matter.</p>
 <p>Now that you know, you also know that these values should be not <strong>shared</strong> and this <code>.env</code> file <strong>should not</strong> commited/kept in version control. Please be careful.</p>
 <p><code>docker-compose</code> will read this <code>.env</code> and start all services for you based on its content.</p>
 <p>Once you have modified this you are ready for your first big decision. </p>
 <h4 id="running-a-fully-qualified-domain-you-wish-a-validsigned-certificate-for-amdintel-architecture">Running a fully qualified domain you wish a valid/signed certificate for AMD/INTEL Architecture?</h4>
-<p>This means you will use the  <code>docker-compose-aws-s3.yml</code>. Do the following</p>
+<p>This means you will use the <code>docker-compose-aws-s3.yml</code>. Do the following:</p>
 <div class="highlight"><pre><span></span><code>cp deploy/ec2-docker/docker-compose-aws-s3.yml deploy/ec2-docker/docker-compose.yml
 </code></pre></div>
 <h4 id="running-a-fully-qualified-domain-you-wish-a-validsigned-certificate-for-arm64apple-m1-architecture">Running a fully qualified domain you wish a valid/signed certificate for ARM64/Apple M1 Architecture?</h4>
-<p>This means you will use the  <code>docker-compose-aws-s3-arm64.yml</code>. Do the following</p>
+<p>This means you will use the <code>docker-compose-aws-s3-arm64.yml</code>. Do the following</p>
 <div class="highlight"><pre><span></span><code>cp deploy/ec2-docker/docker-compose-aws-s3-arm64.yml deploy/ec2-docker/docker-compose.yml
 </code></pre></div>
 <h5 id="optional-expert-extra-domains-does-not-apply-to-arm64apple-m1-architecture">Optional (expert) extra domains (does not apply to ARM64/Apple M1 Architecture):</h5>
 <p>If you have more than a single domain you may create a text file inside 
 <code>config_storage/nginxconfig/certbot_extra_domains/your.domain.org</code> and write for each subdomain there an entry/line.</p>
 <h4 id="or-running-self-signed-optional-and-does-not-apply-to-arm64apple-m1-architecture">OR Running self-signed? (optional and does not apply to ARM64/Apple M1 Architecture):</h4>
-<p>Only if you are not running a fully qualified domain you wish a valid/signed</p>
+<p>Only if you are not running a fully qualified domain you wish a valid/signed. We <strong>really DO not</strong> recommend this route. IF you plan on using this deployment for local testing or running on non SSL please go for <a href="https://github.com/esmero/archipelago-deployment">https://github.com/esmero/archipelago-deployment</a> which delivers the same experience in less than 20 minutes deployment time.</p>
 <p>Generate a self signed Cert</p>
 <div class="highlight"><pre><span></span><code>sudo openssl req -x509 -nodes -days <span class="m">365</span> -newkey rsa:2048 -keyout data_storage/selfcert/private/nginx.key -out data_storage/selfcert/certs/nginx.crt 
 sudo openssl dhparam -out data_storage/selfcert/dhparam.pem <span class="m">4096</span>
 cp deploy/ec2-docker/docker-compose-selfsigned.yml deploy/ec2-docker/docker-compose.yml
 </code></pre></div>
 <p>Note: Self signed docker-compose.yml file is setup to use min.io with local storage</p>
-<div class="highlight"><pre><span></span><code>    <span class="nt">volumes</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">${ARCHIPELAGO_ROOT}/data_storage/minio-data:/data:cached</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${ARCHIPELAGO_ROOT}/data_storage/minio-data:/data:cached</span><span class="w"></span>
 </code></pre></div>
-<p>This folder will be created by min.io. If you are using a secondary Drive (e.g magnetic) you can modify your <code>deploy/ec2-docker/docker-compose.yml</code> to use a folder there e.g . </p>
-<div class="highlight"><pre><span></span><code>    <span class="nt">volumes</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/persistentinotherdrive/data_storage/minio-data:/data:cached</span>
+<p>This folder will be created by min.io. If you are using a secondary Drive (e.g. magnetic) you can modify your <code>deploy/ec2-docker/docker-compose.yml</code> to use a folder there e.g. </p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistentinotherdrive/data_storage/minio-data:/data:cached</span><span class="w"></span>
 </code></pre></div>
 <p>Make sure your logged in user can read/write to it.</p>
-<p>NOTE: If you want to use AWS S3 storage for the self signed version replace the minio Service YAML block with this <a href="https://github.com/esmero/archipelago-deployment-live/blob/e90cf7701f1ae8e0a580a0901aaadb669baa21fd/deploy/ec2-docker/docker-compose-aws-s3.yml#L108-L125">Service Block</a> in your new <code>deploy/ec2-docker/docker-compose.yml</code>. You can mix and match services and even remove all <code>:cached</code> statements for <em>improved</em> R/W volumen performance.</p>
+<p>NOTE: If you want to use AWS S3 storage for the self signed version replace the minio Service yaml block with this <a href="https://github.com/esmero/archipelago-deployment-live/blob/e90cf7701f1ae8e0a580a0901aaadb669baa21fd/deploy/ec2-docker/docker-compose-aws-s3.yml#L108-L125">Service Block</a> in your new <code>deploy/ec2-docker/docker-compose.yml</code>. You can mix and match services and even remove all <code>:cached</code> statements for <em>improved</em> R/W volumen performance.</p>
 <h3 id="step-4-first-run">Step 4. First Run</h3>
 <h4 id="first-permissions">First Permissions</h4>
 <div class="highlight"><pre><span></span><code>sudo chown -R <span class="m">100</span>:100 data_storage/iiifcache
 sudo chown -R <span class="m">8983</span>:8983 data_storage/solrcore
 </code></pre></div>
 <h4 id="actual-first-run">Actual first run</h4>
-<p>Time to spin our docker containers for the first time. We will start all without going into background so log/error checking is easier. Specially if you have selected a Valid/Signed Cert choice and also want to be sure S3 keys/access are working</p>
+<p>Time to spin our docker containers for the first time. We will start all without going into background so log/error checking is easier, especially if you have selected a Valid/Signed Cert choice and also want to be sure S3 keys/access are working.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> deploy/ec2-docker
 docker-compose up
 </code></pre></div>
@@ -2002,11 +2023,11 @@ Ok, let's assume your setup managed to request a valid signed SSL cert, you will
    certbot again. To non-interactively renew *all* of your
    certificates, run <span class="s2">&quot;certbot renew&quot;</span>
 </code></pre></div>
-<p>Archipelago will do that for you whenever its about to expire so no need to deal with this manually. Even when <code>docker-compose</code> restarts</p>
+<p>Archipelago will do that for you whenever it's about to expire so no need to deal with this manually, even when <code>docker-compose</code> restarts.</p>
 <p>Now press CTRL+C. <code>docker-compose</code> will shutdown gracefully. Good!</p>
 <h3 id="step-5-deploy-drupal">Step 5. Deploy Drupal</h3>
 <h4 id="composer-and-drupal">Composer and Drupal</h4>
-<p>Copy the shipped default composer.default.json to composer.json (ONLY if you are installing from scratch)</p>
+<p>Copy the shipped default composer.default.json to composer.json (ONLY if you are installing from scratch):</p>
 <div class="highlight"><pre><span></span><code>cp ../../drupal/composer.default.json ../../drupal/composer.json
 </code></pre></div>
 <p>Start Docker again</p>
@@ -2022,15 +2043,18 @@ docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quo
 </code></pre></div>
 <p>And now you can deploy Drupal! </p>
 <p><strong>IMPORTANT:</strong> Make sure you replace in the following command inside <code>root:MYSQL_ROOT_PASSWORD</code> the <code>MYSQL_ROOT_PASSWORD</code> string with the <strong>value</strong> you used/assigned in your <code>.env</code> file for <code>MYSQL_ROOT_PASSWORD</code>. And replace <code>ADMIN_PASSWORD</code> with a password that is safe and you won't forget! That passwords is for your Drupal super user (uid:0).</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;cd web;../vendor/bin/drush -y si --verbose config_installer  config_installer_sync_configure_form.sync_directory=/var/www/html/config/sync/ --db-url=mysql://root:MYSQL_ROOT_PASSWORD@esmero-db/drupal8 --account-name=admin --account-pass=ADMIN_PASSWORD -r=/var/www/html/web --sites-subdir=default --notify=false install_configure_form.enable_update_status_module=NULL install_configure_form.enable_update_status_emails=NULL;drush cr;chown -R www-data:www-data sites;&quot;</span>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti -u www-data esmero-php bash -c <span class="s2">&quot;cd web;../vendor/bin/drush -y si --verbose --existing-config --db-url=mysql://root:MYSQL_ROOT_PASSWORD@esmero-db/drupal9 --account-name=admin --account-pass=ADMIN_PASSWORD -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;&quot;</span>
 </code></pre></div>
 <h3 id="step-6-users-and-initial-content">Step 6. Users and initial Content.</h3>
-<p>After installation is done (may take a few) you can install initial users and assign them roles:</p>
+<p>After installation is done (may take a few) you can install initial users and assign them roles. Copy each line separately. A missing permission will not let you ingest the initial Metadata Displays and AMI set.</p>
 <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">&#39;drush ucrt demo --password=&quot;demo&quot;; drush urol metadata_pro &quot;demo&quot;&#39;</span>
-docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">&#39;drush ucrt jsonapi --password=&quot;jsonapi&quot;; drush urol metadata_api &quot;jsonapi&quot;&#39;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">&#39;drush ucrt jsonapi --password=&quot;jsonapi&quot;; drush urol metadata_api &quot;jsonapi&quot;&#39;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">&#39;drush urol administrator &quot;admin&quot;&#39;</span>
 </code></pre></div>
 <p>Before ingesting the base content we need to make sure we can access your <code>JSON-API</code> on for your new domain. That means we need to change internal urls (<code>https://esmero-web</code>) to the new valid SSL driven ones. This is easy:</p>
-<p>On your host machine (no need to <code>docker exec</code> these ones), replace first in the following command <code>your.domain.org</code> with the domain you setup in your <code>.env</code> file. Go to your base git clone folder and then run</p>
+<p>On your host machine (no need to <code>docker exec</code> these ones), replace first in the following command <code>your.domain.org</code> with the domain you setup in your <code>.env</code> file. Go to (cd into) <strong>your base git clone folder</strong> (Important: <strong>YOUR BASE CLONE FOLDER</strong>) and then run</p>
 <div class="highlight"><pre><span></span><code> sed -i <span class="s1">&#39;s/http:\/\/esmero-web/https:\/\/your.domain.org/g&#39;</span> drupal/scripts/archipelago/deploy.sh
  sed -i <span class="s1">&#39;s/http:\/\/esmero-web/https:\/\/your.domain.org/g&#39;</span> drupal/scripts/archipelago/update_deployed.sh
 </code></pre></div>
@@ -2055,7 +2079,7 @@ NOTE: We are passing the <code>-y</code> flag to <code>drush</code> avoid that w
 <p>Finally Done! Now you can log into your new Archipelago using <code>https</code> and start exploring. Thank you for following this guide!</p>
 <h2 id="deployment-on-arm64v8graviton-apple-m1-system">Deployment on ARM64/v8(Graviton, Apple M1) system:</h2>
 <p>This applies to AWS <code>m6g</code> and <code>t3g</code> Instances and is documented inline in this guide. Please open an <a href="https://github.com/esmero/archipelago-deployment-live/issues">ISSUE</a> in this repository if you run into any problems.
-Please review https://github.com/esmero/archipelago-deployment-live/blob/1.0.0-RC3/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml for more info</p>
+Please review <a href="https://github.com/esmero/archipelago-deployment-live/blob/1.0.0-RC3/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml">https://github.com/esmero/archipelago-deployment-live/blob/1.0.0-RC3/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml</a> for more info.</p>
 <h3 id="how-do-i-know-my-architecture">How do I know my Architecture?</h3>
 <p>Run </p>
 <div class="highlight"><pre><span></span><code>uname -m 
@@ -2167,10 +2191,10 @@ Please review https://github.com/esmero/archipelago-deployment-live/blob/1.0.0-R
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.0bbba5b5.min.js", "version": {"provider": "mike", "default": "default"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.22074ed6.min.js", "version": {"provider": "mike", "default": "default"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.649a939e.min.js"></script>
+      <script src="../assets/javascripts/bundle.1514a9a0.min.js"></script>
       
     
   </body>

@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/sslsetup/">
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f7951f6f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.cd566b2a.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -1424,87 +1424,87 @@ drwxr-xr-x  <span class="m">3</span>           <span class="m">8983</span> <span
 <details class="info">
 <summary>docker-compose.yml</summary>
 <p>**Be sure to replace youremail@gmail.com with your email address.</p>
-<div class="highlight"><pre><span></span><code> <span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3.5&#39;</span>
- <span class="nt">services</span><span class="p">:</span>
-   <span class="nt">web</span><span class="p">:</span>
-     <span class="nt">container_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">esmero-web</span>
-     <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">staticfloat/nginx-certbot</span>
-     <span class="nt">restart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
-     <span class="nt">environment</span><span class="p">:</span>
-       <span class="nt">CERTBOT_EMAIL</span><span class="p">:</span> <span class="s">&quot;youremail@gmail.com&quot;</span>
-     <span class="nt">ports</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="s">&quot;80:80&quot;</span>
-       <span class="p p-Indicator">-</span> <span class="s">&quot;443:443&quot;</span>
-     <span class="nt">volumes</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/persistent/nginx_conf/conf.d:/etc/nginx/user.conf.d:ro</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/persistent/nginx_conf/certbot_extra_domains:/etc/nginx/certbot/extra_domains:ro</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/persistent/drupal8:/var/www/html:cached</span>
-     <span class="nt">depends_on</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">solr</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">php</span>
-     <span class="nt">tty</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-     <span class="nt">networks</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">host-net</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
-   <span class="nt">php</span><span class="p">:</span>
-     <span class="nt">container_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">esmero-php</span>
-     <span class="nt">restart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
-     <span class="nt">image</span><span class="p">:</span> <span class="s">&quot;esmero/php-7.3-fpm:latest&quot;</span>
-     <span class="nt">tty</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-     <span class="nt">networks</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">host-net</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
-     <span class="nt">volumes</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">${PWD}:/var/www/html:cached</span>
-   <span class="nt">solr</span><span class="p">:</span>
-     <span class="nt">container_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">esmero-solr</span>
-     <span class="nt">restart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
-     <span class="nt">image</span><span class="p">:</span> <span class="s">&quot;solr:7.5.0&quot;</span>
-     <span class="nt">tty</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-     <span class="nt">ports</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="s">&quot;8983:8983&quot;</span>
-     <span class="nt">networks</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">host-net</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
-     <span class="nt">volumes</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/persistent/solrcore:/opt/solr/server/solr/mycores:cached</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/persistent/solrconfig:/drupalconfig:cached</span>
-     <span class="nt">entrypoint</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker-entrypoint.sh</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">solr-precreate</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">drupal</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/drupalconfig</span>
-   <span class="c1"># see https://hub.docker.com/_/mysql/</span>
-   <span class="nt">db</span><span class="p">:</span>
-     <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysql:5.7</span>
-     <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">--max_allowed_packet=256M</span>
-     <span class="nt">container_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">esmero-db</span>
-     <span class="nt">restart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
-     <span class="nt">environment</span><span class="p">:</span>
-       <span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">esmerodb</span>
-     <span class="nt">networks</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">host-net</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
-     <span class="nt">volumes</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/persistent/db:/var/lib/mysql:cached</span>
-   <span class="nt">iiif</span><span class="p">:</span>
-     <span class="nt">container_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">esmero-cantaloupe</span>
-     <span class="nt">image</span><span class="p">:</span> <span class="s">&quot;esmero/cantaloupe-s3:4.1.6&quot;</span>
-     <span class="nt">restart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
-     <span class="nt">ports</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="s">&quot;8183:8182&quot;</span>
-     <span class="nt">networks</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">host-net</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
-     <span class="nt">volumes</span><span class="p">:</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/persistent/iiifconfig:/etc/cantaloupe</span>
-       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/persistent/iiifcache:/var/cache/cantaloupe</span>
- <span class="nt">networks</span><span class="p">:</span>
-   <span class="nt">host-net</span><span class="p">:</span>
-     <span class="nt">driver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bridge</span>
-   <span class="nt">esmero-net</span><span class="p">:</span>
-     <span class="nt">driver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bridge</span>
-     <span class="nt">internal</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.5&#39;</span><span class="w"></span>
+<span class="w"> </span><span class="nt">services</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="nt">web</span><span class="p">:</span><span class="w"></span>
+<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-web</span><span class="w"></span>
+<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">staticfloat/nginx-certbot</span><span class="w"></span>
+<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
+<span class="w">     </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="nt">CERTBOT_EMAIL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;youremail@gmail.com&quot;</span><span class="w"></span>
+<span class="w">     </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;80:80&quot;</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;443:443&quot;</span><span class="w"></span>
+<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/nginx_conf/conf.d:/etc/nginx/user.conf.d:ro</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/nginx_conf/certbot_extra_domains:/etc/nginx/certbot/extra_domains:ro</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/drupal8:/var/www/html:cached</span><span class="w"></span>
+<span class="w">     </span><span class="nt">depends_on</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">solr</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">php</span><span class="w"></span>
+<span class="w">     </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">     </span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span><span class="w"></span>
+<span class="w">   </span><span class="nt">php</span><span class="p">:</span><span class="w"></span>
+<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-php</span><span class="w"></span>
+<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
+<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;esmero/php-7.3-fpm:latest&quot;</span><span class="w"></span>
+<span class="w">     </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">     </span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span><span class="w"></span>
+<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${PWD}:/var/www/html:cached</span><span class="w"></span>
+<span class="w">   </span><span class="nt">solr</span><span class="p">:</span><span class="w"></span>
+<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-solr</span><span class="w"></span>
+<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
+<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;solr:7.5.0&quot;</span><span class="w"></span>
+<span class="w">     </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">     </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8983:8983&quot;</span><span class="w"></span>
+<span class="w">     </span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span><span class="w"></span>
+<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/solrcore:/opt/solr/server/solr/mycores:cached</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/solrconfig:/drupalconfig:cached</span><span class="w"></span>
+<span class="w">     </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker-entrypoint.sh</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">solr-precreate</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drupal</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/drupalconfig</span><span class="w"></span>
+<span class="w">   </span><span class="c1"># see https://hub.docker.com/_/mysql/</span><span class="w"></span>
+<span class="w">   </span><span class="nt">db</span><span class="p">:</span><span class="w"></span>
+<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:5.7</span><span class="w"></span>
+<span class="w">     </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--max_allowed_packet=256M</span><span class="w"></span>
+<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-db</span><span class="w"></span>
+<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
+<span class="w">     </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmerodb</span><span class="w"></span>
+<span class="w">     </span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span><span class="w"></span>
+<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/db:/var/lib/mysql:cached</span><span class="w"></span>
+<span class="w">   </span><span class="nt">iiif</span><span class="p">:</span><span class="w"></span>
+<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-cantaloupe</span><span class="w"></span>
+<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;esmero/cantaloupe-s3:4.1.6&quot;</span><span class="w"></span>
+<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
+<span class="w">     </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8183:8182&quot;</span><span class="w"></span>
+<span class="w">     </span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span><span class="w"></span>
+<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/iiifconfig:/etc/cantaloupe</span><span class="w"></span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/iiifcache:/var/cache/cantaloupe</span><span class="w"></span>
+<span class="w"> </span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="nt">host-net</span><span class="p">:</span><span class="w"></span>
+<span class="w">     </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span><span class="w"></span>
+<span class="w">   </span><span class="nt">esmero-net</span><span class="p">:</span><span class="w"></span>
+<span class="w">     </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span><span class="w"></span>
+<span class="w">     </span><span class="nt">internal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div>
 </details>
 <p><em>Note: This file shows how the folders in Step 1 are being used, and how SSL is being automatically deployed and renewed (without any human interaction other than starting the docker-compose and watching the logs).</em></p>
@@ -1782,10 +1782,10 @@ docker ps
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.0bbba5b5.min.js", "version": {"provider": "mike", "default": "default"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.22074ed6.min.js", "version": {"provider": "mike", "default": "default"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.649a939e.min.js"></script>
+      <script src="../assets/javascripts/bundle.1514a9a0.min.js"></script>
       
     
   </body>
