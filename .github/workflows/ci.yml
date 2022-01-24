@@ -1,5 +1,6 @@
 name: ci 
 on:
+  workflow_dispatch:
   push:
     branches: 
       - 1.0.0-RC3
