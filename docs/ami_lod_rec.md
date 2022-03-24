@@ -86,7 +86,7 @@ You will see a table (form) containing:
 - A Checked option you can use to denote that an LoD mapping has been reviewed/revisioned
 - The Linked Data Label and URI/L pairing selected during the LoD reconciliation process
 
-    ![AMI Edit Reconciled LoD](images/amiAMIeditReconciledLoD.jpg)
+    ![AMI Edit Reconciled LoD](images/ami/AMIeditReconciledLoD.jpg)
 
 The results table will show 10 original terms and mappings per page. You can advance through the pages using the page numbers and navigational arrows above and below the table.
 
