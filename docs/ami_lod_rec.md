@@ -27,7 +27,7 @@ From the main AMI Sets List page, click on your AMI Set's Name, or select the 'E
 
 Navigate to the Reconcile LoD tab.
 
-	![Reconcile LoD Tab](images/ami/AMIreconcileLodTab.jpg)
+![Reconcile LoD Tab](images/ami/AMIreconcileLodTab.jpg)
 
 ## Step 3: LoD Reconciling Selections
 
@@ -37,7 +37,7 @@ Under the LoD Sources section, select how your chosen Columns will be LoD reconc
 - LoD reconcile options will be on the left, LoD Authority Sources will be on the right.
 - Example: 'local_subjects' will be mapped to 'LoC subjects (LCSH)'
 	
-	![AMI LoD Sources](images/ami/AMI_LodSources.jpg)
+![AMI LoD Sources](images/ami/AMI_LodSources.jpg)
 	
 ??? info "Full list of potential LoD Authority Sources"
 
@@ -62,7 +62,7 @@ Under the LoD Sources section, select how your chosen Columns will be LoD reconc
 
 To preview the values contained in the column(s) you selected, click the 'Inspect cleaned/split up column values' button.
 	
-	![AMI LoD](images/ami/AMIreconcileValuePreview.jpg)
+![AMI LoD](images/ami/AMIreconcileValuePreview.jpg)
 
 When you are ready, select the 'Process LoD from Source' button.
 
@@ -70,11 +70,11 @@ When you are ready, select the 'Process LoD from Source' button.
 
 Depending on the size of your AMI Set, the Reconciliation processing may take a few minutes. 
 	
-	![AMI LoD Reconciling Success](images/ami/AMIbatchReconcile.jpg)
+![AMI LoD Reconciling Success](images/ami/AMIbatchReconcile.jpg)
 
 When the process is finished, you will see a brief confirmation message.
 	
-	![AMI LoD Reconciling Success](images/ami/AMI_LodRecSuccess.jpg)
+![AMI LoD Reconciling Success](images/ami/AMI_LodRecSuccess.jpg)
 
 ## Step 4: Edit Reconciled LoD
 
@@ -86,7 +86,7 @@ You will see a table (form) containing:
 - A Checked option you can use to denote that an LoD mapping has been reviewed/revisioned
 - The Linked Data Label and URI/L pairing selected during the LoD reconciliation process
 
-	![AMI Edit Reconciled LoD](images/ami/AMIeditReconciledLoD.jpg)
+![AMI Edit Reconciled LoD](images/ami/AMIeditReconciledLoD.jpg)
 
 The results table will show 10 original terms and mappings per page. You can advance through the pages using the page numbers and navigational arrows above and below the table.
 
@@ -101,11 +101,11 @@ Review the LoD reconciliation mappings, to make sure the best terms were selecte
 
 As you advance through your review process, it is recommended that you use the 'Save Current LoD Page' at the bottom of each results page as you work. This will preserve the corrections you may have made and update the LoD Reconciled data for your AMI Set.
 
-	![AMI Edit Reconciled LoD](images/AMIreconcileSaveCurrentPageSuccess.jpg)
+![AMI Edit Reconciled LoD](images/AMIreconcileSaveCurrentPageSuccess.jpg)
 
 When you have finished, it is also recommended that you use the 'Save all LoD back to CSV File'.
 
-	![AMI Edit Reconciled LoD](images/AMIreconcileSaveAllSuccess.jpg)
+![AMI Edit Reconciled LoD](images/AMIreconcileSaveAllSuccess.jpg)
 
 _At this time, AMI's LoD Reconciliation processes from the results contained in the 'Edit Reconciled LoD' tab. In future AMI releases, the Processed Data CSV File will also be able to be manually updated and replaced, used for Reconciliation processing. For AMI 0.2.0, the Procssed Data CSV is for reference purposes only._
 
