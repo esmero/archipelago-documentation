@@ -22,6 +22,7 @@ Your source spreadsheet will also need to contain at least one column containing
 From the main AMI Sets List page, click on your AMI Set's Name, or select the 'Edit' option from the Operations menu on the right-hand side of the Sets list.
 
 	![AMI Sets List](images/ami/AMIsetsList.jpg)
+	![AMI Sets List](images/ami/AMIsetsList.jpg)
 
 ## Step 2: Reconcile LoD Tab
 
