@@ -101,11 +101,11 @@ Review the LoD reconciliation mappings, to make sure the best terms were selecte
 
 As you advance through your review process, it is recommended that you use the 'Save Current LoD Page' at the bottom of each results page as you work. This will preserve the corrections you may have made and update the LoD Reconciled data for your AMI Set.
 
-![AMI Edit Reconciled LoD](images/AMIreconcileSaveCurrentPageSuccess.jpg)
+![AMI Edit Reconciled LoD](images/ami/AMIreconcileSaveCurrentPageSuccess.jpg)
 
 When you have finished, it is also recommended that you use the 'Save all LoD back to CSV File'.
 
-![AMI Edit Reconciled LoD](images/AMIreconcileSaveAllSuccess.jpg)
+![AMI Edit Reconciled LoD](images/ami/AMIreconcileSaveAllSuccess.jpg)
 
 _At this time, AMI's LoD Reconciliation processes from the results contained in the 'Edit Reconciled LoD' tab. In future AMI releases, the Processed Data CSV File will also be able to be manually updated and replaced, used for Reconciliation processing. For AMI 0.2.0, the Procssed Data CSV is for reference purposes only._
 
