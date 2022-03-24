@@ -7,5 +7,5 @@ This documentation was generated with [Material for MkDocs](https://squidfunk.gi
 1. First, please see [this guide](giveortake.md) to set up the repo and branch locally and to create an issue and corresponding pull request.
 2. Install mkdocs-material and mike: `pip install mkdocs-material mike`.
 3. Make changes to local
-4. Run `mike deploy 1.0.0-RC3 default && mike serve` to see and test changes.
+4. Run `mike delete --all && mike deploy 1.0.0-RC3 default && mike set-default 1.0.0-RC3 && mike serve` to see and test changes.
 5. Follow the above guide to contribute the changes back.

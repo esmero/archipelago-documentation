@@ -11,7 +11,17 @@ nav:
   - Code of Conduct: CODE_OF_CONDUCT.md
   - Tags: tags.md
   - Instructions and Guides:
-    - Archipelago Deployment Quickstart: quickstart.md
+    - Archipelago-Deployment:
+      - Start: archipelago-deployment-readme.md
+      - Installing Archipelago Drupal 9 on OSX (macOS): archipelago-deployment-osx.md
+      - Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04: archipelago-deployment-ubuntu.md
+      - Adding Demo Archipelago Digital Objects (ADOs) to your Repository: archipelago-deployment-democontent.md
+      - Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3): archipelago-deployment-upgradeFromD8ToD9.md
+    - Archipelago-Deployment-Live:
+      - Start: archipelago-deployment-live-readme.md
+      - Github Workflow: archipelago-deployment-live-gitworkflow.md
+      - Moving from archipelago-deployment to archipelago-deployment-live: archipelago-deployment-live-moveToLive.md
+      - Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3): archipelago-deployment-live-upgradeFromD8ToD9.md
     - Archipelago 101:
       - Site Administration & Configuration:
         - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
