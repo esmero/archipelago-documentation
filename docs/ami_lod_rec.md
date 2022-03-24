@@ -121,10 +121,10 @@ In the following example Twig snippet, the "subject_loc" JSON key will map corre
 "subject_loc": {{ data_lod.mods_subject_topic.loc_subjects_thing|json_encode|raw }},
 ```
  
- 	- "subject_loc" = destination JSON Key or Property for your LoD values
-        - data.lod = directs the Twig template to source from the Processed Data LoD information (instead of the original AMI Source CSV accessed via 'data.xx_property_name')
-	- mods.subject.topic = the Column header in the original AMI Source CSV
-	- loc_subjects_thing = the Column containing the Label and URI/L pairs in the Processed Data LoD editable Table/Form (and reference CSV)
+- "subject_loc" = destination JSON Key or Property for your LoD values
+- data.lod = directs the Twig template to source from the Processed Data LoD information (instead of the original AMI Source CSV accessed via 'data.xx_property_name')
+- mods.subject.topic = the Column header in the original AMI Source CSV
+- loc_subjects_thing = the Column containing the Label and URI/L pairs in the Processed Data LoD editable Table/Form (and reference CSV)
 
 The same general pattern can be adapted to apply to different mapping scenarios (original CSV source columns to Reconciled LoD Sources) as needed.
 
