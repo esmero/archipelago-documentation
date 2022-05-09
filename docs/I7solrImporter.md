@@ -1,5 +1,5 @@
 ---
-title: sing the Islandora 7 Solr Importer
+title: Using the Islandora 7 Solr Importer
 tags:
   - AMI
   - Archipelago Multi Importer
