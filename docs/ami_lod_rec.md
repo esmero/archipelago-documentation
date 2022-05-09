@@ -107,7 +107,7 @@ When you have finished, it is also recommended that you use the 'Save all LoD ba
 
 ![AMI Edit Reconciled LoD](images/ami/AMIreconcileSaveAllSuccess.jpg)
 
-_At this time, AMI's LoD Reconciliation processes from the results contained in the 'Edit Reconciled LoD' tab. In future AMI releases, the Processed Data CSV File will also be able to be manually updated and replaced, used for Reconciliation processing. For AMI 0.2.0, the Procssed Data CSV is for reference purposes only._
+_At this time, AMI's LoD Reconciliation processes from the results contained in the 'Edit Reconciled LoD' tab. In future AMI releases, the Processed Data CSV File will also be able to be manually updated and replaced, used for Reconciliation processing. For AMI 0.2.0, the Processed Data CSV is for reference purposes only._
 
 ## Step 6: AMI Set Review and Twig (Metadata Display) Preparation
 
