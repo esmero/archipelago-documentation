@@ -12,14 +12,14 @@
         <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
       
       
-        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/acknowledgments/">
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/ami_lod_rec/">
       
       <link rel="icon" href="../images/strawberries_color.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.14">
     
     
       
-        <title>Care & Coding + Fixing / Acknowledgments / License - Archipelago Documentation</title>
+        <title>Using AMI's Linked Date Reconciliation - Archipelago Documentation</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#caring-coding-fixing" class="md-skip">
+        <a href="#using-amis-linked-data-reconciliation" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Care & Coding + Fixing / Acknowledgments / License
+              Using AMI's Linked Date Reconciliation
             
           </span>
         </div>
@@ -1326,21 +1326,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../acknowledgments/" class="md-nav__link">
         Care & Coding + Fixing / Acknowledgments / License
       </a>
-      
     </li>
   
 
@@ -1365,6 +1355,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#important-note-preliminary-pre-requisite-ami-set-configuration" class="md-nav__link">
+    Important Note: Preliminary / Pre-requisite AMI Set Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-select-the-ami-set-you-will-be-working-with" class="md-nav__link">
+    Step 1: Select the AMI Set you will be working with.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-reconcile-lod-tab" class="md-nav__link">
+    Step 2: Reconcile LoD Tab
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-lod-reconciling-selections" class="md-nav__link">
+    Step 3: LoD Reconciling Selections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-edit-reconciled-lod" class="md-nav__link">
+    Step 4: Edit Reconciled LoD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-review-and-edit-your-reconciled-lod-mappings" class="md-nav__link">
+    Step 5: Review and Edit your Reconciled LoD Mappings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-ami-set-review-and-twig-metadata-display-preparation" class="md-nav__link">
+    Step 6: AMI Set Review and Twig (Metadata Display) Preparation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-ami-set-processing-preparation" class="md-nav__link">
+    Step 7: AMI Set Processing Preparation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-queue-manager-if-not-processing-immediately" class="md-nav__link">
+    Step 8: Queue Manager (if not Processing immediately)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-processing-and-ado-creation" class="md-nav__link">
+    Step 9: Processing and ADO Creation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10-review-your-newly-created-digital-objects" class="md-nav__link">
+    Step 10: Review your newly created Digital Objects
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1380,17 +1455,145 @@
 
 
 
-<h1 id="caring-coding-fixing">Caring &amp; Coding + Fixing</h1>
+<h1 id="using-amis-linked-data-reconciliation">Using AMI's Linked Data Reconciliation</h1>
+<p>Archipelago Multi Importer (AMI)'s Linked Data Reconciliation tool can be used to enrich your metadata with Linked Data (LoD). Using this tool, you can map values from your topical/subject metadata elements to your preferred LoD vocabulary source. These mappings can then be transformed via a corresponding Metadata Display (Twig) template to process the values into JSON-formatted metadata for your specified AMI set.</p>
+<p><em>The aim of this tool is to automize as much of the reconciliation process as feasible within Archipelago. Please be aware that data reconciliation will still be in part a manual and potentially time intensive process.</em></p>
+<h3 id="important-note-preliminary-pre-requisite-ami-set-configuration">Important Note: Preliminary / Pre-requisite AMI Set Configuration</h3>
+<p>In order to Reconciliate an AMI Set, you will need to have selected the 'Template' or 'Custom' (then also, via 'Template' for your Digital Object or Collection types) during <a href="https://docs.archipelago.nyc/1.0.0-RC3/ami_spreadsheet_overview/#step-3-data-transformation-selections">Step 3 : Data Transformation</a> of your AMI Set configuration.</p>
+<p>Your source spreadsheet will also need to contain at least one column containing terms/names (values) you want to reconcile against an LoD Authority Source. Multiple values should be separated by '|@|'.</p>
+<h2 id="step-1-select-the-ami-set-you-will-be-working-with">Step 1: Select the AMI Set you will be working with.</h2>
+<p>From the main AMI Sets List page, click on your AMI Set's Name, or select the 'Edit' option from the Operations menu on the right-hand side of the Sets list.</p>
+<p><img alt="AMI Sets List" src="../images/ami/AMIsetsList.jpg" /></p>
+<h2 id="step-2-reconcile-lod-tab">Step 2: Reconcile LoD Tab</h2>
+<p>Navigate to the Reconcile LoD tab.</p>
+<p><img alt="Reconcile LoD Tab" src="../images/ami/AMIreconcileLodTab.jpg" /></p>
+<h2 id="step-3-lod-reconciling-selections">Step 3: LoD Reconciling Selections</h2>
+<p>From the list of columns from your spreadsheet source, select which columns you want to reconcile against LoD providers. </p>
+<p>Under the LoD Sources section, select how your chosen Columns will be LoD reconciled.
+- LoD reconcile options will be on the left, LoD Authority Sources will be on the right.
+- Example: 'local_subjects' will be mapped to 'LoC subjects (LCSH)'</p>
+<p><img alt="AMI LoD Sources" src="../images/ami/AMI_LodSources.jpg" /></p>
+<details class="info">
+<summary>Full list of potential LoD Authority Sources</summary>
+</details>
 <ul>
-<li><a href="https://github.com/DiegoPino">Diego Pino</a></li>
-<li><a href="https://github.com/giancarlobi">Giancarlo Birello</a></li>
-<li><a href="https://github.com/alliomeria">Allison Lund</a></li>
-<li><a href="https://github.com/aksm">Albert Min</a></li>
+<li>LoC subjects(LCSH)</li>
+<li>LoC Name Authority File (LCNAF)</li>
+<li>LoC Genre/Form Terms (LCGFT)</li>
+<li>LoC Thesaurus of Graphic Materials (TGN)</li>
+<li>LoC MARC List for Geographic Areas</li>
+<li>LoC Relators Vocabulary (Roles)</li>
+<li>LoC MADS RDF by type:<ul>
+<li>Corporate Name</li>
+<li>Personal Name</li>
+<li>Family Name</li>
+<li>Topic</li>
+<li>Genre Form</li>
+<li>Geographic</li>
+<li>Temporal</li>
+<li>Extraterrestrial Area</li>
 </ul>
-<h1 id="acknowledgments">Acknowledgments</h1>
-<p>This software is a <a href="https://metro.org">Metropolitan New York Library Council</a> Open-Source initiative and part of the Archipelago Commons project.</p>
-<h1 id="license">License</h1>
-<p><a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3</a></p>
+</li>
+<li>VIAF</li>
+<li>Getty aat Fuzzy / Terms / Exact Label Match</li>
+<li>Wikidata Q Items</li>
+</ul>
+<p>To preview the values contained in the column(s) you selected, click the 'Inspect cleaned/split up column values' button.</p>
+<p><img alt="AMI LoD" src="../images/ami/AMIreconcileValuePreview.jpg" /></p>
+<p>When you are ready, select the 'Process LoD from Source' button.</p>
+<p><em>Important note: if you have previously run LoD Reconciliation for your AMI set, this action will overwrite any manually corrected LoD on your Processed CSV. Please make sure you have a backup if unsure.</em></p>
+<p>Depending on the size of your AMI Set, the Reconciliation processing may take a few minutes. </p>
+<p><img alt="AMI LoD Reconciling Success" src="../images/ami/AMIbatchReconcile.jpg" /></p>
+<p>When the process is finished, you will see a brief confirmation message.</p>
+<p><img alt="AMI LoD Reconciling Success" src="../images/ami/AMI_LodRecSuccess.jpg" /></p>
+<h2 id="step-4-edit-reconciled-lod">Step 4: Edit Reconciled LoD</h2>
+<p>Open the 'Edit Reconciled LoD' tab.</p>
+<p>You will see a table (form) containing:
+- Your Original term values (labels)
+- The CSV Column Header/Key from the source spreadsheet where the value is found
+- A Checked option you can use to denote that an LoD mapping has been reviewed/revisioned
+- The Linked Data Label and URL pairing selected during the LoD reconciliation process</p>
+<p><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIeditReconciledLoD.jpg" /></p>
+<p>The results table will show 10 original terms and mappings per page. You can advance through the pages using the page numbers and navigational arrows above and below the table.</p>
+<h2 id="step-5-review-and-edit-your-reconciled-lod-mappings">Step 5: Review and Edit your Reconciled LoD Mappings</h2>
+<p>Review the LoD reconciliation mappings, to make sure the best terms were selected for your metadata.</p>
+<ul>
+<li>To revise and select a different term mapping, begin by typing in the 'Label' box in the corresponding LoD lookup element. (You can type directly over an incorrect term or within an empty cell if no value was mapped/identified.)</li>
+<li>Select your preferred term and URL pairing from the list.</li>
+<li>You can also add or remove multiple mappings using the +/- buttons beside the LoD lookup element.</li>
+<li>If desired, click the Checked option to mark that the term was reviewed/revisioned.</li>
+</ul>
+<p>As you advance through your review process, it is recommended that you use the 'Save Current LoD Page' at the bottom of each results page as you work. This will preserve the corrections you may have made and update the LoD Reconciled data for your AMI Set.</p>
+<p><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIreconcileSaveCurrentPageSuccess.jpg" /></p>
+<p>When you have finished, it is also recommended that you use the 'Save all LoD back to CSV File'.</p>
+<p><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIreconcileSaveAllSuccess.jpg" /></p>
+<p><em>At this time, AMI's LoD Reconciliation processes from the results contained in the 'Edit Reconciled LoD' tab. In future AMI releases, the Processed Data CSV File will also be able to be manually updated and replaced, used for Reconciliation processing. For AMI 0.2.0, the Processed Data CSV is for reference purposes only.</em></p>
+<h2 id="step-6-ami-set-review-and-twig-metadata-display-preparation">Step 6: AMI Set Review and Twig (Metadata Display) Preparation</h2>
+<p>You will now need to make sure that the Metadata Display (Twig) Template you selected to use during your initial AMI Set configuration is setup to Process your LoD mapped Label and URL selections into your Digital Objects and Collections JSON metadata.</p>
+<p>For every JSON key/element in your metadata that you need to process the LoD Reconciled data into, you need to specify in your Template that data for this element will be read from the 'Processed Data' LoD information. </p>
+<p>In the following example Twig snippet, the "subject_loc" JSON key will map corresponding values from the 'Processed Data' (data.lod) LoD information into a newly created Digital Object/Collection during the AMI Set Processing.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;subject_loc&quot;</span>: <span class="o">{{</span> data_lod.mods_subject_topic.loc_subjects_thing<span class="p">|</span>json_encode<span class="p">|</span>raw <span class="o">}}</span>,
+</code></pre></div>
+<ul>
+<li>"subject_loc" = destination JSON Key or Property for your LoD values</li>
+<li>data.lod = directs the Twig template to source from the Processed Data LoD information (instead of the original AMI Source CSV accessed via 'data.xx_property_name')</li>
+<li>mods.subject.topic = the Column header in the original AMI Source CSV</li>
+<li>loc_subjects_thing = the Column containing the Label and URI/L pairs in the Processed Data LoD editable Table/Form (and reference CSV)</li>
+</ul>
+<p>The same general pattern can be adapted to apply to different mapping scenarios (original CSV source columns to Reconciled LoD Sources) as needed.</p>
+<details class="info">
+<summary>Full list of Column Options =&gt; Corresponding LoD Sources</summary>
+</details>
+<ul>
+<li>'loc_subjects_thing' =&gt; LoC subjects(LCSH)</li>
+<li>'loc_names_thing' =&gt; LoC Name Authority File (LCNAF)</li>
+<li>'loc_genreForms_thing' =&gt; LoC Genre/Form Terms (LCGFT)</li>
+<li>'loc_graphicMaterials_thing' =&gt; LoC Thesaurus of Graphic Materials (TGN)</li>
+<li>'loc_geographicAreas_thing' =&gt; LoC MARC List for Geographic Areas</li>
+<li>'loc_relators_thing' =&gt; LoC Relators Vocabulary (Roles)</li>
+<li>'loc_rdftype_CorporateName' =&gt; LoC MADS RDF by type: Corporate Name</li>
+<li>'loc_rdftype_PersonalName' =&gt; LoC MADS RDF by type: Personal Name</li>
+<li>'loc_rdftype_FamilyName' =&gt; LoC MADS RDF by type: Family Name</li>
+<li>'loc_rdftype_Topic' =&gt; LoC MADS RDF by type: Topic</li>
+<li>'loc_rdftype_GenreForm' =&gt;  LoC MADS RDF by type: Genre Form</li>
+<li>'loc_rdftype_Geographic' =&gt; LoC MADS RDF by type: Geographic</li>
+<li>'loc_rdftype_Temporal' =&gt;  LoC MADS RDF by type: Temporal</li>
+<li>'loc_rdftype_ExtraterrestrialArea' =&gt; LoC MADS RDF by type: Extraterrestrial Area <img alt="👾" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f47e.svg" title=":space_invader:" /></li>
+<li>'viaf_subjects_thing' =&gt; VIAF</li>
+<li>'getty_aat_fuzzy' =&gt; Getty aat Fuzzy</li>
+<li>'getty_aat_terms' =&gt; Getty aat Terms</li>
+<li>'getty_aat_exact' =&gt; Getty aat Exact Label Match</li>
+<li>'wikidata_subjects_thing' =&gt; Wikidata Q Items</li>
+</ul>
+<h2 id="step-7-ami-set-processing-preparation">Step 7: AMI Set Processing Preparation</h2>
+<p>When you have finished preparing your Template(s) as needed and completed your LoD Reconiliation Review, your AMI Set with LoD Reconciled Data will now need to be Processed.</p>
+<p>To Process this set, navigate to the <code>Process</code> tab. You will have multiple options related to the Processing outcome for your AMI Set. 
+- Select the "Desired ADOS Statuses After Process" for both Digital Objects (and Digital Object Collections, if also part of your ingest).
+    - The Statuses you have available will reflect the publication workflow/moderation states (such as Draft, Published, Archived/Unpublished) setup in your Archipelago instance, and the permissions associated your user account.  <br />
+- Option 1: <em>'Enqueue but do not process Batch'</em>. Check this to enqueue but not trigger the interactive Batch processing. Cron or any other mechanism you have enabled will do the actual operation. This queue is shared by all AMI Sets in this repository and will be processed on a First-In First-Out basis.
+- Option 2: <em>'Force every File attached to an ADO to be processed in its own Queue item'</em>.  Warning: This may make your ingest slower. Check this to force every file attached to an ADO to be downloaded and characterized as an independent process. This bypasses the Number of files Global setting that would otherwise trigger this behavior.
+- Option 3: <em>'Re download and reprocess every file'</em>. Check this to force every file attached to an ADO to be downloaded and characterized again, even if on a previous Batch run that data was already generated for reuse. Needed if e.g the URL of a file is the same but the remote source changed.
+- Select <code>Confirm</code> to continue. </p>
+<p><img alt="AMI Admin Set Process" src="../images/ami/AMIsetAdminProcessRC2.jpg" /></p>
+<p>You may also select <code>Process</code> from the <code>Operations</code> menu for the AMI set from the main <code>AMI sets</code> page.</p>
+<p><img alt="AMI Sets Admin Process Operations Menu" src="../images/ami/AMISetAdminProcessOpsMenu.jpg" /></p>
+<p>If you chose to 'Confirm" and Process your AMI Set immediately, proceed to Step 9: Processing and ADO Creation.   </p>
+<h2 id="step-8-queue-manager-if-not-processing-immediately">Step 8: Queue Manager (if not Processing immediately)</h2>
+<p>If you chose to place your AMI set in the Queue to Process in step 7, you may need to navigate to the Queue Manager found at <code>/admin/config/system/queue-ui</code>. (Be sure to select the <code>Queue Manager</code> under the System section, not the <code>Queue Manager for Hydroponic Service</code> under the Archipelago section). If the Queue operations for your Archipelago instance have been configured, you can simply leave your AMI Set in the Queue for Processing on the preconfigured schedule.</p>
+<p><img alt="AMI Queue Manager" src="../images/ami/AMIqueueMgr.jpg" /></p>
+<p>To Process your AMI Set immediately from the Queue Manager page, select the checkbox next to the 'AMI Digital Object Ingester Queue Worker'. Keep the <code>Action</code> menu set to <code>Batch Process</code> and click the <code>Apply to selected items</code> button.</p>
+<p><img alt="AMI Queue Manager Batch" src="../images/ami/AMIqueueMgrBatchProcess.jpg" /></p>
+<h2 id="step-9-processing-and-ado-creation">Step 9: Processing and ADO Creation</h2>
+<p>Your AMI set will now be Processed. You can follow the set's progress through the <code>Processing queues</code> loading screen.</p>
+<p><img alt="AMI Processing Queues" src="../images/ami/AMIprocessingQueue.jpg" /></p>
+<p>After your AMI set is Processed, you will receive confirmation messages letting you know your Digital Objects were successfully created. </p>
+<p><img alt="AMI Set Succes" src="../images/ami/AMIsetSuccessRC2.jpg" /></p>
+<p>From this message, you can click on each ADO title to review the new created Digital Object (or Collection) if you wish. Or, you may proceed to step 10.  </p>
+<h2 id="step-10-review-your-newly-created-digital-objects">Step 10: Review your newly created Digital Objects</h2>
+<p>Return to the main Content page found at <code>/admin/content</code> and review your newly created Digital Objects. After ensuring that files and metadata elements were mapped correctly, you may choose to change the Status for your Digital Objects to 'Published'. Celebrate your AMI success with a fresh coffee, tea, or cookie!</p>
+<hr />
+<p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
+<p>Return to the <a href="..">Archipelago Documentation main page</a>.</p>
 
               
             </article>
@@ -1405,26 +1608,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../about/" class="md-footer__link md-footer__link--prev" aria-label="Previous: About This Documentation" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              About This Documentation
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
