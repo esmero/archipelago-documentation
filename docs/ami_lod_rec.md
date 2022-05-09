@@ -84,7 +84,7 @@ You will see a table (form) containing:
 - Your Original term values (labels)
 - The CSV Column Header/Key from the source spreadsheet where the value is found
 - A Checked option you can use to denote that an LoD mapping has been reviewed/revisioned
-- The Linked Data Label and URI/L pairing selected during the LoD reconciliation process
+- The Linked Data Label and URL pairing selected during the LoD reconciliation process
 
 ![AMI Edit Reconciled LoD](images/ami/AMIeditReconciledLoD.jpg)
 
@@ -95,7 +95,7 @@ The results table will show 10 original terms and mappings per page. You can adv
 Review the LoD reconciliation mappings, to make sure the best terms were selected for your metadata.
 
 - To revise and select a different term mapping, begin by typing in the 'Label' box in the corresponding LoD lookup element. (You can type directly over an incorrect term or within an empty cell if no value was mapped/identified.)
-- Select your preferred term and URI/L pairing from the list.
+- Select your preferred term and URL pairing from the list.
 - You can also add or remove multiple mappings using the +/- buttons beside the LoD lookup element.
 - If desired, click the Checked option to mark that the term was reviewed/revisioned.
 
@@ -111,7 +111,7 @@ _At this time, AMI's LoD Reconciliation processes from the results contained in 
 
 ## Step 6: AMI Set Review and Twig (Metadata Display) Preparation
 
-You will now need to make sure that the Metadata Display (Twig) Template you selected to use during your initial AMI Set configuration is setup to Process your LoD mapped Label and URI/L selections into your Digital Objects and Collections JSON metadata.
+You will now need to make sure that the Metadata Display (Twig) Template you selected to use during your initial AMI Set configuration is setup to Process your LoD mapped Label and URL selections into your Digital Objects and Collections JSON metadata.
 
 For every JSON key/element in your metadata that you need to process the LoD Reconciled data into, you need to specify in your Template that data for this element will be read from the 'Processed Data' LoD information. 
 
