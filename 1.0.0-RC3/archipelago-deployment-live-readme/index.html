@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0-RC3/archipelago-deployment-live-readme/">
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
@@ -311,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tags.md" class="md-nav__link">
+      <a href="../tags.html" class="md-nav__link">
         Tags
       </a>
     </li>
@@ -1905,14 +1905,6 @@
 
   
 
-  <nav class="md-tags" >
-    
-      
-        <span class="md-tag">Archipelago-deployment-live</span>
-      
-    
-  </nav>
-
 
 
 <p>--&gt;</p>
@@ -2069,7 +2061,12 @@ cp deploy/ec2-docker/docker-compose-selfsigned.yml deploy/ec2-docker/docker-comp
 <p>NOTE: If you want to use AWS S3 storage for the self signed version replace the minio Service yaml block with this <a href="https://github.com/esmero/archipelago-deployment-live/blob/e90cf7701f1ae8e0a580a0901aaadb669baa21fd/deploy/ec2-docker/docker-compose-aws-s3.yml#L108-L125">Service Block</a> in your new <code>deploy/ec2-docker/docker-compose.yml</code>. You can mix and match services and even remove all <code>:cached</code> statements for <em>improved</em> R/W volumen performance.</p>
 <h3 id="step-4-first-run">Step 4. First Run</h3>
 <h4 id="first-permissions">First Permissions</h4>
+<p>If running on an <code>x86(64 bit)</code> processor system:</p>
 <div class="highlight"><pre><span></span><code>sudo chown -R <span class="m">100</span>:100 data_storage/iiifcache
+sudo chown -R <span class="m">8983</span>:8983 data_storage/solrcore
+</code></pre></div>
+<p>But if running on <code>ARM(64 bit)</code> processor system (Cantaloupe user differs and has UID 1000):</p>
+<div class="highlight"><pre><span></span><code>sudo chown -R <span class="m">1000</span>:1000 data_storage/iiifcache
 sudo chown -R <span class="m">8983</span>:8983 data_storage/solrcore
 </code></pre></div>
 <h4 id="actual-first-run">Actual first run</h4>
@@ -2255,10 +2252,10 @@ Please review <a href="https://github.com/esmero/archipelago-deployment-live/blo
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a877e258.min.js"></script>
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
     
   </body>
