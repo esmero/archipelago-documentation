@@ -217,10 +217,20 @@ NOTE: If you want to use AWS S3 storage for the self signed version replace the 
 
 #### First Permissions
 
+If running on an `x86(64 bit)` processor system:
+
 ```shell
 sudo chown -R 100:100 data_storage/iiifcache
 sudo chown -R 8983:8983 data_storage/solrcore
 ```
+
+But if running on `ARM(64 bit)` processor system (Cantaloupe user differs and has UID 1000):
+
+```shell
+sudo chown -R 1000:1000 data_storage/iiifcache
+sudo chown -R 8983:8983 data_storage/solrcore
+```
+
 
 #### Actual first run
 
