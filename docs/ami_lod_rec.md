@@ -1,5 +1,5 @@
 ---
-title: Using AMI's Linked Date Reconciliation
+title: Using AMI's Linked Data Reconciliation
 tags:
   - AMI
   - Archipelago Multi Importer
