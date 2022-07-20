@@ -56,7 +56,7 @@ In this step you will need to make determinations on how you would like to map y
 
 ## Step 3: Data Transformation Selections
 
-Select the data transformation approach--how your source data will be transformed into ADO (Archipelago Digital Object) Metadata. As noted in the list below, **'Custom (Expert Mode)'** is the recommended choice for AMI sets generated using the Islandora 7 Solr Impoter plugin.
+Select the data transformation approach--how your source data will be transformed into ADO (Archipelago Digital Object) Metadata. As noted in the list below, **'Custom (Expert Mode)'** is the recommended choice for AMI sets generated using the Islandora 7 Solr Importer plugin.
 
 - You will have 3 options for your data transformation approach:
     1. Direct
@@ -118,7 +118,7 @@ While you may immediately select "Process" from this AMI Set Confirmation page t
 
 Whether you have chosen to review your .csv file or not, your newly created AMI Set will now need to be Processed.
 
-On the main AMI set page, you can review the configurations and Source Data File for your set (determined by your selections in the preceeding steps).
+On the main AMI set page, you can review the configurations and Source Data File for your set (determined by your selections in the preceding steps).
 
 ![AMI Set Admin Review](images/ami/AMIsetAdminReview.jpg)
 
