@@ -39,7 +39,7 @@ nav:
             - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
             - Linked Data Reconciliation: ami_lod_rec.md
             - Using the Islandora 7 Solr Importer: I7solrImporter.md
-            - Configuration for Google Sheets API: googleapi.md	  
+            - Configuration for Google Sheets API: googleapi.md
         - Annotations: annotations.md
     - Site Administration & Configuration:
       - Strawberryfield Formatters: strawberryfield-formatters.md
