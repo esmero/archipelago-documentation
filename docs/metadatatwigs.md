@@ -70,8 +70,8 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
 You can find these templates here:
 
 - On Github:
-    - [Local Deployment](https://github.com/esmero/archipelago-deployment/tree/1.0.0-RC3/d8content/metadatadisplays)
-    - [Live/Production Deployment](https://github.com/esmero/archipelago-deployment-live/tree/1.0.0-RC3/drupal/d8content/metadatadisplays)
+    - [Local Deployment](https://github.com/esmero/archipelago-deployment/tree/1.0.0/d8content/metadatadisplays)
+    - [Live/Production Deployment](https://github.com/esmero/archipelago-deployment-live/tree/1.0.0/drupal/d8content/metadatadisplays)
 - In your local instance: http://localhost:8001/metadatadisplay/list
 - In your live instance: https://yourdomain.org/metadatadisplay/list
 

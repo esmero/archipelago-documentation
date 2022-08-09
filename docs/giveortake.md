@@ -48,7 +48,7 @@ The gist is:
 
 As a best practice, we encourage pull requests to discuss/fix existing code, new code, and documention changes.
 
-For the full step-by-step workflow, we will use [Archipelago Documentation](https://github.com/esmero/archipelago-documentation) and the `1.0.0-RC3` branch as example. The same applies to any of the other repositories: just change the remote urls and use the most current branch name.
+For the full step-by-step workflow, we will use [Archipelago Documentation](https://github.com/esmero/archipelago-documentation) and the `1.0.0` branch as example. The same applies to any of the other repositories: just change the remote urls and use the most current branch name.
 
 ### Example: Set Up Archipelago Documentation GitHub Repository
 
@@ -57,7 +57,7 @@ Fork the [Archipelago Documentation Upstream](https://github.com/esmero/archipel
 ```Shell
 $ git clone https://github.com/YOU/archipelago-documentation
 $ cd archipelago-documentation
-$ git checkout 1.0.0-RC3
+$ git checkout 1.0.0
 ```
 
 ### Set Up Git Remote As `upstream`
@@ -65,7 +65,7 @@ $ git checkout 1.0.0-RC3
 ```Shell
 $ git remote add upstream https://github.com/esmero/archipelago-documentation
 $ git fetch upstream
-$ git merge upstream/1.0.0-RC3
+$ git merge upstream/1.0.0
 ...
 ```
 

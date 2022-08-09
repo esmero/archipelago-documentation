@@ -15,17 +15,17 @@ You can access AMI through the `AMI Sets` tab on the main Content page found at 
 
 ![AMI Sets List](images/ami/AMIsetsList.jpg)
 
-## AMI Overview and Pre-Release Notes - AMI 0.1.0 (Archipelago - 1.0.0-RC3)
+## AMI Overview and Pre-Release Notes - AMI 0.4.0 (Archipelago - 1.0.0)
 
 *From the desk of [Diego Pino](https://github.com/DiegoPino)*
 
 AMI provides Tabulated data ingest for ADOs with customizable input plugins. Each Spreadsheet (or Google Spreadsheet) goes through a Configuration Multi Step setup and generates at the end an AMI Set. AMI Sets then can be enqueued or directly ingested, its generated Objects purged and reingested again, its source data (generated and enriched with UUIDS) CSV replaced, improved and uploaded again and ingested.
 
-??? info "Click to read the full AMI 0.1.0 (Archipelago - 1.0.0-RC3) Pre-Release Notes."
+??? info "Click to read the full AMI 0.4.0 (Archipelago - 1.0.0) Pre-Release Notes."
 
     #### Setup Steps
     
-    AMI has Ingest, Update and Patch capabilities. AMI has a plugin system to fetch data. The data can come from multiple sources and right now (RC2) CSV/EXCEL or Google Spreadsheets are the ones enabled. Direct from Solr/OAI/API is on the works too for RC3. AMI can read files locally from the server, remotely from URLs or remotely from Private Backend Storage (S3). It does parent/children validation, makes sure that parents are ingested first, cleans broken relationships, allows arbitrary multi relations to be generated in a single ROW (ismemberof, partOf, etc)  pointing to other rows or existing ADOs (via UUIDs) and can process rows directly as JSON or preprocessed via a Metadata Display entity (twig template) capable of producing JSON output. These templates can be configured by “type”, Articles v/s 3DModel can have different ones. Even which columns contain Files can be configured at that level.
+    AMI has Ingest, Update and Patch capabilities. AMI has a plugin system to fetch data. The data can come from multiple sources and right now CSV/EXCEL or Google Spreadsheets are the ones enabled. It does parent/children validation, makes sure that parents are ingested first, cleans broken relationships, allows arbitrary multi relations to be generated in a single ROW (ismemberof, partOf, etc)  pointing to other rows or existing ADOs (via UUIDs) and can process rows directly as JSON or preprocessed via a Metadata Display entity (twig template) capable of producing JSON output. These templates can be configured by “type”, Articles v/s 3DModel can have different ones. Even which columns contain Files can be configured at that level.
     
     #### AMI Set Entity
     
@@ -33,9 +33,7 @@ AMI provides Tabulated data ingest for ADOs with customizable input plugins. Eac
     
     #### Search and Replace
     
-    This module also provides a simple search/replace text VBO action (handles JSON as text) and a full blown JSONPATCH VBO action to batch modify ADOs. The last one is extremely powerful permitting multiple operations at the same time with tests. E.g replace a certain value, add another value, remove another value only if a certain test (e.g “type”:”Article” and “date_of_digital”: “2020-09-09”) matches. If any tests fail the whole operation will be canceled for that ADO. An incomplete “Webform” VBO action is present but not fully functional yet. This one allows you to choose a Webform, a certain element inside that Webform and then find and replace using the same Interface you would see while editing/adding a new ADO via the web form workflow. Should be ready by RC3.
-
-**Please be aware that the version of AMI shipped with Archipelago 1.0.0-RC3 provides much of the core batch functions useful for getting started working with large amounts of content, but is not the full or final version of this module. This documentation page will be updated with successive AMI and Archipelago releases.**
+    This module also provides a simple search/replace text VBO action (handles JSON as text) and a full blown JSONPATCH VBO action to batch modify ADOs. The last one is extremely powerful permitting multiple operations at the same time with tests. E.g replace a certain value, add another value, remove another value only if a certain test (e.g “type”:”Article” and “date_of_digital”: “2020-09-09”) matches. If any tests fail the whole operation will be canceled for that ADO. An incomplete “Webform” VBO action is present but not fully functional yet. This one allows you to choose a Webform, a certain element inside that Webform and then find and replace using the same Interface you would see while editing/adding a new ADO via the web form workflow.
 
 ## Getting started with AMI
 
@@ -56,9 +54,9 @@ This spreadsheet can be used to import a small set of Digital Objects using the 
 
 ### Example JSON template
 
-This JSON template can be used during the Data Transformation (step 3) of your AMI Import. This particular template corresponds with the metadata elements found in the Default Descriptive Metadata and Default Digital Object Collection webforms shipped with Archipelago 1.0.0-RC3.
+This JSON template can be used during the Data Transformation (step 3) of your AMI Import. This particular template corresponds with the metadata elements found in the Default Descriptive Metadata and Default Digital Object Collection webforms shipped with Archipelago 1.0.0.
 
-??? info "Click to view the example 1.0.0-RC3 AMI JSON template"
+??? info "Click to view the example 1.0.0 AMI JSON template"
     
     To use this template, copy and paste the JSON below directly into a new Metadata Display, found here for a local `http://localhost:8001/metadatadisplay/list` or `http://yoursite.org/metadatadisplay/list`. Select `JSON` as the 'Primary mime type this Twig Template entity will generate as output' for this new Metadata Display.
     
