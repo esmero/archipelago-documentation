@@ -12,14 +12,14 @@
         <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
       
       
-        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0/webformsasinput/">
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0/archipelago-deployment-windows/">
       
       <link rel="icon" href="../images/strawberries_color.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO) - Archipelago Documentation</title>
+        <title>Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04 - Archipelago Documentation</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#webforms-as-input-method-for-archipelago-digital-objects-ado" class="md-skip">
+        <a href="#installing-archipelago-drupal-9-on-windows-1011" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
+              Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04
             
           </span>
         </div>
@@ -309,16 +309,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -563,14 +561,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
       
       
       
@@ -595,14 +591,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" type="checkbox" id="__nav_4_3_1" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3_1" type="checkbox" id="__nav_4_3_1" checked>
       
       
       
@@ -649,14 +643,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_2" type="checkbox" id="__nav_4_3_1_2" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3_1_2" type="checkbox" id="__nav_4_3_1_2" checked>
       
       
       
@@ -701,59 +693,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../webformsasinput/" class="md-nav__link">
         How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#view-mode" class="md-nav__link">
-    View Mode
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#form-mode" class="md-nav__link">
-    Form Mode
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1396,15 +1340,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#view-mode" class="md-nav__link">
-    View Mode
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional" class="md-nav__link">
+    Optional
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    Deployment
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#form-mode" class="md-nav__link">
-    Form Mode
+  <a href="#acknowledgment" class="md-nav__link">
+    Acknowledgment
+  </a>
+  
+    <nav class="md-nav" aria-label="Acknowledgment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#need-help-blue-screen-missed-a-step-need-a-hug" class="md-nav__link">
+    Need help? Blue Screen? Missed a step? Need a hug?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caring-coding-fixing-testing" class="md-nav__link">
+    Caring &amp; Coding + Fixing + Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
   </a>
   
 </li>
@@ -1424,141 +1415,67 @@
 
   
 
+  <nav class="md-tags" >
+    
+      
+        <span class="md-tag">Archipelago-deployment</span>
+      
+    
+      
+        <span class="md-tag">Drupal 9</span>
+      
+    
+      
+        <span class="md-tag">Windows</span>
+      
+    
+      
+        <span class="md-tag">Ubuntu 18.04</span>
+      
+    
+      
+        <span class="md-tag">Ubuntu 20.04</span>
+      
+    
+  </nav>
 
 
-<h1 id="webforms-as-input-method-for-archipelago-digital-objects-ado">Webforms as input method for Archipelago Digital Objects (ADO)</h1>
-<p>Drupal 8/9 provides a lot of out-of-the-box functionality to setup the way Content Entities (Nodes or in our case ADOs) are exposed to users with the proper credentials. That functionality lives under the "Display Modes" and can be accessed at <code>yoursite/admin/structure/display-modes</code>.</p>
-<p><img alt="Display Modes" src="../images/display-modes.jpg" /></p>
-<p>In a few quick words, The Display Mode Concept covers: formatting your Content Entities and their associated Fields so when a user lands on a Content Page, they are displayed in a certain, hopefully pleasing, way and also how users with proper Credentials can fill inputs/edit values for each <code>field</code> a Content Entity provides.</p>
-<p>First, formatting output (basically building the front facing page for each content entity) is done by a <code>View Mode</code>. Second, defining how/what input method you are going to use to create or edit Content entities, is handled by a <code>Form Mode</code>. Both Modes, are, in Drupal Lingo, Configuration Entities, they provide things you can configure, you can name them and reuse them and those configurations can all be exported and reimported using YAML files. Also both Modes the following in common:</p>
+
+<h1 id="installing-archipelago-drupal-9-on-windows-1011">Installing Archipelago Drupal 9 on Windows 10/11</h1>
+<h2 id="prerequisites">Prerequisites</h2>
 <ul>
-<li>Drupal always provides a "default" one that can not be deleted.</li>
-<li>You can create new ones.</li>
-<li>You can apply permissions to them.</li>
-<li>All Modes work on "fields", means the tiny little input/output pieces that are either part of a Content Entity or attached to them (the title, the Body, and in our case a Strawberryfield (SBF),</li>
-<li>They Provide Config/setting options for each Field.</li>
-<li>They are always associated to Content Types/Bundles. Means all Nodes of the same Content type will share the same modes.</li>
+<li>Windows 11 64-bit: Home or Pro version 21H2 or higher, or Enterprise or Education version 21H2 or higher (see Docker for Windows link below).</li>
+<li>Windows 10 64-bit: Home or Pro 21H1 (build 19043) or higher, or Enterprise or Education 20H2 (build 19042) or higher (see Docker for Windows link below).</li>
+<li><a href="https://ubuntu.com/wsl">Install Ubuntu on WSL 2</a></li>
+<li><a href="https://docs.docker.com/desktop/windows/install/">Install Docker for Windows</a></li>
+<li><a href="https://desktop.github.com/">Install Github for Desktop</a></li>
+<li>At least 10 Gbytes of free space (to get started)</li>
+<li>Some basic Unix/Terminal Skills</li>
+<li>2-4 Gbytes of RAM (4 Recommended)</li>
 </ul>
-<p>The main difference, other than their purpose (Output v/s Input) is that, on View Modes, the settings you apply to each field are associated to "Formatters" and on Form Modes, the settings you apply to each field are connected to "Widgets".</p>
-<p>So, resuming, this is what lives under the Concept of a "Display Mode":</p>
-<h2 id="view-mode">View Mode</h2>
-<p><img alt="See all your View Modes" src="../images/view-modes.jpg" /></p>
+<h3 id="optional">Optional</h3>
 <ul>
-<li>Each field attached to a Content Entity can have a Formatter applied and most of them have configuration options.</li>
-<li>Formatters do one thing right: they take the raw, stored value and make it "visible" inside Drupal.</li>
-<li>Which formatters are available will depend on the "type" of field the Content Entity has.<ul>
-<li>E.g A Node title/Label will have a Title formatter with the option of just displaying a text or a text with a link to the entity.</li>
-<li>More Complex and fun Fields, like the ones of type <code>SBF</code> will provide a large list of possible <code>Formatters</code>, like IIIF driven viewers, Video formatters, Metadata Display (Twig template driven) ones, etc. This is because a SBF type of field has much more than just a text value, it contains a full graph of metadata and properties, inclusive links to Files and provenance metadata.</li>
+<li><a href="https://desktop.github.com/">Install Github Desktop</a>. Ubuntu comes with Git by default, but for a more full-featured way to work with Github, you can install this application.</li>
 </ul>
-</li>
-</ul>
-<h2 id="form-mode">Form Mode</h2>
-<p><img alt="Form Modes" src="../images/form-modes.jpg" /></p>
+<p>Open the Docker Desktop app. The Docker service should start up automatically with a status showing when the service is up and running.</p>
+<p>Open an Ubuntu Terminal session (type <code>Ubuntu</code> in the Windows Start menu).</p>
+<p>Bring everything up to date: <code>sudo apt update &amp;&amp; sudo apt upgrade -y</code></p>
+<h2 id="deployment">Deployment</h2>
+<p><a href="ubuntu.md#step-1-deployment">Follow the steps for deployment in Ubuntu</a>.</p>
+<h2 id="acknowledgment">Acknowledgment</h2>
+<p>Thanks to <a href="https://github.com/chatnikc">Corinne Chatnik</a> for documenting these steps!</p>
+<h3 id="need-help-blue-screen-missed-a-step-need-a-hug">Need help? Blue Screen? Missed a step? Need a hug?</h3>
+<p>If you see any issues or errors or need help with a step, please let us know (ASAP!). You can either open an <code>issue</code> in this repository or use the <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Google Group</a>. We are here to help.</p>
+<p>If you like this, let us know!</p>
+<h2 id="caring-coding-fixing-testing">Caring &amp; Coding + Fixing + Testing</h2>
 <ul>
-<li>Each field attached to a Content Entity can have a Widget applied and most of them have configuration options.</li>
-<li>Widgets do one thing right: they expose some type of Form/UI interaction that allows a user to input data into the Entity, under that specific field. And of course they make sure that what you input is validated and saved (if good) correctly.</li>
-<li>
-<p>Which Widgets are available will depend on the "type" of field the Content Entity has.</p>
-<ul>
-<li>Example: A <code>Node</code> Title will have a single Text Input with some options, like the size of the Textfield used to feed it.</li>
-<li>More Complex and fun fields, like the ones of type <code>SBF</code> (strawberryfield), will provide a larger list of possible Widgets, ranging from raw JSON input (which you could select if your data was already in the right format) to the reason we are reading this: <code>Webform driven Widgets</code>. These Widgets include:<ul>
-<li>ones the <em>webform_strawberryfield</em> Drupal module provides</li>
-<li>ones that use an existing Webform (which are also Entitites!) which either 1) you created or 2) we provided as a setting</li>
+<li><a href="https://github.com/DiegoPino">Diego Pino</a></li>
+<li><a href="https://github.com/giancarlobi">Giancarlo Birello</a></li>
+<li><a href="https://github.com/alliomeria">Allison Lund</a></li>
+<li><a href="https://github.com/aksm">Albert Min</a></li>
 </ul>
-</li>
-</ul>
-<p>If you chose a widget other than the raw JSON, the widget will take the raw JSON to build, massage and enrich the data so that it can be presented in a visual format by the SBF. This is because a SBF type of field has much more than just a text value. It contains a full graph of metadata and properties, inclusive links to Files and provenance metadata, which for example allows us to use an Upload field directly in the attached/configured webform.
-- Form modes also have an additional benefit. Each one can have fine grained permissions. That way you can have many different Form Modes, but allow only certain ones to be visible, or usable by users of a given Drupal Role.</p>
-</li>
-</ul>
-<h1 id="i-think-i-get-thisbut-how-can-i-use-this-knowledge-now">I think i get this...but how can i use this knowledge now?</h1>
-<p>Good question! So, to enable, configure, and customize these Display Modes you have to navigate to your <code>Content Type</code> Configuration page in your running Archipelago. This is found at <code>/admin/structure/types</code>. Note: the way things are named in Drupal can be confusing to even the most deeply committed Drupal user, so bear in mind some terms will change. Feel free to read and re-read.</p>
-<p><img alt="Display Mode Managment for Content Types" src="../images/managing-display-modes.jpg" /></p>
-<p>You can see that for every existent Content Type, there is a drop down menu with options:</p>
-<ul>
-<li>Manage Display: will lead you to configuration page where you can setup each View Mode and its settings for a given Content Type</li>
-<li>Manage Form Display: will lead you to configuration page where you can setup each View Mode and its settings for a given Content Type</li>
-</ul>
-<h2 id="manage-display">Manage Display</h2>
-<p><img alt="Manage Display" src="../images/manage-display.jpg" /></p>
-<p>On the top you will see all your View Modes Listed, with the <code>Default</code> one selected and expanded.
-The Table that follows has one row per Field attached/part of this Content Type. Some of the fields are part of the Content Type itself, in this case Digital Object (bundled) and some other ones are common to every Content Entity derived from a Node.
-The "Field" column contains each field name (not their type, reason why you don't see Strawberry Field there!) but we can tell you right now that there is one, named "Descriptive Metadata", that is of <code>SBF</code> type.</p>
-<details class="info">
-<summary>Wait! Which are the fields in my Content Type?</summary>
-<p>How do we know that the field named "Descriptive Metadata" is a Strawberryfield? Well, we set-up the Digital Object Content Type for you that way, but also you can know what we know by pressing on "Manage fields" Tab on the top (don't forget to come back to "Manage display", afterwards!)</p>
-<p><img alt="Your Bundled fields" src="../images/manage-fields.jpg" /></p>
-<p><em>Also Surprise:</em> You Content Entity has really really just 2 fields! And that, friends, is one of the secret ingredients of Archipelago. All goes into a Single Field.
-But wait: i see more fields in my Manage Display table. Why?
-Well. Some of them are base fields, part of what a Drupal Node is: base field means you can not remove them, they are part of the Definition itself. One obvious one is the <code>Title</code>.</p>
-<p>But there are also some fields very particular to Archipelago: You can see there are also ones named
-"Formatter Object Metadata", "Media" and one named "Static Media"!. Where does come from? Those are also Strawberryfields. It sounds confusing but it is really simple. They are really not "fields" in the sense of having different data than "Descriptive Metadata". Those are In Memory, realtime, copies of the "Descriptive Metadata" SBF field and are there to overcome one limitation of Drupal 8:</p>
-<blockquote>
-<p>Each Field can have a single "Formatter" setup per field.</p>
-</blockquote>
-<p>But we want to re-usue the JSON data to show a Viewer, Show Metadata as HTML directly on the ADO/NODE landing page, and we want also to, for example, format sometimes images as Thumbnails and not using a IIIF viewer only. This CopyFields (Legal term) have also a nice Performance advantage. Drupal needs to fetch only once the data from the real Field, "Descriptive Metadata", from the database. And then just makes the data available in real time to its copies. That makes all fast, very very fast! And of course flexible. As you dig more into Archipelago you will see the benefits of this approach. Finally, if you need to, you can make more CopyFields. But the reality is, there is a single, only one, SBF in each Digital Object and its named "Descriptive Metadata".</p>
-</details>
-<p>You can also simply not care about the type and trust the UI. It will just show Formatters that are right for each type and expose Configuration options (and a little abstract of the current ones) under the Widget Column. Operations Columns allows you to setup each Widget. Widget term here is a bit confusing. These are not really Widget in terms of Data Input, but in terms of "Configuration" Input. But D8/9 is evolving and its getting better. Those settings apply always only to the current View Mode.</p>
-<p>You can play with this, experiment and change some settings to get more comfortable. We humbly propose you that you complete this info with the official Drupal 8 Documentation and also apply custom settings to your own, custom View Mode so you don't end changing base, expected functionality while you are still learning.</p>
-<h2 id="manage-form-display">Manage Form Display</h2>
-<p><img alt="Manage Display" src="../images/manage-form-display.jpg" /></p>
-<p>On the top you will see all your Form Modes Listed, with the <code>Default</code> one selected and expanded.
-The Table that follows has one row per Field attached/partof this Content Type. The list of fields here is shorter, the SBF CopyFields are not present because all data goes really only into real fields. Also some other, display only ones (means you can not modify them) will not appear here. Again, Some of the fields are part of the Content Type itself, in this case Digital Object (bundled) and some other ones are common to every Content Entity derived from a Node.
-"Field" column contains each field name and the Widget Column allows you to select what type of Input you are going to use to feed it on Ingest/edit. On the right you will see again a little gear, that allows you to configure the settings for a particular Widget. Those settings apply always only to the current Form Mode.</p>
-<p>So. The one we want to understand is the one attached to the "Descriptive Metadata" field. Currently one named "Strawberryfield webform based input with inline rendering". There are other two. But let's start with this. Press on the Gear to the right on the same row.</p>
-<p><img alt="Widget Inline Webform" src="../images/widget-inline-webform.jpg" /></p>
-<p>AS you can see there are not too many options. But, the main, first Text input is an Autocomplete field that will resolve against your existing Webforms.
-So, guess what. If you want to use your own Webform to feed a SBF, what do you do? You type the name, let the autocomplete work, select the right Webform, maybe your own custom one, and the you press "Update". Once that is done you need to "Save" your Form Mode (hint, button at the bottom of the page).</p>
-<p>We wish life was that easy (and it will once we are done with refining Drupal's UI) but for now there are some extra things you need to do to make sure the Webform, your custom one, can speak JSON. The default one you get named also "Descriptive Metadata (descriptive_metadata)", same as the field, is already setup to be used. Means if you create a new Webform by Copying that one, you can start using it inmediately. But if you created one from scratch (Different tutorial) you need to setup some settings.</p>
-<h2 id="setting-up-a-webform-to-talk-strawberryfield">Setting up a Webform to talk Strawberryfield</h2>
-<p>Navigate to your Webform Managment form at <code>/admin/structure/webform</code></p>
-<p><img alt="Webform Managment" src="../images/webform-managment.jpg" /></p>
-<p>If you already created a Webform (different tutorial on how to do that) you will see your own named one in that list. I created for the purpose of this documentation one named "Diego Test" (Hi, i'm Diego..) and on the most right Column, "Operations" you will haven an Drop Down Menu. On your own Webform row, press on "Settings".</p>
-<p>First time, this can be a little bit intimitading. We recommend going baby steps since the Webform Module is a very powerful one but also exposes you to a lot (and sometimes too many) options. Even more, if you are new to Webforms, we recomment you to copy the "Descriptive Metadata" Webform we provided first, and make small changes to it (starting by naming it your own way!) so you can see how that affects your workflow and experience, and how that interacts with the created metadata. The Webform Module provides testing and building capabilities, so you have a Playground there before actually ingesting ADOs. Copying it will also make all the needed settings for SBF interaction to be moved over, so your work will be much easier.</p>
-<p>But we know you did not do that (where is the fun there right?). So lets setup one from scratch.</p>
-<h3 id="general-settings">General Settings</h3>
-<p><img alt="Webform General Settings" src="../images/webform-general-settings.jpg" /></p>
-<p>Gist here is (look at the screenshot and copy the settings):</p>
-<ul>
-<li>GENERAL Settings: Check "Disable saving of submissions" option. You won't need this form to generate a Native Webform Submission entry.</li>
-<li>AJAX Settings: Check "use ajax" option. We want people to have the experience of staying in a single page while the create a new ADO via a Multi Step Webform Workflow.</li>
-</ul>
-<h3 id="confirmation-settings">Confirmation Settings</h3>
-<p><img alt="Webform Confirmation Settings" src="../images/webform-confirmation-settings.jpg" /></p>
-<p>Gist here is (again, look at the screenshot and copy the settings):</p>
-<ul>
-<li>Select "Inline Confirmation". You don't want Webform to send your user to another page while they are still ingesting their ADOs.</li>
-</ul>
-<h3 id="handler">Handler</h3>
-<p><img alt="Webform Handler Settings" src="../images/webform-handler-settings.jpg" /></p>
-<p>The glue, the piece of resistance. The handler is the one that knows how to talk to a SBF. In simple words, the handler (any handler) provides functionality that does something with a Webform Submission. The one that you want to select here, is the "Strawberryfield harvester" handler. Add it, name it whatever you like (or copy what you see in the screenshot) and make sure you select, if running using our deployment strategy, "S3 File System" as the option for "Permanent Destination for uploaded files". The wording is tricky there, its not really Permanent, since that is handled by Archipelago, but more to Temporary, while working in ingesting an Object, destination for the Webform. Its not really wrong neither. Its permanent for the Webform, but we have better plans for the files and metadata!</p>
-<p>Save your settings. And you are ready to roll. That webform can now be used as a Setting for any of the StrawberryField Widgets that use Webforms.</p>
-<p>Finally (the real finally). Archipelago encourages at least one Field/JSON key to be present always. One with "type" as key value. So make sure that your Custom Webform has that one.</p>
-<p>There are two ways of doing that:</p>
-<ul>
-<li>
-<p>You can copy how it is setup from the provided Webform's Elements, from the main Descriptive Metadata Webform and then add one "select" element to yours using the same "type" "key".Important in Archipelago is always the key value since that is what builds the JSON for your metadata. The Description can be any, but for UI consistency you could want to keep it the same across all your webforms.</p>
-<p><img alt="Type Webform Element" src="../images/type_webform_element.jpg" /></p>
-</li>
-<li>
-<p>Or, advanced, you can use the import/export capabilities (Webforms are just YAML files!) and export/copy your custom one as text, add the following element before or after some existing elements there</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="s">&#39;#type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">select</span><span class="w"></span>
-<span class="w">      </span><span class="s">&#39;#title&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;Media</span><span class="nv"> </span><span class="s">Type&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="s">&#39;#options&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema_org_creative_works</span><span class="w"></span>
-<span class="w">      </span><span class="s">&#39;#required&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">      </span><span class="s">&#39;#label_attributes&#39;</span><span class="p p-Indicator">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">class</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom-form-input-heading</span><span class="w"></span>
-</code></pre></div>
-<p>And then reimport.</p>
-<p>Having a "type" value will make your life easier. You don't need it, but everything works smoother that way.</p>
-<p>Since you have a single Content Type named Digital Object, having a Webform field that has as key "type", which leads to a "type" JSON key, allows you to discern the Nature of your Digital Object, book or Podcast, Image or 3D and do smart, nice things with them.</p>
-</li>
-</ul>
-<hr />
-<p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
-<p>Return to the <a href="..">Archipelago Documentation main page</a>.</p>
+<h2 id="license">License</h2>
+<p><a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3</a></p>
 
               
             </article>
@@ -1574,42 +1491,6 @@ So, guess what. If you want to use your own Webform to feed a SBF, what do you d
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../webforms/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Webforms" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Webforms
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../modifyingfileextensionsinwebform/" class="md-footer__link md-footer__link--next" aria-label="Next: Customizing Webforms (Modifying allowable file extensions)" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Customizing Webforms (Modifying allowable file extensions)
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
