@@ -37,6 +37,10 @@ This is the recommended, simplest way for this release. There are a too many, to
 
 [Step by Step deployment on Ubuntu](archipelago-deployment-ubuntu.md)
 
+## Windows 10 or 11:
+
+[Step by Step deployment on Windows](archipelago-deployment-windows.md)
+
 ## More fun if you add content:
 
 [One-Step Demo content ingest](archipelago-deployment-democontent.md)

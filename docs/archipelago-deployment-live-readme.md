@@ -64,7 +64,7 @@ And protected/modally open for your own development/testing/administration
 - 8183 (Cantaloupe)
 - 8983 (Solr)
 - 6400 (NLP64)
-- 9000 (Minio)
+- 9001 (Minio)
 - 22 (so you can ssh into your machine)
 
 Setup your system using your favorite package manager with 
@@ -79,24 +79,16 @@ e.g. for Amazon Linux 2 (x86/amd64) these steps are tested:
 
 ```shell
 sudo yum update -y
-sudo amazon-linux-extras install docker
-sudo yum install -y docker
+sudo amazon-linux-extras install -y docker
 sudo service docker start
 sudo usermod -a -G docker ec2-user
 sudo chkconfig docker on
 sudo systemctl enable docker
 sudo yum install -y git htop tree
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 sudo reboot
-```
-
-Note: To install docker-compose on AWS Linux 2 on `arm64` architecture execute
-
-```shell
-sudo curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-docker-compose/master/run.sh -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 Reboot is needed to allow Docker to take full control over your OS resources.
@@ -108,7 +100,7 @@ In your location of choice clone this repo
 ```shell
 git clone https://github.com/esmero/archipelago-deployment-live
 cd archipelago-deployment-live
-git checkout 1.0.0-RC3
+git checkout 1.0.0
 ```
 
 ### Step 3. Setup your enviromental variables for Docker/Services
@@ -139,6 +131,7 @@ MINIO_BUCKET_MEDIA=THE_NAME_OF_YOUR_S3_BUCKET_FOR_PERSISTEN_STORAGE
 MINIO_FOLDER_PREFIX_MEDIA=media/
 MINIO_BUCKET_CACHE=THE_NAME_OF_YOUR_S3_BUCKET_FOR_IIIF_STORAGE
 MINIO_FOLDER_PREFIX_CACHE=iiifcache/
+REDIS_PASSWORD=YOUR_REDIS_PASSWORD
 ```
 
 What does each key mean?
@@ -153,6 +146,7 @@ What does each key mean?
 - `MINIO_FOLDER_PREFIX_MEDIA`: The `folder` (a prefix really) where your DO Storage and File storage will go inside the `MINIO_BUCKET_MEDIA` Bucket. `media/` is a _fine_ name for this one and common in archipelago deployments. **IMPORTANT:** Always terminate these with a `/`. 
 - `MINIO_BUCKET_CACHE`: The name of your IIIF Cache storage Bucket. May be the same as `MINIO_BUCKET_MEDIA`. If different make sure your your `MINIO_ACCESS_KEY` and/or IAM role ACL have permission to read write to this one too.
 - `MINIO_FOLDER_PREFIX_CACHE`:  The `folder` (a prefix really) where Cantaloupe will/can write its `iiif` caches. `iiifcache/` is a _lovely_ name we use a lot. **IMPORTANT:** Always terminate these with a `/`.
+- `REDIS_PASSWORD`: Password for your REDIS (Drupal Cache/Queue storage) if you decide to enabled the Drupal REDIS module.
 
 `IMPORTANT NOTE`: For AWS EC2. If your selected an `IAM role` for your server when setting it up/deploying it, `min.io` will use the AWS EC2 backed internal API to request access to your S3. This means the ROLE itself needs to have read/write access (ACL) to the given Bucket(s) and your key/secrets won't be able to override that. Please do not ignore this note. It will save you a LOT of frustration and coffee. You can also run an EC2 instace without a given IAM and in that case just the ACCESS_KEY/SECRET will matter.
 
@@ -217,20 +211,12 @@ NOTE: If you want to use AWS S3 storage for the self signed version replace the 
 
 #### First Permissions
 
-If running on an `x86(64 bit)` processor system:
-
 ```shell
-sudo chown -R 100:100 data_storage/iiifcache
+sudo chown 8183:8183 config_storage/iiifconfig/cantaloupe.properties
+sudo chown -R 8183:8183 data_storage/iiifcache
+sudo chown -R 8183:8183 data_storage/iiiftmp
 sudo chown -R 8983:8983 data_storage/solrcore
 ```
-
-But if running on `ARM(64 bit)` processor system (Cantaloupe user differs and has UID 1000):
-
-```shell
-sudo chown -R 1000:1000 data_storage/iiifcache
-sudo chown -R 8983:8983 data_storage/solrcore
-```
-
 
 #### Actual first run
 
@@ -272,10 +258,11 @@ Start Docker again
 docker-compose up -d
 ```
 
-Wait a few seconds and run
+Wait a few seconds and run:
 
 ```shell
 docker exec -ti esmero-php bash -c "chown -R www-data:www-data private"
+docker exec -ti esmero-php bash -c "chown -R www-data:www-data web/sites"
 docker exec -ti esmero-php bash -c "composer install"
 ```
 
@@ -358,7 +345,7 @@ Finally Done! Now you can log into your new Archipelago using `https` and start 
 ## Deployment on ARM64/v8(Graviton, Apple M1) system:
 
 This applies to AWS `m6g` and `t3g` Instances and is documented inline in this guide. Please open an [ISSUE](https://github.com/esmero/archipelago-deployment-live/issues) in this repository if you run into any problems.
-Please review <https://github.com/esmero/archipelago-deployment-live/blob/1.0.0-RC3/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml> for more info.
+Please review <https://github.com/esmero/archipelago-deployment-live/blob/1.0.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml> for more info.
 
 ### How do I know my Architecture?
 
