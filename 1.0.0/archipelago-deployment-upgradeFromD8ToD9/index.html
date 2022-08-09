@@ -1,0 +1,2059 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Project documentation for Archipelago.">
+      
+      
+      
+        <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
+      
+      
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0/archipelago-deployment-upgradeFromD8ToD9/">
+      
+      <link rel="icon" href="../images/strawberries_color.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Archipelago-deployment: upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3) - Archipelago Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#archipelago-deployment-upgrading-drupal-8-to-drupal-9-100-rc2-to-100-rc3" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Archipelago Documentation" class="md-header__button md-logo" aria-label="Archipelago Documentation" data-md-component="logo">
+      
+  <img src="../images/strawberries_color.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Archipelago Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Archipelago-deployment: upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Archipelago Documentation" class="md-nav__button md-logo" aria-label="Archipelago Documentation" data-md-component="logo">
+      
+  <img src="../images/strawberries_color.png" alt="logo">
+
+    </a>
+    Archipelago Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          About Archipelago
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About Archipelago" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          About Archipelago
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourtake/" class="md-nav__link">
+        Archipelago's Philosophy & Guiding Principles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strawberryfields/" class="md-nav__link">
+        Strawberryfields Forever
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops/" class="md-nav__link">
+        Software Services
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CODE_OF_CONDUCT/" class="md-nav__link">
+        Code of Conduct
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags.html" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Instructions and Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Instructions and Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Instructions and Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Archipelago-Deployment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Archipelago-Deployment" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Archipelago-Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-readme/" class="md-nav__link">
+        Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-osx/" class="md-nav__link">
+        Installing Archipelago Drupal 9 on OSX (macOS)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-ubuntu/" class="md-nav__link">
+        Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-democontent/" class="md-nav__link">
+        Adding Demo Archipelago Digital Objects (ADOs) to your Repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-this-documentation-for" class="md-nav__link">
+    What is this documentation for?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backing-up-and-preparing-for-the-upgrade" class="md-nav__link">
+    Backing up and preparing for the upgrade
+  </a>
+  
+    <nav class="md-nav" aria-label="Backing up and preparing for the upgrade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    Step 1:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    Step 2:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    Step 3:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    Step 4:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    Step 5:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-to-100-rc3" class="md-nav__link">
+    Upgrading to 1.0.0-RC3
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrading to 1.0.0-RC3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_1" class="md-nav__link">
+    Step 1:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2_1" class="md-nav__link">
+    Step 2:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3_1" class="md-nav__link">
+    Step 3:
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-if-all-is-not-ok-and-i-see-red-and-a-lot-of-dependency-explanations" class="md-nav__link">
+    What if all is not OK, and I see red and a lot of dependency explanations?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4_1" class="md-nav__link">
+    Step 4:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5_1" class="md-nav__link">
+    Step 5:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    Step 6:
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-partial-sync-which-will-bring-new-configs-and-update-existing-ones-but-will-not-remove-ones-that-only-exist-in-your-custom-setup-eg-new-webforms-or-view-modes" class="md-nav__link">
+    A Partial Sync, which will bring new configs and update existing ones but will not remove ones that only exist in your custom setup, e.g. new Webforms or View Modes.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-complete-sync-which-will-bring-new-things-and-update-existing-but-will-also-remove-all-the-ones-that-are-not-part-of-rc3-its-a-like-clean-factory-reset" class="md-nav__link">
+    A Complete Sync, which will bring new things and update existing but will also remove all the ones that are not part of RC3. It's a like clean factory reset.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-update-or-not-your-metadata-display-entities-and-menu-items" class="md-nav__link">
+    Step 7: Update (or not) your Metadata Display Entities and Menu items.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#need-help-blue-screen-missed-a-step-need-a-hug-and-such" class="md-nav__link">
+    Need help? Blue Screen? Missed a step? Need a hug and such?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caring-coding-fixing-testing" class="md-nav__link">
+    Caring &amp; Coding + Fixing + Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" data-md-state="indeterminate" type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Archipelago-Deployment-Live
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Archipelago-Deployment-Live" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Archipelago-Deployment-Live
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-readme/" class="md-nav__link">
+        Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-gitworkflow/" class="md-nav__link">
+        Github Workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-moveToLive/" class="md-nav__link">
+        Moving from archipelago-deployment to archipelago-deployment-live
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-upgradeFromD8ToD9/" class="md-nav__link">
+        Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" data-md-state="indeterminate" type="checkbox" id="__nav_5_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          Archipelago 101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Archipelago 101" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Archipelago 101
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1">
+          Site Administration & Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Site Administration & Configuration" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Site Administration & Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archifilepersistencestrategy/" class="md-nav__link">
+        Archipelago's File Persistence Strategy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sslsetup/" class="md-nav__link">
+        How to Set Up SSL for Docker/Archipelago
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdebug/" class="md-nav__link">
+        Debugging PHP in Archipelago
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../createdisplaymodes/" class="md-nav__link">
+        Creating Display Modes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strawberryfield-formatters/" class="md-nav__link">
+        Strawberryfield Formatters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotations/" class="md-nav__link">
+        Annotations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_1_7" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_1_7" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1_7">
+          General Q&A
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General Q&A" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_3_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          General Q&A
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_index/" class="md-nav__link">
+        General Q&A
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_twig_modules_configuration/" class="md-nav__link">
+        Twig Modules Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_smtp_configuration/" class="md-nav__link">
+        SMTP Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_minio_logging/" class="md-nav__link">
+        Min.io Logging
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2">
+          Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firstobject/" class="md-nav__link">
+        Ingesting Your First Object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2_2">
+          Webforms in Archipelago
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Webforms in Archipelago" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Webforms in Archipelago
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webforms/" class="md-nav__link">
+        Webforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webformsasinput/" class="md-nav__link">
+        How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modifyingfileextensionsinwebform/" class="md-nav__link">
+        Customizing Webforms (Modifying allowable file extensions)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customwebformelements/" class="md-nav__link">
+        Archipelago Custom Webform Elements
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_2_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2_3">
+          Twig Templates and Archipelago
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Twig Templates and Archipelago" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Twig Templates and Archipelago
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadatatwigs/" class="md-nav__link">
+        Twig Templates and Archipelago
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workingtwigs/" class="md-nav__link">
+        Working With Twig in Archipelago (getting started with custom Twig templates)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2_4" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_2_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2_4">
+          Archipelago Multi-Importer (AMI)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Archipelago Multi-Importer (AMI)" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Archipelago Multi-Importer (AMI)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ami_index/" class="md-nav__link">
+        Archipelago Multi-Importer (AMI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_2_4_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2_4_2">
+          AMI Instructions and Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AMI Instructions and Guides" data-md-level="5">
+        <label class="md-nav__title" for="__nav_5_3_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          AMI Instructions and Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ami_spreadsheet_overview/" class="md-nav__link">
+        Spreadsheet Formatting Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AMIviaSpreadsheets/" class="md-nav__link">
+        Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../googleapi/" class="md-nav__link">
+        Configuration for Google Sheets API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../I7solrImporter/" class="md-nav__link">
+        Using the Islandora 7 Solr Importer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentations_docs/" class="md-nav__link">
+        Archipelago Presentations and Documents
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inthewild/" class="md-nav__link">
+        Archipelagos in the Wild
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Contribution Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contribution Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Contribution Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../giveortake/" class="md-nav__link">
+        Archipelago Contribution Guide
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        About This Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acknowledgments/" class="md-nav__link">
+        Care & Coding + Fixing / Acknowledgments / License
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-this-documentation-for" class="md-nav__link">
+    What is this documentation for?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backing-up-and-preparing-for-the-upgrade" class="md-nav__link">
+    Backing up and preparing for the upgrade
+  </a>
+  
+    <nav class="md-nav" aria-label="Backing up and preparing for the upgrade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    Step 1:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    Step 2:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    Step 3:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    Step 4:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    Step 5:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-to-100-rc3" class="md-nav__link">
+    Upgrading to 1.0.0-RC3
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrading to 1.0.0-RC3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_1" class="md-nav__link">
+    Step 1:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2_1" class="md-nav__link">
+    Step 2:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3_1" class="md-nav__link">
+    Step 3:
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-if-all-is-not-ok-and-i-see-red-and-a-lot-of-dependency-explanations" class="md-nav__link">
+    What if all is not OK, and I see red and a lot of dependency explanations?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4_1" class="md-nav__link">
+    Step 4:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5_1" class="md-nav__link">
+    Step 5:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    Step 6:
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-partial-sync-which-will-bring-new-configs-and-update-existing-ones-but-will-not-remove-ones-that-only-exist-in-your-custom-setup-eg-new-webforms-or-view-modes" class="md-nav__link">
+    A Partial Sync, which will bring new configs and update existing ones but will not remove ones that only exist in your custom setup, e.g. new Webforms or View Modes.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-complete-sync-which-will-bring-new-things-and-update-existing-but-will-also-remove-all-the-ones-that-are-not-part-of-rc3-its-a-like-clean-factory-reset" class="md-nav__link">
+    A Complete Sync, which will bring new things and update existing but will also remove all the ones that are not part of RC3. It's a like clean factory reset.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-update-or-not-your-metadata-display-entities-and-menu-items" class="md-nav__link">
+    Step 7: Update (or not) your Metadata Display Entities and Menu items.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#need-help-blue-screen-missed-a-step-need-a-hug-and-such" class="md-nav__link">
+    Need help? Blue Screen? Missed a step? Need a hug and such?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caring-coding-fixing-testing" class="md-nav__link">
+    Caring &amp; Coding + Fixing + Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="archipelago-deployment-upgrading-drupal-8-to-drupal-9-100-rc2-to-100-rc3">Archipelago-deployment: upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)</h1>
+<h2 id="what-is-this-documentation-for">What is this documentation for?</h2>
+<p>If you already have a well-set-up and well-loved Archipelago (1.0.0-RC2) running Drupal 8 (D8), this documentation will allow you to update to 1.0.0-RC3 on Drupal 9 (D9) without any major issues.</p>
+<p>D8 is no longer supported as of the end of November 2021. D9 has been around for a little while, and even if every module is not supported yet, what you need and want for <strong>Archipelago</strong> has long been ready for D9. However, Archipelago is still D8 compatible if it's necessary for you to stay back a little longer.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>An <a href="https://github.com/esmero/archipelago-deployment">archipelago-deployment</a> local instance 1.0.0-RC2 (working, tested) deployed using provided instructions via Docker and running Drupal 8.</li>
+<li>Basic knowledge and instincts (+ courage) on how to run Terminal Commands, <code>composer</code> and <code>drush</code>.</li>
+<li>Patience. You can't skip steps here.</li>
+<li>For shell Commands documented here please copy line by line—not the whole block.</li>
+</ul>
+<h2 id="backing-up-and-preparing-for-the-upgrade">Backing up and preparing for the upgrade</h2>
+<p>Backups are always going to be your best friends. Archipelago's code, database, and settings are mostly self-contained in your current <code>archipelago-deployment</code> repo folder, and backing up is simple because of that.</p>
+<h3 id="step-1">Step 1:</h3>
+<p>On a terminal, <code>cd</code> into your running <code>archipelago-deployment</code> folder and shut down your <code>docker-compose</code> ensemble by running the following:</p>
+<div class="highlight"><pre><span></span><code>docker-compose down
+</code></pre></div>
+<h3 id="step-2">Step 2:</h3>
+<p>Verify that all containers are actually down. The following command should return an empty listing:</p>
+<div class="highlight"><pre><span></span><code>docker ps
+</code></pre></div>
+<p>If anything is still running, wait a little longer and run the command again.</p>
+<h3 id="step-3">Step 3:</h3>
+<p>Now let's <code>tar.gz</code> the whole ensemble with data and configs. As an example we will save this into your <code>$HOME</code> folder. 
+As a good practice we append the <strong>current date </strong>(YEAR-MONTH-DAY) to the filename. Here we assume today is December 1st of 2021.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ..
+sudo tar -czvpf <span class="nv">$HOME</span>/archipelago-deployment-RC2-20211201.tar.gz archipelago-deployment
+<span class="nb">cd</span> archipelago-deployment
+</code></pre></div>
+<p>The process may take a few minutes. Now let's verify that all is there and that the <code>tar.gz</code> is not corrupt.</p>
+<div class="highlight"><pre><span></span><code>tar -tvvf <span class="nv">$HOME</span>/archipelago-deployment-RC2-20211201.tar.gz 
+</code></pre></div>
+<p>You will see a listing of files, and at the end you will see something like this: <code>Archive Format: POSIX pax interchange format, Compression: gzip</code>. If corrupt (Do you have enough space? Did your ssh connection drop?) you will see the following:</p>
+<div class="highlight"><pre><span></span><code>tar: Unrecognized archive format
+</code></pre></div>
+<h3 id="step-4">Step 4:</h3>
+<p>Restart your <code>docker-compose</code> ensemble, and wait a little while for all to start.</p>
+<div class="highlight"><pre><span></span><code>docker-compose up -d
+</code></pre></div>
+<h3 id="step-5">Step 5:</h3>
+<p>Export/backup all of your live Archipelago configurations (this allows you to compare/come back in case you lose something custom during the upgrade).</p>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> esmero-php mkdir config/backup
+docker <span class="nb">exec</span> esmero-php drush cex --destination<span class="o">=</span>/var/www/html/config/backup
+</code></pre></div>
+<p>Good. Now it's safe to begin the upgrade.</p>
+<hr />
+<h2 id="upgrading-to-100-rc3">Upgrading to 1.0.0-RC3</h2>
+<h3 id="step-1_1">Step 1:</h3>
+<p>First we are going to disable modules that are not part of 1.0.0-RC3 or are not yet compatible with D9. Run the following command:</p>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> esmero-php drush pm-uninstall module_missing_message_fixer markdown webprofiler key_value webform_views
+</code></pre></div>
+<p>From inside your <code>archipelago-deployment</code> repo folder we are now going to open up file <code>permissionss</code> for some of your most protected Drupal files.</p>
+<div class="highlight"><pre><span></span><code>sudo chmod <span class="m">777</span> web/sites/default
+sudo chmod <span class="m">666</span> web/sites/default/*settings.php
+sudo chmod <span class="m">666</span> web/sites/default/*services.yml
+</code></pre></div>
+<h3 id="step-2_1">Step 2:</h3>
+<p>Time to fetch the <code>1.0.0-RC3</code> branch and update our <code>docker-compose</code> and <code>composer</code> dependencies. We are also going to stop the current <code>docker</code> ensemble to update all containers to newer versions:</p>
+<div class="highlight"><pre><span></span><code>docker-compose down
+git checkout <span class="m">1</span>.0.0-RC3 
+</code></pre></div>
+<p>Then copy the appropriate <code>docker-compose</code> file for your architecture:</p>
+<details class="info"><summary>OSX (macOS)/x86-64</summary><div class="highlight"><pre><span></span><code>cp docker-compose-osx.yml docker-compose.yml
+</code></pre></div>
+</details>
+<details class="info"><summary>Linux/x86-64/AMD64</summary><div class="highlight"><pre><span></span><code>cp docker-compose-linux.yml docker-compose.yml
+</code></pre></div>
+</details>
+<details class="info"><summary>OSX (macOS)/Linux/ARM64</summary><div class="highlight"><pre><span></span><code>cp docker-compose-arm64.yml docker-compose.yml
+</code></pre></div>
+</details>
+<!--repo_docs
+
+___
+
+OSX (macOS)/x86-64:
+
+<div class="highlight"><pre><span></span><code>cp docker-compose-osx.yml docker-compose.yml
+</code></pre></div>
+
+___
+
+Linux/x86-64/AMD64:
+
+<div class="highlight"><pre><span></span><code>cp docker-compose-linux.yml docker-compose.yml
+</code></pre></div>
+
+___
+
+OSX (macOS)/Linux/ARM64:
+
+<div class="highlight"><pre><span></span><code>cp docker-compose-arm64.yml docker-compose.yml
+</code></pre></div>
+
+___
+
+repo_docs-->
+
+<p>Finally, pull the images, and bring up the ensemble:</p>
+<div class="highlight"><pre><span></span><code>docker compose pull 
+docker compose up -d
+</code></pre></div>
+<p>Give all a little time to start. The latest <code>min.io</code> adds a new console, and your <code>Solr</code> core and <code>Database</code> need to be upgraded. Please be patient. To ensure all is well, run (more than once if necessary) the following:</p>
+<div class="highlight"><pre><span></span><code>docker ps
+</code></pre></div>
+<p>You should see something like this: </p>
+<div class="highlight"><pre><span></span><code>CONTAINER ID   IMAGE                                    COMMAND                  CREATED          STATUS          PORTS                                                           NAMES
+867fd2a42134   nginx                                    <span class="s2">&quot;/docker-entrypoint.…&quot;</span>   <span class="m">32</span> seconds ago   Up <span class="m">27</span> seconds   <span class="m">0</span>.0.0.0:8001-&gt;80/tcp, :::8001-&gt;80/tcp                           esmero-web
+8663e84a9b48   solr:8.8.2                               <span class="s2">&quot;docker-entrypoint.s…&quot;</span>   <span class="m">33</span> seconds ago   Up <span class="m">30</span> seconds   <span class="m">0</span>.0.0.0:8983-&gt;8983/tcp, :::8983-&gt;8983/tcp                       esmero-solr
+9b580fa0088f   minio/minio:latest                       <span class="s2">&quot;/usr/bin/docker-ent…&quot;</span>   <span class="m">33</span> seconds ago   Up <span class="m">28</span> seconds   <span class="m">0</span>.0.0.0:9000-9001-&gt;9000-9001/tcp, :::9000-9001-&gt;9000-9001/tcp   esmero-minio
+50e2f41c7b60   esmero/esmero-nlp:1.0                    <span class="s2">&quot;/usr/local/bin/entr…&quot;</span>   <span class="m">33</span> seconds ago   Up <span class="m">30</span> seconds   <span class="m">0</span>.0.0.0:6400-&gt;6400/tcp, :::6400-&gt;6400/tcp                       esmero-nlp
+300810fd6f03   esmero/cantaloupe-s3:4.1.9RC             <span class="s2">&quot;sh -c &#39;java -Dcanta…&quot;</span>   <span class="m">33</span> seconds ago   Up <span class="m">30</span> seconds   <span class="m">0</span>.0.0.0:8183-&gt;8182/tcp, :::8183-&gt;8182/tcp                       esmero-cantaloupe
+248e4638ba2a   mysql:8.0.22                             <span class="s2">&quot;docker-entrypoint.s…&quot;</span>   <span class="m">33</span> seconds ago   Up <span class="m">28</span> seconds   <span class="m">3306</span>/tcp, <span class="m">33060</span>/tcp                                             esmero-db
+141ace919344   esmero/php-7.4-fpm:1.0.0-RC2-multiarch   <span class="s2">&quot;docker-php-entrypoi…&quot;</span>   <span class="m">33</span> seconds ago   Up <span class="m">28</span> seconds   <span class="m">9000</span>/tcp                                                        esmero-php
+</code></pre></div>
+<p>Important here is the <code>STATUS</code> column. It <strong>needs</strong> to be a number that goes up in time every time you run <code>docker ps</code> again (and again).</p>
+<h3 id="step-3_1">Step 3:</h3>
+<p>Now we are going to tell <code>composer</code> to actually fetch the new code and dependencies using the 1.0.0-RC3 provided <code>composer.lock</code> and update the whole Drupal/PHP/JS environment.</p>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;composer install&quot;</span>
+</code></pre></div>
+<p>This will fail (sorry!) for a few packages but no worries, they need to be patched and composer is not that smart so simply run it again:</p>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;composer install&quot;</span>
+</code></pre></div>
+<p>Well done! If you see <strong>no</strong> issues and all ends in a <strong>Green colored message</strong> all is good!  <a href="#step-4_1">Jump to Step 4</a></p>
+<h4 id="what-if-all-is-not-ok-and-i-see-red-and-a-lot-of-dependency-explanations">What if all is not OK, and I see red and a lot of dependency explanations?</h4>
+<p>If you have manually installed packages via composer in the past that are NO longer Drupal 9 compatible you may see errors. 
+In that case you need to check each package website's (normally https://www.drupal.org/project/the_module_name) and check if there is a Drupal 9 compatible version. </p>
+<p>If so run:</p>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;composer require &#39;drupal/the_module_name:^VERSION_NUMBER_THAT_WORKS_ON_DRUPAL9_&#39; --update-with-dependencies --no-update&quot;</span> and run **Step <span class="m">3</span> ** again <span class="o">(</span>and again <span class="k">until</span> all is cleared<span class="o">)</span>
+</code></pre></div>
+<p>If not, try to find a replacement module that does something similar, but in any case you may end up having to remove before proceding. Give us a ping/slack/google group/open a github ISSUE if you find yourself uncertain about this. </p>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;composer remove drupal/the_module_name --no-update&quot;</span>
+docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;drush pm-uninstall the_module_name&quot;</span>
+</code></pre></div>
+<h3 id="step-4_1">Step 4:</h3>
+<p>We will now ask Drupal to update some internal configs and databases. The following commands are part of the <a href="../#starting-from-zero">from ZERO</a> deployment. They will bring you up to date with RC3 settings and D9 particularities.</p>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">&#39;scripts/archipelago/setup.sh&#39;</span>
+docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">&#39;drush urol administrator &quot;admin&quot;&#39;</span>
+docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;drush updatedb&quot;</span>
+</code></pre></div>
+<h3 id="step-5_1">Step 5:</h3>
+<p>Previously D8 installations had a "module/profile" driven installation. Those are no longer used or even exist as part of core, but a profile can't be changed once installed so you have to do the following to avoid Drupal complaining about our new and simpler way of doing things (a small roll back):</p>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;sed -i &#39;s/minimal: 1000/standard: 1000/g&#39; config/sync/core.extension.yml&quot;</span>
+docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">&quot;sed -i &#39;s/profile: minimal/profile: standard/g&#39; config/sync/core.extension.yml&quot;</span>
+</code></pre></div>
+<h3 id="step-6">Step 6:</h3>
+<p>Now you can sync your new Archipelago 1.0.0-RC3 and bring all the new configs and settings in. For this you have <strong>two</strong> options (no worries, remember you made a backup!):</p>
+<h4 id="a-partial-sync-which-will-bring-new-configs-and-update-existing-ones-but-will-not-remove-ones-that-only-exist-in-your-custom-setup-eg-new-webforms-or-view-modes">A Partial Sync, which will bring new configs and update existing ones but will <strong>not</strong> remove ones that only exist in your custom setup, e.g. new Webforms or View Modes.</h4>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> esmero-php drush cim -y --partial   
+</code></pre></div>
+<h4 id="a-complete-sync-which-will-bring-new-things-and-update-existing-but-will-also-remove-all-the-ones-that-are-not-part-of-rc3-its-a-like-clean-factory-reset">A Complete Sync, which will bring new things and update existing but will also remove all the ones that are not part of RC3. It's a like clean factory reset.</h4>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> esmero-php drush cim -y 
+</code></pre></div>
+<p>If all goes well here and you see no errors it's time to reindex <code>Solr</code> because there are new Fields. Run the following:</p>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> esmero-php drush search-api-reindex
+docker <span class="nb">exec</span> esmero-php drush search-api-index
+</code></pre></div>
+<p>You might see some warnings related to modules dealing with previously non-existent data—no worries, just ignore those.</p>
+<p>If you made it this far you are done with code/devops (are we ever ready?), and that means you should be able to (hopefully) stay in the Drupal 9 realm for a few years!</p>
+<h3 id="step-7-update-or-not-your-metadata-display-entities-and-menu-items">Step 7: Update (or not) your Metadata Display Entities and Menu items.</h3>
+<p>Recommended: If you want to add new templates and menu items 1.0.0-RC3 provides, run this:</p>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">&#39;scripts/archipelago/deploy.sh&#39;</span>
+</code></pre></div>
+<p>Once that is done, you can choose to update all Metadata Displays (twig templates) we ship with new 1.0.0-RC3 versions (heavily fixed IIIF manifest, Markdown to HTML for Metadata, better Object descriptions). But before you do this, we <strong>really</strong> recommend that you first make sure to manually (copy/paste) back up any Twig templates you have modified. If unsure, do not run the command that comes after this warning! You can always manually copy the new templates from the <code>d8content/metadatadisplays</code> folder which contains text versions (again, copy/paste) of each shipped template you can pick and use when you feel ready. </p>
+<p>If you are sure (like really?) you want to overwrite the ones you modified (sure, just checking?), then you can run this:</p>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">&#39;scripts/archipelago/update_deployed.sh&#39;</span>
+</code></pre></div>
+<p>Done! (For realz now) </p>
+<p>Please log into your Archipelago and test/check all is working! Enjoy 1.0.0-RC3 and Drupal 9. Thanks!</p>
+<hr />
+<h3 id="need-help-blue-screen-missed-a-step-need-a-hug-and-such">Need help? Blue Screen? Missed a step? Need a hug and such?</h3>
+<p>If you see any issues or errors or need help with a step, please let us know (ASAP!). You can either open an <code>issue</code> in this repository or use the <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Google Group</a>. We are here to help.</p>
+<p>If you like this, let us know!</p>
+<h2 id="caring-coding-fixing-testing">Caring &amp; Coding + Fixing + Testing</h2>
+<ul>
+<li><a href="https://github.com/DiegoPino">Diego Pino</a></li>
+<li><a href="https://github.com/giancarlobi">Giancarlo Birello</a></li>
+<li><a href="https://github.com/alliomeria">Allison Lund</a></li>
+<li><a href="https://github.com/aksm">Albert Min</a></li>
+</ul>
+<h2 id="license">License</h2>
+<p><a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../archipelago-deployment-democontent/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Adding Demo Archipelago Digital Objects (ADOs) to your Repository" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Adding Demo Archipelago Digital Objects (ADOs) to your Repository
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../archipelago-deployment-live-readme/" class="md-footer__link md-footer__link--next" aria-label="Next: Start" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Start
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/esmero" target="_blank" rel="noopener" title="Archipelago Commons + esmero" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://groups.google.com/g/archipelago-commons" target="_blank" rel="noopener" title="Archipelago Commons Google Group" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 4v7H5.17L4 12.17V4h11m1-2H3a1 1 0 0 0-1 1v14l4-4h10a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1m5 4h-2v9H6v2a1 1 0 0 0 1 1h11l4 4V7a1 1 0 0 0-1-1z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://archipelagocommons.slack.com" target="_blank" rel="noopener" title="Archipelago Commons Slack Channe" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": {"provider": "mike", "default": "default"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>

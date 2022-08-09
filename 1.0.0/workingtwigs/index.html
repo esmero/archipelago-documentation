@@ -1,0 +1,2029 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Project documentation for Archipelago.">
+      
+      
+      
+        <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
+      
+      
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0/workingtwigs/">
+      
+      <link rel="icon" href="../images/strawberries_color.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Working With Twig in Archipelago (getting started with custom Twig templates) - Archipelago Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#working-with-twig-in-archipelago" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Archipelago Documentation" class="md-header__button md-logo" aria-label="Archipelago Documentation" data-md-component="logo">
+      
+  <img src="../images/strawberries_color.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Archipelago Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Working With Twig in Archipelago (getting started with custom Twig templates)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Archipelago Documentation" class="md-nav__button md-logo" aria-label="Archipelago Documentation" data-md-component="logo">
+      
+  <img src="../images/strawberries_color.png" alt="logo">
+
+    </a>
+    Archipelago Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          About Archipelago
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About Archipelago" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          About Archipelago
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourtake/" class="md-nav__link">
+        Archipelago's Philosophy & Guiding Principles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strawberryfields/" class="md-nav__link">
+        Strawberryfields Forever
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops/" class="md-nav__link">
+        Software Services
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CODE_OF_CONDUCT/" class="md-nav__link">
+        Code of Conduct
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags.html" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Instructions and Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Instructions and Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Instructions and Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" data-md-state="indeterminate" type="checkbox" id="__nav_5_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Archipelago-Deployment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Archipelago-Deployment" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Archipelago-Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-readme/" class="md-nav__link">
+        Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-osx/" class="md-nav__link">
+        Installing Archipelago Drupal 9 on OSX (macOS)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-ubuntu/" class="md-nav__link">
+        Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-democontent/" class="md-nav__link">
+        Adding Demo Archipelago Digital Objects (ADOs) to your Repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-upgradeFromD8ToD9/" class="md-nav__link">
+        Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" data-md-state="indeterminate" type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Archipelago-Deployment-Live
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Archipelago-Deployment-Live" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Archipelago-Deployment-Live
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-readme/" class="md-nav__link">
+        Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-gitworkflow/" class="md-nav__link">
+        Github Workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-moveToLive/" class="md-nav__link">
+        Moving from archipelago-deployment to archipelago-deployment-live
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-upgradeFromD8ToD9/" class="md-nav__link">
+        Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          Archipelago 101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Archipelago 101" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Archipelago 101
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1">
+          Site Administration & Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Site Administration & Configuration" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Site Administration & Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archifilepersistencestrategy/" class="md-nav__link">
+        Archipelago's File Persistence Strategy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sslsetup/" class="md-nav__link">
+        How to Set Up SSL for Docker/Archipelago
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdebug/" class="md-nav__link">
+        Debugging PHP in Archipelago
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../createdisplaymodes/" class="md-nav__link">
+        Creating Display Modes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strawberryfield-formatters/" class="md-nav__link">
+        Strawberryfield Formatters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotations/" class="md-nav__link">
+        Annotations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_1_7" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_1_7" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1_7">
+          General Q&A
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General Q&A" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_3_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          General Q&A
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_index/" class="md-nav__link">
+        General Q&A
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_twig_modules_configuration/" class="md-nav__link">
+        Twig Modules Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_smtp_configuration/" class="md-nav__link">
+        SMTP Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_minio_logging/" class="md-nav__link">
+        Min.io Logging
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2" type="checkbox" id="__nav_5_3_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2">
+          Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Digital Objects and Collections Creation, Metadata and Cataloging, General Workflows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firstobject/" class="md-nav__link">
+        Ingesting Your First Object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2_2">
+          Webforms in Archipelago
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Webforms in Archipelago" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Webforms in Archipelago
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webforms/" class="md-nav__link">
+        Webforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webformsasinput/" class="md-nav__link">
+        How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modifyingfileextensionsinwebform/" class="md-nav__link">
+        Customizing Webforms (Modifying allowable file extensions)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customwebformelements/" class="md-nav__link">
+        Archipelago Custom Webform Elements
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2_3" type="checkbox" id="__nav_5_3_2_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2_3">
+          Twig Templates and Archipelago
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Twig Templates and Archipelago" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Twig Templates and Archipelago
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadatatwigs/" class="md-nav__link">
+        Twig Templates and Archipelago
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Working With Twig in Archipelago (getting started with custom Twig templates)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Working With Twig in Archipelago (getting started with custom Twig templates)
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prequisites-with-food-analogy" class="md-nav__link">
+    Prequisites (with food analogy)
+  </a>
+  
+    <nav class="md-nav" aria-label="Prequisites (with food analogy)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note-about-the-examples" class="md-nav__link">
+    Note about the Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-know-your-data" class="md-nav__link">
+    First: Know Your Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-the-twig-language-in-archipelago" class="md-nav__link">
+    Getting Started with the Twig Language in Archipelago
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started with the Twig Language in Archipelago">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#twig-statements-and-printing" class="md-nav__link">
+    Twig Statements and Printing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twig-statements-and-executing" class="md-nav__link">
+    Twig Statements and Executing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-examples-for-common-uses-cases" class="md-nav__link">
+    Full Examples for Common Uses Cases:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-recommended-workflow" class="md-nav__link">
+    A Recommended Workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#and-now-its-your-turn" class="md-nav__link">
+    And now it's your turn!
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2_4" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_2_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2_4">
+          Archipelago Multi-Importer (AMI)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Archipelago Multi-Importer (AMI)" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Archipelago Multi-Importer (AMI)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ami_index/" class="md-nav__link">
+        Archipelago Multi-Importer (AMI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_5_3_2_4_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2_4_2">
+          AMI Instructions and Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AMI Instructions and Guides" data-md-level="5">
+        <label class="md-nav__title" for="__nav_5_3_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          AMI Instructions and Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ami_spreadsheet_overview/" class="md-nav__link">
+        Spreadsheet Formatting Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AMIviaSpreadsheets/" class="md-nav__link">
+        Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../googleapi/" class="md-nav__link">
+        Configuration for Google Sheets API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../I7solrImporter/" class="md-nav__link">
+        Using the Islandora 7 Solr Importer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentations_docs/" class="md-nav__link">
+        Archipelago Presentations and Documents
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inthewild/" class="md-nav__link">
+        Archipelagos in the Wild
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Contribution Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contribution Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Contribution Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../giveortake/" class="md-nav__link">
+        Archipelago Contribution Guide
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        About This Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acknowledgments/" class="md-nav__link">
+        Care & Coding + Fixing / Acknowledgments / License
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prequisites-with-food-analogy" class="md-nav__link">
+    Prequisites (with food analogy)
+  </a>
+  
+    <nav class="md-nav" aria-label="Prequisites (with food analogy)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note-about-the-examples" class="md-nav__link">
+    Note about the Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-know-your-data" class="md-nav__link">
+    First: Know Your Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-the-twig-language-in-archipelago" class="md-nav__link">
+    Getting Started with the Twig Language in Archipelago
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started with the Twig Language in Archipelago">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#twig-statements-and-printing" class="md-nav__link">
+    Twig Statements and Printing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twig-statements-and-executing" class="md-nav__link">
+    Twig Statements and Executing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-examples-for-common-uses-cases" class="md-nav__link">
+    Full Examples for Common Uses Cases:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-recommended-workflow" class="md-nav__link">
+    A Recommended Workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#and-now-its-your-turn" class="md-nav__link">
+    And now it's your turn!
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="working-with-twig-in-archipelago">Working with Twig in Archipelago</h1>
+<p>The following information can also be found in this Presentation from the "Twig Templates and Archipelago" Spring 2021 Workshop:</p>
+<ul>
+<li><a href="https://tinyurl.com/archipelagoandtwig">Twig Templates and Archipelago</a></li>
+</ul>
+<h2 id="prequisites-with-food-analogy">Prequisites (with food analogy)</h2>
+<ol>
+<li>Know your Data/Metadata. What do I have? <img alt="🤔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f914.svg" title=":thinking:" /><ul>
+<li>What do I have in my Fridge? Do I have Tofu? Do I have Peppermint <img alt="🍬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f36c.svg" title=":candy:" />? One Bunch?</li>
+</ul>
+</li>
+<li>Know your final desired output Document: MODS, HTML, GEOJSON, etc. <ul>
+<li>What are you going to cook <img alt="🧑‍🍳" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f9d1-200d-1f373.svg" title=":cook:" />? Do you have a picture of the Curry <img alt="🍛" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f35b.svg" title=":curry:" />? Have you ever had Curry <img alt="🍲" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f372.svg" title=":stew:" />?</li>
+</ul>
+</li>
+<li>Know your Twig Basics<ul>
+<li>How to cut and dice <img alt="🔪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f52a.svg" title=":knife:" />, steam and sauté <img alt="🥣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f963.svg" title=":bowl_with_spoon:" /></li>
+</ul>
+</li>
+<li>Do not be afraid<ul>
+<li>You can’t get burned <img alt="🔥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f525.svg" title=":fire:" /> here and Ingredients <img alt="🍓" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f353.svg" title=":strawberry:" /> do not expire!</li>
+</ul>
+</li>
+<li>Ask for help. Slack/Google Groups/Postcards <img alt="📧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4e7.svg" title=":email:" /> <img alt="📬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ec.svg" title=":mailbox_with_mail:" /><ul>
+<li>Seeing others cook helps and also motivates. Others may share some spices. <img alt="🌶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f336.svg" title=":hot_pepper:" /></li>
+</ul>
+</li>
+<li>Use and Share your findings!<ul>
+<li>Eat what you cook. <img alt="🍪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f36a.svg" title=":cookie:" /> Share with friends and family. <img alt="🍰" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f370.svg" title=":cake:" /></li>
+</ul>
+</li>
+</ol>
+<h4 id="note-about-the-examples">Note about the Examples:</h4>
+<p><em>All examples shown below are using the following JSON snipped from <a href="https://archipelago.nyc/do/17355bdb-d784-4037-96fe-5c160296e639">Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?]</a>.</em></p>
+<details class="info"><summary>Click to view image of the JSON snippet.</summary><p><img alt="LaddieJSON" src="../images/LaddieJSON.png" /></p>
+</details>
+<details class="info"><summary>Click to view this snippet as JSON.</summary><div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Photograph&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?]&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;New-York Historical Society, 170 Central Park West, New York, NY 10024, 212-873-3400.&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rights&quot;</span><span class="p">:</span> <span class="s2">&quot;This digital image may be used for educational or scholarly purposes without restriction. Commercial and other uses of the item are prohibited without prior written permission from the New-York Historical Society. For more information, please visit the New-York Historical Society&#39;s Rights and Reproductions Department web page at http:\/\/www.nyhistory.org\/about\/rights-reproductions&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;English&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;documents&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="nt">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ismemberof&quot;</span><span class="p">:</span> <span class="s2">&quot;111&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;creator_lod&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name_uri&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;role_uri&quot;</span><span class="p">:</span> <span class="s2">&quot;http:\/\/id.loc.gov\/vocabulary\/relators\/pht&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;agent_type&quot;</span><span class="p">:</span> <span class="s2">&quot;personal&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name_label&quot;</span><span class="p">:</span> <span class="s2">&quot;Stonebridge, George Ehler&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;role_label&quot;</span><span class="p">:</span> <span class="s2">&quot;Photographer&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;George Ehler Stonebridge (d. 1941) was an amateur photographer who lived and worked in the Bronx, New York.&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;subject_loc&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;uri&quot;</span><span class="p">:</span> <span class="s2">&quot;http:\/\/id.loc.gov\/authorities\/subjects\/sh85038796&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Dogs&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;date_created&quot;</span><span class="p">:</span> <span class="s2">&quot;1910-01-01&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<h2 id="first-know-your-data">First: Know Your Data</h2>
+<p>Understanding the basic structure of your JSON data. </p>
+<ol>
+<li>
+<p>Single JSON Value.</p>
+<p><img alt="KnowYourData1" src="../images/KnowYourData1.png" /></p>
+<ul>
+<li>For <code>"type": "Photograph"</code><ul>
+<li>"type" = JSON Key or Property</li>
+<li>"Photograph" = Single JSON Value (string)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Multiple JSON Values (Array of Enumeration of <strong>Strings</strong>)</p>
+<p><img alt="KnowYourData2" src="../images/KnowYourData2.png" />
+- For <code>"language": ["English","Spanish"]</code>
+    - "language" = JSON Key or Property
+    - "["English","Spanish"]" = Multiple JSON Values (Array of Enumeration of <strong>Strings</strong>)</p>
+</li>
+<li>
+<p>Multiple JSON Values (Array of Enumeration of <strong>Objects</strong>)</p>
+<p><img alt="KnowYourData3" src="../images/KnowYourData3.png" /></p>
+<ul>
+<li>For <code>"subject_loc":[{"uri":"http://..","label":"Dogs"},{"uri":"http://..","label":"Pets"}]</code><ul>
+<li>"subject_loc" = JSON Key or Property</li>
+<li>[{"uri":"http://..","label":"Dogs"},{"uri":"http://..","label":"Pets"}] =<ul>
+<li><strong>Object</strong> with two JSON Keys. Each one with a single Value</li>
+<li>Multiple JSON Values (Array of Enumeration of <strong>Objects</strong>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="getting-started-with-the-twig-language-in-archipelago">Getting Started with the Twig Language in Archipelago</h2>
+<ul>
+<li>
+<p><strong>Data</strong> is known as <strong>Context</strong> in Twig Lingo.</p>
+</li>
+<li>
+<p><strong>All your</strong> JSON Strawberryfield Metadata is accessible inside a Variable named <em>data</em> in your twig template. </p>
+</li>
+<li>
+<p>You can access the <em>values</em> by using <code>data DOT Property (attribute) Name</code>.</p>
+<ul>
+<li>In the Laddie the Dog example <a href="https://github.com/esmero/archipelago-documentation/blob/1.0.0-RC3/docs/workingtwigs.md#note-about-the-examples">shown above (originally)</a>:<ul>
+<li><code>data.type</code> will contain "Photograph"</li>
+<li><code>data.language</code> will contain [ "English" ]</li>
+<li><code>data.language[0]</code> will contain "English" <ul>
+<li>0 means first entry in an Array or Enumeration</li>
+</ul>
+</li>
+<li><code>data.subject_loc</code> will contain [{ "uri":"http://..","label": "Dog" }]</li>
+<li><code>data.subject_loc.uri</code> will contain <code>"http://.."</code></li>
+<li><code>data.subject_loc.label</code> will contain "Dog"</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Please note: you also have access to other info in your <strong>context</strong> <code>node</code>: such as<code>node.id</code> is the Drupal ID of your Current ADO; Also <code>is_front</code>, <code>language</code>, <code>is_admin</code>, <code>logged_in</code> and more!</p>
+</li>
+</ul>
+<h4 id="twig-statements-and-printing">Twig Statements and Printing</h4>
+<ul>
+<li><a href="https://twig.symfony.com/doc/3.x/templates.html">https://twig.symfony.com/doc/3.x/templates.html</a></li>
+<li>Simple examples using Printing Statements</li>
+<li>
+<p>Single JSON Value Example:</p>
+<ul>
+<li>
+<p>Twig template: </p>
+<div class="highlight"><pre><span></span><code><span class="x">Hello I am a </span><span class="cp">{{</span> <span class="nv">data.type</span> <span class="cp">}}</span><span class="x"> and very happy to meet you</span>
+</code></pre></div>
+</li>
+<li>
+<p>Rendered output:</p>
+<ul>
+<li><code>Hello I am a Photograph and very happy to meet you</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Multiple JSON Values Example:</p>
+<ul>
+<li>
+<p>Twig template:</p>
+<div class="highlight"><pre><span></span><code><span class="x">Hello I was classified as &quot;</span><span class="cp">{{</span> <span class="nv">data.subject_loc</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="nv">.label</span> <span class="cp">}}</span><span class="x">&quot; and very happy to meet you</span>
+</code></pre></div>
+</li>
+<li>
+<p>Rendered Output:</p>
+<ul>
+<li><code>Hello I was classified as "Dogs" and very happy to meet you</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="twig-statements-and-executing">Twig Statements and Executing</h4>
+<ul>
+<li><a href="https://twig.symfony.com/doc/3.x/tags/if.html">https://twig.symfony.com/doc/3.x/tags/if.html</a></li>
+<li>
+<p>Rendered Output based upon different Twig <code>conditionals</code>, <code>operators</code>, <code>tests</code>, <code>assignments</code>, and <code>filters</code></p>
+</li>
+<li>
+<p>Example 1:</p>
+<ul>
+<li>
+<p>Twig template:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.subject_loc</span> <span class="k">is</span> <span class="nf">defined</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">Hey I have a Subject Key</span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">Ups no Subject Key</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</code></pre></div>
+</li>
+<li>
+<p>Rendered Output:</p>
+<ul>
+<li><code>Hey I have a Subject Key</code></li>
+</ul>
+</li>
+<li>
+<p>Conditionals, Operator, and Test usage:</p>
+<ul>
+<li><strong>If/else</strong> are conditionals</li>
+<li><strong>is</strong> is an operator</li>
+<li><strong>defined</strong> is a test </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Example 2:</p>
+<ul>
+<li>
+<p>Twig template:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">for</span> <span class="nv">key</span><span class="o">,</span> <span class="nv">subject</span> <span class="k">in</span> <span class="nv">data.subject_loc</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">* Subject </span><span class="cp">{{</span> <span class="nv">subject.label</span> <span class="cp">}}</span><span class="x"> found at position </span><span class="cp">{{</span> <span class="nv">key</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</code></pre></div>
+</li>
+<li>
+<p>Rendered Output:</p>
+<ul>
+<li><code>* Subject Dogs found at position 0</code></li>
+</ul>
+</li>
+<li>
+<p>Loop usage:   </p>
+<ul>
+<li><strong>for</strong> is a loop</li>
+<li>Inside the loop you have access to <strong>key</strong>, <strong>subject</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Example 3:</p>
+<ul>
+<li>
+<p>Twig template:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">for</span> <span class="nv">subject</span> <span class="k">in</span> <span class="nv">data.subject_loc</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">label_lowercase</span> <span class="o">=</span> <span class="nv">subject.label</span><span class="o">|</span><span class="nf">lower</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">My lower case Subject is </span><span class="cp">{{</span> <span class="nv">label_lowercase</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</code></pre></div>
+</li>
+<li>
+<p>Rendered Output:</p>
+<ul>
+<li><code>My lower case Subject is dogs</code></li>
+</ul>
+</li>
+<li>
+<p>Assignment, Filter, and Loop uage:    </p>
+<ul>
+<li><strong>set</strong> is an assignment </li>
+<li>| is a pipe, used after a value to apply a <strong>filter</strong>.</li>
+<li><strong>lower</strong> is a filter</li>
+<li>Inside the loop you have have access to <strong>subject</strong> and <strong>label_lowercase</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Example 4:</p>
+<ul>
+<li>
+<p>Twig template: </p>
+<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">for</span> <span class="nv">subject</span> <span class="k">in</span> <span class="nv">data.subject_loc</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">label_lowercase</span> <span class="o">=</span> <span class="nv">subject.label</span><span class="o">|</span><span class="nf">lower</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">My lower case Subject is </span><span class="cp">{{</span> <span class="nv">label_lowercase</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<span class="c">{# </span>
+<span class="c"> This won’t display because it was assigned inside </span>
+<span class="c"> The For Loop</span>
+<span class="c">#}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">label_lowercase</span> <span class="cp">}}</span><span class="x"></span>
+</code></pre></div>
+</li>
+<li>
+<p>Rendered Output:</p>
+<ul>
+<li><code>My lower case Subject is dogs</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="full-examples-for-common-uses-cases">Full Examples for Common Uses Cases:</h3>
+<p><strong>Use case #1:</strong> I have multiple LoD Subjects and want to display them in my page as a clickable ordered list but I’m a safe/careful person.</p>
+<p><strong>Twig Example for Use Case #1:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.subject_loc</span> <span class="k">is</span> <span class="nf">iterable</span> <span class="k">and</span> <span class="nv">data.subject_loc</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">&lt;h2&gt;My Subjects&lt;/h2&gt;</span>
+<span class="x">&lt;ul&gt;</span>
+<span class="x">   </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">subject</span> <span class="k">in</span> <span class="nv">data.subject_loc</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">   &lt;li&gt;</span>
+<span class="x">      &lt;a href=&quot;</span><span class="cp">{{</span> <span class="nv">subject.uri</span> <span class="cp">}}</span><span class="x">&quot; title=&quot;</span><span class="cp">{{</span> <span class="nv">subject.label</span><span class="o">|</span><span class="nf">capitalize</span> <span class="cp">}}</span><span class="x">&quot; target=&quot;_blank&quot;&gt;</span>
+<span class="x">      </span><span class="cp">{{</span> <span class="nv">subject.label</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">      &lt;/a&gt;</span>
+<span class="x">   &lt;/li&gt; </span>
+<span class="x">   </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">&lt;/ul&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</code></pre></div>
+<p><strong>Use case #2:</strong> I have sometimes a publication date. I want to show it in beautiful human readable language.</p>
+<p><strong>Twig Example for Use Case #2:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.date_published</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">&lt;h2&gt;Date </span><span class="cp">{{</span> <span class="nv">data.label</span> <span class="cp">}}</span><span class="x"> was published:&lt;/h2&gt;</span>
+<span class="x">&lt;p&gt;</span>
+<span class="cp">{{</span> <span class="nv">data.date_published</span><span class="o">|</span><span class="nf">date</span><span class="o">(</span><span class="s2">&quot;F jS \\o\\f Y \\a\\t g:ia&quot;</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</code></pre></div>
+<p><strong>Note about <code>date</code> in this Use Case #2 Twig Example:</strong> </p>
+<ul>
+<li><strong>date()</strong> is a function</li>
+<li>It uses a <a href="https://www.php.net/manual/en/datetime.formats.date.php">“Date Format Pattern”</a> as argument.</li>
+</ul>
+<p><strong>Use Case #3 (Full Curry):</strong> {# May 4th 2021 @dpino: I have sometimes a user provided creation date. I want to show it in beautiful human readable language but fallback to automatic date if absent. I also want in the last case to show it was either “created” or “updated”. #}</p>
+<div class="highlight"><pre><span></span><code>    <span class="nt">&quot;as:generator&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Update&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;actor&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https:\/\/archipelago.nyc\/form\/descriptive-metadata&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;descriptive_metadata&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;endTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-03-17T13:24:01-04:00&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;summary&quot;</span><span class="p">:</span> <span class="s2">&quot;Generator&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https:\/\/www.w3.org\/ns\/activitystreams&quot;</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p><strong>Twig Example for Use Case #3:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.date_created</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">&lt;h2&gt;Date </span><span class="cp">{{</span> <span class="nv">data.label</span> <span class="cp">}}</span><span class="x"> was created:&lt;/h2&gt;</span>
+<span class="x">&lt;p&gt;</span>
+<span class="x">  </span><span class="cp">{{</span> <span class="nv">data.date_created</span><span class="o">|</span><span class="nf">date</span><span class="o">(</span><span class="s2">&quot;F jS \\o\\f Y \\a\\t g:ia&quot;</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">&lt;h2&gt;Date </span><span class="cp">{{</span> <span class="nv">data.label</span> <span class="cp">}}</span><span class="x"> was </span><span class="cp">{{</span> <span class="nv">attribute</span><span class="o">(</span><span class="nv">data</span><span class="o">,</span> <span class="s1">&#39;as:generator&#39;</span><span class="o">)</span><span class="nv">.type</span><span class="o">|</span><span class="nf">lower</span> <span class="cp">}}</span><span class="x">d  in this repository:&lt;/h2&gt;</span>
+<span class="x">&lt;p&gt;</span>
+<span class="x">  </span><span class="cp">{{</span>  <span class="nv">attribute</span><span class="o">(</span><span class="nv">data</span><span class="o">,</span> <span class="s1">&#39;as:generator&#39;</span><span class="o">)</span><span class="nv">.endTime</span><span class="o">|</span><span class="nf">date</span><span class="o">(</span><span class="s2">&quot;F jS \\o\\f Y \\a\\t g:ia&quot;</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</code></pre></div>
+<h3 id="a-recommended-workflow">A Recommended Workflow</h3>
+<p>You want to create a New Metadata Display (HTML) or a new (XML) Schema based format?</p>
+<ol>
+<li>Get yourself an example <strong>document (Frame)</strong>. If <strong>HTML</strong> copy the source. If <strong>XML</strong> copy the full XML. (cmd+c)</li>
+<li>Create a new <strong>Metadata Display Entity</strong>. Copy the content (text) of your Frame into the Edit window. (cmd+v)</li>
+<li>Select an existing (as complete as possible) ADO to use as preview, press Preview.</li>
+<li>Put your nice glasses <img alt="🤓" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f913.svg" title=":nerd_face:" /> on. What do you see? What data in your Frame do you have in your ADO (data)?</li>
+<li>Start nimble. Selected the <code>data.label</code> info, check where your <strong>Frame</strong> uses a <em>Title</em> or a <em>Label</em>. Remove that text (cmd+x) and replace with a <code>{{ data.label }}</code>. Press Preview. Do you see your title?</li>
+<li>Keep doing <strong>6</strong>, over and over. Leave complex values for the end. (e.g <code>data.subject_loc</code>)</li>
+<li>Document your changes. <code>{# I added this because .. #}</code></li>
+<li>Save.</li>
+</ol>
+<p>Once the Template is in place you can use it in a <em>Formatter</em>, as <em>Endpoint</em>, in your <em>Search Results</em> or just keep it around until you and the world are ready!</p>
+<h2 id="and-now-its-your-turn">And now it's your turn!</h2>
+<p>We hope you found the information presented here to be helpful in getting started working with Twigs in Archipelago. Click here to return to the main <a href="../metadatatwigs/">Twigs in Archipelago documentation</a>. Happy Twigging!</p>
+<hr />
+<p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
+<p>Return to the <a href="..">Archipelago Documentation main page</a>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../metadatatwigs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Twig Templates and Archipelago" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Twig Templates and Archipelago
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../ami_index/" class="md-footer__link md-footer__link--next" aria-label="Next: Archipelago Multi-Importer (AMI)" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Archipelago Multi-Importer (AMI)
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/esmero" target="_blank" rel="noopener" title="Archipelago Commons + esmero" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://groups.google.com/g/archipelago-commons" target="_blank" rel="noopener" title="Archipelago Commons Google Group" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 4v7H5.17L4 12.17V4h11m1-2H3a1 1 0 0 0-1 1v14l4-4h10a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1m5 4h-2v9H6v2a1 1 0 0 0 1 1h11l4 4V7a1 1 0 0 0-1-1z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://archipelagocommons.slack.com" target="_blank" rel="noopener" title="Archipelago Commons Slack Channe" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": {"provider": "mike", "default": "default"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>
