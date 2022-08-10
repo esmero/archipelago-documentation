@@ -70,6 +70,7 @@ docker stop esmero-db
 docker stop esmero-cantaloupe
 docker stop esmero-php
 docker stop esmero-minio
+docker stop esmero-nlp
 ```
 
 Now we need to remove them so we run the following:
@@ -81,6 +82,7 @@ docker rm esmero-db
 docker rm esmero-cantaloupe
 docker rm esmero-php
 docker rm esmero-minio
+docker rm esmero-nlp
 ```
 
 Ok, now we are ready to start.
@@ -224,6 +226,7 @@ _Installing Archipelago on AWS Ubuntu_ by [Zach Spalding](https://github.com/sen
 * [Diego Pino](https://github.com/DiegoPino)
 * [Giancarlo Birello](https://github.com/giancarlobi)
 * [Allison Lund](https://github.com/alliomeria)
+* [Katie Romabiles](https://github.com/karomabiles)
 * [Albert Min](https://github.com/aksm)
 
 ## License

@@ -58,6 +58,7 @@ docker stop esmero-db
 docker stop esmero-cantaloupe
 docker stop esmero-php
 docker stop esmero-minio
+docker stop esmero-nlp
 ```
 
 Now we need to remove them, run:
@@ -69,6 +70,7 @@ docker rm esmero-db
 docker rm esmero-cantaloupe
 docker rm esmero-php
 docker rm esmero-minio
+docker rm esmero-nlp
 ```
 
 Ok, now we are ready to start. Depending on what type of Chip your Apple uses you have two options:
@@ -172,6 +174,7 @@ If you like this, let us know!
 * [Diego Pino](https://github.com/DiegoPino)
 * [Giancarlo Birello](https://github.com/giancarlobi)
 * [Allison Lund](https://github.com/alliomeria)
+* [Katie Romabiles](https://github.com/karomabiles)
 * [Albert Min](https://github.com/aksm)
 
 ## License
