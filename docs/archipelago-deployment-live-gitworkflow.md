@@ -322,7 +322,7 @@ This will always get you the latest `Drupal` and `dependencies` allowed by your 
 
 ### 3.2 Drupal Core between major versions:
 
-Since major versions may bring larger deprecations, contributed modules will stay behind, and the world (and your database may collapse), we _really_ recommend that you do some tests first (locally) or follow one of our guides. We at Archipelago will always document a larger version update. Currently, the [Drupal 8 to Drupal 9 Update is documented in detail here](upgradeFromD8ToD9.md).
+Since major versions may bring larger deprecations, contributed modules will stay behind, and the world (and your database may collapse), we _really_ recommend that you do some tests first (locally) or follow one of our guides. We at Archipelago will always document a larger version update. Currently, the [Drupal 8 to Drupal 9 Update is documented in detail here](archipelago-deployment-live-upgradeFromD8ToD9.md).
 
 ___
 

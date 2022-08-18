@@ -33,7 +33,7 @@ Bring everything up to date: `sudo apt update && sudo apt upgrade -y`
 
 ## Deployment
 
-[Follow the steps for deployment in Ubuntu](ubuntu.md#step-1-deployment).
+[Follow the steps for deployment in Ubuntu](archipelago-deployment-ubuntu.md#step-1-deployment).
 
 ## Acknowledgment
 

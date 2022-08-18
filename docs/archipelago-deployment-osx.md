@@ -171,7 +171,7 @@ Also, to make this docker-compose easier to use we are doing something named `bi
 
 ## Step 6: Optional but more fun if you add content
 
-[One-Step Demo content ingest](democontent.md)
+[One-Step Demo content ingest](archipelago-deployment-democontent.md)
 
 ### Need help? Blue Screen? Missed a step? Need a hug and such?
 
