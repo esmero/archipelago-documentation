@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0/archipelago-deployment-readme/">
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
@@ -42,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#archipelago-docker-deployment-for-drupal-9" class="md-skip">
+        <a href="#archipelago-docker-deployment" class="md-skip">
           Skip to content
         </a>
       
@@ -76,9 +76,7 @@
     </div>
     
       <div data-md-component="outdated" hidden>
-        <aside class="md-banner md-banner--warning">
-          
-        </aside>
+        
       </div>
     
     
@@ -1388,42 +1386,26 @@
 
   
 
-  <nav class="md-tags" >
-    
-      
-        <span class="md-tag">Archipelago-deployment</span>
-      
-    
-      
-        <span class="md-tag">Drupal 9</span>
-      
-    
-      
-        <span class="md-tag">Docker</span>
-      
-    
-  </nav>
 
 
-
-<h1 id="archipelago-docker-deployment-for-drupal-9">Archipelago Docker Deployment for Drupal 9</h1>
-<p><strong>Updated:</strong> November 25th 2021</p>
-<p>This repository serves as bootstrap for a Archipelago 1.0.0-RC3 deployment via Docker and provides many more options this time:</p>
+<h1 id="archipelago-docker-deployment">Archipelago Docker Deployment</h1>
+<p><strong>Updated:</strong> August 15th 2022</p>
+<p>This repository serves as bootstrap for a Archipelago 1.0.0 deployment on a localhost for development/testing/customizing via Docker and provides a more unified experience this time:</p>
 <ul>
-<li>minio.io (latest) S3/Azure/Local/Remote alternative with a new Console and also Gateway to many others.</li>
-<li>Apache Solr 8.8.2 (or 7.5 if you go legacy) with the wizardly Solr OCR Highlight library <a href="https://github.com/dbmdz/solr-ocrhighlighting/releases/tag/0.7.1">v0.7.1</a> build by the Developement Team at the <a href="https://github.com/dbmdz">Bavarian State Library</a>. Thanks Johannes Baiter!</li>
-<li>MySQL 8.0.22 (or MySQL 5.7 if you go legacy)</li>
+<li>minio.io (latest with Gateway Support) S3/Azure/Local/Remote alternative with Console.</li>
+<li>Apache Solr 8.11.2 (or 7.5 if you go legacy) with the wizardly Solr OCR Highlight library <a href="https://github.com/dbmdz/solr-ocrhighlighting/releases/tag/0.7.1">v0.7.1</a> build by the Developement Team at the <a href="https://github.com/dbmdz">Bavarian State Library</a>. Thanks Johannes Baiter and team.</li>
+<li>MySQL 8.0.28 (amd64/x86)/MariaDB 10.6.8(Arm64/M1)</li>
 <li>NGINX 11</li>
-<li>Custom PHP FPM 7.4 super-tuned for Drupal 8/9 with multi-arch (so M1 too) capabilities (or 7.3 FPM if you go legacy), WARC to WACZ processing, and Composer 2.0</li>
-<li>Natural Language Processing via NLPWEB64</li>
-<li>Cantaloupe 4.1.9 as IIIF Server with Video Frame extraction and PDF support</li>
-<li>A Skeleton Project setup to run latest Version of Drupal (9.2.9) and Strawberry Field modules on 1.0.0-RC3 &amp; friends on 0.2.0</li>
-<li>Official <em>Drupal 9 ready</em> release again. D9.2.9 this time. Drupal 8 is no longer maintained, and we have <a href="../archipelago-deployment-upgradeFromD8ToD9/">documented the upgrade path</a></li>
-<li>Complete support for Apple Silicon <em>M1</em> Machines and in general arm64 architecture Chips like Raspberry Pi 4, with specially built arm64 docker containers. Blazing fast OCR!</li>
+<li>Custom PHP-FPM 8.0 multi architecture ,fine-tuned for Drupal 9/10 , WARC to WACZ processing, Tesseract 5 with JP2 support, PDFAlto and Composer 2.x, etc</li>
+<li>Natural Language Processing via NLPWEB64 multi architecture with FastText Language detection (Thanks Mike Bennet!)</li>
+<li>Cantaloupe 6.0.0 Snapshot multi architecture as IIIF2/3 Server with Video Frame extraction and PDF support</li>
+<li>A Skeleton Project setup to run latest Version of Drupal (9.4.x), our new Bootstrap 5 theme and Strawberry Field modules on 1.0.0 &amp; friends on 0.4.0</li>
+<li>Drupal 8 is no longer maintained, and we have <a href="../archipelago-deployment-upgradeFromD8ToD9/">documented the upgrade path</a></li>
+<li>Complete support for Apple Silicon <em>M1</em> Machines and in general <code>arm64</code> architecture Chips like Raspberry Pi 4, with specially built arm64 docker containers. The only differences now between deployment strategies is the DB. Blazing fast OCR.</li>
 </ul>
 <p>The skeleton project contains all the pieces needed to run a local deployment of a vanilla Archipelago including (<em>YES</em>!) content provided as an optional feature from <a href="https://github.com/esmero/archipelago-recyclables">archipelago-recyclables</a></p>
 <h1 id="starting-from-zero">Starting from ZERO</h1>
-<p>This is the recommended, simplest way for this release. There are a too many, tons of fun new features, Metadata Displays, viewers, new JS libraries, better HUGE import capabilities, bug fixes (yes), webform elements and improvements! W3C WebAnnotations capabilities are even better now by the great team behind <a href="https://recogito.github.io/annotorious/api-archipelago-deployment-osd-plugin/">https://recogito.github.io/annotorious/api-archipelago-deployment-osd-plugin/</a> (thanks Rainer Simon) and with complete integration in our UI and metadata backends. Also <a href="https://github.com/webrecorder/replayweb.page">WACZ! and replay.web</a> both fabulous developments by the Webrecorder team (thanks Ilya Kreymer and Emma Dickson). There is more. Release will have a full feature list. Promise.</p>
+<p>This is the recommended, simplest way for this release. There are a too many, tons of fun new features, Metadata Displays, Webforms, New formatters and Twig extensions, improved viewers, new and improved JS libraries, OpenCV/Face Detection, smarter NLP, File composting, better HUGE import/update capabilities, bug fixes (yes so many) so please try them out. The team has also updated the DEMO AMI set (Content) to showcase metadata/display improvements.</p>
 <h2 id="macos-intel-or-apple-silicon-m1">macOS Intel or Apple Silicon M1:</h2>
 <p><a href="../archipelago-deployment-osx/">Step by Step deployment on macOS</a></p>
 <h2 id="ubuntu-1804-or-2004">Ubuntu 18.04 or 20.04:</h2>
@@ -1432,13 +1414,17 @@
 <p><a href="../archipelago-deployment-windows/">Step by Step deployment on Windows</a></p>
 <h2 id="more-fun-if-you-add-content">More fun if you add content:</h2>
 <p><a href="../archipelago-deployment-democontent/">One-Step Demo content ingest</a></p>
-<h2 id="100-rc3">1.0.0-RC3</h2>
-<p>We have been working hard on 1.0.0-RC3, and it again took us 6 months from the latest release to reach this point. RC3 is different. There won't be any more Release Candidates and this leads directly (in a time span of 2–3 weeks) into 1.0.0—and from there on to 1.1.0, etc. You already know we take Release Candidates seriously, and this one brings a huge list of new features, improvements, and migration tools, finally closing the cycle. There are many bug fixes, requested needs, improvements, AMI with remote import and LoD reconciliation, invisible and visible workflow changes, smarter processing, and most importantly, all is made to allow you to extend Archipelago even more. We ship now with a lot more Site Building (fancy word for settings, views, field formatters, Solr, etc. in Drupal) to make starting with Archipelago or becoming a permanent resident of your own group of always sunny islands fun.</p>
-<p>You get (yet again) fresh, strange, bizarre, unusual and/or amazing features that were not even asked for! We still work hard to not deviate from our own roadmap—keeping the North Star always visible while navigating these stormy waters—to make UI/UX clearer to understand, to make code less redundant and easier to follow, and to cover (so close) every Media/and LoD base we could wish for. This Archipelago feels like a sunny beach day with friends and Samba. Every day we use it, and it manages, from time to time, to produce wonderful surprises. It is our tiny, little secret garden/pumpkin/working-bee/undiscovered-magical-islands, and we are happy we see it as our own home or at least a place to which you will keep coming back. A child with grown-up Repository responsabilities, a planned and consistent Architecture Implementation (and still a novel one, cute, cozy, and simple) that can cover, mix and match GLAM, IR, Data and Scientific/Research/Museum Tech/Education needs, metadata, and media in any shape.</p>
-<p>Our ambitions never cease to be enormous (we try to be humble), and we are always quite a bit tired (same as with Beta1, Beta2, Beta3 and RC1). Who knew we could write so much code and deploy and test over and over? We know the Horizon is still far away, and we may never end sailing towards it.</p>
-<p>No need to tell you that 2020 and 2021 have been strange years so far, and there is and there will continue to be constant reflecting on past times. Many, many more Archipelagos have been emerging from the depths of the sea (and the shallow Internet), and a few are already blooming rich in local flora and fauna. We want to keep learning and sharing, and we want you to keep asking. We may make mistakes while doing so, but our conviction that all still fits together and makes sense, not only for us but most important for others, is very strong.</p>
-<p>Since the beginning (a red evening under the big sky of Montana) our initial architecture and divergent ideas about what metadata management, workflows, and media preservation should be, have been controversial and sometimes hard to explian, but Archipelago's simplicity, flexibility, ease of extension, its chameleon-ish capability to assume new shapes, colors, and aromas, and use cases without coding have shown us that we put our efforts into the right dream and the right people. Fun to use, fun to code on, and solid to build on.</p>
-<p>If you like it (or not), want new features, or want to be part of making this better (documenting, coding and planning) let us know. Talk (or whisper) to us.</p>
+<h2 id="100">1.0.0</h2>
+<h3 id="ode-to-the-in-betweens-the-invisible-paths-through-the-meadow">Ode to the in-betweens, the invisible paths through the meadow</h3>
+<p>Archipelago, the humble tiny dream, the initial impossible thought turned into a colorful idea, the careful act of choosing, curating, planting seeds, nurturing and watering, waiting and contemplating the seasons come and go, the software that became a tiny garden, a communal space where many of you came and went and returned to stay a little bit longer, the idea turned into a community that adopted (the software) the space, hopes and care, is flowering once again in the form of a release and you are welcome to sit, read, reflect, enjoy, watch the birds (or be them), inhale deep and let the wind build a wild mix of colors and perfumes on a long hot summer evening.</p>
+<p>The semantics of the versioning of this release -1.0.0 - are confusing. Building software the way we think of software is tricky. We decided to release not often because we believe users and ourselves don’t deserve the pain of upgrades so every release packs a lot. Also we had an initial goal--some daisies, dandelions, beans and pumpkin plants needed to be present, not fair having a 2.0 for a patch of dirt with a promise. Note: If this is already too much jump to the release notes at the end (but really, keep reading).</p>
+<p>At this point, it may feel that all previous versions and past 3 1/2 years of public code (e.g RC2 or Beta3 or even alphas, or some better known by their nicknames “a Cat's Pajamas” or “All grand beauties withhold their deepest secrets") were - semantically - continues loops - a rehearsal- around a circular laid path (your needs, our shared sometimes goals) in the aim of learning, revisiting each step, avoiding larger stones and having a clear start and end you can walk safely over and over (a circle of refinement). But to be honest (as someone that has been walking the main road laid in front here, filling up a hole here and there, but mostly visiting the side tracks and invisible paths between the bushes while doing so) it was never about the path; I say this in the deeper sense of two dots that connect. It was always (or became) about the slowly, patiently contemplated displacement. It is now and then about the surroundings, the changing seasons, the evolving and devolving of the landscape and mostly about the people (you, them) that we met, the shared times, the learning, narratives and tales and space while laying new reasons to advance and finding old reasons to stay behind. The past and present tense(s) are all entangled.</p>
+<p>Said differently, 1.0.0 might as well be version 5.7.2. Even if it is more than acceptable and desirable to have a concrete clear goal here (CS people will agree/enforce this and everyone trusts full versions and defined roadmaps, feature lists, in software way more anyway) of what this Software and Community can/wants to be and where in the grand (or small) scheme of things a Repository system even falls into, what we all have built as a community is not a technologically imposed thing where to put/extract/safely meta(meta(data)) and media -only- but a safe space to build on concretely. A platform upon which to set down, brick by brick, your needs and ideas that  support your uses, that represent your core daily work efforts, a space to keep and share histories (your objects), ways, workflows, relationships that are the real gold (the yellow flowers in this meadow), your efforts and evolving needs and wishes. This is made possible not by providing the what purely, but the hows and whys, the ability to put new and old ways in place without breaking the fragile balance of what was already done, the road (sunset, sunrise?) left behind, that is still so treasured and valid.</p>
+<p>So. 1.0.0, "shimmering at the meadow's edge"<sup>1</sup>, is somewhere in between a future path and the offset edge of a well walked one. And it is a happy place. We are privileged and proud (and lucky) that we have not left anyone behind and that we could stay true to our initial ideas. We have made more tools/tooling and the existing ones more colorful (fast too) and reliable. We have created things that you would not find somewhere else, not just because we can, but because we think you might need those. We have put reflections, self-critic, external criticism, deep care for details, time, efforts, inline comments, hundreds of slack messages and strong cups of coffee and tea into this software; and open minds and hearts into the act of community nurturing. We ensured that all what you have/had/knew is still valid - and in a huge effort for being (finally!) super concrete here - without introducing any deprecation or changes that could affect your precious (meta)data, the fruit of your efforts. All this means anything ingested on day one (Sep 18, 2018, when nobody even knew we were even planning this) is as valid, as immutable and as plastic, portable and yours as ever and will keep being so. Also worth mentioning, Archipelagos are running in the wild (never to be domesticated) in nearly every continent, from humble to large, with simple petals and some with complex/compound blooms, using pre conceived use cases and data models or unexpected ones. Finally, we hope you like it (or love it, what is even the difference?) and that your work will be easier because of it. </p>
+<p>If you like it (or not), want new features, or want to be part of making this better (documenting, coding and planning) let us know. Make your voice and opinion be heard, this is a community effort.</p>
+<ol>
+<li>Kimmerer, Robin Wall. Braiding Sweetgrass. Milkweed Editions, 2015.</li>
+</ol>
 <h2 id="caring-coding-fixing-testing">Caring &amp; Coding + Fixing + Testing</h2>
 <ul>
 <li><a href="https://github.com/DiegoPino">Diego Pino</a></li>
@@ -1451,6 +1437,9 @@
 <p>This software is a <a href="https://metro.org">Metropolitan New York Library Council</a> Open-Source initiative and part of the Archipelago Commons project.</p>
 <h2 id="license">License</h2>
 <p><a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3</a></p>
+
+
+
 
               
             </article>
@@ -1520,7 +1509,7 @@
     
     
     <a href="https://github.com/esmero" target="_blank" rel="noopener" title="Archipelago Commons + esmero" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
     
@@ -1532,7 +1521,7 @@
     
     
     <a href="https://archipelagocommons.slack.com" target="_blank" rel="noopener" title="Archipelago Commons Slack Channe" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
     </a>
   
 </div>
@@ -1545,10 +1534,11 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
       
     
   </body>
