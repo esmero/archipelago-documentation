@@ -137,15 +137,21 @@ docker exec -ti -u www-data esmero-php bash -c "cd web;../vendor/bin/drush -y si
 
 Note: You will see this warning: `[warning] The "block_content:1cdf7155-eb60-4f27-9e5e-64fffe93127a" was not found`. Nothing to worry about. We will provide the missing part in Step 5.
 
-This will give you an `admin` Drupal user with `archipelago` as password (Change this if running on a public instance!).
+Note 2: Please be patient. This step takes now 25-30% longer because of how the most recent Drupal Installation code fetches translations and other resources (see `Performed install task`). This means progress might look like getting "stuck", go and get a coffee/tea and let it run to the end.
 
-Note about Steps 2-3: You don't need to, nor should you do this more than once. You can destroy/stop/update, recreate your Docker containers, and start again (`git pull`), and your Drupal and Data will persist once you're past the `Installation complete` message. I repeat, all other containers' data is persisted inside the `persistent/` folder contained in this cloned git repository. Drupal and all its code is visible, editable, and stable inside your `web/` folder.
+Once finished, this will give you an `admin` Drupal user with `archipelago` as password (Change this if running on a public instance!).
 
-## Step 4: Create a "demo "and a "jsonapi" user using drush and assign your "admin" user the Administrator Role (new for Drupal 9).
+Final Note about Steps 2-3: You don't need to, nor should you do this more than once. You can destroy/stop/update, recreate your Docker containers, and start again (`git pull`), and your Drupal and Data will persist once you're past the `Installation complete` message. I repeat, all other containers' data is persisted inside the `persistent/` folder contained in this cloned git repository. Drupal and all its code is visible, editable, and stable inside your `web/` folder.
+
+## Step 4: Create a "demo "and a "jsonapi" user using drush and assign your "admin" user the Administrator Role (new since Drupal 9).
 
 ```shell
 docker exec -ti esmero-php bash -c 'drush ucrt demo --password="demo"; drush urol metadata_pro "demo"'
+```
+```shell
 docker exec -ti esmero-php bash -c 'drush ucrt jsonapi --password="jsonapi"; drush urol metadata_api "jsonapi"'
+```
+```shell
 docker exec -ti esmero-php bash -c 'drush urol administrator "admin"'
 ```
 
@@ -162,6 +168,10 @@ Open your most loved Web Browser and point it to `http://localhost:8001`.
 Note: It can take some time to start the first time (Drupal needs some warming up).
 
 Also, to make this docker-compose easier to use we are doing something named `bind mounting` (or similar...) your folders. The good thing is that you can edit files in your machine, and they get updated instantly to docker. The bad thing is that the OSX (macOS) driver runs slower than on Linux. Speed is a huge factor here, but you get the flexibility of changing, backing up, and persisting files without needing a Docker University Degree.
+
+## Step 6: Optional but more fun if you add content
+
+[One-Step Demo content ingest](democontent.md)
 
 ### Need help? Blue Screen? Missed a step? Need a hug and such?
 
