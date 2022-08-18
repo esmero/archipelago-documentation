@@ -11,7 +11,7 @@ At the core of the Archipelago philosophy is our commitment to both simplicity a
 - [Cantaloupe (Image Server)](https://cantaloupe-project.github.io/)
 - [S3 Storage (Mini.io or any other S3 flavor)](https://min.io/)
 
-Installation is entirely [Dockerized](https://www.docker.com) and scripted with [easy-to-follow directions](quickstart.md).
+Installation is entirely [Dockerized](https://www.docker.com) and scripted with [easy-to-follow directions](archipelago-deployment-readme.md).
 
 * Docker containers are as follows:
 
