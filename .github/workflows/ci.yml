@@ -40,9 +40,9 @@ jobs:
           cp ./archipelago-deployment/README.md ./tmp-update-repo/docs/archipelago-deployment-readme.md
           cp ./archipelago-deployment-live/README.md ./tmp-update-repo/docs/archipelago-deployment-live-readme.md
           for f in ./archipelago-deployment/docs/*.md; do cp -- "$f" "./tmp-update-repo/docs/archipelago-deployment-$(basename $f)"; done
-          for f in ./archipelago-deployment/docs/*.md; do sed -i "s/$(basename $f)/archipelago-deployment-$(basename $f)/g" "./tmp-update-repo/docs/archipelago-deployment-$(basename $f)"; done
+          for f in ./archipelago-deployment/docs/*.md; do for g in ./archipelago-deployment/docs/*.md; do sed -i "s/$(basename $g)/archipelago-deployment-$(basename $g)/g" "./tmp-update-repo/docs/archipelago-deployment-$(basename $f)"; done; done
           for f in ./archipelago-deployment-live/docs/*.md; do cp -- "$f" "./tmp-update-repo/docs/archipelago-deployment-live-$(basename $f)"; done
-          for f in ./archipelago-deployment-live/docs/*.md; do sed -i "s/$(basename $f)/archipelago-deployment-live-$(basename $f)/g" "./tmp-update-repo/docs/archipelago-deployment-live-$(basename $f)"; done
+          for f in ./archipelago-deployment-live/docs/*.md; do for g in ./archipelago-deployment-live/docs/*.md; do sed -i "s/$(basename $g)/archipelago-deployment-live-$(basename $g)/g" "./tmp-update-repo/docs/archipelago-deployment-live-$(basename $f)"; done; done
           rm -r ./archipelago-deployment
           rm -r ./archipelago-deployment-live
           cd tmp-update-repo
