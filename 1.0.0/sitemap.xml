@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-live-updatingContainers/</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-live-upgradeFromD8ToD9/</loc>
          <lastmod>2022-08-26</lastmod>
          <changefreq>daily</changefreq>

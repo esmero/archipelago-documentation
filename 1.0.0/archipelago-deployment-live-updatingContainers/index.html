@@ -12,14 +12,14 @@
         <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
       
       
-        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0/inthewild/">
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0/archipelago-deployment-live-updatingContainers/">
       
       <link rel="icon" href="../images/strawberries_color.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
     
     
       
-        <title>Archipelagos in the Wild - Archipelago Documentation</title>
+        <title>Updating containers in an Archipelago-deployment-live instance - Archipelago Documentation</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#archipelagos-in-the-wild" class="md-skip">
+        <a href="#how-to-update-your-docker-containers" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Archipelagos in the Wild
+              Updating containers in an Archipelago-deployment-live instance
             
           </span>
         </div>
@@ -307,14 +307,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -492,12 +494,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
       
       
       
@@ -602,11 +606,79 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../archipelago-deployment-live-updatingContainers/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Updating Docker Containers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Updating Docker Containers
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-update-docker-composeyml" class="md-nav__link">
+    1. Update docker-compose.yml
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-the-new-images" class="md-nav__link">
+    Pull the new image(s)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop-and-restart-the-container" class="md-nav__link">
+    Stop and restart the container
+  </a>
+  
+    <nav class="md-nav" aria-label="Stop and restart the container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#down-and-up" class="md-nav__link">
+    Down and up
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1291,16 +1363,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
@@ -1347,21 +1417,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../inthewild/" class="md-nav__link">
         Archipelagos in the Wild
       </a>
-      
     </li>
   
 
@@ -1435,6 +1495,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-update-docker-composeyml" class="md-nav__link">
+    1. Update docker-compose.yml
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-the-new-images" class="md-nav__link">
+    Pull the new image(s)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop-and-restart-the-container" class="md-nav__link">
+    Stop and restart the container
+  </a>
+  
+    <nav class="md-nav" aria-label="Stop and restart the container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#down-and-up" class="md-nav__link">
+    Down and up
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1448,16 +1550,61 @@
 
   
 
+  <nav class="md-tags" >
+    
+      
+        <span class="md-tag">Github</span>
+      
+    
+      
+        <span class="md-tag">Docker</span>
+      
+    
+      
+        <span class="md-tag">Archipelago-deployment-live</span>
+      
+    
+  </nav>
 
 
-<h1 id="archipelagos-in-the-wild">Archipelagos in the Wild</h1>
-<p>Explore Archipelago instances running free across digital realms.</p>
-<ul>
-<li><a href="../communityshowcase/">Archipelago Community Showcase</a></li>
-<li><a href="https://archipelago.nyc">METRO + Archipelago</a></li>
-</ul>
-<p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
-<p>Return to the <a href="..">Archipelago Documentation main page</a>.</p>
+
+<h1 id="how-to-update-your-docker-containers">How to update your Docker containers</h1>
+<p>From time to time you may have a need to update the containers themselves. Primarily this is done for security releases.</p>
+<h2 id="1-update-docker-composeyml">1. Update docker-compose.yml</h2>
+<p>The first thing you need to do is to edit your <code>docker-compose.yml</code> file and replace the version of the container with the new one you wish to use.</p>
+<p>Navigate to your <code>docker-compose.yml</code> file and open it to edit. On Debian installs it would look like this:</p>
+<div class="highlight"><pre><span></span><code>  <span class="nb">cd</span> /usr/local/archipelago/deploy/archipelago-deployment-live/deploy/ec2-docker
+  vi docker-compose.yml
+</code></pre></div>
+<p>You want to change the image line to reflect the name of the new image you wish to use:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero/php-7.4-fpm:1.0.0-RC3-multiarch</span><span class="w"></span>
+</code></pre></div>
+<p>might become:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero/php-8.0-fpm:1.1.0-multiarch</span><span class="w"></span>
+</code></pre></div>
+<p>Save your change. If use vi like in the above it would look like this:</p>
+<div class="highlight"><pre><span></span><code>  :wq
+</code></pre></div>
+<h2 id="pull-the-new-images">Pull the new image(s)</h2>
+<p>Docker Compose will now allow us to grab the new image(s) while your current system is running:</p>
+<div class="highlight"><pre><span></span><code>  docker-compose pull
+</code></pre></div>
+<h2 id="stop-and-restart-the-container">Stop and restart the container</h2>
+<p>It is necesary to stop and start the container or the current image will continue to be used:</p>
+<div class="highlight"><pre><span></span><code>  docker-compose stop container-name
+</code></pre></div>
+<p>Wait for it to stop. Then bring it back up:</p>
+<div class="highlight"><pre><span></span><code>docker-compose up -d 
+</code></pre></div>
+<p>It is important to use the -d flag or you will have your live instance stuck in your terminal. You want it to run in the background. The <code>-d</code> flag stands for <em>detached</em>.</p>
+<h3 id="down-and-up">Down and up</h3>
+<p>If you are more comfortable having the all the containers go down and up you can do that with the following:</p>
+<div class="highlight"><pre><span></span><code>docker-compose down
+docker-compose up
+</code></pre></div>
+<hr />
+<p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback, or open an ISSUE in this <a href="https://github.com/esmero/archipelago-deployment-live/">Archipelago Deployment Live Repository</a>.</p>
+<p>Return to <a href="../archipelago-deployment-live-readme/">Archipelago Live Deployment</a>.</p>
 
 
 
@@ -1481,7 +1628,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../presentations_docs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Archipelago Presentations and Documents" rel="prev">
+        <a href="../archipelago-deployment-live-upgradeFromRC3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Upgrading from 1.0.0-RC3 to 1.0.0" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1490,20 +1637,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Archipelago Presentations and Documents
+              Upgrading from 1.0.0-RC3 to 1.0.0
             </div>
           </div>
         </a>
       
       
         
-        <a href="../giveortake/" class="md-footer__link md-footer__link--next" aria-label="Next: Contribution Guide" rel="next">
+        <a href="../firstobject/" class="md-footer__link md-footer__link--next" aria-label="Next: Ingesting Your First Object" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Contribution Guide
+              Ingesting Your First Object
             </div>
           </div>
           <div class="md-footer__button md-icon">
