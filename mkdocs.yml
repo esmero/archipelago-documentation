@@ -24,6 +24,7 @@ nav:
       - Moving from archipelago-deployment to archipelago-deployment-live: archipelago-deployment-live-moveToLive.md
       - Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3): archipelago-deployment-live-upgradeFromD8ToD9.md
       - Upgrading from 1.0.0-RC3 to 1.0.0: archipelago-deployment-live-upgradeFromRC3.md
+      - Updating Docker Containers: archipelago-deployment-live-updatingContainers.md
     - Archipelago 101:
       - Digital Objects and Collections, Metadata, General Workflows:
         - Ingesting Your First Object: firstobject.md
