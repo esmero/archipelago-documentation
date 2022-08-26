@@ -37,6 +37,7 @@ jobs:
           python-version: 3.x
       - run: |
           pip install mkdocs-material mike git+https://github.com/jldiaz/mkdocs-plugin-tags.git
+          rm ./tmp-update-repo/docs/archipelago-deployment-*.md
           cp ./archipelago-deployment/README.md ./tmp-update-repo/docs/archipelago-deployment-readme.md
           cp ./archipelago-deployment-live/README.md ./tmp-update-repo/docs/archipelago-deployment-live-readme.md
           for f in ./archipelago-deployment/docs/*.md; do cp -- "$f" "./tmp-update-repo/docs/archipelago-deployment-$(basename $f)"; done
