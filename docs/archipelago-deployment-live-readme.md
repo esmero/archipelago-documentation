@@ -246,10 +246,11 @@ Now press CTRL+C. `docker-compose` will shutdown gracefully. Good!
 
 #### Composer and Drupal
 
-Copy the shipped default composer.default.json to composer.json (ONLY if you are installing from scratch):
+Copy the shipped default composer.default.json to composer.json and composer.default.lock to composer.lock (ONLY if you are installing from scratch):
 
 ```shell
 cp ../../drupal/composer.default.json ../../drupal/composer.json
+cp ../../drupal/composer.default.lock ../../drupal/composer.lock
 ```
 
 Start Docker again

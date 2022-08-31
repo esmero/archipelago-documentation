@@ -102,6 +102,12 @@ sudo chmod 666 drupal/web/sites/default/*services.yml
 
 ### Step 2:
 
+First let's back up our current composer.lock:
+
+```shell
+cp drupal/composer.lock drupal/composer.original.lock
+```
+
 Time to fetch the `1.0.0` branch and update our `docker-compose` and `composer` dependencies. We are also going to stop the current `docker` ensemble to update all containers to newer versions:
 
 ```shell
