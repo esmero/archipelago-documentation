@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.archipelago.nyc/1.0.0/archipelago-deployment-live-upgradeFromRC3/">
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
     
     
       
@@ -1782,18 +1782,6 @@
 
   
 
-  <nav class="md-tags" >
-    
-      
-        <span class="md-tag">Archipelago-deployment-live</span>
-      
-    
-      
-        <span class="md-tag">Drupal 9</span>
-      
-    
-  </nav>
-
 
 
 <h1 id="archipelago-deployment-live-upgrading-from-100-rc3-to-100">Archipelago-deployment-live: upgrading from 1.0.0-RC3 to 1.0.0</h1>
@@ -1851,6 +1839,9 @@ sudo chmod <span class="m">666</span> drupal/web/sites/default/*settings.php
 sudo chmod <span class="m">666</span> drupal/web/sites/default/*services.yml
 </code></pre></div>
 <h3 id="step-2_1">Step 2:</h3>
+<p>First let's back up our current composer.lock:</p>
+<div class="highlight"><pre><span></span><code>cp drupal/composer.lock drupal/composer.original.lock
+</code></pre></div>
 <p>Time to fetch the <code>1.0.0</code> branch and update our <code>docker-compose</code> and <code>composer</code> dependencies. We are also going to stop the current <code>docker</code> ensemble to update all containers to newer versions:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> deploy/ec2-docker
 docker-compose down

@@ -2,247 +2,252 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/AMIviaSpreadsheets/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/CODE_OF_CONDUCT/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/I7solrImporter/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/about/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/acknowledgments/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/ami_index/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/ami_lod_rec/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/ami_spreadsheet_overview/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/annotations/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archifilepersistencestrategy/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-democontent/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-live-gitworkflow/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-live-moveToLive/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-live-readme/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-live-updatingContainers/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-live-upgradeFromD8ToD9/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-live-upgradeFromRC3/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-osx/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-readme/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-ubuntu/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-upgradeFromD8ToD9/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-upgradeFromRC3/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/archipelago-deployment-windows/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/communityshowcase/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/createdisplaymodes/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/customwebformelements/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/devops/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/firstobject/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/generalqa_index/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/generalqa_minio_logging/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/generalqa_smtp_configuration/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/generalqa_twig_modules_configuration/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/giveortake/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/googleapi/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/inthewild/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/metadatatwigs/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/modifyingfileextensionsinwebform/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/ourtake/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/presentations_docs/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/sslsetup/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/strawberryfield-formatters/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/strawberryfields/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/tbd/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/traditional-install/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/webforms/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/webformsasinput/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/workingtwigs/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/xdebug/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0/tags.html</loc>
+         <lastmod>2022-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
