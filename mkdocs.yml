@@ -1,5 +1,8 @@
 site_name: Archipelago Documentation
 site_url: https://docs.archipelago.nyc
+repo_url: https://github.com/esmero/archipelago-documentation
+repo_name: archipelago-documentation
+edit_uri: blob/1.0.0/docs/
 site_description: Project documentation for Archipelago.
 site_author: The Digital Services Team at Metropolitan New York Library Council
 nav:
@@ -56,11 +59,12 @@ nav:
         - Twig Modules Configuration: generalqa_twig_modules_configuration.md
         - SMTP Configuration: generalqa_smtp_configuration.md
         - Min.io Logging: generalqa_minio_logging.md
+    - Contributing:
+      - Contribution Guide: giveortake.md
+      - About This Documentation: about_this_documentation.md
   - Additional Information:
       - Archipelago Presentations and Documents: presentations_docs.md
       - Archipelagos in the Wild: inthewild.md
-      - Contribution Guide: giveortake.md
-      - About This Documentation: about.md
       - Care & Coding + Fixing / Acknowledgments / License: acknowledgments.md
 theme:
   name: material
