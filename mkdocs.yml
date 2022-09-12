@@ -78,6 +78,15 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
 plugins:
   - tags
   - search:
