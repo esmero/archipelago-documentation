@@ -146,3 +146,155 @@ Result:
 </a> 
 {% endfor %}
 ```
+
+### Quirks
+
+Because of the use of front matter (the block of YAML at the top that contains settings and data for the file) the markup for a horizontal rule is restricted. To create one you have to use the following:
+
+Markup:
+
+```markdown
+___
+```
+
+Result:
+
+___
+
+The above are underscore (`_`) characters, as opposed to hyphens (`-`).
+
+Some of the documentation that is automatically deployed from the repos ([see above](#sources)) have special comments that are converted to theme-specific elements via script.
+
+
+=== "Deployment Repo with Front Matter"
+
+    ```markdown
+    <!--documentation
+    ---
+    title: "Adding Demo Archipelago Digital Objects (ADOs) to your Repository"
+    tags:
+      - Archipelago Digital Objects
+      - Demo Content
+    ---
+    documentation-->
+    ```
+
+=== "Documentation Repo with Front Matter"
+
+    ```markdown
+    ---
+    title: "Adding Demo Archipelago Digital Objects (ADOs) to your Repository"
+    tags:
+      - Archipelago Digital Objects
+      - Demo Content
+    ---
+    ```
+
+___
+
+=== "Deployment Repo with Theme-specific Markup"
+
+    ````markdown
+    <!--switch_below
+    
+    ??? info "OSX (macOS)/x86-64"
+    
+        ```shell
+        cp docker-compose-osx.yml docker-compose.yml
+        ```
+    
+    ??? info "Linux/x86-64/AMD64"
+    
+        ```shell
+        cp docker-compose-linux.yml docker-compose.yml
+        ```
+    
+    ??? info "OSX (macOS)/Linux/ARM64"
+    
+        ```shell
+        cp docker-compose-arm64.yml docker-compose.yml
+        ```
+    
+    switch_below-->
+    
+    ___
+    
+    OSX (macOS)/x86-64:
+    
+    ```shell
+    cp docker-compose-osx.yml docker-compose.yml
+    ```
+    
+    ___
+    
+    Linux/x86-64/AMD64:
+    
+    ```shell
+    cp docker-compose-linux.yml docker-compose.yml
+    ```
+    
+    ___
+    
+    OSX (macOS)/Linux/ARM64:
+    
+    ```shell
+    cp docker-compose-arm64.yml docker-compose.yml
+    ```
+    
+    ___
+    
+    <!--switch_above
+    switch_above-->
+    ````
+
+=== "Documentation Repo with Theme-specific Markup"
+
+    ````markdown
+    ??? info "OSX (macOS)/x86-64"
+    
+        ```shell
+        cp docker-compose-osx.yml docker-compose.yml
+        ```
+    
+    ??? info "Linux/x86-64/AMD64"
+    
+        ```shell
+        cp docker-compose-linux.yml docker-compose.yml
+        ```
+    
+    ??? info "OSX (macOS)/Linux/ARM64"
+    
+        ```shell
+        cp docker-compose-arm64.yml docker-compose.yml
+        ```
+    
+    <!--repo_docs
+    
+    ___
+    
+    OSX (macOS)/x86-64:
+    
+    ```shell
+    cp docker-compose-osx.yml docker-compose.yml
+    ```
+    
+    ___
+    
+    Linux/x86-64/AMD64:
+    
+    ```shell
+    cp docker-compose-linux.yml docker-compose.yml
+    ```
+    
+    ___
+    
+    OSX (macOS)/Linux/ARM64:
+    
+    ```shell
+    cp docker-compose-arm64.yml docker-compose.yml
+    ```
+    
+    ___
+    
+    repo_docs-->
+    ````
