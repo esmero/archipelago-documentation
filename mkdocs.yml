@@ -60,8 +60,12 @@ nav:
         - SMTP Configuration: generalqa_smtp_configuration.md
         - Min.io Logging: generalqa_minio_logging.md
     - Contributing:
-      - Contribution Guide: giveortake.md
-      - About This Documentation: about_this_documentation.md
+      - Archipelago Contribution Guide: giveortake.md
+      - Documentation:
+        - documentation_about.md
+        - Documentation Template: documentation_template.md
+        - Additional Features: documentation_features.md
+        - Technical Details: documentation_technical.md
   - Additional Information:
       - Archipelago Presentations and Documents: presentations_docs.md
       - Archipelagos in the Wild: inthewild.md
