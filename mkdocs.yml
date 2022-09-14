@@ -100,6 +100,8 @@ plugins:
       css_dir: css
       javascript_dir: js
       canonical_version: null
+  - git-revision-date-localized:
+      enable_creation_date: true
 markdown_extensions:
   - admonition
   - meta
