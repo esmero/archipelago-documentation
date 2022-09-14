@@ -40,7 +40,7 @@ tags:
    ```
 6. To view the changes locally, first install the Python libraries:
    ```shell
-   pip install mkdocs-material mike git+https://github.com/jldiaz/mkdocs-plugin-tags.git
+   pip install mkdocs-material mike git+https://github.com/jldiaz/mkdocs-plugin-tags.git mkdocs-git-revision-date-localized-plugin
    ```
 7. Now you can build the site locally, e.g. for the documentation for 1.0.0:
    ```shell
