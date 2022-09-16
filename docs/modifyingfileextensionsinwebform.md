@@ -10,7 +10,7 @@ Let's say we are creating an ADO with the media type `DigitalDocument` and this 
 
 **Prerequisites for following this guide:**
 
-- Running instance of Archipelago (on http://localhost:8001 if you followed the [deployment guide](quickstart.md#archipelago-docker-deployment) verbatim)
+- Running instance of Archipelago (on http://localhost:8001 if you followed the [deployment guide](archipelago-deployment-readme.md#archipelago-docker-deployment) verbatim)
 - Admin credentials
 
 ## Let's begin!
