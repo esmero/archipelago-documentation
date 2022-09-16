@@ -12,12 +12,14 @@ Documentation is vital to our community, and contributions are welcome, greatly 
 
 ## How to Contribute
 
+<!--
 !!! info "Difficulty Level: Easy–Moderate"
 
     1. Start with [this documentation template](documentation_template.md).
     2. Edit the template, and save the file.
     3. [Join our Slack](https://join.slack.com/t/archipelagocommons/shared_invite/zt-1g66bqxbl-trkVHyaWJDxwIyj99MMTMg).
     4. Share the new documentation file in the #archipelago-documentation Slack channel.
+-->
 
 !!! info "Difficulty Level: Moderate–Difficult"
 
