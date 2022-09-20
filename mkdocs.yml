@@ -92,13 +92,7 @@ theme:
         icon: material/lightbulb-outline
         name: Switch to light mode
 plugins:
-  - glightbox:
-      touchNavigation: true
-      effect: zoom
-      zoomable: true
-      draggable: true
-      width: 100%
-      height: auto
+  - glightbox
   - tags
   - search:
       lang: en
