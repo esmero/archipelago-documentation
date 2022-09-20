@@ -24,7 +24,8 @@ For the Solr Server Configuration section, you will need to provide all of the f
 - PID of the Islandora Collection Members you want to fetch _(example: islandora:root)_
 - Host of your Solr Server _(example: repositorydomain.org)_
 - Port _(example: 8080)_
-- Path _(example: /)_
+- Path _(example: /)_ 
+    - Note: if your Solr can be found at http://myrepo.com:8080/solr, then the path is always a single "/" (as in screenshot depiction below)
 - Type of Solr Deployment
     - Either Single Solr Server (most common) or Solr Cloud Ensemble
 - Core _(example: islandora)_
