@@ -4,7 +4,9 @@ You followed every [Deployment step](archipelago-deployment-readme.md) and you h
 
 So what now? It is time to give your new repository a try and we feel the best way is to start by ingesting a simple Digital Object.
 
-**Note:** This guide will assume Archipelago is running on `http://localhost:8001`, so if you wizardly deployed everything in a different location, please replace all `URIs` with your own setup while following this guide.
+!!! note
+
+    This guide will assume Archipelago is running on `http://localhost:8001`, so if you wizardly deployed everything in a different location, please replace all `URIs` with your own setup while following this guide.
 
 ## Requirements
 
@@ -16,7 +18,7 @@ So what now? It is time to give your new repository a try and we feel the best w
 
 Start by opening `http://locahost:8001` in your favourite Web Browser.
 
-![Welcome](images/firstobject/01_log-in.jpg)
+![Welcome](images/firstobject/01_log-in.png){ loading=lazy }
 
 Your Demo deployment will have a fancy Home page with some banners and a small explanation of what Archipelago is and can do. Feel free to read through that now or later.
 
@@ -29,13 +31,13 @@ Click on `Log in` in the top left corner and use your `demo` credentials from th
 
 Press the `Log in` button.
 
-![Log In](images/firstobject/02_demo-demo.jpg)
+![Log In](images/firstobject/02_demo-demo.png){ loading=lazy }
 
 Great, welcome `demo` user! This users has limited credentials and uses the same global theme as any anonymous user would. Still, `demo` can create content, so let's use those super powers and give that a try.
 
 You will see a new `Menu item` on the top, black, navigation bar named `Add Content`. Click it!
 
-![Logged In](images/firstobject/03_logged-in.jpg)
+![Logged In](images/firstobject/03_logged-in.png){ loading=lazy }
 
 
 ### Brief Background
@@ -75,7 +77,7 @@ Drupal has a pretty tight integration with `Nodes` and that means you get a lot 
 
 Below you see all the `Content Types` defined by default in Archipelago. Let's click on `Digital Object` to get your first Digital Object Node.
 
-![Add Content](images/firstobject/04_add-content.jpg)
+![Add Content](images/firstobject/04_add-content.png){ loading=lazy }
 
 ### My Metadata
 
@@ -85,11 +87,19 @@ Let's fill out the form to begin our ingest. We recommend to use similar values 
 
 Make sure you select `Photograph` as `Media Type` and all the fields with a red `*` are filled up. Then press `Move on to next step` at the bottom of the webform to load the next step inline.
 
-![Ingest Step 1 - MyMetadata](images/firstobject/05_MyMetadata.jpg)
+![Ingest Step 1 - MyMetadata](images/firstobject/05_MyMetadata.png){ loading=lazy }
 
-**Tip:** When entering a location, place or address you will need to click on the `Search OpenStreet Maps` button, which is what that big red arrow is pointing to in the screenshot above.
+!!! tip
+
+    When entering a location, place or address you will need to click on the `Search OpenStreet Maps` button, which is what that big red arrow is pointing to in the screenshot below.
+
+    ![Ingest Step 1 Tip - MyMetadata](images/firstobject/05_MyMetadata_tip.png){ loading=lazy }
 
 **Note:** For now, let's leave the state of this Digital Object as `Draft`.
+
+!!! note
+
+    For now, let's leave the state of this Digital Object as `Draft`.
 
 ??? info "Why does this look different than Repository X?"
 
@@ -109,23 +119,23 @@ As the name of this step suggests; you will be adding all your Linked Data eleme
 
 Again, enter all fields with a red `*` and when you are finished, click `Move on to next step`
 
-![Ingest Step 2 - Linked Data](images/firstobject/06_step-two_linked-data.jpg)
+![Ingest Step 2 - Linked Data](images/firstobject/06_step-two_linked-data.jpg){ loading=lazy }
 
 ### Collections
 
 Since this is our first digital object we do not yet have a Digital Object *Collection* for which `My First Digital Object` could be a member of. In other words, you can leave `Collection Membership` blank and click `Next: Upload Files`.
 
-![Ingest Step 3 - Collections](images/firstobject/07_step-three_collections.jpg)
+![Ingest Step 3 - Collections](images/firstobject/07_step-three_collections.jpg){ loading=lazy }
 
 ### Upload Files
 
 Now we will upload our `Photograph`. Click `Choose Files` to open your file selector window and choose which file you would like to ingest.
 
-![Ingest Step 4 - Attach Files pt 1](images/firstobject/08_step-four_upload-files_1.jpg)
+![Ingest Step 4 - Attach Files pt 1](images/firstobject/08_step-four_upload-files_1.jpg){ loading=lazy }
 
 Once you've uploaded your file, you will see all the Exif data extracted from the image, like so...
 
-![Ingest Step 4 - Attach Files pt 2](images/firstobject/09_step-four_upload-files_2.jpg)
+![Ingest Step 4 - Attach Files pt 2](images/firstobject/09_step-four_upload-files_2.jpg){ loading=lazy }
 
 Once you've mentally digested all of that data, let's go ahead and click `Save Metadata`.
 
@@ -137,13 +147,13 @@ Once you've mentally digested all of that data, let's go ahead and click `Save M
 
 Alright, we've made it. We've added metadata, linked Data, uploaded our files and now... we're ready to **save**! Go ahead and change the status from *Draft* to *Published* and click `Save`.
 
-![Ingest Step 7 - Complete 1](images/firstobject/10_step-six_complete.jpg)
+![Ingest Step 7 - Complete 1](images/firstobject/10_step-six_complete.jpg){ loading=lazy }
 
 Once you hit save you should see the following green messages and your first Archipelago Digital Object!
 
-![Ingest Step 7 - Complete Green Messages](images/firstobject/11_step-six_complete_green-messages.jpg)
+![Ingest Step 7 - Complete Green Messages](images/firstobject/11_step-six_complete_green-messages.jpg){ loading=lazy }
 
-![Ingest Step 7 - Complete 2](images/firstobject/12_step-six_complete_2.jpg)
+![Ingest Step 7 - Complete 2](images/firstobject/12_step-six_complete_2.jpg){ loading=lazy }
 
 Congratulations on creating your first digital object! 🍓
 

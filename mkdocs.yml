@@ -92,6 +92,13 @@ theme:
         icon: material/lightbulb-outline
         name: Switch to light mode
 plugins:
+  - glightbox:
+      touchNavigation: true
+      effect: zoom
+      zoomable: true
+      draggable: true
+      width: 100%
+      height: auto
   - tags
   - search:
       lang: en
@@ -104,6 +111,8 @@ plugins:
       enable_creation_date: true
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - meta
   - pymdownx.details
   - pymdownx.superfences
