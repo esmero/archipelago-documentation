@@ -38,10 +38,12 @@ tags:
          - Adding Demo Archipelago Digital Objects (ADOs) to your Repository: archipelago-deployment-democontent.md
    ...
    ```
-6. To view the changes locally, first install the Python libraries:
+6. To view the changes locally, first install the Python libraries using the Python package manager pip:
    ```shell
-   pip install mkdocs-material mike git+https://github.com/jldiaz/mkdocs-plugin-tags.git mkdocs-git-revision-date-localized-plugin
+   pip install mkdocs-material mike git+https://github.com/jldiaz/mkdocs-plugin-tags.git mkdocs-git-revision-date-localized-plugin 
    ```
+   You may need to install Python on your machine. [Download Python](https://www.python.org/downloads/) or use your favorite operating system package manager such as Homebrew. 
+
 7. Now you can build the site locally, e.g. for the documentation for 1.0.0:
    ```shell
    mike deploy 1.0.0
