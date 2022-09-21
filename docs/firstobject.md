@@ -35,7 +35,7 @@ Press the `Log in` button.
 
 Great, welcome `demo` user! This users has limited credentials and uses the same global theme as any anonymous user would. Still, `demo` can create content, so let's use those super powers and give that a try.
 
-You will see a new `Menu item` on the top, black, navigation bar named `Add Content`. Click it!
+You will see a new `Menu item` under `Tools` on the top navigation bar named `Add Content`. Click it!
 
 ![Logged In](images/firstobject/03_logged-in.png){ loading=lazy }
 
@@ -55,7 +55,7 @@ Drupal has a pretty tight integration with `Nodes` and that means you get a lot 
     What have `Article` and `Digital Object` Content types in common and what puts the apart?
     
     - Each Content Type or Bundle has a set of `Base Fields` and also user configurable set of `Fields` attached (or bundled together).
-        - E.g `Article` has a title, a Body and the option to add an image.
+        - E.g. `Article` has a title, a Body and the option to add an image.
         - `Digital Object` has a title but also a special, very flexible one named `Strawberry Field` (more about that later).
     - Fields are where you put your data into and also where your data comes from when you expose it to the world.
         - `Nodes`, as any other Content entity have Base Fields (which means you can't remove or configure them) that are used all over the place. Good examples are the `title` and also the owner, named `uid` (you!).
@@ -81,27 +81,21 @@ Below you see all the `Content Types` defined by default in Archipelago. Let's c
 
 ### My Metadata
 
-What you see below is a `Form Mode` in action. A multi-step Webform that will ingest metadata into a field of type Strawberry Field (where all the magic happens) attached to that field using a `Webform Field Widget`, an editorial/advanced Block on the right side and a Workflow/state drop down (`Save as`) at the bottom.
+What you see below is a `Form Mode` in action. A multi-step Webform that will ingest metadata into a field of type Strawberry Field (where all the magic happens) attached to that field using a `Webform Field Widget`, an editorial/advanced Block on the right side, and a `Quick Save` button at the bottom for saving the session.
 
-Let's fill out the form to begin our ingest. We recommend to use similar values as the ones shown in the screen capture to make following the tutorial easier.
+Let's fill out the form to begin our ingest. We recommend using similar values as the ones shown in the screen capture to make following the tutorial easier.
 
-Make sure you select `Photograph` as `Media Type` and all the fields with a red `*` are filled up. Then press `Move on to next step` at the bottom of the webform to load the next step inline.
+Make sure you select `Photograph` as `Media Type` and all the fields with a red `*` are filled up. Then press `Move on to next step` at the bottom of the webform to load the next step in line.
 
 ![Ingest Step 1 - MyMetadata](images/firstobject/05_MyMetadata.png){ loading=lazy }
 
-!!! tip
+### Collections
 
-    When entering a location, place or address you will need to click on the `Search OpenStreet Maps` button, which is what that big red arrow is pointing to in the screenshot below.
+Since this is our first digital object we do not yet have a Digital Object *Collection* for which `My First Digital Object` could be a member of. In other words, you can leave `Collection Membership` blank and click `Next: Upload Files`.
 
-    ![Ingest Step 1 Tip - MyMetadata](images/firstobject/05_MyMetadata_tip.png){ loading=lazy }
+![Ingest Step 2 - Collections](images/firstobject/06_step-two_collections.png){ loading=lazy }
 
-**Note:** For now, let's leave the state of this Digital Object as `Draft`.
-
-!!! note
-
-    For now, let's leave the state of this Digital Object as `Draft`.
-
-??? info "Why does this look different than Repository X?"
+??? question "Why does this look different than Repository X?"
 
     We assume you come from a world where repositories define different Content types and the shape, the fields and values (Schema) are fixed and set by someone else or at least quite complicated to configure. This is where Archipelago differs and starts to propose its own style. You noticed that there is a single Content Type named `Digital Object` and you have here a single Web Form. So how does this allow you to have images, sequences, videos, audio, 3D images, etc?
     
@@ -119,41 +113,39 @@ As the name of this step suggests; you will be adding all your Linked Data eleme
 
 Again, enter all fields with a red `*` and when you are finished, click `Move on to next step`
 
-![Ingest Step 2 - Linked Data](images/firstobject/06_step-two_linked-data.jpg){ loading=lazy }
+![Ingest Step 3 - Linked Data](images/firstobject/07_step-three_linked-data.png){ loading=lazy }
 
-### Collections
+!!! tip
 
-Since this is our first digital object we do not yet have a Digital Object *Collection* for which `My First Digital Object` could be a member of. In other words, you can leave `Collection Membership` blank and click `Next: Upload Files`.
+    When entering a location, place or address you will need to click on the `Search OpenStreet Maps` button, which is what that big red arrow is pointing to in the screenshot below.
 
-![Ingest Step 3 - Collections](images/firstobject/07_step-three_collections.jpg){ loading=lazy }
+    ![Ingest Step 3 Tip - Linked Data](images/firstobject/07_linked-data_tip.png){ loading=lazy }
 
 ### Upload Files
 
 Now we will upload our `Photograph`. Click `Choose Files` to open your file selector window and choose which file you would like to ingest.
 
-![Ingest Step 4 - Attach Files pt 1](images/firstobject/08_step-four_upload-files_1.jpg){ loading=lazy }
+![Ingest Step 4 - Attach Files pt 1](images/firstobject/08_step-four_upload-files_1.png){ loading=lazy }
 
 Once you've uploaded your file, you will see all the Exif data extracted from the image, like so...
 
-![Ingest Step 4 - Attach Files pt 2](images/firstobject/09_step-four_upload-files_2.jpg){ loading=lazy }
+![Ingest Step 4 - Attach Files pt 2](images/firstobject/09_step-four_upload-files_2.png){ loading=lazy }
 
 Once you've mentally digested all of that data, let's go ahead and click `Save Metadata`.
 
-**Question:** "Wait! Don't I need to switch `Save as` from *Draft* to *Publish*? I'm ready for this Digital Object to be shared with the world!"
+??? question "Wait! Don't I need to switch `Status` from *Draft* to *Publish*? I'm ready for this Digital Object to be shared with the world!"
 
-**Answer:** By clicking `Save Metadata` we are simply persisting all the metadata in the current webform session. The actual *ingest* of the Object happens when you click `Save` on the next and final step, `Complete`.
+    By clicking `Save Metadata` we are simply persisting all the metadata in the current webform session. The actual *ingest* of the Object happens when you click `Save` on the next and final step, `Complete`.
 
 ### Complete
 
 Alright, we've made it. We've added metadata, linked Data, uploaded our files and now... we're ready to **save**! Go ahead and change the status from *Draft* to *Published* and click `Save`.
 
-![Ingest Step 7 - Complete 1](images/firstobject/10_step-six_complete.jpg){ loading=lazy }
+![Ingest Step 7 - Complete 1](images/firstobject/10_step-six_complete.png){ loading=lazy }
 
-Once you hit save you should see the following green messages and your first Archipelago Digital Object!
+Once you hit save you should see the following green message and your first Archipelago Digital Object!
 
-![Ingest Step 7 - Complete Green Messages](images/firstobject/11_step-six_complete_green-messages.jpg){ loading=lazy }
-
-![Ingest Step 7 - Complete 2](images/firstobject/12_step-six_complete_2.jpg){ loading=lazy }
+![Ingest Step 7 - Complete Green Messages](images/firstobject/11_step-six_complete_green-messages.png){ loading=lazy }
 
 Congratulations on creating your first digital object! 🍓
 
