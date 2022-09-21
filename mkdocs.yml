@@ -92,6 +92,7 @@ theme:
         icon: material/lightbulb-outline
         name: Switch to light mode
 plugins:
+  - glightbox
   - tags
   - search:
       lang: en
@@ -104,9 +105,16 @@ plugins:
       enable_creation_date: true
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - meta
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
