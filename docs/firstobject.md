@@ -133,7 +133,7 @@ Once you've uploaded your file, you will see all the Exif data extracted from th
 
 Once you've mentally digested all of that data, let's go ahead and click `Save Metadata`.
 
-??? question "Wait! Don't I need to switch `Status` from *Draft* to *Publish*? I'm ready for this Digital Object to be shared with the world!"
+??? question "Wait! Why only the metadata? I'm ready for this Digital Object to be shared with the world!"
 
     By clicking `Save Metadata` we are simply persisting all the metadata in the current webform session. The actual *ingest* of the Object happens when you click `Save` on the next and final step, `Complete`.
 
