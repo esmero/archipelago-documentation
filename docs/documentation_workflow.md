@@ -50,7 +50,7 @@ tags:
    mike set-default 1.0.0
    ```
    If you create a new branch to match the issue number as in step 3, you would use your branch instead of 1.0.0. For example, a branch of ISSUE-129.
-    ```shell
+   ```shell
    mike deploy ISSUE-129
    mike set-default ISSUE-129
    ```
