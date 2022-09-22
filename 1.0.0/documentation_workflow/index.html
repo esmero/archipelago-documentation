@@ -658,12 +658,22 @@
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Adding Demo Archipelago Digital Objects (ADOs) to your Repository</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">archipelago-deployment-democontent.md</span><span class="w"></span>
 <span class="nn">...</span><span class="w"></span>
 </code></pre></div></li>
-<li>To view the changes locally, first install the Python libraries:
-   <div class="highlight"><pre><span></span><code>pip install mkdocs-material mike git+https://github.com/jldiaz/mkdocs-plugin-tags.git mkdocs-git-revision-date-localized-plugin
-</code></pre></div></li>
-<li>Now you can build the site locally, e.g. for the documentation for 1.0.0:
+<li>
+<p>To view the changes locally, first install the Python libraries using the Python package manager pip:
+   <div class="highlight"><pre><span></span><code>pip install mkdocs-material mike git+https://github.com/jldiaz/mkdocs-plugin-tags.git mkdocs-git-revision-date-localized-plugin mkdocs-glightbox
+</code></pre></div>
+   You may need to install Python on your machine. <a href="https://www.python.org/downloads/">Download Python</a> or use your favorite operating system package manager such as Homebrew. </p>
+</li>
+<li>
+<p>Now you can build the site locally, e.g. for the documentation using the 1.0.0 branch:
    <div class="highlight"><pre><span></span><code>mike deploy <span class="m">1</span>.0.0
-</code></pre></div></li>
+mike set-default <span class="m">1</span>.0.0
+</code></pre></div>
+   If you create a new branch to match the issue number as in step 3, you would use your branch instead of 1.0.0. For example, a branch of ISSUE-129.
+   <div class="highlight"><pre><span></span><code>mike deploy ISSUE-129
+mike set-default ISSUE-129
+</code></pre></div></p>
+</li>
 <li>Start the web server:
    <div class="highlight"><pre><span></span><code>mike serve
 </code></pre></div></li>
@@ -680,7 +690,7 @@ git push origin ISSUE-100
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 22, 2022</span>
 <br/>
         Created:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 13, 2022</span>
