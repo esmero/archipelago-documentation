@@ -113,61 +113,111 @@ Time to fetch the `1.0.0` branch and update our `docker-compose` and `composer` 
 ```shell
 cd deploy/ec2-docker
 docker-compose down
+git fetch
 git checkout 1.0.0 
+```
+
+If you decide to enable the Drupal REDIS module, make sure to add the `REDIS_PASSWORD` variable to your `.env` file.
+
+`IMPORTANT NOTE`: For AWS EC2. If you selected an `IAM role` for your server when setting it up/deploying it, `min.io` will use the AWS EC2-backed internal API to request access to your S3. This means the ROLE itself needs to have read/write access (ACL) to the given Bucket(s) and your key/secrets won't be able to override that. Please do not ignore this note. It will save you a LOT of frustration and coffee. You can also run an EC2 instance without a given IAM and in that case just the ACCESS_KEY/SECRET will matter.
+
+Now that you know, you also know that these values **should not be shared** and this `.env` file **should not be committed/kept in version control**. Please be careful.
+
+Now let's back up the existing `docker-compose` file:
+
+```shell
+cp docker-compose.yml docker-compose-original.yml
 ```
 
 Then copy the appropriate `docker-compose` file for your architecture:
 
 
-??? info "OSX (macOS)/x86-64"
-
-    ```shell
-    cp docker-compose-osx.yml docker-compose.yml
-    ```
-
 ??? info "Linux/x86-64/AMD64"
 
     ```shell
-    cp docker-compose-linux.yml docker-compose.yml
+    cp docker-compose-aws-s3.yml docker-compose.yml
     ```
 
-??? info "OSX (macOS)/Linux/ARM64"
+??? info "Linux/ARM64/Apple Silicon (M1 and M2)"
 
     ```shell
-    cp docker-compose-arm64.yml docker-compose.yml
+    cp docker-compose-aws-s3-arm64.yml docker-compose.yml
     ```
 
 <!--repo_docs
 
 ___
 
-OSX (macOS)/x86-64:
-
-```shell
-cp docker-compose-osx.yml docker-compose.yml
-```
-
-___
-
 Linux/x86-64/AMD64:
 
 ```shell
-cp docker-compose-linux.yml docker-compose.yml
+cp docker-compose-aws-s3.yml docker-compose.yml
 ```
 
 ___
 
-OSX (macOS)/Linux/ARM64:
+Linux/ARM64/Apple Silicon (M1 and M2):
 
 ```shell
-cp docker-compose-arm64.yml docker-compose.yml
+cp docker-compose-aws-s3-arm64.yml docker-compose.yml
 ```
 
 ___
 
 repo_docs-->
 
-Finally, pull the images
+Next, let's review what's changed in case any customizations need to be brought into the new `docker-compose` configurations:
+
+```shell
+git diff --no-index docker-compose-original.yml docker-compose.yml
+```
+
+You should encounter something like the following:
+
+```diff
+diff --git a/docker-compose-original.yml b/docker-compose.yml
+index 6f5b17e..282417f 100644
+--- a/docker-compose-original.yml
++++ b/docker-compose.yml
+@@ -1,5 +1,5 @@
+ # Run docker-compose up -d
+-
++# Docker file for AMD64/X86 machines
+ version: '3.5'
+ services:
+   web:
+@@ -23,6 +23,7 @@ services:
+       - solr
+       - php
+       - db
++      - redis
+     tty: true
+     networks:
+       - host-net
+@@ -30,7 +31,7 @@ services:
+   php:
+     container_name: esmero-php
+     restart: always
+-    image: "esmero/php-7.4-fpm:1.0.0-RC2-multiarch"
++    image: "esmero/php-8.0-fpm:1.1.0-multiarch"
+     tty: true
+     networks:
+       - host-net
+@@ -44,10 +45,11 @@ services:
+       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+       MINIO_BUCKET_MEDIA: ${MINIO_BUCKET_MEDIA}
+       MINIO_FOLDER_PREFIX_MEDIA: ${MINIO_FOLDER_PREFIX_MEDIA}
++      REDIS_PASSWORD: ${REDIS_PASSWORD}
+   solr:
+     container_name: esmero-solr
+     restart: always
+-    image: "solr:8.8.2"
++    image: "solr:8.11.2"
+```
+
+As you can see, most of the changes in this example are for new images and a new service/container/environment variable (REDIS), but you may have custom settings for your containers. Review any differences carefully and make adjustments as needed.
+
+Finally, pull the images:
 
 ```shell
 docker compose pull 
@@ -212,7 +262,22 @@ Important here is the `STATUS` column. It **needs** to be a number that goes up 
 
 ### Step 3:
 
-Instead of using the provided `composer.lock` out of the box we are going to loosen certain dependencies and bring manually Archipelago modules, all this to make update easier and future upgrades less of a pain.
+Instead of using the provided `composer.default.lock` out of the box we are going to loosen certain dependencies and bring manually Archipelago modules, all this to make update easier and future upgrades less of a pain.
+
+First, as a sanity check let's make sure nothing happened to our original `composer.lock` fileby doing a diff against our backed up file:
+
+```shell
+git diff --no-index ../../drupal/composer.original.lock ../../drupal/composer.lock
+```
+
+If all is ok, there should be no output. If there's any output, copy your backed up file back to default:
+
+```shell
+cp ../../drupal/composer.original.lock ../../drupal/composer.lock
+```
+
+Finally, we bring over the modules:
+
 ```shell
 docker exec -ti esmero-php bash -c "composer require drupal/core:^9 drupal/core-composer-scaffold:^9 drupal/core-project-message:^9 drupal/core-recommended:^9"
 docker exec -ti esmero-php bash -c "composer require drupal/core-dev:^9 --dev"

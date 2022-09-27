@@ -3,7 +3,6 @@ title: Archipelago-deployment-live
 tags:
   - Archipelago-deployment-live
 ---
--->
 
 # Archipelago Deployment Live
 
@@ -146,11 +145,11 @@ What does each key mean?
 - `MINIO_FOLDER_PREFIX_MEDIA`: The `folder` (a prefix really) where your DO Storage and File storage will go inside the `MINIO_BUCKET_MEDIA` Bucket. `media/` is a _fine_ name for this one and common in archipelago deployments. **IMPORTANT:** Always terminate these with a `/`. 
 - `MINIO_BUCKET_CACHE`: The name of your IIIF Cache storage Bucket. May be the same as `MINIO_BUCKET_MEDIA`. If different make sure your your `MINIO_ACCESS_KEY` and/or IAM role ACL have permission to read write to this one too.
 - `MINIO_FOLDER_PREFIX_CACHE`:  The `folder` (a prefix really) where Cantaloupe will/can write its `iiif` caches. `iiifcache/` is a _lovely_ name we use a lot. **IMPORTANT:** Always terminate these with a `/`.
-- `REDIS_PASSWORD`: Password for your REDIS (Drupal Cache/Queue storage) if you decide to enabled the Drupal REDIS module.
+- `REDIS_PASSWORD`: Password for your REDIS (Drupal Cache/Queue storage) if you decide to enable the Drupal REDIS module.
 
-`IMPORTANT NOTE`: For AWS EC2. If your selected an `IAM role` for your server when setting it up/deploying it, `min.io` will use the AWS EC2 backed internal API to request access to your S3. This means the ROLE itself needs to have read/write access (ACL) to the given Bucket(s) and your key/secrets won't be able to override that. Please do not ignore this note. It will save you a LOT of frustration and coffee. You can also run an EC2 instace without a given IAM and in that case just the ACCESS_KEY/SECRET will matter.
+`IMPORTANT NOTE`: For AWS EC2. If you selected an `IAM role` for your server when setting it up/deploying it, `min.io` will use the AWS EC2-backed internal API to request access to your S3. This means the ROLE itself needs to have read/write access (ACL) to the given Bucket(s) and your key/secrets won't be able to override that. Please do not ignore this note. It will save you a LOT of frustration and coffee. You can also run an EC2 instace without a given IAM and in that case just the ACCESS_KEY/SECRET will matter.
 
-Now that you know, you also know that these values should be not **shared** and this `.env` file **should not** commited/kept in version control. Please be careful.
+Now that you know, you also know that these values **should not be shared** and this `.env` file **should not be committed/kept in version control**. Please be careful.
 
 `docker-compose` will read this `.env` and start all services for you based on its content.
 
@@ -166,7 +165,7 @@ cp deploy/ec2-docker/docker-compose-aws-s3.yml deploy/ec2-docker/docker-compose.
 
 #### Running a fully qualified domain you wish a valid/signed certificate for ARM64/Apple M1 Architecture?
 
-This means you will use the `docker-compose-aws-s3-arm64.yml`. Do the following
+This means you will use the `docker-compose-aws-s3-arm64.yml`. Do the following:
 
 ```shell
 cp deploy/ec2-docker/docker-compose-aws-s3-arm64.yml deploy/ec2-docker/docker-compose.yml
