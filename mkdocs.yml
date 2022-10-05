@@ -39,6 +39,11 @@ nav:
         - Twig Templates and Archipelago:
           - metadatatwigs.md
           - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
+          - Citations and Bibliographies:
+            - citations_bibliographies.md
+            - Citation Styles Reference: citation_styles.md
+            - Citation Locales Reference: citation_locales.md
+            - Citation Schema Reference: citation_schema.md
         - Archipelago Multi-Importer (AMI):
           - ami_index.md
           - AMI Instructions and Guides:
@@ -120,6 +125,8 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true 
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
 extra:
   social:
     - icon: fontawesome/brands/github
