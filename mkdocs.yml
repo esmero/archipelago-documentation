@@ -39,6 +39,7 @@ nav:
         - Twig Templates and Archipelago:
           - metadatatwigs.md
           - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
+          - Twig Extensions: twig_extensions.md
         - Archipelago Multi-Importer (AMI):
           - ami_index.md
           - AMI Instructions and Guides:
