@@ -9,15 +9,23 @@
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/createdisplaymodes/" rel="canonical"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.0, mkdocs-material-8.5.3" name="generator"/>
+<meta content="mkdocs-1.4.1, mkdocs-material-8.5.6" name="generator"/>
 <title>Creating Display Modes - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.7a952b86.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -671,35 +679,35 @@
 <ol>
 <li>
 <p>Navigate to <code>yoursite/admin/structure/display-modes</code></p>
-<p><a class="glightbox" href="../images/display-modes.jpg"><img alt="Display modes" src="../images/display-modes.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/display-modes.jpg"><img alt="Display modes" src="../images/display-modes.jpg"/></a></p>
 </li>
 <li>
 <p>Click on Form modes. This image shows the basic Form Modes shipped with Archipelago</p>
-<p><a class="glightbox" href="../images/form-modes-default.png"><img alt="Form modes" src="../images/form-modes-default.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/form-modes-default.png"><img alt="Form modes" src="../images/form-modes-default.png"/></a></p>
 </li>
 <li>
 <p>Click the "Add Form mode" button at the top of the page. Then select the "Content" entity type from the list. In this example, we ultimately want the form mode to be applied to Archipelago Digital Objects, which is a Content entity type.</p>
-<p><a class="glightbox" href="../images/form-mode-entity-type.png"><img alt="Form mode entity type" src="../images/form-mode-entity-type.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/form-mode-entity-type.png"><img alt="Form mode entity type" src="../images/form-mode-entity-type.png"/></a></p>
 </li>
 <li>
 <p>Enter the name of your Form Mode and hit save. Here we are entering "Student Webform".</p>
-<p><a class="glightbox" href="../images/form-mode-name.png"><img alt="Form mode name" src="../images/form-mode-name.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/form-mode-name.png"><img alt="Form mode name" src="../images/form-mode-name.png"/></a></p>
 </li>
 <li>
 <p>Great. Now you will see your new Form mode in the list! Let's put it to use.</p>
-<p><a class="glightbox" href="../images/form-mode-saved.png"><img alt="Form mode saved" src="../images/form-mode-saved.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/form-mode-saved.png"><img alt="Form mode saved" src="../images/form-mode-saved.png"/></a></p>
 </li>
 <li>
 <p>Head to <code>yoursite/admin/structure/types/manage/digital_object</code> and click the "Manage Form Display" tab. As mentioned above, in this example we want to add a new Form Mode for ADOs, so we are dealing with the Digital Object content type. Scroll to the bottom of this page and look for the "Custom Display Settings" area, which is collapsed by default. Expand it, and you should see this.</p>
-<p><a class="glightbox" href="../images/form-mode-enable.png"><img alt="Form mode enable" src="../images/form-mode-enable.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/form-mode-enable.png"><img alt="Form mode enable" src="../images/form-mode-enable.png"/></a></p>
 </li>
 <li>
 <p>Enable "Student Webform" and hit save! Now scroll back up the page. You'll see it enabled like so.</p>
-<p><a class="glightbox" href="../images/form-mode-enable-2.png"><img alt="Form mode enable" src="../images/form-mode-enable-2.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/form-mode-enable-2.png"><img alt="Form mode enable" src="../images/form-mode-enable-2.png"/></a></p>
 </li>
 <li>
 <p>Now select our new "Student Webform" tab. From here, you have many options and can configure input fields as you see fit! To finish out our specific example though, let's finally add our Student Webform to the display. Click on the settings gear icon next to the Descriptive Metadata field.</p>
-<p><a class="glightbox" href="../images/form-mode-add-webform.png"><img alt="Form mode enable" src="../images/form-mode-add-webform.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/form-mode-add-webform.png"><img alt="Form mode enable" src="../images/form-mode-add-webform.png"/></a></p>
 <p>You'll see that the default webform named "Descriptive Metadata" is entered. To add custom content to this Field Widget, start typing in the autocomplete. This example assumes you've created a webform called <code>Student Webform</code> in <code>yoursite/admin/structure/webform</code>. For info on how to create a new Webform with proper settings, see our <a href="../webformsasinput/">Webforms as input guide</a>.</p>
 </li>
 <li>
@@ -714,43 +722,43 @@
 <ol>
 <li>
 <p>Navigate to <code>yoursite/admin/structure/display-modes</code></p>
-<p><a class="glightbox" href="../images/display-modes.jpg"><img alt="Display modes" src="../images/display-modes.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/display-modes.jpg"><img alt="Display modes" src="../images/display-modes.jpg"/></a></p>
 </li>
 <li>
 <p>Select View modes, and click the "Add View mode" at the top of the page.</p>
-<p><a class="glightbox" href="../images/view-mode-add.png"><img alt="View modes" src="../images/view-mode-add.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/view-mode-add.png"><img alt="View modes" src="../images/view-mode-add.png"/></a></p>
 </li>
 <li>
 <p>Select Content as your entity type.</p>
-<p><a class="glightbox" href="../images/view-mode-entity-type.png"><img alt="View modes" src="../images/view-mode-entity-type.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/view-mode-entity-type.png"><img alt="View modes" src="../images/view-mode-entity-type.png"/></a></p>
 </li>
 <li>
 <p>Enter the name of your new View Mode and save. Ours is "Digital Object with Publishing Information"</p>
-<p><a class="glightbox" href="../images/view-mode-name.png"><img alt="View modes" src="../images/view-mode-name.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/view-mode-name.png"><img alt="View modes" src="../images/view-mode-name.png"/></a></p>
 </li>
 <li>
 <p>Now let's enable this View mode. Go to <code>yoursite/admin/structure/types/manage/digital_object</code> and click the "Manage Display" tab.</p>
 </li>
 <li>
 <p>Scroll to the bottom of the page and expand the "Custom Display Settings" area. You will see our newly created View Mode. Enable it and hit save.</p>
-<p><a class="glightbox" href="../images/view-mode-enable.png"><img alt="View modes" src="../images/view-mode-enable.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/view-mode-enable.png"><img alt="View modes" src="../images/view-mode-enable.png"/></a></p>
 </li>
 <li>
 <p>Now scroll back to the page top. You will see "Digital Object with Publishing Information" in the list of View Modes, so go ahead and select it.</p>
-<p><a class="glightbox" href="../images/view-mode-enable2.png"><img alt="View modes" src="../images/view-mode-enable2.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/view-mode-enable2.png"><img alt="View modes" src="../images/view-mode-enable2.png"/></a></p>
 </li>
 <li>
 <p>Scroll down until you see the "Disabled" section. This section contains fields that are available to the ADO content type, but are not enabled in this display mode. Let's enable Author and Post date by changing the "Region" column dropdown from "Disabled" to "Content". (To learn more about Regions in Drupal, see here). Basically, this ensures that this field has a home in the page layout. Hit save.</p>
-<p><a class="glightbox" href="../images/view-mode-disabled.png"><img alt="View modes" src="../images/view-mode-disabled.png"/></a></p>
-<p><a class="glightbox" href="../images/view-mode-content-disabled.png"><img alt="View modes" src="../images/view-mode-content-disabled.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/view-mode-disabled.png"><img alt="View modes" src="../images/view-mode-disabled.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/view-mode-content-disabled.png"><img alt="View modes" src="../images/view-mode-content-disabled.png"/></a></p>
 </li>
 <li>
 <p>Now, if you want ADOs to use this View Mode for display, there is one last step. You need to select "Digital Object with Publishing Info" as the view mode Display Settings when adding new content. This area is located on the right side of the page. See below:</p>
-<p><a class="glightbox" href="../images/view-mode-display-settings.png"><img alt="View modes" src="../images/view-mode-display-settings.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/view-mode-display-settings.png"><img alt="View modes" src="../images/view-mode-display-settings.png"/></a></p>
 </li>
 <li>
 <p>Now, when we view the individual ADO, these new fields have been added to the display.</p>
-<p><a class="glightbox" href="../images/view-mode-final.png"><img alt="View modes" src="../images/view-mode-final.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/view-mode-final.png"><img alt="View modes" src="../images/view-mode-final.png"/></a></p>
 </li>
 </ol>
 <p>All done! This was quite a simple example, but now you are aware of how to customize your own ADO display. It can only get more complex and exciting from here.</p>
@@ -835,6 +843,6 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
-<script src="../assets/javascripts/bundle.37e9125f.min.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "100%", "height": "auto", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
 </html>

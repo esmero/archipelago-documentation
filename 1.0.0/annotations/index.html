@@ -9,15 +9,23 @@
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/annotations/" rel="canonical"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.0, mkdocs-material-8.5.3" name="generator"/>
+<meta content="mkdocs-1.4.1, mkdocs-material-8.5.6" name="generator"/>
 <title>Annotations - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.7a952b86.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -679,10 +687,10 @@
 <h3 id="enabling-annotations">Enabling Annotations</h3>
 <ol>
 <li>Navigate to Admin --&gt; Structure --&gt; Content types --&gt; Digital Object --&gt; Manage Display and select the "Digital Object Full view" mode. <code>https://yoursite.org/admin/structure/types/manage/digital_object/display/digital_object_viewmode_fullitem</code>
-<a class="glightbox" href="../images/annotations_step1.jpg"><img alt="annotations step 1" src="../images/annotations_step1.jpg"/></a></li>
+<a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/annotations_step1.jpg"><img alt="annotations step 1" src="../images/annotations_step1.jpg"/></a></li>
 <li>On the <strong>“Fragola”</strong> row, click on the small gear icon on the far right, which will be open the configurations for this display type. </li>
 <li>Select the <strong>“Enable loading/editing of W3C webAnnotations”</strong> option.  <br/>
-<a class="glightbox" href="../images/annotations_step2.jpg"><img alt="annotations step 2" src="../images/annotations_step2.jpg"/></a><ul>
+<a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/annotations_step2.jpg"><img alt="annotations step 2" src="../images/annotations_step2.jpg"/></a><ul>
 <li><em>Learn more about the JSON format of WebAnnotations here: https://www.w3.org/TR/annotation-model/#index-of-json-keys.</em></li>
 </ul>
 </li>
@@ -697,10 +705,10 @@
 <li>To add a new annotation, select and hold the <code>Shift</code> key. Click and then drag to apply either a Rectangular box or multi-point Polygon shape.</li>
 <li>Double click to exit the annotation drawing mode.</li>
 <li>Enter the text for your annotation in the pop-up window.
-    <a class="glightbox" href="../images/annotations_edit.jpg"><img alt="annotations edit" src="../images/annotations_edit.jpg"/></a></li>
+    <a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/annotations_edit.jpg"><img alt="annotations edit" src="../images/annotations_edit.jpg"/></a></li>
 <li>Click the "Ok" button when you are ready.</li>
 <li>To save your annotation (or annotations if you created multiple), navigate to the main Digital Object "Edit" tab, where you will see a message about Unsaved Web Annotation Changes.
-    <a class="glightbox" href="../images/annotations_edit_delete_save.jpg"><img alt="annotations edit delete save" src="../images/annotations_edit_delete_save.jpg"/></a></li>
+    <a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/annotations_edit_delete_save.jpg"><img alt="annotations edit delete save" src="../images/annotations_edit_delete_save.jpg"/></a></li>
 <li>Select "Save" to preserve your Annotation(s). They will now become part of your Digital Object's JSON, found under the <code>ap:annotationCollection</code> key.<ul>
 <li><em>Pressing the "Discard" button will discard only the unsaved Annotations, and will reload the page.</em></li>
 </ul>
@@ -711,7 +719,7 @@
 <li>Navigate to the image-based Digital Object you would whose annotation(s) you want to edit or delete.</li>
 <li>Click within the Annotation and select the downwards arrow in the upper right-hand corner of the pop-up window.</li>
 <li>Select either the "Edit" option and Edit the Annotation as desired; Or select the "Delete" option.
-    <a class="glightbox" href="../images/annotations_edit_delete.jpg"><img alt="annotations edit delete" src="../images/annotations_edit_delete.jpg"/></a></li>
+    <a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/annotations_edit_delete.jpg"><img alt="annotations edit delete" src="../images/annotations_edit_delete.jpg"/></a></li>
 <li>To preserve your editing or deleting actions, navigate to the main Digital Object "Edit" tab, where you will see a message about Unsaved Web Annotation Changes. <em>(See screenshot in Step 6 of <a href="https://github.com/esmero/archipelago-documentation/blob/1.0.0/docs/annotations.md#adding-and-saving-annotations">Adding and saving Annotations</a> above.)</em></li>
 <li>Select "Save" to preserve your Annotation(s) edits or deletions. Pressing the "Discard" button will discard only the unsaved Annotations changes, and will reload the page.</li>
 </ol>
@@ -795,6 +803,6 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
-<script src="../assets/javascripts/bundle.37e9125f.min.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "100%", "height": "auto", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
 </html>

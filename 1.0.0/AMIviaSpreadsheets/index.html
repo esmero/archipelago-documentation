@@ -9,15 +9,23 @@
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/AMIviaSpreadsheets/" rel="canonical"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.0, mkdocs-material-8.5.3" name="generator"/>
+<meta content="mkdocs-1.4.1, mkdocs-material-8.5.6" name="generator"/>
 <title>Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.7a952b86.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -829,7 +837,7 @@
 <li>Google Sheets Importer</li>
 <li>
 <p>Spreadsheet Importer  (if using local CSV file)</p>
-<p><a class="glightbox" href="../images/ami/PluginImporterSelect.jpg"><img alt="Plugin Importer Select" src="../images/ami/PluginImporterSelect.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/PluginImporterSelect.jpg"><img alt="Plugin Importer Select" src="../images/ami/PluginImporterSelect.jpg"/></a></p>
 </li>
 </ul>
 <p><em>*The <code>Remote JSON API Importer</code> and additional remote import source options (for other repository systems) will be covered in separate tutorials following future releases.</em></p>
@@ -842,14 +850,14 @@
 <li>Enter the ID of your Google Sheet</li>
 <li>Enter the Cell Range for your Google Sheet</li>
 </ul>
-<p><a class="glightbox" href="../images/ami/AMIstep2googlesheets.jpg"><img alt="Google Sheets Importer" src="../images/ami/AMIstep2googlesheets.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIstep2googlesheets.jpg"><img alt="Google Sheets Importer" src="../images/ami/AMIstep2googlesheets.jpg"/></a></p>
 </li>
 <li>
 <p>If using Spreadsheet Importer:</p>
 <ul>
 <li>Select 'Choose File' to upload the CSV you will be using.</li>
 </ul>
-<p><a class="glightbox" href="../images/ami/AMIstep2spreadsheet.jpg"><img alt="Google Sheets Importer" src="../images/ami/AMIstep2spreadsheet.jpg"/></a> </p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIstep2spreadsheet.jpg"><img alt="Google Sheets Importer" src="../images/ami/AMIstep2spreadsheet.jpg"/></a> </p>
 </li>
 </ul>
 <h4 id="step-3-data-transformation-selections">Step 3: Data Transformation Selections</h4>
@@ -883,7 +891,7 @@
 <li>Select <code>Template</code> and use the AMI Ingest JSON template that corresponds with your metadata elements.</li>
 <li>Select <code>images</code>, <code>documents</code>, and <code>audios</code> for the file source/fetching.</li>
 </ul>
-<p><a class="glightbox" href="../images/ami/AMIstep3JSONtemplateDataTransformation.jpg"><img alt="AMI Step 3 Data Transformation Mappings" src="../images/ami/AMIstep3JSONtemplateDataTransformation.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIstep3JSONtemplateDataTransformation.jpg"><img alt="AMI Step 3 Data Transformation Mappings" src="../images/ami/AMIstep3JSONtemplateDataTransformation.jpg"/></a></p>
 </li>
 </ul>
 <h4 id="step-4-global-ado-mappings">Step 4: Global ADO Mappings</h4>
@@ -900,7 +908,7 @@
 <li>Do not select any column for 'Sequence'</li>
 <li>Select the <code>label</code> column for ADO Label</li>
 </ul>
-<p><a class="glightbox" href="../images/ami/AMIstep4GlobalADOmappings.jpg"><img alt="AMI Step 4 Global ADO Mappings" src="../images/ami/AMIstep4GlobalADOmappings.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIstep4GlobalADOmappings.jpg"><img alt="AMI Step 4 Global ADO Mappings" src="../images/ami/AMIstep4GlobalADOmappings.jpg"/></a></p>
 </li>
 </ul>
 <h4 id="step-5-zip-upload">Step 5: ZIP upload</h4>
@@ -909,7 +917,7 @@
 <li>You may choose to upload a ZIP file containing all or some of the corresponding files specified in your csv/spreadsheet.</li>
 <li>
 <p>The file upload size restrictions specified in your Archipelago instance will apply here (512MB maximum by default). </p>
-<p><a class="glightbox" href="../images/ami/AMIstep5zip.jpg"><img alt="AMI Step 5 Zip" src="../images/ami/AMIstep5zip.jpg"/></a> </p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIstep5zip.jpg"><img alt="AMI Step 5 Zip" src="../images/ami/AMIstep5zip.jpg"/></a> </p>
 <ul>
 <li>Please note, when creating your ZIP file (in particular, within an OSX environment): only select the folders and files needed, not the top/enclosing folder they are in. </li>
 </ul>
@@ -917,35 +925,35 @@
 </ul>
 <details class="info click to view screenshot of example zip file creation in osx">
 <summary>Info</summary>
-<p><a class="glightbox" href="../images/ami/ExampleZipOSX.jpg"><img alt="Example ZIP OSX" src="../images/ami/ExampleZipOSX.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/ExampleZipOSX.jpg"><img alt="Example ZIP OSX" src="../images/ami/ExampleZipOSX.jpg"/></a></p>
 </details>
 <h4 id="step-6-ami-set-confirmation">Step 6: AMI Set Confirmation</h4>
 <p>You will now see a message letting you know that 'Your source data was saved and is available as a CSV at <code>linktotheAMIgenerated.csv</code></p>
 <p>The message will also let you know that your New AMI Set was created and provide a link to the AMI Set page.</p>
-<p><a class="glightbox" href="../images/ami/AMIStep6.jpg"><img alt="AMI Step 6" src="../images/ami/AMIStep6.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIStep6.jpg"><img alt="AMI Step 6" src="../images/ami/AMIStep6.jpg"/></a></p>
 <h4 id="step-7-ami-set-processing">Step 7: AMI Set Processing</h4>
 <p>Your newly created AMI Set will now need to be Processed.</p>
 <p>If you clicked on the 'see it here' link in Step 6, you will be brought to the AMI Set page for review. From this page you can review the JSON configuration for your set (determined by your selections in the preceeding steps).</p>
-<p><a class="glightbox" href="../images/ami/AMIsetAdminReview.jpg"><img alt="AMI Set Admin Review" src="../images/ami/AMIsetAdminReview.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIsetAdminReview.jpg"><img alt="AMI Set Admin Review" src="../images/ami/AMIsetAdminReview.jpg"/></a></p>
 <p>To Process this set, navigate to the <code>Process</code> tab. You will have two options related to the Processing outcome for your AMI Set. 
 - Option 1: Select the "Desired ADOS Statuses After Process" for both Digital Objects (and Digital Object Collections, if also part of your ingest).
     - The Statuses you have available will reflect the publication workflow/moderation states (such as Draft, Published, Archived/Unpublished) setup in your Archipelago instance, and the permissions associated your user account.  <br/>
 - Option 2: You may choose to check the option to 'Enqueue but do not process Batch' to place the AMI set in the Queue to Process. <em>For the AMI version shipped with Archipelago 1.0.0-RC2, the option to 'Enqueue' for scheduled/future Processing should only be used if the Queue operations for your Archipelago instance are configured. Please return to this page for updated Enqueueing instructions that will accompany future releases.</em>
 - Select <code>Confirm</code> to continue. </p>
-<p><a class="glightbox" href="../images/ami/AMIsetAdminProcessRC2.jpg"><img alt="AMI Admin Set Process" src="../images/ami/AMIsetAdminProcessRC2.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIsetAdminProcessRC2.jpg"><img alt="AMI Admin Set Process" src="../images/ami/AMIsetAdminProcessRC2.jpg"/></a></p>
 <p>You may also select <code>Process</code> from the <code>Operations</code> menu for the AMI set from the main <code>AMI sets</code> page.</p>
-<p><a class="glightbox" href="../images/ami/AMISetAdminProcessOpsMenu.jpg"><img alt="AMI Sets Admin Process Operations Menu" src="../images/ami/AMISetAdminProcessOpsMenu.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMISetAdminProcessOpsMenu.jpg"><img alt="AMI Sets Admin Process Operations Menu" src="../images/ami/AMISetAdminProcessOpsMenu.jpg"/></a></p>
 <p>If you chose to 'Confirm" and Process your AMI Set immediately, proceed to Step 9: Processing and ADO Creation.   </p>
 <h4 id="step-8-queue-manager-if-not-processing-immediately">Step 8: Queue Manager (if not Processing immediately)</h4>
 <p>If you chose to place your AMI set in the Queue to Process in step 7, you may need to navigate to the Queue Manager found at <code>/admin/config/system/queue-ui</code>. (Be sure to select the <code>Queue Manager</code> under the System section, not the <code>Queue Manager for Hydroponic Service</code> under the Archipelago section). If the Queue operations for your Archipelago instance have been configured, you can simply leave your AMI Set in the Queue for Processing on the preconfigured schedule.</p>
-<p><a class="glightbox" href="../images/ami/AMIqueueMgr.jpg"><img alt="AMI Queue Manager" src="../images/ami/AMIqueueMgr.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIqueueMgr.jpg"><img alt="AMI Queue Manager" src="../images/ami/AMIqueueMgr.jpg"/></a></p>
 <p>To Process your AMI Set immediately from the Queue Manager page, select the checkbox next to the 'AMI Digital Object Ingester Queue Worker'. Keep the <code>Action</code> menu set to <code>Batch Process</code> and click the <code>Apply to selected items</code> button.</p>
-<p><a class="glightbox" href="../images/ami/AMIqueueMgrBatchProcess.jpg"><img alt="AMI Queue Manager Batch" src="../images/ami/AMIqueueMgrBatchProcess.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIqueueMgrBatchProcess.jpg"><img alt="AMI Queue Manager Batch" src="../images/ami/AMIqueueMgrBatchProcess.jpg"/></a></p>
 <h4 id="step-9-processing-and-ado-creation">Step 9: Processing and ADO Creation</h4>
 <p>Your AMI set will now be Processed. You can follow the set's progress through the <code>Processing queues</code> loading screen.</p>
-<p><a class="glightbox" href="../images/ami/AMIprocessingQueue.jpg"><img alt="AMI Processing Queues" src="../images/ami/AMIprocessingQueue.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIprocessingQueue.jpg"><img alt="AMI Processing Queues" src="../images/ami/AMIprocessingQueue.jpg"/></a></p>
 <p>After your AMI set is Processed, you will receive confirmation messages letting you know your Digital Objects were successfully created. </p>
-<p><a class="glightbox" href="../images/ami/AMIsetSuccessRC2.jpg"><img alt="AMI Set Succes" src="../images/ami/AMIsetSuccessRC2.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIsetSuccessRC2.jpg"><img alt="AMI Set Succes" src="../images/ami/AMIsetSuccessRC2.jpg"/></a></p>
 <p>From this message, you can click on each ADO title to review the new created Digital Object (or Collection) if you wish. Or, you may proceed to step 10.  </p>
 <h4 id="step-10-review-your-newly-created-digital-objects">Step 10: Review your newly created Digital Objects</h4>
 <p>Return to the main Content page found at <code>/admin/content</code> and review your newly created Digital Objects. After ensuring that files and metadata elements were mapped correctly, you may choose to change the Status for your Digital Objects to 'Published'. Celebrate your AMI success with a fresh coffee, tea, or cookie!</p>
@@ -970,7 +978,7 @@
 <li>Select the destination Fields and Bundles for <code>Strawberry (Descriptive Metadata source) for Digital Object Collection</code></li>
 <li>You may also wish to Select which columns contain filenames, entities or URLS where files can be fetched from. For most Collection objects, you will either leave unselected or choose <code>images</code> if you are uploading a thumbnail image for your Collection.</li>
 </ul>
-<p><a class="glightbox" href="../images/ami/AMIcustomModeCollections.jpg"><img alt="AMI Custom Mode Collections" src="../images/ami/AMIcustomModeCollections.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIcustomModeCollections.jpg"><img alt="AMI Custom Mode Collections" src="../images/ami/AMIcustomModeCollections.jpg"/></a></p>
 </li>
 <li>
 <p>For <strong>each</strong> Digital Object type in your spreadsheet source:</p>
@@ -980,7 +988,7 @@
 <li>Then Select the destination Fields and Bundles for <code>Strawberry (Descriptive Metadata source) for Digital Object</code></li>
 <li>
 <p>For example, for Book type Digital Objects, you would select the following options (as depicted in this screenshot):</p>
-<p><a class="glightbox" href="../images/ami/AMIcustomDigitalObjectMappings.jpg"><img alt="AMI Custom Digital Object Mappings" src="../images/ami/AMIcustomDigitalObjectMappings.jpg"/></a> </p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIcustomDigitalObjectMappings.jpg"><img alt="AMI Custom Digital Object Mappings" src="../images/ami/AMIcustomDigitalObjectMappings.jpg"/></a> </p>
 </li>
 </ul>
 </li>
@@ -1008,7 +1016,7 @@
 <li>Do not select any column for 'Sequence'</li>
 <li>
 <p>Select the <code>label</code> column for ADO Label</p>
-<p><a class="glightbox" href="../images/ami/AMIstep4GlobalADOmappings.jpg"><img alt="AMI Step 4 Global ADO Mappings" src="../images/ami/AMIstep4GlobalADOmappings.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIstep4GlobalADOmappings.jpg"><img alt="AMI Step 4 Global ADO Mappings" src="../images/ami/AMIstep4GlobalADOmappings.jpg"/></a></p>
 </li>
 </ul>
 </li>
@@ -1095,6 +1103,6 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
-<script src="../assets/javascripts/bundle.37e9125f.min.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "100%", "height": "auto", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
 </html>

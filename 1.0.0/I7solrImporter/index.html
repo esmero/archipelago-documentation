@@ -9,15 +9,23 @@
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/I7solrImporter/" rel="canonical"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.0, mkdocs-material-8.5.3" name="generator"/>
+<meta content="mkdocs-1.4.1, mkdocs-material-8.5.6" name="generator"/>
 <title>Using the Islandora 7 Solr Importer - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.7a952b86.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -767,7 +775,7 @@
 <p>From either the main Content page or the AMI Sets List page, select the 'Start an AMI set' button to begin.</p>
 <h2 id="step-1-plugin-selection">Step 1: Plugin Selection</h2>
 <p>Select the Islandora 7 Solr Importer from the dropdown menu.</p>
-<p><a class="glightbox" href="../images/ami/I7step1.jpg"><img alt="Islandora Solr Importer Step 11" src="../images/ami/I7step1.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/I7step1.jpg"><img alt="Islandora Solr Importer Step 11" src="../images/ami/I7step1.jpg"/></a></p>
 <h2 id="step-2-section-1-solr-server-configuration">Step 2, section 1: Solr Server Configuration</h2>
 <p>You will only have the option to select 'Create New ADOs' as the Operation you would like to perform.</p>
 <p>For the Solr Server Configuration section, you will need to provide all of the following information:</p>
@@ -791,7 +799,7 @@
 <ul>
 <li>
 <p>As an example, for a collection of 1500 objects that you wanted to split into three AMI ingests of 500 objects, you would specify the Starting Row as 0 for the first set and Number of Rows as 500. For the second set, your Starting Row would be Row 501; for the third set, 1001). In this example, the Number of Rows would always be 500.</p>
-<p><a class="glightbox" href="../images/ami/I7step2_section1.jpg"><img alt="Islandora Solr Importer Step 2 Section 1" src="../images/ami/I7step2_section1.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/I7step2_section1.jpg"><img alt="Islandora Solr Importer Step 2 Section 1" src="../images/ami/I7step2_section1.jpg"/></a></p>
 </li>
 </ul>
 <h2 id="step-2-section-2-islandora-mappings">Step 2, section 2: Islandora Mappings</h2>
@@ -799,7 +807,7 @@
 <ul>
 <li>
 <p>Selecting "Collapse Multi Children Objects" will collapse Children Datastreams into a single ADO with many attached files (single row in the generated AMI set .csv file). Book Pages will be fetched but also the Top Level PDF (if one exists in your Islandora instance).
-    <a class="glightbox" href="../images/ami/I7step2_section2_collapse.jpg"><img alt="Islandora Solr Importer Step 2 Section 2 Collapse" src="../images/ami/I7step2_section2_collapse.jpg"/></a></p>
+    <a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/I7step2_section2_collapse.jpg"><img alt="Islandora Solr Importer Step 2 Section 2 Collapse" src="../images/ami/I7step2_section2_collapse.jpg"/></a></p>
 </li>
 <li>
 <p>In the Required ADO mappings, you will need to specify which Archipelago type you want to map each Islandora Content Model found in your source collection. </p>
@@ -809,7 +817,7 @@
 </li>
 <li>
 <p>If you had left "Collapse Multi Children Objects" unselected, you will also need to specify the Islandora Content Model to ADO types mapping for possible Children.
-    <a class="glightbox" href="../images/ami/I7step2_section2_nocollapse.jpg"><img alt="Islandora Solr Importer Step 2 Section 2 No Collapse" src="../images/ami/I7step2_section2_nocollapse.jpg"/></a></p>
+    <a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/I7step2_section2_nocollapse.jpg"><img alt="Islandora Solr Importer Step 2 Section 2 No Collapse" src="../images/ami/I7step2_section2_nocollapse.jpg"/></a></p>
 </li>
 <li>
 <p>You can also specify an ADO (Object or Collection) to be used the Parent of Imported Objects. By selecting an existing ADO (Object or Collection) here using the autocomplete/search, the generated AMI set .csv file will contain an 'ismemberof' column containing the UUID of the selected ADO for every row.</p>
@@ -846,7 +854,7 @@
 <li>Select <code>Template</code> and use the AMI Ingest JSON template that corresponds with your metadata elements.</li>
 <li>
 <p>Select <code>images</code>, <code>documents</code>, and <code>audios</code> for the file source/fetching.</p>
-<p><a class="glightbox" href="../images/ami/AMIstep3JSONtemplateDataTransformation.jpg"><img alt="AMI Step 3 Data Transformation Mappings" src="../images/ami/AMIstep3JSONtemplateDataTransformation.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIstep3JSONtemplateDataTransformation.jpg"><img alt="AMI Step 3 Data Transformation Mappings" src="../images/ami/AMIstep3JSONtemplateDataTransformation.jpg"/></a></p>
 </li>
 </ul>
 </li>
@@ -867,24 +875,24 @@
 <li>Do not select any column for 'Sequence'</li>
 <li>Select the <code>label</code> column for ADO Label</li>
 </ul>
-<p><a class="glightbox" href="../images/ami/AMIstep4GlobalADOmappings.jpg"><img alt="AMI Step 4 Global ADO Mappings" src="../images/ami/AMIstep4GlobalADOmappings.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIstep4GlobalADOmappings.jpg"><img alt="AMI Step 4 Global ADO Mappings" src="../images/ami/AMIstep4GlobalADOmappings.jpg"/></a></p>
 </li>
 </ul>
 <h2 id="step-5-zip-upload">Step 5: ZIP upload</h2>
 <p>For standard Spreadsheet or Google Sheets AMI ingests, you would use this step to provide an optional ZIP file containing your assets. </p>
 <p>For your Islandora 7 Solr Importer process, the generated AMI set .csv file will contain the necessary URLs to the corresponding Islandora 7 file datastreams for each object as needed. Select next to skip this ZIP upload step and proceed. </p>
-<p><a class="glightbox" href="../images/ami/AMIstep5zip.jpg"><img alt="AMI Step 5 Zip" src="../images/ami/AMIstep5zip.jpg"/></a> </p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIstep5zip.jpg"><img alt="AMI Step 5 Zip" src="../images/ami/AMIstep5zip.jpg"/></a> </p>
 <h2 id="step-6-batch-fetching-from-solr">Step 6: Batch fetching from Solr</h2>
 <p>During this step, AMI will fetch the specified digital objects from the remote Solr source. This is generally a quick process, but be aware that settings in the remote Solr source can impact the response time.</p>
-<p><a class="glightbox" href="../images/ami/AMIstep4GlobalADOmappings.jpg"><img alt="Islandora Solr Importer Step Batch Solr Fetching" src="../images/ami/AMIstep4GlobalADOmappings.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIstep4GlobalADOmappings.jpg"><img alt="Islandora Solr Importer Step Batch Solr Fetching" src="../images/ami/AMIstep4GlobalADOmappings.jpg"/></a></p>
 <h2 id="step-7-ami-set-confirmation">Step 7: AMI Set Confirmation</h2>
 <p>You will now see a message letting your know your "New AMI Set was created". You will be able to review the generated .csv file directly from this page under Source Data File.</p>
-<p><a class="glightbox" href="../images/ami/I7step7_setCreated.jpg"><img alt="Islandora Solr Importer Step 7 Set Creation" src="../images/ami/I7step7_setCreated.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/I7step7_setCreated.jpg"><img alt="Islandora Solr Importer Step 7 Set Creation" src="../images/ami/I7step7_setCreated.jpg"/></a></p>
 <p>While you may immediately select "Process" from this AMI Set Confirmation page to use the Islandora 7 Importer generated .csv file as-is to ingest the ADOs in your AMI set, it is strongly recommended that you review the .csv file first. AMI is configured to trim unecessary (for Archipelago) and de-duplicate redundant Solr source data, but you may wish to pare down the sourced data even further and/or conduct general metadata review and cleanup before migrating your content. You will also likely want to make adjustments to your AMI Ingest JSON Template based on your review, depending on the variation of metadata columns/keys found in your source repostiory. </p>
 <h2 id="step-8-ami-set-processing">Step 8: AMI Set Processing</h2>
 <p>Whether you have chosen to review your .csv file or not, your newly created AMI Set will now need to be Processed.</p>
 <p>On the main AMI set page, you can review the configurations and Source Data File for your set (determined by your selections in the preceding steps).</p>
-<p><a class="glightbox" href="../images/ami/AMIsetAdminReview.jpg"><img alt="AMI Set Admin Review" src="../images/ami/AMIsetAdminReview.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIsetAdminReview.jpg"><img alt="AMI Set Admin Review" src="../images/ami/AMIsetAdminReview.jpg"/></a></p>
 <p>To Process this set, navigate to the <code>Process</code> tab. You will have two options related to the Processing outcome for your AMI Set. </p>
 <ul>
 <li>Option 1: Select the "Desired ADOS Statuses After Process" for both Digital Objects (and Digital Object Collections, if also part of your ingest).<ul>
@@ -894,22 +902,22 @@
 <li>Option 2: You may choose to check the option to 'Enqueue but do not process Batch' to place the AMI set in the Queue to Process. <em>For the AMI version shipped with Archipelago 1.0.0-RC2, the option to 'Enqueue' for scheduled/future Processing should only be used if the Queue operations for your Archipelago instance are configured. Please return to this page for updated Enqueueing instructions that will accompany future releases.</em></li>
 <li>
 <p>Select <code>Confirm</code> to continue. </p>
-<p><a class="glightbox" href="../images/ami/AMIsetAdminProcessRC2.jpg"><img alt="AMI Admin Set Process" src="../images/ami/AMIsetAdminProcessRC2.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIsetAdminProcessRC2.jpg"><img alt="AMI Admin Set Process" src="../images/ami/AMIsetAdminProcessRC2.jpg"/></a></p>
 </li>
 </ul>
 <p>You may also select <code>Process</code> from the <code>Operations</code> menu for the AMI set from the main <code>AMI sets</code> page.</p>
-<p><a class="glightbox" href="../images/ami/AMISetAdminProcessOpsMenu.jpg"><img alt="AMI Sets Admin Process Operations Menu" src="../images/ami/AMISetAdminProcessOpsMenu.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMISetAdminProcessOpsMenu.jpg"><img alt="AMI Sets Admin Process Operations Menu" src="../images/ami/AMISetAdminProcessOpsMenu.jpg"/></a></p>
 <p>If you chose to 'Confirm" and Process your AMI Set immediately, proceed to Step 9: Processing and ADO Creation.   </p>
 <h2 id="step-9-queue-manager-if-not-processing-immediately">Step 9: Queue Manager (if not Processing immediately)</h2>
 <p>If you chose to place your AMI set in the Queue to Process in step 7, you may need to navigate to the Queue Manager found at <code>/admin/config/system/queue-ui</code>. (Be sure to select the <code>Queue Manager</code> under the System section, not the <code>Queue Manager for Hydroponic Service</code> under the Archipelago section). If the Queue operations for your Archipelago instance have been configured, you can simply leave your AMI Set in the Queue for Processing on the preconfigured schedule.</p>
-<p><a class="glightbox" href="../images/ami/AMIqueueMgr.jpg"><img alt="AMI Queue Manager" src="../images/ami/AMIqueueMgr.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIqueueMgr.jpg"><img alt="AMI Queue Manager" src="../images/ami/AMIqueueMgr.jpg"/></a></p>
 <p>To Process your AMI Set immediately from the Queue Manager page, select the checkbox next to the 'AMI Digital Object Ingester Queue Worker'. Keep the <code>Action</code> menu set to <code>Batch Process</code> and click the <code>Apply to selected items</code> button.</p>
-<p><a class="glightbox" href="../images/ami/AMIqueueMgrBatchProcess.jpg"><img alt="AMI Queue Manager Batch" src="../images/ami/AMIqueueMgrBatchProcess.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIqueueMgrBatchProcess.jpg"><img alt="AMI Queue Manager Batch" src="../images/ami/AMIqueueMgrBatchProcess.jpg"/></a></p>
 <h2 id="step-10-processing-and-ado-creation">Step 10: Processing and ADO Creation</h2>
 <p>Your AMI set will now be Processed. You can follow the set's progress through the <code>Processing queues</code> loading screen.</p>
-<p><a class="glightbox" href="../images/ami/AMIprocessingQueue.jpg"><img alt="AMI Processing Queues" src="../images/ami/AMIprocessingQueue.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIprocessingQueue.jpg"><img alt="AMI Processing Queues" src="../images/ami/AMIprocessingQueue.jpg"/></a></p>
 <p>After your AMI set is Processed, you will receive confirmation messages letting you know your Digital Objects were successfully created. </p>
-<p><a class="glightbox" href="../images/ami/AMIsetSuccessRC2.jpg"><img alt="AMI Set Succes" src="../images/ami/AMIsetSuccessRC2.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIsetSuccessRC2.jpg"><img alt="AMI Set Succes" src="../images/ami/AMIsetSuccessRC2.jpg"/></a></p>
 <p>From this message, you can click on each ADO title to review the new created Digital Object (or Collection) if you wish. Or, you may proceed to step 10.  </p>
 <h2 id="step-11-review-your-newly-created-digital-objects">Step 11: Review your newly created Digital Objects</h2>
 <p>Return to the main Content page found at <code>/admin/content</code> and review your newly created Digital Objects. After ensuring that files and metadata elements were mapped correctly, you may choose to change the Status for your Digital Objects to 'Published'. Celebrate your AMI success with a fresh coffee, tea, or cookie!</p>
@@ -993,6 +1001,6 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
-<script src="../assets/javascripts/bundle.37e9125f.min.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "100%", "height": "auto", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
 </html>

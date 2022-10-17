@@ -9,15 +9,23 @@
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/ami_lod_rec/" rel="canonical"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.0, mkdocs-material-8.5.3" name="generator"/>
+<meta content="mkdocs-1.4.1, mkdocs-material-8.5.6" name="generator"/>
 <title>Using AMI's Linked Data Reconciliation - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.7a952b86.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -761,16 +769,16 @@
 <p>Your source spreadsheet will also need to contain at least one column containing terms/names (values) you want to reconcile against an LoD Authority Source. Multiple values should be separated by '|@|'.</p>
 <h2 id="step-1-select-the-ami-set-you-will-be-working-with">Step 1: Select the AMI Set you will be working with.</h2>
 <p>From the main AMI Sets List page, click on your AMI Set's Name, or select the 'Edit' option from the Operations menu on the right-hand side of the Sets list.</p>
-<p><a class="glightbox" href="../images/ami/AMIsetsList.jpg"><img alt="AMI Sets List" src="../images/ami/AMIsetsList.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIsetsList.jpg"><img alt="AMI Sets List" src="../images/ami/AMIsetsList.jpg"/></a></p>
 <h2 id="step-2-reconcile-lod-tab">Step 2: Reconcile LoD Tab</h2>
 <p>Navigate to the Reconcile LoD tab.</p>
-<p><a class="glightbox" href="../images/ami/AMIreconcileLodTab.jpg"><img alt="Reconcile LoD Tab" src="../images/ami/AMIreconcileLodTab.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIreconcileLodTab.jpg"><img alt="Reconcile LoD Tab" src="../images/ami/AMIreconcileLodTab.jpg"/></a></p>
 <h2 id="step-3-lod-reconciling-selections">Step 3: LoD Reconciling Selections</h2>
 <p>From the list of columns from your spreadsheet source, select which columns you want to reconcile against LoD providers. </p>
 <p>Under the LoD Sources section, select how your chosen Columns will be LoD reconciled.
 - LoD reconcile options will be on the left, LoD Authority Sources will be on the right.
 - Example: 'local_subjects' will be mapped to 'LoC subjects (LCSH)'</p>
-<p><a class="glightbox" href="../images/ami/AMI_LodSources.jpg"><img alt="AMI LoD Sources" src="../images/ami/AMI_LodSources.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMI_LodSources.jpg"><img alt="AMI LoD Sources" src="../images/ami/AMI_LodSources.jpg"/></a></p>
 <details class="info">
 <summary>Full list of potential LoD Authority Sources</summary>
 </details>
@@ -797,13 +805,13 @@
 <li>Wikidata Q Items</li>
 </ul>
 <p>To preview the values contained in the column(s) you selected, click the 'Inspect cleaned/split up column values' button.</p>
-<p><a class="glightbox" href="../images/ami/AMIreconcileValuePreview.jpg"><img alt="AMI LoD" src="../images/ami/AMIreconcileValuePreview.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIreconcileValuePreview.jpg"><img alt="AMI LoD" src="../images/ami/AMIreconcileValuePreview.jpg"/></a></p>
 <p>When you are ready, select the 'Process LoD from Source' button.</p>
 <p><em>Important note: if you have previously run LoD Reconciliation for your AMI set, this action will overwrite any manually corrected LoD on your Processed CSV. Please make sure you have a backup if unsure.</em></p>
 <p>Depending on the size of your AMI Set, the Reconciliation processing may take a few minutes. </p>
-<p><a class="glightbox" href="../images/ami/AMIbatchReconcile.jpg"><img alt="AMI LoD Reconciling Success" src="../images/ami/AMIbatchReconcile.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIbatchReconcile.jpg"><img alt="AMI LoD Reconciling Success" src="../images/ami/AMIbatchReconcile.jpg"/></a></p>
 <p>When the process is finished, you will see a brief confirmation message.</p>
-<p><a class="glightbox" href="../images/ami/AMI_LodRecSuccess.jpg"><img alt="AMI LoD Reconciling Success" src="../images/ami/AMI_LodRecSuccess.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMI_LodRecSuccess.jpg"><img alt="AMI LoD Reconciling Success" src="../images/ami/AMI_LodRecSuccess.jpg"/></a></p>
 <h2 id="step-4-edit-reconciled-lod">Step 4: Edit Reconciled LoD</h2>
 <p>Open the 'Edit Reconciled LoD' tab.</p>
 <p>You will see a table (form) containing:
@@ -811,7 +819,7 @@
 - The CSV Column Header/Key from the source spreadsheet where the value is found
 - A Checked option you can use to denote that an LoD mapping has been reviewed/revisioned
 - The Linked Data Label and URL pairing selected during the LoD reconciliation process</p>
-<p><a class="glightbox" href="../images/ami/AMIeditReconciledLoD.jpg"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIeditReconciledLoD.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIeditReconciledLoD.jpg"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIeditReconciledLoD.jpg"/></a></p>
 <p>The results table will show 10 original terms and mappings per page. You can advance through the pages using the page numbers and navigational arrows above and below the table.</p>
 <h2 id="step-5-review-and-edit-your-reconciled-lod-mappings">Step 5: Review and Edit your Reconciled LoD Mappings</h2>
 <p>Review the LoD reconciliation mappings, to make sure the best terms were selected for your metadata.</p>
@@ -822,9 +830,9 @@
 <li>If desired, click the Checked option to mark that the term was reviewed/revisioned.</li>
 </ul>
 <p>As you advance through your review process, it is recommended that you use the 'Save Current LoD Page' at the bottom of each results page as you work. This will preserve the corrections you may have made and update the LoD Reconciled data for your AMI Set.</p>
-<p><a class="glightbox" href="../images/ami/AMIreconcileSaveCurrentPageSuccess.jpg"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIreconcileSaveCurrentPageSuccess.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIreconcileSaveCurrentPageSuccess.jpg"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIreconcileSaveCurrentPageSuccess.jpg"/></a></p>
 <p>When you have finished, it is also recommended that you use the 'Save all LoD back to CSV File'.</p>
-<p><a class="glightbox" href="../images/ami/AMIreconcileSaveAllSuccess.jpg"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIreconcileSaveAllSuccess.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIreconcileSaveAllSuccess.jpg"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIreconcileSaveAllSuccess.jpg"/></a></p>
 <p><em>At this time, AMI's LoD Reconciliation processes from the results contained in the 'Edit Reconciled LoD' tab. In future AMI releases, the Processed Data CSV File will also be able to be manually updated and replaced, used for Reconciliation processing. For AMI 0.2.0, the Processed Data CSV is for reference purposes only.</em></p>
 <h2 id="step-6-ami-set-review-and-twig-metadata-display-preparation">Step 6: AMI Set Review and Twig (Metadata Display) Preparation</h2>
 <p>You will now need to make sure that the Metadata Display (Twig) Template you selected to use during your initial AMI Set configuration is setup to Process your LoD mapped Label and URL selections into your Digital Objects and Collections JSON metadata.</p>
@@ -872,20 +880,20 @@
 - Option 2: <em>'Force every File attached to an ADO to be processed in its own Queue item'</em>.  Warning: This may make your ingest slower. Check this to force every file attached to an ADO to be downloaded and characterized as an independent process. This bypasses the Number of files Global setting that would otherwise trigger this behavior.
 - Option 3: <em>'Re download and reprocess every file'</em>. Check this to force every file attached to an ADO to be downloaded and characterized again, even if on a previous Batch run that data was already generated for reuse. Needed if e.g the URL of a file is the same but the remote source changed.
 - Select <code>Confirm</code> to continue. </p>
-<p><a class="glightbox" href="../images/ami/AMIsetAdminProcessRC2.jpg"><img alt="AMI Admin Set Process" src="../images/ami/AMIsetAdminProcessRC2.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIsetAdminProcessRC2.jpg"><img alt="AMI Admin Set Process" src="../images/ami/AMIsetAdminProcessRC2.jpg"/></a></p>
 <p>You may also select <code>Process</code> from the <code>Operations</code> menu for the AMI set from the main <code>AMI sets</code> page.</p>
-<p><a class="glightbox" href="../images/ami/AMISetAdminProcessOpsMenu.jpg"><img alt="AMI Sets Admin Process Operations Menu" src="../images/ami/AMISetAdminProcessOpsMenu.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMISetAdminProcessOpsMenu.jpg"><img alt="AMI Sets Admin Process Operations Menu" src="../images/ami/AMISetAdminProcessOpsMenu.jpg"/></a></p>
 <p>If you chose to 'Confirm" and Process your AMI Set immediately, proceed to Step 9: Processing and ADO Creation.   </p>
 <h2 id="step-8-queue-manager-if-not-processing-immediately">Step 8: Queue Manager (if not Processing immediately)</h2>
 <p>If you chose to place your AMI set in the Queue to Process in step 7, you may need to navigate to the Queue Manager found at <code>/admin/config/system/queue-ui</code>. (Be sure to select the <code>Queue Manager</code> under the System section, not the <code>Queue Manager for Hydroponic Service</code> under the Archipelago section). If the Queue operations for your Archipelago instance have been configured, you can simply leave your AMI Set in the Queue for Processing on the preconfigured schedule.</p>
-<p><a class="glightbox" href="../images/ami/AMIqueueMgr.jpg"><img alt="AMI Queue Manager" src="../images/ami/AMIqueueMgr.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIqueueMgr.jpg"><img alt="AMI Queue Manager" src="../images/ami/AMIqueueMgr.jpg"/></a></p>
 <p>To Process your AMI Set immediately from the Queue Manager page, select the checkbox next to the 'AMI Digital Object Ingester Queue Worker'. Keep the <code>Action</code> menu set to <code>Batch Process</code> and click the <code>Apply to selected items</code> button.</p>
-<p><a class="glightbox" href="../images/ami/AMIqueueMgrBatchProcess.jpg"><img alt="AMI Queue Manager Batch" src="../images/ami/AMIqueueMgrBatchProcess.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIqueueMgrBatchProcess.jpg"><img alt="AMI Queue Manager Batch" src="../images/ami/AMIqueueMgrBatchProcess.jpg"/></a></p>
 <h2 id="step-9-processing-and-ado-creation">Step 9: Processing and ADO Creation</h2>
 <p>Your AMI set will now be Processed. You can follow the set's progress through the <code>Processing queues</code> loading screen.</p>
-<p><a class="glightbox" href="../images/ami/AMIprocessingQueue.jpg"><img alt="AMI Processing Queues" src="../images/ami/AMIprocessingQueue.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIprocessingQueue.jpg"><img alt="AMI Processing Queues" src="../images/ami/AMIprocessingQueue.jpg"/></a></p>
 <p>After your AMI set is Processed, you will receive confirmation messages letting you know your Digital Objects were successfully created. </p>
-<p><a class="glightbox" href="../images/ami/AMIsetSuccessRC2.jpg"><img alt="AMI Set Succes" src="../images/ami/AMIsetSuccessRC2.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/ami/AMIsetSuccessRC2.jpg"><img alt="AMI Set Succes" src="../images/ami/AMIsetSuccessRC2.jpg"/></a></p>
 <p>From this message, you can click on each ADO title to review the new created Digital Object (or Collection) if you wish. Or, you may proceed to step 10.  </p>
 <h2 id="step-10-review-your-newly-created-digital-objects">Step 10: Review your newly created Digital Objects</h2>
 <p>Return to the main Content page found at <code>/admin/content</code> and review your newly created Digital Objects. After ensuring that files and metadata elements were mapped correctly, you may choose to change the Status for your Digital Objects to 'Published'. Celebrate your AMI success with a fresh coffee, tea, or cookie!</p>
@@ -969,6 +977,6 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
-<script src="../assets/javascripts/bundle.37e9125f.min.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "100%", "height": "auto", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
 </html>
