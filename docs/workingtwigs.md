@@ -215,7 +215,7 @@ Understanding the basic structure of your JSON data.
 
 **Twig Example for Use Case #1:**
 
-```twig
+```html+twig
 {% if data.subject_loc is iterable and data.subject_loc is not empty %}
 <h2>My Subjects</h2>
 <ul>
@@ -234,7 +234,7 @@ Understanding the basic structure of your JSON data.
 
 **Twig Example for Use Case #2:**
 
-```twig
+```html+twig
 {% if data.date_published is not empty %}
 <h2>Date {{ data.label }} was published:</h2>
 <p>
@@ -266,7 +266,7 @@ Understanding the basic structure of your JSON data.
 
 **Twig Example for Use Case #3:**
 
-```twig
+```html+twig
 {% if data.date_created is not empty %}
 <h2>Date {{ data.label }} was created:</h2>
 <p>
@@ -284,12 +284,12 @@ Understanding the basic structure of your JSON data.
 
 You want to create a New Metadata Display (HTML) or a new (XML) Schema based format?
 
-1. Get yourself an example **document (Frame)**. If **HTML** copy the source. If **XML** copy the full XML. (cmd+c)
-2. Create a new **Metadata Display Entity**. Copy the content (text) of your Frame into the Edit window. (cmd+v)
+1. Get yourself an example **document (Frame)**. If **HTML** copy the source. If **XML** copy the full XML. (++cmd+c++ or ++ctrl+c++)
+2. Create a new **Metadata Display Entity**. Copy the content (text) of your Frame into the Edit window. (++cmd+v++ or ++ctrl+v++)
 3. Select an existing (as complete as possible) ADO to use as preview, press Preview.
 4. Put your nice glasses :nerd_face: on. What do you see? What data in your Frame do you have in your ADO (data)?
 5. Start nimble. Selected the `data.label` info, check where your **Frame** uses a _Title_ or a _Label_. Remove that text (cmd+x) and replace with a ``{{ data.label }}``. Press Preview. Do you see your title?
-6. Keep doing **6**, over and over. Leave complex values for the end. (e.g `data.subject_loc`)
+6. Keep doing **5**, over and over. Leave complex values for the end. (e.g `data.subject_loc`)
 7. Document your changes. `{# I added this because .. #}`
 8. Save.
 
