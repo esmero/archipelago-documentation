@@ -104,7 +104,7 @@ As part of the [format_strawberryfield module](https://github.com/esmero/format_
 
 ### Field Formatter
 
-1. Familiarize yourself with [Strawberryfield Formatters](strawberry-field.md).
+1. Familiarize yourself with [Strawberryfield Formatters](strawberryfield-formatters.md).
 1. Familiarize yourself Twig Templates in Archipelago:
     * [Twig Templates in Archipelago](metadatatwigs.md)
     * [Working with Twig in Archipelago](workingtwigs.md)
