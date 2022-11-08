@@ -57,7 +57,7 @@ As part of the [format_strawberryfield module](https://github.com/esmero/format_
 2. Select a style or styles from the [Citation Styles Reference table](citation_styles.md).
 3. If language support is needed provide the locale code from the [Citation Locales Reference table](citation_locales.md). Otherwise, provide a blank string `''` for the default of `English US` for the locale argument.
 4. Familiarize yourself with the [Citation Schema Reference](citation_schema.md) for structuring a bibliography.
-3. Use the below example as guide to build a bibliography in a Twig Template:
+3. Use the below example as a guide to build a bibliography in a Twig Template:
 
     !!! example "Twig Bibliography Example"
  
@@ -105,7 +105,7 @@ As part of the [format_strawberryfield module](https://github.com/esmero/format_
 ### Field Formatter
 
 1. Familiarize yourself with [Strawberryfield Formatters](strawberryfield-formatters.md).
-1. Familiarize yourself Twig Templates in Archipelago:
+1. Familiarize yourself with Twig Templates in Archipelago:
     * [Twig Templates in Archipelago](metadatatwigs.md)
     * [Working with Twig in Archipelago](workingtwigs.md)
 2. Select a style or styles from the [Citation Styles Reference table](citation_styles.md).
