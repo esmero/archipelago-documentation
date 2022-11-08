@@ -159,8 +159,8 @@ As part of the [format_strawberryfield module](https://github.com/esmero/format_
         ```
 
 4. Save the template as `JSON` for the `Primary mime type this Twig Template entity will generate as output.`
-5. Create a new Display Suite `Content (Digital Object) - 🍓 Strawberry (Descriptive Metadata source)` or use an existing one.
-6. Enable the field under `Manage display` for the appropriate `View mode` and save.
+5. Go to `Structure > Display Suite > Fields`, and create a new Display Suite field by clicking `+ Create a copy of a field` and selecting `Content (Digital Object) - 🍓 Strawberry (Descriptive Metadata source)`.
+6. Enable the field under `Manage display` for the `Digital Object` Content Type (`Home > Administration > Structure > Display Suite > Displays > List`) by selecting a `View mode` (`Digital Object with Book Reader`, for example) and dragging and dropping your newly created field from the `Disabled` section towards the bottom into the section of active fields above it. Then click `Save` at the bottom.
 7. Select the `Strawberry Field Simple Citation Formatter` for the enabled Field's Formatter.
 8. Select the `Operations` (small gear to the right of the field) and complete the form:
     * The metadata Twig template created in step 2.
