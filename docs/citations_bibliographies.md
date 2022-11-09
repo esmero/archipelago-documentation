@@ -51,7 +51,7 @@ As part of the [format_strawberryfield module](https://github.com/esmero/format_
 
 ### Twig Filter
 
-1. Familiarize yourself Twig Templates in Archipelago:
+1. Familiarize yourself with Twig Templates in Archipelago:
     * [Twig Templates in Archipelago](metadatatwigs.md)
     * [Working with Twig in Archipelago](workingtwigs.md)
 2. Select a style or styles from the [Citation Styles Reference table](citation_styles.md).
