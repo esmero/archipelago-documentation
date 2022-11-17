@@ -54,6 +54,7 @@ nav:
       - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
       - How to Set Up SSL for Docker/Archipelago: sslsetup.md
       - Debugging PHP in Archipelago: xdebug.md
+      - Utility Scripts: utility_scripts.md
       - General Q&A:
         - generalqa_index.md
         - Twig Modules Configuration: generalqa_twig_modules_configuration.md
