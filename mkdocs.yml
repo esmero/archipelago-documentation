@@ -29,25 +29,24 @@ nav:
       - Upgrading from 1.0.0-RC3 to 1.0.0: archipelago-deployment-live-upgradeFromRC3.md
       - Updating Docker Containers: archipelago-deployment-live-updatingContainers.md
     - Archipelago 101:
-      - Digital Objects and Collections, Metadata, General Workflows:
-        - Ingesting Your First Object: firstobject.md
-        - Webforms in Archipelago:
-          - webforms.md
-          - How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO): webformsasinput.md
-          - Customizing Webforms (Modifying allowable file extensions): modifyingfileextensionsinwebform.md
-          - Archipelago Custom Webform Elements: customwebformelements.md
-        - Twig Templates and Archipelago:
-          - metadatatwigs.md
-          - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
-        - Archipelago Multi-Importer (AMI):
-          - ami_index.md
-          - AMI Instructions and Guides:
-            - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
-            - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
-            - Linked Data Reconciliation: ami_lod_rec.md
-            - Using the Islandora 7 Solr Importer: I7solrImporter.md
-            - Configuration for Google Sheets API: googleapi.md
-        - Annotations: annotations.md
+      - Ingesting Your First Object: firstobject.md
+      - Webforms in Archipelago:
+        - webforms.md
+        - How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO): webformsasinput.md
+        - Customizing Webforms (Modifying allowable file extensions): modifyingfileextensionsinwebform.md
+        - Archipelago Custom Webform Elements: customwebformelements.md
+      - Twig Templates and Archipelago:
+        - metadatatwigs.md
+        - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
+      - Archipelago Multi-Importer (AMI):
+        - ami_index.md
+        - AMI Instructions and Guides:
+          - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
+          - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
+          - Linked Data Reconciliation: ami_lod_rec.md
+          - Using the Islandora 7 Solr Importer: I7solrImporter.md
+          - Configuration for Google Sheets API: googleapi.md
+      - Annotations: annotations.md
     - Site Administration & Configuration:
       - Strawberryfield Formatters: strawberryfield-formatters.md
       - Creating Display Modes: createdisplaymodes.md
