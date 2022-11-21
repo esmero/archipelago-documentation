@@ -9,9 +9,9 @@
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/firstobject/" rel="canonical"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.9" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
 <title>Ingesting Your First Object - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.472b142f.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.08040f6c.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -19,14 +19,17 @@
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
-            .gdesc-inner { font-size: 0.75rem; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
             .gslide-image img { background: white; }
             
                 .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
                 </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -65,11 +68,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"></path></svg>
 </label>
@@ -303,18 +306,6 @@
           Archipelago 101
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" id="__nav_4_3_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1">
-          Digital Objects and Collections, Metadata, General Workflows
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Digital Objects and Collections, Metadata, General Workflows" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_4_3_1">
-<span class="md-nav__icon md-icon"></span>
-          Digital Objects and Collections, Metadata, General Workflows
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -353,13 +344,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_2" id="__nav_4_3_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_2">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" id="__nav_4_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_2">
           Webforms in Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Webforms in Archipelago" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_2">
+<nav aria-label="Webforms in Archipelago" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_2">
 <span class="md-nav__icon md-icon"></span>
           Webforms in Archipelago
         </label>
@@ -388,13 +379,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_3" id="__nav_4_3_1_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_3">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_3" id="__nav_4_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_3">
           Twig Templates and Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Twig Templates and Archipelago" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_3">
+<nav aria-label="Twig Templates and Archipelago" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_3">
 <span class="md-nav__icon md-icon"></span>
           Twig Templates and Archipelago
         </label>
@@ -413,13 +404,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_4" id="__nav_4_3_1_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_4">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_4" id="__nav_4_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_4">
           Archipelago Multi-Importer (AMI)
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Archipelago Multi-Importer (AMI)" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_4">
+<nav aria-label="Archipelago Multi-Importer (AMI)" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_4">
 <span class="md-nav__icon md-icon"></span>
           Archipelago Multi-Importer (AMI)
         </label>
@@ -430,13 +421,13 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_4_2" id="__nav_4_3_1_4_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_4_2">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_4_2" id="__nav_4_3_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_4_2">
           AMI Instructions and Guides
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="AMI Instructions and Guides" class="md-nav" data-md-level="5">
-<label class="md-nav__title" for="__nav_4_3_1_4_2">
+<nav aria-label="AMI Instructions and Guides" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_4_3_4_2">
 <span class="md-nav__icon md-icon"></span>
           AMI Instructions and Guides
         </label>
@@ -476,9 +467,6 @@
 <a class="md-nav__link" href="../annotations/">
         Annotations
       </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -704,7 +692,7 @@
 </ul>
 <h2 id="welcome">Welcome!</h2>
 <p>Start by opening <code>http://locahost:8001</code> in your favourite Web Browser.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/firstobject/01_log-in.png"><img alt="Welcome" loading="lazy" src="../images/firstobject/01_log-in.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/firstobject/01_log-in.png"><img alt="Welcome" loading="lazy" src="../images/firstobject/01_log-in.png"/></a></p>
 <p>Your Demo deployment will have a fancy Home page with some banners and a small explanation of what Archipelago is and can do. Feel free to read through that now or later.</p>
 <p>Click on <code>Log in</code> in the top left corner and use your <code>demo</code> credentials from the deployment guide.</p>
 <ul>
@@ -713,10 +701,10 @@
 </ul>
 <p>(or whatever password you decided was easy for you to remember during the deployment phase)</p>
 <p>Press the <code>Log in</code> button.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/firstobject/02_demo-demo.png"><img alt="Log In" loading="lazy" src="../images/firstobject/02_demo-demo.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/firstobject/02_demo-demo.png"><img alt="Log In" loading="lazy" src="../images/firstobject/02_demo-demo.png"/></a></p>
 <p>Great, welcome <code>demo</code> user! This users has limited credentials and uses the same global theme as any anonymous user would. Still, <code>demo</code> can create content, so let's use those super powers and give that a try.</p>
 <p>You will see a new <code>Menu item</code> under <code>Tools</code> on the top navigation bar named <code>Add Content</code>. Click it!</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/firstobject/03_logged-in.png"><img alt="Logged In" loading="lazy" src="../images/firstobject/03_logged-in.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/firstobject/03_logged-in.png"><img alt="Logged In" loading="lazy" src="../images/firstobject/03_logged-in.png"/></a></p>
 <h3 id="brief-background">Brief Background</h3>
 <p>As you already know Archipelago is build on <code>Drupal 8/9</code>, a very extensible <code>CMS</code>. In practice that means you have (at least) the same functionality any Drupal deployment has and that is also true for Content Managment.</p>
 <p>Drupal ships by default with a very flexible <code>Content Entity Type</code> named <code>Node</code>. <code>Nodes</code> are used for creating Articles and simple Pages but also in Archipelago as <code>Digital Objects</code>.
@@ -759,15 +747,15 @@ An individual Content, like "Black and White photograph of a kind Dog" is named 
 </details>
 <h1 id="adding-content">Adding Content</h1>
 <p>Below you see all the <code>Content Types</code> defined by default in Archipelago. Let's click on <code>Digital Object</code> to get your first Digital Object Node.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/firstobject/04_add-content.png"><img alt="Add Content" loading="lazy" src="../images/firstobject/04_add-content.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/firstobject/04_add-content.png"><img alt="Add Content" loading="lazy" src="../images/firstobject/04_add-content.png"/></a></p>
 <h3 id="my-metadata">My Metadata</h3>
 <p>What you see below is a <code>Form Mode</code> in action. A multi-step Webform that will ingest metadata into a field of type Strawberry Field (where all the magic happens) attached to that field using a <code>Webform Field Widget</code>, an editorial/advanced Block on the right side, and a <code>Quick Save</code> button at the bottom for saving the session.</p>
 <p>Let's fill out the form to begin our ingest. We recommend using similar values as the ones shown in the screen capture to make following the tutorial easier.</p>
 <p>Make sure you select <code>Photograph</code> as <code>Media Type</code> and all the fields with a red <code>*</code> are filled up. Then press <code>Move on to next step</code> at the bottom of the webform to load the next step in line.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/firstobject/05_MyMetadata.png"><img alt="Ingest Step 1 - MyMetadata" loading="lazy" src="../images/firstobject/05_MyMetadata.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/firstobject/05_MyMetadata.png"><img alt="Ingest Step 1 - MyMetadata" loading="lazy" src="../images/firstobject/05_MyMetadata.png"/></a></p>
 <h3 id="collections">Collections</h3>
 <p>Since this is our first digital object we do not yet have a Digital Object <em>Collection</em> for which <code>My First Digital Object</code> could be a member of. In other words, you can leave <code>Collection Membership</code> blank and click <code>Next: Upload Files</code>.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/firstobject/06_step-two_collections.png"><img alt="Ingest Step 2 - Collections" loading="lazy" src="../images/firstobject/06_step-two_collections.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/firstobject/06_step-two_collections.png"><img alt="Ingest Step 2 - Collections" loading="lazy" src="../images/firstobject/06_step-two_collections.png"/></a></p>
 <details class="question">
 <summary>Why does this look different than Repository X?</summary>
 <p>We assume you come from a world where repositories define different Content types and the shape, the fields and values (Schema) are fixed and set by someone else or at least quite complicated to configure. This is where Archipelago differs and starts to propose its own style. You noticed that there is a single Content Type named <code>Digital Object</code> and you have here a single Web Form. So how does this allow you to have images, sequences, videos, audio, 3D images, etc?</p>
@@ -782,17 +770,17 @@ An individual Content, like "Black and White photograph of a kind Dog" is named 
 <h3 id="linked-data">Linked Data</h3>
 <p>As the name of this step suggests; you will be adding all your Linked Data elements here. This step showcases some of the autocomplete Linked Data Webform elements we built for Archipelago. We truly believe in Wikidata as an open, honest, source of Linked Open Data and also one where you can contribute back. But we also have LoC autocompletes and Getty.</p>
 <p>Again, enter all fields with a red <code>*</code> and when you are finished, click <code>Move on to next step</code></p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/firstobject/07_step-three_linked-data.png"><img alt="Ingest Step 3 - Linked Data" loading="lazy" src="../images/firstobject/07_step-three_linked-data.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/firstobject/07_step-three_linked-data.png"><img alt="Ingest Step 3 - Linked Data" loading="lazy" src="../images/firstobject/07_step-three_linked-data.png"/></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>When entering a location, place or address you will need to click on the <code>Search OpenStreet Maps</code> button, which is what that big red arrow is pointing to in the screenshot below.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/firstobject/07_linked-data_tip.png"><img alt="Ingest Step 3 Tip - Linked Data" loading="lazy" src="../images/firstobject/07_linked-data_tip.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/firstobject/07_linked-data_tip.png"><img alt="Ingest Step 3 Tip - Linked Data" loading="lazy" src="../images/firstobject/07_linked-data_tip.png"/></a></p>
 </div>
 <h3 id="upload-files">Upload Files</h3>
 <p>Now we will upload our <code>Photograph</code>. Click <code>Choose Files</code> to open your file selector window and choose which file you would like to ingest.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/firstobject/08_step-four_upload-files_1.png"><img alt="Ingest Step 4 - Attach Files pt 1" loading="lazy" src="../images/firstobject/08_step-four_upload-files_1.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/firstobject/08_step-four_upload-files_1.png"><img alt="Ingest Step 4 - Attach Files pt 1" loading="lazy" src="../images/firstobject/08_step-four_upload-files_1.png"/></a></p>
 <p>Once you've uploaded your file, you will see all the Exif data extracted from the image, like so...</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/firstobject/09_step-four_upload-files_2.png"><img alt="Ingest Step 4 - Attach Files pt 2" loading="lazy" src="../images/firstobject/09_step-four_upload-files_2.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/firstobject/09_step-four_upload-files_2.png"><img alt="Ingest Step 4 - Attach Files pt 2" loading="lazy" src="../images/firstobject/09_step-four_upload-files_2.png"/></a></p>
 <p>Once you've mentally digested all of that data, let's go ahead and click <code>Save Metadata</code>.</p>
 <details class="question">
 <summary>Wait! Why only the metadata? I'm ready for this Digital Object to be shared with the world!</summary>
@@ -800,9 +788,9 @@ An individual Content, like "Black and White photograph of a kind Dog" is named 
 </details>
 <h3 id="complete">Complete</h3>
 <p>Alright, we've made it. We've added metadata, linked Data, uploaded our files and now... we're ready to <strong>save</strong>! Go ahead and change the status from <em>Draft</em> to <em>Published</em> and click <code>Save</code>.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/firstobject/10_step-six_complete.png"><img alt="Ingest Step 7 - Complete 1" loading="lazy" src="../images/firstobject/10_step-six_complete.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/firstobject/10_step-six_complete.png"><img alt="Ingest Step 7 - Complete 1" loading="lazy" src="../images/firstobject/10_step-six_complete.png"/></a></p>
 <p>Once you hit save you should see the following green message and your first Archipelago Digital Object!</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/firstobject/11_step-six_complete_green-messages.png"><img alt="Ingest Step 7 - Complete Green Messages" loading="lazy" src="../images/firstobject/11_step-six_complete_green-messages.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/firstobject/11_step-six_complete_green-messages.png"><img alt="Ingest Step 7 - Complete Green Messages" loading="lazy" src="../images/firstobject/11_step-six_complete_green-messages.png"/></a></p>
 <p>Congratulations on creating your first digital object! 🍓</p>
 <hr/>
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
@@ -885,5 +873,5 @@ An individual Content, like "Black and White photograph of a kind Dog" is named 
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
 <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

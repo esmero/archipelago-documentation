@@ -9,9 +9,9 @@
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/xdebug/" rel="canonical"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.9" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
 <title>Debugging PHP in Archipelago - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.472b142f.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.08040f6c.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -19,14 +19,17 @@
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
-            .gdesc-inner { font-size: 0.75rem; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
             .gslide-image img { background: white; }
             
                 .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
                 </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -65,11 +68,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"></path></svg>
 </label>
@@ -303,31 +306,19 @@
           Archipelago 101
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" id="__nav_4_3_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1">
-          Digital Objects and Collections, Metadata, General Workflows
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Digital Objects and Collections, Metadata, General Workflows" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_4_3_1">
-<span class="md-nav__icon md-icon"></span>
-          Digital Objects and Collections, Metadata, General Workflows
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../firstobject/">
         Ingesting Your First Object
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_2" id="__nav_4_3_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_2">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" id="__nav_4_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_2">
           Webforms in Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Webforms in Archipelago" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_2">
+<nav aria-label="Webforms in Archipelago" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_2">
 <span class="md-nav__icon md-icon"></span>
           Webforms in Archipelago
         </label>
@@ -356,13 +347,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_3" id="__nav_4_3_1_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_3">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_3" id="__nav_4_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_3">
           Twig Templates and Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Twig Templates and Archipelago" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_3">
+<nav aria-label="Twig Templates and Archipelago" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_3">
 <span class="md-nav__icon md-icon"></span>
           Twig Templates and Archipelago
         </label>
@@ -381,13 +372,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_4" id="__nav_4_3_1_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_4">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_4" id="__nav_4_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_4">
           Archipelago Multi-Importer (AMI)
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Archipelago Multi-Importer (AMI)" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_4">
+<nav aria-label="Archipelago Multi-Importer (AMI)" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_4">
 <span class="md-nav__icon md-icon"></span>
           Archipelago Multi-Importer (AMI)
         </label>
@@ -398,13 +389,13 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_4_2" id="__nav_4_3_1_4_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_4_2">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_4_2" id="__nav_4_3_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_4_2">
           AMI Instructions and Guides
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="AMI Instructions and Guides" class="md-nav" data-md-level="5">
-<label class="md-nav__title" for="__nav_4_3_1_4_2">
+<nav aria-label="AMI Instructions and Guides" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_4_3_4_2">
 <span class="md-nav__icon md-icon"></span>
           AMI Instructions and Guides
         </label>
@@ -444,9 +435,6 @@
 <a class="md-nav__link" href="../annotations/">
         Annotations
       </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -699,7 +687,7 @@
 <li>(optional) Break at first line in PHP scripts: uncheck. If you leave this selected, you will have to manually step through a breakpoint from Drupal's main index.php file on every request, which is quite annoying. However, leaving this box checked can be useful for making sure the connection is working at first, before you have set any internal breakpoints.</li>
 </ul>
 <p>Your settings should look like this. Hit APPLY and OK.
-<a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/xdebug/debug-settings.png"><img alt="Debug" src="../images/xdebug/debug-settings.png"/></a> </p>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/xdebug/debug-settings.png"><img alt="Debug" src="../images/xdebug/debug-settings.png"/></a> </p>
 </li>
 <li>
 <p>Go to <code>Preferences &gt; Languages &amp; Frameworks &gt; PHP &gt; Servers</code>. We will create a new server here. Use these settings:</p>
@@ -712,7 +700,7 @@
 <li>In the <code>Absolute path on the server</code> add <code>/var/www/html</code></li>
 </ul>
 <p>Hit APPLY and OK and close the window.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/xdebug/server-settings-2.png"><img alt="Debug" src="../images/xdebug/server-settings-2.png"/></a> </p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/xdebug/server-settings-2.png"><img alt="Debug" src="../images/xdebug/server-settings-2.png"/></a> </p>
 </li>
 <li>
 <p>Go to <code>Run &gt; Edit Configurations</code>. Hit the <code>+</code> Button to create a new PHP Remote Debug. Name whatever you want, I called mine <code>Archipelago</code>. Use these settings:</p>
@@ -721,7 +709,7 @@
 <li>Server: select <code>docker-debug-server</code> from dropdown (we created this in step 3)</li>
 <li>IDE Key: <code>archipelago</code> (this matches the key set in our container)</li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/xdebug/edit-configurations.png"><img alt="Debug" src="../images/xdebug/edit-configurations.png"/></a> </p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/xdebug/edit-configurations.png"><img alt="Debug" src="../images/xdebug/edit-configurations.png"/></a> </p>
 </li>
 <li>
 <p>Note: If you try to validate your connection, it will fail. But that's ok.</p>
@@ -733,29 +721,29 @@
 <li>Url to validation script: <code>http://localhost:8001</code></li>
 </ul>
 <p>Hit VALIDATE. You should get a series of green check marks. If you get a warning about missing <code>php.ini</code> file, that is OK, our file has a different name in the container (<code>xdebug.ini</code>) and is still being read correctly.
-<a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/xdebug/validate-2.png"><img alt="Debug" src="../images/xdebug/validate-2.png"/></a> </p>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/xdebug/validate-2.png"><img alt="Debug" src="../images/xdebug/validate-2.png"/></a> </p>
 </li>
 </ol>
 <h1 id="set-up-browser-integration">Set up Browser Integration</h1>
 <ol>
 <li>
 <p>We have had success using the <a href="https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en">XDebug Helper</a> extension in Chrome. Once you have the extension installed, right-click on the bug icon in the top right of your chrome browser window and select "Options" to configure the IDE key. Under "IDE", select "Other", and in the text box, enter "archipelago"</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/xdebug/xdebut-helper-menu.png"><img alt="Debug" src="../images/xdebug/xdebut-helper-menu.png" title="XDebug Helper Options"/></a>
-<a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/xdebug/xdebug-helper-set-key.png"><img alt="Debug" src="../images/xdebug/xdebug-helper-set-key.png" title="XDebug Helper IDE Key"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/xdebug/xdebut-helper-menu.png"><img alt="Debug" src="../images/xdebug/xdebut-helper-menu.png" title="XDebug Helper Options"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/xdebug/xdebug-helper-set-key.png"><img alt="Debug" src="../images/xdebug/xdebug-helper-set-key.png" title="XDebug Helper IDE Key"/></a></p>
 </li>
 </ol>
 <h1 id="actually-debugging">Actually Debugging!</h1>
 <ol>
 <li>
 <p>Hit the button (top right bar of PHPStorm) that looks like a telephone, for <code>Start Listening for PHP Debug Connections</code>.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/xdebug/telephone.png"><img alt="Debug" src="../images/xdebug/telephone.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/xdebug/telephone.png"><img alt="Debug" src="../images/xdebug/telephone.png"/></a></p>
 </li>
 <li>
 <p>Now, you can use <code>Run &gt; Debug</code> and select the <code>Archipelago</code> named configuration that we created in the previous steps. The debugging console will appear. It will say it is waiting for incoming connection from 'archipelago'
  .</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/xdebug/phpstorm-run-xdebug-archipelago-menu.png"><img alt="Debug" src="../images/xdebug/phpstorm-run-xdebug-archipelago-menu.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/xdebug/waiting-archipelago.png"><img alt="Debug" src="../images/xdebug/waiting-archipelago.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/xdebug/waiting.png"><img alt="Debug" src="../images/xdebug/waiting.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/xdebug/phpstorm-run-xdebug-archipelago-menu.png"><img alt="Debug" src="../images/xdebug/phpstorm-run-xdebug-archipelago-menu.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/xdebug/waiting-archipelago.png"><img alt="Debug" src="../images/xdebug/waiting-archipelago.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/xdebug/waiting.png"><img alt="Debug" src="../images/xdebug/waiting.png"/></a></p>
 </li>
 <li>
 <p>Right now the debugging session is not enabled. Browse to  <code>localhost:8001</code>. Click on the gray XDebug Helper icon at the top right of your window and select the green "Debug" button. This will tell chrome to set the xdebug session key when you reload the page.</p>
@@ -878,5 +866,5 @@ xdebug.start_with_request=yes
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
 <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

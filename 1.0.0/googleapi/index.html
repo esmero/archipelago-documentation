@@ -9,9 +9,9 @@
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/googleapi/" rel="canonical"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.9" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
 <title>Configuration for Google Sheets API - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.472b142f.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.08040f6c.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -19,14 +19,17 @@
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
-            .gdesc-inner { font-size: 0.75rem; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
             .gslide-image img { background: white; }
             
                 .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
                 </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -65,11 +68,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"></path></svg>
 </label>
@@ -303,31 +306,19 @@
           Archipelago 101
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" id="__nav_4_3_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1">
-          Digital Objects and Collections, Metadata, General Workflows
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Digital Objects and Collections, Metadata, General Workflows" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_4_3_1">
-<span class="md-nav__icon md-icon"></span>
-          Digital Objects and Collections, Metadata, General Workflows
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../firstobject/">
         Ingesting Your First Object
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_2" id="__nav_4_3_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_2">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" id="__nav_4_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_2">
           Webforms in Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Webforms in Archipelago" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_2">
+<nav aria-label="Webforms in Archipelago" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_2">
 <span class="md-nav__icon md-icon"></span>
           Webforms in Archipelago
         </label>
@@ -356,13 +347,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_3" id="__nav_4_3_1_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_3">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_3" id="__nav_4_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_3">
           Twig Templates and Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Twig Templates and Archipelago" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_3">
+<nav aria-label="Twig Templates and Archipelago" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_3">
 <span class="md-nav__icon md-icon"></span>
           Twig Templates and Archipelago
         </label>
@@ -381,13 +372,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_4" id="__nav_4_3_1_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_4">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_4" id="__nav_4_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_4">
           Archipelago Multi-Importer (AMI)
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Archipelago Multi-Importer (AMI)" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_4">
+<nav aria-label="Archipelago Multi-Importer (AMI)" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_4">
 <span class="md-nav__icon md-icon"></span>
           Archipelago Multi-Importer (AMI)
         </label>
@@ -398,13 +389,13 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_4_2" id="__nav_4_3_1_4_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_4_2">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_4_2" id="__nav_4_3_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_4_2">
           AMI Instructions and Guides
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="AMI Instructions and Guides" class="md-nav" data-md-level="5">
-<label class="md-nav__title" for="__nav_4_3_1_4_2">
+<nav aria-label="AMI Instructions and Guides" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_4_3_4_2">
 <span class="md-nav__icon md-icon"></span>
           AMI Instructions and Guides
         </label>
@@ -462,9 +453,6 @@
 <a class="md-nav__link" href="../annotations/">
         Annotations
       </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -673,7 +661,7 @@
 <ol>
 <li>
 <p>Login to the <a href="https://console.developers.google.com">Google Developer Console</a>. You will see the API &amp; Services Dashboard.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/1_GoogleDeveloperDashoard.jpg"><img alt="Developer Console" src="../images/googleapi/1_GoogleDeveloperDashoard.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/1_GoogleDeveloperDashoard.jpg"><img alt="Developer Console" src="../images/googleapi/1_GoogleDeveloperDashoard.jpg"/></a></p>
 </li>
 <li>
 <p>If you have not created Credentials or a Project before, you will need to first create a Project.  </p>
@@ -681,39 +669,39 @@
 <li>Recommended Project Name: "Archipelago Multi Importer" or "AMI".</li>
 <li>The Organization and Location information should be specific to you and your organization/institution.</li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/2_GoogleDeveloperNewProject.jpg"><img alt="Create Project" src="../images/googleapi/2_GoogleDeveloperNewProject.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/2_GoogleDeveloperNewProject.jpg"><img alt="Create Project" src="../images/googleapi/2_GoogleDeveloperNewProject.jpg"/></a></p>
 </li>
 <li>
 <p>Next, click the <code>Create credentials</code> select box and select <code>OAuth client ID</code></p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/3_CreateCredentials.jpg"><img alt="Create credentials select" src="../images/googleapi/3_CreateCredentials.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/3_CreateCredentials.jpg"><img alt="Create credentials select" src="../images/googleapi/3_CreateCredentials.jpg"/></a></p>
 </li>
 <li>
 <p>You will now need to Configure the Consent Screen.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/4_CreateOAuthClientID.jpg"><img alt="Configure Consent Screen" src="../images/googleapi/4_CreateOAuthClientID.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/4_CreateOAuthClientID.jpg"><img alt="Configure Consent Screen" src="../images/googleapi/4_CreateOAuthClientID.jpg"/></a></p>
 </li>
 <li>
 <p>On the initial OAuth Consent Screen setup, select <code>Internal</code> for User Type.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/5_OauthConsentScreen.jpg"><img alt="OAuth Consent Screen Setup" src="../images/googleapi/5_OauthConsentScreen.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/5_OauthConsentScreen.jpg"><img alt="OAuth Consent Screen Setup" src="../images/googleapi/5_OauthConsentScreen.jpg"/></a></p>
 </li>
 <li>
 <p>Now enter <code>AMI</code> as the App name, and your email address in the User support email. You may also wish to add Authorized domains (bottom of image below) as well.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/6_OauthConsentInfo.jpg"><img alt="OAuth Consent App Info" src="../images/googleapi/6_OauthConsentInfo.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/6_OauthConsentInfo.jpg"><img alt="OAuth Consent App Info" src="../images/googleapi/6_OauthConsentInfo.jpg"/></a></p>
 </li>
 <li>
 <p>On the Scopes page, select <code>Add or Remove Scopes</code>. Then either search/filter the API table for the Google Sheets API. Or, under <code>Manually add scopes</code> enter: https://www.googleapis.com/auth/spreadsheets.readonly</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/7_OauthScopes1.jpg"><img alt="Scopes Setup 1" src="../images/googleapi/7_OauthScopes1.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/7_OauthScopes1.jpg"><img alt="Scopes Setup 1" src="../images/googleapi/7_OauthScopes1.jpg"/></a></p>
 </li>
 <li>
 <p>After selecting or entering in the Google Sheets API, you should see this listed under <code>Sensitive Scopes</code>.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/8_OauthScopes2.jpg"><img alt="Scopes Setup 2" src="../images/googleapi/8_OauthScopes2.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/8_OauthScopes2.jpg"><img alt="Scopes Setup 2" src="../images/googleapi/8_OauthScopes2.jpg"/></a></p>
 </li>
 <li>
 <p>Review the information on the <code>Summary</code> page, then Save.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/9_OauthSummary.jpg"><img alt="Oauth Summary" src="../images/googleapi/9_OauthSummary.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/9_OauthSummary.jpg"><img alt="Oauth Summary" src="../images/googleapi/9_OauthSummary.jpg"/></a></p>
 </li>
 <li>
 <p>You will now be able to <code>Create Oauth client ID</code>. Select <code>Web Application</code> as the <code>Application type</code></p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/10_CreateOauthID.jpg"><img alt="Application Type" src="../images/googleapi/10_CreateOauthID.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/10_CreateOauthID.jpg"><img alt="Application Type" src="../images/googleapi/10_CreateOauthID.jpg"/></a></p>
 </li>
 <li>
 <p>Enter "AMI" under 'Name' and add any URIs you will be using below.</p>
@@ -721,26 +709,26 @@
 <li>For using AMI within your local Archipelago environment, enter <code>http://localhost:8001/google_api_client/callback</code></li>
 <li>
 <p>All URIs need to include <code>/google_api_client/callback</code></p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/11_OauthClientID.jpg"><img alt="OauthClientID Configuration" src="../images/googleapi/11_OauthClientID.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/11_OauthClientID.jpg"><img alt="OauthClientID Configuration" src="../images/googleapi/11_OauthClientID.jpg"/></a></p>
 </li>
 </ul>
 </li>
 <li>
 <p>After Saving, you will see a message notifying you that the OAuth client was created. You can copy the <code>Client ID</code> and <code>Client Secret</code> directly from this confirmation message into a text editor. You can also access the information from <code>Credentials</code> in the <code>APIs &amp; Services</code> section in the Developer console, where you will have additional options for downloading, copying, and modifying if needed.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/12_ClientIDdetails.jpg"><img alt="OauthClientID Details" src="../images/googleapi/12_ClientIDdetails.jpg"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/13_GoogleApiClientListing.jpg"><img alt="Google API Client Listing" src="../images/googleapi/13_GoogleApiClientListing.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/12_ClientIDdetails.jpg"><img alt="OauthClientID Details" src="../images/googleapi/12_ClientIDdetails.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/13_GoogleApiClientListing.jpg"><img alt="Google API Client Listing" src="../images/googleapi/13_GoogleApiClientListing.jpg"/></a></p>
 </li>
 <li>
 <p>On the 'Add Google Api Client account' configuration page, enter the following information using your <code>Client ID</code> and <code>Client Secret</code>. 'Developer Key' is optional. Select <code>Google Sheets API</code> under 'Services' and <code>https://www,googleapis.com/auth/spreadsheets.readonly</code> under 'Scopes'. Check the box for <code>Is Access Type Offline</code>. Select the Save button.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/14_AddGoogleAPIClientAccount.jpg"><img alt="Add GoogleAPI Client Account" src="../images/googleapi/14_AddGoogleAPIClientAccount.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/14_AddGoogleAPIClientAccount.jpg"><img alt="Add GoogleAPI Client Account" src="../images/googleapi/14_AddGoogleAPIClientAccount.jpg"/></a></p>
 </li>
 <li>
 <p>You will now need to Authenticate your AMI Google API Client. Return to the Google API Client Listing page. Under the Operation menu on the right-hand side of the AMI client listing, select <code>Authenticate</code>.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/15_Authenticate.jpg"><img alt="Authenticate" src="../images/googleapi/15_Authenticate.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/15_Authenticate.jpg"><img alt="Authenticate" src="../images/googleapi/15_Authenticate.jpg"/></a></p>
 </li>
 <li>
 <p>You will be directed to the Google Consent Screen. You may need to login to your corresponding Google Account before proceeding. When loged in, you will see the following screen requesting that AMI is allowed to "View your Google Spreadsheets".  Click <code>Allow</code>.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/googleapi/16_GoogleConsent.jpg"><img alt="Google Consent" src="../images/googleapi/16_GoogleConsent.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/googleapi/16_GoogleConsent.jpg"><img alt="Google Consent" src="../images/googleapi/16_GoogleConsent.jpg"/></a></p>
 </li>
 <li>
 <p>On the Google API Client Listing page, your AMI client listing should now have 'Yes' under 'Is Authenticated'. You are now ready to use Google Sheets with AMI! Return to the <a href="../ami_index/">main AMI documentation page</a> to get started.</p>
@@ -827,5 +815,5 @@
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
 <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -9,9 +9,9 @@
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/archipelago-deployment-osx/" rel="canonical"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.9" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
 <title>Installing Archipelago Drupal 9 on OSX (macOS) - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.472b142f.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.08040f6c.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -19,14 +19,17 @@
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
-            .gdesc-inner { font-size: 0.75rem; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
             .gslide-image img { background: white; }
             
                 .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
                 </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -65,11 +68,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"></path></svg>
 </label>
@@ -389,31 +392,19 @@
           Archipelago 101
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" id="__nav_4_3_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1">
-          Digital Objects and Collections, Metadata, General Workflows
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Digital Objects and Collections, Metadata, General Workflows" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_4_3_1">
-<span class="md-nav__icon md-icon"></span>
-          Digital Objects and Collections, Metadata, General Workflows
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../firstobject/">
         Ingesting Your First Object
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_2" id="__nav_4_3_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_2">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" id="__nav_4_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_2">
           Webforms in Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Webforms in Archipelago" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_2">
+<nav aria-label="Webforms in Archipelago" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_2">
 <span class="md-nav__icon md-icon"></span>
           Webforms in Archipelago
         </label>
@@ -442,13 +433,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_3" id="__nav_4_3_1_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_3">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_3" id="__nav_4_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_3">
           Twig Templates and Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Twig Templates and Archipelago" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_3">
+<nav aria-label="Twig Templates and Archipelago" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_3">
 <span class="md-nav__icon md-icon"></span>
           Twig Templates and Archipelago
         </label>
@@ -467,13 +458,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_4" id="__nav_4_3_1_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_4">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_4" id="__nav_4_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_4">
           Archipelago Multi-Importer (AMI)
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Archipelago Multi-Importer (AMI)" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_4">
+<nav aria-label="Archipelago Multi-Importer (AMI)" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_4">
 <span class="md-nav__icon md-icon"></span>
           Archipelago Multi-Importer (AMI)
         </label>
@@ -484,13 +475,13 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_4_2" id="__nav_4_3_1_4_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_4_2">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_4_2" id="__nav_4_3_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_4_2">
           AMI Instructions and Guides
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="AMI Instructions and Guides" class="md-nav" data-md-level="5">
-<label class="md-nav__title" for="__nav_4_3_1_4_2">
+<nav aria-label="AMI Instructions and Guides" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_4_3_4_2">
 <span class="md-nav__icon md-icon"></span>
           AMI Instructions and Guides
         </label>
@@ -530,9 +521,6 @@
 <a class="md-nav__link" href="../annotations/">
         Annotations
       </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -794,6 +782,12 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<span class="md-tag">Archipelago-deployment</span>
+<span class="md-tag">Drupal 9</span>
+<span class="md-tag">macOS</span>
+<span class="md-tag">OSX</span>
+</nav>
 <a class="md-content__button md-icon" href="https://github.com/esmero/archipelago-documentation/commits/1.0.0/docs/archipelago-deployment-osx.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
@@ -994,5 +988,5 @@ pass:minio123
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
 <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

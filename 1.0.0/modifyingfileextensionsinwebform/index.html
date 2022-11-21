@@ -9,9 +9,9 @@
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/modifyingfileextensionsinwebform/" rel="canonical"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.9" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
 <title>Customizing Webforms (Modifying allowable file extensions) - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.472b142f.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.08040f6c.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -19,14 +19,17 @@
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
-            .gdesc-inner { font-size: 0.75rem; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
             .gslide-image img { background: white; }
             
                 .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
                 </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -65,11 +68,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"></path></svg>
 </label>
@@ -303,31 +306,19 @@
           Archipelago 101
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" id="__nav_4_3_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1">
-          Digital Objects and Collections, Metadata, General Workflows
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Digital Objects and Collections, Metadata, General Workflows" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_4_3_1">
-<span class="md-nav__icon md-icon"></span>
-          Digital Objects and Collections, Metadata, General Workflows
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../firstobject/">
         Ingesting Your First Object
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_2" id="__nav_4_3_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_2">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" id="__nav_4_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_2">
           Webforms in Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Webforms in Archipelago" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_2">
+<nav aria-label="Webforms in Archipelago" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_2">
 <span class="md-nav__icon md-icon"></span>
           Webforms in Archipelago
         </label>
@@ -408,13 +399,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_3" id="__nav_4_3_1_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_3">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_3" id="__nav_4_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_3">
           Twig Templates and Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Twig Templates and Archipelago" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_3">
+<nav aria-label="Twig Templates and Archipelago" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_3">
 <span class="md-nav__icon md-icon"></span>
           Twig Templates and Archipelago
         </label>
@@ -433,13 +424,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_4" id="__nav_4_3_1_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_4">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_4" id="__nav_4_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_4">
           Archipelago Multi-Importer (AMI)
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="Archipelago Multi-Importer (AMI)" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_3_1_4">
+<nav aria-label="Archipelago Multi-Importer (AMI)" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_4">
 <span class="md-nav__icon md-icon"></span>
           Archipelago Multi-Importer (AMI)
         </label>
@@ -450,13 +441,13 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1_4_2" id="__nav_4_3_1_4_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3_1_4_2">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_4_2" id="__nav_4_3_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_4_2">
           AMI Instructions and Guides
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="AMI Instructions and Guides" class="md-nav" data-md-level="5">
-<label class="md-nav__title" for="__nav_4_3_1_4_2">
+<nav aria-label="AMI Instructions and Guides" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_4_3_4_2">
 <span class="md-nav__icon md-icon"></span>
           AMI Instructions and Guides
         </label>
@@ -496,9 +487,6 @@
 <a class="md-nav__link" href="../annotations/">
         Annotations
       </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -742,22 +730,22 @@
 <h2 id="lets-begin">Let's begin!</h2>
 <h3 id="managing-webforms">Managing Webforms</h3>
 <p>Once logged in as <code>admin</code>, the first thing we need to do is navigate to the Webforms page so we can edit the Webform <code>Descriptive Metadata.</code> Click on <code>Manage</code>, then <code>Structure</code> and when the page loads, scroll down and click <code>Webforms</code>.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/modifyingfileextensionsinwebform/02_manage-structure-webforms.jpg"><img alt="Manage &gt; Structure &gt; Webforms" src="../images/modifyingfileextensionsinwebform/02_manage-structure-webforms.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/modifyingfileextensionsinwebform/02_manage-structure-webforms.jpg"><img alt="Manage &gt; Structure &gt; Webforms" src="../images/modifyingfileextensionsinwebform/02_manage-structure-webforms.jpg"/></a></p>
 <p>This is where all of the Webforms inside your Archipelago live. For this guide we're going to edit the Webform <code>Descriptive Metadata</code>. Go ahead and click <code>Build</code> under the <code>OPERATIONS</code> column for <code>Descriptive Metadata</code>.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/modifyingfileextensionsinwebform/03_webform-page.jpg"><img alt="Descriptive Metadata" src="../images/modifyingfileextensionsinwebform/03_webform-page.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/modifyingfileextensionsinwebform/03_webform-page.jpg"><img alt="Descriptive Metadata" src="../images/modifyingfileextensionsinwebform/03_webform-page.jpg"/></a></p>
 <h3 id="step-3-editing-elements">Step 3: Editing Elements</h3>
 <p>Here we see all of the elements in <code>Descriptive Metadata</code>; <em>Title</em>, <em>Media type</em>, <em>Description</em>, <em>Linked Data</em> elements, etc. The element that we want to edit is <code>Upload Associated Documents</code> as this is the field you will use to upload <code>pdf</code>, <code>doc</code>, <code>rtf</code>, <code>txt</code>, etc. files during the ingest workflow. Click on <code>Edit</code> under the <code>OPERATIONS</code> column.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/modifyingfileextensionsinwebform/04_upload-associated-documents.jpg"><img alt="Upload Associated Documents element" src="../images/modifyingfileextensionsinwebform/04_upload-associated-documents.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/modifyingfileextensionsinwebform/04_upload-associated-documents.jpg"><img alt="Upload Associated Documents element" src="../images/modifyingfileextensionsinwebform/04_upload-associated-documents.jpg"/></a></p>
 <p>A new screen will pop up named <code>Edit Upload Associated Documents element</code>. This is where you can configure the maximum number of values (under <code>ELEMENT SETTINGS</code>), the maximum file size and also edit the allowed file extensions for this element, which is what we'll be doing. The latter both exist under <code>FILE SETTINGS</code> section, highlighted in the screenshot below.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/modifyingfileextensionsinwebform/05_edit-upload-associated-documents-element.jpg"><img alt="Edit Upload Associated Documents element" src="../images/modifyingfileextensionsinwebform/05_edit-upload-associated-documents-element.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/modifyingfileextensionsinwebform/05_edit-upload-associated-documents-element.jpg"><img alt="Edit Upload Associated Documents element" src="../images/modifyingfileextensionsinwebform/05_edit-upload-associated-documents-element.jpg"/></a></p>
 <p>When you scroll down you'll see the <code>Allowed file extensions</code> field. This is where we will add the <code>csv</code> file extension. <strong>Please note:</strong> All file extensions are separated by a space; no <code>,</code> or <code>.</code> between the values.</p>
 <p>Once you've added all the file extensions your project needs, scroll down to the bottom of <code>Edit Upload Associated Documents element</code> and click <code>Save</code>.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/modifyingfileextensionsinwebform/06_add-csv.jpg"><img alt="Add csv" src="../images/modifyingfileextensionsinwebform/06_add-csv.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/modifyingfileextensionsinwebform/06_add-csv.jpg"><img alt="Add csv" src="../images/modifyingfileextensionsinwebform/06_add-csv.jpg"/></a></p>
 <p><strong>This next step is imperative for saving your changes</strong>, scroll to the bottom of your elements list page and click <code>Save elements</code> in order to persist all changes made.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/modifyingfileextensionsinwebform/07_save-elements.jpg"><img alt="Save Elements" src="../images/modifyingfileextensionsinwebform/07_save-elements.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/modifyingfileextensionsinwebform/07_save-elements.jpg"><img alt="Save Elements" src="../images/modifyingfileextensionsinwebform/07_save-elements.jpg"/></a></p>
 <h3 id="complete">Complete</h3>
 <p>Woohoo! Now when you are ingesting a <code>DigitalDocument</code> object, you will be able to add <code>csv</code> files! 🍓</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/modifyingfileextensionsinwebform/08_complete.jpg"><img alt="Complete" src="../images/modifyingfileextensionsinwebform/08_complete.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/modifyingfileextensionsinwebform/08_complete.jpg"><img alt="Complete" src="../images/modifyingfileextensionsinwebform/08_complete.jpg"/></a></p>
 <h3 id="recap">Recap</h3>
 <p>When logged in as an admin, we go to <em>Manage &gt; Structure &gt; Webforms</em> and click on <code>Build</code> under the <code>OPERATIONS</code> column of <code>Descriptive Metadata</code> (shortcut: /admin/structure/webform/manage/descriptive_metadata). Then we click on <code>Upload Associated Documents</code> to edit the element, scroll down to the <em>Allowed file extensions</em> field and add <code>csv</code> without <code>.</code> or <code>,</code> separating the values. Click <code>Save</code> at the bottom of the <code>Edit Upload Associated Documents element</code> page and then <code>Save elements</code> at the bottom of the Webform page.</p>
 <h3 id="that-was-helpful-but">That was helpful, but...</h3>
@@ -769,7 +757,7 @@
 <summary>How do I know which element in Descriptive Metadata to edit per media type?</summary>
 <p>When editing an element inside <code>Descriptive Metadata</code>, at the top of the window <code>Edit Upload Associated Documents element</code> (see Step 3 for a recap on how to get here) there is a tab next to <code>General</code> titled <code>Conditions</code>. Inside of <code>Conditions</code> we have <code>CONDITIONAL LOGIC</code> which is where the Webform is told which <code>Media type</code> needs this element to be visible in the Webform. In the example below, we know that the field element <code>Upload Associated Documents</code> will be visible when <code>DigitalDocument</code>, <code>Thesis</code> and <code>Book</code> are the selected <code>Media type</code>.</p>
 <p>This is also the place you can add new logic or delete present logic by clicking the <code>+</code> or <code>-</code> next to the <code>TRIGGER/VALUE</code> to create new conditionals.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/modifyingfileextensionsinwebform/09_conditionals.jpg"><img alt="Conditionals" src="../images/modifyingfileextensionsinwebform/09_conditionals.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/modifyingfileextensionsinwebform/09_conditionals.jpg"><img alt="Conditionals" src="../images/modifyingfileextensionsinwebform/09_conditionals.jpg"/></a></p>
 </details>
 <hr/>
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
@@ -852,5 +840,5 @@
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
 <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
