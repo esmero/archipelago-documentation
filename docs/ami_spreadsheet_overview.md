@@ -33,7 +33,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
         - this can be empty
         - if empty, Archipelago will automatically generate UUIDs
         - can be used with existing UUIDs during migrations
-    - **Soft-requirement** `sequence_id` for Creative Work Series (compound) children
+    - **Soft-requirement** `sequence_id` for Creative Work Series (compound) children objects
         - this is used to determine the sequence order for children objects within a Creative Work Series (compound) object
         - should be an integer only (ie, '1' and not 'Page 1')
         - if not present, the objects will present in the original ingest order
