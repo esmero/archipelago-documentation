@@ -45,6 +45,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
         - .warc/.wacz files should be placed in a column "upload_associated_warcs"
     - `ismemberof` and/or `ispartof` (and/or whatever predicate corresponds with the relationship you are mapping)
         - these columns can be used to connect related objects using the object-to-object relationship that matches your needs
+        - in default Archipelago configurations, `ismemberof` is used for Collection Membership and `ispartof` is used for Parent-Child Object Relationships (so a Child ADO would reference the Parent ADO in `ispartof`)
         - these columns can hold 3 types of values
             - empty (no value)
             - an integer to connect an object to another object's corresponding row in the same spreadsheet/CSV

@@ -13,7 +13,7 @@ tags:
 
 You can access AMI through the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`.
 
-![AMI Sets List Updated](images/ami/AMIsetsList_updated.jpg)
+![AMI Sets List Updated](images/AMIsetsList_updated_2022-11.jpg)
 
 ## AMI Overview and Pre-Release Notes - AMI 0.4.0 (Archipelago - 1.0.0)
 
@@ -35,13 +35,7 @@ AMI provides Tabulated data ingest for ADOs with customizable input plugins. Eac
     
     This module also provides a simple search/replace text VBO action (handles JSON as text) and a full blown JSONPATCH VBO action to batch modify ADOs. The last one is extremely powerful permitting multiple operations at the same time with tests. E.g replace a certain value, add another value, remove another value only if a certain test (e.g “type”:”Article” and “date_of_digital”: “2020-09-09”) matches. If any tests fail the whole operation will be canceled for that ADO. An incomplete “Webform” VBO action is present but not fully functional yet. This one allows you to choose a Webform, a certain element inside that Webform and then find and replace using the same Interface you would see while editing/adding a new ADO via the web form workflow.
 
-## Getting started with AMI
-
-You can access AMI through the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`.
-
-![AMI Sets List Updated](images/ami/AMIsetsList_updated.jpg)
-
-## Google Sheets API Congifuration
+## Google Sheets API Configuration
 
 If you plan on using the Google Sheets Importer option, you will need to [Configure the Google Sheets API](googleapi.md).
 
