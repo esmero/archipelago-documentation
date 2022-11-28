@@ -14,7 +14,7 @@ nav:
     - Software Services: devops.md
   - Code of Conduct: CODE_OF_CONDUCT.md
   - Instructions and Guides:
-    - DevOps & Deployment
+    - DevOps & Deployment:
       - Archipelago-Deployment:
         - Start: archipelago-deployment-readme.md
         - Installing Archipelago Drupal 9 on OSX (macOS): archipelago-deployment-osx.md
