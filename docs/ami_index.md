@@ -41,7 +41,7 @@ You can access AMI through the `AMI Sets` tab on the main Content page found at 
 
 ![AMI Sets List](images/ami/AMIsetsList.jpg)
 
-## Google Sheets API Congifuration
+## Google Sheets API Configuration
 
 If you plan on using the Google Sheets Importer option, you will need to [Configure the Google Sheets API](googleapi.md).
 
