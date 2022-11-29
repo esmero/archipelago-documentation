@@ -109,3 +109,13 @@ To run the command non-interactively provide the required and optional parameter
     ./import_export.sh -i -s /home/user/metadatadisplay_import -d https://archipelago.nyc
     ```
     In this example, the locally exported files are being imported into a remote instance. As in the above examples with remote instances, the JSON user credentials need to be set in the `.env` file to those with access to the remote instance.
+
+## Automatic Deployment Script
+
+If you're frequently deploying locally with archipelago-deployment, you may want to use the automated deployment script available at `scripts/archipelago/devops/auto_deploy.sh`. The script is interactive and can be called from the root of the deployment, e.g. `/home/user/archipelago-deployment/`:
+
+!!! example "Automatic Deployment"
+
+    scripts/archipelago/devops/auto_deploy.sh
+
+Follow the prompts and select your options to complete the deployment.
