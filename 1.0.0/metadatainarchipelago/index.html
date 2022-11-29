@@ -1,0 +1,1632 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Project documentation for Archipelago." name="description"/>
+<meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
+<link href="https://docs.archipelago.nyc/1.0.0/metadatainarchipelago/" rel="canonical"/>
+<link href="../images/strawberries_color.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<title>Metadata in Archipelago - Archipelago Documentation</title>
+<link href="../assets/stylesheets/main.472b142f.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.08040f6c.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#your-json-our-json-raw-metadata-in-archipelago">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-component="outdated" hidden="">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Archipelago Documentation" class="md-header__button md-logo" data-md-component="logo" href=".." title="Archipelago Documentation">
+<img alt="logo" src="../images/strawberries_color.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Archipelago Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Metadata in Archipelago
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/esmero/archipelago-documentation" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    archipelago-documentation
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Archipelago Documentation" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Archipelago Documentation">
+<img alt="logo" src="../images/strawberries_color.png"/>
+</a>
+    Archipelago Documentation
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/esmero/archipelago-documentation" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    archipelago-documentation
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          About Archipelago
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="About Archipelago" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          About Archipelago
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ourtake/">
+        Archipelago's Philosophy &amp; Guiding Principles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../strawberryfields/">
+        Strawberryfields Forever
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Metadata in Archipelago
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Metadata in Archipelago
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reason-behind-using-json">
+    Reason behind using JSON
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#drupal-and-json">
+    Drupal and JSON
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-schema-what-is-yours-what-is-archipelagos">
+    Open Schema. What is yours, what is Archipelago's
+  </a>
+<nav aria-label="Open Schema. What is yours, what is Archipelago's" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suggested-json-keys">
+    Suggested JSON keys
+  </a>
+<nav aria-label="Suggested JSON keys" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-type-key">
+    The type key
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-label-key">
+    The label key
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#archipelago-drupal-entities-integration-keys">
+    Archipelago Drupal entities integration keys
+  </a>
+<nav aria-label="Archipelago Drupal entities integration keys" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-apentitymapping-key">
+    The ap:entitymapping key
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-asas_file_type-keys">
+    The as:{AS_FILE_TYPE} keys
+  </a>
+<nav aria-label="The as:{AS_FILE_TYPE} keys" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direct-file-level-metadata">
+    Direct File level Metadata
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-file-level-metadata">
+    Technical File level Metadata
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#did-you-know">
+    Did you #know?
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-astasks-keys">
+    The as:tasks keys
+  </a>
+<nav aria-label="The as:tasks keys" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activity-stream">
+    Activity Stream
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#all-the-other-keys-lists-objects-your-metadata">
+    All the other keys, lists, objects. Your Metadata
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archifilepersistencestrategy/">
+        Archipelago's File Persistence Strategy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../devops/">
+        Software Services
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CODE_OF_CONDUCT/">
+        Code of Conduct
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+          Instructions and Guides
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Instructions and Guides" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Instructions and Guides
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1">
+          DevOps &amp; Deployment
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="DevOps &amp; Deployment" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+          DevOps &amp; Deployment
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_1" id="__nav_4_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_1">
+          Archipelago-Deployment
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Archipelago-Deployment" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_1">
+<span class="md-nav__icon md-icon"></span>
+          Archipelago-Deployment
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archipelago-deployment-readme/">
+        Start
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archipelago-deployment-osx/">
+        Installing Archipelago Drupal 9 on OSX (macOS)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archipelago-deployment-ubuntu/">
+        Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archipelago-deployment-windows/">
+        Installing Archipelago Drupal 9 on Windows 10/11
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archipelago-deployment-democontent/">
+        Adding Demo Archipelago Digital Objects (ADOs) to your Repository
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archipelago-deployment-upgradeFromD8ToD9/">
+        Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archipelago-deployment-upgradeFromRC3/">
+        Upgrading from 1.0.0-RC3 to 1.0.0
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sslsetup/">
+        How to Set Up SSL for Docker/Archipelago
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_2" id="__nav_4_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_2">
+          Archipelago-Deployment-Live
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Archipelago-Deployment-Live" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_2">
+<span class="md-nav__icon md-icon"></span>
+          Archipelago-Deployment-Live
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archipelago-deployment-live-readme/">
+        Start
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archipelago-deployment-live-gitworkflow/">
+        Github Workflow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archipelago-deployment-live-moveToLive/">
+        Moving from archipelago-deployment to archipelago-deployment-live
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archipelago-deployment-live-upgradeFromD8ToD9/">
+        Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archipelago-deployment-live-upgradeFromRC3/">
+        Upgrading from 1.0.0-RC3 to 1.0.0
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archipelago-deployment-live-updatingContainers/">
+        Updating Docker Containers
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_3" id="__nav_4_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_3">
+          DevOps Q&amp;A
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="DevOps Q&amp;A" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_3">
+<span class="md-nav__icon md-icon"></span>
+          DevOps Q&amp;A
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../xdebug/">
+        Debugging PHP in Archipelago
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../generalqa_minio_logging/">
+        Min.io Logging
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../generalqa_smtp_configuration/">
+        SMTP Configuration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../generalqa_twig_modules_configuration/">
+        Twig Modules Configuration
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2">
+          Archipelago 101
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Archipelago 101" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          Archipelago 101
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../firstobject/">
+        Ingesting Your First Object
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" id="__nav_4_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2_2">
+          Webforms in Archipelago
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Webforms in Archipelago" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Webforms in Archipelago
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../webforms/">
+        Webforms
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../webformsasinput/">
+        How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../modifyingfileextensionsinwebform/">
+        Customizing Webforms (Modifying allowable file extensions)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../customwebformelements/">
+        Archipelago Custom Webform Elements
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3" id="__nav_4_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2_3">
+          Twig Templates and Archipelago
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Twig Templates and Archipelago" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_2_3">
+<span class="md-nav__icon md-icon"></span>
+          Twig Templates and Archipelago
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../metadatatwigs/">
+        Twig Templates and Archipelago
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../workingtwigs/">
+        Working With Twig in Archipelago (getting started with custom Twig templates)
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_4" id="__nav_4_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2_4">
+          Archipelago Multi-Importer (AMI)
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Archipelago Multi-Importer (AMI)" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_2_4">
+<span class="md-nav__icon md-icon"></span>
+          Archipelago Multi-Importer (AMI)
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ami_index/">
+        Archipelago Multi-Importer (AMI)
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_4_2" id="__nav_4_2_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2_4_2">
+          AMI Instructions and Guides
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="AMI Instructions and Guides" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_4_2_4_2">
+<span class="md-nav__icon md-icon"></span>
+          AMI Instructions and Guides
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ami_spreadsheet_overview/">
+        Spreadsheet Formatting Overview
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../googleapi/">
+        Configuration for Google Sheets API
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../AMIviaSpreadsheets/">
+        Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ami_lod_rec/">
+        Linked Data Reconciliation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../I7solrImporter/">
+        Using the Islandora 7 Solr Importer
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotations/">
+        Annotations
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3">
+          Site Administration &amp; Configuration
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Site Administration &amp; Configuration" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+          Site Administration &amp; Configuration
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../strawberryfield-formatters/">
+        Strawberryfield Formatters
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../createdisplaymodes/">
+        Creating Display Modes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archifilepersistencestrategy/">
+        Archipelago's File Persistence Strategy
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_4">
+          General Q&amp;A
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="General Q&amp;A" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_4">
+<span class="md-nav__icon md-icon"></span>
+          General Q&amp;A
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../generalqa_index/">
+        General Q&amp;A
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tbd/">
+        Coming soon
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" id="__nav_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5">
+          Contributing
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contributing" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_5">
+<span class="md-nav__icon md-icon"></span>
+          Contributing
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../giveortake/">
+        Archipelago Contribution Guide
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" id="__nav_4_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5_2">
+          Documentation
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Documentation" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation_about/">
+        About This Documentation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation_template/">
+        Documentation Template
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation_features/">
+        Additional Features
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation_technical/">
+        Technical Details
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+          Additional Information
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Additional Information" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Additional Information
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../presentations_docs/">
+        Archipelago Presentations and Documents
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../inthewild/">
+        Archipelagos in the Wild
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../acknowledgments/">
+        Care &amp; Coding + Fixing / Acknowledgments / License
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reason-behind-using-json">
+    Reason behind using JSON
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#drupal-and-json">
+    Drupal and JSON
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-schema-what-is-yours-what-is-archipelagos">
+    Open Schema. What is yours, what is Archipelago's
+  </a>
+<nav aria-label="Open Schema. What is yours, what is Archipelago's" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suggested-json-keys">
+    Suggested JSON keys
+  </a>
+<nav aria-label="Suggested JSON keys" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-type-key">
+    The type key
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-label-key">
+    The label key
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#archipelago-drupal-entities-integration-keys">
+    Archipelago Drupal entities integration keys
+  </a>
+<nav aria-label="Archipelago Drupal entities integration keys" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-apentitymapping-key">
+    The ap:entitymapping key
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-asas_file_type-keys">
+    The as:{AS_FILE_TYPE} keys
+  </a>
+<nav aria-label="The as:{AS_FILE_TYPE} keys" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direct-file-level-metadata">
+    Direct File level Metadata
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-file-level-metadata">
+    Technical File level Metadata
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#did-you-know">
+    Did you #know?
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-astasks-keys">
+    The as:tasks keys
+  </a>
+<nav aria-label="The as:tasks keys" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activity-stream">
+    Activity Stream
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#all-the-other-keys-lists-objects-your-metadata">
+    All the other keys, lists, objects. Your Metadata
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/esmero/archipelago-documentation/commits/1.0.0/docs/metadatainarchipelago.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<h1 id="your-json-our-json-raw-metadata-in-archipelago">Your JSON, our JSON - RAW Metadata in Archipelago</h1>
+<p><em>From the desk of <a href="https://github.com/DiegoPino">Diego Pino</a></em></p>
+<p>Archipelago's <strong>RAW metadata</strong> is stored as <strong>JSON</strong> and this is core to our architecture. To avoid writing RAW over and over this document will refer to <strong>RAW Metadata</strong> simply as <strong>Metadata</strong>.</p>
+<p><strong>Data</strong> and <strong>Metadata</strong> can be extremely complex and extensive. The use cases that define what <strong>Data</strong>, <strong>Media</strong> and <strong>Metadata</strong> to collect, to catalog and expose, to use during search and discovery or to enable interactive functionality, including questions like  "what public facing <em>schemas</em>, <em>formats</em> and <em>serializations</em> i need or want to be compliant with" are as diverse and complex as the Metadata driving them.</p>
+<p>But also Metadata, in specific, is plastic and evolving as are use cases. And more over, some Metadata is descriptive and some Metadata is technical and there are other types of Metadata too, e.g Control Metadata.</p>
+<p>Finally Metadata is very close to their generators. Means you and your peers will know, better than any Software Development team, what is needed, useful and, many times also, available given what use case you have, end users needs and resources at hand, your <em>In real life</em> workflows and future expectations.</p>
+<h2 id="reason-behind-using-json">Reason behind using JSON</h2>
+<ul>
+<li>Complex hierarchical Metadata needs to be machinable (and fast)</li>
+<li>All types of Metadata might be needed be "easily to access" while generating output, visualizations, search and discovery.</li>
+<li>The shape of this Metadata might need to change and adapt in time. Idea that supports Open Schema v/s a highly structure and fixed Schema, e.g Relational database (RDB) for most of the use cases we think Archipelago can cover.</li>
+<li>JSON is shareable, portable, easy to validate online and offline.</li>
+<li>JSON is compact.</li>
+<li>JSON is searchable/filterable using Query Languages like JSONPATH and JMESPATH.</li>
+<li>JSON is easy to patch and modify in batches.</li>
+<li>JSON is platform agnostic and has been around for decades and has not changed since then.</li>
+<li>JSON is typed and allows ordering/sorting of data easily.</li>
+</ul>
+<h2 id="drupal-and-json">Drupal and JSON</h2>
+<p>Drupal, the OSS CMS system Archipelago uses and extends, is RDB driven. This means that <code>Content Types</code> normally follow the idea of an <em>Entity</em> with <em>Fields</em> attached. Each of these <em>Fields</em> becomes then a Database Table and the sum of all these fields living under a <code>Content Type</code> definition, a fixed schema. </p>
+<p>For integration and interoperatibility reasons with the larger Drupal ecosystem, we inherit in Archipelago the idea of an <em>Entity</em>, in specific , a <em>Content Entity</em>  (Node) and  <code>Content Type</code> (Bundled fields for a Node). But instead of generating (and encouraging) the use of hundreds of fixed fields to describe your Digital Objects we put all Metadata as JSON, means a <strong>JSON BLOB</strong>,  into a single smart Field of type <code>Strawberry Field</code>. </p>
+<p>We go a long way of making as much as possible flexible and dynamic. This also implies the definition (and separation) of what an <em>Archipelago Digital Object</em> (ADO)  is in our Architecture v/s what a general Drupal Content Type is (e.g a static page or a blog post) is defined in code as: "Any Content type that uses a Strawberry Field is an ADO and will be processed as such". No configuration is needed. In other words, all is a NODE but any node that uses a Strawberry Field gets a different treatment and will be named in Archipelago an ADO.</p>
+<p>One of the challenges of our flexible approach is how to allow Drupal to access the JSON in an, as native as possible, way to generate filtered listings via Drupal Views, Free text search and Faceting. To make this happen Strawberry Field uses a JSON Querying and Exposing as "Native Field Properties" logic. Through a special type of Plugin system named <em>Strawberry Key Name Providers</em> and associated <em>Configuration Entities</em> (can be found at <code>/admin/structure/strawberry_keynameprovider</code>) you have control on which keys and values of your JSON are going to be exposed as field properties of any Strawberry Field, allowing Drupal through this to access values in a flat manner and expose them to the Search API natively. The access to the values of any JSON is done via <a href="https://jmespath.org">JMESPATH</a> expressions and then transformed either to a list of values or even "cast" into more complex data Data types, like an Entity Reference (means a connection to another Entity).</p>
+<p>This gives you a lot of power and control and makes a lot of very heavy operations lighter. You can even plan upfront or evolve these properties in time. </p>
+<p>In other words, you control how storage is mapped to Discovery and this allows Drupal Views to work that way too. Of course this also means traditional SQL based Drupal Views won't have access to this internals (for filtering) given that your JSON data nor the virtual Properties generated via <em>Strawberry Key Name Providers</em> are not accessible as individual RDB tables to generate SQL joins and that is why we heavily depend on the Search API (Solr).</p>
+<h2 id="open-schema-what-is-yours-what-is-archipelagos">Open Schema. What is yours, what is Archipelago's</h2>
+<p>What can you add to an ADO's Strawberry Field? As long as it is valid JSON Archipelago can store it, display it, transform it and search across it in Archipelago. The way you manage Metadata can be as "intime" or "aligned" to other schemas as you want. Still, there are a few suggested keys/functional ideas:</p>
+<h3 id="suggested-json-keys">Suggested JSON keys</h3>
+<h4 id="the-type-key">The <code>type</code> key</h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Photograph"</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The <code>type</code> JSON key has a semantic and functional importance in Archipelago. Given that we don't use multiple Drupal Content Types to denote the difference between e.g a <em>Photograph</em> or a <em>Painting</em> (which would also mean you would be stuck with one or other if we did) we use this key's value to allow Archipelago select/swap <em>View Modes</em>. But also for your own needs to define what an ADO in real life or digital realm is (the WHAT). This key is also important when doing <code>AMI</code> based batch ingests since many of the mappings and decisions (e.g what Template to use to transform your CSV or if the Destination Drupal Content Type is going to be a <em>Digital Object</em> or a <em>Digital Object Collection</em>) will depend on this.</p>
+<p>Note: Archipelago does something extra fun too when using <code>type</code> value for View Mode Selection (and this is also a feature of one of the Key Name provider Plugins). It will flatten the JSON first and the fetch all <code>type</code> keys. How does this in practice work?</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Photograph"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"subtypes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"125 film"</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Instant film"</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w">  </span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Means, while doing a View Mode Selection Archipelago will bring all found <code>type</code> key values together and will have ['Photograph', '125 film', 'Instant film'] available as choices, meaning you will be able to make even finer decisions on how to display your ADOs. View Mode selection is based on order or evaluation, means we recommend putting the more specific mappings first.</p>
+<h4 id="the-label-key">The <code>label</code> key</h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Black and White Photograph of Cataloger working with JSON"</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Archipelago will use the <code>label</code> key's value to populate the ADO's (Drupal Node) Title. Drupal has a length limit for its native build in Node Entity Title but JSON has not, so in case of more than 255 characters Archipelago will truncate the Title (not the <code>label</code> key's value) adding an ellipsis (...) as suffix.</p>
+<h3 id="archipelago-drupal-entities-integration-keys">Archipelago Drupal entities integration keys</h3>
+<p>Because of the need of having <strong>Technical Metadata</strong>, <strong>Descriptive Metadata</strong> and <strong>Semantic Metadata</strong> while generating different representations of your JSON via Metadata Display Entities (Twig templates) transformations we store and characterize Files attached to an ADO as part of the JSON. We also use a set of special keys to map and cast JSON keys and values to Drupal's internal Entities system via their Numeric and or UUID IDs. </p>
+<p>Throuht this, Archipelago will also move files between upload locations and permanent storage, execute Technical metadata extraction, keep track of ADO to ADO relationships (e.g <em>ispartof</em> or <em>ismemberof</em>) and emulate what a traditional <code>Drupal Entity Reference field</code> would do without the limitations (speed and immutability) a static RDB definition imposes.</p>
+<h4 id="the-apentitymapping-key">The <code>ap:entitymapping</code> key</h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"ap:entitymapping"</span><span class="p">:{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"entity:file"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">"model"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">"audios"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">"images"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">"videos"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">"documents"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">"upload_associated_warcs"</span><span class="w"></span>
+<span class="w">            </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"entity:node"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">"ispartof"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">"ismemberof"</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>the <code>ap:entitymapping</code> is a hint for Archipelago. With this key we can treat certain keys and their values as Drupal Numeric Entity IDs instead of semantically unknown values.</p>
+<p>In the presence of the structure exemplified above the following JSON snipped</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="mi">3</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w">   </span>
+</code></pre></div>
+<p>Will tell archipelago that the JSON key <code>images</code> should be treated as containing Entity IDs for an Drupal Entity of type (<code>entity:file</code>) File. This has many interessting consequences. Archipelago, on edit/update/ingest will try (hard) to get a hold of Files with ID 1, 2 and 3. If in temporary storage it will move them to its final Permanent Location, will make sure Drupal knows those files are being used by this ADO, will run multiple <strong>Technical Metadata</strong> Extractions and classify internally the Files adding everything it could learn from them. In practice, write for you additional structures into the JSON enriching your <strong>Metadata</strong>.</p>
+<p>Without this structure, <code>images</code> key would not trigger any logic but will of course still exist and can always still be used as list of numbers while templating.</p>
+<p>This also implies that for a persisted ADO with those values, if you edit the JSON and delete e.g the number (<code>integer</code> or <code>string</code> representation of an <code>integer</code>) <code>3</code>, archipelago will disconnect the File Entity with ID 3 from this ADO, remove the enriched metadata and mark the File as not being anymore used by this ADO. If nobody else is using the File it will become <code>temporary</code> and eventually  automatically removed from the system, if that is setup at the Drupal - Filesystem - level.</p>
+<p>Using the same example <code>ap:entitymapping</code> structure, the following snippet</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">"ispartof"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="mi">2000</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w">   </span>
+</code></pre></div>
+<p>will hint archipelago on assuming a connection between this ADO and another ADO with Drupal Entity ID <code>2000</code>. This will drive other functionality in Archipelago (semantic) allowing for example a breadcrumb to be build using all connections found in its hierarchical path.</p>
+<p>In Archipelago <strong>ADO</strong> to <strong>ADO</strong> relationships are normally from Child to Parent and hopefully (but not enforced!) building an Acyclic graph, from leafs to trunc. This will also allow inheritance to happen. This means also that a Parent ADO needs to exist before connecting/relating to it. But if it does not, the system will not fail and assume a temporarely broken relationship. </p>
+<p>Entity mapping key also drives a very special compatibility addition to any ADO. Archipelago will populate Native Computed Drupal fields (attached at run time to each ADO) with these values loading and exposing them as Drupal Entities, procesing both Files and Node Entities and making them visible outside the scope of a <code>Strawberry Field</code> to the whole CMS.</p>
+<p>The following Computed fields are provided:</p>
+<ul>
+<li><code>field_file_drop</code>: Computed Entity Reference Field. Needed also for JSON API level upload of Files to an ADO (Drupal need). It will expose all File Entities referenced in an ADO, independently of the type of the File.</li>
+<li><code>field_sbf_nodetonode</code>: Computed Entity Reference Field. It will expose all Nodes (other ADOs) Entities referenced in an ADO, independently of the Content type and/or the semantic predicate (<em>ismemberof</em>, <em>ispartof</em>, etc) used.</li>
+</ul>
+<p>These Fields, because their native Drupal nature, can be used directly everywhere, e.g in the Search API to index all related ADOs (or any of their Fields and subproperties, even deeply chained, tree down) without having to specificy what predicate is used. Said differently, they act as aggregators, as a generic "isrelatedto" property bringing all together.</p>
+<h4 id="the-asas_file_type-keys">The <code>as:{AS_FILE_TYPE}</code> keys</h4>
+<p>As explained in the <code>ap:entitymapping</code> section above, when Archipelago gets hold of a File entity it will enrich your JSON with its extracted data. Archipelago will compute and append to your JSON a set of controlled <code>as:{AS_FILE_TYPE}</code> keys containing classified File's Metadata. The naming will be automatic based on grouping Files by their Mime Types.</p>
+<p>The possible values for <code>as:{AS_FILE_TYPE}</code> are</p>
+<ul>
+<li><code>as:image</code></li>
+<li><code>as:document</code> </li>
+<li><code>as:video</code> </li>
+<li><code>as:audio</code> </li>
+<li><code>as:application</code></li>
+<li><code>as:text</code></li>
+<li><code>as:model</code></li>
+<li><code>as:multipart</code> </li>
+<li><code>as:message</code> </li>
+</ul>
+<p>An example for an Image attached to an ADO:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"as:image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"urn:uuid:ef596613-b2e7-444e-865d-efabbf1c59b0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s3:\/\/de2\/image-f6268bde41a39874bc69e57ac70d9764-view-ef596613-b2e7-444e-865d-efabbf1c59b0.jp2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f6268bde41a39874bc69e57ac70d9764_view.jp2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Image"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"dr:fid"</span><span class="p">:</span><span class="w"> </span><span class="mi">7461</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"dr:for"</span><span class="p">:</span><span class="w"> </span><span class="s2">"images"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"dr:uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ef596613-b2e7-444e-865d-efabbf1c59b0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"checksum"</span><span class="p">:</span><span class="w"> </span><span class="s2">"de2862d4accf5165d32cd0c3db7e7123"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"flv:exif"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"FileSize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"932 KiB"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"MIMEType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image\/jp2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"ImageSize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1375x2029"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"ColorSpace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sRGB"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"ImageWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1375</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"ImageHeight"</span><span class="p">:</span><span class="w"> </span><span class="mi">2029</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"flv:pronom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JP2 (JPEG 2000 part 1)"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"mimetype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image\/jp2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"pronom_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info:pronom\/x-fmt\/392"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"detection_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"signature"</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"dr:filesize"</span><span class="p">:</span><span class="w"> </span><span class="mi">954064</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"dr:mimetype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image\/jp2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"crypHashFunc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"md5"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"flv:identify"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1375"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JP2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2029"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"orientation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Undefined"</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>That is a lot of <strong>Metadata</strong>! But to understand what is happening here, we need to dissect this into more readable chunks. Let's start with the basics from root to leaves of this hierarchy.</p>
+<h5 id="direct-file-level-metadata">Direct File level Metadata</h5>
+<p>Every Classified File inside the <code>as:{AS_FILE_TYPE}</code> key will be contained in a unique URN JSON Object property:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">"urn:uuid:ef596613-b2e7-444e-865d-efabbf1c59b0"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+</code></pre></div>
+<p>We use a Property instead of a "List or Array" of Technical Metadata because this allows us (at code level) to access quickly from e.g <code>as:image</code> structure all the data for a File Entity with UUID <code>ef596613-b2e7-444e-865d-efabbf1c59b0</code> without iterating. (Also now you know what urn:uuid:ef596613-b2e7-444e-865d-efabbf1c59b0) means.</p>
+<p>Next, inside that property, the following Data provides basic Information about the File so you can access/make decisions when Templating. Notice the duplication of similar data at different levels. Duplication is on purpose and again, allows you to access certain JSON values (or filter) quicker without having to go to other keys or hierarchies to make decisions.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s3:\/\/de2\/image-f6268bde41a39874bc69e57ac70d9764-view-ef596613-b2e7-444e-865d-efabbf1c59b0.jp2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Original Name of my Image.jp2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Image"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"dr:fid"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"dr:for"</span><span class="p">:</span><span class="w"> </span><span class="s2">"images"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"dr:uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ef596613-b2e7-444e-865d-efabbf1c59b0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"crypHashFunc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"md5"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"checksum"</span><span class="p">:</span><span class="w"> </span><span class="s2">"de2862d4accf5165d32cd0c3db7e7123"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"dr:filesize"</span><span class="p">:</span><span class="w"> </span><span class="mi">954064</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"dr:mimetype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image\/jp2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li><code>"url"</code>: Contains the Final Storage location/URI of the File. It's prefixed with the configured Streamwrapper, a functional symbolic link to the underlying complexities of the backend storage. e.g <code>s3://</code> implies an S3 API backed with a (hidden/abstracted) set of credentials, Bucket and Prefixes inside the bucket. This value is also used in Archipelago's IIIF Cantaloupe Service as the Image <code>id</code> when building a IIIF Image API URL.</li>
+<li><code>"name"</code>: The Original Name of the File. Can be used to give a Download a human readable name or as an internal hint/preservation for you.</li>
+<li><code>"tags"</code>: Unused by default.  You can use this for your own logic if needed.</li>
+<li><code>"type"</code>: A redundant (contextual, at this level) key whose value will match <code>{AS_FILE_TYPE}</code> already found at 2 levels before. Allows you to know what File type this is when iterating over this File's data (without having to look back, or on our Code, when dealing with Flattened JSON).</li>
+<li><code>"dr:fid"</code>:  The Drupal Entity Numeric ID.</li>
+<li><code>"dr:for"</code>:  Where in your JSON (top level key) this File ID was stored (or in other words where you can find the value of <code>"dr:fid"</code>. All this will match / was be driven of course by <code>ap:entitymapping</code>. Sometimes (try uploading a WARC file and run the queue) this key might contain  <code>flv:{ACTIVE_STRAWBERRY_RUNNERS_CONFIG_ID}</code>. This means the File will have been generated by an active Strawberry Runners Processor and not uploaded by you. <code>ACTIVE_STRAWBERRY_RUNNERS_CONFIG_ID</code> will be the Machine name (or ID) of a given <em>Strawberry Runners Processor</em> Configuration Entity.</li>
+<li><code>"dr:uuid"</code>: A redundant (contextual, at this level) key whose value will match the Drupal File entity <em>UUID</em> for this File.</li>
+<li><code>"crypHashFunc"</code>: What Cryptographic function was used for generating the checksum. By default Archipelago will do MD5 (faster but also because S3 APIs use that to ensure upload consistency and E-tag). In the future others can be enabled and made configurable</li>
+<li><code>"checksum"</code>: The Checksum (calculated) of this File via <code>"crypHashFunc"</code></li>
+<li><code>"dr:filesize"</code>:  The File size in Bytes.</li>
+<li><code>"dr:mimetype"</code>:  The Drupal level infered Mime Type. Archipelago extends this list. This is based on the File Extension.</li>
+<li><code>"sequence"</code>:  A number (integer) denoting order of this file relative to other files of the same type inside the JSON. Which default type ordering is used will depend on how the ADO was created/edited, but can be overriden using <strong>Control Metadata</strong>.</li>
+</ul>
+<h5 id="technical-file-level-metadata">Technical File level Metadata</h5>
+<p>Deeper inside this structure Archipelago will produce <strong>Extracted Technical Metadata</strong>. Some of this Metadata will be common to every File Type, some will be specific to a subset, like Moving Media or PDFs. What runs and how it runs can be configured at the File Persister Service Settings configuration form found at<code>/admin/config/archipelago/filepersisting</code>. Why there? These are service that run syncroniusly on ADO save (Create/Edit) and in while doing  File persistance.</p>
+<p><code>"flv:exif"</code>: EXIF Tool extraction for a file. The number of elements that come out might vary, for an Image file it might be normally short, but a PDF might have a very extensive and long list.
+The above mentioned File Persister Service Settings form allows you to also set a Files Cap Number, that will, once reached, limit and reduce the EXIF. This is very useful if you want to control the size of your complete JSON for any reason you feel that is needed (performance, readability, etc).</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"flv:exif"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"FileSize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"932 KiB"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"MIMEType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image\/jp2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"ImageSize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1375x2029"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"ColorSpace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sRGB"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"ImageWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1375</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"ImageHeight"</span><span class="p">:</span><span class="w"> </span><span class="mi">2029</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><code>"flv:identify"</code>: Graphics Magic Identity binary will run on every file and format it knows how to run (and will try even on the ones it does not). Will give you data similar to EXIF but processed based on the actual File and not just extracted from the EXIF data found at the header. Notice that the details will be inside a "1", "2", etc property.  This is because Identify might also go deeper and for e.g a Multi Layer Tiff extract different sequences on the same File.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"flv:identify"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1375"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JP2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2029"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"orientation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Undefined"</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><code>"flv:pronom"</code>: Droid, a File Signature detection tool will find a  matching <code>pronom_id</code>for your File based on  https://www.nationalarchives.gov.uk/aboutapps/pronom/droid-signature-files.htm. This detection type is deeper that EXIF or the mime type based on extension, reading from binary data. It allows you to get small differences between formats (even if e.g both are JP2) and thus make decisions like "Will <code>Cantaloupe IIIF Image Server</code> be able to handle this type?". This has also positive Digital Preservation consequences.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"flv:pronom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JP2 (JPEG 2000 part 1)"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"mimetype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image\/jp2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"pronom_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info:pronom\/x-fmt\/392"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"detection_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"signature"</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><code>"flv:mediainfo"</code>: Media Info works on Video and Audio. It goes very detailed into <code>codecs</code> and<code>streams</code> and the output added to your JSON might look massive. This is also very needed when working with IIIF Manifests and deciding if a certain Video will be able to play natively on a browser or if <code>Cantaloupe IIIF Image Server</code> will be able to extract individual frames as images. This again has positive Digital Preservation consequences. The Following is an example of an MP4 file generated via Quicktime on an Apple MacOS computer.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"flv:mediainfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"menus"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"audios"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                    </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"282"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Core Media Audio"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAC LC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAC"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"bit_rate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"textValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"85.3 kb\/s"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"absoluteValue"</span><span class="p">:</span><span class="w"> </span><span class="mi">85264</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"codec_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4a-40-2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"milliseconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">21215</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"channel_s"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"textValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 channel"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"absoluteValue"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"frame_rate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"textValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43.066 FPS (1024 SPF)"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"absoluteValue"</span><span class="p">:</span><span class="w"> </span><span class="mi">43</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"format_info"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Advanced Audio Codec Low Complexity"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"frame_count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"914"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"stream_size"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"bit"</span><span class="p">:</span><span class="w"> </span><span class="mi">226109</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"streamorder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"tagged_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC 2017-12-05 17:14:10"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"encoded_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC 2017-12-05 17:14:07"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"source_delay"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"bit_rate_mode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Variable"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VBR"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"samples_count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"935582"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"sampling_rate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"textValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"44.1 kHz"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"absoluteValue"</span><span class="p">:</span><span class="w"> </span><span class="mi">44100</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"channel_layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"kind_of_stream"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Audio"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Audio"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"commercial_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"source_duration"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"21269"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"21 s 269 ms"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"21 s 269 ms"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"21 s 269 ms"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"00:00:21.269"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">],</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"compression_mode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lossy"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lossy"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"channel_positions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1\/0\/0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Front: C"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"samples_per_frame"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1024"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"stream_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"source_frame_count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"916"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"source_stream_size"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"226460"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"221 KiB (1%)"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"221 KiB"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"221 KiB"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"221 KiB"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"221.2 KiB"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"221 KiB (1%)"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">],</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"source_delay_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Container"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"format_additionalfeatures"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"proportion_of_this_stream"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.01178"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"count_of_stream_of_this_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"source_streamsize_proportion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.01180"</span><span class="w"></span>
+<span class="w">                    </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"others"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                    </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"meta"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"188"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"milliseconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">21215</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"frame_count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"kind_of_stream"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Other"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Other"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"stream_identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"1"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">],</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"count_of_stream_of_this_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w"></span>
+<span class="w">                    </span><span class="p">},</span><span class="w"></span>
+<span class="w">                    </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"meta"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"188"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"milliseconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">21215</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"frame_count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"kind_of_stream"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Other"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Other"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"stream_identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"2"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">],</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"count_of_stream_of_this_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w"></span>
+<span class="w">                    </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                    </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"380"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Core Media Video"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"textValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 280 pixels"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"absoluteValue"</span><span class="p">:</span><span class="w"> </span><span class="mi">1280</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AVC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AVC"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"textValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"720 pixels"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"absoluteValue"</span><span class="p">:</span><span class="w"> </span><span class="mi">720</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"bit_rate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"textValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7 144 kb\/s"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"absoluteValue"</span><span class="p">:</span><span class="w"> </span><span class="mi">7144261</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"codec_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"avc1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"milliseconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">21215</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"rotation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"bit_depth"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"textValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8 bits"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"absoluteValue"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"scan_type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Progressive"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Progressive"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"format_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http:\/\/developers.videolan.org\/x264.html"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"frame_rate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"textValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"29.970 (29970\/1000) FPS"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"absoluteValue"</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"buffer_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"768000"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"color_range"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Limited"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"color_space"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YUV"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"format_info"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Advanced Video Codec"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"frame_count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"636"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"stream_size"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"bit"</span><span class="p">:</span><span class="w"> </span><span class="mi">18951244</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"streamorder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"tagged_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC 2017-12-05 17:14:10"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"encoded_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC 2017-12-05 17:14:07"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"bit_rate_mode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Variable"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VBR"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"codec_id_info"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Advanced Video Coding"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"framerate_den"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"framerate_num"</span><span class="p">:</span><span class="w"> </span><span class="s2">"29970"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"sampled_width"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1280"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"format_profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Main@L3.1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"kind_of_stream"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Video"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Video"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"sampled_height"</span><span class="p">:</span><span class="w"> </span><span class="s2">"720"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"color_primaries"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BT.709"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"commercial_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AVC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"format_settings"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CABAC \/ 2 Ref Frames"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"frame_rate_mode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Variable"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VFR"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"bits_pixel_frame"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.259"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"maximum_bit_rate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"textValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"768 kb\/s"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"absoluteValue"</span><span class="p">:</span><span class="w"> </span><span class="mi">768000</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"stream_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"chroma_subsampling"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"4:2:0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"4:2:0"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">],</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"maximum_frame_rate"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"30.000"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"30.000 FPS"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">],</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"minimum_frame_rate"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"28.571"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"28.571 FPS"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">],</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"pixel_aspect_ratio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.000"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"colour_range_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stream"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"format_settings_gop"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M=2, N=30"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"internet_media_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video\/H264"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"matrix_coefficients"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BT.709"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"original_frame_rate"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"25.000"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"25.000 FPS"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">],</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"display_aspect_ratio"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"textValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16:9"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"absoluteValue"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.778</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"format_settings_cabac"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"codec_configuration_box"</span><span class="p">:</span><span class="w"> </span><span class="s2">"avcC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"colour_primaries_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Container \/ Stream"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"transfer_characteristics"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BT.709"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"proportion_of_this_stream"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.98734"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"colour_description_present"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"matrix_coefficients_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Container \/ Stream"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"count_of_stream_of_this_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"transfer_characteristics_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Container \/ Stream"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"format_settings_reference_frames"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="s2">"2 frames"</span><span class="w"></span>
+<span class="w">                        </span><span class="p">],</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"colour_description_present_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Container \/ Stream"</span><span class="w"></span>
+<span class="w">                    </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"general"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"336"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MPEG-4"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MPEG-4"</span><span class="w"></span>
+<span class="w">                    </span><span class="p">},</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"codec_id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                        </span><span class="s2">"qt  "</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="s2">"qt   0000.00 (qt  )"</span><span class="w"></span>
+<span class="w">                    </span><span class="p">],</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"datasize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19177730"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"milliseconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">21215</span><span class="w"></span>
+<span class="w">                    </span><span class="p">},</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"file_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c98e7bc52e4bd3fe5681a746f2d9c76f_diego4"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"file_size"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"bit"</span><span class="p">:</span><span class="w"> </span><span class="mi">19194157</span><span class="w"></span>
+<span class="w">                    </span><span class="p">},</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"footersize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"frame_rate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"textValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"29.970 FPS"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"absoluteValue"</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="w"></span>
+<span class="w">                    </span><span class="p">},</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"headersize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16427"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"othercount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"folder_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"\/tmp\/ami\/setfiles\/cb606b13b823eaea784dc77c460f3baf"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"frame_count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"636"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"stream_size"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"bit"</span><span class="p">:</span><span class="w"> </span><span class="mi">16804</span><span class="w"></span>
+<span class="w">                    </span><span class="p">},</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"tagged_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC 2017-12-05 17:14:10"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"audio_codecs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAC LC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"codec_id_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http:\/\/www.apple.com\/quicktime\/download\/standalone.html"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"codecs_video"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AVC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"encoded_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC 2017-12-05 17:14:07"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"isstreamable"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"complete_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"\/tmp\/ami\/setfiles\/cb606b13b823eaea784dc77c460f3baf\/c98e7bc52e4bd3fe5681a746f2d9c76f_diego4.m4v"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"file_extension"</span><span class="p">:</span><span class="w"> </span><span class="s2">"m4v"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"format_profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuickTime"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"kind_of_stream"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"General"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"General"</span><span class="w"></span>
+<span class="w">                    </span><span class="p">},</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"codecid_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000.00"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"commercial_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MPEG-4"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"writing_library"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apple QuickTime"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apple QuickTime"</span><span class="w"></span>
+<span class="w">                    </span><span class="p">},</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"overall_bit_rate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7 238 kb\/s"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7237957"</span><span class="w"></span>
+<span class="w">                    </span><span class="p">},</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"audio_format_list"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAC LC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"stream_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"video_format_list"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AVC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"codecid_compatible"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qt  "</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"file_name_extension"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c98e7bc52e4bd3fe5681a746f2d9c76f_diego4.m4v"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"internet_media_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video\/mp4"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"encoded_library_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apple QuickTime"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"comapplequicktimemake"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apple"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"overall_bit_rate_mode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Variable"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VBR"</span><span class="w"></span>
+<span class="w">                    </span><span class="p">},</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"comapplequicktimemodel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone SE"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"count_of_audio_streams"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"count_of_video_streams"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"comapplequicktimesoftware"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.3.2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"proportion_of_this_stream"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00088"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"audio_format_withhint_list"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAC LC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"video_format_withhint_list"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AVC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"file_last_modification_date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-10-19 20:02:32.000000"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"timezone_type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">                    </span><span class="p">},</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"count_of_stream_of_this_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"comapplequicktimecreationdate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-25T16:58:17-0400"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"format_extensions_usually_used"</span><span class="p">:</span><span class="w"> </span><span class="s2">"braw mov mp4 m4v m4a m4b m4p m4r 3ga 3gpa 3gpp 3gp 3gpp2 3g2 k3g jpm jpx mqv ismv isma ismt f4a f4b f4v"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"comapplequicktimelocationiso6709"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+40.6145-074.2678+020.977\/"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"file_last_modification_date_local"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-10-19 20:02:32.000000"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America\/New_York"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">"timezone_type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">                    </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="p">},</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21.09"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"subtitles"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><code>"flv:pdfinfo"</code>: PDF Info will get Page level Information for a PDF or Ghostscript document. The dimensions displayed in the following example are not in pixels but points (resolution independent) and are also used for IIIF generation when deciding at what rasterized pixel size a given PDF document page will be rendered. Same as with <code>flv:identify</code>, the technical metadata will be contained inside a keyed (string but semantically an integer) property. In this particular case each number is a page sequence in the original PDF order.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"flv:pdfinfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="s2">"612"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="s2">"792"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"rotation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">"orientation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TopLeft"</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>@TODO: add the extra special key used by Strawberry Runners when it attaches a file. e.g WARC to WACZ</p>
+<h5 id="did-you-know">Did you #know?</h5>
+<p>If you delete a whole <code>as:{AS_FILE_TYPE}</code> structure or one of the File level structures (a <code>urn:uuid:{uuid}</code> key and its children), Archipelago will recreate it. If you modify any internal value contained in it, Archipelago will do nothing and will trust you (and if you do strange things like modifying the <code>url</code> something might even fail e.g in a IIIF Metadata Display Entity Twig Template). No data edit there will trigger a modification/moving/deletion of a File (or e.g write back EXIF to be binary). You will have time to revert to a previous revision (version) of the ADO if any manual change was done. So, should you modify/delete this structures? Almost never. Ever. But you might find needs for that someday. Also to be noted. Producing this structure for a large file in S3:// is intensive. It needs to be downloaded to a local path and if the File is a few Gigabytes in size Archipelago might even run out of PHP processing time. If that ever happens you can also copy/paste from a previous revision of the ADO the relevant piece. If archipelago finds it (implied in the previous explanation) it will not have to regenerate it. The AMI module does this in an async/enqueued way to avoid time out issues and can reuse a cached metadata extraction between runs, but when working directly on an ADO via e.g a webform or via RAW edit, take that in account. 
+More work is being done to allow also one on one async File operations and larger uploads via the web.</p>
+<h4 id="the-astasks-keys">The <code>as:tasks</code> keys</h4>
+<p>As mentioned briefly before, there is also <strong>Control Metadata</strong>. What do we mean with that? Control metadata in Archipelago's way of allowing you to give, through metadata, (that you might want to preserve or not) instructions to Archipelago that relate to processing. Let's start with the basic one:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"ap:tasks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"ap:sortfiles"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><code>"ap:sortfiles"</code> key will instruct Archipelago to sort (create a <code>sequence</code> key and a sequential number (integer value) inside each Metadata File entry of a <code>as:{AS_FILE_TYPE}</code> structure. Values can be one of <code>['natural', 'index', 'manual']</code> defaulting, if absent or has an invalid value, to <code>natural</code>. 
+- <code>natural</code>: files will be sorted by File Name, the <code>filename</code> key found at the same level of <code>sequence</code> in the previously mentioned <code>as:{AS_FILE_TYPE}</code> structure.  a <code>Photograph_1.jpeg</code> will come before a <code>Photograph_10.jpeg</code>. The way a human being naturally would order by name.
+- <code>index</code> files will be sorted by the order in which they appear inside the upload JSON key (the <code>dr:for</code> key, one of the keys mapped in the <code>ap:entitymapping</code> structure under <code>entity:file</code> explained before. e.g. <code>images</code>:[5, 10 , 1 ], would imply the File Entity with Drupal ID 5 would get <code>"sequence": 1</code>, the one with Drupal ID 10 will get <code>"sequence": 1</code>, etc. This is the default when ingesting via the <a href="../ami_index/">AMI module</a>  given the need to preserve file order that has/might have unknown names or names you don't have control of (thus natural won't work) coming from e.g a Remote, HTTP/HTTPS location
+- <code>manual</code>: You can modify the values manually for any <code>sequence</code> key inside <code>as:{AS_FILE_TYPE}</code> structure and those values will <em>stick</em>.</p>
+<p>What do we mean with <em>stick</em>? Well, everytime archipelago gets a change in this <code>"ap:sortfiles"</code>, e.g a new File is added, a File is deleted, automatic re-sorting will happen. </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"ap:tasks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"ap:forcepost"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><code>"ap:forcepost"</code>: A boolean. The functionality of this key is provided by the <strong>Strawberry Runners</strong> Module. Will force Strawberry Runners Post processing for this <strong>ADO</strong>. </p>
+<p>Each Configured and active Postprocessor provided by the <code>Strawberry Runners</code> module might or not <code>kick in</code> by evaluating a set of rules. If rule evaluates to TRUE, the PostProcessor will generate a certain output., e.g a Solr Indexed <code>Strawberry Flavor</code> <em>Data Source</em> containing OCR, HOCR and NLP metadata for one or more pages of a PDF. </p>
+<p>Everytime a <strong>Create</strong> or <strong>Update</strong> operation on an <strong>ADO</strong> happens, these rules will be evaluated and the Processor will be enqueued as a future task. But at the moment of executing, when the queue workers take one item, a check will be made and if the result of a previous run (e.g HOCR) is already present in the system (e.g in Solr) and it's veryfied to be belonging to the same source, the actual heavyload of processing the PDF will be <em>skipped</em>. </p>
+<p>While testing, coding, doing complex changes in the system (like modifying largely the settings for one processor) or even in the case of an ISSUE (e.g HOCR was wrongly run with a setting that made all look like garbage!) you can instruct Archipelago run again without checks. And again. And again. basically everytime you Save an ADO by setting <code>ap:forcepost</code> to <code>true</code>. This can also be used batch and is already implied (means it does it for you but only once, without modifying the JSON) in the <code>Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects</code> VBO action we provide.</p>
+<p>In the absence of <code>"ap:forcepost"</code> the  value is implicitly <code>false</code>, same as setting it explicitly  to <code>false</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"ap:tasks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"ap:nopost"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="err">'pager'</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><code>"ap:nopost"</code>:  an <em>array</em> or list of <code>ACTIVE_STRAWBERRY_RUNNERS_CONFIG_ID</code> entries, means Machine names (or IDs) <em>Strawberry Runners Processor</em> Configuration Entities. The functionality of this key is provided by the <strong>Strawberry Runners</strong>. If not an <em>array</em> it will be ignored. Any value present not matching an active <em>Strawberry Runners Processor</em> Configuration Entity ID will also be ignored. Effectively, any post processors in this list will be skipped for this ADO. This allows a finer grained avoidance of some expensive processing that might lead to unsuable data. E.g a particular Manuscript ADO that Tesseract won't be able to OCR correctly.  Adding this key to an <strong>ADO</strong> that was already processed won't remove existing generated/stored processing.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"ap:tasks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"ap:ami"</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"metadata_display"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><code>"ap:ami"</code> is a newer key ( as of Archipelago 1.1.0 and AMI 0.5.0) and for now  can only contain another single key named <code>"metadata_display"</code>. The value of this one can be either a single Integer, the Drupal ID of a <em>Metadata Display Entity</em> or a string, the <code>UUID</code> of a <em>Metadata Display Entity</em>. 
+The functionality triggered by this key is provided by the AMI module and will do something extremely powerfull: it will take the complete JSON and process through the <em>Twig</em> or <em>Metadata Display Entity</em> refererenced in its value, IF, and only IF, the output of that template is JSON. This runs before any other event (Archipelago runs a ton of events that validate, enrich, check, etc your ADOs from the moment you SAVE or Create it) and because of that allows you to totally pivot, transform, change RAW data coming into Archipelago, e.g via the JSON:API into the structure you need/want. 
+Said differently, you could push JSON from a totally different system and if the referenced  <em>Metadata Display Entity</em> is well written, end with a perfectly aligned JSON matching your internal structure without modifying the INPUT manually. Because Twig is very powerful you can also do cleanups, complex logic, etc. More over, you can transform any existing ADO via Batch by adding this key(s) and values using the JSON Patch VBO action. Once processed and if all went well, meaning the output of the Template is valid JSON, the key itself will be removed. This, to avoid running over and over (invisibly to you) on further operations/edits/etc. 
+This is a one time operation that does not <em>stick</em>. What happens if it does not run well, fails, errors out or the Template referenced does not exist? You get a second change (everyone deserves one), the Original ingested JSON, without transformations is kept. All this is very similar to what the AMI module does via a CSV but in this case its atomic. We know what you are thinking. You can process data twice, via AMI and then at the end pass it again through another template based on a certain logic coming from the first? yes. you can!</p>
+<p>In the future <code>"ap:ami"</code> might contain more keys to do more advanced File level actions. Archipelago is being constantly enhanced!</p>
+<h5 id="activity-stream">Activity Stream</h5>
+<p>Archipelago also keeps information about who/how a certain JSON was generated. Depending on how the Ingest/Edit of an ADO happened, this can be automatically generated or added manually (the case for AMI ingests).</p>
+<p>The structure is simple and not accumulative because there is also versioning at the ADO (Drupal) level that allows you to look back if needed.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">     </span><span class="nt">"as:generator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Update"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"actor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http:\/\/localhost:8001\/form\/default-descriptive-metadata-ami"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default_descriptive_metadata_ami"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Service"</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-03-16T15:51:24-04:00"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Generator"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:\/\/www.w3.org\/ns\/activitystreams"</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The <code>"as:generator"</code> Conforms to the <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Stream Vocabulary Version 2.0</a> and keeps track of the last Operation executed on an ADO. Edits and Ingests via the Webform Widget will create this automatically using the Canonical URL of the Webform That generated the content and <code>"type"</code> might be either <code>"Update"</code> or "<code>Create</code>". ADOs that were processed via <code>"ap:ami"</code> will have automatically one generated to express the fact that the Original JSON was modified by a Metadata Display Entity.  Objects created via AMI and using a <code>Metadata Display Entity</code> can also add via the Twig template syntax the AMI Set ID used to generate the ADO (or Update) allowing the Service URL (<code>"url"</code>) to be faceted/searched for (e.g show me all objects ingested via AMI Set with ID 4).</p>
+<h4 id="all-the-other-keys-lists-objects-your-metadata">All the other keys, lists, objects. Your Metadata</h4>
+<p>Anything or everything else (including unknow data, future data, upcoming data) belongs to you. How you name it, how you structure, how it evolves is up to you and the functionality and integration you want. That said, as someone (the writer) that enjoys cooking and had to learn the hardway (experimenting and failing sometmes) the basics before doing proper meals for others to enjoy, we suggest you plan on this before inventing the next Open Schema. </p>
+<p>Note: Why the out-of-context Cooking Analogy?</p>
+<p>This idea is deeply embedded in our Architecture. We see Metadata as ingredients. Your JSON is your fridge (or pantry or both). Metadata Display Entities, and their Twig Templates, recipes that allow you to pick and choose Ingredients and your Twig coding skills (and filters, functions, loops and conditionals) your basic cooking skills. This analogy has many consequences:</p>
+<ul>
+<li>You can plan upfront and have more ingredients (metadata keys and JSON structures) than what you need/know how to cook, your current Recipes allow. Planning for "your future" needs and skills (and imagination) is a big part of this</li>
+<li>Reading, understanding and testing small changes on the existing recipes will give provide you with future skills and the ability to do similar, incremental better, meals before going for something totally new and complex</li>
+<li>Keeping your Ingredientes RAW and unprocessed is a good idea. You might be tempted to store canned refried beans in the fridge, but that might limit your future options. Maybe try both until you feel more secure, the canned ones AND the dried, single beans too.</li>
+<li>Your use cases might dictate where you start. You cook visually, starting with a very concrete Meal in mind? (means your plan is to make a certain Caserolle - in a less metaphoricall way, a certain well defined output Schema like MODS 3.7). So you need to be sure you have the ingredients that Schema at least requires and know how (or look and copy, MODS is provided already) to process the data. Or you are into a certain type of food? And want to have the most common ingredientes needed around, you might not know how to make all the different dishes but you for sure know Onions (and cutting those) is needed. This are just 2. So many ways of approaching Cooking.</li>
+</ul>
+<p>The Open Schema you will get from a Vanilla Archipelago already covers many many uses cases and was developed by a caring team of metadata professionals and practitioners working with Archipelago for a while already. It covers <em>LoD</em> and most Description needs for your Whys, Wheres, When, Who/Whom. Some tips:</p>
+<ul>
+<li>Start by adding new Keys instead of removing existing ones. Existing keys might already be used in your Vanilla Archipelago (in their Processed form) in, e.g the Search API, as Key Name providers (means the target of a JMESPATH query that will be exposed to Drupal as a Field Property), in Views (Filters, Sorting of data). Or in Twig templates (as part of Recipees) that Provide data for Viewers, IIIF V2 and V3, or in your HTML Object Descriptions. Or a Webform configured to Edit/Create new ADOs. All these can be of course modified and adapted, but before spending too much time doing that experiment with adding a new Ingredient and incorporating it to either one of the many Outputs of Archipelago or writing a simple new Recipee that uses it.</li>
+<li>Not all Metadata needs to be used. Want to keep track of your Workflows? Contextual cataloging data? Notes for other metadata professionals in your team? The command line used to capture a WACZ file? You can add that to your JSON. Might all come handy in the future. You don't need to display it at all if you don't want to.</li>
+<li>Experiment with the Existing Webforms and Webform Elements. If you need to allow Metadata that is very unique in structure and values (and validation), try first generating the simplest structure via the shipped Webforms and their elements via the UI. If you feel Webform can not handle then maybe you are structuring it in a too complex way. Test adding and editing. Check the "What if/what ifs". Is your value correctly a string? Would it be better as a boolean or an integer? Think of the "i want many values" v/s this is a single value differences. Because you are in the presence of an OpenSchema you can always change your mind, still better to start on the correct track.</li>
+<li>Give your keys meaningfull names for you/use case/others: <code>property_1</code> might be hard to document for you. But <code>original_artifact_in_collection</code> might be better (and denotes semantically the value might be a boolean, true of false). Use plural and singular in your naming to denote that something might contain more than one entry. Try to be generic but assertive. <code>mods_modsinfo_namepart</code> is tempting but is already hinting a single original fixed schema. And you might end using the same value (the who) in Dublin Core, IIIF, schema.org, etc outputs. So mybe <code>author</code> instead? This also leads to: sometimes multiple keys are better than many deeply nested ones where understanding. You can keep <em>authors</em> and <em>contributors</em> in separate keys.</li>
+<li>Document your keys in the Metadata Display Templates (JSON does not allow comments but also why would you want to document the same in every ADO, would be like writing notes on your Potatoes. The most obvious place to document are your recipees. If adding a new Key add a small note using <code>{# #}</code> explaining why/what it holds. You can also add Help/Extra info when designing your schema via a the Webform. Each element has extra properties to do so and that way you can also explain others (the ones using the Webform to add/edit) what the purpose of your metadata is.</li>
+<li>Use a (or many) <a href="https://github.com/esmero/archipelago-deployment">local Archipelago Deployment</a> as your experimental Kitchen</li>
+</ul>
+<p>Do you have your own Kitchen/cooking tips you want to share? We hope you enjoy the learning process and the many choices Archipelago provides.</p>
+<hr/>
+<p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
+<p>Return to the <a href="../">Archipelago Documentation main page</a>.</p>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2022</span>
+<br/>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2022</span>
+</small>
+</div>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Strawberryfields Forever" class="md-footer__link md-footer__link--prev" href="../strawberryfields/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Strawberryfields Forever
+            </div>
+</div>
+</a>
+<a aria-label="Next: Archipelago's File Persistence Strategy" class="md-footer__link md-footer__link--next" href="../archifilepersistencestrategy/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Archipelago's File Persistence Strategy
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/esmero" rel="noopener" target="_blank" title="Archipelago Commons + esmero">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="https://groups.google.com/g/archipelago-commons" rel="noopener" target="_blank" title="Archipelago Commons Google Group">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 4v7H5.17L4 12.17V4h11m1-2H3a1 1 0 0 0-1 1v14l4-4h10a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1m5 4h-2v9H6v2a1 1 0 0 0 1 1h11l4 4V7a1 1 0 0 0-1-1Z"></path></svg>
+</a>
+<a class="md-social__link" href="https://archipelagocommons.slack.com" rel="noopener" target="_blank" title="Archipelago Commons Slack Channel">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+<script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

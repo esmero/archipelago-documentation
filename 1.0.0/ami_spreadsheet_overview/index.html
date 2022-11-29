@@ -175,6 +175,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../metadatainarchipelago/">
+        Metadata in Archipelago
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../archifilepersistencestrategy/">
         Archipelago's File Persistence Strategy
       </a>
@@ -693,12 +698,12 @@
 <h2 id="spreadsheet-formatting-overview">Spreadsheet Formatting Overview</h2>
 <p>There are multiple ways a spreadsheet/CSV file can be structured to work with AMI, depending on the data transformation and mapping you will be using.</p>
 <ul>
-<li>For most standard AMI ingests, each Row of your spreadsheet/CSV will correspond to a single Digital Object or Collection.</li>
+<li>For most standard AMI ingests, each Row of your spreadsheet/CSV will correspond to a single Digital Object, Creative Work Series (Compound Object Parent) or Collection.</li>
 <li>
 <p>Columns in your spreadsheet/CSV can be mapped to different data (files) and metadata elements (label, description, subjects, etc.).</p>
 </li>
 <li>
-<p>It is recommended that different types of files are placed into separate columns--"images", "documents", "models", "videos", "audios", "text".</p>
+<p>It is recommended that different types of files are placed into separate columns--"images", "documents", "models", "videos", "audios", "texts".</p>
 <ul>
 <li>Filepaths can point to remote files, to existing files within your docker container, s3 (or other storage type/location that is accessible to Archipelago), and to paths within zip files.<ul>
 <li>Example path for existing file within docker container:
@@ -711,7 +716,7 @@
 </li>
 <li><strong>Multiple files (of the same type) can be placed in a single cell, separated by a semicolon ( ; ).</strong></li>
 <li>For Digital Objects comprised of multiple types of files, such as an Oral History Interview with an audio file and a PDF transcript file, you can place different file types within different corresponding columns for the same Row.</li>
-<li>It is recommended that filepaths are copied/stored as plain (non hyperlinked) formatted text.</li>
+<li>It is recommended that filepaths are copied/stored as plain (non-hyperlinked) formatted text.</li>
 </ul>
 </li>
 <li>
@@ -731,6 +736,13 @@
 <li>can be used with existing UUIDs during migrations</li>
 </ul>
 </li>
+<li><strong>Soft-requirement</strong> <code>sequence_id</code> for Creative Work Series (compound) children objects<ul>
+<li>this is used to determine the sequence order for children objects within a Creative Work Series (compound) object</li>
+<li>should be an integer only (ie, '1' and not 'Page 1')</li>
+<li>if not present, the objects will present in the original ingest order</li>
+<li>we strongly recommend mapping the correct sequence using 'sequence_id'</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -743,6 +755,7 @@
 </li>
 <li><code>ismemberof</code> and/or <code>ispartof</code> (and/or whatever predicate corresponds with the relationship you are mapping)<ul>
 <li>these columns can be used to connect related objects using the object-to-object relationship that matches your needs</li>
+<li>in default Archipelago configurations, <code>ismemberof</code> is used for Collection Membership and <code>ispartof</code> is used for Parent-Child Object Relationships (so a Child ADO would reference the Parent ADO in <code>ispartof</code>)</li>
 <li>these columns can hold 3 types of values<ul>
 <li>empty (no value)</li>
 <li>an integer to connect an object to another object's corresponding row in the same spreadsheet/CSV</li>
@@ -773,7 +786,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2022</span>
 <br/>
         Created:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2021</span>
