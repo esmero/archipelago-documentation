@@ -52,11 +52,11 @@ In this step you will need to make determinations on how you would like to map y
 	
 - If you had left "Collapse Multi Children Objects" unselected, you will also need to specify the Islandora Content Model to ADO types mapping for possible Children.
 
- ![Islandora 7 Solr Importer Step 2 Mappings No Collapse](/images/I7step2_sect2_nocollapse_updated_2022-11.jpg)
+ ![Islandora 7 Solr Importer Step 2 Mappings No Collapse](images/I7step2_sect2_nocollapse_updated_2022-11.jpg)
 - You can also specify an ADO (Object or Collection) to be used the Parent of Imported Objects. By selecting an existing ADO (Object or Collection) here using the autocomplete/search, the generated AMI set .csv file will contain an 'ismemberof' column containing the UUID of the selected ADO for every row.
 - Under "_Additional Datastreams to Fetch_", you can select any number and/or combination of extra file datastreams to retrieve from your harvest. Please not that the I7 Importer will fetch every possible datastream that is present in your source I7 repository, but the additional file datastreams referenced may not be associated with actual files for every digital object.
 
-![Islandora 7 Solr Importer Islandora Mappings](/images/I7step2_sect2_IslandoraMappings_updated_2022-11.jpg)
+![Islandora 7 Solr Importer Islandora Mappings](images/I7step2_sect2_IslandoraMappings_updated_2022-11.jpg)
 
 *Language from form itself:*
 
@@ -66,7 +66,7 @@ In this step you will need to make determinations on how you would like to map y
 	- Organize by mime type e.g TRANSCRIPT will go into the "texts" column
 	- Each in a separate column based on the datastream neame, TRANSCRIPT will go into the "transcripts" column
 
-![Islandora Solr Importer Datastream Placement](/images/I7step2_section2_ds_placementb.jpg)
+![Islandora Solr Importer Datastream Placement](images/I7step2_section2_ds_placementb.jpg)
 
 ## Step 3: Data Transformation Selections
 
@@ -89,7 +89,7 @@ Select the data transformation approach--how your source data will be transforme
         - Select `Template` and use the AMI Ingest JSON template that corresponds with your metadata elements.
         - Select `images`, `documents`, and `audios` for the file source/fetching.
 
-             ![Islandora Solr Importer Data Transformation](/images/I7step3_DataTransformation_updated_2022-11.jpg)
+             ![Islandora Solr Importer Data Transformation](images/I7step3_DataTransformation_updated_2022-11.jpg)
 
 ## Step 4: Global ADO Mappings
 
@@ -104,7 +104,7 @@ Select your global ADO mappings.
     - Do not select any column for 'Sequence'
     - Select the `label` column for ADO Label
 
-     ![Islandora Solr Importer Global ADO Mappings](/images/I7step4_GlobalADOMap_updated_2022-11.jpg)
+     ![Islandora Solr Importer Global ADO Mappings](images/I7step4_GlobalADOMap_updated_2022-11.jpg)
 
 ## Step 5: ZIP upload and AMI Set naming
 
@@ -114,7 +114,7 @@ For your Islandora 7 Solr Importer process, the generated AMI set.csv file will 
 
 After you provide a title for your AMI set under "_Please Name your AMI set_", select "_Press to Create Set_"
 
-![Islandora 7 Solr Importer Zip upload and AMI Set naming](/images/I7step5_Zip_AMI_Naming_updated_2022-11.jpg)
+![Islandora 7 Solr Importer Zip upload and AMI Set naming](images/I7step5_Zip_AMI_Naming_updated_2022-11.jpg)
  
 ## Step 6: Batch fetching from Solr
  
@@ -126,7 +126,7 @@ During this step, AMI will fetch the specified digital objects from the remote S
 
 You will now see a message letting your know your "New AMI Set was created". You will be able to review the generated .csv file directly from this page under Source Data File.
 
-![Islandora 7 Solr Importer AMI Set Confirmation](/images/I7step7_Set_Creation_updated_2022-11.jpg)
+![Islandora 7 Solr Importer AMI Set Confirmation](images/I7step7_Set_Creation_updated_2022-11.jpg)
   
 While you may immediately select "Process" from this AMI Set Confirmation page to use the Islandora 7 Importer generated .csv file as-is to ingest the ADOs in your AMI set, it is strongly recommended that you review the .csv file first. AMI is configured to trim unecessary (for Archipelago) and de-duplicate redundant Solr source data, but you may wish to pare down the sourced data even further and/or conduct general metadata review and cleanup before migrating your content. You will also likely want to make adjustments to your AMI Ingest JSON Template based on your review, depending on the variation of metadata columns/keys found in your source repostiory. 
 
