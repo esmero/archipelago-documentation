@@ -521,38 +521,18 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-5-zip-upload">
-    Step 5: ZIP upload
+<a class="md-nav__link" href="#step-5-zip-upload-and-ami-set-naming">
+    Step 5: ZIP upload and AMI Set naming
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-6-batch-fetching-from-solr">
-    Step 6: Batch fetching from Solr
+<a class="md-nav__link" href="#step-6-ami-set-confirmation">
+    Step 6: AMI Set Confirmation
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-7-ami-set-confirmation">
-    Step 7: AMI Set Confirmation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-8-ami-set-processing">
-    Step 8: AMI Set Processing
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-9-queue-manager-if-not-processing-immediately">
-    Step 9: Queue Manager (if not Processing immediately)
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-10-processing-and-ado-creation">
-    Step 10: Processing and ADO Creation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-11-review-your-newly-created-digital-objects">
-    Step 11: Review your newly created Digital Objects
+<a class="md-nav__link" href="#next-steps">
+    Next Steps
   </a>
 </li>
 </ul>
@@ -755,38 +735,18 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-5-zip-upload">
-    Step 5: ZIP upload
+<a class="md-nav__link" href="#step-5-zip-upload-and-ami-set-naming">
+    Step 5: ZIP upload and AMI Set naming
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-6-batch-fetching-from-solr">
-    Step 6: Batch fetching from Solr
+<a class="md-nav__link" href="#step-6-ami-set-confirmation">
+    Step 6: AMI Set Confirmation
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-7-ami-set-confirmation">
-    Step 7: AMI Set Confirmation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-8-ami-set-processing">
-    Step 8: AMI Set Processing
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-9-queue-manager-if-not-processing-immediately">
-    Step 9: Queue Manager (if not Processing immediately)
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-10-processing-and-ado-creation">
-    Step 10: Processing and ADO Creation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-11-review-your-newly-created-digital-objects">
-    Step 11: Review your newly created Digital Objects
+<a class="md-nav__link" href="#next-steps">
+    Next Steps
   </a>
 </li>
 </ul>
@@ -803,7 +763,7 @@
 <p>From either the main Content page or the AMI Sets List page, select the 'Start an AMI set' button to begin.</p>
 <h2 id="step-1-plugin-selection">Step 1: Plugin Selection</h2>
 <p>Select the Islandora 7 Solr Importer from the dropdown menu.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/I7step1.jpg"><img alt="Islandora Solr Importer Step 11" src="../images/ami/I7step1.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/I7step1_plugin_updated_2022-11.jpg"><img alt="Islandora 7 Solr Importer Step 1 Plugin " src="../images/I7step1_plugin_updated_2022-11.jpg"/></a></p>
 <h2 id="step-2-section-1-solr-server-configuration">Step 2, section 1: Solr Server Configuration</h2>
 <p>You will only have the option to select 'Create New ADOs' as the Operation you would like to perform.</p>
 <p>For the Solr Server Configuration section, you will need to provide all of the following information:</p>
@@ -825,17 +785,14 @@
 <p>The Starting Row is an offset and defaults to 0, which is the most common (and recommended) approach. For the Total Number of Rows to Fetch, setting this to empty or null will automatically (refresh when selecting 'Next' button at bottom of page) prefill with the real Number Rows found by the Solr Query invoked. If you set this number higher than the actual results we will only fetch what can be fetched.</p>
 <p>For larger collections, you may wish to create multiple/split AMI ingest sets by selecting a specified number of rows. </p>
 <ul>
-<li>
-<p>As an example, for a collection of 1500 objects that you wanted to split into three AMI ingests of 500 objects, you would specify the Starting Row as 0 for the first set and Number of Rows as 500. For the second set, your Starting Row would be Row 501; for the third set, 1001). In this example, the Number of Rows would always be 500.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/I7step2_section1.jpg"><img alt="Islandora Solr Importer Step 2 Section 1" src="../images/ami/I7step2_section1.jpg"/></a></p>
-</li>
+<li>As an example, for a collection of 1500 objects that you wanted to split into three AMI ingests of 500 objects, you would specify the Starting Row as 0 for the first set and Number of Rows as 500. For the second set, your Starting Row would be Row 501; for the third set, 1001). In this example, the Number of Rows would always be 500.</li>
 </ul>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/I7step2_serverconfig_updated_2022-11.jpg"><img alt="Islandora 7 Solr Importer Step 2 Server Configuration" src="../images/I7step2_serverconfig_updated_2022-11.jpg"/></a></p>
 <h2 id="step-2-section-2-islandora-mappings">Step 2, section 2: Islandora Mappings</h2>
-<p>In this step you will need to make determinations on how you would like to map your Islandora 7 digital objects to your Archipelago repository.</p>
+<p>In this step you will need to make determinations on how you would like to map your Islandora 7 digital objects to your Archipelago repository and whether or not you would like to fetch additional file datastreams, such as those for thumbnail images, transcripts, OCRs/HOCRs, etc.</p>
 <ul>
 <li>
-<p>Selecting "Collapse Multi Children Objects" will collapse Children Datastreams into a single ADO with many attached files (single row in the generated AMI set .csv file). Book Pages will be fetched but also the Top Level PDF (if one exists in your Islandora instance).
-    <a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/I7step2_section2_collapse.jpg"><img alt="Islandora Solr Importer Step 2 Section 2 Collapse" src="../images/ami/I7step2_section2_collapse.jpg"/></a></p>
+<p><em>Selecting "Collapse Multi Children Objects" will collapse Children Datastreams into a single ADO with many attached files (single row in the generated AMI set .csv file). Book Pages will be fetched but also the Top Level PDF (if one exists in your Islandora instance).</em></p>
 </li>
 <li>
 <p>In the Required ADO mappings, you will need to specify which Archipelago type you want to map each Islandora Content Model found in your source collection. </p>
@@ -844,13 +801,23 @@
 </ul>
 </li>
 <li>
-<p>If you had left "Collapse Multi Children Objects" unselected, you will also need to specify the Islandora Content Model to ADO types mapping for possible Children.
-    <a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/I7step2_section2_nocollapse.jpg"><img alt="Islandora Solr Importer Step 2 Section 2 No Collapse" src="../images/ami/I7step2_section2_nocollapse.jpg"/></a></p>
-</li>
-<li>
-<p>You can also specify an ADO (Object or Collection) to be used the Parent of Imported Objects. By selecting an existing ADO (Object or Collection) here using the autocomplete/search, the generated AMI set .csv file will contain an 'ismemberof' column containing the UUID of the selected ADO for every row.</p>
+<p>If you had left "Collapse Multi Children Objects" unselected, you will also need to specify the Islandora Content Model to ADO types mapping for possible Children.</p>
 </li>
 </ul>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/I7step2_sect2_nocollapse_updated_2022-11.jpg"><img alt="Islandora 7 Solr Importer Step 2 Mappings No Collapse" src="../images/I7step2_sect2_nocollapse_updated_2022-11.jpg"/></a>
+- You can also specify an ADO (Object or Collection) to be used the Parent of Imported Objects. By selecting an existing ADO (Object or Collection) here using the autocomplete/search, the generated AMI set .csv file will contain an 'ismemberof' column containing the UUID of the selected ADO for every row.
+- Under "<em>Additional Datastreams to Fetch</em>", you can select any number and/or combination of extra file datastreams to retrieve from your harvest. Please not that the I7 Importer will fetch every possible datastream that is present in your source I7 repository, but the additional file datastreams referenced may not be associated with actual files for every digital object.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/I7step2_sect2_IslandoraMappings_updated_2022-11.jpg"><img alt="Islandora 7 Solr Importer Islandora Mappings" src="../images/I7step2_sect2_IslandoraMappings_updated_2022-11.jpg"/></a></p>
+<p><em>Language from form itself:</em></p>
+<p><em>Additional datastreams to fetch. OBJ datastream will always be fetched. Not all datastreams listed here might be present once your data is fetched.</em></p>
+<ul>
+<li>Selection of any additonal datastreams will generate a dropdown menu under "<em>Where extra datastreams should go</em>." Here you will decide the organization and location of those datastreams by selecting one of the two options<ul>
+<li>Organize by mime type e.g TRANSCRIPT will go into the "texts" column</li>
+<li>Each in a separate column based on the datastream neame, TRANSCRIPT will go into the "transcripts" column</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/I7step2_sect2_DSplacement_updated_2022-11.jpg"><img alt="Islandora Solr Importer Datastream Placement" src="../images/I7step2_sect2_DSplacement_updated_2022-11.jpg"/></a></p>
 <h2 id="step-3-data-transformation-selections">Step 3: Data Transformation Selections</h2>
 <p>Select the data transformation approach--how your source data will be transformed into ADO (Archipelago Digital Object) Metadata. As noted in the list below, <strong>'Custom (Expert Mode)'</strong> is the recommended choice for AMI sets generated using the Islandora 7 Solr Importer plugin.</p>
 <ul>
@@ -873,7 +840,7 @@
 </ol>
 </li>
 <li>
-<p>You will also need to Select which columns contain filenames, entities or URLS where files can be fetched from. Select what columns correspond to the Digital Object types found in your spreadsheet source.</p>
+<p>You will also need to Select which columns contain filenames, entities or URLS where files can be fetched from. Select what columns correspond to the Digital Object types found in your spreadsheet source. If you fetched additional file datastreams during Step 2, you will see those columns listed here as well (see screenshot below for examples).</p>
 </li>
 <li>
 <p>Lastly, for this step, you will need to select the destination Fields and Bundles for your New ADOs. If your spreadsheet source only contains Digital Objects, select <code>Strawberry (Descriptive Metadata source) for Digital Object</code></p>
@@ -882,7 +849,7 @@
 <li>Select <code>Template</code> and use the AMI Ingest JSON template that corresponds with your metadata elements.</li>
 <li>
 <p>Select <code>images</code>, <code>documents</code>, and <code>audios</code> for the file source/fetching.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIstep3JSONtemplateDataTransformation.jpg"><img alt="AMI Step 3 Data Transformation Mappings" src="../images/ami/AMIstep3JSONtemplateDataTransformation.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/I7step3_DataTransformation_updated_2022-11.jpg"><img alt="Islandora Solr Importer Data Transformation" src="../images/I7step3_DataTransformation_updated_2022-11.jpg"/></a></p>
 </li>
 </ul>
 </li>
@@ -903,52 +870,20 @@
 <li>Do not select any column for 'Sequence'</li>
 <li>Select the <code>label</code> column for ADO Label</li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIstep4GlobalADOmappings.jpg"><img alt="AMI Step 4 Global ADO Mappings" src="../images/ami/AMIstep4GlobalADOmappings.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/I7step4_GlobalADOMap_updated_2022-11.jpg"><img alt="Islandora Solr Importer Global ADO Mappings" src="../images/I7step4_GlobalADOMap_updated_2022-11.jpg"/></a></p>
 </li>
 </ul>
-<h2 id="step-5-zip-upload">Step 5: ZIP upload</h2>
+<h2 id="step-5-zip-upload-and-ami-set-naming">Step 5: ZIP upload and AMI Set naming</h2>
 <p>For standard Spreadsheet or Google Sheets AMI ingests, you would use this step to provide an optional ZIP file containing your assets. </p>
-<p>For your Islandora 7 Solr Importer process, the generated AMI set .csv file will contain the necessary URLs to the corresponding Islandora 7 file datastreams for each object as needed. Select next to skip this ZIP upload step and proceed. </p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIstep5zip.jpg"><img alt="AMI Step 5 Zip" src="../images/ami/AMIstep5zip.jpg"/></a> </p>
-<h2 id="step-6-batch-fetching-from-solr">Step 6: Batch fetching from Solr</h2>
-<p>During this step, AMI will fetch the specified digital objects from the remote Solr source. This is generally a quick process, but be aware that settings in the remote Solr source can impact the response time.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIstep4GlobalADOmappings.jpg"><img alt="Islandora Solr Importer Step Batch Solr Fetching" src="../images/ami/AMIstep4GlobalADOmappings.jpg"/></a></p>
-<h2 id="step-7-ami-set-confirmation">Step 7: AMI Set Confirmation</h2>
+<p>For your Islandora 7 Solr Importer process, the generated AMI set.csv file will contain the necessary URLs to the corresponding Islandora 7 file datastreams for each object as needed. Select next to skip this ZIP upload step and proceed. </p>
+<p>After you provide a title for your AMI set under "<em>Please Name your AMI set</em>", select "<em>Press to Create Set</em>"</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/I7step5_Zip_AMI_Naming_updated_2022-11.jpg"><img alt="Islandora 7 Solr Importer Zip upload and AMI Set naming" src="../images/I7step5_Zip_AMI_Naming_updated_2022-11.jpg"/></a></p>
+<h2 id="step-6-ami-set-confirmation">Step 6: AMI Set Confirmation</h2>
 <p>You will now see a message letting your know your "New AMI Set was created". You will be able to review the generated .csv file directly from this page under Source Data File.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/I7step7_setCreated.jpg"><img alt="Islandora Solr Importer Step 7 Set Creation" src="../images/ami/I7step7_setCreated.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/I7step7_Set_Creation_updated_2022-11.jpg"><img alt="Islandora 7 Solr Importer AMI Set Confirmation" src="../images/I7step7_Set_Creation_updated_2022-11.jpg"/></a></p>
 <p>While you may immediately select "Process" from this AMI Set Confirmation page to use the Islandora 7 Importer generated .csv file as-is to ingest the ADOs in your AMI set, it is strongly recommended that you review the .csv file first. AMI is configured to trim unecessary (for Archipelago) and de-duplicate redundant Solr source data, but you may wish to pare down the sourced data even further and/or conduct general metadata review and cleanup before migrating your content. You will also likely want to make adjustments to your AMI Ingest JSON Template based on your review, depending on the variation of metadata columns/keys found in your source repostiory. </p>
-<h2 id="step-8-ami-set-processing">Step 8: AMI Set Processing</h2>
-<p>Whether you have chosen to review your .csv file or not, your newly created AMI Set will now need to be Processed.</p>
-<p>On the main AMI set page, you can review the configurations and Source Data File for your set (determined by your selections in the preceding steps).</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIsetAdminReview.jpg"><img alt="AMI Set Admin Review" src="../images/ami/AMIsetAdminReview.jpg"/></a></p>
-<p>To Process this set, navigate to the <code>Process</code> tab. You will have two options related to the Processing outcome for your AMI Set. </p>
-<ul>
-<li>Option 1: Select the "Desired ADOS Statuses After Process" for both Digital Objects (and Digital Object Collections, if also part of your ingest).<ul>
-<li>The Statuses you have available will reflect the publication workflow/moderation states (such as Draft, Published, Archived/Unpublished) setup in your Archipelago instance, and the permissions associated your user account.    </li>
-</ul>
-</li>
-<li>Option 2: You may choose to check the option to 'Enqueue but do not process Batch' to place the AMI set in the Queue to Process. <em>For the AMI version shipped with Archipelago 1.0.0-RC2, the option to 'Enqueue' for scheduled/future Processing should only be used if the Queue operations for your Archipelago instance are configured. Please return to this page for updated Enqueueing instructions that will accompany future releases.</em></li>
-<li>
-<p>Select <code>Confirm</code> to continue. </p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIsetAdminProcessRC2.jpg"><img alt="AMI Admin Set Process" src="../images/ami/AMIsetAdminProcessRC2.jpg"/></a></p>
-</li>
-</ul>
-<p>You may also select <code>Process</code> from the <code>Operations</code> menu for the AMI set from the main <code>AMI sets</code> page.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMISetAdminProcessOpsMenu.jpg"><img alt="AMI Sets Admin Process Operations Menu" src="../images/ami/AMISetAdminProcessOpsMenu.jpg"/></a></p>
-<p>If you chose to 'Confirm" and Process your AMI Set immediately, proceed to Step 9: Processing and ADO Creation.   </p>
-<h2 id="step-9-queue-manager-if-not-processing-immediately">Step 9: Queue Manager (if not Processing immediately)</h2>
-<p>If you chose to place your AMI set in the Queue to Process in step 7, you may need to navigate to the Queue Manager found at <code>/admin/config/system/queue-ui</code>. (Be sure to select the <code>Queue Manager</code> under the System section, not the <code>Queue Manager for Hydroponic Service</code> under the Archipelago section). If the Queue operations for your Archipelago instance have been configured, you can simply leave your AMI Set in the Queue for Processing on the preconfigured schedule.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIqueueMgr.jpg"><img alt="AMI Queue Manager" src="../images/ami/AMIqueueMgr.jpg"/></a></p>
-<p>To Process your AMI Set immediately from the Queue Manager page, select the checkbox next to the 'AMI Digital Object Ingester Queue Worker'. Keep the <code>Action</code> menu set to <code>Batch Process</code> and click the <code>Apply to selected items</code> button.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIqueueMgrBatchProcess.jpg"><img alt="AMI Queue Manager Batch" src="../images/ami/AMIqueueMgrBatchProcess.jpg"/></a></p>
-<h2 id="step-10-processing-and-ado-creation">Step 10: Processing and ADO Creation</h2>
-<p>Your AMI set will now be Processed. You can follow the set's progress through the <code>Processing queues</code> loading screen.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIprocessingQueue.jpg"><img alt="AMI Processing Queues" src="../images/ami/AMIprocessingQueue.jpg"/></a></p>
-<p>After your AMI set is Processed, you will receive confirmation messages letting you know your Digital Objects were successfully created. </p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIsetSuccessRC2.jpg"><img alt="AMI Set Succes" src="../images/ami/AMIsetSuccessRC2.jpg"/></a></p>
-<p>From this message, you can click on each ADO title to review the new created Digital Object (or Collection) if you wish. Or, you may proceed to step 10.  </p>
-<h2 id="step-11-review-your-newly-created-digital-objects">Step 11: Review your newly created Digital Objects</h2>
-<p>Return to the main Content page found at <code>/admin/content</code> and review your newly created Digital Objects. After ensuring that files and metadata elements were mapped correctly, you may choose to change the Status for your Digital Objects to 'Published'. Celebrate your AMI success with a fresh coffee, tea, or cookie!</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>To proceed with Processing your AMI Set, <a href="../AMIviaSpreadsheets/#step-7-ami-set-processing">click here</a> to directed to the main <a href="../AMIviaSpreadsheets/">Ingesting Digital Objects via Spreadsheets</a>.</p>
 <hr/>
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
 <p>Return to the <a href="../">Archipelago Documentation main page</a>.</p>
@@ -957,7 +892,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 20, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2022</span>
 <br/>
         Created:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2021</span>
