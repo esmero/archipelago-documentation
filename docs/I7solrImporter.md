@@ -66,7 +66,7 @@ In this step you will need to make determinations on how you would like to map y
 	- Organize by mime type e.g TRANSCRIPT will go into the "texts" column
 	- Each in a separate column based on the datastream neame, TRANSCRIPT will go into the "transcripts" column
 
-![Islandora Solr Importer Datastream Placement](images/I7step2_section2_ds_placementb.jpg)
+![Islandora Solr Importer Datastream Placement](images/I7step2_sect2_DSplacement_updated_2022-11.jpg)
 
 ## Step 3: Data Transformation Selections
 
@@ -120,7 +120,6 @@ After you provide a title for your AMI set under "_Please Name your AMI set_", s
  
 During this step, AMI will fetch the specified digital objects from the remote Solr source. This is generally a quick process, but be aware that settings in the remote Solr source can impact the response time.
 
-![Islandora Solr Importer Step Batch Solr Fetching](images/ami/AMIstep4GlobalADOmappings.jpg)
 
 ## Step 7: AMI Set Confirmation
 
