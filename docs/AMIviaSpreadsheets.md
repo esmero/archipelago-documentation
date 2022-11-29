@@ -7,7 +7,7 @@ tags:
 
 # Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
 
-Ingesting Only Digital Objects or Both Digital Objects and Collections uses similar processes, with a few key differences. [Click here](#ingesting-both-new-digital-objects-and-collections-in-the-same-spreadsheet) to jump to the [Ingesting both Digital Objects and Collections and/or Creative Work Series (Compound) Objects section](#ingesting-both-new-digital-objects-and-collections-in-the-same-spreadsheet) of this guide page.
+Ingesting Only Digital Objects or Both Digital Objects and Collections uses similar processes, with a few key differences. [Click here](#ingesting-both-new-digital-objects-and-collections-andor-creative-work-series-compound-objects-in-the-same-spreadsheet) to jump to the [Ingesting both Digital Objects and Collections and/or Creative Work Series (Compound) Objects section](#ingesting-both-new-digital-objects-and-collections-andor-creative-work-series-compound-objects-in-the-same-spreadsheet) of this guide page.
 
 ## Ingesting _Only_ New Digital Objects
 
