@@ -9,17 +9,15 @@ tags:
 
 [Archipelago Multi-Importer (AMI)](https://github.com/esmero/ami) is a module for batch/bulk/mass ingests of Archipelago digital objects (ADOs) and collections. AMI also enables you to perform batch administrative actions, such as updating, patching/revising, or deleting digital objects and collections. AMI's Solr Importer plugin can be used to create AMI ingests and migrating content from existing Solr-sourcable digital repositories (such as Islandora 7).
 
-## Getting started with AMI
-
-You can access AMI through the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`.
-
-![AMI Sets List](images/ami/AMIsetsList.jpg)
-
-## AMI Overview and Pre-Release Notes - AMI 0.4.0 (Archipelago - 1.0.0)
+## AMI Overview and Under-the-Hood Explanations
 
 *From the desk of [Diego Pino](https://github.com/DiegoPino)*
 
-AMI provides Tabulated data ingest for ADOs with customizable input plugins. Each Spreadsheet (or Google Spreadsheet) goes through a Configuration Multi Step setup and generates at the end an AMI Set. AMI Sets then can be enqueued or directly ingested, its generated Objects purged and reingested again, its source data (generated and enriched with UUIDS) CSV replaced, improved and uploaded again and ingested.
+AMI provides Tabulated data ingest for ADOs with customizable input plugins. Each Spreadsheet (or Google Spreadsheet) goes through a Configuration Multi-step setup and generates at the end an AMI Set. AMI Sets then can be enqueued or directly ingested, its generated Objects purged and reingested again, its source data (generated and enriched with UUIDS) CSV replaced, improved and uploaded again and ingested.
+
+### Learn More about Metadata in Archipelago and AMI
+
+Please review the [Metadata in Archipelago overview](metadatainarchipelago.md) to learn about Archipelago's unique approach to metadata and how this applies in the context of AMI set adminstration.
 
 ??? info "Click to read the full AMI 0.4.0 (Archipelago - 1.0.0) Pre-Release Notes."
 
@@ -39,20 +37,17 @@ AMI provides Tabulated data ingest for ADOs with customizable input plugins. Eac
 
 You can access AMI through the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`.
 
-![AMI Sets List](images/ami/AMIsetsList.jpg)
+![AMI Sets List Updated](images/AMIsetsList_updated_2022-11.jpg)
 
-## Google Sheets API Congifuration
+## Google Sheets API Configuration
 
 If you plan on using the Google Sheets Importer option, you will need to [Configure the Google Sheets API](googleapi.md).
 
-### Example Spreadsheet/CSV
+## Example Spreadsheet/CSV
 
-This spreadsheet can be used to import a small set of Digital Objects using the same assets part of the [Two-Step Demo content ingest guide](archipelago-deployment-democontent.md) (these objects can also be found in the [Archipelago Deployment repository](https://github.com/esmero/archipelago-deployment)).
+Please refer to or use a fresh/new copy of the [Demo Archipelago Digital Objects (ADOs) spreadsheet](https://github.com/esmero/archipelago-deployment/blob/1.0.0/d8content/ami_set_entity_01.csv) to import a small set of Digital Objects, using the same assets part of the [One-Step Demo content ingest guide](archipelago-deployment-democontent.md).
 
-- <https://docs.google.com/spreadsheets/d/10IAgDZ1_fGVd_2g1GyUYs0SrnkAfvVtTwukEaIEny5Y/edit?usp=sharing>
-- To use this spreadsheet, you can either download as a CSV file to use with the Spreadsheet Importer, or make a copy of this using your [configured Google Sheets API account](googleapi.md).
-
-### Example JSON template
+## Example JSON template
 
 This JSON template can be used during the Data Transformation (step 3) of your AMI Import. This particular template corresponds with the metadata elements found in the Default Descriptive Metadata and Default Digital Object Collection webforms shipped with Archipelago 1.0.0.
 
@@ -71,14 +66,30 @@ This JSON template can be used during the Data Transformation (step 3) of your A
           "website_url": {{ data.website_url|json_encode|raw }},
           "description": {{ data.description|json_encode|raw }},
           "date_created": {{ data.date_created|json_encode|raw }},
+          "date_created_edtf": {{ data.date_created_edtf|json_encode|raw }},
+          "date_created_free": {{ data.date_created_free|json_encode|raw }},
           "creator": {{ data.creator|json_encode|raw }},
           "creator_lod": {{ data.creator_lod|json_encode|raw }},
           "publisher": {{ data.publisher|json_encode|raw }},
           "language": {{ data.language|json_encode|raw }},
           "ismemberof": [],
+          "ispartof": [],
+          "sequence_id": {{ data.sequence_id|json_encode|raw }},  
           "owner": {{ data.owner|json_encode|raw }},
           "local_identifier": {{ data.local_identifier|json_encode|raw }},
+          "related_item_host_title_info_title": {{ data.related_item_host_title_info_title|json_encode|raw }},
+          "related_item_host_display_label": {{ data.related_item_host_display_label|json_encode|raw }},
+          "related_item_host_type_of_resource": {{ data.related_item_host_type_of_resource|json_encode|raw }},
+          "related_item_host_local_identifier": {{ data.related_item_host_local_identifier|json_encode|raw }},
+          "related_item_note": {{ data.related_item_note|json_encode|raw }},
+          "related_item_host_location_url": {{ data.related_item_host_location_url|json_encode|raw }},
+          "note": {{ data.note|json_encode|raw }},
+          "physical_description_note_condition": {{ data.physical_description_note_condition|json_encode|raw }},
+          "note_publishinginfo": {{ data.note_publishinginfo|json_encode|raw }},
+          "physical_location": {{ data.physical_location|json_encode|raw }},
+          "physical_description_extent": {{ data.physical_description_extent|json_encode|raw }},
           "date_published": {{ data.date_published|json_encode|raw }},
+          "date_embargo_lift": {{ data.date_embargo_lift|json_encode|raw }},
           "rights_statements": {{ data.rights_statements|json_encode|raw }},
           "rights": {{ data.rights|json_encode|raw }},
           "subject_loc": {{ data.subject_loc|json_encode|raw }},
@@ -89,6 +100,11 @@ This JSON template can be used during the Data Transformation (step 3) of your A
           "subject_wikidata": {{ data.subject_wikidata|json_encode|raw }},
           "edm_agent": {{ data.edm_agent|json_encode|raw }},
           "term_aat_getty": {{ data.term_aat_getty|json_encode|raw }},
+          "viaf": {{ data.viaf|json_encode|raw }},
+          "pubmed_mesh": {{ data.pubmed_mesh|json_encode|raw }},
+          "europeana_concepts": {{ data.europeana_concepts|json_encode|raw }},
+          "europeana_agents": {{ data.europeana_agents|json_encode|raw }},
+              "europeana_places": {{ data.europeana_places|json_encode|raw }},
           "geographic_location": {{ data.geographic_location|json_encode|raw }},
           "subjects_local_personal_names": {{ data.subjects_local_personal_names|json_encode|raw }},
           "subjects_local": {{ data.subjects_locals|json_encode|raw }},

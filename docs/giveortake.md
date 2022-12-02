@@ -36,7 +36,7 @@ Documentation is an evolving effort, and we need help. This guide lives in GitHu
 
 ## Development Workflow
 
-Start by reading open ISSUES (so you don't end up redoing what someone else is already working on) and looking at our [Roadmap for version 1.0.0-RC2](https://github.com/esmero/archipelago-deployment/issues/103). If the solution to your problem is not there or if there is an unchecked element in the roadmap, this is a great opportunity to help by creating a new ISSUE.
+Start by reading open ISSUES (so you don't end up redoing what someone else is already working on) and looking at our [Roadmap for version 1.0.0](https://github.com/esmero/archipelago-deployment/issues/190). If the solution to your problem is not there or if there is an unchecked element in the roadmap, this is a great opportunity to help by creating a new ISSUE.
 
 Next, start by opening an GitHub ISSUE in any of the 5 GitHub repositories, depending on what it is you are trying to do.
 
