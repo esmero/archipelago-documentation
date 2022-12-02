@@ -10,60 +10,65 @@ nav:
   - About Archipelago:
     - Archipelago's Philosophy & Guiding Principles: ourtake.md
     - Strawberryfields Forever: strawberryfields.md
+    - Metadata in Archipelago: metadatainarchipelago.md
+    - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
     - Software Services: devops.md
   - Code of Conduct: CODE_OF_CONDUCT.md
   - Instructions and Guides:
-    - Archipelago-Deployment:
-      - Start: archipelago-deployment-readme.md
-      - Installing Archipelago Drupal 9 on OSX (macOS): archipelago-deployment-osx.md
-      - Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04: archipelago-deployment-ubuntu.md
-      - Installing Archipelago Drupal 9 on Windows 10/11: archipelago-deployment-windows.md
-      - Adding Demo Archipelago Digital Objects (ADOs) to your Repository: archipelago-deployment-democontent.md
-      - Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3): archipelago-deployment-upgradeFromD8ToD9.md
-      - Upgrading from 1.0.0-RC3 to 1.0.0: archipelago-deployment-upgradeFromRC3.md
-    - Archipelago-Deployment-Live:
-      - Start: archipelago-deployment-live-readme.md
-      - Github Workflow: archipelago-deployment-live-gitworkflow.md
-      - Moving from archipelago-deployment to archipelago-deployment-live: archipelago-deployment-live-moveToLive.md
-      - Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3): archipelago-deployment-live-upgradeFromD8ToD9.md
-      - Upgrading from 1.0.0-RC3 to 1.0.0: archipelago-deployment-live-upgradeFromRC3.md
-      - Updating Docker Containers: archipelago-deployment-live-updatingContainers.md
+    - DevOps & Deployment:
+      - Archipelago-Deployment:
+        - Start: archipelago-deployment-readme.md
+        - Installing Archipelago Drupal 9 on OSX (macOS): archipelago-deployment-osx.md
+        - Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04: archipelago-deployment-ubuntu.md
+        - Installing Archipelago Drupal 9 on Windows 10/11: archipelago-deployment-windows.md
+        - Adding Demo Archipelago Digital Objects (ADOs) to your Repository: archipelago-deployment-democontent.md
+        - Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3): archipelago-deployment-upgradeFromD8ToD9.md
+        - Upgrading from 1.0.0-RC3 to 1.0.0: archipelago-deployment-upgradeFromRC3.md
+        - How to Set Up SSL for Docker/Archipelago: sslsetup.md
+      - Archipelago-Deployment-Live:
+        - Start: archipelago-deployment-live-readme.md
+        - Github Workflow: archipelago-deployment-live-gitworkflow.md
+        - Moving from archipelago-deployment to archipelago-deployment-live: archipelago-deployment-live-moveToLive.md
+        - Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3): archipelago-deployment-live-upgradeFromD8ToD9.md
+        - Upgrading from 1.0.0-RC3 to 1.0.0: archipelago-deployment-live-upgradeFromRC3.md
+        - Updating Docker Containers: archipelago-deployment-live-updatingContainers.md
+      - Utility Scripts: utility_scripts.md
+      - DevOps Q&A:
+        - Debugging PHP in Archipelago: xdebug.md 
+        - Min.io Logging: generalqa_minio_logging.md
+        - SMTP Configuration: generalqa_smtp_configuration.md
+        - Twig Modules Configuration: generalqa_twig_modules_configuration.md
     - Archipelago 101:
-      - Digital Objects and Collections, Metadata, General Workflows:
-        - Ingesting Your First Object: firstobject.md
-        - Webforms in Archipelago:
-          - webforms.md
-          - How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO): webformsasinput.md
-          - Customizing Webforms (Modifying allowable file extensions): modifyingfileextensionsinwebform.md
-          - Archipelago Custom Webform Elements: customwebformelements.md
-        - Twig Templates and Archipelago:
-          - metadatatwigs.md
-          - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
-          - Citations and Bibliographies:
-            - citations_bibliographies.md
-            - Citation Styles Reference: citation_styles.md
-            - Citation Locales Reference: citation_locales.md
-            - Citation Schema Reference: citation_schema.md
-        - Archipelago Multi-Importer (AMI):
-          - ami_index.md
-          - AMI Instructions and Guides:
-            - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
-            - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
-            - Linked Data Reconciliation: ami_lod_rec.md
-            - Using the Islandora 7 Solr Importer: I7solrImporter.md
-            - Configuration for Google Sheets API: googleapi.md
-        - Annotations: annotations.md
+      - Ingesting Your First Object: firstobject.md
+      - Webforms in Archipelago:
+        - webforms.md
+        - How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO): webformsasinput.md
+        - Customizing Webforms (Modifying allowable file extensions): modifyingfileextensionsinwebform.md
+        - Archipelago Custom Webform Elements: customwebformelements.md
+      - Twig Templates and Archipelago:
+        - metadatatwigs.md
+        - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
+        - Citations and Bibliographies:
+          - citations_bibliographies.md
+          - Citation Styles Reference: citation_styles.md
+          - Citation Locales Reference: citation_locales.md
+          - Citation Schema Reference: citation_schema.md
+      - Archipelago Multi-Importer (AMI):
+        - ami_index.md
+        - AMI Instructions and Guides:
+          - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
+          - Configuration for Google Sheets API: googleapi.md
+          - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
+          - Linked Data Reconciliation: ami_lod_rec.md
+          - Using the Islandora 7 Solr Importer: I7solrImporter.md
+      - Annotations: annotations.md
     - Site Administration & Configuration:
       - Strawberryfield Formatters: strawberryfield-formatters.md
       - Creating Display Modes: createdisplaymodes.md
       - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
-      - How to Set Up SSL for Docker/Archipelago: sslsetup.md
-      - Debugging PHP in Archipelago: xdebug.md
-      - General Q&A:
-        - generalqa_index.md
-        - Twig Modules Configuration: generalqa_twig_modules_configuration.md
-        - SMTP Configuration: generalqa_smtp_configuration.md
-        - Min.io Logging: generalqa_minio_logging.md
+    - General Q&A:
+      - generalqa_index.md 
+      - Coming soon: tbd.md
     - Contributing:
       - Archipelago Contribution Guide: giveortake.md
       - Documentation:
@@ -137,7 +142,7 @@ extra:
       name: Archipelago Commons Google Group
     - icon: fontawesome/brands/slack
       link: https://archipelagocommons.slack.com
-      name: Archipelago Commons Slack Channe
+      name: Archipelago Commons Slack Channel
   version:
     provider: mike
     default: default

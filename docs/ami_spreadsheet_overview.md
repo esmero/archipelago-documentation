@@ -9,10 +9,10 @@ tags:
 
 There are multiple ways a spreadsheet/CSV file can be structured to work with AMI, depending on the data transformation and mapping you will be using.
 
-- For most standard AMI ingests, each Row of your spreadsheet/CSV will correspond to a single Digital Object or Collection.
+- For most standard AMI ingests, each Row of your spreadsheet/CSV will correspond to a single Digital Object, Creative Work Series (Compound Object Parent) or Collection.
 - Columns in your spreadsheet/CSV can be mapped to different data (files) and metadata elements (label, description, subjects, etc.).
 
-- It is recommended that different types of files are placed into separate columns--"images", "documents", "models", "videos", "audios", "text".
+- It is recommended that different types of files are placed into separate columns--"images", "documents", "models", "videos", "audios", "texts".
     - Filepaths can point to remote files, to existing files within your docker container, s3 (or other storage type/location that is accessible to Archipelago), and to paths within zip files.
         - Example path for existing file within docker container:
             `/var/www/html/d8content/myAMIimage.jpg`
@@ -22,7 +22,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
             `https://dogsaregreat.edu/dogs.tiff`
     - **Multiple files (of the same type) can be placed in a single cell, separated by a semicolon ( ; ).**
     - For Digital Objects comprised of multiple types of files, such as an Oral History Interview with an audio file and a PDF transcript file, you can place different file types within different corresponding columns for the same Row.
-    - It is recommended that filepaths are copied/stored as plain (non hyperlinked) formatted text.
+    - It is recommended that filepaths are copied/stored as plain (non-hyperlinked) formatted text.
 
 - **Every spreadsheet/CSV file should contain the following Columns:**
     - `type`
@@ -33,6 +33,11 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
         - this can be empty
         - if empty, Archipelago will automatically generate UUIDs
         - can be used with existing UUIDs during migrations
+    - **Soft-requirement** `sequence_id` for Creative Work Series (compound) children objects
+        - this is used to determine the sequence order for children objects within a Creative Work Series (compound) object
+        - should be an integer only (ie, '1' and not 'Page 1')
+        - if not present, the objects will present in the original ingest order
+        - we strongly recommend mapping the correct sequence using 'sequence_id'
 
 - **Recommended Columns:**
     - Files as defined above
@@ -40,6 +45,7 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
         - .warc/.wacz files should be placed in a column "upload_associated_warcs"
     - `ismemberof` and/or `ispartof` (and/or whatever predicate corresponds with the relationship you are mapping)
         - these columns can be used to connect related objects using the object-to-object relationship that matches your needs
+        - in default Archipelago configurations, `ismemberof` is used for Collection Membership and `ispartof` is used for Parent-Child Object Relationships (so a Child ADO would reference the Parent ADO in `ispartof`)
         - these columns can hold 3 types of values
             - empty (no value)
             - an integer to connect an object to another object's corresponding row in the same spreadsheet/CSV
