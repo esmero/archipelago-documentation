@@ -795,7 +795,7 @@
 </li>
 <li>Core <em>(example: islandora)</em></li>
 </ul>
-<p>You will also need to select Starting Row you would like to begin fetching results from, and the Number of Rows to fetch. </p>
+<p>You will also need to select the Starting Row you would like to begin fetching results from, and the Number of Rows to fetch. </p>
 <p>The Starting Row is an offset and defaults to 0, which is the most common (and recommended) approach. For the Total Number of Rows to Fetch, setting this to empty or null will automatically (refresh when selecting 'Next' button at bottom of page) prefill with the real Number Rows found by the Solr Query invoked. If you set this number higher than the actual results we will only fetch what can be fetched.</p>
 <p>For larger collections, you may wish to create multiple/split AMI ingest sets by selecting a specified number of rows. </p>
 <ul>
@@ -819,8 +819,8 @@
 </li>
 </ul>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/I7step2_sect2_nocollapse_updated_2022-11.jpg"><img alt="Islandora 7 Solr Importer Step 2 Mappings No Collapse" src="../images/I7step2_sect2_nocollapse_updated_2022-11.jpg"/></a>
-- You can also specify an ADO (Object or Collection) to be used the Parent of Imported Objects. By selecting an existing ADO (Object or Collection) here using the autocomplete/search, the generated AMI set .csv file will contain an 'ismemberof' column containing the UUID of the selected ADO for every row.
-- Under "<em>Additional Datastreams to Fetch</em>", you can select any number and/or combination of extra file datastreams to retrieve from your harvest. Please not that the I7 Importer will fetch every possible datastream that is present in your source I7 repository, but the additional file datastreams referenced may not be associated with actual files for every digital object.</p>
+- You can also specify an ADO (Object or Collection) to be used as the Parent of Imported Objects. By selecting an existing ADO (Object or Collection) here using the autocomplete/search, the generated AMI set .csv file will contain an 'ismemberof' column containing the UUID of the selected ADO for every row.
+- Under "<em>Additional Datastreams to Fetch</em>", you can select any number and/or combination of extra file datastreams to retrieve from your harvest. Please note that the I7 Importer will fetch every possible datastream that is present in your source I7 repository, but the additional file datastreams referenced may not be associated with actual files for every digital object.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/I7step2_sect2_IslandoraMappings_updated_2022-11.jpg"><img alt="Islandora 7 Solr Importer Islandora Mappings" src="../images/I7step2_sect2_IslandoraMappings_updated_2022-11.jpg"/></a></p>
 <p><em>Language from form itself:</em></p>
 <p><em>Additional datastreams to fetch. OBJ datastream will always be fetched. Not all datastreams listed here might be present once your data is fetched.</em></p>
@@ -906,7 +906,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 5, 2022</span>
 <br/>
         Created:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2021</span>
