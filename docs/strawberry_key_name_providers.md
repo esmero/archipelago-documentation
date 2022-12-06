@@ -2,20 +2,22 @@
 title: Strawberry Key Name Providers
 tags:
   - Strawberry Key Name Providers
-  - Contributing
-  - Examples
+  - Solr
+  - Facets
 ---
 
 # Strawberry Key Name Providers
 
-For a contextual overview see [Drupal and JSON](metadatainarchipelago.md#drupal-and-json). The following will guide you through mapping a Strawberryfield JSON key to a Strawberry Key Name Provider
+For an overview of Strawberry Key Name Providers within the context of the rest of Archipelago, see [Drupal and JSON](metadatainarchipelago.md#drupal-and-json).
 
-## Create a Facet
+In order to expose the Strawberry Field JSON keys (and values) for an Archipelago Digital Objects (ADO) to Drupal's search, views, and facets, we need to make use of a plugin system called *Strawberry Key Name Providers*. What follows is a guide for configuring both the *Strawberry Key Name Providers* and the Drupal search, views, and facets.  
 
-1. First we are going to create or identify a JSON key to be faceted. For this example, we'll use `date_created_edtf`:
+## Creating a Strawberry Key Name Provider
+
+1. First, we'll start with an example of a Strawberry Field JSON key that we would like to expose:
 
     !!! example "date_created_edtf"
-
+    
         ```json hl_lines="8-13"
         ...
         "subject_wikidata": [
@@ -35,22 +37,66 @@ For a contextual overview see [Drupal and JSON](metadatainarchipelago.md#drupal-
         ``` 
 
 2. Next, we are going to create a new *Strawberry Key Name Provider* by going to `Administration > Structure > Strawberry Key Name Providers`, press the `+ Add Strawberry Key Name Provider` button, fill in the fields as follows, and save:
-
     * `Label`: `Date Created EDTF`
     * `Strawberry Key Name Provider Plugin`: `JmesPath Strawberry Field Key Name Provider`
     * `One or more comma separated valid JMESPaths`: `date_created_edtf.date_free`
     * `Is Date?`: `☑`
 
-3. Then we add the Solr field for indexing by going to `Administration > Configuration > Search and metadata > Search API > Drupal Content to Solr 8 > Fields`, pressing the `Add fields` button, and searching for the field (expand the `🍓 Strawberry (Descriptive Metadata source) (field_descriptive_metadata)` to find and add `field_descriptive_metadata:date_created_edtf_date_free`. Scroll down after adding to make sure the `Type` for the field is correct (`date` in this case). Reindex.
+### Strawberry Key Name Provider Plugins
 
-4. Now we'll add the facet by going to `Administration > Configuration > Search and metadata > Facets`, selecting the following options, and saving:
+You'll notice that there are four plugins, each with different options, available for different use cases. Below you'll find each plugin with examples from the providers that come with a default deployment.
 
+#### Entity Reference JmesPath Strawberry Field Key Name Provider
+
+!!! example "ismemberof"
+
+    **One or more comma separated valid JMESPaths**: `ismemberof`
+
+    **Entity type**: `node`
+
+#### Flavor/Embedded JSON Service Strawberry Field Key Name Provider
+
+!!! example "hoCR Service"
+
+    **Source JSON Key used to read the Service/Flavour**: `ap:hocr`
+
+#### JmesPath Strawberry Field Key Name Provider
+
+!!! example "Subject Labels"
+
+    **One or more comma separated valid JMESPaths**: `subject_loc[*].label, subject_wikidata[*].label, subject_lcnaf_geographic_names[*].label,subject_temporal[*].label, subject_lcgft_terms[*].label, term_aat_getty[*].label, pubmed_mesh[*].label`
+
+#### JSONLD Strawberry Field Key Name Provider
+
+!!! note "Best Practice"
+
+    As in the example below, if there are a group of flat and unique keys that you want to expose, we recommend creating one provider with this plugin and using a list of keys instead of creating multiple providers.
+
+!!! example "schema.org"
+
+    **Additional keys separated by commas**: `ismemberof,type,hocr,city,category,country,state,display_name,author,license`
+
+## Creating a Solr Field
+
+1. Go to `Administration > Configuration > Search and metadata > Search API > Drupal Content to Solr 8 > Fields`.
+2. Press the `Add fields` button.
+3. Search for the field created above (expand the `🍓 Strawberry (Descriptive Metadata source) (field_descriptive_metadata)`, e.g. for the key mapped above, look for `field_descriptive_metadata:date_created_edtf_date_free`.
+4. Scroll down after adding to make sure the `Type` for the field is correct (`date` for the example in this guide).
+5. Reindex Solr.
+    1. Go to `Administration > Configuration > Search and metadata > Search API` and click on the link to the index for your Drupal data.
+    2. Press the `Queue all items for reindexing` button.
+    3. Let cron reindex or press the `Index now` button.
+
+## Creating a Facet
+
+1. Go to `Administration > Configuration > Search and metadata > Facets`.
+2. Press the `+ Add facet` button.
+3. Select your facet settings. For the example in this guide, we'll select the following:
     * `Facet source`: `View Solr search content, display Page`
     * `Field`: `🍓 Strawberry (Descriptive Metadata source) >> date_created_edtf_date_free (field_descriptive_metadata:date_created_edtf_date_free)`
     * `Name`: `🍓 Strawberry (Descriptive Metadata source) >> date_created_edtf_date_free`
-
-5. Continuing with the facet configuration, we select the following from the list of many options, by pressing `Edit` for the facet we just created, updating some of the default settings, and saving:
-
+4. Save.
+5. Continue with the facet configuration by pressing `Edit` for the facet we just created and adjusting the many options available as needed. For the example in this guide, we'll adjust the below from the default settings:
     * `Facet settings`
         * `☑` `Date item processor`
             * `Date display`
@@ -58,6 +104,22 @@ For a contextual overview see [Drupal and JSON](metadatainarchipelago.md#drupal-
             * `Granularity`
                 * `🔘` `Year`
         * `URL alias`: `sbf_date_created_edtf`
+6. Save.
 
-6. Finally, we'll add the facet as a block by going to `Administration > Structure > Block layout`, selecting the `Archipelago Base Theme`, pressing the `Place block` button next to `Sidebar second`, selecting the `🍓 Strawberry (Descriptive Metadata source) >> date_created_edtf_date_free`, and pressing the `Place block` button again. Once the block is added, you can drag and drop it to change its position among the existing blocks and saving.
+## Creating a Block for the Facet
+
+1. Go to `Administration > Structure > Block layout`.
+2. Select the appropriate theme. For the example in this guide, we'll select `Archipelago Base Theme`.
+3. Press the `Place block` button next to the appropriate region. For the example in this guide, we'll be placing the block in the `Sidebar second` region.
+4. Select your facet from the list. For the example in this guide, we'll select `🍓 Strawberry (Descriptive Metadata source) >> date_created_edtf_date_free`
+5. Press the `Place block` button next to the facet. Once the block is added, you can drag and drop it to change its position among the existing blocks and saving.
+
+## Video Guide
+
+The below is a video guide covering similar ground as the above. The RC2 instance in the video may look slightly different, but the concepts and functionality are the same.
+
+<video controls>
+  <source type="video/mp4" src="../videos/JSON_Key_Name_Providers_and_Solr_Driven_facets_RC2.mp4">
+  Your browser does not support the video tag.
+</video>
 
