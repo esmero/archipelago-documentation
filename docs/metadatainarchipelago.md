@@ -26,7 +26,7 @@ Finally Metadata is very close to their generators. Means you and your peers wil
 
 Drupal, the OSS CMS system Archipelago uses and extends, is RDB driven. This means that `Content Types` normally follow the idea of an *Entity* with *Fields* attached. Each of these *Fields* becomes then a Database Table and the sum of all these fields living under a `Content Type` definition, a fixed schema. 
 
-For integration and interoperatibility reasons with the larger Drupal ecosystem, we inherit in Archipelago the idea of an *Entity*, in specific , a *Content Entity*  (Node) and  `Content Type` (Bundled fields for a Node). But instead of generating (and encouraging) the use of hundreds of fixed fields to describe your Digital Objects we put all Metadata as JSON, means a **JSON BLOB**,  into a single smart Field of type `Strawberry Field`. 
+For integration and interoperability reasons with the larger Drupal ecosystem, we inherit in Archipelago the idea of an *Entity*, in specific , a *Content Entity*  (Node) and  `Content Type` (Bundled fields for a Node). But instead of generating (and encouraging) the use of hundreds of fixed fields to describe your Digital Objects we put all Metadata as JSON, means a **JSON BLOB**,  into a single smart Field of type `Strawberry Field`. 
 
 We go a long way of making as much as possible flexible and dynamic. This also implies the definition (and separation) of what an *Archipelago Digital Object* (ADO)  is in our Architecture v/s what a general Drupal Content Type is (e.g a static page or a blog post) is defined in code as: "Any Content type that uses a Strawberry Field is an ADO and will be processed as such". No configuration is needed. In other words, all is a NODE but any node that uses a Strawberry Field gets a different treatment and will be named in Archipelago an ADO.
 
@@ -84,7 +84,7 @@ Archipelago will use the `label` key's value to populate the ADO's (Drupal Node)
 
 Because of the need of having **Technical Metadata**, **Descriptive Metadata** and **Semantic Metadata** while generating different representations of your JSON via Metadata Display Entities (Twig templates) transformations we store and characterize Files attached to an ADO as part of the JSON. We also use a set of special keys to map and cast JSON keys and values to Drupal's internal Entities system via their Numeric and or UUID IDs. 
 
-Throuht this, Archipelago will also move files between upload locations and permanent storage, execute Technical metadata extraction, keep track of ADO to ADO relationships (e.g *ispartof* or *ismemberof*) and emulate what a traditional `Drupal Entity Reference field` would do without the limitations (speed and immutability) a static RDB definition imposes.
+Throughout this, Archipelago will also move files between upload locations and permanent storage, execute Technical metadata extraction, keep track of ADO to ADO relationships (e.g *ispartof* or *ismemberof*) and emulate what a traditional `Drupal Entity Reference field` would do without the limitations (speed and immutability) a static RDB definition imposes.
 
 #### The `ap:entitymapping` key
 
