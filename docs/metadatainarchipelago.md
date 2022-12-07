@@ -84,7 +84,7 @@ Archipelago will use the `label` key's value to populate the ADO's (Drupal Node)
 
 Because of the need of having **Technical Metadata**, **Descriptive Metadata** and **Semantic Metadata** while generating different representations of your JSON via Metadata Display Entities (Twig templates) transformations, we store and characterize Files attached to an ADO as part of the JSON. We also use a set of special keys to map and cast JSON keys and values to Drupal's internal Entities system via their Numeric and/or UUID IDs. 
 
-Throuh this, Archipelago will also move files between upload locations and permanent storage, execute Technical metadata extraction, keep track of ADO-to-ADO relationships (e.g *ispartof* or *ismemberof*), and emulate what a traditional `Drupal Entity Reference field` would do without the limitations (speed and immutability) a static RDB definition imposes.
+Through this, Archipelago will also move files between upload locations and permanent storage, execute Technical metadata extraction, keep track of ADO to ADO relationships (e.g *ispartof* or *ismemberof*) and emulate what a traditional `Drupal Entity Reference field` would do without the limitations (speed and immutability) a static RDB definition imposes.
 
 #### The `ap:entitymapping` key
 
