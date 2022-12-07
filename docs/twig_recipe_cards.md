@@ -94,7 +94,7 @@ We recommend reading through our main [Metadata Display Preview](metadata_displa
         {# Updated August 26th 2022, by Diego Pino. New checks/logic for mods_name_type_role_composed_or_more_namepart
         - Check first IF for a given namepart there is already reconciliaton. 
         - IF not i check if there is a matching valueuri, 
-        - IF NOT i leave the URL empty and use the value in the namepart (label) only?
+        - If not leave the URL empty and use the value in the namepart (label) only?
         - Only check/use mods_name_corporate/personal_namepart field IF there are no other fields
         - That specify Roles. Since normally in ISLANDORA that field (no role) is a Catch all names one
         - And in that case USE creator as the default ROLE
@@ -221,12 +221,12 @@ We recommend reading through our main [Metadata Display Preview](metadata_displa
   -#}
     {#- use value for Nominatim search -#}
     {% if data.mods_subject_geographic|length > 0 %}
-    {% set nominatim_from_label = ami_lod_reconcile(data.mods_subject_geographic,'nominatim;thing;search','en') -%}
+      {% set nominatim_from_label = ami_lod_reconcile(data.mods_subject_geographic,'nominatim;thing;search','en') -%}
     "geographic_location": {{ nominatim_from_label|json_encode|raw }},
     {% endif %}
     {#- use coordinates for Nominatim search, if provided -#}
     {% if data.mods_subject_cartographics_coordinates|length > 0 %}
-    {% set nominatim_from_coordinates = ami_lod_reconcile(data.mods_subject_cartographics_coordinates,'nominatim;thing;reverse','en') -%}
+      {% set nominatim_from_coordinates = ami_lod_reconcile(data.mods_subject_cartographics_coordinates,'nominatim;thing;reverse','en') -%}
     "geographic_location": {{ nominatim_from_coordinates|json_encode|raw }},
     {% endif %}
 {#- Geographic Info and terms --> #}  

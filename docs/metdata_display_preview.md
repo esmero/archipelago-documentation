@@ -8,7 +8,7 @@ tags:
 
 # Metadata Display Preview
 
-Archipelago's Metadata Display Preview is a very handy tool for your repository toolkit that enables you to preview the output of your Metadata Display (Twig) Templates (found at `/metdatadisplay/list`). You can use the the Metadata Display Preview to test and check the results of any type of Template (HTML Display, JSON Ingest, IIIF JSON, XML, etc) against both Archipealgo Digital Objects (ADOs) and AMI Sets (rows within). 
+Archipelago's Metadata Display Preview is a very handy tool for your repository toolkit that enables you to preview the output of your Metadata Display (Twig) Templates (found at `/metdatadisplay/list`). You can use the the Metadata Display Preview to test and check the results of any type of Template (HTML Display, JSON Ingest, IIIF JSON, XML, etc) against both Archipelago Digital Objects (ADOs) and AMI Sets (rows within). 
 
 _Prequisite Note: before diving into Metadata Display (Twig) Template changes, we recommend reading our [Twigs in Archipelago documentation](metadatatwigs.md) overview guide and also our [Working with Twig](workingtwigs.md) primer._
 
@@ -22,13 +22,13 @@ _Prequisite Note: before diving into Metadata Display (Twig) Template changes, w
 
     ![Edit Metadata Display](images/edit_metadata_display.jpg)
 
-3. You will now be able to select either a an Archipelago Digital Object (ADO) or AMI Set to Preview. Both selection types will use an Autocomplete search.
+3. You will now be able to select either an Archipelago Digital Object (ADO) or AMI Set to Preview. Both selection types will use an Autocomplete search.
 
     - Archipelago Digital Object (ADO) selection:
     ![ADO Preview Laddie the Dog](images/preview_ado_laddie.jpg)
 
     - AMI Set and Row selection:
-        - For the Row, you can enter either a number: 
+        - For the Row, you can enter either a (CSV row) number: 
         ![AMI Set Preview Row Number](images/preview_ami_set_row_number.jpg)
 
         - Or a label found within the Source Data CSV:
