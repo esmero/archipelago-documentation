@@ -52,12 +52,11 @@ nav:
         - Twig Recipe Cards for Common Use Cases: twig_recipe_cards.md
       - Archipelago Multi-Importer (AMI):
         - ami_index.md
-        - AMI Instructions and Guides:
-          - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
-          - Configuration for Google Sheets API: googleapi.md
-          - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
-          - Linked Data Reconciliation: ami_lod_rec.md
-          - Using the Islandora 7 Solr Importer: I7solrImporter.md
+        - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
+        - Configuration for Google Sheets API: googleapi.md
+        - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
+        - Linked Data Reconciliation: ami_lod_rec.md
+        - Using the Islandora 7 Solr Importer: I7solrImporter.md
       - Annotations: annotations.md
     - Site Administration & Configuration:
       - Strawberryfield Formatters: strawberryfield-formatters.md
