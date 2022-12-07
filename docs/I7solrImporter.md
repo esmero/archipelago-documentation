@@ -30,7 +30,7 @@ For the Solr Server Configuration section, you will need to provide all of the f
     - Either Single Solr Server (most common) or Solr Cloud Ensemble
 - Core _(example: islandora)_
 
-You will also need to select Starting Row you would like to begin fetching results from, and the Number of Rows to fetch. 
+You will also need to select the Starting Row you would like to begin fetching results from, and the Number of Rows to fetch. 
 
 The Starting Row is an offset and defaults to 0, which is the most common (and recommended) approach. For the Total Number of Rows to Fetch, setting this to empty or null will automatically (refresh when selecting 'Next' button at bottom of page) prefill with the real Number Rows found by the Solr Query invoked. If you set this number higher than the actual results we will only fetch what can be fetched.
 
@@ -53,8 +53,8 @@ In this step you will need to make determinations on how you would like to map y
 - If you had left "Collapse Multi Children Objects" unselected, you will also need to specify the Islandora Content Model to ADO types mapping for possible Children.
 
  ![Islandora 7 Solr Importer Step 2 Mappings No Collapse](images/I7step2_sect2_nocollapse_updated_2022-11.jpg)
-- You can also specify an ADO (Object or Collection) to be used the Parent of Imported Objects. By selecting an existing ADO (Object or Collection) here using the autocomplete/search, the generated AMI set .csv file will contain an 'ismemberof' column containing the UUID of the selected ADO for every row.
-- Under "_Additional Datastreams to Fetch_", you can select any number and/or combination of extra file datastreams to retrieve from your harvest. Please not that the I7 Importer will fetch every possible datastream that is present in your source I7 repository, but the additional file datastreams referenced may not be associated with actual files for every digital object.
+- You can also specify an ADO (Object or Collection) to be used as the Parent of Imported Objects. By selecting an existing ADO (Object or Collection) here using the autocomplete/search, the generated AMI set .csv file will contain an 'ismemberof' column containing the UUID of the selected ADO for every row.
+- Under "_Additional Datastreams to Fetch_", you can select any number and/or combination of extra file datastreams to retrieve from your harvest. Please note that the I7 Importer will fetch every possible datastream that is present in your source I7 repository, but the additional file datastreams referenced may not be associated with actual files for every digital object.
 
 ![Islandora 7 Solr Importer Islandora Mappings](images/I7step2_sect2_IslandoraMappings_updated_2022-11.jpg)
 
@@ -126,7 +126,7 @@ While you may immediately select "Process" from this AMI Set Confirmation page t
 
 ## Next Steps 
 
-To proceed with Processing your AMI Set, [click here](AMIviaSpreadsheets.md#step-7-ami-set-processing) to directed to the main [Ingesting Digital Objects via Spreadsheets](AMIviaSpreadsheets.md).
+To proceed with Processing your AMI Set, [click here](AMIviaSpreadsheets.md#step-7-ami-set-processing) to be directed to the main [Ingesting Digital Objects via Spreadsheets](AMIviaSpreadsheets.md).
 ___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.

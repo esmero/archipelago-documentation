@@ -9,6 +9,8 @@ tags:
 
 [Archipelago Multi-Importer (AMI)](https://github.com/esmero/ami) is a module for batch/bulk/mass ingests of Archipelago digital objects (ADOs) and collections. AMI also enables you to perform batch administrative actions, such as updating, patching/revising, or deleting digital objects and collections. AMI's Solr Importer plugin can be used to create AMI ingests and migrating content from existing Solr-sourcable digital repositories (such as Islandora 7).
 
+![AMI Overview Diego Doodle](images/AMI_Overview_Diego_Doodle.jpg)
+
 ## AMI Overview and Under-the-Hood Explanations
 
 *From the desk of [Diego Pino](https://github.com/DiegoPino)*
