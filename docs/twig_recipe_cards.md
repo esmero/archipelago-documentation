@@ -207,7 +207,7 @@ We recommend reading through our main [Metadata Display Preview](metadata_displa
     	{% set creator_lod = creator_lod|reduce((unique, item) => item in unique ? unique : unique|merge([item]), []) %}
         "creator_lod": {{ creator_lod|json_encode|raw -}},
         {#- END Names from LoD and MODS CSV with/without URIS. -#}
-        ```
+    ```
 
 **Use Case #5:** I have geographic-related information that I would like to reconciliate against Nominatim and map into the default Archipelago 'geographic_location' key. I have AMI Source Data CSVs where which contain values/labels and some which contains coordinates.
 

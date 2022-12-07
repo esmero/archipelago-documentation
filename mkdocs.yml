@@ -45,7 +45,7 @@ nav:
         - How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO): webformsasinput.md
         - Customizing Webforms (Modifying allowable file extensions): modifyingfileextensionsinwebform.md
         - Archipelago Custom Webform Elements: customwebformelements.md
-      - Metadata Display Preview: metadata_display_preview.md  
+      - Metadata Display Preview: metadata_display_preview.md
       - Twig Templates and Archipelago:
         - metadatatwigs.md
         - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
@@ -63,6 +63,7 @@ nav:
       - Strawberryfield Formatters: strawberryfield-formatters.md
       - Creating Display Modes: createdisplaymodes.md
       - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
+      - Strawberry Key Name Providers: strawberry_key_name_providers.md
     - General Q&A:
       - generalqa_index.md 
       - Coming soon: tbd.md
