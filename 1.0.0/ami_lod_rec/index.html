@@ -536,23 +536,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-7-ami-set-processing-preparation">
-    Step 7: AMI Set Processing Preparation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-8-queue-manager-if-not-processing-immediately">
-    Step 8: Queue Manager (if not Processing immediately)
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-9-processing-and-ado-creation">
-    Step 9: Processing and ADO Creation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-10-review-your-newly-created-digital-objects">
-    Step 10: Review your newly created Digital Objects
+<a class="md-nav__link" href="#next-steps">
+    Next Steps
   </a>
 </li>
 </ul>
@@ -770,23 +755,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-7-ami-set-processing-preparation">
-    Step 7: AMI Set Processing Preparation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-8-queue-manager-if-not-processing-immediately">
-    Step 8: Queue Manager (if not Processing immediately)
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-9-processing-and-ado-creation">
-    Step 9: Processing and ADO Creation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-10-review-your-newly-created-digital-objects">
-    Step 10: Review your newly created Digital Objects
+<a class="md-nav__link" href="#next-steps">
+    Next Steps
   </a>
 </li>
 </ul>
@@ -807,7 +777,7 @@
 <p>Archipelago Multi Importer (AMI)'s Linked Data Reconciliation tool can be used to enrich your metadata with Linked Data (LoD). Using this tool, you can map values from your topical/subject metadata elements to your preferred LoD vocabulary source. These mappings can then be transformed via a corresponding Metadata Display (Twig) template to process the values into JSON-formatted metadata for your specified AMI set.</p>
 <p><em>The aim of this tool is to automize as much of the reconciliation process as feasible within Archipelago. Please be aware that data reconciliation will still be in part a manual and potentially time intensive process.</em></p>
 <h3 id="important-note-preliminary-pre-requisite-ami-set-configuration">Important Note: Preliminary / Pre-requisite AMI Set Configuration</h3>
-<p>In order to Reconciliate an AMI Set, you will need to have selected the 'Template' or 'Custom' (then also, via 'Template' for your Digital Object or Collection types) during <a href="https://docs.archipelago.nyc/1.0.0/ami_spreadsheet_overview/#step-3-data-transformation-selections">Step 3 : Data Transformation</a> of your AMI Set configuration.</p>
+<p>In order to Reconciliate an AMI Set, you will need to have selected the 'Template' or 'Custom' data transformation approach (then also, via 'Template' for your Digital Object or Collection types) during <a href="https://docs.archipelago.nyc/1.0.0/ami_spreadsheet_overview/#step-3-data-transformation-selections">Step 3 : Data Transformation</a> of your AMI Set configuration.</p>
 <p>Your source spreadsheet will also need to contain at least one column containing terms/names (values) you want to reconcile against an LoD Authority Source. Multiple values should be separated by '|@|'.</p>
 <h2 id="step-1-select-the-ami-set-you-will-be-working-with">Step 1: Select the AMI Set you will be working with.</h2>
 <p>From the main AMI Sets List page, click on your AMI Set's Name, or select the 'Edit' option from the Operations menu on the right-hand side of the Sets list.</p>
@@ -823,7 +793,6 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMI_LodSources.jpg"><img alt="AMI LoD Sources" src="../images/ami/AMI_LodSources.jpg"/></a></p>
 <details class="info">
 <summary>Full list of potential LoD Authority Sources</summary>
-</details>
 <ul>
 <li>LoC subjects(LCSH)</li>
 <li>LoC Name Authority File (LCNAF)</li>
@@ -831,7 +800,7 @@
 <li>LoC Thesaurus of Graphic Materials (TGN)</li>
 <li>LoC MARC List for Geographic Areas</li>
 <li>LoC Relators Vocabulary (Roles)</li>
-<li>LoC MADS RDF by type:<ul>
+<li>LoC MADS RDF by type:</li>
 <li>Corporate Name</li>
 <li>Personal Name</li>
 <li>Family Name</li>
@@ -840,15 +809,20 @@
 <li>Geographic</li>
 <li>Temporal</li>
 <li>Extraterrestrial Area</li>
-</ul>
-</li>
 <li>VIAF</li>
 <li>Getty aat Fuzzy / Terms / Exact Label Match</li>
 <li>Wikidata Q Items</li>
 </ul>
-<p>To preview the values contained in the column(s) you selected, click the 'Inspect cleaned/split up column values' button.</p>
+</details>
+<p>To preview the values contained in the column(s) you selected, click the 'Inspect cleaned/split up column values' button. </p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIreconcileValuePreview.jpg"><img alt="AMI LoD" src="../images/ami/AMIreconcileValuePreview.jpg"/></a></p>
-<p>When you are ready, select the 'Process LoD from Source' button.</p>
+<p><strong><em>Tip</em></strong>: <em>This preview step provides you with the opportunity to return to your AMI Set source CSV and make any necessary label/term corrections such as outliers and formatting errors before processing. This can be done multiple times until your source set is fully prepared. If using this workflow, you will tick the 'Re-process only adding new terms/LoD Authority Sources' processing option after replacing your updated source CSV (see screenshot below)</em></p>
+<p>When ready, there are multiple processing options to select from depending on your current need/workflow.
+ - To process immediately, select 'Process LoD from Source'
+ - To enqueue the batch process, select 'Enqueue but do not process Batch in real time.
+ - To add new data (i.e. terms, LoD Authority Sources) to existing reconciliation (e.g after replacing 
+   source CSV data), select 'Re-process only adding new terms/LoD Authority Sources</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/processLoD.jpg"><img alt="Process LoD" src="../images/processLoD.jpg"/></a></p>
 <p><em>Important note: if you have previously run LoD Reconciliation for your AMI set, this action will overwrite any manually corrected LoD on your Processed CSV. Please make sure you have a backup if unsure.</em></p>
 <p>Depending on the size of your AMI Set, the Reconciliation processing may take a few minutes. </p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIbatchReconcile.jpg"><img alt="AMI LoD Reconciling Success" src="../images/ami/AMIbatchReconcile.jpg"/></a></p>
@@ -871,11 +845,10 @@
 <li>You can also add or remove multiple mappings using the +/- buttons beside the LoD lookup element.</li>
 <li>If desired, click the Checked option to mark that the term was reviewed/revisioned.</li>
 </ul>
-<p>As you advance through your review process, it is recommended that you use the 'Save Current LoD Page' at the bottom of each results page as you work. This will preserve the corrections you may have made and update the LoD Reconciled data for your AMI Set.</p>
+<p>As you advance through your review process, it is recommended that you use the 'Save Current LoD Page' at the bottom of each results page as you work. This will preserve the corrections you may have made and update the LoD Reconciled data for your AMI Set within the editing form.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIreconcileSaveCurrentPageSuccess.jpg"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIreconcileSaveCurrentPageSuccess.jpg"/></a></p>
-<p>When you have finished, it is also recommended that you use the 'Save all LoD back to CSV File'.</p>
+<p>When you have finished editing/reviewing your data, you must select 'Save all LoD back to CSV File' or else your LoD selections will not be preserved.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIreconcileSaveAllSuccess.jpg"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIreconcileSaveAllSuccess.jpg"/></a></p>
-<p><em>At this time, AMI's LoD Reconciliation processes from the results contained in the 'Edit Reconciled LoD' tab. In future AMI releases, the Processed Data CSV File will also be able to be manually updated and replaced, used for Reconciliation processing. For AMI 0.2.0, the Processed Data CSV is for reference purposes only.</em></p>
 <h2 id="step-6-ami-set-review-and-twig-metadata-display-preparation">Step 6: AMI Set Review and Twig (Metadata Display) Preparation</h2>
 <p>You will now need to make sure that the Metadata Display (Twig) Template you selected to use during your initial AMI Set configuration is setup to Process your LoD mapped Label and URL selections into your Digital Objects and Collections JSON metadata.</p>
 <p>For every JSON key/element in your metadata that you need to process the LoD Reconciled data into, you need to specify in your Template that data for this element will be read from the 'Processed Data' LoD information. </p>
@@ -891,7 +864,6 @@
 <p>The same general pattern can be adapted to apply to different mapping scenarios (original CSV source columns to Reconciled LoD Sources) as needed.</p>
 <details class="info">
 <summary>Full list of Column Options =&gt; Corresponding LoD Sources</summary>
-</details>
 <ul>
 <li>'loc_subjects_thing' =&gt; LoC subjects(LCSH)</li>
 <li>'loc_names_thing' =&gt; LoC Name Authority File (LCNAF)</li>
@@ -913,32 +885,9 @@
 <li>'getty_aat_exact' =&gt; Getty aat Exact Label Match</li>
 <li>'wikidata_subjects_thing' =&gt; Wikidata Q Items</li>
 </ul>
-<h2 id="step-7-ami-set-processing-preparation">Step 7: AMI Set Processing Preparation</h2>
-<p>When you have finished preparing your Template(s) as needed and completed your LoD Reconiliation Review, your AMI Set with LoD Reconciled Data will now need to be Processed.</p>
-<p>To Process this set, navigate to the <code>Process</code> tab. You will have multiple options related to the Processing outcome for your AMI Set. 
-- Select the "Desired ADOS Statuses After Process" for both Digital Objects (and Digital Object Collections, if also part of your ingest).
-    - The Statuses you have available will reflect the publication workflow/moderation states (such as Draft, Published, Archived/Unpublished) setup in your Archipelago instance, and the permissions associated your user account.  <br/>
-- Option 1: <em>'Enqueue but do not process Batch'</em>. Check this to enqueue but not trigger the interactive Batch processing. Cron or any other mechanism you have enabled will do the actual operation. This queue is shared by all AMI Sets in this repository and will be processed on a First-In First-Out basis.
-- Option 2: <em>'Force every File attached to an ADO to be processed in its own Queue item'</em>.  Warning: This may make your ingest slower. Check this to force every file attached to an ADO to be downloaded and characterized as an independent process. This bypasses the Number of files Global setting that would otherwise trigger this behavior.
-- Option 3: <em>'Re download and reprocess every file'</em>. Check this to force every file attached to an ADO to be downloaded and characterized again, even if on a previous Batch run that data was already generated for reuse. Needed if e.g the URL of a file is the same but the remote source changed.
-- Select <code>Confirm</code> to continue. </p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIsetAdminProcessRC2.jpg"><img alt="AMI Admin Set Process" src="../images/ami/AMIsetAdminProcessRC2.jpg"/></a></p>
-<p>You may also select <code>Process</code> from the <code>Operations</code> menu for the AMI set from the main <code>AMI sets</code> page.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMISetAdminProcessOpsMenu.jpg"><img alt="AMI Sets Admin Process Operations Menu" src="../images/ami/AMISetAdminProcessOpsMenu.jpg"/></a></p>
-<p>If you chose to 'Confirm" and Process your AMI Set immediately, proceed to Step 9: Processing and ADO Creation.   </p>
-<h2 id="step-8-queue-manager-if-not-processing-immediately">Step 8: Queue Manager (if not Processing immediately)</h2>
-<p>If you chose to place your AMI set in the Queue to Process in step 7, you may need to navigate to the Queue Manager found at <code>/admin/config/system/queue-ui</code>. (Be sure to select the <code>Queue Manager</code> under the System section, not the <code>Queue Manager for Hydroponic Service</code> under the Archipelago section). If the Queue operations for your Archipelago instance have been configured, you can simply leave your AMI Set in the Queue for Processing on the preconfigured schedule.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIqueueMgr.jpg"><img alt="AMI Queue Manager" src="../images/ami/AMIqueueMgr.jpg"/></a></p>
-<p>To Process your AMI Set immediately from the Queue Manager page, select the checkbox next to the 'AMI Digital Object Ingester Queue Worker'. Keep the <code>Action</code> menu set to <code>Batch Process</code> and click the <code>Apply to selected items</code> button.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIqueueMgrBatchProcess.jpg"><img alt="AMI Queue Manager Batch" src="../images/ami/AMIqueueMgrBatchProcess.jpg"/></a></p>
-<h2 id="step-9-processing-and-ado-creation">Step 9: Processing and ADO Creation</h2>
-<p>Your AMI set will now be Processed. You can follow the set's progress through the <code>Processing queues</code> loading screen.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIprocessingQueue.jpg"><img alt="AMI Processing Queues" src="../images/ami/AMIprocessingQueue.jpg"/></a></p>
-<p>After your AMI set is Processed, you will receive confirmation messages letting you know your Digital Objects were successfully created. </p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/ami/AMIsetSuccessRC2.jpg"><img alt="AMI Set Succes" src="../images/ami/AMIsetSuccessRC2.jpg"/></a></p>
-<p>From this message, you can click on each ADO title to review the new created Digital Object (or Collection) if you wish. Or, you may proceed to step 10.  </p>
-<h2 id="step-10-review-your-newly-created-digital-objects">Step 10: Review your newly created Digital Objects</h2>
-<p>Return to the main Content page found at <code>/admin/content</code> and review your newly created Digital Objects. After ensuring that files and metadata elements were mapped correctly, you may choose to change the Status for your Digital Objects to 'Published'. Celebrate your AMI success with a fresh coffee, tea, or cookie!</p>
+</details>
+<h2 id="next-steps">Next Steps</h2>
+<p>To proceed with Processing your AMI Set, <a href="../AMIviaSpreadsheets/#step-7-ami-set-processing">click here</a> to be directed to the main <a href="../AMIviaSpreadsheets/">Ingesting Digital Objects via Spreadsheets</a>.</p>
 <hr/>
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
 <p>Return to the <a href="../">Archipelago Documentation main page</a>.</p>
@@ -947,7 +896,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 6, 2022</span>
 <br/>
         Created:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2022</span>
