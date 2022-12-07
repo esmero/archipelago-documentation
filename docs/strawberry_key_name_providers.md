@@ -40,6 +40,7 @@ In order to expose the Strawberry Field JSON keys (and values) for an Archipelag
     * `Label`: `Date Created EDTF`
     * `Strawberry Key Name Provider Plugin`: `JmesPath Strawberry Field Key Name Provider`
     * `One or more comma separated valid JMESPaths`: `date_created_edtf.date_free`
+    *  Confirm that the value for `Exposed Strawberry Field Property` (under the `One or more comma separated valid JMESPaths` field) is set to `date_created_edtf_date_free`. This is the `Strawberry Field Property` that will hold the data coming from the JMESPath Query when evaluated against and ADO's JSON and will be visible as a *Strawberry Field Property* to Drupal and the Search API. When doing this in a production environment, you might want to change the automatically generated value and assign a simpler one to remember. You can always do this by pressing `Edit`. But for the purpose of this documentation please keep `date_created_edtf_date_free`.
     * `Is Date?`: `☑`
 
 ### Strawberry Key Name Provider Plugins
@@ -70,7 +71,7 @@ You'll notice that there are four plugins, each with different options, availabl
 
 !!! note "Best Practice"
 
-    As in the example below, if there are a group of flat and unique keys that you want to expose, we recommend creating one provider with this plugin and using a list of keys instead of creating multiple providers.
+    As in the example below, if there are a group of flat and unique keys that you want to expose, we recommend creating one provider with this plugin and using a list of keys instead of creating multiple providers. This Provider will also auto assign Lists of Properties from an external JSON-LD ontology/vocabulary (e.g Schema.org). It uses direct access approach, e.g. `type` will get all values for any JSON Key named `type` at any hierarchy level (across the whole JSON document) and it will also use the same exact name (`type`) for the `Exposed Strawberry Field Property`.
 
 !!! example "schema.org"
 
@@ -113,13 +114,3 @@ You'll notice that there are four plugins, each with different options, availabl
 3. Press the `Place block` button next to the appropriate region. For the example in this guide, we'll be placing the block in the `Sidebar second` region.
 4. Select your facet from the list. For the example in this guide, we'll select `🍓 Strawberry (Descriptive Metadata source) >> date_created_edtf_date_free`
 5. Press the `Place block` button next to the facet. Once the block is added, you can drag and drop it to change its position among the existing blocks and saving.
-
-## Video Guide
-
-The below is a video guide covering similar ground as the above. The RC2 instance in the video may look slightly different, but the concepts and functionality are the same.
-
-<video controls>
-  <source type="video/mp4" src="../videos/JSON_Key_Name_Providers_and_Solr_Driven_facets_RC2.mp4">
-  Your browser does not support the video tag.
-</video>
-
