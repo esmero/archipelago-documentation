@@ -45,24 +45,24 @@ nav:
         - How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO): webformsasinput.md
         - Customizing Webforms (Modifying allowable file extensions): modifyingfileextensionsinwebform.md
         - Archipelago Custom Webform Elements: customwebformelements.md
-      - Metadata Display Preview: metadata_display_preview.md  
+      - Metadata Display Preview: metadata_display_preview.md
       - Twig Templates and Archipelago:
         - metadatatwigs.md
         - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
         - Twig Recipe Cards for Common Use Cases: twig_recipe_cards.md
       - Archipelago Multi-Importer (AMI):
         - ami_index.md
-        - AMI Instructions and Guides:
-          - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
-          - Configuration for Google Sheets API: googleapi.md
-          - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
-          - Linked Data Reconciliation: ami_lod_rec.md
-          - Using the Islandora 7 Solr Importer: I7solrImporter.md
+        - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
+        - Configuration for Google Sheets API: googleapi.md
+        - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
+        - Linked Data Reconciliation: ami_lod_rec.md
+        - Using the Islandora 7 Solr Importer: I7solrImporter.md
       - Annotations: annotations.md
     - Site Administration & Configuration:
       - Strawberryfield Formatters: strawberryfield-formatters.md
       - Creating Display Modes: createdisplaymodes.md
       - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
+      - Strawberry Key Name Providers: strawberry_key_name_providers.md
     - General Q&A:
       - generalqa_index.md 
       - Coming soon: tbd.md

@@ -4,11 +4,11 @@ The Twig Recipe Cards below reference common Metadata transformation, display, o
 
 ### Getting Started Working with Twig in Archipelago
 
-We recommend reading through our main [Metadata Display Preview](metadata_display_preview.md) and [Twigs in Archipelago documentation](metadatatwigs.md) overview guides, and also our [Working with Twig](workingtwigs.md) primer.
+We recommend reading through our main [Metadata Display Preview](metadata_display_preview.md) and [Twigs in Archipelago documentation](metadatatwigs.md) overview guides, and also our [Working with Twig](workingtwigs.md) primer before diving into applying any of these recipes in your own Archipelago.
 
 ## AMI Ingest Template Adaptations -- Common Use Cases and Twig Recipe Cards:
 
-**Use Case #1:** I used [AMI LoD Reconciliation](ami_lod_rec.md) to reconciliate the values in my AMI Set Source CSV `mods_subject_topic` column against both LCSH and Wikidatada. I would like to map the reconciliated values into the Archipelago default `subject_loc` and `subject_wikidata` JSON keys.
+**Use Case #1:** I used [AMI LoD Reconciliation](ami_lod_rec.md) to reconciliate the values in my AMI Set Source CSV `mods_subject_topic` column against both LCSH and Wikidata. I would like to map the reconciliated values into the Archipelago default `subject_loc` and `subject_wikidata` JSON keys.
 
 **Twig Recipe Card for Use Case #1:**
 
@@ -207,9 +207,9 @@ We recommend reading through our main [Metadata Display Preview](metadata_displa
     	{% set creator_lod = creator_lod|reduce((unique, item) => item in unique ? unique : unique|merge([item]), []) %}
         "creator_lod": {{ creator_lod|json_encode|raw -}},
         {#- END Names from LoD and MODS CSV with/without URIS. -#}
-        ```
+    ```
 
-**Use Case #5:** I have geographic-related information that I would like to reconciliate against Nominatim and map into the default Archipelago 'geographic_location' key. I have AMI Source Data CSVs where which contain values/labels and some which contains coordinates.
+**Use Case #5:** I have geographic location information that I would like to reconciliate against Nominatim and map into the default Archipelago 'geographic_location' key. I have AMI Source Data CSVs which contain values/labels and some which contain coordinates.
 
 **Twig Recipe Card for Use Case #5 with variation notes:**
 
@@ -232,7 +232,7 @@ We recommend reading through our main [Metadata Display Preview](metadata_displa
 {#- Geographic Info and terms --> #}  
 ```
 
-**Use Case #6:** I have date values in a `dc.date` column whose values contain instances of 'circa' or 'Circa' where I would like to replace with the EDTF-friendly '~' instead and map to the Archipelago default 'date_created_edtf' JSON key.
+**Use Case #6:** I have date values in a `dc.date` column that contain instances of 'circa' or 'Circa' where I would like to replace with the EDTF-friendly '~' instead and map to the Archipelago default 'date_created_edtf' JSON key.
 
 **Twig Recipe Card for Use Case #6:** 
 
@@ -247,6 +247,9 @@ We recommend reading through our main [Metadata Display Preview](metadata_displa
         },        
     {% endif %}
 ```
+
+_More recipe cards will be added over time. Please see our [Archipelago Contribution Guide](giveortake.md) to learn about contributing your own recipe card or other documentation._
+
 ___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
