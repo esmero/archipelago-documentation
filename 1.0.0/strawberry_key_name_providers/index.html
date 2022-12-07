@@ -599,11 +599,6 @@
     Creating a Block for the Facet
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#video-guide">
-    Video Guide
-  </a>
-</li>
 </ul>
 </nav>
 </li>
@@ -790,11 +785,6 @@
     Creating a Block for the Facet
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#video-guide">
-    Video Guide
-  </a>
-</li>
 </ul>
 </nav>
 </div>
@@ -843,6 +833,7 @@
 <li><code>Label</code>: <code>Date Created EDTF</code></li>
 <li><code>Strawberry Key Name Provider Plugin</code>: <code>JmesPath Strawberry Field Key Name Provider</code></li>
 <li><code>One or more comma separated valid JMESPaths</code>: <code>date_created_edtf.date_free</code></li>
+<li>Confirm that the value for <code>Exposed Strawberry Field Property</code> (under the <code>One or more comma separated valid JMESPaths</code> field) is set to <code>date_created_edtf_date_free</code>. This is the <code>Strawberry Field Property</code> that will hold the data coming from the JMESPath Query when evaluated against and ADO's JSON and will be visible as a <em>Strawberry Field Property</em> to Drupal and the Search API. When doing this in a production environment, you might want to change the automatically generated value and assign a simpler one to remember. You can always do this by pressing <code>Edit</code>. But for the purpose of this documentation please keep <code>date_created_edtf_date_free</code>.</li>
 <li><code>Is Date?</code>: <code>☑</code></li>
 </ul>
 </li>
@@ -868,7 +859,7 @@
 <h4 id="jsonld-strawberry-field-key-name-provider">JSONLD Strawberry Field Key Name Provider</h4>
 <div class="admonition note">
 <p class="admonition-title">Best Practice</p>
-<p>As in the example below, if there are a group of flat and unique keys that you want to expose, we recommend creating one provider with this plugin and using a list of keys instead of creating multiple providers.</p>
+<p>As in the example below, if there are a group of flat and unique keys that you want to expose, we recommend creating one provider with this plugin and using a list of keys instead of creating multiple providers. This Provider will also auto assign Lists of Properties from an external JSON-LD ontology/vocabulary (e.g Schema.org). It uses direct access approach, e.g. <code>type</code> will get all values for any JSON Key named <code>type</code> at any hierarchy level (across the whole JSON document) and it will also use the same exact name (<code>type</code>) for the <code>Exposed Strawberry Field Property</code>.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">schema.org</p>
@@ -926,18 +917,12 @@
 <li>Select your facet from the list. For the example in this guide, we'll select <code>🍓 Strawberry (Descriptive Metadata source) &gt;&gt; date_created_edtf_date_free</code></li>
 <li>Press the <code>Place block</code> button next to the facet. Once the block is added, you can drag and drop it to change its position among the existing blocks and saving.</li>
 </ol>
-<h2 id="video-guide">Video Guide</h2>
-<p>The below is a video guide covering similar ground as the above. The RC2 instance in the video may look slightly different, but the concepts and functionality are the same.</p>
-<video controls="">
-<source src="../videos/JSON_Key_Name_Providers_and_Solr_Driven_facets_RC2.mp4" type="video/mp4"/>
-  Your browser does not support the video tag.
-</video>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 6, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2022</span>
 <br/>
         Created:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 6, 2022</span>
