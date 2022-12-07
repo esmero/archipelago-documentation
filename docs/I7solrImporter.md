@@ -126,7 +126,7 @@ While you may immediately select "Process" from this AMI Set Confirmation page t
 
 ## Next Steps 
 
-To proceed with Processing your AMI Set, [click here](AMIviaSpreadsheets.md#step-7-ami-set-processing) to directed to the main [Ingesting Digital Objects via Spreadsheets](AMIviaSpreadsheets.md).
+To proceed with Processing your AMI Set, [click here](AMIviaSpreadsheets.md#step-7-ami-set-processing) to be directed to the main [Ingesting Digital Objects via Spreadsheets](AMIviaSpreadsheets.md).
 ___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
