@@ -14,8 +14,6 @@ _Prequisite Note: before diving into Metadata Display (Twig) Template changes, w
 
 ## Step-by-Step
 
-You can access AMI through the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`
-
 1. Navigate to the Metadata Display list at `/admin/content/metadatadisplay/list` (or through the admin menu via  `Manage > Content > Metadata Displays`). From the main Metadata Display List page, you can access all of the different display, rendering, and processing templates found in your Archipelago.
 
     ![Metadata Display List](images/metadata_display_list.jpg)
