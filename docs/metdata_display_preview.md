@@ -8,7 +8,7 @@ tags:
 
 # Metadata Display Preview
 
-Archipelago's Metadata Display Preview is a very handy tool for your repository toolkit that enables you to preview the output of your Metadata Display (Twig) Templates (found at `/metdatadisplay/list`). You can use the the Metadata Display Preview to test and check the results of any type of Template (HTML Display, JSON Ingest, IIIF JSON, XML, etc.) against both Archipelago Digital Objects (ADOs) and AMI Sets (rows within). 
+Archipelago's Metadata Display Preview is a very handy tool for your repository toolkit that enables you to preview the output of your Metadata Display (Twig) Templates (found at `/metadatadisplay/list`). You can use the the Metadata Display Preview to test and check the results of any type of Template (HTML Display, JSON Ingest, IIIF JSON, XML, etc.) against both Archipelago Digital Objects (ADOs) and AMI Sets (rows within). 
 
 _Prequisite Note: before diving into Metadata Display (Twig) Template changes, we recommend reading our [Twigs in Archipelago documentation](metadatatwigs.md) overview guide and also our [Working with Twig](workingtwigs.md) primer._
 
