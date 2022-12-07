@@ -2,6 +2,8 @@
 
 *From the desk of [Diego Pino](https://github.com/DiegoPino)*
 
+![Twig and JSON and Metadata in Archipelago](images/Twig_JSON_Metadata_Diego_doodle.jpg)
+
 Archipelago's **RAW metadata** is stored as **JSON** and this is core to our architecture. To avoid writing RAW over and over, this document will refer to **RAW Metadata** simply as **Metadata**.
 
 **Data** and **Metadata** can be extremely complex and extensive. The use cases that define what **Data**, **Media** and **Metadata** to collect, to catalog and expose, to use during search and discovery or to enable interactive functionality, including questions like  "what public facing *schemas*, *formats* and *serializations* I need or want to be compliant with" are as diverse and complex as the Metadata driving them.
