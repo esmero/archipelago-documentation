@@ -45,9 +45,11 @@ nav:
         - How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO): webformsasinput.md
         - Customizing Webforms (Modifying allowable file extensions): modifyingfileextensionsinwebform.md
         - Archipelago Custom Webform Elements: customwebformelements.md
+      - Metadata Display Preview: metadata_display_preview.md  
       - Twig Templates and Archipelago:
         - metadatatwigs.md
         - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
+        - Twig Recipe Cards for Common Use Cases: twig_recipe_cards.md
       - Archipelago Multi-Importer (AMI):
         - ami_index.md
         - AMI Instructions and Guides:
