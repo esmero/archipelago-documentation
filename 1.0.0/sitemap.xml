@@ -206,17 +206,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.archipelago.nyc/1.0.0/metadata_display_preview/</loc>
+         <lastmod>2022-12-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.archipelago.nyc/1.0.0/metadatainarchipelago/</loc>
          <lastmod>2022-12-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/metadatatwigs/</loc>
-         <lastmod>2022-12-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.archipelago.nyc/1.0.0/metdata_display_preview/</loc>
          <lastmod>2022-12-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
