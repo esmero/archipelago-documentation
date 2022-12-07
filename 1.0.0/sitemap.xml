@@ -216,6 +216,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.archipelago.nyc/1.0.0/metdata_display_preview/</loc>
+         <lastmod>2022-12-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.archipelago.nyc/1.0.0/modifyingfileextensionsinwebform/</loc>
          <lastmod>2022-12-07</lastmod>
          <changefreq>daily</changefreq>
@@ -252,6 +257,11 @@
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.0.0/traditional-install/</loc>
+         <lastmod>2022-12-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.archipelago.nyc/1.0.0/twig_recipe_cards/</loc>
          <lastmod>2022-12-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
