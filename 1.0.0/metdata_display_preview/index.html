@@ -468,18 +468,6 @@
         Archipelago Multi-Importer (AMI)
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_2" id="__nav_4_2_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_5_2">
-          AMI Instructions and Guides
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="AMI Instructions and Guides" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_2_5_2">
-<span class="md-nav__icon md-icon"></span>
-          AMI Instructions and Guides
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ami_spreadsheet_overview/">
         Spreadsheet Formatting Overview
@@ -504,9 +492,6 @@
 <a class="md-nav__link" href="../I7solrImporter/">
         Using the Islandora 7 Solr Importer
       </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -544,6 +529,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../archifilepersistencestrategy/">
         Archipelago's File Persistence Strategy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../strawberry_key_name_providers/">
+        Strawberry Key Name Providers
       </a>
 </li>
 </ul>
@@ -697,20 +687,20 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="metadata-display-preview">Metadata Display Preview</h1>
-<p>Archipelago's Metadata Display Preview is a very handy tool for your repository toolkit that enables you to preview the output of your Metadata Display (Twig) Templates (found at <code>/metdatadisplay/list</code>). You can use the the Metadata Display Preview to test and check the results of any type of Template (HTML Display, JSON Ingest, IIIF JSON, XML, etc) against both Archipelago Digital Objects (ADOs) and AMI Sets (rows within). </p>
+<p>Archipelago's Metadata Display Preview is a very handy tool for your repository toolkit that enables you to preview the output of your Metadata Display (Twig) Templates (found at <code>/metadatadisplay/list</code>). You can use the the Metadata Display Preview to test and check the results of any type of Template (HTML Display, JSON Ingest, IIIF JSON, XML, etc.) against both Archipelago Digital Objects (ADOs) and AMI Sets (rows within). </p>
 <p><em>Prequisite Note: before diving into Metadata Display (Twig) Template changes, we recommend reading our <a href="../metadatatwigs/">Twigs in Archipelago documentation</a> overview guide and also our <a href="../workingtwigs/">Working with Twig</a> primer.</em></p>
 <h2 id="step-by-step">Step-by-Step</h2>
 <ol>
 <li>
-<p>Navigate to the Metadata Display list at /metadatadisplay/list. From here you can access all of the different display, rendering, and processing templates used in Archipelago environments.</p>
+<p>Navigate to the Metadata Display list at <code>/admin/content/metadatadisplay/list</code> (or through the admin menu via  <code>Manage &gt; Content &gt; Metadata Displays</code>). From the main Metadata Display List page, you can access all of the different display, rendering, and processing templates found in your Archipelago.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/metadata_display_list.jpg"><img alt="Metadata Display List" src="../images/metadata_display_list.jpg"/></a></p>
 </li>
 <li>
-<p>Open and select Edit for the Template you wish to Edit and/or Preview.</p>
+<p>Open and select 'Edit' for the Template you wish to Edit and/or Preview.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/edit_metadata_display.jpg"><img alt="Edit Metadata Display" src="../images/edit_metadata_display.jpg"/></a></p>
 </li>
 <li>
-<p>You will now be able to select either an Archipelago Digital Object (ADO) or AMI Set to Preview. Both selection types will use an Autocomplete search.</p>
+<p>You will now be able to select either an Archipelago Digital Object (ADO) or AMI Set to Preview. Both selection types will use an autocomplete search (make sure the autocomplete matches fully against your selection before proceeding).</p>
 <ul>
 <li>
 <p>Archipelago Digital Object (ADO) selection:
@@ -732,7 +722,7 @@
 </ul>
 </li>
 <li>
-<p>After you select your ADO or AMI Set to Preview, the fuller Preview section will open up on the right side of the screen. The left side will continue to show the Metadata Display Template you originally selected to Edit. It is <strong>strongly recommended</strong> to always select the option to 'Show Preview using native Output Format (e.g HTML)'.</p>
+<p>After you select your ADO or AMI Set and press the 'Show Preview' button, the fuller Preview section will open up on the right side of the screen. The left side will continue to show the Metadata Display Template you originally selected to Edit. It is <strong>strongly recommended</strong> to always select the option to 'Show Preview using native Output Format (e.g HTML)'.</p>
 <ul>
 <li>
 <p>Archipelago Digital Object (ADO) selection against an HTML Display template:
@@ -747,7 +737,7 @@
 <li>
 <p>Within the Preview Section on the right side of the screen:</p>
 <ul>
-<li>The top section contains full JSON metadata record for the selected digital object or AMI Set + specified.</li>
+<li>The top section contains full JSON metadata record for the selected digital object or AMI Set + specified row.</li>
 <li>If previewing against an AMI Set + specified row, the middle section will show the 'Reconciliated LoD' for the selected row if you have used AMI LoD Reconciliation for the selected AMI Set.</li>
 <li>The bottom section will show the rendered Output from the Template using the metadata from the selected ADO or AMI Set + specified row.</li>
 </ul>

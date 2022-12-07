@@ -491,18 +491,6 @@
         Archipelago Multi-Importer (AMI)
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_2" id="__nav_4_2_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_5_2">
-          AMI Instructions and Guides
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="AMI Instructions and Guides" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_4_2_5_2">
-<span class="md-nav__icon md-icon"></span>
-          AMI Instructions and Guides
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ami_spreadsheet_overview/">
         Spreadsheet Formatting Overview
@@ -527,9 +515,6 @@
 <a class="md-nav__link" href="../I7solrImporter/">
         Using the Islandora 7 Solr Importer
       </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -567,6 +552,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../archifilepersistencestrategy/">
         Archipelago's File Persistence Strategy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../strawberry_key_name_providers/">
+        Strawberry Key Name Providers
       </a>
 </li>
 </ul>
@@ -722,9 +712,9 @@
 <h1 id="twig-recipe-cards-for-common-use-cases">Twig Recipe Cards for Common Use Cases</h1>
 <p>The Twig Recipe Cards below reference common Metadata transformation, display, or other use cases/needs you may have in your own Archipelago repository.</p>
 <h3 id="getting-started-working-with-twig-in-archipelago">Getting Started Working with Twig in Archipelago</h3>
-<p>We recommend reading through our main <a href="metadata_display_preview.md">Metadata Display Preview</a> and <a href="../metadatatwigs/">Twigs in Archipelago documentation</a> overview guides, and also our <a href="../workingtwigs/">Working with Twig</a> primer.</p>
+<p>We recommend reading through our main <a href="metadata_display_preview.md">Metadata Display Preview</a> and <a href="../metadatatwigs/">Twigs in Archipelago documentation</a> overview guides, and also our <a href="../workingtwigs/">Working with Twig</a> primer before diving into applying any of these recipes in your own Archipelago.</p>
 <h2 id="ami-ingest-template-adaptations-common-use-cases-and-twig-recipe-cards">AMI Ingest Template Adaptations -- Common Use Cases and Twig Recipe Cards:</h2>
-<p><strong>Use Case #1:</strong> I used <a href="../ami_lod_rec/">AMI LoD Reconciliation</a> to reconciliate the values in my AMI Set Source CSV <code>mods_subject_topic</code> column against both LCSH and Wikidatada. I would like to map the reconciliated values into the Archipelago default <code>subject_loc</code> and <code>subject_wikidata</code> JSON keys.</p>
+<p><strong>Use Case #1:</strong> I used <a href="../ami_lod_rec/">AMI LoD Reconciliation</a> to reconciliate the values in my AMI Set Source CSV <code>mods_subject_topic</code> column against both LCSH and Wikidata. I would like to map the reconciliated values into the Archipelago default <code>subject_loc</code> and <code>subject_wikidata</code> JSON keys.</p>
 <p><strong>Twig Recipe Card for Use Case #1:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="x">  </span><span class="c">{#- LCSH -#}</span><span class="x"></span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.mods_subject_topic</span><span class="o">|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> <span class="cp">%}</span><span class="x"></span>
@@ -792,126 +782,126 @@
 <p><strong>Twig Recipe Card for Use Case #4:</strong></p>
 <details class="info">
 <summary>Click to view the full Recipe Card</summary>
-<p><code>twig
-{#- START Names from LoD and MODS CSV with/without URIS. -#} 
-    {# Updated August 26th 2022, by Diego Pino. New checks/logic for mods_name_type_role_composed_or_more_namepart
-    - Check first IF for a given namepart there is already reconciliaton. 
-    - IF not i check if there is a matching valueuri, 
-    - If not leave the URL empty and use the value in the namepart (label) only?
-    - Only check/use mods_name_corporate/personal_namepart field IF there are no other fields
-    - That specify Roles. Since normally in ISLANDORA that field (no role) is a Catch all names one
-    - And in that case USE creator as the default ROLE
-    #}
-    {%~ set creator_lod = [] -%} 
-    {# Used to keep track of parts after the type (corporate, etc) that are no roles
-     but authority properties. Add more if you find them #}
-    {%  set roles_that_are_no_roles = ['authority_naf','authority_marcrelator',''] %}
-    {# Used to keep track of the ones that are reconciled already #}
-    {%- set name_has_creator_lod = [] -%}
-    {%- for key,value in data_lod -%}
-      {%- if key starts with 'mods_name_' and key ends with '_namepart' -%}
-      {# If there is mods_name_SOMETHING_namepart in data_lod we keep track so we 
-      do not try afterwards to use that Sources KEY from the CSV.
-      #}
-        {%- set name_has_creator_lod = name_has_creator_lod|merge([key]) -%}
-      {# Now we remove 'mods_name_' and '_namepart' #}
-        {%- set name_type_and_role = key|replace({'mods_name_':'', '_namepart':''}) -%}
-      {# We will only target personal or corporate. If any of those are missing we skip? #}
-        {% set name_type = null %}
-        {%- if name_type_and_role starts with 'personal_' -%}
-           {% set name_type = 'personal' %}
-        {%- elseif name_type_and_role starts with 'corporate_' -%}
-           {%- set name_type = 'corporate' -%}
-        {%- endif -%}
-        {%- if name_type is not empty -%}
-        {#- Now we remove 'type', e.g 'corporate_' -#}
-          {%- set name_role = name_type_and_role|replace({(name_type ~ '_'):''}) -%}
-          {# in case the name_role contains one of roles_that_are_no_roles, e.g
-          something like `creator_authority_marcrelator` we remove that #}
-          {% for role_that_is_no_role in roles_that_are_no_roles %}
-             {%- set name_role = name_role|replace({(role_that_is_no_role):''}) -%}
-          {% endfor %}
-          {# After removing all what can not be a role if we end with an empty #}
-          {% if name_role|trim|length == 0 %}
-             {%- set name_role = "creator" %}
-          {% else %}
-            {%- set name_role = name_role|replace({'\\/':'//' , '_':' '})|trim -%}
-          {% endif %}
-        {#- we iterate over all possible vocabularies and fetch the reconciliated names from them (if any) -#}
-          {%- for approach, names in value -%} 
-        {#- if there are actually name pairs (name and uri) that were reconciliated we use them -#}
-            {%- if names|length &gt; 0 -%}
-              {#- we call the ami_lod_reconcile twig extension with the role label using the LoC Relators endpoint in english and get 1 result -#}
-              {%- set role_uri = ami_lod_reconcile(name_role|lower|capitalize,'loc;relators;thing','en',1) -%}
-              {#- for each found name pair in a list of possible LoD reconciliated elements we generate the final structure that goes into "creator_lod" json key -#}
-              {%- for name in names -%} 
-                {%- set creator_lod = creator_lod|merge([{'role_label': name_role|lower|capitalize, 'role_uri': role_uri[0].uri, "agent_type": name_type, "name_label": name.label, "name_uri": name.uri}]) -%}     
-             {%- endfor -%}
-            {%- endif -%}
-          {%- endfor -%}
-        {% endif -%}
-      {%- endif -%} 
-    {%- endfor -%}
-    {# Now go for the RAW CSV data for names #}
-    {%- for key,value in data -%}
-    {# here we skip values previoulsy fetched from LoD and stored in name_has_creator_lod #}
-      {%- if key not in name_has_creator_lod and key starts with 'mods_name_' and key ends with '_namepart' -%}
-      {# If there is mods_name_SOMETHING_namepart in data_lod we keep track so we 
-      do not try afterwards to use that Sources KEY from the CSV.
-      #}
-        {%- set name_has_creator_lod = name_has_creator_lod|merge([key]) -%}
-      {# Now we remove 'mods_name_' and '_namepart' #}
-        {%- set name_type_and_role = key|replace({'mods_name_':'', '_namepart':''}) -%}
-      {# We will only target personal or corporate. If any of those are missing we skip? #}
-        {%- set name_type = null -%}
-        {%- if name_type_and_role starts with 'personal_' -%}
-           {%- set name_type = 'personal' -%}
-        {%- elseif name_type_and_role starts with 'corporate_' -%}
-           {%- set name_type = 'corporate' -%}
-        {%- endif -%}
-        {% if name_type is not empty %}
-        {# Now we remove 'type', e.g 'corporate_' #}
-          {%- set name_role = name_type_and_role|replace({(name_type ~ '_'):''}) -%}
-          {# in case the name_role contains one of roles_that_are_no_roles, e.g
-          something like `creator_authority_marcrelator` we remove that #}
-          {% for role_that_is_no_role in roles_that_are_no_roles %}
-             {%- set name_role = name_role|replace({(role_that_is_no_role):''}) -%}
-          {% endfor %}
-          {# After removing all what can not be a role if we end with an empty #}
-          {% if name_role|trim|length == 0 %}
-             {%- set name_role = "creator" %}
-          {% else %}
-            {%- set name_role = name_role|replace({'\\/':'//' , '_':' '})|trim -%}
-          {% endif %}
-          {# Now we check if there is a corresponding _valueuri for this #}
-          {% set name_uris = [] %}
-          {%- if data[('mods_name_' ~ name_type_and_role ~ '_valueuri')] is not empty 
-          and data[('mods_name_' ~ name_type_and_role ~ '_valueuri')] != '' -%}
-            {%- set name_uris = data[('mods_name_' ~ name_type_and_role ~ '_valueuri')]|split('|@|') -%}
-          {%- endif -%}
-          {%- set role_uri = ami_lod_reconcile(name_role|lower|capitalize,'loc;relators;thing','en',1) -%}
-        {#- we split and iterate over the value of the mods_name key -#}
-        {# NOTE. THIS IS TARGETING Anything after the year 1000, or 2000 #}
-          {%- for index,name in value|replace({'|@|1':', 1', '|@|2':', 2', '|@|-':', -'})|split('|@|') -%}
-            {%- if name is not empty and name|trim != '' -%}
-              {%- set name_uri = null -%}
-              {# Here we can check if one of the names IS not a name (e.g a year? #}
-              {#- we call the ami_lod_reconcile twig extension with the role label using the LoC Relators endpoint in english and get 1 result -#}
-              {%- if name_uris[index] is defined and name_uris[index] is not empty -%}
-                 {%- set name_uri = name_uris[index] -%}
-              {%- endif -%}
-              {%- set creator_lod = creator_lod|merge([{'role_label': name_role|lower|capitalize, 'role_uri': role_uri[0].uri, "agent_type": name_type, "name_label": name, "name_uri": name_uri}]) -%}
-            {%- endif -%}
-          {%- endfor -%}
-        {%- endif -%}
-      {%- endif -%}
-    {%- endfor ~%}
-    {# Use reduce filter + other logic for depulicating #}
-    {% set creator_lod = creator_lod|reduce((unique, item) =&gt; item in unique ? unique : unique|merge([item]), []) %}
-    "creator_lod": {{ creator_lod|json_encode|raw -}},
-    {#- END Names from LoD and MODS CSV with/without URIS. -#}</code></p>
+<div class="highlight"><pre><span></span><code><span class="c">{#- START Names from LoD and MODS CSV with/without URIS. -#}</span><span class="x"> </span>
+<span class="x">    </span><span class="c">{# Updated August 26th 2022, by Diego Pino. New checks/logic for mods_name_type_role_composed_or_more_namepart</span>
+<span class="c">    - Check first IF for a given namepart there is already reconciliaton. </span>
+<span class="c">    - IF not i check if there is a matching valueuri, </span>
+<span class="c">    - If not leave the URL empty and use the value in the namepart (label) only?</span>
+<span class="c">    - Only check/use mods_name_corporate/personal_namepart field IF there are no other fields</span>
+<span class="c">    - That specify Roles. Since normally in ISLANDORA that field (no role) is a Catch all names one</span>
+<span class="c">    - And in that case USE creator as the default ROLE</span>
+<span class="c">    #}</span><span class="x"></span>
+<span class="x">    {%~ set creator_lod = [] -%} </span>
+<span class="x">    </span><span class="c">{# Used to keep track of parts after the type (corporate, etc) that are no roles</span>
+<span class="c">     but authority properties. Add more if you find them #}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span>  <span class="k">set</span> <span class="nv">roles_that_are_no_roles</span> <span class="o">=</span> <span class="o">[</span><span class="s1">'authority_naf'</span><span class="o">,</span><span class="s1">'authority_marcrelator'</span><span class="o">,</span><span class="s1">''</span><span class="o">]</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="c">{# Used to keep track of the ones that are reconciled already #}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_has_creator_lod</span> <span class="o">=</span> <span class="o">[]</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">key</span><span class="o">,</span><span class="nv">value</span> <span class="k">in</span> <span class="nv">data_lod</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">key</span> <span class="k">starts with</span> <span class="s1">'mods_name_'</span> <span class="k">and</span> <span class="nv">key</span> <span class="k">ends with</span> <span class="s1">'_namepart'</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">      </span><span class="c">{# If there is mods_name_SOMETHING_namepart in data_lod we keep track so we </span>
+<span class="c">      do not try afterwards to use that Sources KEY from the CSV.</span>
+<span class="c">      #}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_has_creator_lod</span> <span class="o">=</span> <span class="nv">name_has_creator_lod</span><span class="o">|</span><span class="nf">merge</span><span class="o">([</span><span class="nv">key</span><span class="o">])</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">      </span><span class="c">{# Now we remove 'mods_name_' and '_namepart' #}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_type_and_role</span> <span class="o">=</span> <span class="nv">key</span><span class="o">|</span><span class="nf">replace</span><span class="o">({</span><span class="s1">'mods_name_':''</span><span class="o">,</span> <span class="s1">'_namepart':''</span><span class="o">})</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">      </span><span class="c">{# We will only target personal or corporate. If any of those are missing we skip? #}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">name_type</span> <span class="o">=</span> <span class="kp">null</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">name_type_and_role</span> <span class="k">starts with</span> <span class="s1">'personal_'</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">           </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">name_type</span> <span class="o">=</span> <span class="s1">'personal'</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">elseif</span> <span class="nv">name_type_and_role</span> <span class="k">starts with</span> <span class="s1">'corporate_'</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">           </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_type</span> <span class="o">=</span> <span class="s1">'corporate'</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">name_type</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="c">{#- Now we remove 'type', e.g 'corporate_' -#}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_role</span> <span class="o">=</span> <span class="nv">name_type_and_role</span><span class="o">|</span><span class="nf">replace</span><span class="o">({(</span><span class="nv">name_type</span> <span class="o">~</span> <span class="s1">'_'</span><span class="o">)</span><span class="s1">:''</span><span class="o">})</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="c">{# in case the name_role contains one of roles_that_are_no_roles, e.g</span>
+<span class="c">          something like `creator_authority_marcrelator` we remove that #}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">role_that_is_no_role</span> <span class="k">in</span> <span class="nv">roles_that_are_no_roles</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">             </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_role</span> <span class="o">=</span> <span class="nv">name_role</span><span class="o">|</span><span class="nf">replace</span><span class="o">({(</span><span class="nv">role_that_is_no_role</span><span class="o">)</span><span class="s1">:''</span><span class="o">})</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="c">{# After removing all what can not be a role if we end with an empty #}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">name_role</span><span class="o">|</span><span class="nf">trim</span><span class="o">|</span><span class="nf">length</span> <span class="o">==</span> <span class="m">0</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">             </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_role</span> <span class="o">=</span> <span class="s2">"creator"</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">            </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_role</span> <span class="o">=</span> <span class="nv">name_role</span><span class="o">|</span><span class="nf">replace</span><span class="o">({</span><span class="s1">'\\/':'//'</span> <span class="o">,</span> <span class="s1">'_':' '</span><span class="o">})|</span><span class="nf">trim</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="c">{#- we iterate over all possible vocabularies and fetch the reconciliated names from them (if any) -#}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">approach</span><span class="o">,</span> <span class="nv">names</span> <span class="k">in</span> <span class="nv">value</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">        </span><span class="c">{#- if there are actually name pairs (name and uri) that were reconciliated we use them -#}</span><span class="x"></span>
+<span class="x">            </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">names</span><span class="o">|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">              </span><span class="c">{#- we call the ami_lod_reconcile twig extension with the role label using the LoC Relators endpoint in english and get 1 result -#}</span><span class="x"></span>
+<span class="x">              </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">role_uri</span> <span class="o">=</span> <span class="nv">ami_lod_reconcile</span><span class="o">(</span><span class="nv">name_role</span><span class="o">|</span><span class="nf">lower</span><span class="o">|</span><span class="nf">capitalize</span><span class="o">,</span><span class="s1">'loc;relators;thing'</span><span class="o">,</span><span class="s1">'en'</span><span class="o">,</span><span class="m">1</span><span class="o">)</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">              </span><span class="c">{#- for each found name pair in a list of possible LoD reconciliated elements we generate the final structure that goes into "creator_lod" json key -#}</span><span class="x"></span>
+<span class="x">              </span><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">name</span> <span class="k">in</span> <span class="nv">names</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">                </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">creator_lod</span> <span class="o">=</span> <span class="nv">creator_lod</span><span class="o">|</span><span class="nf">merge</span><span class="o">([{</span><span class="s1">'role_label'</span><span class="o">:</span> <span class="nv">name_role</span><span class="o">|</span><span class="nf">lower</span><span class="o">|</span><span class="nf">capitalize</span><span class="o">,</span> <span class="s1">'role_uri'</span><span class="o">:</span> <span class="nv">role_uri</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="nv">.uri</span><span class="o">,</span> <span class="s2">"agent_type"</span><span class="o">:</span> <span class="nv">name_type</span><span class="o">,</span> <span class="s2">"name_label"</span><span class="o">:</span> <span class="nv">name.label</span><span class="o">,</span> <span class="s2">"name_uri"</span><span class="o">:</span> <span class="nv">name.uri</span><span class="o">}])</span> -<span class="cp">%}</span><span class="x">     </span>
+<span class="x">             </span><span class="cp">{%</span>- <span class="k">endfor</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">            </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span>- <span class="k">endfor</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span> <span class="k">endif</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">endfor</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="c">{# Now go for the RAW CSV data for names #}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">key</span><span class="o">,</span><span class="nv">value</span> <span class="k">in</span> <span class="nv">data</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="c">{# here we skip values previoulsy fetched from LoD and stored in name_has_creator_lod #}</span><span class="x"></span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">key</span> <span class="k">not</span> <span class="k">in</span> <span class="nv">name_has_creator_lod</span> <span class="k">and</span> <span class="nv">key</span> <span class="k">starts with</span> <span class="s1">'mods_name_'</span> <span class="k">and</span> <span class="nv">key</span> <span class="k">ends with</span> <span class="s1">'_namepart'</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">      </span><span class="c">{# If there is mods_name_SOMETHING_namepart in data_lod we keep track so we </span>
+<span class="c">      do not try afterwards to use that Sources KEY from the CSV.</span>
+<span class="c">      #}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_has_creator_lod</span> <span class="o">=</span> <span class="nv">name_has_creator_lod</span><span class="o">|</span><span class="nf">merge</span><span class="o">([</span><span class="nv">key</span><span class="o">])</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">      </span><span class="c">{# Now we remove 'mods_name_' and '_namepart' #}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_type_and_role</span> <span class="o">=</span> <span class="nv">key</span><span class="o">|</span><span class="nf">replace</span><span class="o">({</span><span class="s1">'mods_name_':''</span><span class="o">,</span> <span class="s1">'_namepart':''</span><span class="o">})</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">      </span><span class="c">{# We will only target personal or corporate. If any of those are missing we skip? #}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_type</span> <span class="o">=</span> <span class="kp">null</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">name_type_and_role</span> <span class="k">starts with</span> <span class="s1">'personal_'</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">           </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_type</span> <span class="o">=</span> <span class="s1">'personal'</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">elseif</span> <span class="nv">name_type_and_role</span> <span class="k">starts with</span> <span class="s1">'corporate_'</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">           </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_type</span> <span class="o">=</span> <span class="s1">'corporate'</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">name_type</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="c">{# Now we remove 'type', e.g 'corporate_' #}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_role</span> <span class="o">=</span> <span class="nv">name_type_and_role</span><span class="o">|</span><span class="nf">replace</span><span class="o">({(</span><span class="nv">name_type</span> <span class="o">~</span> <span class="s1">'_'</span><span class="o">)</span><span class="s1">:''</span><span class="o">})</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="c">{# in case the name_role contains one of roles_that_are_no_roles, e.g</span>
+<span class="c">          something like `creator_authority_marcrelator` we remove that #}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">role_that_is_no_role</span> <span class="k">in</span> <span class="nv">roles_that_are_no_roles</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">             </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_role</span> <span class="o">=</span> <span class="nv">name_role</span><span class="o">|</span><span class="nf">replace</span><span class="o">({(</span><span class="nv">role_that_is_no_role</span><span class="o">)</span><span class="s1">:''</span><span class="o">})</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="c">{# After removing all what can not be a role if we end with an empty #}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">name_role</span><span class="o">|</span><span class="nf">trim</span><span class="o">|</span><span class="nf">length</span> <span class="o">==</span> <span class="m">0</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">             </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_role</span> <span class="o">=</span> <span class="s2">"creator"</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">            </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_role</span> <span class="o">=</span> <span class="nv">name_role</span><span class="o">|</span><span class="nf">replace</span><span class="o">({</span><span class="s1">'\\/':'//'</span> <span class="o">,</span> <span class="s1">'_':' '</span><span class="o">})|</span><span class="nf">trim</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="c">{# Now we check if there is a corresponding _valueuri for this #}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">name_uris</span> <span class="o">=</span> <span class="o">[]</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">data</span><span class="o">[(</span><span class="s1">'mods_name_'</span> <span class="o">~</span> <span class="nv">name_type_and_role</span> <span class="o">~</span> <span class="s1">'_valueuri'</span><span class="o">)]</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> 
+          <span class="k">and</span> <span class="nv">data</span><span class="o">[(</span><span class="s1">'mods_name_'</span> <span class="o">~</span> <span class="nv">name_type_and_role</span> <span class="o">~</span> <span class="s1">'_valueuri'</span><span class="o">)]</span> <span class="o">!=</span> <span class="s1">''</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">            </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_uris</span> <span class="o">=</span> <span class="nv">data</span><span class="o">[(</span><span class="s1">'mods_name_'</span> <span class="o">~</span> <span class="nv">name_type_and_role</span> <span class="o">~</span> <span class="s1">'_valueuri'</span><span class="o">)]|</span><span class="nf">split</span><span class="o">(</span><span class="s1">'|@|'</span><span class="o">)</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">role_uri</span> <span class="o">=</span> <span class="nv">ami_lod_reconcile</span><span class="o">(</span><span class="nv">name_role</span><span class="o">|</span><span class="nf">lower</span><span class="o">|</span><span class="nf">capitalize</span><span class="o">,</span><span class="s1">'loc;relators;thing'</span><span class="o">,</span><span class="s1">'en'</span><span class="o">,</span><span class="m">1</span><span class="o">)</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="c">{#- we split and iterate over the value of the mods_name key -#}</span><span class="x"></span>
+<span class="x">        </span><span class="c">{# NOTE. THIS IS TARGETING Anything after the year 1000, or 2000 #}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">index</span><span class="o">,</span><span class="nv">name</span> <span class="k">in</span> <span class="nv">value</span><span class="o">|</span><span class="nf">replace</span><span class="o">({</span><span class="s1">'|@|1':', 1'</span><span class="o">,</span> <span class="s1">'|@|2':', 2'</span><span class="o">,</span> <span class="s1">'|@|-':', -'</span><span class="o">})|</span><span class="nf">split</span><span class="o">(</span><span class="s1">'|@|'</span><span class="o">)</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">            </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">name</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="k">and</span> <span class="nv">name</span><span class="o">|</span><span class="nf">trim</span> <span class="o">!=</span> <span class="s1">''</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">              </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_uri</span> <span class="o">=</span> <span class="kp">null</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">              </span><span class="c">{# Here we can check if one of the names IS not a name (e.g a year? #}</span><span class="x"></span>
+<span class="x">              </span><span class="c">{#- we call the ami_lod_reconcile twig extension with the role label using the LoC Relators endpoint in english and get 1 result -#}</span><span class="x"></span>
+<span class="x">              </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">name_uris</span><span class="o">[</span><span class="nv">index</span><span class="o">]</span> <span class="k">is</span> <span class="nf">defined</span> <span class="k">and</span> <span class="nv">name_uris</span><span class="o">[</span><span class="nv">index</span><span class="o">]</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">                 </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">name_uri</span> <span class="o">=</span> <span class="nv">name_uris</span><span class="o">[</span><span class="nv">index</span><span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">              </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">              </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">creator_lod</span> <span class="o">=</span> <span class="nv">creator_lod</span><span class="o">|</span><span class="nf">merge</span><span class="o">([{</span><span class="s1">'role_label'</span><span class="o">:</span> <span class="nv">name_role</span><span class="o">|</span><span class="nf">lower</span><span class="o">|</span><span class="nf">capitalize</span><span class="o">,</span> <span class="s1">'role_uri'</span><span class="o">:</span> <span class="nv">role_uri</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="nv">.uri</span><span class="o">,</span> <span class="s2">"agent_type"</span><span class="o">:</span> <span class="nv">name_type</span><span class="o">,</span> <span class="s2">"name_label"</span><span class="o">:</span> <span class="nv">name</span><span class="o">,</span> <span class="s2">"name_uri"</span><span class="o">:</span> <span class="nv">name_uri</span><span class="o">}])</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">            </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">          </span><span class="cp">{%</span>- <span class="k">endfor</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">endfor</span> <span class="o">~</span><span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="c">{# Use reduce filter + other logic for depulicating #}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">creator_lod</span> <span class="o">=</span> <span class="nv">creator_lod</span><span class="o">|</span><span class="nf">reduce</span><span class="o">((</span><span class="nv">unique</span><span class="o">,</span> <span class="nv">item</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="nv">item</span> <span class="k">in</span> <span class="nv">unique</span> <span class="o">?</span> <span class="nv">unique</span> <span class="o">:</span> <span class="nv">unique</span><span class="o">|</span><span class="nf">merge</span><span class="o">([</span><span class="nv">item</span><span class="o">]),</span> <span class="o">[])</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    "creator_lod": </span><span class="cp">{{</span> <span class="nv">creator_lod</span><span class="o">|</span><span class="nf">json_encode</span><span class="o">|</span><span class="nf">raw</span> -<span class="cp">}}</span><span class="x">,</span>
+<span class="x">    </span><span class="c">{#- END Names from LoD and MODS CSV with/without URIS. -#}</span><span class="x"></span>
+</code></pre></div>
 </details>
-<p><strong>Use Case #5:</strong> I have geographic-related information that I would like to reconciliate against Nominatim and map into the default Archipelago 'geographic_location' key. I have AMI Source Data CSVs where which contain values/labels and some which contains coordinates.</p>
+<p><strong>Use Case #5:</strong> I have geographic location information that I would like to reconciliate against Nominatim and map into the default Archipelago 'geographic_location' key. I have AMI Source Data CSVs which contain values/labels and some which contain coordinates.</p>
 <p><strong>Twig Recipe Card for Use Case #5 with variation notes:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c">{#- &lt;-- Geographic Info and terms:</span>
 <span class="c">  Includes options for geographic info for:</span>
@@ -930,7 +920,7 @@
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 <span class="c">{#- Geographic Info and terms --&gt; #}</span><span class="x">  </span>
 </code></pre></div>
-<p><strong>Use Case #6:</strong> I have date values in a <code>dc.date</code> column whose values contain instances of 'circa' or 'Circa' where I would like to replace with the EDTF-friendly '~' instead and map to the Archipelago default 'date_created_edtf' JSON key.</p>
+<p><strong>Use Case #6:</strong> I have date values in a <code>dc.date</code> column that contain instances of 'circa' or 'Circa' where I would like to replace with the EDTF-friendly '~' instead and map to the Archipelago default 'date_created_edtf' JSON key.</p>
 <p><strong>Twig Recipe Card for Use Case #6:</strong> </p>
 <div class="highlight"><pre><span></span><code><span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data</span><span class="o">[</span><span class="s1">'dc.date'</span><span class="o">]</span> <span class="k">is</span> <span class="nf">defined</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">        </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">datecleaned</span> <span class="o">=</span> <span class="nv">data</span><span class="o">[</span><span class="s1">'dc.date'</span><span class="o">]|</span><span class="nf">replace</span><span class="o">({</span><span class="s2">"circa ":"~"</span><span class="o">,</span> <span class="s2">"Circa ":"~"</span><span class="o">})</span> <span class="cp">%}</span><span class="x"></span>
@@ -942,6 +932,7 @@
 <span class="x">        },        </span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div>
+<p><em>More recipe cards will be added over time. Please see our <a href="../giveortake/">Archipelago Contribution Guide</a> to learn about contributing your own recipe card or other documentation.</em></p>
 <hr/>
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
 <p>Return to the <a href="../">Archipelago Documentation main page</a>.</p>
