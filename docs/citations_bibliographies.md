@@ -121,25 +121,24 @@ As part of the [format_strawberryfield module](https://github.com/esmero/format_
         {# First we structure the metadata to be processed by the formatter. #}
         {% if data.creator|length > 0 or data.creator_lod|length > 0 %}
        	  {% if data.creator_lod %}
-       	    {% if data.creator_lod is iterable %}
-              {% set authors %}
-                [
-       	          {% for creator in data.creator_lod %}
-       	            {% set name_array = creator.name_label | split(',') %}
-                    {% set family_name = name_array[0] %}
-                    {% set given_name = name_array[1] %}
-                      {
-                        "family": "{{ family_name }}",
-                        "given": "{{ given_name }}"
-                      }
-                    {{ not loop.last ? ',' : '' }}
-       	          {% endfor %}
-                ]
-              {% endset %}
-       	    {% else %}
-       	      {{ data.creator }}
-            {% endif %} 
+            {% set creators = data.creator_lod %}
+       	  {% else %}
+            {% set creators = data.creator %}
        	  {% endif %}
+          {% set authors %}
+            [
+       	      {% for creator in creators %}
+       	        {% set name_array = creator.name_label | split(',') %}
+                {% set family_name = name_array[0] %}
+                {% set given_name = name_array[1] %}
+                  {
+                    "family": "{{ family_name }}",
+                    "given": "{{ given_name }}"
+                  }
+                {{ not loop.last ? ',' : '' }}
+       	      {% endfor %}
+            ]
+          {% endset %}
         {% endif %}
 
         {# Below is the structure of a basic input item. See the schema referenced above for more advanced usage. #}
