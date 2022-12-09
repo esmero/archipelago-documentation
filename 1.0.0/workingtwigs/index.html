@@ -454,18 +454,9 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prequisites-with-food-analogy">
-    Prequisites (with food analogy)
+<a class="md-nav__link" href="#prerequisites-with-food-analogy">
+    Prerequisites (with food analogy)
   </a>
-<nav aria-label="Prequisites (with food analogy)" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#note-about-the-examples">
-    Note about the Examples:
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#first-know-your-data">
@@ -482,11 +473,29 @@
 <a class="md-nav__link" href="#twig-statements-and-printing">
     Twig Statements and Printing
   </a>
+<nav aria-label="Twig Statements and Printing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-examples-using-printing-statements">
+    Simple examples using Printing Statements
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#twig-statements-and-executing">
     Twig Statements and Executing
   </a>
+<nav aria-label="Twig Statements and Executing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rendered-output-based-upon-different-twig-conditionals-operators-tests-assignments-and-filters">
+    Rendered Output based upon different Twig conditionals, operators, tests, assignments, and filters
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#full-examples-for-common-uses-cases">
@@ -733,18 +742,9 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prequisites-with-food-analogy">
-    Prequisites (with food analogy)
+<a class="md-nav__link" href="#prerequisites-with-food-analogy">
+    Prerequisites (with food analogy)
   </a>
-<nav aria-label="Prequisites (with food analogy)" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#note-about-the-examples">
-    Note about the Examples:
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#first-know-your-data">
@@ -761,11 +761,29 @@
 <a class="md-nav__link" href="#twig-statements-and-printing">
     Twig Statements and Printing
   </a>
+<nav aria-label="Twig Statements and Printing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-examples-using-printing-statements">
+    Simple examples using Printing Statements
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#twig-statements-and-executing">
     Twig Statements and Executing
   </a>
+<nav aria-label="Twig Statements and Executing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rendered-output-based-upon-different-twig-conditionals-operators-tests-assignments-and-filters">
+    Rendered Output based upon different Twig conditionals, operators, tests, assignments, and filters
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#full-examples-for-common-uses-cases">
@@ -800,7 +818,7 @@
 <ul>
 <li><a href="https://tinyurl.com/archipelagoandtwig">Twig Templates and Archipelago</a></li>
 </ul>
-<h2 id="prequisites-with-food-analogy">Prequisites (with food analogy)</h2>
+<h2 id="prerequisites-with-food-analogy">Prerequisites (with food analogy)</h2>
 <ol>
 <li>Know your Data/Metadata. What do I have? <img alt="🤔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f914.svg" title=":thinking:"><ul>
 <li>What do I have in my Fridge? Do I have Tofu? Do I have Peppermint <img alt="🍬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f36c.svg" title=":candy:">? One Bunch?</img></li>
@@ -827,8 +845,10 @@
 </ul>
 </li>
 </ol>
-<h4 id="note-about-the-examples">Note about the Examples:</h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><em>All examples shown below are using the following JSON snipped from <a href="https://archipelago.nyc/do/17355bdb-d784-4037-96fe-5c160296e639">Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?]</a>.</em></p>
+</div>
 <details class="info">
 <summary>Click to view image of the JSON snippet.</summary>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/LaddieJSON.png"><img alt="LaddieJSON" src="../images/LaddieJSON.png"/></a></p>
@@ -928,190 +948,136 @@
 </li>
 </ul>
 </li>
-<li>
-<p>Please note: you also have access to other info in your <strong>context</strong> <code>node</code>: such as<code>node.id</code> is the Drupal ID of your Current ADO; Also <code>is_front</code>, <code>language</code>, <code>is_admin</code>, <code>logged_in</code> and more!</p>
-</li>
 </ul>
-<h4 id="twig-statements-and-printing">Twig Statements and Printing</h4>
-<ul>
-<li><a href="https://twig.symfony.com/doc/3.x/templates.html">https://twig.symfony.com/doc/3.x/templates.html</a></li>
-<li>Simple examples using Printing Statements</li>
-<li>
-<p>Single JSON Value Example:</p>
-<ul>
-<li>
-<p>Twig template: </p>
-<div class="highlight"><pre><span></span><code><span class="x">Hello I am a </span><span class="cp">{{</span> <span class="nv">data.type</span> <span class="cp">}}</span><span class="x"> and very happy to meet you</span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You also have access to other info in your <strong>context</strong> <code>node</code>: such as<code>node.id</code> is the Drupal ID of your Current ADO; Also <code>is_front</code>, <code>language</code>, <code>is_admin</code>, <code>logged_in</code>; and more!</p>
+</div>
+<h3 id="twig-statements-and-printing">Twig Statements and Printing</h3>
+<div class="admonition info">
+<p class="admonition-title">Twig for Template Designers</p>
+<p><a href="https://twig.symfony.com/doc/3.x/templates.html">https://twig.symfony.com/doc/3.x/templates.html</a></p>
+</div>
+<h4 id="simple-examples-using-printing-statements">Simple examples using Printing Statements</h4>
+<div class="admonition example">
+<p class="admonition-title">Single JSON Value Example</p>
+<div class="highlight"><span class="filename">Twig template</span><pre><span></span><code><span class="x">Hello I am a </span><span class="cp">{{</span> <span class="nv">data.type</span> <span class="cp">}}</span><span class="x"> and very happy to meet you</span>
 </code></pre></div>
-</li>
-<li>
-<p>Rendered output:</p>
-<ul>
-<li><code>Hello I am a Photograph and very happy to meet you</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Multiple JSON Values Example:</p>
-<ul>
-<li>
-<p>Twig template:</p>
-<div class="highlight"><pre><span></span><code><span class="x">Hello I was classified as "</span><span class="cp">{{</span> <span class="nv">data.subject_loc</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="nv">.label</span> <span class="cp">}}</span><span class="x">" and very happy to meet you</span>
+<div class="highlight"><span class="filename">Rendered output</span><pre><span></span><code><span class="x">Hello I am a Photograph and very happy to meet you</span>
 </code></pre></div>
-</li>
-<li>
-<p>Rendered Output:</p>
-<ul>
-<li><code>Hello I was classified as "Dogs" and very happy to meet you</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="twig-statements-and-executing">Twig Statements and Executing</h4>
-<ul>
-<li><a href="https://twig.symfony.com/doc/3.x/tags/if.html">https://twig.symfony.com/doc/3.x/tags/if.html</a></li>
-<li>
-<p>Rendered Output based upon different Twig <code>conditionals</code>, <code>operators</code>, <code>tests</code>, <code>assignments</code>, and <code>filters</code></p>
-</li>
-<li>
-<p>Example 1:</p>
-<ul>
-<li>
-<p>Twig template:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.subject_loc</span> <span class="k">is</span> <span class="nf">defined</span> <span class="cp">%}</span><span class="x"></span>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Multiple JSON Values Example</p>
+<div class="highlight"><span class="filename">Twig template</span><pre><span></span><code><span class="x">Hello I was classified as "</span><span class="cp">{{</span> <span class="nv">data.subject_loc</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="nv">.label</span> <span class="cp">}}</span><span class="x">" and very happy to meet you</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Rendered output</span><pre><span></span><code><span class="x">Hello I was classified as "Dogs" and very happy to meet you</span>
+</code></pre></div>
+</div>
+<h3 id="twig-statements-and-executing">Twig Statements and Executing</h3>
+<div class="admonition info">
+<p class="admonition-title">If in Twig</p>
+<p><a href="https://twig.symfony.com/doc/3.x/tags/if.html">https://twig.symfony.com/doc/3.x/tags/if.html</a></p>
+</div>
+<h4 id="rendered-output-based-upon-different-twig-conditionals-operators-tests-assignments-and-filters">Rendered Output based upon different Twig <code>conditionals</code>, <code>operators</code>, <code>tests</code>, <code>assignments</code>, and <code>filters</code></h4>
+<div class="admonition example">
+<p class="admonition-title">Conditionals, Operator, and Test Usage</p>
+<div class="highlight"><span class="filename">Twig Template</span><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.subject_loc</span> <span class="k">is</span> <span class="nf">defined</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">Hey I have a Subject Key</span>
 <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">Ups no Subject Key</span>
 <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div>
-</li>
-<li>
-<p>Rendered Output:</p>
+<div class="highlight"><span class="filename">Rendered Output</span><pre><span></span><code><span class="x">Hello I was classified as "Dogs" and very happy to meet you</span>
+</code></pre></div>
 <ul>
-<li><code>Hey I have a Subject Key</code></li>
-</ul>
-</li>
-<li>
-<p>Conditionals, Operator, and Test usage:</p>
-<ul>
-<li><strong>If/else</strong> are conditionals</li>
+<li><strong>if/else</strong> are conditionals</li>
 <li><strong>is</strong> is an operator</li>
 <li><strong>defined</strong> is a test </li>
 </ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Example 2:</p>
-<ul>
-<li>
-<p>Twig template:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">for</span> <span class="nv">key</span><span class="o">,</span> <span class="nv">subject</span> <span class="k">in</span> <span class="nv">data.subject_loc</span> <span class="cp">%}</span><span class="x"></span>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Loop Usage</p>
+<div class="highlight"><span class="filename">Twig Template</span><pre><span></span><code><span class="cp">{%</span> <span class="k">for</span> <span class="nv">key</span><span class="o">,</span> <span class="nv">subject</span> <span class="k">in</span> <span class="nv">data.subject_loc</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">* Subject </span><span class="cp">{{</span> <span class="nv">subject.label</span> <span class="cp">}}</span><span class="x"> found at position </span><span class="cp">{{</span> <span class="nv">key</span> <span class="cp">}}</span><span class="x"></span>
 <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div>
-</li>
-<li>
-<p>Rendered Output:</p>
-<ul>
-<li><code>* Subject Dogs found at position 0</code></li>
-</ul>
-</li>
-<li>
-<p>Loop usage:   </p>
+<div class="highlight"><span class="filename">Rendered Output</span><pre><span></span><code><span class="x">* Subject Dogs found at position 0</span>
+</code></pre></div>
 <ul>
 <li><strong>for</strong> is a loop</li>
 <li>Inside the loop you have access to <strong>key</strong>, <strong>subject</strong></li>
 </ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Example 3:</p>
-<ul>
-<li>
-<p>Twig template:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">for</span> <span class="nv">subject</span> <span class="k">in</span> <span class="nv">data.subject_loc</span> <span class="cp">%}</span><span class="x"></span>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Assignment, Filter, and Loop Usage</p>
+<div class="highlight"><span class="filename">Twig Template</span><pre><span></span><code><span class="cp">{%</span> <span class="k">for</span> <span class="nv">subject</span> <span class="k">in</span> <span class="nv">data.subject_loc</span> <span class="cp">%}</span><span class="x"></span>
 <span class="cp">{%</span> <span class="k">set</span> <span class="nv">label_lowercase</span> <span class="o">=</span> <span class="nv">subject.label</span><span class="o">|</span><span class="nf">lower</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">My lower case Subject is </span><span class="cp">{{</span> <span class="nv">label_lowercase</span> <span class="cp">}}</span><span class="x"></span>
 <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div>
-</li>
-<li>
-<p>Rendered Output:</p>
-<ul>
-<li><code>My lower case Subject is dogs</code></li>
-</ul>
-</li>
-<li>
-<p>Assignment, Filter, and Loop uage:    </p>
+<div class="highlight"><span class="filename">Rendered Output</span><pre><span></span><code><span class="x">`My lower case Subject is dogs`</span>
+</code></pre></div>
 <ul>
 <li><strong>set</strong> is an assignment </li>
 <li>| is a pipe, used after a value to apply a <strong>filter</strong>.</li>
 <li><strong>lower</strong> is a filter</li>
 <li>Inside the loop you have have access to <strong>subject</strong> and <strong>label_lowercase</strong></li>
 </ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Example 4:</p>
-<ul>
-<li>
-<p>Twig template: </p>
-<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">for</span> <span class="nv">subject</span> <span class="k">in</span> <span class="nv">data.subject_loc</span> <span class="cp">%}</span><span class="x"></span>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Loop Scope</p>
+<div class="highlight"><span class="filename">Twig Template</span><pre><span></span><code><span class="cp">{%</span> <span class="k">for</span> <span class="nv">subject</span> <span class="k">in</span> <span class="nv">data.subject_loc</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">  </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">label_lowercase</span> <span class="o">=</span> <span class="nv">subject.label</span><span class="o">|</span><span class="nf">lower</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">My lower case Subject is </span><span class="cp">{{</span> <span class="nv">label_lowercase</span> <span class="cp">}}</span><span class="x"></span>
 <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
 <span class="c">{# </span>
-<span class="c"> This won’t display because it was assigned inside </span>
+<span class="c"> The below won’t display because it was assigned inside </span>
 <span class="c"> The For Loop</span>
 <span class="c">#}</span><span class="x"></span>
 <span class="cp">{{</span> <span class="nv">label_lowercase</span> <span class="cp">}}</span><span class="x"></span>
 </code></pre></div>
-</li>
-<li>
-<p>Rendered Output:</p>
-<ul>
-<li><code>My lower case Subject is dogs</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<div class="highlight"><span class="filename">Rendered Output</span><pre><span></span><code><span class="x">`My lower case Subject is dogs`</span>
+</code></pre></div>
+</div>
 <h3 id="full-examples-for-common-uses-cases">Full Examples for Common Uses Cases:</h3>
-<p><strong>Use case #1:</strong> I have multiple LoD Subjects and want to display them in my page as a clickable ordered list but I’m a safe/careful person.</p>
-<p><strong>Twig Example for Use Case #1:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.subject_loc</span> <span class="k">is</span> <span class="nf">iterable</span> <span class="k">and</span> <span class="nv">data.subject_loc</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">&lt;h2&gt;My Subjects&lt;/h2&gt;</span>
-<span class="x">&lt;ul&gt;</span>
-<span class="x">   </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">subject</span> <span class="k">in</span> <span class="nv">data.subject_loc</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">   &lt;li&gt;</span>
-<span class="x">      &lt;a href="</span><span class="cp">{{</span> <span class="nv">subject.uri</span> <span class="cp">}}</span><span class="x">" title="</span><span class="cp">{{</span> <span class="nv">subject.label</span><span class="o">|</span><span class="nf">capitalize</span> <span class="cp">}}</span><span class="x">" target="_blank"&gt;</span>
-<span class="x">      </span><span class="cp">{{</span> <span class="nv">subject.label</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">      &lt;/a&gt;</span>
-<span class="x">   &lt;/li&gt; </span>
-<span class="x">   </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">&lt;/ul&gt;</span>
-<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<div class="admonition example">
+<p class="admonition-title">Use Case #1</p>
+<p>I have multiple LoD Subjects and want to display them in my page as a clickable ordered list but I’m a safe/careful person.</p>
+<div class="highlight"><span class="filename">Twig Example for Use Case #1</span><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.subject_loc</span> <span class="k">is</span> <span class="nf">iterable</span> <span class="k">and</span> <span class="nv">data.subject_loc</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>My Subjects<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+   <span class="cp">{%</span> <span class="k">for</span> <span class="nv">subject</span> <span class="k">in</span> <span class="nv">data.subject_loc</span> <span class="cp">%}</span>
+   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">subject.uri</span> <span class="cp">}}</span><span class="s">"</span> <span class="na">title</span><span class="o">=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">subject.label</span><span class="o">|</span><span class="nf">capitalize</span> <span class="cp">}}</span><span class="s">"</span> <span class="na">target</span><span class="o">=</span><span class="s">"_blank"</span><span class="p">&gt;</span>
+      <span class="cp">{{</span> <span class="nv">subject.label</span> <span class="cp">}}</span>
+      <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span> 
+   <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 </code></pre></div>
-<p><strong>Use case #2:</strong> I have sometimes a publication date. I want to show it in beautiful human readable language.</p>
-<p><strong>Twig Example for Use Case #2:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.date_published</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">&lt;h2&gt;Date </span><span class="cp">{{</span> <span class="nv">data.label</span> <span class="cp">}}</span><span class="x"> was published:&lt;/h2&gt;</span>
-<span class="x">&lt;p&gt;</span>
-<span class="cp">{{</span> <span class="nv">data.date_published</span><span class="o">|</span><span class="nf">date</span><span class="o">(</span><span class="s2">"F jS \\o\\f Y \\a\\t g:ia"</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">&lt;/p&gt;</span>
-<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Use Case #2</p>
+<p>I have sometimes a publication date. I want to show it in beautiful human readable language.</p>
+<div class="highlight"><span class="filename">Twig Example for Use Case #2</span><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.date_published</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Date <span class="cp">{{</span> <span class="nv">data.label</span> <span class="cp">}}</span> was published:<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="cp">{{</span> <span class="nv">data.date_published</span><span class="o">|</span><span class="nf">date</span><span class="o">(</span><span class="s2">"F jS \\o\\f Y \\a\\t g:ia"</span><span class="o">)</span> <span class="cp">}}</span>
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 </code></pre></div>
-<p><strong>Note about <code>date</code> in this Use Case #2 Twig Example:</strong> </p>
+<div class="admonition note">
+<p class="admonition-title">About <code>date</code></p>
 <ul>
 <li><strong>date()</strong> is a function</li>
 <li>It uses a <a href="https://www.php.net/manual/en/datetime.formats.date.php">“Date Format Pattern”</a> as argument.</li>
 </ul>
-<p><strong>Use Case #3 (Full Curry):</strong> {# May 4th 2021 @dpino: I have sometimes a user provided creation date. I want to show it in beautiful human readable language but fallback to automatic date if absent. I also want in the last case to show it was either “created” or “updated”. #}</p>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Use Case #3 (Full Curry)</p>
+<p>{# May 4th 2021 @dpino: I have sometimes a user provided creation date. I want to show it in beautiful human readable language but fallback to automatic date if absent. I also want in the last case to show it was either “created” or “updated”. #}</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">"as:generator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Update"</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">"actor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1124,28 +1090,28 @@
 <span class="w">        </span><span class="nt">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:\/\/www.w3.org\/ns\/activitystreams"</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Twig Example for Use Case #3:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.date_created</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">&lt;h2&gt;Date </span><span class="cp">{{</span> <span class="nv">data.label</span> <span class="cp">}}</span><span class="x"> was created:&lt;/h2&gt;</span>
-<span class="x">&lt;p&gt;</span>
-<span class="x">  </span><span class="cp">{{</span> <span class="nv">data.date_created</span><span class="o">|</span><span class="nf">date</span><span class="o">(</span><span class="s2">"F jS \\o\\f Y \\a\\t g:ia"</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">&lt;/p&gt;</span>
-<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">&lt;h2&gt;Date </span><span class="cp">{{</span> <span class="nv">data.label</span> <span class="cp">}}</span><span class="x"> was </span><span class="cp">{{</span> <span class="nv">attribute</span><span class="o">(</span><span class="nv">data</span><span class="o">,</span> <span class="s1">'as:generator'</span><span class="o">)</span><span class="nv">.type</span><span class="o">|</span><span class="nf">lower</span> <span class="cp">}}</span><span class="x">d  in this repository:&lt;/h2&gt;</span>
-<span class="x">&lt;p&gt;</span>
-<span class="x">  </span><span class="cp">{{</span>  <span class="nv">attribute</span><span class="o">(</span><span class="nv">data</span><span class="o">,</span> <span class="s1">'as:generator'</span><span class="o">)</span><span class="nv">.endTime</span><span class="o">|</span><span class="nf">date</span><span class="o">(</span><span class="s2">"F jS \\o\\f Y \\a\\t g:ia"</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">&lt;/p&gt;</span>
-<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<div class="highlight"><span class="filename">Twig Example for Use Case #3</span><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.date_created</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Date <span class="cp">{{</span> <span class="nv">data.label</span> <span class="cp">}}</span> was created:<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="cp">{{</span> <span class="nv">data.date_created</span><span class="o">|</span><span class="nf">date</span><span class="o">(</span><span class="s2">"F jS \\o\\f Y \\a\\t g:ia"</span><span class="o">)</span> <span class="cp">}}</span>
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Date <span class="cp">{{</span> <span class="nv">data.label</span> <span class="cp">}}</span> was <span class="cp">{{</span> <span class="nv">attribute</span><span class="o">(</span><span class="nv">data</span><span class="o">,</span> <span class="s1">'as:generator'</span><span class="o">)</span><span class="nv">.type</span><span class="o">|</span><span class="nf">lower</span> <span class="cp">}}</span>d  in this repository:<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="cp">{{</span>  <span class="nv">attribute</span><span class="o">(</span><span class="nv">data</span><span class="o">,</span> <span class="s1">'as:generator'</span><span class="o">)</span><span class="nv">.endTime</span><span class="o">|</span><span class="nf">date</span><span class="o">(</span><span class="s2">"F jS \\o\\f Y \\a\\t g:ia"</span><span class="o">)</span> <span class="cp">}}</span>
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 </code></pre></div>
+</div>
 <h3 id="a-recommended-workflow">A Recommended Workflow</h3>
 <p>You want to create a New Metadata Display (HTML) or a new (XML) Schema based format?</p>
 <ol>
-<li>Get yourself an example <strong>document (Frame)</strong>. If <strong>HTML</strong> copy the source. If <strong>XML</strong> copy the full XML. (cmd+c)</li>
-<li>Create a new <strong>Metadata Display Entity</strong>. Copy the content (text) of your Frame into the Edit window. (cmd+v)</li>
+<li>Get yourself an example <strong>document (Frame)</strong>. If <strong>HTML</strong> copy the source. If <strong>XML</strong> copy the full XML. (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-c">C</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>)</li>
+<li>Create a new <strong>Metadata Display Entity</strong>. Copy the content (text) of your Frame into the Edit window. (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-v">V</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span>)</li>
 <li>Select an existing (as complete as possible) ADO to use as preview, press Preview.</li>
 <li>Put your nice glasses <img alt="🤓" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f913.svg" title=":nerd_face:"/> on. What do you see? What data in your Frame do you have in your ADO (data)?</li>
-<li>Start nimble. Selected the <code>data.label</code> info, check where your <strong>Frame</strong> uses a <em>Title</em> or a <em>Label</em>. Remove that text (cmd+x) and replace with a <code>{{ data.label }}</code>. Press Preview. Do you see your title?</li>
-<li>Keep doing <strong>6</strong>, over and over. Leave complex values for the end. (e.g <code>data.subject_loc</code>)</li>
+<li>Start nimble. Select the <code>data.label</code> info and check where your <strong>Frame</strong> uses a <em>Title</em> or a <em>Label</em>. Remove that text (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-x">X</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-x">X</kbd></span>) and replace with a <code>{{ data.label }}</code>. Press Preview. Do you see your title?</li>
+<li>Keep doing <strong>5</strong>, over and over. Leave complex values for the end. (e.g <code>data.subject_loc</code>)</li>
 <li>Document your changes. <code>{# I added this because .. #}</code></li>
 <li>Save.</li>
 </ol>
@@ -1160,7 +1126,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2022</span>
 <br/>
         Created:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 4, 2021</span>
