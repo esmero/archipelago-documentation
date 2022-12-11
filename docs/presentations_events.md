@@ -55,8 +55,7 @@
 
 - [Metadata, Schemas and Media in Archipelago (February 2021)](https://docs.google.com/presentation/d/1aGzflRCtPYa4M5_-5sFCW8-ebuqaHRxoZ7LURVaDodg/edit?usp=sharing)
     - Exploration of the flexible and extensible ways Archipelago manages Metadata, Schemas, and Media.
-    
-    - [🎥🔷 Recording available (registration required)]([https://us02web.zoom.us/rec/share/vw6ltEHgMNlm6iWiD20GTCmRx2FfqjzgCN2NaJCs9c_xorUL1yJ7xNIAeqYnJ2xM.32YeQSNqXNpC5hOX)
+    - [🎥🔷 Recording available (registration required)](https://us02web.zoom.us/rec/share/vw6ltEHgMNlm6iWiD20GTCmRx2FfqjzgCN2NaJCs9c_xorUL1yJ7xNIAeqYnJ2xM.32YeQSNqXNpC5hOX)
 
 - Deploying Archipelago 1.0.0-RC1 (February 2021)
     - Demonstration of a complete walkthrough of a local Archipelago 1.0.0-RC1 deployment.
