@@ -73,8 +73,8 @@ nav:
         - Documentation Template: documentation_template.md
         - Additional Features: documentation_features.md
         - Technical Details: documentation_technical.md
-  - Additional Information:
-      - Archipelago Presentations and Documents: presentations_docs.md
+  - Additional Resources:
+      - Archipelago Presentations & Events: presentations_events.md
       - Archipelagos in the Wild: inthewild.md
       - Care & Coding + Fixing / Acknowledgments / License: acknowledgments.md
 theme:
