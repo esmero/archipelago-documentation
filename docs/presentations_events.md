@@ -3,10 +3,11 @@
 # 2022
 
 - Archipelago Late 2022 Workshop Series:
-    - [Session 1 : AMI Essentials and Tricks of the Trade](https://docs.google.com/presentation/d/1vPc4YfwMCPLVEewWdQaw7bm3UKKl3dnWtRaojoA9OBA/edit?usp=sharing)
+    - [Session 1 : AMI Essentials and Tricks of the Trade (November 2022)](https://docs.google.com/presentation/d/1vPc4YfwMCPLVEewWdQaw7bm3UKKl3dnWtRaojoA9OBA/edit?usp=sharing)
         - [🎥🔷 Recording available (registration required)](https://us02web.zoom.us/rec/share/Nm01tAey6KHqjfJglx8ckxxivaqVBq8aK7w3lKMvDAgB9_xcioCSs0bfO_4_lHjM.kw6JbAqgUkgOuyWm) 
-    - [Session 2: Twig Templating and Metadata Display Preview for AMI Ingest](https://docs.google.com/presentation/d/10G2OpzkNmu1YWljJFPAVXm2KoByx34TpRSh2milHEFc/edit?usp=sharing)
+    - [Session 2: Twig Templating and Metadata Display Preview for AMI Ingest (December 2022)](https://docs.google.com/presentation/d/10G2OpzkNmu1YWljJFPAVXm2KoByx34TpRSh2milHEFc/edit?usp=sharing)
         - [🎥🔷 Recording available (registration required)](https://us02web.zoom.us/rec/share/pwXUet1qq4ovSo-kXui9LpI9nh5BDXP-Xq0zSTAJGA7ip7eH4uGQYq7uUUai-v8X.K5cSQpnEXqXrUJH-)
+    - Session 3: AMI Set Processing and Advanced Find + Replace (December 2022)
 
 - 🍓 [Archipelago 1.0.0 - August 2022 Release Announcement (August 2022)](https://groups.google.com/g/archipelago-commons/c/UHMUdtZ8BFU/m/W8hnZ1guAgAJ) and [updated Specs and Features List](https://docs.google.com/document/d/1_fAcDBLaIilKF_mFXPFzDeWz_aqz7AHxSPwYTd21Nug/edit?usp=sharing)   
 
@@ -21,11 +22,10 @@
 
 - 🍓 [Archipelago 1.0.0-RC3 and 1.0.0 Release Announcement - November 2021](https://groups.google.com/g/archipelago-commons/c/UefdSdeHmwM)
 
-- [Building a Web Archive-Capable Digital Repository with Webrecorder and Archipelago](https://docs.google.com/presentation/d/1U_WTNJuuwDvAI7lXm8dRNWrgiiy5t4tFd5CK2gdcOzk/edit?usp=sharing)
+- [AMIA Conference Workshop: Building a Web Archive-Capable Digital Repository with Webrecorder and Archipelago (November 2021)](https://docs.google.com/presentation/d/1U_WTNJuuwDvAI7lXm8dRNWrgiiy5t4tFd5CK2gdcOzk/edit?usp=sharing)
 
 - Solr Importer AMI Migrations, Showcase and Roundtable (July 2021)
-    - Overview and walkthroughs of AMI's Solr Importer (I7) and LoD Reconciliation features
-    - Recommended: latest [I7 Solr Importer](I7solrImporter.md) and [AMI LoD Reconciliation](ami_lod_rec.md) documentation
+    - *Please see latest [I7 Solr Importer](I7solrImporter.md) and [AMI LoD Reconciliation](ami_lod_rec.md) documentation.*
 
 - IIIF Annual 2021 Conference:
     - [Learning & Working with IIIF in Archipelago - 2021 IIIF Annual Conference (June 2021)](https://www.youtube.com/watch?v=ymt-MXcUXck)
@@ -73,6 +73,9 @@
 
 - 🍓 [Archipelago 8.x-1.0-beta3 Release Announcement (July 2020)](https://groups.google.com/g/archipelago-commons/c/KwdVJU2Aa0Q/m/5pkyfCtsBgAJ)
 
+### We should be here 🏝️📍
+
+If you have a public Archipelago presentation, recording, or other resource you'd like to share on this page, please reach out to [Allison (METRO Digital Services Team)](https://github.com/alliomeria). We would love to add your great work to this list. 
 
 ### Important Note
 
