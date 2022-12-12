@@ -31,7 +31,7 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 - Hamilton College Library & IT Services
     - Migration to Archipelago began Summer 2021
 
-- [Olin College Library Pheonix Files](https://phoenixfiles.olin.edu)
+- [Olin College Library Phoenix Files](https://phoenixfiles.olin.edu)
     - *Early adopter - live since Summer 2020
 
 - [New York State COVID-19 Personal History Initiative](https://www.nyspersonalhistory.com)
