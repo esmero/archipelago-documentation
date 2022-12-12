@@ -18,6 +18,9 @@
 
 - [Toward Empathetic Digital Repositories: An Interview with Diego Pino Navarro (January 2022)](https://digitalcommons.lsu.edu/jcdl/vol2/iss1/1/)
 
+#### Internal Training Recordings Note:
+_*[METRO's Digital Services Team](https://metro.org/digital-services) facilitated many different internal training sessions during 2022. If you and your team need access to any of these sessions that were recorded, please [contact us](mailto:repositorysupport@metro.org). Thank you!_
+
 # 2021
 
 - 🍓 [Archipelago 1.0.0-RC3 and 1.0.0 Release Announcement - November 2021](https://groups.google.com/g/archipelago-commons/c/UefdSdeHmwM)
