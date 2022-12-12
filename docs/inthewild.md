@@ -2,7 +2,10 @@
 
 Explore Archipelago instances running free across digital realms.
 
-_*Please be aware that some of the following Archipelago instances are still brewing and these links may change. Stay tuned for future updates to live production sites when available._
+!!! note
+
+    _*Please be aware that some of the following Archipelago instances are still brewing and these links may change. Stay tuned for future updates to live production sites when available._
+
 
 ## METRO + Archipelago 🧑‍🌾 🐝 🍓
 
@@ -58,13 +61,21 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 
     - _In-process migration to Archipelago; Launch of new site late 2022/early 2023_
 
+- [Consiglio Nazionale delle Ricerche / National Research Council of Italy](https://www.cnr.it/)
+    - https://dbopen.ba.cnr.it/
+    - https://archiplavit.to.cnr.it/
+    - https://vitisgrinzane.ipsp.cnr.it/
+    - http://archipelago.byterfly.eu/ 🦋
+        - [Virtual Tour Santuario Paola](http://archipelago.byterfly.eu/do/5aea0a3f-cf03-40cc-9611-924dea1fd806)
+
 - [University of Edinburgh Libraries](https://www.ed.ac.uk/information-services/library-museum-gallery)
 
     - _Development of Archipelago environment began Summer 2022_
 
+
 ### We should be here 🏝️📍
 
-If you have a public Archipelago instance you'd like to share on this page, please reach out to [Allison (METRO Digital Services Team)](https://github.com/alliomeria).   
+If you have a public Archipelago instance you'd like to share on this page, please [contact us](mailto:repositorysupport@metro.org). We would love to add your great work to this list! 💚 
 
 ---
 
