@@ -1,0 +1,14 @@
+# Using Webform Find & Replace
+
+Along the top of the main Home page, navigate to Tools (Repository Content Tools) and select 'Advanced Batch Find and Replace' from the drop down menu.
+
+  ![Advanced Batch Find and Replace](AdvancedBatchFAR_2022-12.jpg)
+  
+  ## Step 1: Search and Replace
+  
+  Depending on your specific use case, you can utilize the Fulltext search, Facets, or a combination of both to aid in the discovery and selection of the ADOs you wish to perform the Webform Find and Replace action on.
+  
+  To use the Fulltext search, type any defining descriptive metadata values (i.e. Title, Date) directly in the search bar and click 'Search'. To narrow down potentially lengthy results, you can utilize the facets by selecting a value beneath an appropriate descriptive metadata source.
+  
+  
+  ## Step 2: 
