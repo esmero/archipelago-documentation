@@ -1,10 +1,12 @@
 # Archipelago Presentations, Events, and Additional Resources
 
-!!! note
+!!! note "Important General & Internal Recordings Notes"
 
     Please be aware that some of the presentation documents shared above may contain links to older documentation resources that have since changed or are no longer available. We recommend referring to the latest documentation versions available on this site whenever needed.
 
-# 2022
+    [METRO's Digital Services Team](https://metro.org/digital-services) facilitated many different internal training sessions throughout 2020-2022. If you and your team need access to any of these sessions that were recorded, please [contact us](mailto:repositorysupport@metro.org). Thank you!
+
+## 2022
 
 - Archipelago Late 2022 Workshop Series:
     - [Session 1 : AMI Essentials and Tricks of the Trade. Pino Navarro, Diego; Lund, Allison; Romabiles, Katie. (November 2022)](https://docs.google.com/presentation/d/1vPc4YfwMCPLVEewWdQaw7bm3UKKl3dnWtRaojoA9OBA/edit?usp=sharing)
@@ -41,14 +43,9 @@
     - Ianthe Sutherland at University at Edinburgh
     - Corinne Chatnik at Union College
 
-
 - [Toward Empathetic Digital Repositories: An Interview with Diego Pino Navarro (January 2022)](https://digitalcommons.lsu.edu/jcdl/vol2/iss1/1/)
 
-!!! note
-
-    *[METRO's Digital Services Team](https://metro.org/digital-services) facilitated many different internal training sessions in 2022. If you and your team need access to any of these sessions that were recorded, please [contact us](mailto:repositorysupport@metro.org). Thank you!_
-
-# 2021
+## 2021
 
 - 🍓 [Archipelago 1.0.0-RC3 and 1.0.0 Release Announcement - November 2021](https://groups.google.com/g/archipelago-commons/c/UefdSdeHmwM)
 
@@ -91,7 +88,7 @@
     - Demonstration of a complete walkthrough of a local Archipelago 1.0.0-RC1 deployment.
     - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/bkCReBlVCpbHHzV4QhcfbsJY1OqmK4hAD2AXtOMZDe0VJsqESX9yDM3eCpgGdArA.olFynqMgzxITON8K)
 
-# 2020
+## 2020
 
 - 🍓 [Archipelago 1.0.0-RC1 Release Announcement (December 2020)](https://groups.google.com/g/archipelago-commons/c/_hKcEeNxk54)
 
@@ -103,9 +100,9 @@
 
 - 🍓 [Archipelago 8.x-1.0-beta3 Release Announcement (July 2020)](https://groups.google.com/g/archipelago-commons/c/KwdVJU2Aa0Q/m/5pkyfCtsBgAJ)
 
-### We should be here 🏝️📍
+## We should be here
 
-If you have a public Archipelago presentation, recording, or other resource you'd like to share on this page, please [contact us](mailto:repositorysupport@metro.org). We would love to add your great work to this list! 💚 
+If you have a public Archipelago presentation, recording, or other resource you'd like to share on this page 🏝️📍, please [contact us](mailto:repositorysupport@metro.org). We would love to add your great work to this list! 💚 
 
 ___
 
