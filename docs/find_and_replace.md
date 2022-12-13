@@ -5,6 +5,8 @@ tags:
   - Advanced Find and Replace
   - Find and Replace
   - Search and Replace
+  - Metadata
+  - Review
 ---
 
 # Advanced Batch Find and Replace
