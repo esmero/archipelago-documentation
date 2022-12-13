@@ -59,6 +59,9 @@ nav:
         - Using the Islandora 7 Solr Importer: I7solrImporter.md
       - Annotations: annotations.md
       - Find and Replace: find_and_replace.md
+        - Text Based Find and Replace: find_and_replace_action_text.md
+        - Webform Find and Replace: find_and_replace_action_webform.md
+        - JSON Patch Find and Replace: find_and_replace_action_json_patch.md
     - Site Administration & Configuration:
       - Strawberryfield Formatters: strawberryfield-formatters.md
       - Creating Display Modes: createdisplaymodes.md
