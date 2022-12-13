@@ -35,7 +35,7 @@ From the main page (display title 'Search and Replace'), you will see:
     - Option beside each individual Object/Collection to select one-at-a-time via toggle switch
     - Exapandable 'Raw Metadata (JSON)' section beneath each each individual Object/Collection containing the full Raw JSON metadata record for reference.
  - Expandable section to show all the items Selected in this view (will be 0 items to start).
-    - *Note: individual selections made on different page results will be preserved in the overall Selected items available for preview here.
+    - Individual selections made on different results pages will be preserved in the overall Selected items available for preview here.
         
 ![Find and Replace Main Page](images/find_and_replace_main_page.jpg)
 
