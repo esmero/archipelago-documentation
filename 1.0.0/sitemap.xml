@@ -161,6 +161,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.archipelago.nyc/1.0.0/find_and_replace/</loc>
+         <lastmod>2022-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.archipelago.nyc/1.0.0/find_and_replace_action_text/</loc>
          <lastmod>2022-12-13</lastmod>
          <changefreq>daily</changefreq>

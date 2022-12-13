@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Project documentation for Archipelago." name="description"/>
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
-<link href="https://docs.archipelago.nyc/1.0.0/devops/" rel="canonical"/>
+<link href="https://docs.archipelago.nyc/1.0.0/find_and_replace/" rel="canonical"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
-<title>Software Services - Archipelago Documentation</title>
+<title>Advanced Batch Find and Replace - Archipelago Documentation</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#archipelago-software-services">
+<a class="md-skip" href="#advanced-batch-find-and-replace">
           Skip to content
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Software Services
+              Advanced Batch Find and Replace
             
           </span>
 </div>
@@ -152,8 +152,8 @@
         Home
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2">
           About Archipelago
           <span class="md-nav__icon md-icon"></span>
@@ -184,38 +184,10 @@
         Archipelago's File Persistence Strategy
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Software Services
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../devops/">
         Software Services
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#under-the-hood-archipelagos-architecture-is">
-    Under the hood, Archipelago's architecture is:
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#strawberryfield-modules-at-the-heart-of-every-archipelago">
-    Strawberryfield Modules at the heart of every Archipelago:
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#archipelago-also-extends-these-powerful-tools">
-    Archipelago also extends these powerful tools:
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -700,19 +672,43 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#under-the-hood-archipelagos-architecture-is">
-    Under the hood, Archipelago's architecture is:
+<a class="md-nav__link" href="#where-to-find">
+    Where to Find
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#strawberryfield-modules-at-the-heart-of-every-archipelago">
-    Strawberryfield Modules at the heart of every Archipelago:
+<a class="md-nav__link" href="#main-page-overview">
+    Main Page Overview
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#archipelago-also-extends-these-powerful-tools">
-    Archipelago also extends these powerful tools:
+<a class="md-nav__link" href="#available-actions">
+    Available Actions
   </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#find-and-replace-specific-actions">
+    Find and Replace Specific Actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#important-notes-workflow-recommendations">
+    Important Notes &amp; Workflow Recommendations
+  </a>
+<nav aria-label="Important Notes &amp; Workflow Recommendations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simulation-mode">
+    Simulation Mode
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#checking-your-changes">
+    Checking Your Changes
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -721,86 +717,94 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/esmero/archipelago-documentation/commits/1.0.0/docs/devops.md" title="Edit this page">
+<nav class="md-tags">
+<span class="md-tag">Advanced Batch Find and Replace</span>
+<span class="md-tag">Advanced Find and Replace</span>
+<span class="md-tag">Find and Replace</span>
+<span class="md-tag">Search and Replace</span>
+<span class="md-tag">Metadata</span>
+<span class="md-tag">Review</span>
+</nav>
+<a class="md-content__button md-icon" href="https://github.com/esmero/archipelago-documentation/commits/1.0.0/docs/find_and_replace.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="archipelago-software-services">Archipelago Software Services</h1>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/architecture_white_background.png"><img alt="ADOlife" src="../images/architecture_white_background.png"/></a></p>
-<p>At the core of the Archipelago philosophy is our commitment to both simplicity and flexibility.</p>
-<h3 id="under-the-hood-archipelagos-architecture-is">Under the hood, Archipelago's architecture is:</h3>
+<h1 id="advanced-batch-find-and-replace">Advanced Batch Find and Replace</h1>
+<p>Archipelago's Advanced Batch Find and Replace functionality provides different ways for you to efficiently Find/Search and Replace metadata values found in the raw JSON of your Digital Objects and Collections. Advanced Batch Find and Replace makes use of customized Actions that extend <a href="https://www.drupal.org/project/views_bulk_operations">Drupal's VBO module</a> to enable these powerful batch metadata replacement Actions in your Archipelago environment. </p>
+<h2 id="where-to-find">Where to Find</h2>
+<p>In default Archipelagos, you can find Advanced Batch Find and Replace:
+ - Through the <code>Tools</code> menu &gt; <code>Advanced Batch Find and Replace</code> 
+ - Directly at <code>/search-and-replace</code> </p>
+<pre><code>![Tools Menu Find and Replace](images/tools_menu_find_and_replace.jpg)
+</code></pre>
+<details class="info">
+<summary>Site Administrator Note</summary>
 <ul>
-<li><a href="https://www.drupal.org/">Drupal (CMS)</a></li>
-<li><a href="https://lucene.apache.org/solr/">Solr (Search)</a></li>
-<li><a href="https://cantaloupe-project.github.io/">Cantaloupe (Image Server)</a></li>
-<li><a href="https://min.io/">S3 Storage (Mini.io or any other S3 flavor)</a></li>
+<li>The View driving this can be found at <code>/admin/structure/views/view/solr_search_content_with_find_and_replace</code>. The default Facets referenced above can be found at <code>/admin/structure/block/list/archipelago_subtheme</code> in the <code>Sidebar Second</code> section. Please proceed with caution if making any changes to the default configurations for this View or the Facets referenced on this View Page.     </li>
 </ul>
-<p>Installation is entirely <a href="https://www.docker.com">Dockerized</a> and scripted with <a href="../archipelago-deployment-readme/">easy-to-follow directions</a>.</p>
+</details>
+<h2 id="main-page-overview">Main Page Overview</h2>
+<p>From the main page (display title 'Search and Replace'), you will see:
+ - A <code>Fulltext Search</code> box
+ - Dropdown list of available <code>Actions</code>
+ - Listing of all the Digital Objects and Collections found in your Archipelago repository
+    - Option to <code>Select/deselect all results in this view (all pages)</code> via toggle switch
+    - Same toggle switch option beside each individual Object/Collection to select one-at-a-time
+    - Expandable <code>► Raw Metadata (JSON)</code> section beneath each each individual Object/Collection containing the full Raw JSON metadata record for reference
+ - Expandable section to show all the <code>Selected items in this view</code> (will be 0 items to start).
+    - Individual selections made on different results pages will be preserved in the overall total of <code>Selected items</code> available for preview on this main/top page.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/find_and_replace_main_page.jpg"><img alt="Find and Replace Main Page" src="../images/find_and_replace_main_page.jpg"/></a></p>
+<p>You will also see a listing of a few different default Facets configured to help guide your selection of potential Digital Objects/Collections:
+ - Object Type
+    - the Archipelago Digital Object/Collection Type
+    - JSON key: <code>type</code>
+ - JSON keys in your metadata
+    - all of the potential JSON keys that are present in your repository
+    - includes 'flattened' keys that may not be readily accessible via Webform elements (such as Archipelago-generated technical and administrative keys)
+ - Ingest Method Service URL
+    - The URL of the Digital Object/Collection Webforms and AMI Sets present in your repository that were used to create Digital Objects/Collections.</p>
+<h2 id="available-actions">Available Actions</h2>
+<p>The default options available through the Action dropdown menu include:
+ - <em><code>Export Archipelago Digital Objects to CSV content item</code>
+ - <code>Text based find and replace Metadata for Archipelago Digital Objects content item</code>
+ - <code>Webform find-and-replace Metadata for Archipelago Digital Objects content item</code>
+ - <code>JSON Patch Metadata for Archipelago Digital Objects content item</code>
+ - </em><code>Publish Digital Object</code>
+ - <em><code>Unpublish Digital Object</code>
+ - </em><code>Change the author of content</code>
+ - *<code>Delete selected entities/translations</code></p>
+<p><em>* denotes Action options that are also shared with the main <code>Content</code> Page Action Menu</em></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/find_and_replace_actions.jpg"><img alt="Find and Replace Actions" src="../images/find_and_replace_actions.jpg"/></a></p>
+<h2 id="find-and-replace-specific-actions">Find and Replace Specific Actions</h2>
+<p>After reviewing the 'Important Notes &amp; Workflow Recommendations' below, please see the following separate pages for detailed examples walking through the usage of the three different Find and Replace specific actions. </p>
 <ul>
-<li>Docker containers are as follows:</li>
+<li><a href="../find_and_replace_action_text/">Text Based Find and Replace</a></li>
+<li>Enables you to execute simple but powerful text based search and replacement operations.</li>
+<li><a href="../find_and_replace_action_webform/">Webform Find and Replace</a></li>
+<li>Enables you to search against values found within defined Webform elements to apply metadata replacements with targeted care.</li>
+<li><a href="find_and_replace_action_json_patch.md">JSON Patch Find and Replace</a></li>
+<li>Enables you to carry out advanced <a href="https://jsonpatch.com">JSON Patch</a> operations within your metadata.</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>Container</th>
-<th>Purpose</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>esmero-web</td>
-<td>NGNIX</td>
-<td>Routes calls to esmero-php</td>
-</tr>
-<tr>
-<td>esmero-php</td>
-<td>PHP-FPM</td>
-<td>Has all binaries for postprocessing/exif/ocr/etc. Runs PHP code.</td>
-</tr>
-<tr>
-<td>esmero-db</td>
-<td>Database</td>
-<td>AMD and INTEL processors: MYSQL 8<br/>ARM processors: MariaDB</td>
-</tr>
-<tr>
-<td>esmero-minio</td>
-<td>Storage</td>
-<td>S3 API compatible Backend file and ADO as file storage. In a local it will do all the S3 stuff, on a live instance it can server as file routing to AWS S3, Azure Blob Storage, etc.</td>
-</tr>
-<tr>
-<td>esmero-solr</td>
-<td>Solr</td>
-<td>Currently version 8.8.2</td>
-</tr>
-<tr>
-<td>esmero-nlp</td>
-<td>Natural Language Processing</td>
-<td>NLP64 server for entity extraction, language detection, etc.</td>
-</tr>
-</tbody>
-</table>
-<p><em>Information related to non-Dockerized installation and configruation can be found here: <a href="../traditional-install/">Traditional Installation Notes</a></em></p>
-<h3 id="strawberryfield-modules-at-the-heart-of-every-archipelago">Strawberryfield Modules at the heart of every Archipelago:</h3>
+<h2 id="important-notes-workflow-recommendations">Important Notes &amp; Workflow Recommendations</h2>
+<div class="admonition warning">
+<p class="admonition-title">Important Note</p>
+<p>The Actions available through Archipelago's Advanced Batch Find and Replace can potentially have repository-wide effects. It is strongly recommended that you proceed with caution when executing any of the available Actions. </p>
+</div>
+<h3 id="simulation-mode">Simulation Mode</h3>
+<p>Before executing any of the available Find and Replace Actions, the best-practice workflow recommendation is to <strong>always</strong> first run in Simulation Mode:
+- Before the final 'Execute Action' step of your Find and Replace operation, select the option to <strong>'☑️ only simulate and debug affected JSON'</strong>. This will run a quick check against your Action specifications and the potentially impacted Digital Objects and Collections.
+- You can then double check that the total effected changes shown reflect your intended amount of changes. 
+   - The total number of changes will always be multipled by a factor of 2, as the Actions count a first step of checking against your data, then the second step of applying the change.
+   - If your Action specifications do not match against any JSON metadata values in your specified results, you will also see that no matches were applicable.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/find_and_replace_simulation_mode.jpg"><img alt="Find and Replace Simulation Mode" src="../images/find_and_replace_simulation_mode.jpg"/></a></p>
 <ul>
-<li><a href="https://github.com/esmero/strawberryfield">Strawberryfield</a></li>
-<li><a href="https://github.com/esmero/format_strawberryfield">Format Strawberryfield</a></li>
-<li><a href="https://github.com/esmero/webform_strawberryfield">Webform Strawberryfield</a></li>
-<li><a href="https://github.com/esmero/strawberry_runners">Strawberry Runners</a></li>
-<li><a href="https://github.com/esmero/ami">Archipelago Multi-Importer (AMI)</a></li>
+<li>Once you have reviewed the results of the Simulation Mode and confirmed the simulated results match your intentend amount of changes, proceed with executing the Action you first simulated.</li>
 </ul>
-<p>Documentation related to the Strawberryfield modules can be found here: <a href="../strawberryfields/">Strawberryfields Forever</a></p>
-<h3 id="archipelago-also-extends-these-powerful-tools">Archipelago also extends these powerful tools:</h3>
-<ul>
-<li><a href="https://github.com/recogito/annotorious">Annotorius</a></li>
-<li><a href="https://www.drupal.org/project/webform">Drupal Webform Module</a></li>
-<li><a href="https://iiif.io/">International Image Interoperability Framework (IIIF)</a></li>
-<li><a href="https://github.com/internetarchive/bookreader">Internet Archive BookReader</a></li>
-<li><a href="https://projectmirador.org">Mirador</a></li>
-<li><a href="https://github.com/mpetroff/pannellum">Pannellum</a></li>
-<li><a href="https://github.com/webrecorder/replayweb.page">Replayweb.page Webarchive Player</a></li>
-<li><a href="https://github.com/dbmdz/solr-ocrhighlighting">Solr OCR Highlighting</a></li>
-<li>Twig Templating <a href="https://twig.symfony.com">In Symfony</a> / <a href="https://www.drupal.org/docs/theming-drupal/twig-in-drupal">In Drupal</a></li>
-</ul>
+<h3 id="checking-your-changes">Checking Your Changes</h3>
+<p>After applying any of the Find and Replace Actions, you can review the specific changes that were made within the Revision history of the impacted Digital Objects and Collections. 
+ - Through the <code>Find and Replace</code> page results listing or the main <code>Content</code> page, navigate to the Digital Object/Collection you wish to review.
+ - Open the 'Revision' tab.
+ - The details for the specific Action executed will be visible. All of the Find and Replace Actions will result in slightly different operation notes within the the Revision history.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/find_and_replace_revision_check.jpg"><img alt="Find and Replace Revision Check" src="../images/find_and_replace_revision_check.jpg"/></a></p>
 <hr/>
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
 <p>Return to the <a href="../">Archipelago Documentation main page</a>.</p>
@@ -809,10 +813,10 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 13, 2022</span>
 <br/>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 4, 2021</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 13, 2022</span>
 </small>
 </div>
 </article>
@@ -824,34 +828,6 @@
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Archipelago's File Persistence Strategy" class="md-footer__link md-footer__link--prev" href="../archifilepersistencestrategy/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Archipelago's File Persistence Strategy
-            </div>
-</div>
-</a>
-<a aria-label="Next: Code of Conduct" class="md-footer__link md-footer__link--next" href="../CODE_OF_CONDUCT/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              Code of Conduct
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
