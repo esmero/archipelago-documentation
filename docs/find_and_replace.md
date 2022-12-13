@@ -75,7 +75,7 @@ After reviewing the 'Important Notes & Workflow Recommendations' below, please s
 
 ## Important Notes & Workflow Recommendations
 
-!!! note "Important Note & Workflow Recommendation"
+!!! warning "Important Note & Workflow Recommendation"
 
     The Actions available through Archipelago's Advanced Batch Find and Replace can potentially have repository-wide effects. It is strongly recommended that you proceed with caution when executing any of the available Actions. 
 
