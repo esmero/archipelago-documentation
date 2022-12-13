@@ -72,7 +72,7 @@ _* denotes Action options that are also shared with the Main `Content` Page Acti
 
 ## Find and Replace Specific Actions
 
-Please see the following separate pages listed below for detailed information related to each of the three 'Find and Replace' specific actions.
+Please see the following separate pages listed below for detailed information related to each of the three Find and Replace specific actions.
 
 - [Text Based Find and Replace](find_and_replace_action_text.md)
 - [Webform Find and Replace](find_and_replace_action_webform.md)
