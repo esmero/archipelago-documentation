@@ -144,3 +144,39 @@ The text-based find and replace is case-sensitive and space-sensitive, and while
     "description": "Inscription on mount: \"Meyerhof, Agnes \\ Frankfurt - a\/M. \\ Inv el-lith \\ Painter.\" Inscription on verso: \"Agnes Meyerhoff \\ Frankfurt a\/M \\ inv. [at?] lith. \\ [maker in?]\".",
     ...
     ```
+
+!!! example "Replacing a JSON value with escape characters"
+
+    **Use Case**: The URL for a website that appears in multiple keys needs to be updated from `http://hubblesite.org` to `https://hubblesite.org`.
+
+    ```json title="JSON value example with URL after update"
+    ...
+    "rights": "This digital image may be used for educational or scholarly purposes without restriction. Commercial and other uses of the item are prohibited without prior written permission from the NASA and the Space Telescope Science Institute (STScI). For more information, please visit the NASA and the Space Telescope Science Institute's Copyright web page at [http:\/\/hubblesite.org\/copyright](http:\/\/hubblesite.org\/copyright).",
+    ...
+    "description": "\"The largest NASA Hubble Space Telescope image ever assembled, this sweeping bird’s-eye view of a portion of the Andromeda galaxy (M31) is the sharpest large composite image ever taken of our galactic next-door neighbor. Though the galaxy is over 2 million light-years away, The Hubble Space Telescope is powerful enough to resolve individual stars in a 61,000-light-year-long stretch of the galaxy’s pancake-shaped disk. ... The panorama is the product of the Panchromatic Hubble Andromeda Treasury (PHAT) program. Images were obtained from viewing the galaxy in near-ultraviolet, visible, and near-infrared wavelengths, using the Advanced Camera for Surveys and the Wide Field Camera 3 aboard Hubble. This cropped view shows a 48,000-light-year-long stretch of the galaxy in its natural visible-light color, as photographed with Hubble's Advanced Camera for Surveys in red and blue filters July 2010 through October 2013.\" -full description available at: [http:\/\/hubblesite.org\/image\/3476\/gallery\/73-phat](http:\/\/hubblesite.org\/image\/3476\/gallery\/73-phat).",
+    ...
+    ```
+   
+    Follow [the steps above](#step-by-step-guide) and use the following for the search and replace values:
+
+    ```text title="Search Value"
+    http://hubblesite.org
+    ```
+
+    ```text title="Replace Value"
+    https://hubblesite.org
+    ```
+
+    !!! note
+
+        You'll notice that the escape characters for the forward slash (`\/`), which appear in the raw JSON, do not need to be included in the search or replace values.
+
+    After applying the changes, we have the following values:
+
+    ```json title="JSON value example with URL after update"
+    ...
+    "rights": "This digital image may be used for educational or scholarly purposes without restriction. Commercial and other uses of the item are prohibited without prior written permission from the NASA and the Space Telescope Science Institute (STScI). For more information, please visit the NASA and the Space Telescope Science Institute's Copyright web page at [https:\/\/hubblesite.org\/copyright](https:\/\/hubblesite.org\/copyright).",
+    ...
+    "description": "\"The largest NASA Hubble Space Telescope image ever assembled, this sweeping bird’s-eye view of a portion of the Andromeda galaxy (M31) is the sharpest large composite image ever taken of our galactic next-door neighbor. Though the galaxy is over 2 million light-years away, The Hubble Space Telescope is powerful enough to resolve individual stars in a 61,000-light-year-long stretch of the galaxy’s pancake-shaped disk. ... The panorama is the product of the Panchromatic Hubble Andromeda Treasury (PHAT) program. Images were obtained from viewing the galaxy in near-ultraviolet, visible, and near-infrared wavelengths, using the Advanced Camera for Surveys and the Wide Field Camera 3 aboard Hubble. This cropped view shows a 48,000-light-year-long stretch of the galaxy in its natural visible-light color, as photographed with Hubble's Advanced Camera for Surveys in red and blue filters July 2010 through October 2013.\" -full description available at: [https:\/\/hubblesite.org\/image\/3476\/gallery\/73-phat](https:\/\/hubblesite.org\/image\/3476\/gallery\/73-phat).",
+    ...
+    ```
