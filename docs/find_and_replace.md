@@ -16,7 +16,7 @@ Archipelago's Advanced Batch Find and Replace functionality provides different w
 ## Where to Find
 
 In default Archipelagos, you can find Advanced Batch Find and Replace:
- - Through the `Tools` > `Advanced Batch Find and Replace` 
+ - Through the `Tools` menu > `Advanced Batch Find and Replace` 
  - Directly at `/search-and-replace` 
 
     ![Tools Menu Find and Replace](images/tools_menu_find_and_replace.jpg)   
@@ -31,8 +31,9 @@ From the main page (display title 'Search and Replace'), you will see:
  - A 'Fulltext Search' box
  - Dropdown list of Actions available
  - A listing of all the Digital Objects and Collections found in your Archipelago repository
-    - Option to 'Select/deselect all results in this view (all pages)' via toggle switch.
-    - Option besides each individual Object/Collection to select one-at-a-time via toggle switch.
+    - Option to 'Select/deselect all results in this view (all pages)' via toggle switch
+    - Option beside each individual Object/Collection to select one-at-a-time via toggle switch
+    - Exapandable 'Raw Metadata (JSON)' section beneath each each individual Object/Collection containing the full Raw JSON metadata record for reference.
  - Expandable section to show all the items Selected in this view (will be 0 items to start).
     - *Note: individual selections made on different page results will be preserved in the overall Selected items available for preview here.
         
@@ -69,29 +70,23 @@ _* denotes Action options that are also shared with the Main `Content` Page Acti
 
 ![Find and Replace Actions](images/find_and_replace_actions.jpg)
 
-The more Find and Replace specific actions will be covered in detailed examples below. 
+## Find and Replace Specific Actions
 
+Please see the following separate pages listed below for detailed information related to each of the three 'Find and Replace' specific actions.
 
-## Text Based Find and Replace 
-
-..
-
-## Webform Find and Replace
-
-..
-
-## JSON Patch
-
-..
+- [Text Based Find and Replace](find_and_replace_action_text.md)
+- [Webform Find and Replace](find_and_replace_action_webform.md)
+- [JSON Patch Find and Replace](find_and_replace_action_json_patch.md)
 
 ## Checking Your Changes
 
-After applying any of the above Actions, you can review the specific changes that were made within the Revision history of the impacted Digital Objects and Collections. 
+After applying any of the above Find and Replace Actions, you can review the specific changes that were made within the Revision history of the impacted Digital Objects and Collections. 
  - Through the Find and Replace results listing or the main Content page, navigate to the Digital Object/Collection
  - Open the 'Revision' tab
  - The details for the specific Action executed will be visible
 
 ![Find and Replace Revision Check](images/find_and_replace_revision_check.jpg)
+
 ___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
