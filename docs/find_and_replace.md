@@ -16,6 +16,7 @@ Archipelago's Advanced Batch Find and Replace functionality provides different w
 ## Where to Find
 
 In default Archipelagos, you can find Advanced Batch Find and Replace:
+
 - Through the `Tools` menu > `Advanced Batch Find and Replace` 
 - Directly at `/search-and-replace` 
 
@@ -28,6 +29,7 @@ In default Archipelagos, you can find Advanced Batch Find and Replace:
 ## Main Page Overview
 
 From the main page (display title 'Search and Replace'), you will see:
+
 - A `Fulltext Search` box
 - Dropdown list of available `Actions`
 - Listing of all the Digital Objects and Collections found in your Archipelago repository
@@ -40,6 +42,7 @@ From the main page (display title 'Search and Replace'), you will see:
 ![Find and Replace Main Page](images/find_and_replace_main_page.jpg)
 
 You will also see a listing of a few different default Facets configured to help guide your selection of potential Digital Objects/Collections:
+
 - Object Type
     - the Archipelago Digital Object/Collection Type
     - JSON key: `type`
@@ -52,6 +55,7 @@ You will also see a listing of a few different default Facets configured to help
 ## Available Actions
 
 The default options available through the Action dropdown menu include:
+
 - *`Export Archipelago Digital Objects to CSV content item`
 - `Text based find and replace Metadata for Archipelago Digital Objects content item`
 - `Webform find-and-replace Metadata for Archipelago Digital Objects content item`
@@ -85,6 +89,7 @@ After reviewing the 'Important Notes & Workflow Recommendations' below, please s
 ## Simulation Mode 
 
 Before executing any of the available Find and Replace Actions, the best-practice workflow recommendation is to **always** first run in Simulation Mode:
+
 - Before the final 'Execute Action' step of your Find and Replace operation, select the option to **'☑️ only simulate and debug affected JSON'**. This will run a quick check against your Action specifications and the potentially impacted Digital Objects and Collections.
 - You can then double check that the total effected changes shown reflect your intended amount of changes. 
    - The total number of changes will always be multipled by a factor of 2, as the Actions count a first step of checking against your data, then the second step of applying the change.
@@ -96,7 +101,8 @@ Before executing any of the available Find and Replace Actions, the best-practic
 
 ## Checking Your Changes
 
-After applying any of the Find and Replace Actions, you can review the specific changes that were made within the Revision history of the impacted Digital Objects and Collections. 
+After applying any of the Find and Replace Actions, you can review the specific changes that were made within the Revision history of the impacted Digital Objects and Collections.
+
 - Through the `Find and Replace` page results listing or the main `Content` page, navigate to the Digital Object/Collection you wish to review.
 - Open the 'Revision' tab.
 - The details for the specific Action executed will be visible. All of the Find and Replace Actions will result in slightly different operation notes within the the Revision history.
