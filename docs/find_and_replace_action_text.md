@@ -1,5 +1,5 @@
 ---
-title: Text Base Find and Replace
+title: Text Based Find and Replace
 tags:
   - Advanced Batch Find and Replace
   - Advanced Find and Replace
