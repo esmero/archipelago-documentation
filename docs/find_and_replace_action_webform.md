@@ -1,5 +1,5 @@
 ---
-title: Using Advanced Batch Find and Replace (Webform Find and Replace)
+title: Using Webform Find and Replace 
 tags:
   - Advanced Batch Find and Replace
   - Webform Find and Replace
@@ -7,7 +7,7 @@ tags:
 ---
 
 
-# Using Advanced Batch Find and Replace (Webform Find and Replace)
+# Using Webform Find and Replace 
 
 Along the top of the main Home page, navigate to Tools (Repository Content Tools) and select 'Advanced Batch Find and Replace' from the drop down menu.
 
@@ -15,7 +15,7 @@ Along the top of the main Home page, navigate to Tools (Repository Content Tools
   ![Advanced Batch Find and Replace](images/AdvancedBatchFAR_2022-12.jpg)
   
 
-## Step 1: Search and Faceting
+## Step 1: Digital Object/Collection Discovery 
   
 Depending on your specific use case, you can utilize the Fulltext search, Facets, or a combination of both to aid in the discovery and selection of the ADOs you wish to perform the Webform Find and Replace action on.
   
@@ -31,7 +31,7 @@ To generate the results (ADOs) of a specific AMI set, you can select the set und
 
   
 
-## Step 2: ADO and Action Selection
+## Step 2: Digital Object/Collection and Webform Find and Replace Action Selection
 
 To Select the appropriate ADO(s) to undergo the Webform Find and Replace operation, click the toggle next to the individual ADO Title. If you wish to select all of your search results, click the toggle next to 'select/deselect all results'. Once selected, the toggle next to the ADO(s) will be highlighted.
 
@@ -45,7 +45,7 @@ Next, select 'Webform find-and-replace Metadata for Archipelago Digital Objects 
   ![Selection and Action](images/SelectionAndAction_WebformFAR_2022-12.jpg)
 
 
-## Step 3: Action Configuration
+## Step 3: Webform Find and Replace Action Configuration
 
 Here you will need to select the configurations to be applied to your chosen ADOs.
 
@@ -87,8 +87,9 @@ Once the action is finished processing you will receive a notification displayin
 
   ![ADO Patch Notification](images/ADOpatchNotification_WebformFAR_2022-12.jpg)
 
-## Step 5: ADO Revision Report
+## Step 5: Revisions
 
+How to check your changes:
 
 Navigate to the ADO you just performed the Webform Find and Replace on and select the 'Revisions' tab.
 
