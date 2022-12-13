@@ -69,8 +69,11 @@ _* denotes Action options that are also shared with the main `Content` Page Acti
 After reviewing the 'Important Notes & Workflow Recommendations' below, please see the following separate pages for detailed examples walking through the usage of the three different Find and Replace specific actions. 
 
 - [Text Based Find and Replace](find_and_replace_action_text.md)
+   - Enables you to execute simple but powerful text-based search and replacement operations.
 - [Webform Find and Replace](find_and_replace_action_webform.md)
+   - Enables you to search against values found within defined Webform elements to apply metadata replacements with targeted care.
 - [JSON Patch Find and Replace](find_and_replace_action_json_patch.md)
+   - Enables you to carry out advanced [JSON Patch](https://jsonpatch.com) operations within your metadata.
 
 
 ## Important Notes & Workflow Recommendations
