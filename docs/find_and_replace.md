@@ -33,7 +33,7 @@ From the main page (display title 'Search and Replace'), you will see:
  - A listing of all the Digital Objects and Collections found in your Archipelago repository
     - Option to 'Select/deselect all results in this view (all pages)' via toggle switch
     - Option beside each individual Object/Collection to select one-at-a-time via toggle switch
-    - Exapandable 'Raw Metadata (JSON)' section beneath each each individual Object/Collection containing the full Raw JSON metadata record for reference.
+    - Expandable 'Raw Metadata (JSON)' section beneath each each individual Object/Collection containing the full Raw JSON metadata record for reference.
  - Expandable section to show all the items Selected in this view (will be 0 items to start).
     - Individual selections made on different results pages will be preserved in the overall Selected items available for preview here.
         
@@ -50,12 +50,6 @@ You will also see a listing of a few different default Facets configured to help
 
 ## Available Actions
 
-!!! note "Important Note & Workflow Recommendation"
-
-    The Actions available through Archipelago's Advanced Batch Find and Replace can potentially have repository-wide effects. It is strongly recommended that you proceed with caution when executing any of the available Actions. 
-    
-    The Workflow Recommendation is to always first select the option to '☑️ only simulate and debug affected JSON' --> Then double check that the total effected changes shown reflect your intended amount of changes (Note: the total will always be multipled by a factor of 2, as the Actions count a first step of checking against your data, then the second step of applying the change.) --> Then once you have confirmed the simulated results match your intentend amount of changes, proceed with executing the Action you first simulated.
-
 The default options available through the Action dropdown menu include:
  - *Export Archipelago Digital Objects to CSV content item
  - Text based find and replace Metadata for Archipelago Digital Objects content item
@@ -66,24 +60,43 @@ The default options available through the Action dropdown menu include:
  - *Change the author of content
  - *Delete selected entities/translations
 
-_* denotes Action options that are also shared with the Main `Content` Page Action Menu_
+_* denotes Action options that are also shared with the main `Content` Page Action Menu_
 
 ![Find and Replace Actions](images/find_and_replace_actions.jpg)
 
 ## Find and Replace Specific Actions
 
-Please see the following separate pages listed below for detailed information related to each of the three Find and Replace specific actions.
+After reviewing the 'Important Notes & Workflow Recommendations' below, please see the following separate pages for detailed examples walking through the usage of the three different Find and Replace specific actions. 
 
 - [Text Based Find and Replace](find_and_replace_action_text.md)
 - [Webform Find and Replace](find_and_replace_action_webform.md)
 - [JSON Patch Find and Replace](find_and_replace_action_json_patch.md)
 
-## Checking Your Changes
 
-After applying any of the above Find and Replace Actions, you can review the specific changes that were made within the Revision history of the impacted Digital Objects and Collections. 
- - Through the Find and Replace results listing or the main Content page, navigate to the Digital Object/Collection
- - Open the 'Revision' tab
- - The details for the specific Action executed will be visible
+## Important Notes & Workflow Recommendations
+
+!!! note "Important Note & Workflow Recommendation"
+
+    The Actions available through Archipelago's Advanced Batch Find and Replace can potentially have repository-wide effects. It is strongly recommended that you proceed with caution when executing any of the available Actions. 
+
+### Simulation Mode 
+
+Before executing any of the available Find and Replace Actions, the best-practice workflow recommendation is to **always** first run in Simulation Mode:
+- Before the final 'Execute Action' step of your Find and Replace operation, select the option to **'☑️ only simulate and debug affected JSON'**. This will run a quick check against your Action specifications and the potentially impacted Digital Objects and Collections.
+- You can then double check that the total effected changes shown reflect your intended amount of changes. 
+   - The total number of changes will always be multipled by a factor of 2, as the Actions count a first step of checking against your data, then the second step of applying the change.
+   - If your Action specifications do not match against any JSON metadata values in your specified results, you will also see that no matches were applicable.
+
+![Find and Replace Simulation Mode](images/find_and_replace_simulation_mode.jpg)
+
+- Once you have reviewed the results of the Simulation Mode and confirmed the simulated results match your intentend amount of changes, proceed with executing the Action you first simulated.
+
+### Checking Your Changes
+
+After applying any of the Find and Replace Actions, you can review the specific changes that were made within the Revision history of the impacted Digital Objects and Collections. 
+ - Through the `Find and Replace` page results listing or the main `Content` page, navigate to the Digital Object/Collection you wish to review.
+ - Open the 'Revision' tab.
+ - The details for the specific Action executed will be visible. All of the Find and Replace Actions will result in slightly different operation notes within the the Revision history.
 
 ![Find and Replace Revision Check](images/find_and_replace_revision_check.jpg)
 
