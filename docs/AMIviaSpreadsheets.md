@@ -225,7 +225,7 @@ Select your global ADO mappings.
 - In order to make sure that Digital Objects containing the corresponding UUID or spreadsheet row number for any corresponding Collections, make sure `ismemberof` is also selected in the ADO Parent Columns. In order to make sure that Digital Objects containing the corresponding UUID or spreadsheet row number for any corresponding Parent ADOs (Creative Work Series/Compounds), make sure `ispartof` is also selected in the ADO Parent Columns.
 - Select the corresponding Columns for the Required ADO mappings.
 
-        ![AMI Step 4 Global ADO Mappings 1](images/AMIstep4GlobalADOmappings_updated_2022-11.jpg)
+    ![AMI Step 4 Global ADO Mappings 1](images/AMIstep4GlobalADOmappings_updated_2022-11.jpg)
 
 #### Step 5-10:
 
