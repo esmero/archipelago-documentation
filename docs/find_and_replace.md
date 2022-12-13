@@ -11,7 +11,7 @@ tags:
 
 # Advanced Batch Find and Replace
 
-Archipelago's Advanced Batch Find and Replace functionality provides different ways for you to efficiently Find/Search and Replace metadata values found in the raw JSON of your Digital Objects and Collections. Advanced Batch Find and Replace makes use of customized Actions that extend [Drupal's VBO module](https://www.drupal.org/project/views_bulk_operations) to enable these powerful batch metadata replacement actions in your Archipelago environment. 
+Archipelago's Advanced Batch Find and Replace functionality provides different ways for you to efficiently Find/Search and Replace metadata values found in the raw JSON of your Digital Objects and Collections. Advanced Batch Find and Replace makes use of customized Actions that extend [Drupal's VBO module](https://www.drupal.org/project/views_bulk_operations) to enable these powerful batch metadata replacement Actions in your Archipelago environment. 
 
 ## Where to Find
 
@@ -28,14 +28,14 @@ In default Archipelagos, you can find Advanced Batch Find and Replace:
 ## Main Page Overview
 
 From the main page (display title 'Search and Replace'), you will see:
- - A 'Fulltext Search' box
- - Dropdown list of Actions available
- - A listing of all the Digital Objects and Collections found in your Archipelago repository
-    - Option to 'Select/deselect all results in this view (all pages)' via toggle switch
-    - Option beside each individual Object/Collection to select one-at-a-time via toggle switch
-    - Expandable 'Raw Metadata (JSON)' section beneath each each individual Object/Collection containing the full Raw JSON metadata record for reference.
- - Expandable section to show all the items Selected in this view (will be 0 items to start).
-    - Individual selections made on different results pages will be preserved in the overall Selected items available for preview here.
+ - A `Fulltext Search` box
+ - Dropdown list of available `Actions`
+ - Listing of all the Digital Objects and Collections found in your Archipelago repository
+    - Option to `Select/deselect all results in this view (all pages)` via toggle switch
+    - Same toggle switch option beside each individual Object/Collection to select one-at-a-time
+    - Expandable `► Raw Metadata (JSON)` section beneath each each individual Object/Collection containing the full Raw JSON metadata record for reference
+ - Expandable section to show all the `Selected items in this view` (will be 0 items to start).
+    - Individual selections made on different results pages will be preserved in the overall total of `Selected items` available for preview on this main/top page.
         
 ![Find and Replace Main Page](images/find_and_replace_main_page.jpg)
 
@@ -45,6 +45,7 @@ You will also see a listing of a few different default Facets configured to help
     - JSON key: `type`
  - JSON keys in your metadata
     - all of the potential JSON keys that are present in your repository
+    - includes 'flattened' keys that may not be readily accessible via Webform elements (such as Archipelago-generated technical and administrative keys)
  - Ingest Method Service URL
     - The URL of the Digital Object/Collection Webforms and AMI Sets present in your repository that were used to create Digital Objects/Collections.
 
