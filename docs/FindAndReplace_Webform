@@ -1,4 +1,14 @@
-# Using Webform Find & Replace
+---
+title: Using Advanced Batch Find and Replace (Webform Find and Replace)
+tags:
+  - Advanced Batch Find and Replace
+  - Webform Find and Replace
+  - Search and Replace
+---
+
+
+
+# Using Advanced Batch Find and Replace (Webform Find and Replace)
 
 Along the top of the main Home page, navigate to Tools (Repository Content Tools) and select 'Advanced Batch Find and Replace' from the drop down menu.
 
@@ -16,8 +26,7 @@ To use the Fulltext search, type any defining descriptive metadata values (i.e. 
   ![Search and Faceting](images/SearchAndFaceting_WebformFAR_2022-12.jpg)
 
 
-  
-If your ADO(s) are part of a specific AMI set, you can select the set under the facet 'Ingest Method Service URL' and all of the ADOs within that set will generate in the results.
+To generate the results (ADOs) of a specific AMI set, you can select the set under the facet 'Ingest Method Service URL'
 
   ![Faceting via AMI set](images/AMISetFaceting_WebformFAR_2022-12.jpg)
 
@@ -25,7 +34,9 @@ If your ADO(s) are part of a specific AMI set, you can select the set under the 
 
 ## Step 2: ADO and Action Selection
 
-To Select the appropriate ADO(s) to undergo the Webform Find and Replace operation, click the toggle next to the individual ADO Title. If you wish to select all of your search results, click the toggle next to 'select/deselect all results'. Once selected, the toggle next to the ADO(s) will be highlighted.You can also check which ADO(s) were selected by using the dropdown menu
+To Select the appropriate ADO(s) to undergo the Webform Find and Replace operation, click the toggle next to the individual ADO Title. If you wish to select all of your search results, click the toggle next to 'select/deselect all results'. Once selected, the toggle next to the ADO(s) will be highlighted.
+
+To see a full list of selected ADO(s) use the dropdown menu labled 'Selected'. It is also recommended that you utilize the 'Raw metadata (JSON)' dropdown to check that that the search and replace values for your selected ADO(s) is accurate.
 
    ![ADO Selection](images/ADOSelection_WebformFAR_2022-12.jpg)
 
@@ -45,7 +56,12 @@ From the dropdown:
 - 2.) Select which Form element you want to use
 - 3.) Select which value to search for in the [chosen form element] JSON key
 - 4.) Select which value to replace with in the [chosen form element] JSON key
+
+
+
+The screenshot below shows an example configuration for the *type JSON key (media type)* where the type value *Visual Artwork* will be searched for and replaced with type value *Photograph*
   
+
   ![Action Configuration](images/ActionConfiguration_WebformFAR_2022-12.jpg)
 
 ## Simulation Option
