@@ -58,7 +58,7 @@ nav:
         - Linked Data Reconciliation: ami_lod_rec.md
         - Using the Islandora 7 Solr Importer: I7solrImporter.md
       - Annotations: annotations.md
-      - Find and Replace: find-and-replace.md
+      - Find and Replace: find_and_replace.md
     - Site Administration & Configuration:
       - Strawberryfield Formatters: strawberryfield-formatters.md
       - Creating Display Modes: createdisplaymodes.md
