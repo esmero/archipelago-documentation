@@ -87,7 +87,7 @@ The text-based find and replace is case-sensitive and space-sensitive, and while
 
 !!! example "Replacing a JSON value"
 
-    **Use Case**: After a batch ingest, it was discovered that JSON values across ADOs in multiple keys contain the same typo: `Agnes Meyerhoff` instead of `Anges Meyerhof`.
+    **Use Case**: After a batch ingest, it was discovered that JSON values across ADOs in multiple keys contain the same typo: `Agnes Meyerhoff` (two fs) instead of `Agnes Meyerhof`.
 
     ```json title="JSON value example with typo" hl_lines="7 18"
     ...
