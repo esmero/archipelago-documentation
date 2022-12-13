@@ -52,14 +52,14 @@ You will also see a listing of a few different default Facets configured to help
 ## Available Actions
 
 The default options available through the Action dropdown menu include:
- - *Export Archipelago Digital Objects to CSV content item
- - Text based find and replace Metadata for Archipelago Digital Objects content item
- - Webform find-and-replace Metadata for Archipelago Digital Objects content item
- - JSON Patch Metadata for Archipelago Digital Objects content item
- - *Publish Digital Object
- - *Unpublish Digital Object
- - *Change the author of content
- - *Delete selected entities/translations
+ - *`Export Archipelago Digital Objects to CSV content item`
+ - `Text based find and replace Metadata for Archipelago Digital Objects content item`
+ - `Webform find-and-replace Metadata for Archipelago Digital Objects content item`
+ - `JSON Patch Metadata for Archipelago Digital Objects content item`
+ - *`Publish Digital Object`
+ - *`Unpublish Digital Object`
+ - *`Change the author of content`
+ - *`Delete selected entities/translations`
 
 _* denotes Action options that are also shared with the main `Content` Page Action Menu_
 
