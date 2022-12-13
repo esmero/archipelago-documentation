@@ -180,3 +180,9 @@ The text-based find and replace is case-sensitive and space-sensitive, and while
     "description": "\"The largest NASA Hubble Space Telescope image ever assembled, this sweeping bird’s-eye view of a portion of the Andromeda galaxy (M31) is the sharpest large composite image ever taken of our galactic next-door neighbor. Though the galaxy is over 2 million light-years away, The Hubble Space Telescope is powerful enough to resolve individual stars in a 61,000-light-year-long stretch of the galaxy’s pancake-shaped disk. ... The panorama is the product of the Panchromatic Hubble Andromeda Treasury (PHAT) program. Images were obtained from viewing the galaxy in near-ultraviolet, visible, and near-infrared wavelengths, using the Advanced Camera for Surveys and the Wide Field Camera 3 aboard Hubble. This cropped view shows a 48,000-light-year-long stretch of the galaxy in its natural visible-light color, as photographed with Hubble's Advanced Camera for Surveys in red and blue filters July 2010 through October 2013.\" -full description available at: [https:\/\/hubblesite.org\/image\/3476\/gallery\/73-phat](https:\/\/hubblesite.org\/image\/3476\/gallery\/73-phat).",
     ...
     ```
+
+___
+
+Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
+
+Return to the main [Find and Replace documentation page](find_and_replace.md) or the [Archipelago Documentation main page](index.md).

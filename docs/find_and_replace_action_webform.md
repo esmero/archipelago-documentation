@@ -6,22 +6,19 @@ tags:
   - Search and Replace
 ---
 
-**Please refer to the main [Find and Replace documentation page](find_and_replace.md) for a general overview of [where to find within your Archipelago](find_and_replace.md#where-to-find), a [general overview of default options](find_and_replace.md#main-page-overview) and [important notes and workflow recommendations](find_and_replace.md#important-notes--workflow-recommendations).**
+# Webform Find and Replace
 
+Webform Find and Replace enables you to search against values found within defined Webform elements to apply metadata replacements with targeted care. Below are a guide and some examples of use cases for this Action.
 
-# Using Webform Find and Replace 
+!!! note
 
-Along the top of the main Home page, navigate to Tools (Repository Content Tools) and select 'Advanced Batch Find and Replace' from the drop down menu.
+    Please refer to the main [Find and Replace documentation page](find_and_replace.md) for a general overview of [where to find within your Archipelago](find_and_replace.md#where-to-find), a [general overview of default options](find_and_replace.md#main-page-overview) and [important notes and workflow recommendations](find_and_replace.md#important-notes--workflow-recommendations).
 
-
-  ![Advanced Batch Find and Replace](images/AdvancedBatchFAR_2022-12.jpg)
+## Step 1: Select the ADOs to be Modified
   
-
-## Step 1: Digital Object/Collection Discovery 
+Depending on your specific use case, you can utilize the Fulltext search, Facets, or a combination of both to aid in the identification and selection of the ADOs you wish to perform the Webform Find and Replace action on.
   
-Depending on your specific use case, you can utilize the Fulltext search, Facets, or a combination of both to aid in the discovery and selection of the ADOs you wish to perform the Webform Find and Replace action on.
-  
-To use the Fulltext search, type any defining descriptive metadata values (i.e. Title, Date) directly in the search bar and click 'Search'. To narrow down potentially lengthy results, you can utilize the facets by selecting a value beneath an appropriate descriptive metadata source. 
+To use the Fulltext search, type any defining descriptive metadata values (i.e. Title, Date) directly in the search box and click 'Search'. To narrow down potentially lengthy results, you can utilize the facets by selecting a value beneath an appropriate descriptive metadata source. 
 
 
   ![Search and Faceting](images/SearchAndFaceting_WebformFAR_2022-12.jpg)
@@ -30,9 +27,7 @@ To use the Fulltext search, type any defining descriptive metadata values (i.e. 
 To generate the results (ADOs) of a specific AMI set, you can select the set under the facet 'Ingest Method Service URL'
 
   ![Faceting via AMI set](images/AMISetFaceting_WebformFAR_2022-12.jpg)
-
   
-
 ## Step 2: Digital Object/Collection and Webform Find and Replace Action Selection
 
 To Select the appropriate ADO(s) to undergo the Webform Find and Replace operation, click the toggle next to the individual ADO Title. If you wish to select all of your search results, click the toggle next to 'select/deselect all results'. Once selected, the toggle next to the ADO(s) will be highlighted.
@@ -46,7 +41,6 @@ Next, select 'Webform find-and-replace Metadata for Archipelago Digital Objects 
 
   ![Selection and Action](images/SelectionAndAction_WebformFAR_2022-12.jpg)
 
-
 ## Step 3: Webform Find and Replace Action Configuration
 
 Here you will need to select the configurations to be applied to your chosen ADOs.
@@ -57,8 +51,6 @@ From the dropdown:
 - 2.) Select which Form element you want to use
 - 3.) Select which value to search for in the [chosen form element] JSON key
 - 4.) Select which value to replace with in the [chosen form element] JSON key
-
-
 
 The screenshot below shows an example configuration for the *type JSON key (media type)* where the type value *Visual Artwork* will be searched for and replaced with type value *Photograph*
   
@@ -105,11 +97,11 @@ The current revision will always be at the top of the list.
 
   ![Revision Report](images/RevisionReport_WebformFAR_2022-12.jpg)
 
-
 ___
+
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
-Return to the [Archipelago Documentation main page](index.md).
+Return to the main [Find and Replace documentation page](find_and_replace.md) or the [Archipelago Documentation main page](index.md).
 
 
 
