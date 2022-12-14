@@ -13,7 +13,8 @@
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/Nm01tAey6KHqjfJglx8ckxxivaqVBq8aK7w3lKMvDAgB9_xcioCSs0bfO_4_lHjM.kw6JbAqgUkgOuyWm) 
     - [Session 2: Twig Templating and Metadata Display Preview for AMI Ingest. Pino Navarro, Diego; Lund, Allison; Romabiles, Katie; Min, Albert. (December 2022)](https://docs.google.com/presentation/d/10G2OpzkNmu1YWljJFPAVXm2KoByx34TpRSh2milHEFc/edit?usp=sharing)
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/pwXUet1qq4ovSo-kXui9LpI9nh5BDXP-Xq0zSTAJGA7ip7eH4uGQYq7uUUai-v8X.K5cSQpnEXqXrUJH-)
-    - Session 3: AMI Set Processing and Advanced Find + Replace (December 2022)
+    - [Session 3: AMI Set Processing and Advanced Find + Replace (December 2022)](https://docs.google.com/presentation/d/1IKt766c2k-Q_nxEfu45dkyjkyZvSbh5GblpUugnacLw/edit?usp=sharing)
+	- - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/9rSVZulDUGrBOSqwDR-11A2HJmp3b9ndvurDgkElHJGE74Jh1zO4HUySLVkJlADn.UOpVnKNaBkq7s_IU)
 
 - [Open Perspectives Forum. Monger, Jenifer J.; McCarthy, Brenden. (November 2022)](https://vimeo.com/769482312) 
 
