@@ -1538,10 +1538,10 @@ More work is being done to allow also one on one async File operations and large
 <p><code>"ap:nopost"</code>:  an <em>array</em> or list of <code>ACTIVE_STRAWBERRY_RUNNERS_CONFIG_ID</code> entries, means Machine names (or IDs) <em>Strawberry Runners Processor</em> Configuration Entities. The functionality of this key is provided by the <strong>Strawberry Runners</strong>. If not an <em>array</em> it will be ignored. Any value present not matching an active <em>Strawberry Runners Processor</em> Configuration Entity ID will also be ignored. Effectively, any post processors in this list will be skipped for this ADO. This allows a finer grained avoidance of some expensive processing that might lead to unsuable data. E.g a particular Manuscript ADO that Tesseract won't be able to OCR correctly.  Adding this key to an <strong>ADO</strong> that was already processed won't remove existing generated/stored processing.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">"ap:tasks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">"ap:ami"</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">"metadata_display"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"ap:ami"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"metadata_display"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w"></span>
 
-<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
@@ -1596,7 +1596,7 @@ This is a one time operation that does not <em>stick</em>. What happens if it do
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 14, 2022</span>
 <br/>
         Created:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2022</span>
