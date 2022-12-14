@@ -49,10 +49,10 @@ Using the following JSON Snippet as example:
 
 ```JSON
 "subject_lcgft_terms": [
-        {
-            "uri": "http:\/\/id.loc.gov\/authorities\/genreForms\/gf2017027249",
-            "label": "Photographs"
-        }
+    {
+        "uri": "http:\/\/id.loc.gov\/authorities\/genreForms\/gf2017027249",
+        "label": "Photographs"
+    }
 ]
 ```
 
