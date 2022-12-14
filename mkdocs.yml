@@ -58,7 +58,8 @@ nav:
         - Linked Data Reconciliation: ami_lod_rec.md
         - Using the Islandora 7 Solr Importer: I7solrImporter.md
       - Annotations: annotations.md
-      - Find and Replace: find_and_replace.md
+      - Find and Replace:
+        - find_and_replace.md
         - Text Based Find and Replace: find_and_replace_action_text.md
         - Webform Find and Replace: find_and_replace_action_webform.md
         - JSON Patch Find and Replace: find_and_replace_action_json_patch.md
