@@ -63,9 +63,9 @@ These JSON Pointers will resolve in the following manner:
 ```JSON
 [
     {
-            "uri": "http:\/\/id.loc.gov\/authorities\/genreForms\/gf2017027249",
-            "label": "Photographs"
-    } 
+        "uri": "http:\/\/id.loc.gov\/authorities\/genreForms\/gf2017027249",
+        "label": "Photographs"
+    }
 ]
 ```
 
