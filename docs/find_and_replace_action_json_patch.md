@@ -69,7 +69,7 @@ These JSON Pointers will resolve in the following manner:
 ]
 ```
 
- - `/subject_lcgft_terms/0` 
+- `/subject_lcgft_terms/0`
  
 ```JSON
 {
