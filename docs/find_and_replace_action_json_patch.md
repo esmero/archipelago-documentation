@@ -590,6 +590,8 @@ Now that actual patching. Repeat from Step 1 to Step 3 but keep "only simulate a
 
 That is all. Again, keep your **JSON Patches** safe in a text document, test/try simple things first, look for **patterns**, look for *No-Nos* that can become "tests" to avoid touching ADOs that do not need to be updated and always remember that the destination type (single value, array or object) of an existing Key might affect your complex logic. Happy Patching!
 
+___
+
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
 Return to the main [Find and Replace documentation page](https://github.com/esmero/archipelago-documentation/blob/1.0.0/docs/find_and_replace.md) or the [Archipelago Documentation main page](https://github.com/esmero/archipelago-documentation/blob/1.0.0/docs/index.md).
