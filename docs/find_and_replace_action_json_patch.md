@@ -407,7 +407,7 @@ The final JSON Patch will look like this. Copy it into the Configuration JSON Pa
 
 ??? note "The inverse process online"
 
-	Now that you know (or are starting to understand) the manual process you can also try this [online tool](https://json-patch-builder-online.github.io) that allows you, based on a source and a destination JSON, generate the needed JSON Patch to mutate one JSON into the another. The logic might not be always what you need and most likely it will not take in account that you actually need to move values and will prefer to fix values to be added via an add operation
+    Now that you know (or are starting to understand) the manual process you can also try this [online tool](https://json-patch-builder-online.github.io) that allows you, based on a source and a destination JSON, generate the needed JSON Patch to mutate one JSON into the another. The logic might not be always what you need and most likely it will not take in account that you actually need to move values and will prefer to fix values to be added via an add operation
 
 
 ## Step 3: Run the JSON Patch Action in simulation mode
