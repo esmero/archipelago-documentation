@@ -92,8 +92,8 @@ Before executing any of the available Find and Replace Actions, the best-practic
 
 - Before the final 'Execute Action' step of your Find and Replace operation, select the option to **'☑️ only simulate and debug affected JSON'**. This will run a quick check against your Action specifications and the potentially impacted Digital Objects and Collections.
 - You can then double check that the total effected changes shown reflect your intended amount of changes. 
-   - The total number of changes will always be multipled by a factor of 2, as the Actions count a first step of checking against your data, then the second step of applying the change.
-   - If your Action specifications do not match against any JSON metadata values in your specified results, you will also see that no matches were applicable.
+    - The total number of changes will always be multipled by a factor of 2, as the Actions count a first step of checking against your data, then the second step of applying the change.
+    - If your Action specifications do not match against any JSON metadata values in your specified results, you will also see that no matches were applicable.
 
 ![Find and Replace Simulation Mode](images/find_and_replace_simulation_mode.jpg)
 
