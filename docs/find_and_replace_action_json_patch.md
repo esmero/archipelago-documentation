@@ -382,7 +382,7 @@ Why so many operations? Because initially ` "subjects_local"` had a value of `nu
 
 ??? info "what if it subjects_local has data?
 
-	You will lose it! you can add a “test“ or move data instead of recreating. Many choices.
+    You will lose it! you can add a “test“ or move data instead of recreating. Many choices.
 
 The final JSON Patch will look like this. Copy it into the Configuration JSON Patch commands form field: 
 
