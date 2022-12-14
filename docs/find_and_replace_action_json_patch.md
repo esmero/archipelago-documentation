@@ -139,7 +139,7 @@ This will copy  all values inside top JSON key `terms` into a new top JSON key n
 { "op": "copy", "from": "/terms", "path": "/terms_somewhere_else"}
 ```
 
-Similar to “move“, it will copylvalues inside top JSON key `terms` into a new top JSON key named `terms_somewhere_else` without removing then the old `terms` key or its content!
+Similar to “move“, it will copy values inside top JSON key `terms` into a new top JSON key named `terms_somewhere_else` without removing then the old `terms` key or its content!
 
 ## test
 
