@@ -580,7 +580,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#step-1-select-the-ados-to-be-modified">
-    Step 1:  Select the ADOs to be Modified
+    Step 1: Select the ADOs to be Modified
   </a>
 </li>
 <li class="md-nav__item">
@@ -806,7 +806,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#step-1-select-the-ados-to-be-modified">
-    Step 1:  Select the ADOs to be Modified
+    Step 1: Select the ADOs to be Modified
   </a>
 </li>
 <li class="md-nav__item">
@@ -850,7 +850,7 @@
 <h2 id="what-is-a-json-patch-and-when-to-use-it">What is a JSON Patch and when to use it?</h2>
 <p>Before we dive into the mechanics of doing JSON Patching Batch in Archipelago we need to learn what a <strong>JSON Patch</strong> is and of course when applying this action is useful, possible (or not).</p>
 <p>A JSON Patch is a <code>JSON</code> Document containing precise operations that can heavily modify the structure and values of an existing JSON Document, in this case the RAW JSON found inside a strawberryfield of our ADOs. </p>
-<p>The operations  available for modifications of an JSON document are:</p>
+<p>The operations available for modifications of an JSON document are:</p>
 <ul>
 <li>“add”</li>
 <li>“remove”</li>
@@ -903,7 +903,7 @@
 <span class="w">    </span><span class="s2">"term3"</span><span class="w"></span>
 <span class="p">]</span><span class="w"></span>
 </code></pre></div>
-<p>and you want to "test" for the existence of <code>"term3"</code> before applying a change, you would need to know exactly at what position inside the <code>terms Array</code> (Starting from 0) it will/should be found.  And that might not be consistent across every ADO. </p>
+<p>and you want to "test" for the existence of <code>"term3"</code> before applying a change, you would need to know exactly at what position inside the <code>terms Array</code> (Starting from 0) it will/should be found. And that might not be consistent across every ADO. </p>
 <p>So how do we use these pointers in an operation inside a JSON Patch document? Using the same fake "terms" JSON snippet the previously listed, operations are written like this:</p>
 <h2 id="add">add</h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"add"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/terms/0"</span><span class="p">,</span><span class="w"> </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"term_another"</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
@@ -916,15 +916,15 @@
 <h2 id="remove">remove</h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"remove"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/terms/1"</span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p>This will remove the second term  (in this case "term2" )</p>
+<p>This will remove the second term (in this case "term2" )</p>
 <h2 id="replace">replace</h2>
 <p><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/terms/1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"term_again"</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-This will remove the second term  (in this case "term2" ) and put in its place "term_again" as a value. Basically two operationes, “remove“ and “add “ in a single step</p>
+This will remove the second term (in this case "term2" ) and put in its place "term_again" as a value. Basically two operationes, “remove“ and “add “ in a single step</p>
 <h2 id="move">move</h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"move"</span><span class="p">,</span><span class="w"> </span><span class="nt">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/terms"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/terms_somewhere_else"</span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p>This will copy  all values inside top JSON key <code>terms</code> into a new top JSON key named <code>terms_somewhere_else</code> and remove then the old <code>terms</code> key.</p>
+<p>This will copy all values inside top JSON key <code>terms</code> into a new top JSON key named <code>terms_somewhere_else</code> and remove then the old <code>terms</code> key.</p>
 <h2 id="copy">copy</h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"copy"</span><span class="p">,</span><span class="w"> </span><span class="nt">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/terms"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/terms_somewhere_else"</span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
@@ -940,7 +940,7 @@ This will remove the second term  (in this case "term2" ) and put in its place "
 <li>When you need to use data that is already inside the JSON Document and move it around. Sometimes <code>fixing</code> a value, in the sense of putting a static replacement, is not what you need. Other <code>Actions</code> <a href="../find_and_replace/">documented</a> will allow you to replace one value with another fixed one. But JSON Patch will allow you to use existing data inside your target JSON and move it/copy it.</li>
 <li>When you operate on multiple JSON Keys and can target / match complete values. You can not replace a single word inside a value via a JSON Patch. But you can apply multiple precise operations in a single pass.</li>
 <li>When you need to change data types. e.g. convert a single value into an array.</li>
-<li>When you need safety. The fact that a single failed  “test“  will cancel a whole JSON Patch allows you to operate with safety and ensure the final destination will always be a JSON</li>
+<li>When you need safety. The fact that a single failed “test“ will cancel a whole JSON Patch allows you to operate with safety and ensure the final destination will always be a JSON</li>
 </ul>
 <p>Now that we know what it is and when we should do it, we can make a small exercise. The goal:</p>
 <ul>
@@ -951,9 +951,9 @@ This will remove the second term  (in this case "term2" ) and put in its place "
 </ul>
 </li>
 </ul>
-<h2 id="step-1-select-the-ados-to-be-modified">Step 1:  Select the ADOs to be Modified</h2>
+<h2 id="step-1-select-the-ados-to-be-modified">Step 1: Select the ADOs to be Modified</h2>
 <p>As with every other VBO action described in our documentation, start by selecting the ADOs you want to modify using the exposed Search Field(s) and/or Facets present in the Search and Replace <code>View</code> found at <code>/search-and-replace</code> . </p>
-<p>Once you have filtered down the list to manageable size, containing at least the ADOs you plan on modifying (but for JSON Patch operation could be more too because you can “test“ and match ), press either on <code>Select / deselect all results in this view</code> to pass all  the result (this includes all pages, not only the currently visible one) or go selectively one by one by checking on the <code>toggle</code> found beside each ADO's title. You will see how the number in <code>Selected 0 item in this view</code> increases. Now press <code>Apply to select Items</code>.  We will use for this example <code>Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?]</code>, an ADO we provide in our DEMO sets. </p>
+<p>Once you have filtered down the list to manageable size, containing at least the ADOs you plan on modifying (but for JSON Patch operation could be more too because you can “test“ and match ), press either on <code>Select / deselect all results in this view</code> to pass all the result (this includes all pages, not only the currently visible one) or go selectively one by one by checking on the <code>toggle</code> found beside each ADO's title. You will see how the number in <code>Selected 0 item in this view</code> increases. Now press <code>Apply to select Items</code>. We will use for this example <code>Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?]</code>, an ADO we provide in our DEMO sets. </p>
 <p>Redundant to say, Batch Actions are intended to be used when a modification needs to be applied to more than one item, implying there is a pattern. For single ADOs you can always do this faster directly via the <strong>EDIT</strong> tab.</p>
 <details class="note">
 <summary>Keep your JSON Patches (and friends) around</summary>
@@ -967,7 +967,6 @@ This will remove the second term  (in this case "term2" ) and put in its place "
 <p>A bit of repetition but needed to explain the JSON Patch document. You can see on the following Note box how we copyed the RAW JSON of one ADO to be Patched to have a reference while building the JSON PATCH. for the sake of brevity we remove here the longer Image File technical Metadata.</p>
 <details class="info">
 <summary>RAW JSON of <code>Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?]</code></summary>
-</details>
 <div class="highlight"><span class="filename">Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?] | before Patching</span><pre><span></span><code><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Photograph"</span><span class="p">,</span><span class="w"></span>
@@ -1112,15 +1111,13 @@ This will remove the second term  (in this case "term2" ) and put in its place "
 <span class="w">    </span><span class="nt">"related_item_host_title_info_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">"related_item_host_type_of_resource"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">"physical_description_note_condition"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="err">```</span><span class="w"></span>
-
-<span class="err">**Based</span><span class="w"> </span><span class="err">o</span><span class="kc">n</span><span class="w"> </span><span class="err">our</span><span class="w"> </span><span class="err">ow</span><span class="kc">n</span><span class="w"> </span><span class="err">pla</span><span class="kc">n</span><span class="p">:</span><span class="err">**</span><span class="w"></span>
-
-<span class="mf">1.</span><span class="w"> </span><span class="err">Check</span><span class="w"> </span><span class="kc">f</span><span class="err">irs</span><span class="kc">t</span><span class="w"> </span><span class="err">i</span><span class="kc">f</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="kc">t</span><span class="err">ype</span><span class="w"> </span><span class="err">`pho</span><span class="kc">t</span><span class="err">ograph`</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">`membero</span><span class="kc">f</span><span class="err">`</span><span class="w"> </span><span class="err">Node</span><span class="w"> </span><span class="err">ID</span><span class="w"> </span><span class="err">`</span><span class="mi">16</span><span class="err">`</span><span class="w"></span>
-
-<span class="err">```JSON</span><span class="w"></span>
-<span class="p">{</span><span class="w"> </span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/type"</span><span class="p">,</span><span class="w"> </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Photograph"</span><span class="p">},</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Based on our own plan:</strong></p>
+<ol>
+<li>Check first if of type <code>photograph</code> and <code>memberof</code> Node ID <code>16</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/type"</span><span class="p">,</span><span class="w"> </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Photograph"</span><span class="p">},</span><span class="w"></span>
 <span class="p">{</span><span class="w"> </span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/ismemberof"</span><span class="p">,</span><span class="w"> </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">16</span><span class="p">]}</span><span class="w"></span>
 </code></pre></div>
 <p>Notice that to be really sure we also match the data type, an <code>array</code> with a single value <code>16</code> of type integer (makes sense since the Operation is also a JSON and will be evaluated in the same way as the source RAW JSON). This is a precise match. if the ADO belongs to multiple Collections it will fail of course.</p>
@@ -1142,17 +1139,19 @@ Notice that you can not “add“ or “move“ to e.g. the position <code>0</co
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
+</details>
 <ol>
-<li>Finally we are going to copy the <code>geographic_location.state</code>  value and put it into <code>subjects_local</code>:</li>
+<li>Finally we are going to copy the <code>geographic_location.state</code> value and put it into <code>subjects_local</code>:</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"remove"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/subjects_local"</span><span class="p">},</span><span class="w"></span>
 <span class="p">{</span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"add"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/subjects_local"</span><span class="p">,</span><span class="w"> </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">[]},</span><span class="w"></span>
 <span class="p">{</span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"copy"</span><span class="p">,</span><span class="w"> </span><span class="nt">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/geographic_location/state"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/subjects_local/-"</span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p>Why so many operations? Because initially <code>"subjects_local"</code> had a value of <code>null</code> and it is not suited to generate/add to it as a multivalued key because of that.  So we need to remove it first, recreate it as an empty list and then we can copy. <strong>Pro Note:</strong> you could partially rewrite this as  <code>replace</code> operation!</p>
-<p>??? info "what if it subjects_local has data?</p>
-<pre><code>You will lose it! you can add a “test“ or move data instead of recreating. Many choices.
-</code></pre>
+<p>Why so many operations? Because initially <code>"subjects_local"</code> had a value of <code>null</code> and it is not suited to generate/add to it as a multivalued key because of that. So we need to remove it first, recreate it as an empty list and then we can copy. <strong>Pro Note:</strong> you could partially rewrite this as <code>replace</code> operation!</p>
+<details class="info">
+<summary>what if subjects_local has data?</summary>
+<p>You will lose it! you can add a “test“ or move data instead of recreating. Many choices.</p>
+</details>
 <p>The final JSON Patch will look like this. Copy it into the Configuration JSON Patch commands form field: </p>
 <div class="highlight"><pre><span></span><code><span class="p">[</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/type"</span><span class="p">,</span><span class="w"> </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Photograph"</span><span class="p">},</span><span class="w"></span>
