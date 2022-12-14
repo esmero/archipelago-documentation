@@ -501,14 +501,26 @@
         Annotations
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_7" id="__nav_4_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2_7">
           Find and Replace
           <span class="md-nav__icon md-icon"></span>
 </label>
+<nav aria-label="Find and Replace" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_2_7">
+<span class="md-nav__icon md-icon"></span>
+          Find and Replace
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Advanced Batch Find and Replace
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Find and Replace
+        Advanced Batch Find and Replace
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -550,6 +562,24 @@
 <a class="md-nav__link" href="#checking-your-changes">
     Checking Your Changes
   </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../find_and_replace_action_text/">
+        Text Based Find and Replace
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../find_and_replace_action_webform/">
+        Webform Find and Replace
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../find_and_replace_action_json_patch.md">
+        JSON Patch Find and Replace
+      </a>
 </li>
 </ul>
 </nav>
@@ -860,9 +890,11 @@
 <p>Before executing any of the available Find and Replace Actions, the best-practice workflow recommendation is to <strong>always</strong> first run in Simulation Mode:</p>
 <ul>
 <li>Before the final 'Execute Action' step of your Find and Replace operation, select the option to <strong>'☑️ only simulate and debug affected JSON'</strong>. This will run a quick check against your Action specifications and the potentially impacted Digital Objects and Collections.</li>
-<li>You can then double check that the total effected changes shown reflect your intended amount of changes. </li>
+<li>You can then double check that the total effected changes shown reflect your intended amount of changes. <ul>
 <li>The total number of changes will always be multipled by a factor of 2, as the Actions count a first step of checking against your data, then the second step of applying the change.</li>
 <li>If your Action specifications do not match against any JSON metadata values in your specified results, you will also see that no matches were applicable.</li>
+</ul>
+</li>
 </ul>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/find_and_replace_simulation_mode.jpg"><img alt="Find and Replace Simulation Mode" src="../images/find_and_replace_simulation_mode.jpg"/></a></p>
 <ul>
@@ -884,7 +916,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 13, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 14, 2022</span>
 <br/>
         Created:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 13, 2022</span>
@@ -913,13 +945,13 @@
             </div>
 </div>
 </a>
-<a aria-label="Next: Strawberryfield Formatters" class="md-footer__link md-footer__link--next" href="../strawberryfield-formatters/" rel="next">
+<a aria-label="Next: Text Based Find and Replace" class="md-footer__link md-footer__link--next" href="../find_and_replace_action_text/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Strawberryfield Formatters
+              Text Based Find and Replace
             </div>
 </div>
 <div class="md-footer__button md-icon">
