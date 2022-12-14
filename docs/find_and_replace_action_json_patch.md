@@ -188,7 +188,7 @@ We are going to replace this one with a valid JSON document. Notice that it does
 
 A bit of repetition but needed to explain the JSON Patch document. You can see on the following Note box how we copyed the RAW JSON of one ADO to be Patched to have a reference while building the JSON PATCH. for the sake of brevity we remove here the longer Image File technical Metadata.
 
-??? info "RAW JSON of `Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?]``"
+??? info "RAW JSON of `Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?]`"
 
 ```JSON title="Laddie the dog running in the garden, Bronx, N.Y., undated [c. 1910-1918?] | before Patching"
 {
