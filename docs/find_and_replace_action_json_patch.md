@@ -108,7 +108,7 @@ This will add before the first term (in this case "term1" ) "term_another" as a 
 
 ??? info "At the end"
 
-	you can use a dash (`-`) (e.g. "/terms/-") instead of the numeric position of an array entry to denote that the "value" needs to be added at the end. This is needed specially for empty lists. You can not target `0` position on an empty array.
+    you can use a dash (`-`) (e.g. "/terms/-") instead of the numeric position of an array entry to denote that the "value" needs to be added at the end. This is needed specially for empty lists. You can not target `0` position on an empty array.
 
 ## remove
 
