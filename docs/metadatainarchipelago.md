@@ -724,10 +724,10 @@ In the absence of `"ap:forcepost"` the  value is implicitly `false`, same as set
 ```JSON
 {
 	"ap:tasks": {
-		"ap:ami":
-			"metadata_display": 7,
+		"ap:ami": {
+			"metadata_display": 7
 			
-		]
+		}
 	}
 }
 ```
