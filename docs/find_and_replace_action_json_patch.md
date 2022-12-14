@@ -60,7 +60,7 @@ These JSON Pointers will resolve in the following manner:
 
 - `/subject_lcgft_terms` 
 
-	```JSON
+```JSON
 [
     {
             "uri": "http:\/\/id.loc.gov\/authorities\/genreForms\/gf2017027249",
@@ -103,6 +103,7 @@ So how do we use these pointers in an operation inside a JSON Patch document? Us
 ```JSON
 { "op": "add", "path": "/terms/0", "value": "term_another" }
 ```
+
 This will add before the first term (in this case "term1" ) "term_another" as a value.
 
 ??? info "At the end"
@@ -114,6 +115,7 @@ This will add before the first term (in this case "term1" ) "term_another" as a 
 ```JSON
 { "op": "remove", "path": "/terms/1"}
 ```
+
 This will remove the second term  (in this case "term2" )
 
 ## replace
@@ -128,6 +130,7 @@ This will remove the second term  (in this case "term2" ) and put in its place "
 ```JSON
 { "op": "move", "from": "/terms", "path": "/terms_somewhere_else"}
 ```
+
 This will copy  all values inside top JSON key `terms` into a new top JSON key named `terms_somewhere_else` and remove then the old `terms` key.
 
 ## copy
@@ -135,6 +138,7 @@ This will copy  all values inside top JSON key `terms` into a new top JSON key n
 ```JSON
 { "op": "copy", "from": "/terms", "path": "/terms_somewhere_else"}
 ```
+
 Similar to “move“, it will copylvalues inside top JSON key `terms` into a new top JSON key named `terms_somewhere_else` without removing then the old `terms` key or its content!
 
 ## test
@@ -142,6 +146,7 @@ Similar to “move“, it will copylvalues inside top JSON key `terms` into a ne
 ```JSON
 { "op": "test", "path": "/terms/0", "value": "term1"}
 ```
+
 Finally, “test“ will check if on position `0` of terms there is a value of "term1". If not, the test will fail. If a single test fails the whole JSON Patch will be cancelled. Tests can not be concatenated via OR bolean operators. So they always act individually. Two tests with one failing is a failed JSON Patch.
 
 There is more of course! The Complete documentation can be found [here](https://jsonpatch.com)
@@ -333,7 +338,7 @@ A bit of repetition but needed to explain the JSON Patch document. You can see o
 	}
 	```
 
-Based on our own plan:
+**Based on our own plan:**
 
 1. Check first if of type `photograph` and `memberof` Node ID `16`
 
@@ -366,6 +371,7 @@ Notice that you can not “add“ or “move“ to e.g. the position `0` because
 ```
 
 4. Finally we are going to copy the `geographic_location.state`  value and put it into `subjects_local`:
+
 ```JSON
 {"op": "remove", "path": "/subjects_local"},
 {"op": "add", "path": "/subjects_local", "value": []},
