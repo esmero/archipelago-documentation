@@ -372,7 +372,7 @@ Notice that you can not “add“ or “move“ to e.g. the position `0` because
 {"op": "copy", "from": "/geographic_location/state", "path": "/subjects_local/-"}
 ```
 
-Why so many operations? Because  initially ` "subjects_local"` has a value of `null` and it is not suited to  generate/add to it as a multivalued key because of that.  So we need to remove it first , recreate it as an empty list and then we can copy. **Pro Note:** you could partially rewrite this as  `replace` operation!
+Why so many operations? Because initially ` "subjects_local"` had a value of `null` and it is not suited to generate/add to it as a multivalued key because of that.  So we need to remove it first, recreate it as an empty list and then we can copy. **Pro Note:** you could partially rewrite this as  `replace` operation!
 
 ??? info "what if it subjects_local has data?
 
