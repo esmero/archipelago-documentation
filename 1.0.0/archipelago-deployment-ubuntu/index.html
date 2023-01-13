@@ -8,10 +8,12 @@
 <meta content="Project documentation for Archipelago." name="description"/>
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/archipelago-deployment-ubuntu/" rel="canonical"/>
+<link href="../archipelago-deployment-osx/" rel="prev"/>
+<link href="../archipelago-deployment-windows/" rel="next"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
 <title>Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04 - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -154,7 +156,7 @@
 </li>
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           About Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -199,7 +201,7 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4" tabindex="0">
           Instructions and Guides
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -211,7 +213,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4_1" tabindex="0">
           DevOps &amp; Deployment
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -223,7 +225,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_1" id="__nav_4_1_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_1">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4_1_1" tabindex="0">
           Archipelago-Deployment
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -378,7 +380,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_2" id="__nav_4_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_1_2" tabindex="0">
           Archipelago-Deployment-Live
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -428,7 +430,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_4" id="__nav_4_1_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_1_4" tabindex="0">
           DevOps Q&amp;A
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -466,7 +468,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2" tabindex="0">
           Archipelago 101
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -483,7 +485,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" id="__nav_4_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_2" tabindex="0">
           Webforms in Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -523,7 +525,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_4" id="__nav_4_2_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_4" tabindex="0">
           Twig Templates and Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -553,7 +555,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5" id="__nav_4_2_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_5" tabindex="0">
           Archipelago Multi-Importer (AMI)
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -603,7 +605,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_7" id="__nav_4_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_7">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_7" tabindex="0">
           Find and Replace
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -641,7 +643,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_3" tabindex="0">
           Site Administration &amp; Configuration
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -676,7 +678,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_4" tabindex="0">
           General Q&amp;A
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -701,7 +703,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" id="__nav_4_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_5" tabindex="0">
           Contributing
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -718,7 +720,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" id="__nav_4_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_5_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_5_2" tabindex="0">
           Documentation
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -759,7 +761,7 @@
 </li>
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_5" tabindex="0">
           Additional Resources
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -901,9 +903,6 @@
 <span class="md-tag">Ubuntu 18.04</span>
 <span class="md-tag">Ubuntu 20.04</span>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/esmero/archipelago-documentation/commits/1.0.0/docs/archipelago-deployment-ubuntu.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="installing-archipelago-drupal-9-on-ubuntu-1804-or-2004">Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04</h1>
 <h2 id="about-running-terminal-commands">About running terminal commands</h2>
 <p>This guide assumes you are comfortable enough running terminal (bash) commands on a Linux Computer.</p>
@@ -918,18 +917,18 @@
 <li>2-4 Gbytes of RAM (4 Recommended)</li>
 <li>Install Docker if you don't have it already by running:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>sudo apt install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> sudo apt-key add -
-sudo add-apt-repository <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"</span>
-sudo apt update
-sudo apt-cache policy docker-ce
-sudo apt install docker-ce
-sudo systemctl status docker
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apt-transport-https<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>software-properties-common
+curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/ubuntu/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span><span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt-cache<span class="w"> </span>policy<span class="w"> </span>docker-ce
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker-ce
+sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>docker
 
-sudo usermod -aG docker <span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
 </code></pre></div>
 <p>Log out, and log in again!</p>
-<div class="highlight"><pre><span></span><code>sudo apt install docker-compose
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker-compose
 </code></pre></div>
 <p>Git tools are included by default in Ubuntu.</p>
 <h3 id="wait-question-do-you-have-a-previous-version-of-archipelago-running">Wait! Question: Do you have a previous version of Archipelago running?</h3>
@@ -937,29 +936,29 @@ sudo usermod -aG docker <span class="si">${</span><span class="nv">USER</span><s
 <ul>
 <li>Open a terminal (you have that already right?) and go to your previous download/git clone folder and run:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>docker-compose down
-docker-compose rm
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>down
+docker-compose<span class="w"> </span>rm
 </code></pre></div>
 <ul>
 <li>Can't remember where you downloaded it? Ok. We can deal with that!</li>
 </ul>
 <p>Let's stop the containers gracefully first, run:</p>
-<div class="highlight"><pre><span></span><code>docker stop esmero-web
-docker stop esmero-solr
-docker stop esmero-db
-docker stop esmero-cantaloupe
-docker stop esmero-php
-docker stop esmero-minio
-docker stop esmero-nlp
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>stop<span class="w"> </span>esmero-web
+docker<span class="w"> </span>stop<span class="w"> </span>esmero-solr
+docker<span class="w"> </span>stop<span class="w"> </span>esmero-db
+docker<span class="w"> </span>stop<span class="w"> </span>esmero-cantaloupe
+docker<span class="w"> </span>stop<span class="w"> </span>esmero-php
+docker<span class="w"> </span>stop<span class="w"> </span>esmero-minio
+docker<span class="w"> </span>stop<span class="w"> </span>esmero-nlp
 </code></pre></div>
 <p>Now we need to remove them so we run the following:</p>
-<div class="highlight"><pre><span></span><code>docker rm esmero-web
-docker rm esmero-solr
-docker rm esmero-db
-docker rm esmero-cantaloupe
-docker rm esmero-php
-docker rm esmero-minio
-docker rm esmero-nlp
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>rm<span class="w"> </span>esmero-web
+docker<span class="w"> </span>rm<span class="w"> </span>esmero-solr
+docker<span class="w"> </span>rm<span class="w"> </span>esmero-db
+docker<span class="w"> </span>rm<span class="w"> </span>esmero-cantaloupe
+docker<span class="w"> </span>rm<span class="w"> </span>esmero-php
+docker<span class="w"> </span>rm<span class="w"> </span>esmero-minio
+docker<span class="w"> </span>rm<span class="w"> </span>esmero-nlp
 </code></pre></div>
 <p>Ok, now we are ready to start.</p>
 <h2 id="step-1-deployment">Step 1: Deployment</h2>
@@ -974,29 +973,29 @@ docker rm esmero-nlp
 <p>Instead of: <code>- ${PWD}:/var/www/html:cached</code>
 use: <code>- ".:/var/www/html:cached"</code></p>
 <p>Now that you got it, let's deploy:</p>
-<div class="highlight"><pre><span></span><code>git clone https://github.com/esmero/archipelago-deployment.git archipelago-deployment
-<span class="nb">cd</span> archipelago-deployment
-git checkout <span class="m">1</span>.0.0
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/esmero/archipelago-deployment.git<span class="w"> </span>archipelago-deployment
+<span class="nb">cd</span><span class="w"> </span>archipelago-deployment
+git<span class="w"> </span>checkout<span class="w"> </span><span class="m">1</span>.0.0
 </code></pre></div>
 <p>And now a hard choice. Which docker-compose/ensemble? Edge? Stable? Legacy? So many choices. For latest/modern stack PHP8/Solr8.11/MySQL8 we recommend:</p>
-<div class="highlight"><pre><span></span><code>cp docker-compose-linux.yml docker-compose.yml
-docker-compose pull
-docker-compose up -d
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>docker-compose-linux.yml<span class="w"> </span>docker-compose.yml
+docker-compose<span class="w"> </span>pull
+docker-compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
 <p>You have something running and do not want to update Databases/Solr indexes: Go legacy. In doubt? Ask us please. We can help.</p>
 <p>If you want to stay more traditional (not recommended) and stick with older versions PHP7.4/Solr7.5/MySQL57 we recommend the following:</p>
-<div class="highlight"><pre><span></span><code>cp docker-compose-legacy.yml docker-compose.yml
-docker-compose pull
-docker-compose up -d
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>docker-compose-legacy.yml<span class="w"> </span>docker-compose.yml
+docker-compose<span class="w"> </span>pull
+docker-compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
 <p>Note: <code>docker-compose.yml</code> is git ignored in case you make local adjustments or changes to it.</p>
 <p>You need to make sure Docker can read/write to your local Drive, a.k.a mounted volumes (especially if you decided not to run it as <code>root</code> because we told you so!).</p>
 <p>This means in practice running:</p>
-<div class="highlight"><pre><span></span><code>sudo chown -R <span class="m">8183</span>:8183 persistent/iiifcache
-sudo chown -R <span class="m">8983</span>:8983 persistent/solrcore
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">8183</span>:8183<span class="w"> </span>persistent/iiifcache
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">8983</span>:8983<span class="w"> </span>persistent/solrcore
 </code></pre></div>
 <p>And then:</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"chown -R www-data:www-data private"</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"chown -R www-data:www-data private"</span>
 </code></pre></div>
 <p><em>Question:</em> Why is this last command different? Answer: Just a variation. The long answer is that the internal <code>www-data</code> user in that container (Alpine Linux) has uid:82, but on Ubuntu the <code>www-data</code> user has a different one so we let Docker assign the uid from inside instead. In practice you could also run directly <code>sudo chown -R 82:82 private</code> which would only apply to an Alpine use case, which can differ in the future! Does this make sense? No worries if not.</p>
 <h2 id="step-2-set-up-your-minio-s3-bucket">Step 2: Set up your Minio S3 bucket</h2>
@@ -1008,30 +1007,30 @@ pass:minio123
 <p>and create a bucket named "archipelago". To do so go to the <code>Buckets</code> section in the navigation pane, and click <code>Create Bucket +</code>. Type <code>archipelago</code> under <code>Bucket Name</code> and submit, done! That is where we will persist all your Files and also your File copies of each Digital Object. You can always go there and explore what Archipelago (well really Strawberryfield does the hard work) has persisted so you can get comfortable with our architecture.</p>
 <h2 id="step-3-deploy-drupal-9-and-the-awesome-archipelago-modules">Step 3: Deploy Drupal 9 and the awesome Archipelago Modules</h2>
 <p>The following will run composer inside the esmero-php container to download all dependencies and Drupal Core too.</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"composer install"</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"composer install"</span>
 </code></pre></div>
 <p>You will see a warning: <code>Do not run Composer as root/super user! See https://getcomposer.org/root for details</code> and the a long list of PHP packages. Don't worry. All is good here. Keep following the instructions! Once that command finishes run our setup script:</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">'scripts/archipelago/setup.sh'</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'scripts/archipelago/setup.sh'</span>
 </code></pre></div>
 <p>Explanation: That script will append some important configurations to your local <code>web/sites/default/settings.php</code>.</p>
 <p>Note: We say <code>local</code> because your whole Drupal web root (the one you cloned) is also mounted inside the esmero-php and esmero-web containers. So edits to PHP files, for example, can be done without accessing the container directly from your local folder.</p>
 <p>If this is the first time you're deploying Drupal using the provided Configurations run:</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti -u www-data esmero-php bash -c <span class="s2">"cd web;../vendor/bin/drush -y si --verbose --existing-config --db-url=mysql://root:esmerodb@esmero-db/drupal --account-name=admin --account-pass=archipelago -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;"</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"cd web;../vendor/bin/drush -y si --verbose --existing-config --db-url=mysql://root:esmerodb@esmero-db/drupal --account-name=admin --account-pass=archipelago -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;"</span>
 </code></pre></div>
 <p>Note: You will see this warning: <code>[warning] The "block_content:1cdf7155-eb60-4f27-9e5e-64fffe93127a" was not found</code>. Nothing to worry about. We will provide the missing part in Step 5.</p>
 <p>Note 2: Please be patient. This step takes now 25-30% longer because of how the most recent Drupal Installation code fetches translations and other resources (see <code>Performed install task</code>). This means progress might look like getting "stuck", go and get a coffee/tea and let it run to the end.</p>
 <p>Once finished, this will give you an <code>admin</code> Drupal user with <code>archipelago</code> as password (change this if running on a public instance!) and also set the right Docker Container owner for your Drupal installation files.</p>
 <p>Final note about Steps 2-3: You don't need to, nor should you do this more than once. You can destroy/stop/update, recreate your Docker containers, and start again (<code>git pull</code>), and your Drupal and Data will persist once you've passed the <code>Installation complete</code> message. I repeat, all other containers' data is persisted inside the <code>persistent/</code> folder contained in this cloned git repository. Drupal and all its code is visible, editable, and stable inside your <code>web/</code> folder.</p>
 <h2 id="step-4-create-a-demo-and-a-jsonapi-user-using-drush-and-assign-your-admin-user-the-administrator-role-new-since-drupal-9">Step 4: Create a "demo "and a "jsonapi" user using drush and assign your "admin" user the Administrator Role (new since Drupal 9).</h2>
-<p><div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">'drush ucrt demo --password="demo"; drush urol metadata_pro "demo"'</span>
+<p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'drush ucrt demo --password="demo"; drush urol metadata_pro "demo"'</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">'drush ucrt jsonapi --password="jsonapi"; drush urol metadata_api "jsonapi"'</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'drush ucrt jsonapi --password="jsonapi"; drush urol metadata_api "jsonapi"'</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">'drush urol administrator "admin"'</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'drush urol administrator "admin"'</span>
 </code></pre></div></p>
 <h2 id="step-5-ingest-some-metadata-displays-to-make-playing-much-more-interactive">Step 5: Ingest some Metadata Displays to make playing much more interactive</h2>
 <p>Archipelago is more fun without having to start writing Metadata Displays (in Twig) before you know what they actually are. Since you should now have a <code>jsonapi</code> user and jsonapi should be enabled, you can use that awesome functionality of D8 to get that done. We have 4 demo Metadata Display Entities that go well with the demo Webform we provided. To do that execute in your shell (copy and paste):</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">'scripts/archipelago/deploy.sh'</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'scripts/archipelago/deploy.sh'</span>
 </code></pre></div>
 <p>You are done! Open your most loved Web Browser and point it to <code>http://localhost:8001</code></p>
 <p>Note: It can take some time to start the first time (Drupal needs some warming up). The Ubuntu deployment is WAY faster than the OSX deployment because of the way the bind mount volumes are handled by the driver. Our experience is that Archipelago basically reacts instantly!</p>
@@ -1073,34 +1072,6 @@ pass:minio123
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Installing Archipelago Drupal 9 on OSX (macOS)" class="md-footer__link md-footer__link--prev" href="../archipelago-deployment-osx/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Installing Archipelago Drupal 9 on OSX (macOS)
-            </div>
-</div>
-</a>
-<a aria-label="Next: Installing Archipelago Drupal 9 on Windows 10/11" class="md-footer__link md-footer__link--next" href="../archipelago-deployment-windows/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              Installing Archipelago Drupal 9 on Windows 10/11
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -1129,7 +1100,7 @@ pass:minio123
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
-<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+<script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

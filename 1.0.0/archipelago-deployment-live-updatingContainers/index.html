@@ -8,10 +8,12 @@
 <meta content="Project documentation for Archipelago." name="description"/>
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/archipelago-deployment-live-updatingContainers/" rel="canonical"/>
+<link href="../archipelago-deployment-live-upgradeFromRC3/" rel="prev"/>
+<link href="../utility_scripts/" rel="next"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
 <title>Updating containers in an Archipelago-deployment-live instance - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -154,7 +156,7 @@
 </li>
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           About Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -199,7 +201,7 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4" tabindex="0">
           Instructions and Guides
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -211,7 +213,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4_1" tabindex="0">
           DevOps &amp; Deployment
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -223,7 +225,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_1" id="__nav_4_1_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_1">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_1_1" tabindex="0">
           Archipelago-Deployment
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -278,7 +280,7 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_2" id="__nav_4_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_2">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4_1_2" tabindex="0">
           Archipelago-Deployment-Live
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -365,7 +367,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_4" id="__nav_4_1_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_1_4" tabindex="0">
           DevOps Q&amp;A
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -403,7 +405,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2" tabindex="0">
           Archipelago 101
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -420,7 +422,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" id="__nav_4_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_2" tabindex="0">
           Webforms in Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -460,7 +462,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_4" id="__nav_4_2_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_4" tabindex="0">
           Twig Templates and Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -490,7 +492,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5" id="__nav_4_2_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_5" tabindex="0">
           Archipelago Multi-Importer (AMI)
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -540,7 +542,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_7" id="__nav_4_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_7">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_7" tabindex="0">
           Find and Replace
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -578,7 +580,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_3" tabindex="0">
           Site Administration &amp; Configuration
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -613,7 +615,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_4" tabindex="0">
           General Q&amp;A
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -638,7 +640,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" id="__nav_4_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_5" tabindex="0">
           Contributing
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -655,7 +657,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" id="__nav_4_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_5_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_5_2" tabindex="0">
           Documentation
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -696,7 +698,7 @@
 </li>
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_5" tabindex="0">
           Additional Resources
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -774,42 +776,39 @@
 <span class="md-tag">Docker</span>
 <span class="md-tag">Archipelago-deployment-live</span>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/esmero/archipelago-documentation/commits/1.0.0/docs/archipelago-deployment-live-updatingContainers.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="how-to-update-your-docker-containers">How to update your Docker containers</h1>
 <p>From time to time you may have a need to update the containers themselves. Primarily this is done for security releases.</p>
 <h2 id="1-update-docker-composeyml">1. Update docker-compose.yml</h2>
 <p>The first thing you need to do is to edit your <code>docker-compose.yml</code> file and replace the version of the container with the new one you wish to use.</p>
 <p>Navigate to your <code>docker-compose.yml</code> file and open it to edit. On Debian installs it would look like this:</p>
-<div class="highlight"><pre><span></span><code>  <span class="nb">cd</span> /usr/local/archipelago/deploy/archipelago-deployment-live/deploy/ec2-docker
-  vi docker-compose.yml
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nb">cd</span><span class="w"> </span>/usr/local/archipelago/deploy/archipelago-deployment-live/deploy/ec2-docker
+<span class="w">  </span>vi<span class="w"> </span>docker-compose.yml
 </code></pre></div>
 <p>You want to change the image line to reflect the name of the new image you wish to use:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero/php-7.4-fpm:1.0.0-RC3-multiarch</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero/php-7.4-fpm:1.0.0-RC3-multiarch</span>
 </code></pre></div>
 <p>might become:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero/php-8.0-fpm:1.1.0-multiarch</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero/php-8.0-fpm:1.1.0-multiarch</span>
 </code></pre></div>
 <p>Save your change. If use vi like in the above it would look like this:</p>
-<div class="highlight"><pre><span></span><code>  :wq
+<div class="highlight"><pre><span></span><code><span class="w">  </span>:wq
 </code></pre></div>
 <h2 id="pull-the-new-images">Pull the new image(s)</h2>
 <p>Docker Compose will now allow us to grab the new image(s) while your current system is running:</p>
-<div class="highlight"><pre><span></span><code>  docker-compose pull
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker-compose<span class="w"> </span>pull
 </code></pre></div>
 <h2 id="stop-and-restart-the-container">Stop and restart the container</h2>
 <p>It is necesary to stop and start the container or the current image will continue to be used:</p>
-<div class="highlight"><pre><span></span><code>  docker-compose stop container-name
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker-compose<span class="w"> </span>stop<span class="w"> </span>container-name
 </code></pre></div>
 <p>Wait for it to stop. Then bring it back up:</p>
-<div class="highlight"><pre><span></span><code>docker-compose up -d 
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>
 </code></pre></div>
 <p>It is important to use the -d flag or you will have your live instance stuck in your terminal. You want it to run in the background. The <code>-d</code> flag stands for <em>detached</em>.</p>
 <h3 id="down-and-up">Down and up</h3>
 <p>If you are more comfortable having the all the containers go down and up you can do that with the following:</p>
-<div class="highlight"><pre><span></span><code>docker-compose down
-docker-compose up
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>down
+docker-compose<span class="w"> </span>up
 </code></pre></div>
 <hr/>
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback, or open an ISSUE in this <a href="https://github.com/esmero/archipelago-deployment-live/">Archipelago Deployment Live Repository</a>.</p>
@@ -834,34 +833,6 @@ docker-compose up
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Upgrading from 1.0.0-RC3 to 1.0.0" class="md-footer__link md-footer__link--prev" href="../archipelago-deployment-live-upgradeFromRC3/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Upgrading from 1.0.0-RC3 to 1.0.0
-            </div>
-</div>
-</a>
-<a aria-label="Next: Utility Scripts" class="md-footer__link md-footer__link--next" href="../utility_scripts/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              Utility Scripts
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -890,7 +861,7 @@ docker-compose up
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
-<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+<script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

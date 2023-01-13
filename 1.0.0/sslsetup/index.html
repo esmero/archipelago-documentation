@@ -8,10 +8,12 @@
 <meta content="Project documentation for Archipelago." name="description"/>
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/sslsetup/" rel="canonical"/>
+<link href="../archipelago-deployment-upgradeFromRC3/" rel="prev"/>
+<link href="../archipelago-deployment-live-readme/" rel="next"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
 <title>How to Set Up SSL for Docker/Archipelago - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -154,7 +156,7 @@
 </li>
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           About Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -199,7 +201,7 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4" tabindex="0">
           Instructions and Guides
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -211,7 +213,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4_1" tabindex="0">
           DevOps &amp; Deployment
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -223,7 +225,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_1" id="__nav_4_1_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_1">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4_1_1" tabindex="0">
           Archipelago-Deployment
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -301,7 +303,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_2" id="__nav_4_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_1_2" tabindex="0">
           Archipelago-Deployment-Live
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -351,7 +353,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_4" id="__nav_4_1_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_1_4" tabindex="0">
           DevOps Q&amp;A
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -389,7 +391,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2" tabindex="0">
           Archipelago 101
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -406,7 +408,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" id="__nav_4_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_2" tabindex="0">
           Webforms in Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -446,7 +448,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_4" id="__nav_4_2_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_4" tabindex="0">
           Twig Templates and Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -476,7 +478,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5" id="__nav_4_2_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_5" tabindex="0">
           Archipelago Multi-Importer (AMI)
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -526,7 +528,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_7" id="__nav_4_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_7">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_7" tabindex="0">
           Find and Replace
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -564,7 +566,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_3" tabindex="0">
           Site Administration &amp; Configuration
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -599,7 +601,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_4" tabindex="0">
           General Q&amp;A
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -624,7 +626,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" id="__nav_4_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_5" tabindex="0">
           Contributing
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -641,7 +643,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" id="__nav_4_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_5_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_5_2" tabindex="0">
           Documentation
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -682,7 +684,7 @@
 </li>
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_5" tabindex="0">
           Additional Resources
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -741,9 +743,6 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/esmero/archipelago-documentation/commits/1.0.0/docs/sslsetup.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="how-to-setup-ssl-for-dockerarchipelago">How to Setup SSL for Docker/Archipelago</h1>
 <p><em><em>Work-In-Progress Note</em> This documentation page is still under construction and content may change with future updates. Please use caution when implementing any instructions referenced herein, as there may be missing steps or corresponding configuration files. Thank you for your patience as we continue to update Archipelago's documentation.</em></p>
 <p>The steps found below describe one potential manual SSL configuration for Archipelago deployments. A <code>git clone</code> deployment option will be available for future releases.</p>
@@ -756,17 +755,17 @@
 <li>
 <p>Inside a /persistent partition, establish the following folder structure.
 <em>Note: you can keep the existing folder structure if you so choose. A benefit of the following structure is that it decouples the git clone of archipelago-deployment, which is made to be self sustainable and good for coding or smaller deployments.</em></p>
-<div class="highlight"><pre><span></span><code><span class="o">[</span>ec2-user@ip-17x-xx-x-xxx persistent<span class="o">]</span>$ ls -lah
-total 64K
-drwxr-xr-x <span class="m">14</span> root           root  <span class="m">4</span>.0K Oct  <span class="m">5</span> <span class="m">23</span>:11 .
-dr-xr-xr-x <span class="m">19</span> root           root  <span class="m">275</span> Dec <span class="m">15</span>  <span class="m">2019</span> ..
-drwxr-xr-x  <span class="m">8</span>       <span class="m">999</span>  <span class="m">999</span>   <span class="m">4096</span> Oct <span class="m">13</span> <span class="m">20</span>:07 db
-drwxr-xr-x <span class="m">13</span> root           root  <span class="m">4</span>.0K Oct  <span class="m">5</span> <span class="m">23</span>:03 drupal8
-drwxr-xr-x  <span class="m">5</span>           <span class="m">8183</span>  <span class="m">8183</span>   <span class="m">4</span>.0K Feb <span class="m">23</span>  <span class="m">2020</span> iiifcache
-drwxr-xr-x  <span class="m">2</span> root           root  <span class="m">4</span>.0K Feb <span class="m">23</span>  <span class="m">2020</span> iiifconfig
-drwxr-xr-x  <span class="m">4</span> root           root  <span class="m">4</span>.0K Oct  <span class="m">5</span> <span class="m">22</span>:45 nginx_conf
-drwxr-xr-x  <span class="m">3</span> root           root  <span class="m">4</span>.0K Feb <span class="m">26</span>  <span class="m">2019</span> solrconfig
-drwxr-xr-x  <span class="m">3</span>           <span class="m">8983</span> <span class="m">8983</span>  <span class="m">4</span>.0K Feb <span class="m">26</span>  <span class="m">2019</span> solrcore
+<div class="highlight"><pre><span></span><code><span class="o">[</span>ec2-user@ip-17x-xx-x-xxx<span class="w"> </span>persistent<span class="o">]</span>$<span class="w"> </span>ls<span class="w"> </span>-lah
+total<span class="w"> </span>64K
+drwxr-xr-x<span class="w"> </span><span class="m">14</span><span class="w"> </span>root<span class="w">           </span>root<span class="w">  </span><span class="m">4</span>.0K<span class="w"> </span>Oct<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">23</span>:11<span class="w"> </span>.
+dr-xr-xr-x<span class="w"> </span><span class="m">19</span><span class="w"> </span>root<span class="w">           </span>root<span class="w">  </span><span class="m">275</span><span class="w"> </span>Dec<span class="w"> </span><span class="m">15</span><span class="w">  </span><span class="m">2019</span><span class="w"> </span>..
+drwxr-xr-x<span class="w">  </span><span class="m">8</span><span class="w">       </span><span class="m">999</span><span class="w">  </span><span class="m">999</span><span class="w">   </span><span class="m">4096</span><span class="w"> </span>Oct<span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">20</span>:07<span class="w"> </span>db
+drwxr-xr-x<span class="w"> </span><span class="m">13</span><span class="w"> </span>root<span class="w">           </span>root<span class="w">  </span><span class="m">4</span>.0K<span class="w"> </span>Oct<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">23</span>:03<span class="w"> </span>drupal8
+drwxr-xr-x<span class="w">  </span><span class="m">5</span><span class="w">           </span><span class="m">8183</span><span class="w">  </span><span class="m">8183</span><span class="w">   </span><span class="m">4</span>.0K<span class="w"> </span>Feb<span class="w"> </span><span class="m">23</span><span class="w">  </span><span class="m">2020</span><span class="w"> </span>iiifcache
+drwxr-xr-x<span class="w">  </span><span class="m">2</span><span class="w"> </span>root<span class="w">           </span>root<span class="w">  </span><span class="m">4</span>.0K<span class="w"> </span>Feb<span class="w"> </span><span class="m">23</span><span class="w">  </span><span class="m">2020</span><span class="w"> </span>iiifconfig
+drwxr-xr-x<span class="w">  </span><span class="m">4</span><span class="w"> </span>root<span class="w">           </span>root<span class="w">  </span><span class="m">4</span>.0K<span class="w"> </span>Oct<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:45<span class="w"> </span>nginx_conf
+drwxr-xr-x<span class="w">  </span><span class="m">3</span><span class="w"> </span>root<span class="w">           </span>root<span class="w">  </span><span class="m">4</span>.0K<span class="w"> </span>Feb<span class="w"> </span><span class="m">26</span><span class="w">  </span><span class="m">2019</span><span class="w"> </span>solrconfig
+drwxr-xr-x<span class="w">  </span><span class="m">3</span><span class="w">           </span><span class="m">8983</span><span class="w"> </span><span class="m">8983</span><span class="w">  </span><span class="m">4</span>.0K<span class="w"> </span>Feb<span class="w"> </span><span class="m">26</span><span class="w">  </span><span class="m">2019</span><span class="w"> </span>solrcore
 </code></pre></div>
 <p>To get to this point, create a git clone of archipelago deployment and then copy the content of the /persistent out of the repo folder into this structure. The original (or what is left) archipelago-deployment ends inside a drupal8 folder here.</p>
 </li>
@@ -775,87 +774,87 @@ drwxr-xr-x  <span class="m">3</span>           <span class="m">8983</span> <span
 <details class="info">
 <summary>docker-compose.yml</summary>
 <p>**Be sure to replace youremail@gmail.com with your email address.</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">'3.5'</span><span class="w"></span>
-<span class="w"> </span><span class="nt">services</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="nt">web</span><span class="p">:</span><span class="w"></span>
-<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-web</span><span class="w"></span>
-<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">staticfloat/nginx-certbot</span><span class="w"></span>
-<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
-<span class="w">     </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="nt">CERTBOT_EMAIL</span><span class="p">:</span><span class="w"> </span><span class="s">"youremail@gmail.com"</span><span class="w"></span>
-<span class="w">     </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"80:80"</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"443:443"</span><span class="w"></span>
-<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/nginx_conf/conf.d:/etc/nginx/user.conf.d:ro</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/nginx_conf/certbot_extra_domains:/etc/nginx/certbot/extra_domains:ro</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/drupal8:/var/www/html:cached</span><span class="w"></span>
-<span class="w">     </span><span class="nt">depends_on</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">solr</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">php</span><span class="w"></span>
-<span class="w">     </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">     </span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span><span class="w"></span>
-<span class="w">   </span><span class="nt">php</span><span class="p">:</span><span class="w"></span>
-<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-php</span><span class="w"></span>
-<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
-<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">"esmero/php-7.3-fpm:latest"</span><span class="w"></span>
-<span class="w">     </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">     </span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span><span class="w"></span>
-<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${PWD}:/var/www/html:cached</span><span class="w"></span>
-<span class="w">   </span><span class="nt">solr</span><span class="p">:</span><span class="w"></span>
-<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-solr</span><span class="w"></span>
-<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
-<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">"solr:7.5.0"</span><span class="w"></span>
-<span class="w">     </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">     </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"8983:8983"</span><span class="w"></span>
-<span class="w">     </span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span><span class="w"></span>
-<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/solrcore:/opt/solr/server/solr/mycores:cached</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/solrconfig:/drupalconfig:cached</span><span class="w"></span>
-<span class="w">     </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker-entrypoint.sh</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">solr-precreate</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drupal</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/drupalconfig</span><span class="w"></span>
-<span class="w">   </span><span class="c1"># see https://hub.docker.com/_/mysql/</span><span class="w"></span>
-<span class="w">   </span><span class="nt">db</span><span class="p">:</span><span class="w"></span>
-<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:5.7</span><span class="w"></span>
-<span class="w">     </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--max_allowed_packet=256M</span><span class="w"></span>
-<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-db</span><span class="w"></span>
-<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
-<span class="w">     </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmerodb</span><span class="w"></span>
-<span class="w">     </span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span><span class="w"></span>
-<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/db:/var/lib/mysql:cached</span><span class="w"></span>
-<span class="w">   </span><span class="nt">iiif</span><span class="p">:</span><span class="w"></span>
-<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-cantaloupe</span><span class="w"></span>
-<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">"esmero/cantaloupe-s3:4.1.6"</span><span class="w"></span>
-<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
-<span class="w">     </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"8183:8182"</span><span class="w"></span>
-<span class="w">     </span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span><span class="w"></span>
-<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/iiifconfig:/etc/cantaloupe</span><span class="w"></span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/iiifcache:/var/cache/cantaloupe</span><span class="w"></span>
-<span class="w"> </span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="nt">host-net</span><span class="p">:</span><span class="w"></span>
-<span class="w">     </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span><span class="w"></span>
-<span class="w">   </span><span class="nt">esmero-net</span><span class="p">:</span><span class="w"></span>
-<span class="w">     </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span><span class="w"></span>
-<span class="w">     </span><span class="nt">internal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">'3.5'</span>
+<span class="w"> </span><span class="nt">services</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">web</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-web</span>
+<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">staticfloat/nginx-certbot</span>
+<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">     </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">       </span><span class="nt">CERTBOT_EMAIL</span><span class="p">:</span><span class="w"> </span><span class="s">"youremail@gmail.com"</span>
+<span class="w">     </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"80:80"</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"443:443"</span>
+<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/nginx_conf/conf.d:/etc/nginx/user.conf.d:ro</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/nginx_conf/certbot_extra_domains:/etc/nginx/certbot/extra_domains:ro</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/drupal8:/var/www/html:cached</span>
+<span class="w">     </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">solr</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">php</span>
+<span class="w">     </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">     </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
+<span class="w">   </span><span class="nt">php</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-php</span>
+<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">"esmero/php-7.3-fpm:latest"</span>
+<span class="w">     </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">     </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
+<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${PWD}:/var/www/html:cached</span>
+<span class="w">   </span><span class="nt">solr</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-solr</span>
+<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">"solr:7.5.0"</span>
+<span class="w">     </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">     </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"8983:8983"</span>
+<span class="w">     </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
+<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/solrcore:/opt/solr/server/solr/mycores:cached</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/solrconfig:/drupalconfig:cached</span>
+<span class="w">     </span><span class="nt">entrypoint</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker-entrypoint.sh</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">solr-precreate</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drupal</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/drupalconfig</span>
+<span class="w">   </span><span class="c1"># see https://hub.docker.com/_/mysql/</span>
+<span class="w">   </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:5.7</span>
+<span class="w">     </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--max_allowed_packet=256M</span>
+<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-db</span>
+<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">     </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">       </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmerodb</span>
+<span class="w">     </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
+<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/db:/var/lib/mysql:cached</span>
+<span class="w">   </span><span class="nt">iiif</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-cantaloupe</span>
+<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">"esmero/cantaloupe-s3:4.1.6"</span>
+<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">     </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"8183:8182"</span>
+<span class="w">     </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
+<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/iiifconfig:/etc/cantaloupe</span>
+<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/iiifcache:/var/cache/cantaloupe</span>
+<span class="w"> </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">host-net</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
+<span class="w">   </span><span class="nt">esmero-net</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
+<span class="w">     </span><span class="nt">internal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
 <p><em>Note: This file shows how the folders in Step 1 are being used, and how SSL is being automatically deployed and renewed (without any human interaction other than starting the docker-compose and watching the logs).</em></p>
@@ -865,126 +864,126 @@ drwxr-xr-x  <span class="m">3</span>           <span class="m">8983</span> <span
 <details class="info">
 <summary>ngnix.conf</summary>
 <p>**Be sure to replace all instances of yoursite.org with your own domain.</p>
-<div class="highlight"><pre><span></span><code> <span class="c1"># goes into /persistent/nginx_conf/conf.d/nginx.conf</span>
- upstream cantaloupe <span class="o">{</span>
-  server  esmero-cantaloupe:8182<span class="p">;</span>
-  <span class="o">}</span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c1"># goes into /persistent/nginx_conf/conf.d/nginx.conf</span>
+<span class="w"> </span>upstream<span class="w"> </span>cantaloupe<span class="w"> </span><span class="o">{</span>
+<span class="w">  </span>server<span class="w">  </span>esmero-cantaloupe:8182<span class="p">;</span>
+<span class="w">  </span><span class="o">}</span>
 
-  server <span class="o">{</span>
-    listen              <span class="m">443</span> ssl<span class="p">;</span>
-    server_name         yoursite.org<span class="p">;</span>
-    ssl_certificate     /etc/letsencrypt/live/yourstie.org/fullchain.pem<span class="p">;</span>
-    ssl_certificate_key /etc/letsencrypt/live/yoursite.org/privkey.pem<span class="p">;</span>
+<span class="w">  </span>server<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>listen<span class="w">              </span><span class="m">443</span><span class="w"> </span>ssl<span class="p">;</span>
+<span class="w">    </span>server_name<span class="w">         </span>yoursite.org<span class="p">;</span>
+<span class="w">    </span>ssl_certificate<span class="w">     </span>/etc/letsencrypt/live/yourstie.org/fullchain.pem<span class="p">;</span>
+<span class="w">    </span>ssl_certificate_key<span class="w"> </span>/etc/letsencrypt/live/yoursite.org/privkey.pem<span class="p">;</span>
 
-     client_max_body_size 512M<span class="p">;</span> <span class="c1">## Match with PHP from FPM container</span>
+<span class="w">     </span>client_max_body_size<span class="w"> </span>512M<span class="p">;</span><span class="w"> </span><span class="c1">## Match with PHP from FPM container</span>
 
-    root /var/www/html/web<span class="p">;</span> <span class="c1">## &lt;-- Your only path reference.</span>
+<span class="w">    </span>root<span class="w"> </span>/var/www/html/web<span class="p">;</span><span class="w"> </span><span class="c1">## &lt;-- Your only path reference.</span>
 
-    fastcgi_send_timeout 120s<span class="p">;</span>
-    fastcgi_read_timeout 120s<span class="p">;</span>
-    fastcgi_pass_request_headers on<span class="p">;</span>
+<span class="w">    </span>fastcgi_send_timeout<span class="w"> </span>120s<span class="p">;</span>
+<span class="w">    </span>fastcgi_read_timeout<span class="w"> </span>120s<span class="p">;</span>
+<span class="w">    </span>fastcgi_pass_request_headers<span class="w"> </span>on<span class="p">;</span>
 
-    fastcgi_buffers <span class="m">16</span> 16k<span class="p">;</span>
-    fastcgi_buffer_size 32k<span class="p">;</span>
+<span class="w">    </span>fastcgi_buffers<span class="w"> </span><span class="m">16</span><span class="w"> </span>16k<span class="p">;</span>
+<span class="w">    </span>fastcgi_buffer_size<span class="w"> </span>32k<span class="p">;</span>
 
-    <span class="c1"># Cantaloupe proxypass</span>
-    location /cantaloupe/ <span class="o">{</span>
-       proxy_set_header X-Forwarded-Proto <span class="nv">$scheme</span><span class="p">;</span>
-       proxy_set_header X-Forwarded-Host <span class="nv">$host</span><span class="p">;</span>
-       proxy_set_header X-Forwarded-Port <span class="nv">$server_port</span><span class="p">;</span>
-       proxy_set_header X-Forwarded-Path /cantaloupe/<span class="p">;</span>
-       proxy_set_header X-Forwarded-For <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
-       <span class="k">if</span> <span class="o">(</span><span class="nv">$request_uri</span> ~* <span class="s2">"/cantaloupe/(.*)"</span><span class="o">)</span> <span class="o">{</span>
-         proxy_pass http://cantaloupe/<span class="nv">$1</span><span class="p">;</span>
-       <span class="o">}</span>
-    <span class="o">}</span>
+<span class="w">    </span><span class="c1"># Cantaloupe proxypass</span>
+<span class="w">    </span>location<span class="w"> </span>/cantaloupe/<span class="w"> </span><span class="o">{</span>
+<span class="w">       </span>proxy_set_header<span class="w"> </span>X-Forwarded-Proto<span class="w"> </span><span class="nv">$scheme</span><span class="p">;</span>
+<span class="w">       </span>proxy_set_header<span class="w"> </span>X-Forwarded-Host<span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
+<span class="w">       </span>proxy_set_header<span class="w"> </span>X-Forwarded-Port<span class="w"> </span><span class="nv">$server_port</span><span class="p">;</span>
+<span class="w">       </span>proxy_set_header<span class="w"> </span>X-Forwarded-Path<span class="w"> </span>/cantaloupe/<span class="p">;</span>
+<span class="w">       </span>proxy_set_header<span class="w"> </span>X-Forwarded-For<span class="w"> </span><span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+<span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="nv">$request_uri</span><span class="w"> </span>~*<span class="w"> </span><span class="s2">"/cantaloupe/(.*)"</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">         </span>proxy_pass<span class="w"> </span>http://cantaloupe/<span class="nv">$1</span><span class="p">;</span>
+<span class="w">       </span><span class="o">}</span>
+<span class="w">    </span><span class="o">}</span>
 
-    <span class="nv">location</span> <span class="o">=</span> /favicon.ico <span class="o">{</span>
-        log_not_found off<span class="p">;</span>
-        access_log off<span class="p">;</span>
-    <span class="o">}</span>
+<span class="w">    </span><span class="nv">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/favicon.ico<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>log_not_found<span class="w"> </span>off<span class="p">;</span>
+<span class="w">        </span>access_log<span class="w"> </span>off<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
 
-    <span class="nv">location</span> <span class="o">=</span> /robots.txt <span class="o">{</span>
-        allow all<span class="p">;</span>
-        log_not_found off<span class="p">;</span>
-        access_log off<span class="p">;</span>
-    <span class="o">}</span>
+<span class="w">    </span><span class="nv">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/robots.txt<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>allow<span class="w"> </span>all<span class="p">;</span>
+<span class="w">        </span>log_not_found<span class="w"> </span>off<span class="p">;</span>
+<span class="w">        </span>access_log<span class="w"> </span>off<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
 
-    <span class="c1"># Very rarely should these ever be accessed outside of your lan</span>
-    location ~* <span class="se">\.</span><span class="o">(</span>txt<span class="p">|</span>log<span class="o">)</span>$ <span class="o">{</span>
-        deny all<span class="p">;</span>
-    <span class="o">}</span>
+<span class="w">    </span><span class="c1"># Very rarely should these ever be accessed outside of your lan</span>
+<span class="w">    </span>location<span class="w"> </span>~*<span class="w"> </span><span class="se">\.</span><span class="o">(</span>txt<span class="p">|</span>log<span class="o">)</span>$<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>deny<span class="w"> </span>all<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
 
-    location ~ <span class="se">\.</span>.*/.*<span class="se">\.</span>php$ <span class="o">{</span>
-        <span class="k">return</span> <span class="m">403</span><span class="p">;</span>
-    <span class="o">}</span>
+<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span><span class="se">\.</span>.*/.*<span class="se">\.</span>php$<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">403</span><span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
 
-    location ~ ^/sites/.*/private/ <span class="o">{</span>
-        <span class="k">return</span> <span class="m">403</span><span class="p">;</span>
-    <span class="o">}</span>
+<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span>^/sites/.*/private/<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">403</span><span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
 
-    <span class="c1"># Allow "Well-Known URIs" as per RFC 5785</span>
-    location ~* ^/.well-known/ <span class="o">{</span>
-        allow all<span class="p">;</span>
-    <span class="o">}</span>
+<span class="w">    </span><span class="c1"># Allow "Well-Known URIs" as per RFC 5785</span>
+<span class="w">    </span>location<span class="w"> </span>~*<span class="w"> </span>^/.well-known/<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>allow<span class="w"> </span>all<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
 
-    <span class="c1"># Block access to "hidden" files and directories whose names begin with a</span>
-    <span class="c1"># period. This includes directories used by version control systems such</span>
-    <span class="c1"># as Subversion or Git to store control files.</span>
-    location ~ <span class="o">(</span>^<span class="p">|</span>/<span class="o">)</span><span class="se">\.</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="m">403</span><span class="p">;</span>
-    <span class="o">}</span>
+<span class="w">    </span><span class="c1"># Block access to "hidden" files and directories whose names begin with a</span>
+<span class="w">    </span><span class="c1"># period. This includes directories used by version control systems such</span>
+<span class="w">    </span><span class="c1"># as Subversion or Git to store control files.</span>
+<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span><span class="o">(</span>^<span class="p">|</span>/<span class="o">)</span><span class="se">\.</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">403</span><span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
 
-    location / <span class="o">{</span>
-        try_files <span class="nv">$uri</span> /index.php?<span class="nv">$query_string</span><span class="p">;</span> <span class="c1"># For Drupal &gt;= 7</span>
-    <span class="o">}</span>
+<span class="w">    </span>location<span class="w"> </span>/<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span>/index.php?<span class="nv">$query_string</span><span class="p">;</span><span class="w"> </span><span class="c1"># For Drupal &gt;= 7</span>
+<span class="w">    </span><span class="o">}</span>
 
-    location @rewrite <span class="o">{</span>
-        rewrite ^/<span class="o">(</span>.*<span class="o">)</span>$ /index.php?q<span class="o">=</span><span class="nv">$1</span><span class="p">;</span>
-    <span class="o">}</span>
+<span class="w">    </span>location<span class="w"> </span>@rewrite<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>rewrite<span class="w"> </span>^/<span class="o">(</span>.*<span class="o">)</span>$<span class="w"> </span>/index.php?q<span class="o">=</span><span class="nv">$1</span><span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
 
-    <span class="c1"># Don't allow direct access to PHP files in the vendor directory.</span>
-    location ~ /vendor/.*<span class="se">\.</span>php$ <span class="o">{</span>
-        deny all<span class="p">;</span>
-        <span class="k">return</span> <span class="m">404</span><span class="p">;</span>
-    <span class="o">}</span>
+<span class="w">    </span><span class="c1"># Don't allow direct access to PHP files in the vendor directory.</span>
+<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span>/vendor/.*<span class="se">\.</span>php$<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>deny<span class="w"> </span>all<span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">404</span><span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
 
-    <span class="c1"># Allow Modules to be updated via UI (still we believe composer is the way)    </span>
-    rewrite ^/core/authorize.php/core/authorize.php<span class="o">(</span>.*<span class="o">)</span>$ /core/authorize.php<span class="nv">$1</span><span class="p">;</span>
+<span class="w">    </span><span class="c1"># Allow Modules to be updated via UI (still we believe composer is the way)    </span>
+<span class="w">    </span>rewrite<span class="w"> </span>^/core/authorize.php/core/authorize.php<span class="o">(</span>.*<span class="o">)</span>$<span class="w"> </span>/core/authorize.php<span class="nv">$1</span><span class="p">;</span>
 
-    <span class="c1"># In Drupal 8, we must also match new paths where the '.php' appears in</span>
-    <span class="c1"># the middle, such as update.php/selection. The rule we use is strict,</span>
-    <span class="c1"># and only allows this pattern with the update.php front controller.</span>
-    <span class="c1"># This allows legacy path aliases in the form of</span>
-    <span class="c1"># blog/index.php/legacy-path to continue to route to Drupal nodes. If</span>
-    <span class="c1"># you do not have any paths like that, then you might prefer to use a</span>
-    <span class="c1"># laxer rule, such as:</span>
-    <span class="c1">#   location ~ \.php(/|$) {</span>
-    <span class="c1"># The laxer rule will continue to work if Drupal uses this new URL</span>
-    <span class="c1"># pattern with front controllers other than update.php in a future</span>
-    <span class="c1"># release.</span>
-    location ~ <span class="s1">'\.php$|^/update.php'</span> <span class="o">{</span>
-        fastcgi_split_path_info ^<span class="o">(</span>.+?<span class="se">\.</span>php<span class="o">)(</span><span class="p">|</span>/.*<span class="o">)</span>$<span class="p">;</span>
-        include fastcgi_params<span class="p">;</span>
-        <span class="c1"># Block httpoxy attacks. See https://httpoxy.org/.</span>
-        fastcgi_param HTTP_PROXY <span class="s2">""</span><span class="p">;</span>
-        fastcgi_param SCRIPT_FILENAME <span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span>
-        fastcgi_param PATH_INFO <span class="nv">$fastcgi_path_info</span><span class="p">;</span>
-        fastcgi_param PHP_VALUE <span class="s2">"upload_max_filesize=512M \n post_max_size=512M"</span><span class="p">;</span>
-        proxy_read_timeout 900s<span class="p">;</span>
-        fastcgi_intercept_errors on<span class="p">;</span>
-        fastcgi_pass esmero-php:9000<span class="p">;</span>
-    <span class="o">}</span>
+<span class="w">    </span><span class="c1"># In Drupal 8, we must also match new paths where the '.php' appears in</span>
+<span class="w">    </span><span class="c1"># the middle, such as update.php/selection. The rule we use is strict,</span>
+<span class="w">    </span><span class="c1"># and only allows this pattern with the update.php front controller.</span>
+<span class="w">    </span><span class="c1"># This allows legacy path aliases in the form of</span>
+<span class="w">    </span><span class="c1"># blog/index.php/legacy-path to continue to route to Drupal nodes. If</span>
+<span class="w">    </span><span class="c1"># you do not have any paths like that, then you might prefer to use a</span>
+<span class="w">    </span><span class="c1"># laxer rule, such as:</span>
+<span class="w">    </span><span class="c1">#   location ~ \.php(/|$) {</span>
+<span class="w">    </span><span class="c1"># The laxer rule will continue to work if Drupal uses this new URL</span>
+<span class="w">    </span><span class="c1"># pattern with front controllers other than update.php in a future</span>
+<span class="w">    </span><span class="c1"># release.</span>
+<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span><span class="s1">'\.php$|^/update.php'</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>fastcgi_split_path_info<span class="w"> </span>^<span class="o">(</span>.+?<span class="se">\.</span>php<span class="o">)(</span><span class="p">|</span>/.*<span class="o">)</span>$<span class="p">;</span>
+<span class="w">        </span>include<span class="w"> </span>fastcgi_params<span class="p">;</span>
+<span class="w">        </span><span class="c1"># Block httpoxy attacks. See https://httpoxy.org/.</span>
+<span class="w">        </span>fastcgi_param<span class="w"> </span>HTTP_PROXY<span class="w"> </span><span class="s2">""</span><span class="p">;</span>
+<span class="w">        </span>fastcgi_param<span class="w"> </span>SCRIPT_FILENAME<span class="w"> </span><span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span>
+<span class="w">        </span>fastcgi_param<span class="w"> </span>PATH_INFO<span class="w"> </span><span class="nv">$fastcgi_path_info</span><span class="p">;</span>
+<span class="w">        </span>fastcgi_param<span class="w"> </span>PHP_VALUE<span class="w"> </span><span class="s2">"upload_max_filesize=512M \n post_max_size=512M"</span><span class="p">;</span>
+<span class="w">        </span>proxy_read_timeout<span class="w"> </span>900s<span class="p">;</span>
+<span class="w">        </span>fastcgi_intercept_errors<span class="w"> </span>on<span class="p">;</span>
+<span class="w">        </span>fastcgi_pass<span class="w"> </span>esmero-php:9000<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
 
-     <span class="c1"># Fighting with Styles? This little gem is amazing.</span>
-    location ~ ^/sites/.*/files/styles/ <span class="o">{</span> <span class="c1"># For Drupal &gt;= 7</span>
-        try_files <span class="nv">$uri</span> @rewrite<span class="p">;</span>
-    <span class="o">}</span>
+<span class="w">     </span><span class="c1"># Fighting with Styles? This little gem is amazing.</span>
+<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span>^/sites/.*/files/styles/<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="c1"># For Drupal &gt;= 7</span>
+<span class="w">        </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span>@rewrite<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
 
-    <span class="c1"># Handle private files through Drupal.</span>
-    location ~ ^/system/files/ <span class="o">{</span> <span class="c1"># For Drupal &gt;= 7</span>
-        try_files <span class="nv">$uri</span> /index.php?<span class="nv">$query_string</span><span class="p">;</span>
-    <span class="o">}</span>
+<span class="w">    </span><span class="c1"># Handle private files through Drupal.</span>
+<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span>^/system/files/<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="c1"># For Drupal &gt;= 7</span>
+<span class="w">        </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span>/index.php?<span class="nv">$query_string</span><span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
 </details>
@@ -1004,14 +1003,14 @@ drwxr-xr-x  <span class="m">3</span>           <span class="m">8983</span> <span
 </li>
 <li>
 <p>Inside the <code>/certbot_extra_domains/</code> folder, create a text file named the same way as your domain (which can/or not contain additional subdomains but needs to exist).</p>
-<div class="highlight"><pre><span></span><code>cat  /persistent/nginx_conf/certbot_extra_domains/yoursite.org
+<div class="highlight"><pre><span></span><code>cat<span class="w">  </span>/persistent/nginx_conf/certbot_extra_domains/yoursite.org
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>drwxr-xr-x <span class="m">2</span> root root <span class="m">4</span>.0K Oct  <span class="m">5</span> <span class="m">22</span>:46 .
-drwxr-xr-x <span class="m">4</span> root root <span class="m">4</span>.0K Oct  <span class="m">5</span> <span class="m">22</span>:45 ..
--rw-r--r-- <span class="m">1</span> root root   <span class="m">48</span> Oct  <span class="m">5</span> <span class="m">22</span>:46 yoursite.org
+<div class="highlight"><pre><span></span><code>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">4</span>.0K<span class="w"> </span>Oct<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:46<span class="w"> </span>.
+drwxr-xr-x<span class="w"> </span><span class="m">4</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">4</span>.0K<span class="w"> </span>Oct<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:45<span class="w"> </span>..
+-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">   </span><span class="m">48</span><span class="w"> </span>Oct<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:46<span class="w"> </span>yoursite.org
 </code></pre></div>
 <p><em>Optionally, create additional subdomains if needed.</em></p>
-<div class="highlight"><pre><span></span><code>cat  /persistent/nginx_conf/certbot_extra_domains/yoursite.org
+<div class="highlight"><pre><span></span><code>cat<span class="w">  </span>/persistent/nginx_conf/certbot_extra_domains/yoursite.org
 subdomain.yoursite.org
 anothersub.yoursite.org
 </code></pre></div>
@@ -1021,15 +1020,15 @@ anothersub.yoursite.org
 </li>
 <li>
 <p>Run the following commands:</p>
-<div class="highlight"><pre><span></span><code>docker -compose up -d
-docker ps
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>-compose<span class="w"> </span>up<span class="w"> </span>-d
+docker<span class="w"> </span>ps
 </code></pre></div>
 <p>You should see this:</p>
-<div class="highlight"><pre><span></span><code>b5a04747ee06        staticfloat/nginx-certbot    <span class="s2">"/bin/bash /scripts/…"</span>   <span class="m">8</span> days ago          Up <span class="m">8</span> days           <span class="m">0</span>.0.0.0:80-&gt;80/tcp, <span class="m">0</span>.0.0.0:443-&gt;443/tcp   esmero-web
-84afae094b57        esmero/php-7.3-fpm:latest    <span class="s2">"docker-php-entrypoi…"</span>   <span class="m">8</span> days ago          Up <span class="m">8</span> days           <span class="m">9000</span>/tcp                                   esmero-php
-13a9214acfd0        esmero/cantaloupe-s3:4.1.6   <span class="s2">"sh -c 'java -Dcanta…"</span>   <span class="m">8</span> days ago          Up <span class="m">8</span> days           <span class="m">0</span>.0.0.0:8183-&gt;8182/tcp                     esmero-cantaloupe
-044dd5bc7245        mysql:5.7                    <span class="s2">"docker-entrypoint.s…"</span>   <span class="m">8</span> days ago          Up <span class="m">8</span> days           <span class="m">3306</span>/tcp, <span class="m">33060</span>/tcp                        esmero-db
-31f4f0f45acc        solr:7.5.0                   <span class="s2">"docker-entrypoint.s…"</span>   <span class="m">8</span> days ago          Up <span class="m">8</span> days           <span class="m">0</span>.0.0.0:8983-&gt;8983/tcp                     esmero-solr
+<div class="highlight"><pre><span></span><code>b5a04747ee06<span class="w">        </span>staticfloat/nginx-certbot<span class="w">    </span><span class="s2">"/bin/bash /scripts/…"</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>days<span class="w"> </span>ago<span class="w">          </span>Up<span class="w"> </span><span class="m">8</span><span class="w"> </span>days<span class="w">           </span><span class="m">0</span>.0.0.0:80-&gt;80/tcp,<span class="w"> </span><span class="m">0</span>.0.0.0:443-&gt;443/tcp<span class="w">   </span>esmero-web
+84afae094b57<span class="w">        </span>esmero/php-7.3-fpm:latest<span class="w">    </span><span class="s2">"docker-php-entrypoi…"</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>days<span class="w"> </span>ago<span class="w">          </span>Up<span class="w"> </span><span class="m">8</span><span class="w"> </span>days<span class="w">           </span><span class="m">9000</span>/tcp<span class="w">                                   </span>esmero-php
+13a9214acfd0<span class="w">        </span>esmero/cantaloupe-s3:4.1.6<span class="w">   </span><span class="s2">"sh -c 'java -Dcanta…"</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>days<span class="w"> </span>ago<span class="w">          </span>Up<span class="w"> </span><span class="m">8</span><span class="w"> </span>days<span class="w">           </span><span class="m">0</span>.0.0.0:8183-&gt;8182/tcp<span class="w">                     </span>esmero-cantaloupe
+044dd5bc7245<span class="w">        </span>mysql:5.7<span class="w">                    </span><span class="s2">"docker-entrypoint.s…"</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>days<span class="w"> </span>ago<span class="w">          </span>Up<span class="w"> </span><span class="m">8</span><span class="w"> </span>days<span class="w">           </span><span class="m">3306</span>/tcp,<span class="w"> </span><span class="m">33060</span>/tcp<span class="w">                        </span>esmero-db
+31f4f0f45acc<span class="w">        </span>solr:7.5.0<span class="w">                   </span><span class="s2">"docker-entrypoint.s…"</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>days<span class="w"> </span>ago<span class="w">          </span>Up<span class="w"> </span><span class="m">8</span><span class="w"> </span>days<span class="w">           </span><span class="m">0</span>.0.0.0:8983-&gt;8983/tcp<span class="w">                     </span>esmero-solr
 </code></pre></div>
 </li>
 <li>
@@ -1061,34 +1060,6 @@ docker ps
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Upgrading from 1.0.0-RC3 to 1.0.0" class="md-footer__link md-footer__link--prev" href="../archipelago-deployment-upgradeFromRC3/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Upgrading from 1.0.0-RC3 to 1.0.0
-            </div>
-</div>
-</a>
-<a aria-label="Next: Start" class="md-footer__link md-footer__link--next" href="../archipelago-deployment-live-readme/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              Start
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -1117,7 +1088,7 @@ docker ps
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
-<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+<script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

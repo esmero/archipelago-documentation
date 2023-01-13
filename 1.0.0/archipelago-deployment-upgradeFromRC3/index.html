@@ -8,10 +8,12 @@
 <meta content="Project documentation for Archipelago." name="description"/>
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/archipelago-deployment-upgradeFromRC3/" rel="canonical"/>
+<link href="../archipelago-deployment-upgradeFromD8ToD9/" rel="prev"/>
+<link href="../sslsetup/" rel="next"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
 <title>Archipelago-deployment: upgrading to 1.0.0 (1.0.0-RC3 to 1.0.0) - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -154,7 +156,7 @@
 </li>
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           About Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -199,7 +201,7 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4" tabindex="0">
           Instructions and Guides
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -211,7 +213,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4_1" tabindex="0">
           DevOps &amp; Deployment
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -223,7 +225,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_1" id="__nav_4_1_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_1">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4_1_1" tabindex="0">
           Archipelago-Deployment
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -412,7 +414,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_2" id="__nav_4_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_1_2" tabindex="0">
           Archipelago-Deployment-Live
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -462,7 +464,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_4" id="__nav_4_1_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_1_4" tabindex="0">
           DevOps Q&amp;A
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -500,7 +502,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2" tabindex="0">
           Archipelago 101
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -517,7 +519,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" id="__nav_4_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_2" tabindex="0">
           Webforms in Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -557,7 +559,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_4" id="__nav_4_2_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_4" tabindex="0">
           Twig Templates and Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -587,7 +589,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5" id="__nav_4_2_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_5" tabindex="0">
           Archipelago Multi-Importer (AMI)
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -637,7 +639,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_7" id="__nav_4_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_7">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_7" tabindex="0">
           Find and Replace
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -675,7 +677,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_3" tabindex="0">
           Site Administration &amp; Configuration
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -710,7 +712,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_4" tabindex="0">
           General Q&amp;A
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -735,7 +737,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" id="__nav_4_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_5" tabindex="0">
           Contributing
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -752,7 +754,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" id="__nav_4_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_5_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_5_2" tabindex="0">
           Documentation
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -793,7 +795,7 @@
 </li>
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_5" tabindex="0">
           Additional Resources
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -967,9 +969,6 @@
 <span class="md-tag">Archipelago-deployment</span>
 <span class="md-tag">Drupal 9</span>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/esmero/archipelago-documentation/commits/1.0.0/docs/archipelago-deployment-upgradeFromRC3.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="archipelago-deployment-upgrading-from-100-rc3-to-100">Archipelago-deployment: upgrading from 1.0.0-RC3 to 1.0.0</h1>
 <h2 id="what-is-this-documentation-for">What is this documentation for?</h2>
 <p>If you already have a well-set-up and well-loved Archipelago (RC3 or your own custom version) running Drupal 9, this documentation will allow you to update to 1.0.0 without major issues.</p>
@@ -984,70 +983,70 @@
 <p>Backups are always going to be your best friends. Archipelago's code, database and settings are mostly self-contained in your current <code>archipelago-deployment-live</code> repo folder, and backing up is simple because of that.</p>
 <h3 id="step-1">Step 1:</h3>
 <p>Shut down your <code>docker-compose</code> ensemble. Move to your <code>archipelago-deployment</code> folder and run this:</p>
-<div class="highlight"><pre><span></span><code>docker-compose down
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>down
 </code></pre></div>
 <h3 id="step-2">Step 2:</h3>
 <p>Verify that all containers are actually down. The following command should return an empty listing. If anything is still running, wait a little longer, and run the following comman again.</p>
-<div class="highlight"><pre><span></span><code>docker ps
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps
 </code></pre></div>
 <h3 id="step-3">Step 3:</h3>
 <p>Now let's <code>tar.gz</code> the whole ensemble with data and configs. As an example we will save this into your <code>$HOME</code> folder.
 As a good practice we append the <strong>current date </strong>(YEAR-MONTH-DAY) to the filename. Here we assume today is August 3rd of 2022.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ..
-sudo tar -czvpf <span class="nv">$HOME</span>/archipelago-deployment-RC3-backup-20220803.tar.gz archipelago-deployment
-<span class="nb">cd</span> archipelago-deployment
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>..
+sudo<span class="w"> </span>tar<span class="w"> </span>-czvpf<span class="w"> </span><span class="nv">$HOME</span>/archipelago-deployment-RC3-backup-20220803.tar.gz<span class="w"> </span>archipelago-deployment
+<span class="nb">cd</span><span class="w"> </span>archipelago-deployment
 </code></pre></div>
 <p>The process may take a few minutes. Now let's verify that all is there and that the <code>tar.gz</code> is not corrupt.</p>
-<div class="highlight"><pre><span></span><code>tar -tvvf <span class="nv">$HOME</span>/archipelago-deployment-RC3-backup-20220803.tar.gz 
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-tvvf<span class="w"> </span><span class="nv">$HOME</span>/archipelago-deployment-RC3-backup-20220803.tar.gz<span class="w"> </span>
 </code></pre></div>
 <p>You will see a listing of files. If corrupt (Do you have enough space? Did your ssh connection drop?) you will see the following:</p>
-<div class="highlight"><pre><span></span><code>tar: Unrecognized archive format
+<div class="highlight"><pre><span></span><code>tar:<span class="w"> </span>Unrecognized<span class="w"> </span>archive<span class="w"> </span>format
 </code></pre></div>
 <h3 id="step-4">Step 4:</h3>
 <p>Restart your <code>docker-compose</code> ensemble, and wait a little while for all to start.</p>
-<div class="highlight"><pre><span></span><code>docker-compose up -d
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
 <h3 id="step-5">Step 5:</h3>
 <p>Export/backup all of your live Archipelago configurations (this allows you to compare/come back in case you lose something custom during the upgrade).</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> esmero-php mkdir config/backup
-docker <span class="nb">exec</span> esmero-php drush cex --destination<span class="o">=</span>/var/www/html/config/backup
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>mkdir<span class="w"> </span>config/backup
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>cex<span class="w"> </span>--destination<span class="o">=</span>/var/www/html/config/backup
 </code></pre></div>
 <p>Good. Now it's safe to begin the upgrade.</p>
 <hr/>
 <h2 id="upgrading-to-100">Upgrading to 1.0.0</h2>
 <h3 id="step-1_1">Step 1:</h3>
 <p>First we are going to disable modules that are not part of 1.0.0 or are not yet compatible with Drupal 9.4.x or higher. Run the following command:</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> esmero-php drush pm-uninstall search_api_solr_defaults entity_reference
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>pm-uninstall<span class="w"> </span>search_api_solr_defaults<span class="w"> </span>entity_reference
 </code></pre></div>
 <p>From inside your <code>archipelago-deployment</code> repo folder we are going to open up the file <code>permissions</code> for some of your most protected Drupal files.</p>
-<div class="highlight"><pre><span></span><code>sudo chmod <span class="m">777</span> web/sites/default
-sudo chmod <span class="m">666</span> web/sites/default/*settings.php
-sudo chmod <span class="m">666</span> web/sites/default/*services.yml
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">777</span><span class="w"> </span>web/sites/default
+sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">666</span><span class="w"> </span>web/sites/default/*settings.php
+sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">666</span><span class="w"> </span>web/sites/default/*services.yml
 </code></pre></div>
 <p>If on a Linux or Windows 10/11 with Windows Subsystem for Linux (WSL) host we are going to open up these additional permissions:</p>
-<div class="highlight"><pre><span></span><code>sudo chown -R <span class="nv">$USER</span>:<span class="nv">$USER</span> web/sites/default/files/color
-sudo find web/sites/default/files/color -type d -exec chmod <span class="m">755</span> <span class="o">{}</span> + 
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="nv">$USER</span>:<span class="nv">$USER</span><span class="w"> </span>web/sites/default/files/color
+sudo<span class="w"> </span>find<span class="w"> </span>web/sites/default/files/color<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-exec<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+<span class="w"> </span>
 </code></pre></div>
 <h3 id="step-2_1">Step 2:</h3>
 <p>Time to fetch the <code>1.0.0</code> branch and update our <code>docker-compose</code> and <code>composer</code> dependencies. We are also going to stop the current <code>docker</code> ensemble to update all containers to newer versions:</p>
-<div class="highlight"><pre><span></span><code>docker-compose down
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>down
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>git checkout <span class="m">1</span>.0.0 
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span><span class="m">1</span>.0.0<span class="w"> </span>
 </code></pre></div>
 <p>Then copy the appropriate <code>docker-compose</code> file for your architecture:</p>
 <details class="info">
 <summary>OSX (macOS) Intel/x86-64</summary>
-<div class="highlight"><pre><span></span><code>cp docker-compose-osx.yml docker-compose.yml
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>docker-compose-osx.yml<span class="w"> </span>docker-compose.yml
 </code></pre></div>
 </details>
 <details class="info">
 <summary>Linux/x86-64/AMD64</summary>
-<div class="highlight"><pre><span></span><code>cp docker-compose-linux.yml docker-compose.yml
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>docker-compose-linux.yml<span class="w"> </span>docker-compose.yml
 </code></pre></div>
 </details>
 <details class="info">
 <summary>OSX (macOS) M1 and M2/Linux/ARM64</summary>
-<div class="highlight"><pre><span></span><code>cp docker-compose-arm64.yml docker-compose.yml
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>docker-compose-arm64.yml<span class="w"> </span>docker-compose.yml
 </code></pre></div>
 </details>
 <!--repo_docs
@@ -1056,96 +1055,96 @@ ___
 
 OSX (macOS) Intel/x86-64:
 
-<div class="highlight"><pre><span></span><code>cp docker-compose-osx.yml docker-compose.yml
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>docker-compose-osx.yml<span class="w"> </span>docker-compose.yml
 </code></pre></div>
 
 ___
 
 Linux/x86-64/AMD64:
 
-<div class="highlight"><pre><span></span><code>cp docker-compose-linux.yml docker-compose.yml
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>docker-compose-linux.yml<span class="w"> </span>docker-compose.yml
 </code></pre></div>
 
 ___
 
 OSX (macOS) M1 and M2/Linux/ARM64:
 
-<div class="highlight"><pre><span></span><code>cp docker-compose-arm64.yml docker-compose.yml
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>docker-compose-arm64.yml<span class="w"> </span>docker-compose.yml
 </code></pre></div>
 
 ___
 
 repo_docs-->
 <p>Finally, pull the images</p>
-<div class="highlight"><pre><span></span><code>docker-compose pull 
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>pull<span class="w"> </span>
 </code></pre></div>
 <p>1.0.0 provides a new Cantaloupe that uses different permissions so we need to adapt those. From your current folder run:</p>
-<div class="highlight"><pre><span></span><code>sudo chown <span class="m">8183</span>:8183 persistent/iiifconfig/cantaloupe.properties
-sudo chown -R <span class="m">8183</span>:8183 persistent/iiifcache
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span><span class="m">8183</span>:8183<span class="w"> </span>persistent/iiifconfig/cantaloupe.properties
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">8183</span>:8183<span class="w"> </span>persistent/iiifcache
 </code></pre></div>
 <p>Time to start the ensemble again</p>
-<div class="highlight"><pre><span></span><code>docker-compose up -d
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
 <p>Give all a little time to start. <code>Solr</code> core and <code>Database</code> need to be upgraded, Cantaloupe is new and this brings also Redis for caching. Please be patient. To ensure all is well, run (more than once if necessary) the following:</p>
-<div class="highlight"><pre><span></span><code>docker ps
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps
 </code></pre></div>
 <p>You should see something like this: 
 e.g if running on ARM64 You should see something like this: </p>
-<div class="highlight"><pre><span></span><code>CONTAINER ID   IMAGE                                    COMMAND                  CREATED          STATUS          PORTS                                                           NAMES
-4ed2f62e866e   jonasal/nginx-certbot                      <span class="s2">"/docker-entrypoint.…"</span> <span class="m">32</span> seconds ago   Up <span class="m">27</span> seconds   <span class="m">0</span>.0.0.0:80-&gt;80/tcp, :::80-&gt;80/tcp, <span class="m">0</span>.0.0.0:443-&gt;443/tcp, :::443-&gt;443/tcp   esmero-web
-e6b4383039c3   minio/minio:RELEASE.2022-06-11T19-55-32Z   <span class="s2">"/usr/bin/docker-ent…"</span> <span class="m">33</span> seconds ago   Up <span class="m">30</span> seconds   <span class="m">0</span>.0.0.0:9000-9001-&gt;9000-9001/tcp, :::9000-9001-&gt;9000-9001/tcp              esmero-minio
-f2b6b173b7e2   solr:8.11.2                                <span class="s2">"docker-entrypoint.s…"</span> <span class="m">33</span> seconds ago   Up <span class="m">28</span> seconds   <span class="m">0</span>.0.0.0:8983-&gt;8983/tcp, :::8983-&gt;8983/tcp                                  esmero-solr
-a553bf484343   esmero/php-8.0-fpm:1.0.0-multiarch         <span class="s2">"docker-php-entrypoi…"</span> <span class="m">33</span> seconds ago   Up <span class="m">30</span> seconds   <span class="m">9000</span>/tcp                                                                   esmero-php
-ecb47349ae94   esmero/esmero-nlp:fasttext-multiarch       <span class="s2">"/usr/local/bin/entr…"</span> <span class="m">33</span> seconds ago   Up <span class="m">30</span> second    <span class="m">0</span>.0.0.0:6400-&gt;6400/tcp, :::6400-&gt;6400/tcp                                  esmero-nlp
-61272dce034a   redis:6.2-alpine                           <span class="s2">"docker-entrypoint.s…"</span> <span class="m">33</span> seconds ago   Up <span class="m">28</span> seconds                                                                              esmero-redis
-0ee9869f809b   esmero/cantaloupe-s3:6.0.0-multiarch       <span class="s2">"sh -c 'java -Dcanta…"</span> <span class="m">33</span> seconds ago   Up <span class="m">28</span> seconds   <span class="m">0</span>.0.0.0:8183-&gt;8182/tcp, :::8183-&gt;8182/tcp                                  esmero-cantaloupe
-131d072567ce   mariadb:10.6.8-focal                       <span class="s2">"docker-entrypoint.s…"</span> <span class="m">33</span> seconds ago   Up <span class="m">28</span> seconds   <span class="m">3306</span>/tcp                                                                   esmero-db                                            esmero-php
+<div class="highlight"><pre><span></span><code>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">                                    </span>COMMAND<span class="w">                  </span>CREATED<span class="w">          </span>STATUS<span class="w">          </span>PORTS<span class="w">                                                           </span>NAMES
+4ed2f62e866e<span class="w">   </span>jonasal/nginx-certbot<span class="w">                      </span><span class="s2">"/docker-entrypoint.…"</span><span class="w"> </span><span class="m">32</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">27</span><span class="w"> </span>seconds<span class="w">   </span><span class="m">0</span>.0.0.0:80-&gt;80/tcp,<span class="w"> </span>:::80-&gt;80/tcp,<span class="w"> </span><span class="m">0</span>.0.0.0:443-&gt;443/tcp,<span class="w"> </span>:::443-&gt;443/tcp<span class="w">   </span>esmero-web
+e6b4383039c3<span class="w">   </span>minio/minio:RELEASE.2022-06-11T19-55-32Z<span class="w">   </span><span class="s2">"/usr/bin/docker-ent…"</span><span class="w"> </span><span class="m">33</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">30</span><span class="w"> </span>seconds<span class="w">   </span><span class="m">0</span>.0.0.0:9000-9001-&gt;9000-9001/tcp,<span class="w"> </span>:::9000-9001-&gt;9000-9001/tcp<span class="w">              </span>esmero-minio
+f2b6b173b7e2<span class="w">   </span>solr:8.11.2<span class="w">                                </span><span class="s2">"docker-entrypoint.s…"</span><span class="w"> </span><span class="m">33</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">28</span><span class="w"> </span>seconds<span class="w">   </span><span class="m">0</span>.0.0.0:8983-&gt;8983/tcp,<span class="w"> </span>:::8983-&gt;8983/tcp<span class="w">                                  </span>esmero-solr
+a553bf484343<span class="w">   </span>esmero/php-8.0-fpm:1.0.0-multiarch<span class="w">         </span><span class="s2">"docker-php-entrypoi…"</span><span class="w"> </span><span class="m">33</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">30</span><span class="w"> </span>seconds<span class="w">   </span><span class="m">9000</span>/tcp<span class="w">                                                                   </span>esmero-php
+ecb47349ae94<span class="w">   </span>esmero/esmero-nlp:fasttext-multiarch<span class="w">       </span><span class="s2">"/usr/local/bin/entr…"</span><span class="w"> </span><span class="m">33</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">30</span><span class="w"> </span>second<span class="w">    </span><span class="m">0</span>.0.0.0:6400-&gt;6400/tcp,<span class="w"> </span>:::6400-&gt;6400/tcp<span class="w">                                  </span>esmero-nlp
+61272dce034a<span class="w">   </span>redis:6.2-alpine<span class="w">                           </span><span class="s2">"docker-entrypoint.s…"</span><span class="w"> </span><span class="m">33</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">28</span><span class="w"> </span>seconds<span class="w">                                                                              </span>esmero-redis
+0ee9869f809b<span class="w">   </span>esmero/cantaloupe-s3:6.0.0-multiarch<span class="w">       </span><span class="s2">"sh -c 'java -Dcanta…"</span><span class="w"> </span><span class="m">33</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">28</span><span class="w"> </span>seconds<span class="w">   </span><span class="m">0</span>.0.0.0:8183-&gt;8182/tcp,<span class="w"> </span>:::8183-&gt;8182/tcp<span class="w">                                  </span>esmero-cantaloupe
+131d072567ce<span class="w">   </span>mariadb:10.6.8-focal<span class="w">                       </span><span class="s2">"docker-entrypoint.s…"</span><span class="w"> </span><span class="m">33</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">28</span><span class="w"> </span>seconds<span class="w">   </span><span class="m">3306</span>/tcp<span class="w">                                                                   </span>esmero-db<span class="w">                                            </span>esmero-php
 </code></pre></div>
 <p>Important here is the <code>STATUS</code> column. It <strong>needs</strong> to be a number that goes up in time every time you run <code>docker ps</code> again (and again).</p>
 <h3 id="step-3_1">Step 3:</h3>
 <p>Now we are going to tell <code>composer</code> to actually fetch the new code and dependencies using <code>composer.lock</code> and update the whole Drupal/PHP/JS environment.</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"composer update -W"</span>
-docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"drush cr"</span>
-docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"drush en jquery_ui_touch_punch"</span>
-docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"drush updatedb"</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"composer update -W"</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"drush cr"</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"drush en jquery_ui_touch_punch"</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"drush updatedb"</span>
 </code></pre></div>
 <p>Well done! If you see <strong>no</strong> issues and all ends in a <strong>Green colored message</strong> all is good! <a href="#step-4_1">Jump to Step 4</a></p>
 <h4 id="what-if-not-all-is-ok-and-i-see-red-and-a-lot-of-dependency-explanations">What if not all is OK and I see red and a lot of dependency explanations?</h4>
 <p>If you have manually installed packages via composer in the past that are NO longer Drupal 9 compatible you may see errors. 
 In that case you need to check each package website's (normally https://www.drupal.org/project/the_module_name) and check if there is a Drupal 9 compatible version. </p>
 <p>If so run:</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"composer require 'drupal/the_module_name:^VERSION_NUMBER_THAT_WORKS_ON_DRUPAL9_' --update-with-dependencies --no-update"</span> and run **Step <span class="m">3</span> ** again <span class="o">(</span>and again <span class="k">until</span> all is cleared<span class="o">)</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"composer require 'drupal/the_module_name:^VERSION_NUMBER_THAT_WORKS_ON_DRUPAL9_' --update-with-dependencies --no-update"</span><span class="w"> </span>and<span class="w"> </span>run<span class="w"> </span>**Step<span class="w"> </span><span class="m">3</span><span class="w"> </span>**<span class="w"> </span>again<span class="w"> </span><span class="o">(</span>and<span class="w"> </span>again<span class="w"> </span><span class="k">until</span><span class="w"> </span>all<span class="w"> </span>is<span class="w"> </span>cleared<span class="o">)</span>
 </code></pre></div>
 <p>If not: try to find a replacement module that does something simular, but in any case you may end having to remove before proceding. Give us a ping/slack/google group/open a github ISSUE if you find yourself uncertain about this. </p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"composer remove drupal/the_module_name --no-update"</span>
-docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"drush pm-uninstall the_module_name"</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"composer remove drupal/the_module_name --no-update"</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"drush pm-uninstall the_module_name"</span>
 </code></pre></div>
 <h3 id="step-4_1">Step 4:</h3>
 <p>We will now ask Drupal to update some internal configs and databases. They will bring you up to date with 1.0.0 settings and D9 particularities.</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">'scripts/archipelago/setup.sh'</span>
-docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"drush updatedb"</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'scripts/archipelago/setup.sh'</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"drush updatedb"</span>
 </code></pre></div>
 <h3 id="step-5_1">Step 5:</h3>
 <p>Now you can Sync your new Archipelago 1.0.0 and bring all the new configs and settings in. For this you have <strong>two</strong> options (no worries, remember you made a backup!):</p>
 <h4 id="a-partial-sync-which-will-bring-new-configs-and-update-existing-ones-but-will-not-remove-ones-that-only-exist-in-your-custom-setup-eg-new-webforms-or-view-modes">A Partial Sync, which will bring new configs and update existing ones but will <strong>not</strong> remove ones that only exist in your custom setup, e.g. new Webforms or View Modes.</h4>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> esmero-php drush cim -y --partial
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>cim<span class="w"> </span>-y<span class="w"> </span>--partial
 </code></pre></div>
 <h4 id="a-complete-sync-which-will-bring-new-configs-and-update-existing-ones-but-will-also-remove-all-the-ones-that-are-not-part-of-100-its-a-like-clean-factory-reset">A Complete Sync, which will bring new configs and update existing ones but will also remove all the ones that are not part of 1.0.0. It's a like clean factory reset.</h4>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> esmero-php drush cim -y
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>cim<span class="w"> </span>-y
 </code></pre></div>
 <p>If all goes well here and you see no errors it's time to reindex <code>Solr</code> because there are new Fields. Run the following:</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> esmero-php drush search-api-reindex
-docker <span class="nb">exec</span> esmero-php drush search-api-index
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>search-api-reindex
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>search-api-index
 </code></pre></div>
 <p>You might see some warnings related to modules dealing with previously non-existent data—no worries, just ignore those.</p>
 <p>If you made it this far you are done with code/devops (are we ever ready?), and that means you should be able to (hopefully) stay in the Drupal 9 realm for a few years!</p>
 <h3 id="step-7-update-or-not-your-metadata-display-entities-and-menu-items">Step 7: Update (or not) your Metadata Display Entities and Menu items.</h3>
 <p>Recommended: If you want to add new templates and menu items 1.0.0 provides, run this:</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">'scripts/archipelago/deploy.sh'</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'scripts/archipelago/deploy.sh'</span>
 </code></pre></div>
 <p>Once that is done, you can choose to update all Metadata Displays (Twig templates) we ship with new 1.0.0 versions (heavily fixed IIIF manifest, Markdown to HTML for Metadata, better Object descriptions). But before you do this, we <strong>really</strong> recommend that you first make sure to manually (copy/paste) backup any Twig templates you have modified. If unusure, do not run the command that comes after this warning! You can always manually copy the new templates from the <code>d8content/metadatadisplays</code> folder which contains text versions (again, copy/paste) of each shipped template you can pick and use when you feel ready.</p>
 <p>If you are sure (like really?) you want to overwrite the ones you modified (sure, just checking?), then you can run this:</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">'scripts/archipelago/update_deployed.sh'</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'scripts/archipelago/update_deployed.sh'</span>
 </code></pre></div>
 <p>Done! (For realz now)</p>
 <p>Please log into your Archipelago and test/check all is working! Enjoy 1.0.0. Thanks!</p>
@@ -1183,34 +1182,6 @@ docker <span class="nb">exec</span> esmero-php drush search-api-index
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)" class="md-footer__link md-footer__link--prev" href="../archipelago-deployment-upgradeFromD8ToD9/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)
-            </div>
-</div>
-</a>
-<a aria-label="Next: How to Set Up SSL for Docker/Archipelago" class="md-footer__link md-footer__link--next" href="../sslsetup/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              How to Set Up SSL for Docker/Archipelago
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -1239,7 +1210,7 @@ docker <span class="nb">exec</span> esmero-php drush search-api-index
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
-<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+<script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -8,10 +8,12 @@
 <meta content="Project documentation for Archipelago." name="description"/>
 <meta content="The Digital Services Team at Metropolitan New York Library Council" name="author"/>
 <link href="https://docs.archipelago.nyc/1.0.0/archipelago-deployment-live-readme/" rel="canonical"/>
+<link href="../sslsetup/" rel="prev"/>
+<link href="../archipelago-deployment-live-gitworkflow/" rel="next"/>
 <link href="../images/strawberries_color.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
 <title>Archipelago-deployment-live - Archipelago Documentation</title>
-<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -154,7 +156,7 @@
 </li>
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
           About Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -199,7 +201,7 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4" tabindex="0">
           Instructions and Guides
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -211,7 +213,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4_1" tabindex="0">
           DevOps &amp; Deployment
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -223,7 +225,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_1" id="__nav_4_1_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_1">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_1_1" tabindex="0">
           Archipelago-Deployment
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -278,7 +280,7 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_2" id="__nav_4_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_2">
+<label aria-expanded="true" class="md-nav__link" for="__nav_4_1_2" tabindex="0">
           Archipelago-Deployment-Live
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -514,7 +516,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_4" id="__nav_4_1_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_1_4" tabindex="0">
           DevOps Q&amp;A
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -552,7 +554,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2" tabindex="0">
           Archipelago 101
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -569,7 +571,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" id="__nav_4_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_2" tabindex="0">
           Webforms in Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -609,7 +611,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_4" id="__nav_4_2_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_4" tabindex="0">
           Twig Templates and Archipelago
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -639,7 +641,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5" id="__nav_4_2_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_5" tabindex="0">
           Archipelago Multi-Importer (AMI)
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -689,7 +691,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_7" id="__nav_4_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2_7">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_2_7" tabindex="0">
           Find and Replace
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -727,7 +729,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_3" tabindex="0">
           Site Administration &amp; Configuration
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -762,7 +764,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_4" tabindex="0">
           General Q&amp;A
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -787,7 +789,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" id="__nav_4_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_5" tabindex="0">
           Contributing
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -804,7 +806,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" id="__nav_4_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_5_2">
+<label aria-expanded="false" class="md-nav__link" for="__nav_4_5_2" tabindex="0">
           Documentation
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -845,7 +847,7 @@
 </li>
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+<label aria-expanded="false" class="md-nav__link" for="__nav_5" tabindex="0">
           Additional Resources
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1070,9 +1072,6 @@
 <nav class="md-tags">
 <span class="md-tag">Archipelago-deployment-live</span>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/esmero/archipelago-documentation/commits/1.0.0/docs/archipelago-deployment-live-readme.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="archipelago-deployment-live">Archipelago Deployment Live</h1>
 <p>A Cloud / Local production ready Archipelago Deployment using Docker and soon Kubernetes.</p>
 <h2 id="what-is-this-repo-for">What is this repo for?</h2>
@@ -1135,32 +1134,32 @@ And protected/modally open for your own development/testing/administration</li>
 <li>docker-compose</li>
 </ul>
 <p>e.g. for Amazon Linux 2 (x86/amd64) these steps are tested:</p>
-<div class="highlight"><pre><span></span><code>sudo yum update -y
-sudo amazon-linux-extras install -y docker
-sudo service docker start
-sudo usermod -a -G docker ec2-user
-sudo chkconfig docker on
-sudo systemctl <span class="nb">enable</span> docker
-sudo yum install -y git htop tree
-sudo curl -L <span class="s2">"https://github.com/docker/compose/releases/latest/download/docker-compose-</span><span class="k">$(</span>uname -s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname -m<span class="k">)</span><span class="s2">"</span> -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-sudo reboot
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>update<span class="w"> </span>-y
+sudo<span class="w"> </span>amazon-linux-extras<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>docker
+sudo<span class="w"> </span>service<span class="w"> </span>docker<span class="w"> </span>start
+sudo<span class="w"> </span>usermod<span class="w"> </span>-a<span class="w"> </span>-G<span class="w"> </span>docker<span class="w"> </span>ec2-user
+sudo<span class="w"> </span>chkconfig<span class="w"> </span>docker<span class="w"> </span>on
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>docker
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git<span class="w"> </span>htop<span class="w"> </span>tree
+sudo<span class="w"> </span>curl<span class="w"> </span>-L<span class="w"> </span><span class="s2">"https://github.com/docker/compose/releases/latest/download/docker-compose-</span><span class="k">$(</span>uname<span class="w"> </span>-s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span><span class="s2">"</span><span class="w"> </span>-o<span class="w"> </span>/usr/local/bin/docker-compose
+sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/usr/local/bin/docker-compose
+sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/usr/local/bin/docker-compose<span class="w"> </span>/usr/bin/docker-compose
+sudo<span class="w"> </span>reboot
 </code></pre></div>
 <p>Reboot is needed to allow Docker to take full control over your OS resources.</p>
 <h3 id="step-2">Step 2:</h3>
 <p>In your location of choice clone this repo</p>
-<div class="highlight"><pre><span></span><code>git clone https://github.com/esmero/archipelago-deployment-live
-<span class="nb">cd</span> archipelago-deployment-live
-git checkout <span class="m">1</span>.0.0
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/esmero/archipelago-deployment-live
+<span class="nb">cd</span><span class="w"> </span>archipelago-deployment-live
+git<span class="w"> </span>checkout<span class="w"> </span><span class="m">1</span>.0.0
 </code></pre></div>
 <h3 id="step-3-setup-your-enviromental-variables-for-dockerservices">Step 3. Setup your enviromental variables for Docker/Services</h3>
 <h4 id="setup-enviromentals">Setup Enviromentals</h4>
 <p>Setup your deployment enviromental variables by copying the template</p>
-<p><div class="highlight"><pre><span></span><code>cp deploy/ec2-docker/.env.template deploy/ec2-docker/.env
+<p><div class="highlight"><pre><span></span><code>cp<span class="w"> </span>deploy/ec2-docker/.env.template<span class="w"> </span>deploy/ec2-docker/.env
 </code></pre></div>
 and editing it</p>
-<div class="highlight"><pre><span></span><code>nano deploy/ec2-docker/.env
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>deploy/ec2-docker/.env
 </code></pre></div>
 <p>The content of that file would be similar to this.</p>
 <div class="highlight"><pre><span></span><code>ARCHIPELAGO_ROOT=/home/ec2-user/archipelago-deployment-live
@@ -1195,11 +1194,11 @@ REDIS_PASSWORD=YOUR_REDIS_PASSWORD
 <p>Once you have modified this you are ready for your first big decision. </p>
 <h4 id="running-a-fully-qualified-domain-you-wish-a-validsigned-certificate-for-amdintel-architecture">Running a fully qualified domain you wish a valid/signed certificate for AMD/INTEL Architecture?</h4>
 <p>This means you will use the <code>docker-compose-aws-s3.yml</code>. Do the following:</p>
-<div class="highlight"><pre><span></span><code>cp deploy/ec2-docker/docker-compose-aws-s3.yml deploy/ec2-docker/docker-compose.yml
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>deploy/ec2-docker/docker-compose-aws-s3.yml<span class="w"> </span>deploy/ec2-docker/docker-compose.yml
 </code></pre></div>
 <h4 id="running-a-fully-qualified-domain-you-wish-a-validsigned-certificate-for-arm64apple-m1-architecture">Running a fully qualified domain you wish a valid/signed certificate for ARM64/Apple M1 Architecture?</h4>
 <p>This means you will use the <code>docker-compose-aws-s3-arm64.yml</code>. Do the following:</p>
-<div class="highlight"><pre><span></span><code>cp deploy/ec2-docker/docker-compose-aws-s3-arm64.yml deploy/ec2-docker/docker-compose.yml
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>deploy/ec2-docker/docker-compose-aws-s3-arm64.yml<span class="w"> </span>deploy/ec2-docker/docker-compose.yml
 </code></pre></div>
 <h5 id="optional-expert-extra-domains-does-not-apply-to-arm64apple-m1-architecture">Optional (expert) extra domains (does not apply to ARM64/Apple M1 Architecture):</h5>
 <p>If you have more than a single domain you may create a text file inside 
@@ -1207,94 +1206,94 @@ REDIS_PASSWORD=YOUR_REDIS_PASSWORD
 <h4 id="or-running-self-signed-optional-and-does-not-apply-to-arm64apple-m1-architecture">OR Running self-signed? (optional and does not apply to ARM64/Apple M1 Architecture):</h4>
 <p>Only if you are not running a fully qualified domain you wish a valid/signed. We <strong>really DO not</strong> recommend this route. IF you plan on using this deployment for local testing or running on non SSL please go for <a href="https://github.com/esmero/archipelago-deployment">https://github.com/esmero/archipelago-deployment</a> which delivers the same experience in less than 20 minutes deployment time.</p>
 <p>Generate a self signed Cert</p>
-<div class="highlight"><pre><span></span><code>sudo openssl req -x509 -nodes -days <span class="m">365</span> -newkey rsa:2048 -keyout data_storage/selfcert/private/nginx.key -out data_storage/selfcert/certs/nginx.crt 
-sudo openssl dhparam -out data_storage/selfcert/dhparam.pem <span class="m">4096</span>
-cp deploy/ec2-docker/docker-compose-selfsigned.yml deploy/ec2-docker/docker-compose.yml
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> </span>-nodes<span class="w"> </span>-days<span class="w"> </span><span class="m">365</span><span class="w"> </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span>-keyout<span class="w"> </span>data_storage/selfcert/private/nginx.key<span class="w"> </span>-out<span class="w"> </span>data_storage/selfcert/certs/nginx.crt<span class="w"> </span>
+sudo<span class="w"> </span>openssl<span class="w"> </span>dhparam<span class="w"> </span>-out<span class="w"> </span>data_storage/selfcert/dhparam.pem<span class="w"> </span><span class="m">4096</span>
+cp<span class="w"> </span>deploy/ec2-docker/docker-compose-selfsigned.yml<span class="w"> </span>deploy/ec2-docker/docker-compose.yml
 </code></pre></div>
 <p>Note: Self signed docker-compose.yml file is setup to use min.io with local storage</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${ARCHIPELAGO_ROOT}/data_storage/minio-data:/data:cached</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${ARCHIPELAGO_ROOT}/data_storage/minio-data:/data:cached</span>
 </code></pre></div>
 <p>This folder will be created by min.io. If you are using a secondary Drive (e.g. magnetic) you can modify your <code>deploy/ec2-docker/docker-compose.yml</code> to use a folder there, e.g.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistentinotherdrive/data_storage/minio-data:/data:cached</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistentinotherdrive/data_storage/minio-data:/data:cached</span>
 </code></pre></div>
 <p>Make sure your logged in user can read/write to it.</p>
 <p>NOTE: If you want to use AWS S3 storage for the self signed version replace the minio Service yaml block with this <a href="https://github.com/esmero/archipelago-deployment-live/blob/e90cf7701f1ae8e0a580a0901aaadb669baa21fd/deploy/ec2-docker/docker-compose-aws-s3.yml#L108-L125">Service Block</a> in your new <code>deploy/ec2-docker/docker-compose.yml</code>. You can mix and match services and even remove all <code>:cached</code> statements for <em>improved</em> R/W volumen performance.</p>
 <h3 id="step-4-first-run">Step 4. First Run</h3>
 <h4 id="first-permissions">First Permissions</h4>
-<div class="highlight"><pre><span></span><code>sudo chown <span class="m">8183</span>:8183 config_storage/iiifconfig/cantaloupe.properties
-sudo chown -R <span class="m">8183</span>:8183 data_storage/iiifcache
-sudo chown -R <span class="m">8183</span>:8183 data_storage/iiiftmp
-sudo chown -R <span class="m">8983</span>:8983 data_storage/solrcore
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span><span class="m">8183</span>:8183<span class="w"> </span>config_storage/iiifconfig/cantaloupe.properties
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">8183</span>:8183<span class="w"> </span>data_storage/iiifcache
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">8183</span>:8183<span class="w"> </span>data_storage/iiiftmp
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">8983</span>:8983<span class="w"> </span>data_storage/solrcore
 </code></pre></div>
 <h4 id="actual-first-run">Actual first run</h4>
 <p>Time to spin our docker containers for the first time. We will start all without going into background so log/error checking is easier, especially if you have selected a Valid/Signed Cert choice and also want to be sure S3 keys/access are working.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> deploy/ec2-docker
-docker-compose up
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>deploy/ec2-docker
+docker-compose<span class="w"> </span>up
 </code></pre></div>
 <p>You will see a lot of things happening. Check for errors/problems/clear alerts and give all a minute or so to start. 
 Ok, let's assume your setup managed to request a valid signed SSL cert, you will see a nice message!</p>
-<div class="highlight"><pre><span></span><code>- Congratulations! Your certificate and chain have been saved at:XXXXX
-   Your certificate will expire on 20XX-XX-XX. To obtain a new or
-   tweaked version of this certificate <span class="k">in</span> the future, simply run
-   certbot again. To non-interactively renew *all* of your
-   certificates, run <span class="s2">"certbot renew"</span>
+<div class="highlight"><pre><span></span><code>-<span class="w"> </span>Congratulations!<span class="w"> </span>Your<span class="w"> </span>certificate<span class="w"> </span>and<span class="w"> </span>chain<span class="w"> </span>have<span class="w"> </span>been<span class="w"> </span>saved<span class="w"> </span>at:XXXXX
+<span class="w">   </span>Your<span class="w"> </span>certificate<span class="w"> </span>will<span class="w"> </span>expire<span class="w"> </span>on<span class="w"> </span>20XX-XX-XX.<span class="w"> </span>To<span class="w"> </span>obtain<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>or
+<span class="w">   </span>tweaked<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>certificate<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>future,<span class="w"> </span>simply<span class="w"> </span>run
+<span class="w">   </span>certbot<span class="w"> </span>again.<span class="w"> </span>To<span class="w"> </span>non-interactively<span class="w"> </span>renew<span class="w"> </span>*all*<span class="w"> </span>of<span class="w"> </span>your
+<span class="w">   </span>certificates,<span class="w"> </span>run<span class="w"> </span><span class="s2">"certbot renew"</span>
 </code></pre></div>
 <p>Archipelago will do that for you whenever it's about to expire so no need to deal with this manually, even when <code>docker-compose</code> restarts.</p>
 <p>Now press CTRL+C. <code>docker-compose</code> will shutdown gracefully. Good!</p>
 <h3 id="step-5-deploy-drupal-9">Step 5. Deploy Drupal 9</h3>
 <h4 id="composer-and-drupal">Composer and Drupal</h4>
 <p>Copy the shipped default composer.default.json to composer.json and composer.default.lock to composer.lock (ONLY if you are installing from scratch):</p>
-<div class="highlight"><pre><span></span><code>cp ../../drupal/composer.default.json ../../drupal/composer.json
-cp ../../drupal/composer.default.lock ../../drupal/composer.lock
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>../../drupal/composer.default.json<span class="w"> </span>../../drupal/composer.json
+cp<span class="w"> </span>../../drupal/composer.default.lock<span class="w"> </span>../../drupal/composer.lock
 </code></pre></div>
 <p>Start Docker again</p>
-<div class="highlight"><pre><span></span><code>docker-compose up -d
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
 <p>Wait a few seconds and run:</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"chown -R www-data:www-data private"</span>
-docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"chown -R www-data:www-data web/sites"</span>
-docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"composer install"</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"chown -R www-data:www-data private"</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"chown -R www-data:www-data web/sites"</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"composer install"</span>
 </code></pre></div>
 <p>Composer install will take a little while and bring all your PHP libraries.</p>
 <p>Once done, execute our setup script that will prepare your Drupal <code>settings.php</code> and bring some of the <code>.env</code> enviromental variables to the Drupal environment. </p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">'scripts/archipelago/setup.sh'</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'scripts/archipelago/setup.sh'</span>
 </code></pre></div>
 <p>And now you can deploy Drupal! </p>
 <p><strong>IMPORTANT:</strong> Make sure you replace in the following command inside <code>root:MYSQL_ROOT_PASSWORD</code> the <code>MYSQL_ROOT_PASSWORD</code> string with the <strong>value</strong> you used/assigned in your <code>.env</code> file for <code>MYSQL_ROOT_PASSWORD</code>. And replace <code>ADMIN_PASSWORD</code> with a password that is safe and you won't forget! That passwords is for your Drupal super user (uid:0).</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti -u www-data esmero-php bash -c <span class="s2">"cd web;../vendor/bin/drush -y si --verbose --existing-config --db-url=mysql://root:MYSQL_ROOT_PASSWORD@esmero-db/drupal --account-name=admin --account-pass=ADMIN_PASSWORD -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;"</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"cd web;../vendor/bin/drush -y si --verbose --existing-config --db-url=mysql://root:MYSQL_ROOT_PASSWORD@esmero-db/drupal --account-name=admin --account-pass=ADMIN_PASSWORD -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;"</span>
 </code></pre></div>
 <h3 id="step-6-users-and-initial-content">Step 6. Users and initial Content.</h3>
 <p>After installation is done (may take a few) you can install initial users and assign them roles. Copy each line separately. A missing permission will not let you ingest the initial Metadata Displays and AMI set.</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">'drush ucrt demo --password="demo"; drush urol metadata_pro "demo"'</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'drush ucrt demo --password="demo"; drush urol metadata_pro "demo"'</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">'drush ucrt jsonapi --password="jsonapi"; drush urol metadata_api "jsonapi"'</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'drush ucrt jsonapi --password="jsonapi"; drush urol metadata_api "jsonapi"'</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">'drush urol administrator "admin"'</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'drush urol administrator "admin"'</span>
 </code></pre></div>
 <p>Before ingesting the base content we need to make sure we can access your <code>JSON-API</code> on for your new domain. That means we need to change internal urls (<code>https://esmero-web</code>) to the new valid SSL driven ones. This is easy:</p>
 <p>On your host machine (no need to <code>docker exec</code> these ones), replace first in the following command <code>your.domain.org</code> with the domain you setup in your <code>.env</code> file. Go to (cd into) <strong>your base git clone folder</strong> (Important: <strong>YOUR BASE CLONE FOLDER</strong>) and then run</p>
-<div class="highlight"><pre><span></span><code> sed -i <span class="s1">'s/http:\/\/esmero-web/https:\/\/your.domain.org/g'</span> drupal/scripts/archipelago/deploy.sh
- sed -i <span class="s1">'s/http:\/\/esmero-web/https:\/\/your.domain.org/g'</span> drupal/scripts/archipelago/update_deployed.sh
+<div class="highlight"><pre><span></span><code><span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/http:\/\/esmero-web/https:\/\/your.domain.org/g'</span><span class="w"> </span>drupal/scripts/archipelago/deploy.sh
+<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/http:\/\/esmero-web/https:\/\/your.domain.org/g'</span><span class="w"> </span>drupal/scripts/archipelago/update_deployed.sh
 </code></pre></div>
 <p>Now your <code>deploy.sh</code> and <code>update_deployed.sh</code> are update and ready. Let's ingest some Twig Templates, an AMI Set, menus and a Blocks.</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s1">'scripts/archipelago/deploy.sh'</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'scripts/archipelago/deploy.sh'</span>
 </code></pre></div>
 <p>NOTE: <code>update_deployed.sh</code> is not needed when deploying for the first time and totally <strong>discouraged</strong> on a customized Archipelago. 
 If you make modifications to your <code>Twig templates</code>, that command will replace the ones shipped by us with fresh copies overwriting all your modifications. Only run to restore larger errors or when needing to update non-customized ones with newer versions.</p>
 <h3 id="step-7-set-your-public-iiif-server-url-to-your-actual-domain">Step 7. Set your public IIIF server URL to your actual domain</h3>
 <p>By default archipelago ships with a public facing and an internal facing IIIF Server URLs configured. These urls are used by a number of IIIF enabled viewers and need to be changed to reflect your new reality (a real Domain name and a proxied path!). These settings belong to the <code>strawberryfield/format_strawberryfield</code> module. </p>
 <p>First check your current settings:</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"drush config-get format_strawberryfield.iiif_settings"</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"drush config-get format_strawberryfield.iiif_settings"</span>
 </code></pre></div>
 <p>You will see the following:</p>
-<div class="highlight"><pre><span></span><code>pub_server_url: <span class="s1">'http://localhost:8183/iiif/2'</span>
-int_server_url: <span class="s1">'http://esmero-cantaloupe:8182/iiif/2'</span>
+<div class="highlight"><pre><span></span><code>pub_server_url:<span class="w"> </span><span class="s1">'http://localhost:8183/iiif/2'</span>
+int_server_url:<span class="w"> </span><span class="s1">'http://esmero-cantaloupe:8182/iiif/2'</span>
 </code></pre></div>
 <p>Let's modify <code>pub_server_url</code>. Replace in the following command <code>your.domain.org</code> with the domain you defined in your <code>.env</code> file. 
 NOTE: We are passing the <code>-y</code> flag to <code>drush</code> avoid that way having to answer "yes".</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti esmero-php bash -c <span class="s2">"drush -y config-set format_strawberryfield.iiif_settings pub_server_url https://your.domain.org/cantaloupe/iiif/2"</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"drush -y config-set format_strawberryfield.iiif_settings pub_server_url https://your.domain.org/cantaloupe/iiif/2"</span>
 </code></pre></div>
 <p>Finally Done! Now you can log into your new Archipelago using <code>https</code> and start exploring. Thank you for following this guide!</p>
 <h2 id="deployment-on-arm64v8graviton-apple-m1-system">Deployment on ARM64/v8(Graviton, Apple M1) system:</h2>
@@ -1302,7 +1301,7 @@ NOTE: We are passing the <code>-y</code> flag to <code>drush</code> avoid that w
 Please review <a href="https://github.com/esmero/archipelago-deployment-live/blob/1.0.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml">https://github.com/esmero/archipelago-deployment-live/blob/1.0.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml</a> for more info.</p>
 <h3 id="how-do-i-know-my-architecture">How do I know my Architecture?</h3>
 <p>Run </p>
-<div class="highlight"><pre><span></span><code>uname -m 
+<div class="highlight"><pre><span></span><code>uname<span class="w"> </span>-m<span class="w"> </span>
 </code></pre></div>
 <ul>
 <li>For an <code>x86(64 bit)</code> processor system output will be <code>x86_64</code></li>
@@ -1339,34 +1338,6 @@ Please review <a href="https://github.com/esmero/archipelago-deployment-live/blo
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: How to Set Up SSL for Docker/Archipelago" class="md-footer__link md-footer__link--prev" href="../sslsetup/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              How to Set Up SSL for Docker/Archipelago
-            </div>
-</div>
-</a>
-<a aria-label="Next: Github Workflow" class="md-footer__link md-footer__link--next" href="../archipelago-deployment-live-gitworkflow/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              Github Workflow
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -1395,7 +1366,7 @@ Please review <a href="https://github.com/esmero/archipelago-deployment-live/blo
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
-<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+<script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
