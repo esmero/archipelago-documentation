@@ -20,14 +20,14 @@ One advantage of Drupal's integration of the [Twig](https://www.drupal.org/docs/
 The [Symfony](https://symfony.com/) PHP framework, which is integrated into Drupal Core, provides extensions, which we use in our default templates:
 
 * [Twig Filters from Symfony](https://twig.symfony.com/doc/2.x/filters/index.html)
-* [Twig Funcions from Symfony](https://twig.symfony.com/doc/2.x/functions/index.html)
+* [Twig Functions from Symfony](https://twig.symfony.com/doc/2.x/functions/index.html)
 
 ## Default Twig Extensions from Drupal
 
 Additionally, we have some very handy Drupal-specific extensions:
 
 * [Twig Filters from Drupal](https://www.drupal.org/docs/theming-drupal/twig-in-drupal/filters-modifying-variables-in-twig-templates#s-drupal-specific-filters)
-* [Twig Funcions from Drupal](https://www.drupal.org/docs/theming-drupal/twig-in-drupal/functions-in-twig-templates)
+* [Twig Functions from Drupal](https://www.drupal.org/docs/theming-drupal/twig-in-drupal/functions-in-twig-templates)
 
 ## Default Twig Extensions from Archipelago
 
