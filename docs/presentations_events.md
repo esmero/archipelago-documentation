@@ -6,6 +6,9 @@
 
     [METRO's Digital Services Team](https://metro.org/digital-services) facilitated many different internal training sessions throughout 2020-2022. If you and your team need access to any of these sessions that were recorded, please [contact us](mailto:repositorysupport@metro.org). Thank you!
 
+## 2023
+- [For the Love of Data and Ourselves: The Bumpy, Technical Road to Modern Archives. Monger, Jenifer J.; McCarthy, Brenden. (January/February 2023)](https://mydigitalpublication.com/publication/?m=30305&l=1)
+
 ## 2022
 
 - Archipelago Late 2022 Workshop Series:
@@ -16,7 +19,11 @@
     - [Session 3: AMI Set Processing and Advanced Find + Replace (December 2022)](https://docs.google.com/presentation/d/1IKt766c2k-Q_nxEfu45dkyjkyZvSbh5GblpUugnacLw/edit?usp=sharing)
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/9rSVZulDUGrBOSqwDR-11A2HJmp3b9ndvurDgkElHJGE74Jh1zO4HUySLVkJlADn.UOpVnKNaBkq7s_IU)
 
+- McCarthy, B. J. (2022). Archipelago Commons: Using the Archipelago and AMI software to provide access to Rensselaer Polytechnic Institute's engineering drawings, a pilot project. Issues in Science and Technology Librarianship, 101. [https://doi.org/10.29173/istl2717](https://doi.org/10.29173/istl2717)
+
 - [Open Perspectives Forum. Monger, Jenifer J.; McCarthy, Brenden. (November 2022)](https://vimeo.com/769482312) 
+
+- [Migration, Collaboration and Innovation with Archipelago Commons. Monger, Jenifer J. (Septmember 2022)](https://www.capitalarchivist.org/caa/wp-content/uploads/2022/09/fall_winter_2022-23.pdf#page=7)
 
 - 🍓 [Archipelago 1.0.0 - August 2022 Release Announcement (August 2022)](https://groups.google.com/g/archipelago-commons/c/UHMUdtZ8BFU/m/W8hnZ1guAgAJ) and [updated Specs and Features List](https://docs.google.com/document/d/1_fAcDBLaIilKF_mFXPFzDeWz_aqz7AHxSPwYTd21Nug/edit?usp=sharing)   
 
@@ -66,7 +73,7 @@
         - [📺 Recording available](https://youtu.be/ULm-Gm-y5Ag) 
 
 - [WebRecorder + Archipelago Workshop. Pino Navarro, Diego; Lund, Allison; Kreymer, Ilya; Ramirez-Lopez, Lorena; Dickson, Emma. (May 2021)](https://docs.google.com/presentation/d/1WWoIQOaz9XK5x256FsL4i6WOEdB4ide25AiJNrwfbp4/edit?usp=sharing)
-    - - [📺 Recording available](https://www.youtube.com/watch?v=TYbosYDXI3g)
+    - [📺 Recording available](https://www.youtube.com/watch?v=TYbosYDXI3g)
 
 - [Twig Templates and Archipelago. Pino Navarro, Diego; Lund, Allison. (May 2021)](https://tinyurl.com/archipelagoandtwig)
     - Review of the core role Twig templating plays in Archipelago, introduction to the basics of Twig, and demonstration of editing Twig templates in Archipelago to refine metadata displays and AMI ingests.
