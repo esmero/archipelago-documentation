@@ -100,7 +100,7 @@ Finally, we have a growing list of extensions that apply to our own specific use
     ```
 
     Then we pass it to the filter:
-    ```html+twig title="markdown_2_html" hl_lines="1 3-7"
+    ```html+twig title="markdown_2_html" hl_lines="1 4-8"
     {{ markdown_string | markdown_2_html }}
     
     {# Output:
@@ -142,33 +142,105 @@ Finally, we have a growing list of extensions that apply to our own specific use
 
 !!! example "clipboard_copy"
 
-    The `clipboard_copy` function generates a copy/paste HTML element based on the provided CSS class for the element(s) we'd like to copy.
+    The `clipboard_copy` function, using the [clipboard-copy-element library](https://github.com/github/clipboard-copy-element), takes a provided CSS class for the element(s) whose text we'd like to copy and targets the CSS class of an existing HTML element on the page or generates an HTML element that can be clicked to copy the text to the user's clipboard.
 
-    We start with this element that we'd like to be copied:
-    ```html+twig title="HTML example" hl_lines="2"
-    <div class="csl-bib-body-container chicago-fullnote-bibliography">
-      <div class="csl-bib-body">
-        <div class="csl-entry">
-          New York Botanical Garden. “Descriptive Guide to the Grounds, Buildings and Collections.”
+    In the examples below, we'd like to copy the text from three different kinds of HTML elements: a `div`, an `input`, and an `a` hyperlink href.
+
+    !!! example "div element text"
+
+        ```html+twig title="div element text" hl_lines="2"
+        <div class="csl-bib-body-container chicago-fullnote-bibliography">
+          <div id="copy-csl" class="csl-bib-body">
+            <div class="csl-entry">
+              New York Botanical Garden. “Descriptive Guide to the Grounds, Buildings and Collections.”
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+        ```
+
+        Then we pass it to the function:
+        ```html+twig title="clipboard_copy for div element text" hl_lines="1"
+        {{ clipboard_copy('csl-bib-body','','Copy Bibliography Entry') }}
+        ```
+        
+        As you can see above, the `clipboard_copy` function takes three arguments:
+
+        * a CSS class for the element to be copied
+        * an optional CSS class (the default is `clipboard-copy-button`) or classes for the copy button to be generated or for an existing button (see below)
+        * optional text (the default is `Copy to Clipboard`) for the copy button being generated
+
+        The result for the above `div` example looks as follows:
+
+        ![Copy/Paste Element](images/copy_paste_div.png)
+
+    !!! example "input element value"
+
+        ```html+twig title="input element value" hl_lines="7"
+        {% if attribute(data, 'as:image')|length > 0  or attribute(data, 'as:document')|length > 0  %}
+   	      <h2>
+            <span class="align-middle">Direct Link to Digital Object's IIIF Presentation Manifest V3 </span>
+            <img src="https://iiif.io/img/logo-iiif-34x30.png">
+          </h2>
+   	      {% set iiifmanifest = nodeurl|render ~ "/metadata/iiifmanifest/default.jsonld" %}
+   	      <input type="text" value="{{ iiifmanifest }}" id="iiifmanifest_copy" size="{{ iiifmanifest|length }}" class="col-xs-3 copy-content">
+   	    {% endif %}
+        ```
+
+        Then we pass it to the function:
+        ```html+twig title="clipboard_copy for input element value" hl_lines="1"
+        {{ clipboard_copy('copy-content','',"Copy Link to Digital Object's IIIF Presentation Manifest V3") }}
+        ```
+
+        The result for the above `input` example looks as follows:
+
+        ![Copy/Paste Element](images/copy_paste_input.png)
+
+    !!! example "a element hyperlink href"
+
+        ```html+twig title="a element hyperlink href" hl_lines="7"
+        <a id="copy-documentation" class="copy-documentation row" href="https://docs.archipelago.nyc">Archipelago Documentation</a>
+        ```
+
+        Then we pass it to the function:
+        ```html+twig title="clipboard_copy for a element hyperlink href" hl_lines="1"
+        {{ clipboard_copy('copy-documentation','row',"Copy Link to Documentation") }}
+        ```
+
+        The result for the above `a` example looks as follows:
+
+        ![Copy/Paste Element](images/copy_paste_anchor.png)
+
+    The above examples automatically generate `copy` buttons that can be styled, but they may not be convenient because they get appended the source element and don't allow for much structural variation. For cases with particular theming and styling restrictions, it may be best to generate the buttons and allow the library to provide the necessary functionality. Below are examples using the above elements as sources and existing buttons on the page as the targets:
+
+    ```html+twig title="clipboard_copy custom button for div element text" hl_lines="1-3 5"
+    <button class="custom-button btn btn-primary btn-sm">
+      <clipboard-copy for="copy-csl">Copy Text</clipboard-copy>
+    </button>
+
+    {{ clipboard_copy('csl-bib-body','custom-button','') }}
     ```
 
-    Then we pass it to the function:
-    ```html+twig title="clipboard_copy" hl_lines="1"
-    {{ clipboard_copy('csl-bib-body','','Copy Bibliography Entry') }}
+    ```html+twig title="clipboard_copy custom button for input element value" hl_lines="1-3 5"
+    <button class="custom-button btn btn-primary btn-sm">
+      <clipboard-copy for="iiifmanifest_copy">Copy Input</clipboard-copy>
+    </button>
+
+    {{ clipboard_copy('copy-content','custom-button','') }}
     ```
-    
-    As you can see above, the `clipboard_copy` function takes three arguments:
 
-    * a CSS class for the element to be copied
-    * an optional CSS class (the default is `clipboard-copy-button`) for the copy button
-    * optional text (the default is `Copy to Clipboard`) for the copy button
+    ```html+twig title="clipboard_copy custom button for a element hyperlink href" hl_lines="1-3 5"
+    <button class="custom-button btn btn-primary btn-sm">
+      <clipboard-copy for="copy-documentation">Copy Link</clipboard-copy>
+    </button>
 
-    The result for this example looks as follows:
+    {{ clipboard_copy('copy-documentation','custom-button','') }}
+    ```
 
-    ![Copy/Paste Element](images/copy_paste_element.png)
+    As shown above, the existing button needs the following to work as a copy button:
+
+    1. A `<copy-clipboard>` element (this can be hidden) with a `for` attribute, whose value is the ID of the source element, attached to the element acting as the button.
+    2. A class on the existing button that can be targeted. The class must either be unique (if a single button) or the number of elements with the class must match the number of source elements.
+    3. A separate class for the copy source(s) with the same requirements as the previous step.
 
 !!! example "sbf_entity_ids_by_label"
 
