@@ -10,11 +10,10 @@ tags:
 
 # Updating Drupal Core in Archipelago
 
-Drupal, the project, [puts out new core releases on a regular schedule](https://www.drupal.org/about/core/policies/core-release-cycles/schedule). Your Archipelago site needs to apply the security updates and possibly minor releases between major core updates. Major core updates will typically coincide with an updated Archipelago stable release. 
+The Drupal project [puts out new core releases on a regular schedule](https://www.drupal.org/about/core/policies/core-release-cycles/schedule). Your Archipelago site needs to apply the security updates and possibly minor releases between major core updates. Major core updates will typically coincide with an updated Archipelago stable release. 
 
-Updating core is done via composer.
+Updating core is done via [Composer](https://www.drupal.org/docs/develop/using-composer/manage-dependencies):
 
-## Steps/Guides
 
 1. First you will want to verify Drupal core itself will update and the dependencies. To so, you run the following command. 
 ```docker exec -ti esmero-php bash -c "composer update "drupal/core-*:^9" --with-all-dependencies --dry-run```
