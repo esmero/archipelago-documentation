@@ -8,7 +8,7 @@ tags:
   - Drupal Core
 ---
 
-# Updating Drupal Core on a live Archipelago Site
+# Updating Drupal Core in Archipelago
 
 Drupal, the project, [puts out new core releases on a regular schedule](https://www.drupal.org/about/core/policies/core-release-cycles/schedule). Your Archipelago site needs to apply the security updates and possibly minor releases between major core updates. Major core updates will typically coincide with an updated Archipelago stable release. 
 
