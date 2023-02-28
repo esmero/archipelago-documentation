@@ -1,7 +1,11 @@
 ---
 title: Updating Drupal Core in Archipelago
 tags:
-  - Documentation
+  - Archipelago-deployment
+  - Archipelago-deployment-live
+  - DevOps
+  - Drupal
+  - Drupal Core
 ---
 
 # Updating Drupal Core on a live Archipelago Site
