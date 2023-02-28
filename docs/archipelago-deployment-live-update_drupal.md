@@ -1,5 +1,5 @@
 ---
-title: Updating Drupal Core on a live Archipelago Site
+title: Updating Drupal Core in Archipelago
 tags:
   - Documentation
 ---
