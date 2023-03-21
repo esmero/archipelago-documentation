@@ -162,16 +162,36 @@ Finally, we have a growing list of extensions that apply to our own specific use
         ```html+twig title="clipboard_copy for div element text" hl_lines="1"
         {{ clipboard_copy('csl-bib-body','','Copy Bibliography Entry') }}
         ```
+
+        Or to give the generated button multiple classes:
+        ```html+twig title="clipboard_copy for div element text" hl_lines="1"
+        {{ clipboard_copy('csl-bib-body','custom custom-button','Copy Bibliography Entry') }}
+        ```
+
         
         As you can see above, the `clipboard_copy` function takes three arguments:
 
         * a CSS class for the element to be copied
-        * an optional CSS class (the default is `clipboard-copy-button`) or classes for the copy button to be generated or for an existing button (see below)
+        * an optional CSS class (the default is `clipboard-copy-button`) or classes (space-separated) for the copy button to be generated or a single, unique class for an existing button (see below)
         * optional text (the default is `Copy to Clipboard`) for the copy button being generated
 
         The result for the above `div` example looks as follows:
 
         ![Copy/Paste Element](images/copy_paste_div.png)
+
+        with the following HTML for no CSS class:
+        ```html
+        <button class="clipboard-copy-button">
+          <clipboard-copy for="copy-csl" tabindex="0" role="button">Copy Bibliography Entry</clipboard-copy>
+        </button>
+        ```
+
+        with the following HTML for multiple CSS classes:
+        ```html
+        <button class="custom custom-button">
+          <clipboard-copy for="copy-csl" tabindex="0" role="button">Copy Bibliography Entry</clipboard-copy>
+        </button>
+        ```
 
     !!! example "input element value"
 
