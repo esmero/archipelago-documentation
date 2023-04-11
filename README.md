@@ -24,7 +24,7 @@ Archipelago welcomes and appreciates any type of contribution, from use cases an
 ## Caring & Coding + Fixing
 * [Diego Pino](https://github.com/DiegoPino)
 * [Giancarlo Birello](https://github.com/giancarlobi)
-* [Allison Lund](https://github.com/alliomeria)
+* [Allison Sherrick](https://github.com/alliomeria)
 * [Katie Romabiles](https://github.com/karomabiles)
 * [Albert Min](https://github.com/aksm)
 
