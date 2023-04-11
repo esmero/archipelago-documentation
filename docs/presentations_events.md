@@ -12,9 +12,9 @@
 ## 2022
 
 - Archipelago Late 2022 Workshop Series:
-    - [Session 1 : AMI Essentials and Tricks of the Trade. Pino Navarro, Diego; Lund, Allison; Romabiles, Katie. (November 2022)](https://docs.google.com/presentation/d/1vPc4YfwMCPLVEewWdQaw7bm3UKKl3dnWtRaojoA9OBA/edit?usp=sharing)
+    - [Session 1 : AMI Essentials and Tricks of the Trade. Pino Navarro, Diego; Sherrick (Lund), Allison; Romabiles, Katie. (November 2022)](https://docs.google.com/presentation/d/1vPc4YfwMCPLVEewWdQaw7bm3UKKl3dnWtRaojoA9OBA/edit?usp=sharing)
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/Nm01tAey6KHqjfJglx8ckxxivaqVBq8aK7w3lKMvDAgB9_xcioCSs0bfO_4_lHjM.kw6JbAqgUkgOuyWm) 
-    - [Session 2: Twig Templating and Metadata Display Preview for AMI Ingest. Pino Navarro, Diego; Lund, Allison; Romabiles, Katie; Min, Albert. (December 2022)](https://docs.google.com/presentation/d/10G2OpzkNmu1YWljJFPAVXm2KoByx34TpRSh2milHEFc/edit?usp=sharing)
+    - [Session 2: Twig Templating and Metadata Display Preview for AMI Ingest. Pino Navarro, Diego; Sherrick (Lund), Allison; Romabiles, Katie; Min, Albert. (December 2022)](https://docs.google.com/presentation/d/10G2OpzkNmu1YWljJFPAVXm2KoByx34TpRSh2milHEFc/edit?usp=sharing)
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/pwXUet1qq4ovSo-kXui9LpI9nh5BDXP-Xq0zSTAJGA7ip7eH4uGQYq7uUUai-v8X.K5cSQpnEXqXrUJH-)
     - [Session 3: AMI Set Processing and Advanced Find + Replace (December 2022)](https://docs.google.com/presentation/d/1IKt766c2k-Q_nxEfu45dkyjkyZvSbh5GblpUugnacLw/edit?usp=sharing)
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/9rSVZulDUGrBOSqwDR-11A2HJmp3b9ndvurDgkElHJGE74Jh1zO4HUySLVkJlADn.UOpVnKNaBkq7s_IU)
@@ -57,42 +57,42 @@
 
 - 🍓 [Archipelago 1.0.0-RC3 and 1.0.0 Release Announcement - November 2021](https://groups.google.com/g/archipelago-commons/c/UefdSdeHmwM)
 
-- [AMIA Conference Workshop: Building a Web Archive-Capable Digital Repository with Webrecorder and Archipelago. Kreymer, Ilya; Ramirez-Lopez, Lorena; Dickson, Emma; Pino Navarro, Diego; Lund, Allison. (November 2021)](https://docs.google.com/presentation/d/1U_WTNJuuwDvAI7lXm8dRNWrgiiy5t4tFd5CK2gdcOzk/edit?usp=sharing)
+- [AMIA Conference Workshop: Building a Web Archive-Capable Digital Repository with Webrecorder and Archipelago. Kreymer, Ilya; Ramirez-Lopez, Lorena; Dickson, Emma; Pino Navarro, Diego; Sherrick (Lund), Allison. (November 2021)](https://docs.google.com/presentation/d/1U_WTNJuuwDvAI7lXm8dRNWrgiiy5t4tFd5CK2gdcOzk/edit?usp=sharing)
 
-- Solr Importer AMI Migrations, Showcase and Roundtable. Pino Navarro, Diego; Lund, Allison. (July 2021)
+- Solr Importer AMI Migrations, Showcase and Roundtable. Pino Navarro, Diego; Sherrick (Lund), Allison. (July 2021)
     - *Please see latest [I7 Solr Importer](I7solrImporter.md) and [AMI LoD Reconciliation](ami_lod_rec.md) documentation.*
 
 - IIIF Annual 2021 Conference:
-    - [Learning & Working with IIIF in Archipelago - 2021 IIIF Annual Conference. Pino Navarro, Diego; Lund, Allison. (June 2021)](https://www.youtube.com/watch?v=ymt-MXcUXck)
-    - [Editing a IIIF Manifest in Archipelago. Pino Navarro, Diego; Lund, Allison.](https://youtu.be/W9Pe5MP0CFk?t=3104)
+    - [Learning & Working with IIIF in Archipelago - 2021 IIIF Annual Conference. Pino Navarro, Diego; Sherrick (Lund), Allison. (June 2021)](https://www.youtube.com/watch?v=ymt-MXcUXck)
+    - [Editing a IIIF Manifest in Archipelago. Pino Navarro, Diego; Sherrick (Lund), Allison.](https://youtu.be/W9Pe5MP0CFk?t=3104)
 
 - June 2021 Open Repositories Conference:
-    - [Europeana Data Model (EDM) Workflows in Archipelago. Pino Navarro, Diego; Lund, Allison.](https://doi.org/10.5281/zenodo.4914644)
+    - [Europeana Data Model (EDM) Workflows in Archipelago. Pino Navarro, Diego; Sherrick (Lund), Allison.](https://doi.org/10.5281/zenodo.4914644)
         - [📺 Recording available](https://youtu.be/55doC8fRRho)
-	- ['Broken for All' Persistent Identifiers Panel Discussion. Kunze, John; Holmes-Wong, Deborah; Rafique, Zahid; Lohnash, Megan; Lund, Allison; Turner, Adrian; McKinley, Matthew.](https://zenodo.org/record/5009038#.YQAH9y1h2X0)
+	- ['Broken for All' Persistent Identifiers Panel Discussion. Kunze, John; Holmes-Wong, Deborah; Rafique, Zahid; Lohnash, Megan; Sherrick (Lund), Allison; Turner, Adrian; McKinley, Matthew.](https://zenodo.org/record/5009038#.YQAH9y1h2X0)
         - [📺 Recording available](https://youtu.be/ULm-Gm-y5Ag) 
 
-- [WebRecorder + Archipelago Workshop. Pino Navarro, Diego; Lund, Allison; Kreymer, Ilya; Ramirez-Lopez, Lorena; Dickson, Emma. (May 2021)](https://docs.google.com/presentation/d/1WWoIQOaz9XK5x256FsL4i6WOEdB4ide25AiJNrwfbp4/edit?usp=sharing)
+- [WebRecorder + Archipelago Workshop. Pino Navarro, Diego; Sherrick (Lund), Allison; Kreymer, Ilya; Ramirez-Lopez, Lorena; Dickson, Emma. (May 2021)](https://docs.google.com/presentation/d/1WWoIQOaz9XK5x256FsL4i6WOEdB4ide25AiJNrwfbp4/edit?usp=sharing)
     - [📺 Recording available](https://www.youtube.com/watch?v=TYbosYDXI3g)
 
-- [Twig Templates and Archipelago. Pino Navarro, Diego; Lund, Allison. (May 2021)](https://tinyurl.com/archipelagoandtwig)
+- [Twig Templates and Archipelago. Pino Navarro, Diego; Sherrick (Lund), Allison. (May 2021)](https://tinyurl.com/archipelagoandtwig)
     - Review of the core role Twig templating plays in Archipelago, introduction to the basics of Twig, and demonstration of editing Twig templates in Archipelago to refine metadata displays and AMI ingests.
     - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/dl4xX1q9Np0dJL-iGeqHFzu3aEt5_8OPXiMvPoMhree8dJEKaQoTZO2xvjv1-kw.sHOxU6mW6zfkgltA)
 
 - 🍓[Archipelago 1.0.0-RC2 Release Announcement (May 2021)](https://groups.google.com/g/archipelago-commons/c/E3JNLzOkj38) and [Archipelago RC2 Specs and Features List](https://tinyurl.com/ArchipelagoRC2specs)
 
-- [Working with Archipelago Multi-Importer (AMI). Pino Navarro, Diego; Lund, Allison. (April 2021)](https://tinyurl.com/workingwithAMI)
+- [Working with Archipelago Multi-Importer (AMI). Pino Navarro, Diego; Sherrick (Lund), Allison. (April 2021)](https://tinyurl.com/workingwithAMI)
     - Introduction to AMI, discussion of ingest strategies and options, and demonstration of an AMI ingest.
     -  [📺 Recording available](https://drive.google.com/file/d/1Xt-BgwY7wYS_8nCM_ejMDxx8sHt6Z0ts/view?usp=share_link)
 
 - [Archipelago Digital Objects Repository (an) architecture to last. Pino Navarro, Diego. (DrupalCon North America 2021)](https://tinyurl.com/archipelagoDCNA)
     - [📺 Recording available](https://youtu.be/tLsLPF5-ZvA)
 
-- [Metadata, Schemas and Media in Archipelago. Pino Navarro, Diego; Lund, Allison (February 2021)](https://docs.google.com/presentation/d/1aGzflRCtPYa4M5_-5sFCW8-ebuqaHRxoZ7LURVaDodg/edit?usp=sharing)
+- [Metadata, Schemas and Media in Archipelago. Pino Navarro, Diego; Sherrick (Lund), Allison (February 2021)](https://docs.google.com/presentation/d/1aGzflRCtPYa4M5_-5sFCW8-ebuqaHRxoZ7LURVaDodg/edit?usp=sharing)
     - Exploration of the flexible and extensible ways Archipelago manages Metadata, Schemas, and Media.
     - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/vw6ltEHgMNlm6iWiD20GTCmRx2FfqjzgCN2NaJCs9c_xorUL1yJ7xNIAeqYnJ2xM.32YeQSNqXNpC5hOX)
 
-- Deploying Archipelago 1.0.0-RC1. Pino Navarro, Diego; Lund, Allison. (February 2021)
+- Deploying Archipelago 1.0.0-RC1. Pino Navarro, Diego; Sherrick (Lund), Allison. (February 2021)
     - Demonstration of a complete walkthrough of a local Archipelago 1.0.0-RC1 deployment.
     - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/bkCReBlVCpbHHzV4QhcfbsJY1OqmK4hAD2AXtOMZDe0VJsqESX9yDM3eCpgGdArA.olFynqMgzxITON8K)
 
@@ -100,7 +100,7 @@
 
 - 🍓 [Archipelago 1.0.0-RC1 Release Announcement (December 2020)](https://groups.google.com/g/archipelago-commons/c/_hKcEeNxk54)
 
-- [Webforms in Archipelago. Pino Navarro, Diego; Lund, Allison; Palmentiero, Jennifer. (December 2020)](https://docs.google.com/presentation/d/1xSNuFEfHrOiIA11C12Om02xx6GC2pjxraDyxQGTiifQ/edit?usp=sharing)
+- [Webforms in Archipelago. Pino Navarro, Diego; Sherrick (Lund), Allison; Palmentiero, Jennifer. (December 2020)](https://docs.google.com/presentation/d/1xSNuFEfHrOiIA11C12Om02xx6GC2pjxraDyxQGTiifQ/edit?usp=sharing)
 
 - [IIIF and Archipelago - Community Call. Pino Navarro, Diego. (October 2020)](https://docs.google.com/presentation/d/1q_XpdQaJ3tIsGYs0Ia8M8_LdxVBIsJtomA-Dcy7Pc2g/edit?usp=sharing)
 
@@ -117,4 +117,3 @@ ___
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
 Return to the [Archipelago Documentation main page](index.md).
-
