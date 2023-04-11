@@ -30,7 +30,7 @@
 - Open Repositories June 2022
     - [Collaborative W3C Web Annotations using Annotorious in Archipelago and computer vision explorations as cataloger aids. Pino Navarro, Diego; Simon, Rainer.](https://docs.google.com/presentation/d/1qnRh_IX4Z5HmQPBb-iABXT5EtBPeaTJoG1bCbmPh2WE/edit?usp=sharing)
     - [Modern Web Archiving with Archipelago and Webrecorder : WACZ, Replay.web and Deep Discovery in Digital Repositories. Pino Navarro, Diego; Kreymer, Ilya.](https://docs.google.com/presentation/d/1beUiWEOp2oO9swUZMmYOM_k7wbGAyo-dKIoVIOEgbKo/edit?usp=drive-slack&ts=639732b7)
-    - [Working with IIIF Manifests in Archipelago](https://zenodo.org/record/6833627#.Y5X-zi-B1BU)
+    - [Working with IIIF Manifests in Archipelago](https://zenodo.org/record/6833627#.Y5X-zi-B1BU). Sherrick (Lund), Allison.
 
 - Formation of the Archipelago Working Group (April 2022)
     - In the Spring of 2022, METRO supported the creation of a select group of both early adopters and longtime members of the Archipelago community to provide a dedicated space for Archipelago power users to build upon their demonstrated use-explorations, contribute further to the platform and have a direct influence on roadmap code, direction, and timeline. This group will also work on documentation needs, use cases and outreach (including public showcases, trainings/workshops, and other events).
@@ -45,7 +45,6 @@
     - Carl Jones at MIT Libraries
     - Martha Tenney at Barnard College Library
     - David Bass / Max Bronsema at Western Washington University
-    - Chuck Henry at NNYLN
     - Sarah Walden McGowan at Amherst College
     - Prashanth B at Vipassana Research Institute
     - Ianthe Sutherland at University at Edinburgh
