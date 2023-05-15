@@ -142,11 +142,25 @@ Finally, we have a growing list of extensions that apply to our own specific use
 
 !!! example "clipboard_copy"
 
-    The `clipboard_copy` function, using the [clipboard-copy-element library](https://github.com/github/clipboard-copy-element), takes a provided CSS class for the element(s) whose text we'd like to copy and targets the CSS class of an existing HTML element on the page or generates an HTML element that can be clicked to copy the text to the user's clipboard.
+    The `clipboard_copy` function, using the [clipboard-copy-element library](https://github.com/github/clipboard-copy-element), takes a provided CSS class for the element(s) whose text we'd like to copy, and targets the CSS class of an existing HTML element on the page or generates an HTML element that can be clicked to copy the text to the user's clipboard.
 
-    In the examples below, we'd like to copy the text from three different kinds of HTML elements: a `div`, an `input`, and an `a` hyperlink href.
+    !!! info "Usage"
+    
+        ```html+twig title="clipboard_copy usage" hl_lines="1"
+        {{ clipboard_copy('CSS CLASS','OPTIONAL CSS CLASS(ES)','OPTIONAL TEXT') }}
+        ```
 
-    !!! example "div element text"
+        This function takes three arguments:
+        
+        * a CSS class for the element to copy
+        * an optional CSS class (the default is `clipboard-copy-button`) or classes (space-separated) for the copy button if auto-generating or a single, unique class if using your own existing button(s) 
+        * optional text (the default is `Copy to Clipboard`) for the copy button if auto-generating
+
+    In the examples below, we want users to be able to copy the text from three different kinds of HTML elements: a `div`, an `input`, and an `a` hyperlink href.
+
+    ??? example "Copying div element text with auto-generated button"
+
+        First we start by giving the div element(s) we'd like to copy a unique class:
 
         ```html+twig title="div element text" hl_lines="2"
         <div class="csl-bib-body-container chicago-fullnote-bibliography">
@@ -158,42 +172,49 @@ Finally, we have a growing list of extensions that apply to our own specific use
         </div>
         ```
 
-        Then we pass it to the function:
+        Then we pass the class to the function:
+
         ```html+twig title="clipboard_copy for div element text" hl_lines="1"
         {{ clipboard_copy('csl-bib-body','','Copy Bibliography Entry') }}
         ```
 
-        Or to give the generated button multiple classes:
+        !!! note
+
+            The class can be attached to parent elements of the element we are ultimately targeting if needed, but any intermediate characters may get caught up in the copied text.
+
+        Or to give the generated button multiple classes (in case they need additional styling):
+
         ```html+twig title="clipboard_copy for div element text" hl_lines="1"
         {{ clipboard_copy('csl-bib-body','custom custom-button','Copy Bibliography Entry') }}
         ```
-
-        
-        As you can see above, the `clipboard_copy` function takes three arguments:
-
-        * a CSS class for the element to be copied
-        * an optional CSS class (the default is `clipboard-copy-button`) or classes (space-separated) for the copy button to be generated or a single, unique class for an existing button (see below)
-        * optional text (the default is `Copy to Clipboard`) for the copy button being generated
 
         The result for the above `div` example looks as follows:
 
         ![Copy/Paste Element](images/copy_paste_div.png)
 
-        with the following HTML for no CSS class:
+        The following is the HTML for the auto-generated button with no provided CSS class:
+
         ```html
         <button class="clipboard-copy-button">
           <clipboard-copy for="copy-csl" tabindex="0" role="button">Copy Bibliography Entry</clipboard-copy>
         </button>
         ```
 
-        with the following HTML for multiple CSS classes:
+        And the following is HTML for the auto-generated button with multiple CSS classes provided:
+
         ```html
         <button class="custom custom-button">
           <clipboard-copy for="copy-csl" tabindex="0" role="button">Copy Bibliography Entry</clipboard-copy>
         </button>
         ```
 
-    !!! example "input element value"
+        !!! note
+
+            If the element being copied does not have an ID, one will automatically generated and assigned. 
+
+    ??? example "Copying input element value with auto-generated button"
+
+        First we start by giving the input element(s) we'd like to copy a unique class:
 
         ```html+twig title="input element value" hl_lines="7"
         {% if attribute(data, 'as:image')|length > 0  or attribute(data, 'as:document')|length > 0  %}
@@ -206,31 +227,87 @@ Finally, we have a growing list of extensions that apply to our own specific use
    	    {% endif %}
         ```
 
-        Then we pass it to the function:
+        Then we pass the class to the function:
+
         ```html+twig title="clipboard_copy for input element value" hl_lines="1"
         {{ clipboard_copy('copy-content','',"Copy Link to Digital Object's IIIF Presentation Manifest V3") }}
+        ```
+
+        Or to give the generated button multiple classes (in case they need additional styling):
+
+        ```html+twig title="clipboard_copy for input element text" hl_lines="1"
+        {{ clipboard_copy('copy-content','custom custom-button',"Copy Link to Digital Object's IIIF Presentation Manifest V3") }}
         ```
 
         The result for the above `input` example looks as follows:
 
         ![Copy/Paste Element](images/copy_paste_input.png)
 
-    !!! example "a element hyperlink href"
+        The following is the HTML for the auto-generated button with no provided CSS class:
 
-        ```html+twig title="a element hyperlink href" hl_lines="7"
-        <a id="copy-documentation" class="copy-documentation row" href="https://docs.archipelago.nyc">Archipelago Documentation</a>
+        ```html
+        <button class="clipboard-copy-button">
+          <clipboard-copy for="iiifmanifest_copy" tabindex="0" role="button">Copy Link to Digital Object's IIIF Presentation Manifest V3</clipboard-copy>
+        </button>
         ```
 
-        Then we pass it to the function:
+        And the following is HTML for the auto-generated button with multiple CSS classes provided:
+
+        ```html
+        <button class="custom custom-button">
+          <clipboard-copy for="iiifmanifest_copy" tabindex="0" role="button">Copy Link to Digital Object's IIIF Presentation Manifest V3</clipboard-copy>
+        </button>
+        ```
+
+        !!! note
+
+            If the element being copied does not have an ID, one will automatically generated and assigned. 
+
+    ??? example "Copying a element hyperlink href with auto-generated button"
+
+        First we start by giving the `a` element(s) we'd like to copy a unique class:
+
+        ```html+twig title="a element hyperlink href" hl_lines="7"
+        <a id="copy-documentation-id" class="copy-documentation-class row" href="https://docs.archipelago.nyc">Archipelago Documentation</a>
+        ```
+
+        Then we pass the class to the function:
+
         ```html+twig title="clipboard_copy for a element hyperlink href" hl_lines="1"
-        {{ clipboard_copy('copy-documentation','row',"Copy Link to Documentation") }}
+        {{ clipboard_copy('copy-documentation-class','',"Copy Link to Documentation") }}
+        ```
+
+        Or to give the generated button multiple classes (in case they need additional styling):
+
+        ```html+twig title="clipboard_copy for a element text" hl_lines="1"
+        {{ clipboard_copy('copy-documentation-class','custom custom-button',"Copy Link to Documentation") }}
         ```
 
         The result for the above `a` example looks as follows:
 
         ![Copy/Paste Element](images/copy_paste_anchor.png)
 
-    The above examples automatically generate `copy` buttons that can be styled, but they may not be convenient because they get appended the source element and don't allow for much structural variation. For cases with particular theming and styling restrictions, it may be best to generate the buttons and allow the library to provide the necessary functionality. Below are examples using the above elements as sources and existing buttons on the page as the targets:
+        The following is the HTML for the auto-generated button with no provided CSS class:
+
+        ```html
+        <button class="clipboard-copy-button">
+          <clipboard-copy for="copy-documentation-id" tabindex="0" role="button">Copy Link to Documentation</clipboard-copy>
+        </button>
+        ```
+
+        And the following is HTML for the auto-generated button with multiple CSS classes provided:
+
+        ```html
+        <button class="custom custom-button">
+          <clipboard-copy for="copy-documentation-id" tabindex="0" role="button">Copy Link to Documentation</clipboard-copy>
+        </button>
+        ```
+
+        !!! note
+
+            If the element being copied does not have an ID, one will automatically generated and assigned. 
+
+    The above examples automatically generate `copy` buttons that can be styled, but they may not be convenient because they get appended to the source element and don't allow for much structural variation. For cases with particular theming and styling restrictions, it may be best to generate the buttons and allow the library to provide the necessary functionality. Below are examples using the above elements as sources and existing buttons on the page as the targets:
 
     ```html+twig title="clipboard_copy custom button for div element text" hl_lines="1-3 5"
     <button class="custom-button btn btn-primary btn-sm">
