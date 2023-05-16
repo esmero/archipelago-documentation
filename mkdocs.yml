@@ -2,7 +2,7 @@ site_name: Archipelago Documentation
 site_url: https://docs.archipelago.nyc
 repo_url: https://github.com/esmero/archipelago-documentation
 repo_name: archipelago-documentation
-edit_uri: commits/1.0.0/docs/
+edit_uri: commits/1.1.0/docs/
 site_description: Project documentation for Archipelago.
 site_author: The Digital Services Team at Metropolitan New York Library Council
 nav:
