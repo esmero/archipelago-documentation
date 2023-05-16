@@ -8,31 +8,31 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
           token:  ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
           ref: 1.1.0
           path: ./tmp-update-repo
           token:  ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 1
           repository: esmero/archipelago-deployment
           ref: 1.1.0
           path: ./archipelago-deployment
           token:  ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 1
           repository: esmero/archipelago-deployment-live
           ref: 1.1.0
           path: ./archipelago-deployment-live
           token:  ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v4
         with:
           python-version: 3.x
       - run: |
