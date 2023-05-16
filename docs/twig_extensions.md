@@ -210,7 +210,7 @@ Finally, we have a growing list of extensions that apply to our own specific use
 
         !!! note
 
-            If the element being copied does not have an ID, one will automatically generated and assigned. 
+            The clipboard-copy-element library requires an element ID. If the element being copied does not have an ID, one will automatically generated and assigned. 
 
     ??? example "Copying input element value with auto-generated button"
 
@@ -261,29 +261,29 @@ Finally, we have a growing list of extensions that apply to our own specific use
 
         !!! note
 
-            If the element being copied does not have an ID, one will automatically generated and assigned. 
+            The clipboard-copy-element library requires an element ID. If the element being copied does not have an ID, one will automatically generated and assigned. 
 
-    ??? example "Copying a element hyperlink href with auto-generated button"
+    ??? example "Copying anchor element hyperlink href with auto-generated button"
 
         First we start by giving the `a` element(s) we'd like to copy a unique class:
 
-        ```html+twig title="a element hyperlink href" hl_lines="7"
+        ```html+twig title="anchor element hyperlink href" hl_lines="7"
         <a id="copy-documentation-id" class="copy-documentation-class row" href="https://docs.archipelago.nyc">Archipelago Documentation</a>
         ```
 
         Then we pass the class to the function:
 
-        ```html+twig title="clipboard_copy for a element hyperlink href" hl_lines="1"
+        ```html+twig title="clipboard_copy for anchor element hyperlink href" hl_lines="1"
         {{ clipboard_copy('copy-documentation-class','',"Copy Link to Documentation") }}
         ```
 
         Or to give the generated button multiple classes (in case they need additional styling):
 
-        ```html+twig title="clipboard_copy for a element text" hl_lines="1"
+        ```html+twig title="clipboard_copy for anchor element text" hl_lines="1"
         {{ clipboard_copy('copy-documentation-class','custom custom-button',"Copy Link to Documentation") }}
         ```
 
-        The result for the above `a` example looks as follows:
+        The result for the above anchor example looks as follows:
 
         ![Copy/Paste Element](images/copy_paste_anchor.png)
 
@@ -305,39 +305,92 @@ Finally, we have a growing list of extensions that apply to our own specific use
 
         !!! note
 
-            If the element being copied does not have an ID, one will automatically generated and assigned. 
+            The clipboard-copy-element library requires an element ID. If the element being copied does not have an ID, one will automatically generated and assigned. 
 
-    The above examples automatically generate `copy` buttons that can be styled, but they may not be convenient because they get appended to the source element and don't allow for much structural variation. For cases with particular theming and styling restrictions, it may be best to generate the buttons and allow the library to provide the necessary functionality. Below are examples using the above elements as sources and existing buttons on the page as the targets:
-
-    ```html+twig title="clipboard_copy custom button for div element text" hl_lines="1-3 5"
-    <button class="custom-button btn btn-primary btn-sm">
-      <clipboard-copy for="copy-csl">Copy Text</clipboard-copy>
-    </button>
-
-    {{ clipboard_copy('csl-bib-body','custom-button','') }}
-    ```
-
-    ```html+twig title="clipboard_copy custom button for input element value" hl_lines="1-3 5"
-    <button class="custom-button btn btn-primary btn-sm">
-      <clipboard-copy for="iiifmanifest_copy">Copy Input</clipboard-copy>
-    </button>
-
-    {{ clipboard_copy('copy-content','custom-button','') }}
-    ```
-
-    ```html+twig title="clipboard_copy custom button for a element hyperlink href" hl_lines="1-3 5"
-    <button class="custom-button btn btn-primary btn-sm">
-      <clipboard-copy for="copy-documentation">Copy Link</clipboard-copy>
-    </button>
-
-    {{ clipboard_copy('copy-documentation','custom-button','') }}
-    ```
-
-    As shown above, the existing button needs the following to work as a copy button:
+    The above examples automatically generate `copy` buttons. They can be styled, but if we need more control over the button placement and styling, we can use our own button(s) by ensuring that they meet the following requirements:
 
     1. A `<copy-clipboard>` element (this can be hidden) with a `for` attribute, whose value is the ID of the source element, attached to the element acting as the button.
     2. A class on the existing button that can be targeted. The class must either be unique (if a single button) or the number of elements with the class must match the number of source elements.
     3. A separate class for the copy source(s) with the same requirements as the previous step.
+
+    ??? example "Copying div element text with custom button"
+
+        First we start by giving the div element(s) we'd like to copy a unique class:
+
+        ```html+twig title="div element text" hl_lines="2"
+        <div class="csl-bib-body-container chicago-fullnote-bibliography">
+          <div id="copy-csl" class="csl-bib-body">
+            <div class="csl-entry">
+              New York Botanical Garden. “Descriptive Guide to the Grounds, Buildings and Collections.”
+            </div>
+          </div>
+        </div>
+        ```
+
+        Then we generate the button and pass the class to the function:
+
+        ```html+twig title="clipboard_copy custom button for div element text" hl_lines="1-3 5"
+        <button class="custom-button btn btn-primary btn-sm">
+          <clipboard-copy for="copy-csl">Copy Text</clipboard-copy>
+        </button>
+
+        {{ clipboard_copy('csl-bib-body','custom-button','') }}
+        ```
+
+        !!! note
+
+            The clipboard-copy-element library requires an element ID. If the element being copied does not have an ID, one will automatically generated and assigned. 
+
+    ??? example "Copying input element value with custom button"
+
+        First we start by giving the input element(s) we'd like to copy a unique class:
+
+        ```html+twig title="input element value" hl_lines="7"
+        {% if attribute(data, 'as:image')|length > 0  or attribute(data, 'as:document')|length > 0  %}
+   	      <h2>
+            <span class="align-middle">Direct Link to Digital Object's IIIF Presentation Manifest V3 </span>
+            <img src="https://iiif.io/img/logo-iiif-34x30.png">
+          </h2>
+   	      {% set iiifmanifest = nodeurl|render ~ "/metadata/iiifmanifest/default.jsonld" %}
+   	      <input type="text" value="{{ iiifmanifest }}" id="iiifmanifest_copy" size="{{ iiifmanifest|length }}" class="col-xs-3 copy-content">
+   	    {% endif %}
+        ```
+
+        Then we generate the button and pass the class to the function:
+
+        ```html+twig title="clipboard_copy custom button for input element value" hl_lines="1-3 5"
+        <button class="custom-button btn btn-primary btn-sm">
+          <clipboard-copy for="iiifmanifest_copy">Copy Input</clipboard-copy>
+        </button>
+
+        {{ clipboard_copy('copy-content','custom-button','') }}
+        ```
+
+        !!! note
+
+            The clipboard-copy-element library requires an element ID. If the element being copied does not have an ID, one will automatically generated and assigned. 
+
+    ??? example "Copying anchor element with custom button"
+
+        First we start by giving the `a` element(s) we'd like to copy a unique class:
+
+        ```html+twig title="anchor element hyperlink href" hl_lines="7"
+        <a id="copy-documentation-id" class="copy-documentation-class row" href="https://docs.archipelago.nyc">Archipelago Documentation</a>
+        ```
+
+        Then we generate the button and pass the class to the function:
+
+        ```html+twig title="clipboard_copy custom button for anchor element hyperlink href" hl_lines="1-3 5"
+        <button class="custom-button btn btn-primary btn-sm">
+          <clipboard-copy for="copy-documentation-id">Copy Link</clipboard-copy>
+        </button>
+
+        {{ clipboard_copy('copy-documentation-class','custom-button','') }}
+        ```
+
+        !!! note
+
+            The clipboard-copy-element library requires an element ID. If the element being copied does not have an ID, one will automatically generated and assigned. 
 
 !!! example "sbf_entity_ids_by_label"
 
