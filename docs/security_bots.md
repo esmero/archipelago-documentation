@@ -60,16 +60,28 @@ A public-facing production instance will likely encounter bad bots and other mal
          - ${ARCHIPELAGO_ROOT}/data_storage/letsencrypt:/etc/letsencrypt
          - ${ARCHIPELAGO_ROOT}/config_storage/nginxconfig/bots.d:/etc/nginx/bots.d
    ```
-3. Bring the docker ensemble down, pull the new image, and bring the ensemble back up:
+3. First pull the new image:
    ```shell
-   docker compose down && docker compose pull && docker compose up -d
+   docker compose pull
    ```
 
     !!! note
     
         If using an older version of docker, don't forget the hyphen:
         ```shell
-        docker-compose down && docker-compose pull && docker-compose up -d
+        docker-compose pull
+        ```
+
+4. Now bring the Docker ensembler down and up again:
+   ```shell
+   docker compose down && docker compose up -d
+   ```
+
+    !!! note
+    
+        If using an older version of docker, don't forget the hyphen:
+        ```shell
+        docker-compose down && docker-compose up -d
         ```
 
 4. Run the install script for the bot blocker in the default dry run mode and review the output:
