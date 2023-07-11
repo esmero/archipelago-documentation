@@ -11,8 +11,8 @@ A public-facing production instance will likely encounter bad bots and other mal
 
 ## Deployment
 
-1. Uncomment or add the following docker-compose environment variables, replacing any appropriate values with your own (leave the blocker and cron disabled to start):
-   ```dotenv title=".env"
+1. Uncomment or add the following docker-compose environment variables, replacing any appropriate values with your own and leaving the blocker and cron disabled to start (see highlighted lines):
+   ```dotenv title=".env" hl_lines="7 10"
    MSMTP_ACCOUNT=SMTP_ACCOUNT_NAME
    MSMTP_EMAIL=repositorysupport@metro.org
    MSMTP_HOST=smtp.metro.org
