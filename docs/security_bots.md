@@ -96,7 +96,7 @@ A public-facing production instance will likely encounter bad bots and other mal
    ```shell
    docker exec -ti esmero-web bash -c "/usr/local/sbin/setup-ngxblocker -v /etc/nginx/templates -e .copy"
    ```
-7. If everything looks ok, run with the execute flag:
+7. The script will output the NGINX configuration changes that are going to be made. Review them carefully and ensure that they are ok to make. Then run the command with the execute flag:
    ```shell
    docker exec -ti esmero-web bash -c "/usr/local/sbin/setup-ngxblocker -v /etc/nginx/templates -e .copy -x"
    ```
