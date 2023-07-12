@@ -72,7 +72,7 @@ A public-facing production instance will likely encounter bad bots and other mal
         docker-compose pull
         ```
 
-4. Now bring the Docker ensembler down and up again:
+4. Now bring the Docker ensemble down and up again:
    ```shell
    docker compose down && docker compose up -d
    ```
@@ -88,7 +88,7 @@ A public-facing production instance will likely encounter bad bots and other mal
    ```shell
    docker exec -ti esmero-web bash -c "/usr/local/sbin/install-ngxblocker"
    ```
-5. If everything looks ok, run with the execute flag:
+5. The script will output the changes that are going to be made. Review them carefully and ensure that they are ok to make. Then run the command with the execute flag:
    ```shell
    docker exec -ti esmero-web bash -c "/usr/local/sbin/install-ngxblocker -x"
    ```
@@ -130,21 +130,4 @@ A public-facing production instance will likely encounter bad bots and other mal
         docker-compose down && docker-compose up -d
         ```
 
-10. There is a small bug that causes environment substitution to fail on the NGINX container so we need to run it manually:
-    ```shell
-    docker exec -ti esmero-web bash -c "/docker-entrypoint.d/20-envsubst-on-templates.sh"
-    ```
-11. Now check that the NGINX configurations generated from the template are valid:
-    ```shell
-    docker exec -ti esmero-web bash -c "nginx -t"
-    ```
-    You should see something like the below output:
-    ```shell
-    nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
-    nginx: configuration file /etc/nginx/nginx.conf test is successful 
-    ```
-12. Restart the NGINX service:
-    ```shell
-    docker exec -ti esmero-web bash -c "nginx -s reload"
-    ```
-13. Test that it is working by following the "TESTING" section (STEP 10) in the official documentation: <https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker>
+10. Test that it is working by following the "TESTING" section (STEP 10) in the official documentation: <https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker>
