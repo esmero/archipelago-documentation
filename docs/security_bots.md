@@ -9,6 +9,10 @@ tags:
 
 A public-facing production instance will likely encounter bad bots and other malicious traffic that will consume resources. There are many solutions available that address a variety of different needs, but we provide basic configurations and a Docker image for integrating the [NGINX Ultimate Bad Bot & Referrer Blocker](https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker).
 
+!!! warning
+
+    Before proceeding, please be sure to familiarize yourself with the [NGINX Ultimate Bad Bot & Referrer Blocker README](https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker).
+
 ## Deployment
 
 1. Uncomment or add the following docker-compose environment variables, replacing any appropriate values with your own and leaving the blocker and cron disabled to start (see highlighted lines):
