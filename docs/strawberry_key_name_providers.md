@@ -4,13 +4,14 @@ tags:
   - Strawberry Key Name Providers
   - Solr
   - Facets
+  - Search
 ---
 
-# Strawberry Key Name Providers
+# Strawberry Key Name Providers, Solr Field, and Facet Configuration
 
-For an overview of Strawberry Key Name Providers within the context of the rest of Archipelago, see [Drupal and JSON](metadatainarchipelago.md#drupal-and-json).
+For an overview of how Strawberry Key Name Providers fit within the context of the rest of Archipelago, please see the [Drupal and JSON](metadatainarchipelago.md#drupal-and-json) section in our [Metadata in Archipelago](metadatainarchipelago.md) overview documentation.
 
-In order to expose the Strawberry Field JSON keys (and values) for an Archipelago Digital Objects (ADO) to Drupal's search, views, and facets, we need to make use of a plugin system called *Strawberry Key Name Providers*. What follows is a guide for configuring both the *Strawberry Key Name Providers* and the Drupal search, views, and facets.  
+In order to expose the Strawberry Field JSON keys (and values) for Archipelago Digital Objects (ADOs) to Search, Views, and Facets, we need to make use of a plugin system called *Strawberry Key Name Providers*. The following guide covers configuring first the *Strawberry Key Name Providers*, then corresponding Solr Fields necessary for Search and Views exposure, and finally the configuration of Facets.
 
 ## Creating a Strawberry Key Name Provider
 
@@ -36,7 +37,7 @@ In order to expose the Strawberry Field JSON keys (and values) for an Archipelag
         ...
         ``` 
 
-2. Next, we are going to create a new *Strawberry Key Name Provider* by going to `Administration > Structure > Strawberry Key Name Providers`, press the `+ Add Strawberry Key Name Provider` button, fill in the fields as follows, and save:
+2. Next, we are going to create a new *Strawberry Key Name Provider* by going to `Administration > Structure > Strawberry Key Name Providers`, pressing the `+ Add Strawberry Key Name Provider` button, filling in the fields as follows, and saving:
     * `Label`: `Date Created EDTF`
     * `Strawberry Key Name Provider Plugin`: `JmesPath Strawberry Field Key Name Provider`
     * `One or more comma separated valid JMESPaths`: `date_created_edtf.date_free`

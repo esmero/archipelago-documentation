@@ -13,7 +13,7 @@ Archipelago Multi Importer (AMI)'s Linked Data Reconciliation tool can be used t
 
 ### Important Note: Preliminary / Pre-requisite AMI Set Configuration
 
-In order to Reconciliate an AMI Set, you will need to have selected the 'Template' or 'Custom' data transformation approach (then also, via 'Template' for your Digital Object or Collection types) during [Step 3 : Data Transformation](https://docs.archipelago.nyc/1.0.0/ami_spreadsheet_overview/#step-3-data-transformation-selections) of your AMI Set configuration.
+In order to Reconciliate an AMI Set, you will need to have selected the 'Template' or 'Custom' data transformation approach (then also, via 'Template' for your Digital Object or Collection types) during [Step 3 : Data Transformation](AMIviaSpreadsheets.md#step-3-data-transformation-selections) of your AMI Set configuration.
 
 Your source spreadsheet will also need to contain at least one column containing terms/names (values) you want to reconcile against an LoD Authority Source. Multiple values should be separated by '|@|'.
 
