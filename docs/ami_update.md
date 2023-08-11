@@ -28,7 +28,7 @@ Archipelago Multi Importer (AMI)'s Update Operations can be used to Update, Repl
     - optional, only required if using the Custom (Expert Mode) approach for your AMI set configuration or targeting changes for 'type' mappings for your ADOs
     - contains the corresponding type values for your existing ADOs
     - can contain modifications for the type values  
-    - related to this, AMI Update functionality cannot be used to update/change the underlying Drupal bundle mappings for already-ingested objects. In other words, you cannot use an AMI Update Set to change a Child Object with a 'Page' type originally ingested as a Digital Object -> to a Parent Object with a 'Book' type mapped to the Digital Object Collection/Compound bundle. For these changes, you will need to delete and re-ingest your ADOs.
+    - related to this, AMI Update functionality cannot be used to update/change the underlying Drupal bundle mappings for already-ingested objects. In other words, you cannot use an AMI Update Set to change a Child Object with a 'Page' type originally ingested as a Digital Object -> to a Parent Object with a 'Book' type mapped to the Digital Object Collection/Compound bundle. For these changes, you will need to delete and re-ingest your ADOs, or use an external (not provided in default Archipelagos) Drupal module for bundle/Drupal Content Type changes.
 - **additional metadata elements you wish to Update, Replace, or Append values for, such as "subjects"**
     - optional (but likely pertains to the reason you are Updating your ADOs)
     - follow recommendations and practices described in more below detail
@@ -36,9 +36,12 @@ Archipelago Multi Importer (AMI)'s Update Operations can be used to Update, Repl
     - optional
     - on the final 'Process' tab of your AMI Update Set Configuration, if the "Do not touch existing files" option is checked, then existing files will be left untouched. It is recommended to always keep this option checked if you are targeting only Metadata updates.
 
-2. You should be familiar with the basic mechanics of AMI Set Configuration noted in [Steps 1-6, here](AMIviaSpreadsheets.md#step-1-plugin-selection).
+2. You should be familiar with the basic mechanics of AMI Set Configuration noted in [Steps 1-6](AMIviaSpreadsheets.md#step-1-plugin-selection).
 
-3. For all Update operations, it is strongly recommended to create a small test batch CSV referencing one to two/three ADOs to test the execution of your desired Update actions on before running your larger Update Sets. There is no 'Undo' or 'Revert Changes' button.
+3. For all Update operations, it is strongly recommended to both:
+
+- Create a small test batch CSV referencing one to two/three ADOs to test the execution of your desired Update actions on before running your larger Update Sets. There is no 'Undo' or 'Revert Changes' button.
+- Use the 'Export Archipelago Digital Objects to CSV content item' Action available on the main `Content` page and the `Find and Replace` page menus to generate a CSV of your non-modified objects. 
 
 ## Data Transformation Options for AMI Update Sets
 
@@ -75,7 +78,7 @@ Beginning from [Step 7, Processing](AMIviaSpreadsheets#step-7-ami-set-processing
 
 ![AMI Update Processing Step](images/ami_update_processing_step.png)
 
-![AMI Update Type Options](images/ami_update_type_options.jpg)
+![AMI Update Type Options](images/ami_update_type_options.png)
 
 ### 1. Normal Update Operation 
 
@@ -102,6 +105,10 @@ The following scenario describes a common use case for Replace updates:
 The **Append** update operation 'will append values to existing JSON keys in an ADO's configured target field. New ones (fields/JSON keys) will be added too.' If the processed data contains a key that is already in the ADO’s metadata to be updated, attempts will be made to match the "source" type (array, complex object) to add to it. If you have 2 values in a key, and your original/existing data contains a single value, the result will have 3 values (and then it will try to deduplicate too). If the Source data did not contain a key present in the processed data, then it will be added.
 
 The Append operation can be very useful, but it should be used with caution if targeting single values versus arrays. AMI will not permit malformed JSON data to be generated. **But** you need to consider if your Append update tranforms a previously single-value key into a multiple-value array, how this change may impact any references made in you display or other templates, Views throughout your Archipelago. For example, if your Object Description Display template is not setup to check for iterable (multiple value/array) values for a given element, then the multiple values for an updated ADO may not output as expected.
+
+## Other Process Setup Options
+
+For the other AMI Set Process options and steps, please refer to the information found from [Steps 7-10 in this complementary documentation for Create New ADOs AMI Sets](AMIviaSpreadsheets#step-7-ami-set-processing).
 
 ___
 

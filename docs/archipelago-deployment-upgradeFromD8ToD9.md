@@ -231,7 +231,7 @@ docker exec -ti esmero-php bash -c "drush pm-uninstall the_module_name"
 
 ### Step 4:
 
-We will now ask Drupal to update some internal configs and databases. The following commands are part of the [from ZERO](../#starting-from-zero) deployment. They will bring you up to date with RC3 settings and D9 particularities.
+We will now ask Drupal to update some internal configs and databases. The following commands are part of the [from ZERO](index.md#starting-from-zero) deployment. They will bring you up to date with RC3 settings and D9 particularities.
 
 ```shell  
 docker exec -ti esmero-php bash -c 'scripts/archipelago/setup.sh'

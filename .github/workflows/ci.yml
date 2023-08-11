@@ -59,6 +59,7 @@ jobs:
           rm -r ./tmp-update-repo &&
           git pull origin 1.1.0 &&
           git fetch origin gh-pages --depth=1 &&
-          mike deploy --update-aliases 1.1.0 &&
+          # no making it default yet, but the previous command was missing the action
+          #mike deploy --update-aliases 1.1.0 &&
           #mike set-default --push 1.1.0 || echo "No changes to commit"
-          mike --push 1.1.0 || echo "No changes to commit"
+          mike deploy --update-aliases --push 1.1.0 || echo "No changes to commit"
