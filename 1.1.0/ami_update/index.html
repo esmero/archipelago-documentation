@@ -1339,6 +1339,19 @@
     2. Replace Update Operation
   </a>
   
+    <nav class="md-nav" aria-label="2. Replace Update Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-use-case-scenario-for-replace-updates" class="md-nav__link">
+    Common use case scenario for Replace updates:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2000,6 +2013,19 @@
     2. Replace Update Operation
   </a>
   
+    <nav class="md-nav" aria-label="2. Replace Update Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-use-case-scenario-for-replace-updates" class="md-nav__link">
+    Common use case scenario for Replace updates:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2079,8 +2105,8 @@
 <h1 id="using-amis-update-operations">Using AMI's Update Operations</h1>
 <p>Archipelago Multi Importer (AMI)'s Update Operations can be used to Update, Replace, or Append metadata values or files for existing Digital Objects and Collections found in your Archipelago. You can prepare and use AMI Update Sets in different ways using one of three functional operations, depending on your update needs. This guide will provide a general overview of the three main functions and how each operation may be useful.</p>
 <h2 id="important-notes-preliminary-pre-requisites">Important Notes: Preliminary / Pre-requisites</h2>
-<ol>
-<li>You need to have existing Digital Objects or Collections (ADOs) in your Archipelago to work with. You should have a prepared AMI Update Set CSV that contains at least the following columns/headers:</li>
+<p>You need to have existing Digital Objects or Collections (ADOs) in your Archipelago to work with. You should have a prepared AMI Update Set CSV that contains at least the following columns/headers:</p>
+<ul>
 <li><strong>node_uuid</strong><ul>
 <li>required</li>
 <li>should contain the values for any existing ADOs you wish to update</li>
@@ -2105,47 +2131,35 @@
 <li>follow recommendations and practices described in more below detail</li>
 </ul>
 </li>
-<li>
-<p><strong>files</strong></p>
-<ul>
+<li><strong>files</strong><ul>
 <li>optional</li>
 <li>on the final 'Process' tab of your AMI Update Set Configuration, if the "Do not touch existing files" option is checked, then existing files will be left untouched. It is recommended to always keep this option checked if you are targeting only Metadata updates.</li>
 </ul>
 </li>
-<li>
+</ul>
 <p>You should be familiar with the basic mechanics of AMI Set Configuration noted in <a href="../AMIviaSpreadsheets/#step-1-plugin-selection">Steps 1-6</a>.</p>
-</li>
-<li>
 <p>For all Update operations, it is strongly recommended to both:</p>
-</li>
-<li>
-<p>Create a small test batch CSV referencing one to two/three ADOs to test the execution of your desired Update actions on before running your larger Update Sets. There is no 'Undo' or 'Revert Changes' button.</p>
-</li>
+<ul>
+<li>Create a small test batch CSV referencing one to two/three ADOs to test the execution of your desired Update actions on before running your larger Update Sets. There is no 'Undo' or 'Revert Changes' button.</li>
 <li>Use the 'Export Archipelago Digital Objects to CSV content item' Action available on the main <code>Content</code> page and the <code>Find and Replace</code> page menus to generate a CSV of your non-modified objects. </li>
-</ol>
+</ul>
 <h2 id="data-transformation-options-for-ami-update-sets">Data Transformation Options for AMI Update Sets</h2>
 <p>As with regular/Create New AMI Sets, you will have to select your preferred Data Tranformation configuration during Step 3 : of your AMI Update Set Configuration.</p>
 <ul>
-<li>
-<ol>
-<li>Direct</li>
+<li>Direct<ul>
 <li>Columns from your spreadsheet source will be cast directly to ADO metadata (JSON), without transformation/further processing (only intended for use with simple data strings or already JSON-encoded snippets/values).</li>
 <li>This is likely the most common Data Transformation configuration you will use for <strong>simple</strong> AMI Update Replace and Append Sets.</li>
-</ol>
+</ul>
 </li>
-<li>
-<ol>
-<li>Custom (Expert Mode)</li>
+<li>Custom (Expert Mode)<ul>
 <li>Provides very granular custom data transformation and mapping options</li>
 <li>You will likely only use this Data Transformation configuration for more complex AMI Update Sets when you want to differentiate between Data Transformation setups for Digital Objects and Digital Object Collections/Compound Objects/Creative Work Series (such as passing Digital Objects through 'Template' tranformation, and Collections/Compounds through 'Direct' transformation).</li>
-</ol>
+</ul>
 </li>
-<li>
-<ol>
-<li>Template</li>
+<li>Template<ul>
 <li>Columns from your spreadsheet source will be cast to ADO metadata (JSON) using a Twig template setup for JSON output.</li>
 <li>This is likely the most common Data Transformation configuration you will use for more <strong>complex</strong> AMI Update Sets. This is the setup you would need to use if you want to use an AMI Update Set with <a href="../ami_lod_rec/">AMI's LoD Reconciliation</a> to update existing ADOs subject metadata with enriched LoD.</li>
-</ol>
+</ul>
 </li>
 </ul>
 <div class="admonition warning">
@@ -2159,28 +2173,44 @@
 <p>During any update operation (independently of the functional operation chosen) and IF you are using/passing your CSV through a template, AMI will provide an extra Context key for you to reference in your Twig Template. You can always reference 'dataOriginal.subjects' for example -- all dataOriginal.xx keys will contain the values of the existing metadata for your ADOs. This allows you to make "smart" templates that check IF a certain key/values exists, compare the unmodified (and to be modified) ADO(s) with the new data passed, then generate the desired ouput. </p>
 </div>
 <h2 id="update-set-processing-options">Update Set Processing Options</h2>
-<p>Beginning from <a href="AMIviaSpreadsheets#step-7-ami-set-processing">Step 7, Processing</a> of your AMI Set Configuration, select the Update operation that best corresponds to your targeted Update scenario.</p>
+<p>Beginning from <a href="../AMIviaSpreadsheets/#step-7-ami-set-processing">Step 7, Processing</a> of your AMI Set Configuration, select the Update operation that best corresponds to your targeted Update scenario.</p>
 <p><a class="glightbox" href="../images/ami_update_processing_step.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Update Processing Step" src="../images/ami_update_processing_step.png" /></a></p>
 <p><a class="glightbox" href="../images/ami_update_type_options.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Update Type Options" src="../images/ami_update_type_options.png" /></a></p>
 <h3 id="1-normal-update-operation">1. Normal Update Operation</h3>
-<p>The <strong>Normal</strong> Update Operation 'will update a complete existing ADO's configured target field with new JSON Content.' This will replace everything in an ADO with new processed data. The Normal update operation is powerful and can overwrite your whole JSON object record if not paired with a template that has all the extra checks/logic needed to preserve existing data if desired (see note of 'Caution with Templates for Data Transformation' above). 
-- It is also recommended to only use the Normal Update approach if you need to re-process most of the metadata fields for ADOs.</p>
+<p>The <strong>Normal</strong> Update Operation 'will update a complete existing ADO's configured target field with new JSON Content.' This will replace everything in an ADO with new processed data. </p>
+<ul>
+<li>The Normal update operation is powerful and can overwrite your whole JSON object record if not paired with a template that has all the extra checks/logic needed to preserve existing data if desired (see note of 'Caution with Templates for Data Transformation' above). </li>
+<li>It is also recommended to only use the Normal Update approach if you need to re-process most of the metadata fields for ADOs.</li>
+</ul>
 <h3 id="2-replace-update-operation">2. Replace Update Operation</h3>
-<p>The <strong>Replace</strong> Update Operation Replace 'will replace JSON keys found in an ADO's configured target field with new JSON content. Not provided ones (fields/JSON keys) will be kept.' If the processed data contains a JSON key that is already in the ADO's metadata to be updated, the values in the AMI Update Set CSV will be used, replacing completely the values found in that key in the existing ADO.</p>
-<p>The Replace update operation paired with the 'Direct' data transformation is likely the update operation you will use.</p>
-<p>The following scenario describes a common use case for Replace updates:
-- You notice a missing or incorrectly processed field in your original AMI Set/ADOs.
-- You create an AMI set that contains only the 'node_uuid', 'label', and one column for the missing field and values.
-    - If the values are <em>singular</em>, you do not need to JSON-encode the values in the CSV
-    - If the values are <em>multiple</em>, you need to JSON-encode them, formatted as: ["value1","value2"]
-- You select the <strong>Direct</strong> data transformation approach on the AMI configuration.
-- You select the <strong>Replace</strong> update operation and keep 'Do not touch existing files' checked.
-- With this setup, the new field and values are added to the existing JSON for the impacted ADOs.</p>
+<p>The <strong>Replace</strong> Update Operation Replace 'will replace JSON keys found in an ADO's configured target field with new JSON content. Not provided ones (fields/JSON keys) will be kept.'</p>
+<ul>
+<li>If the processed data contains a JSON key that is already in the ADO's metadata to be updated, the values in the AMI Update Set CSV will be used, replacing completely the values found in that key in the existing ADO.</li>
+<li>The Replace update operation paired with the 'Direct' data transformation is likely the update operation you will use.</li>
+</ul>
+<h4 id="common-use-case-scenario-for-replace-updates">Common use case scenario for Replace updates:</h4>
+<ul>
+<li>You notice a missing or incorrectly processed field in your original AMI Set/ADOs.</li>
+<li>You create an AMI set that contains only the 'node_uuid', 'label', and one column for the missing field and values.<ul>
+<li>If the values are <em>singular</em>, you do not need to JSON-encode the values in the CSV</li>
+<li>If the values are <em>multiple</em>, you need to JSON-encode them, formatted as: ["value1","value2"]</li>
+</ul>
+</li>
+<li>You select the <strong>Direct</strong> data transformation approach on the AMI configuration.</li>
+<li>You select the <strong>Replace</strong> update operation and keep 'Do not touch existing files' checked.</li>
+<li>With this setup, the new field and values are added to the existing JSON for the impacted ADOs.</li>
+</ul>
 <h3 id="3-append-update-operation">3. Append Update Operation</h3>
-<p>The <strong>Append</strong> update operation 'will append values to existing JSON keys in an ADO's configured target field. New ones (fields/JSON keys) will be added too.' If the processed data contains a key that is already in the ADO’s metadata to be updated, attempts will be made to match the "source" type (array, complex object) to add to it. If you have 2 values in a key, and your original/existing data contains a single value, the result will have 3 values (and then it will try to deduplicate too). If the Source data did not contain a key present in the processed data, then it will be added.</p>
-<p>The Append operation can be very useful, but it should be used with caution if targeting single values versus arrays. AMI will not permit malformed JSON data to be generated. <strong>But</strong> you need to consider if your Append update tranforms a previously single-value key into a multiple-value array, how this change may impact any references made in you display or other templates, Views throughout your Archipelago. For example, if your Object Description Display template is not setup to check for iterable (multiple value/array) values for a given element, then the multiple values for an updated ADO may not output as expected.</p>
+<p>The <strong>Append</strong> update operation 'will append values to existing JSON keys in an ADO's configured target field. New ones (fields/JSON keys) will be added too.' </p>
+<ul>
+<li>If the processed data contains a key that is already in the ADO’s metadata to be updated, attempts will be made to match the "source" type (array, complex object) to add to it. If you have 2 values in a key, and your original/existing data contains a single value, the result will have 3 values (and then it will try to deduplicate too). If the Source data did not contain a key present in the processed data, then it will be added.</li>
+<li>The Append operation can be very useful, but it should be used with caution if targeting single values versus arrays. AMI will not permit malformed JSON data to be generated. <strong>But</strong> you need to consider if your Append update tranforms a previously single-value key into a multiple-value array, how this change may impact any references made in you display or other templates, Views throughout your Archipelago. <ul>
+<li>For example, if your Object Description Display template is not setup to check for iterable (multiple value/array) values for a given element, then the multiple values for an updated ADO may not output as expected.</li>
+</ul>
+</li>
+</ul>
 <h2 id="other-process-setup-options">Other Process Setup Options</h2>
-<p>For the other AMI Set Process options and steps, please refer to the information found from <a href="AMIviaSpreadsheets#step-7-ami-set-processing">Steps 7-10 in this complementary documentation for Create New ADOs AMI Sets</a>.</p>
+<p>For the other AMI Set Process options and steps, please refer to the information found from <a href="../AMIviaSpreadsheets/#step-7-ami-set-processing">Steps 7-10 in this complementary documentation for Create New ADOs AMI Sets</a>.</p>
 <hr />
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
 <p>Return to the <a href="../">Archipelago Documentation main page</a>.</p>
