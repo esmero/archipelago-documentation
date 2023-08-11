@@ -11,7 +11,10 @@ tags:
 
 For an overview of how Strawberry Key Name Providers fit within the context of the rest of Archipelago, please see the [Drupal and JSON](metadatainarchipelago.md#drupal-and-json) section in our [Metadata in Archipelago](metadatainarchipelago.md) overview documentation.
 
-In order to expose the Strawberry Field JSON keys (and values) for Archipelago Digital Objects (ADOs) to Search, Views, and Facets, we need to make use of a plugin system called *Strawberry Key Name Providers*. The following guide covers configuring first the *Strawberry Key Name Providers*, then corresponding Solr Fields necessary for Search and Views exposure, and finally the configuration of Facets.
+In order to expose the Strawberry Field JSON keys (and values) for Archipelago Digital Objects (ADOs) to Search/Solr, Views, and Facets, we need to make use of a plugin system called *Strawberry Key Name Providers*. The following guide covers
+- Configuring first the *Strawberry Key Name Providers*
+- Then configuring the corresponding Solr Fields necessary for Search and Views exposure
+- Finally, the configuration of Facets and placement of Facet blocks on your theme as needed.
 
 ## Creating a Strawberry Key Name Provider
 
@@ -115,3 +118,9 @@ You'll notice that there are four plugins, each with different options, availabl
 3. Press the `Place block` button next to the appropriate region. For the example in this guide, we'll be placing the block in the `Sidebar second` region.
 4. Select your facet from the list. For the example in this guide, we'll select `🍓 Strawberry (Descriptive Metadata source) >> date_created_edtf_date_free`
 5. Press the `Place block` button next to the facet. Once the block is added, you can drag and drop it to change its position among the existing blocks and saving.
+
+___
+
+Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
+
+Return to the [Archipelago Documentation main page](index.md).
