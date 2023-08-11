@@ -111,7 +111,7 @@ If you clicked on the 'see it here' link in Step 6, you will be brought to the A
 
 ??? info "Optional step to review the settings configured in your AMI Set"
    
-   You may wish to double check the settings configured in your AMI Set in the Raw Metadata (JSON) on the AMI Set `View` tab before Processing.
+    You may wish to double check the settings configured in your AMI Set in the Raw Metadata (JSON) on the AMI Set `View` tab before Processing.
 
     ![AMI Set Admin Review](images/AMIsetAdminReview_updated_2022-11.jpg)
 
