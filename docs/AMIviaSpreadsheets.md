@@ -45,7 +45,7 @@ Select the data transformation approach--how your source data will be transforme
 
 - You will have 3 options for your data transformation approach:
     1. Direct
-        - Columns from your spreadsheet source will be cast directly to ADO metadata (JSON), without transformation/further processing (only intended for use with simple data strings).
+        - Columns from your spreadsheet source will be cast directly to ADO metadata (JSON), without transformation/further processing (only intended for use with simple data strings or already JSON-encoded snippets/values).
     2. Custom (Expert Mode)
         - Provides very granular custom data transformation and mapping options
         - Needs to be used if importing Digital Objects and Digital Object Collections at the same time/from same spreadsheet source (see separate instructions below).
@@ -91,7 +91,7 @@ Provide an optional ZIP file containing your assets.
   
     - Please note, when creating your ZIP file (in particular, within an OSX environment): only select the folders and files needed, not the top/enclosing folder they are in. 
    
-??? info Click to view screenshot of example ZIP file creation in OSX
+??? info "Click to view screenshot of example ZIP file creation in OSX"
 	
     ![Example ZIP OSX](images/ExampleZipOSX.jpg)
 
@@ -107,31 +107,38 @@ The message will also let you know that your New AMI Set was created and provide
 
 Your newly created AMI Set will now need to be Processed.
 
-If you clicked on the 'see it here' link in Step 6, you will be brought to the AMI Set page for review. You may also select `Process` from the `Operations` menu for the AMI set from the main `AMI sets` page. From the `Process` page you can review the JSON configuration for your set (determined by your selections in the preceeding steps).
+If you clicked on the 'see it here' link in Step 6, you will be brought to the AMI Set page for review. You may also select `Process` from the `Operations` menu for the AMI set from the main `AMI sets` page. From the `Process` page you can review the JSON configuration for your set (determined by your selections in the preceding steps).
 
-![AMI Set Admin Review](images/AMIsetAdminReview_updated_2022-11.jpg)
+??? info "Optional step to review the settings configured in your AMI Set"
+   
+   You may wish to double check the settings configured in your AMI Set in the Raw Metadata (JSON) on the AMI Set `View` tab before Processing.
 
-To Process this set, navigate to the `Process` tab. You will have mutliple options related to the Processing outcome for your AMI Set.
+    ![AMI Set Admin Review](images/AMIsetAdminReview_updated_2022-11.jpg)
+
+![AMI Admin Set Process](images/AMIsetAdminProcess_updated_2022-11.jpg)
+
+To Process this set, navigate to the `Process` tab. You will have multiple options related to the Processing outcome for your AMI Set.
 - **Skip ADO processing on missing File** : If enabled a referenced missed file or one that can not be processed from the source, remote or local will make AMI skip the affected ROW. Enabled by default for better QA during processing. 
 - **Desired ADOS Statuses After Process**
     - The Statuses you have available will reflect the publication workflow/moderation states (such as Draft, Published, Archived/Unpublished) setup in your Archipelago instance, and the permissions associated your user account.
 - Please review the note about the _'remaining free space on your Drupal temporary filesystem. Please be aware of that before running a batch with large files'._ If the amount of remaining free space you see does not seem sufficient for your AMI set processing needs, we recommend contacting your system administrator.	
 - Enqueuing and File Processing Options
+
     - **Enqueue but do not process Batch in realtime** : Check this to enqueue but not trigger the interactive Batch processing. Cron or any other mechanism you have enabled will do the actual operation. This queue is shared by all AMI Sets in this repository and will be processed on a First-In First-Out basis.
     - **Force every File attached to an ADO to be processed in its own Queue item** : Warning: This may make your ingest slower. Check this to force every file attached to an ADO to be downloaded and characterized as an independent process. This bypasses the Number of files Global setting that would otherwise trigger this behavior.
     - **Re download and reprocess every file** : Check this to force every file attached to an ADO to be downloaded and characterized again, even if on a previous Batch run that data was already generated for reuse. IMPORTANT: Needed if e.g the URL of a file is the same but the remote source changed, if you have custom code that modifies the backend naming strategy of files.    
+
 - Select `Confirm` to continue. 
-	
-![AMI Admin Set Process](images/AMIsetAdminProcess_updated_2022-11.jpg)
 
 You will be returned to `AMI sets` page and see a brief confirmation message regarding the Enqueuing and Processing options you selected.
   
 If you chose to 'Confirm" and Process your AMI Set immediately, proceed to Step 9: Processing and ADO Creation.
 
+If the chose to 'Enqueue' your AMI Set and the Queue operations for your Archipelago instance have been configured, you can simply leave your AMI Set in the Queue for Processing on the preconfigured schedule. Common timing for AMI Set Processes schedules are typically setup to run every three to six hours. Contact your Archipelago Administrators for details about your particular Archipelago's Processing schedule.
 
-#### Step 8: Queue Manager (if not Processing immediately)
+#### Step 8: Queue Manager Push (may be restricted to Administrator Users only)
 
-If you chose to place your AMI set in the Queue to Process in step 7, you can navigate to the Queue Manager found at `/admin/config/system/queue-ui` to review. (Be sure to select the `Queue Manager` under the System section, not the `Queue Manager for Hydroponic Service` under the Archipelago section). If the Queue operations for your Archipelago instance have been configured, you can simply leave your AMI Set in the Queue for Processing on the preconfigured schedule.
+If you chose to place your AMI set in the Queue to Process in step 7 and you wish to manually kickstart the Queue Processes, navigate to the Queue Manager found at `/admin/config/system/queue-ui`. (Be sure to select the `Queue Manager` under the System section, not the `Queue Manager for Hydroponic Service` under the Archipelago section).
 
 ![AMI Queue Manager](images/AMIqueueMgr_updated_2022-11.jpg)
 
@@ -236,4 +243,3 @@ ___
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
 Return to the [Archipelago Documentation main page](index.md).
-
