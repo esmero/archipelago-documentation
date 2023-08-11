@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.archipelago.nyc/1.1.0/ami_update/</loc>
+         <lastmod>2023-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.archipelago.nyc/1.1.0/annotations/</loc>
          <lastmod>2023-08-11</lastmod>
          <changefreq>daily</changefreq>
