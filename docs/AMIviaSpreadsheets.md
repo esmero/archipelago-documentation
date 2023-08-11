@@ -118,12 +118,12 @@ If you clicked on the 'see it here' link in Step 6, you will be brought to the A
 ![AMI Admin Set Process](images/AMIsetAdminProcess_updated_2022-11.jpg)
 
 To Process this set, navigate to the `Process` tab. You will have multiple options related to the Processing outcome for your AMI Set.
+
 - **Skip ADO processing on missing File** : If enabled a referenced missed file or one that can not be processed from the source, remote or local will make AMI skip the affected ROW. Enabled by default for better QA during processing. 
 - **Desired ADOS Statuses After Process**
     - The Statuses you have available will reflect the publication workflow/moderation states (such as Draft, Published, Archived/Unpublished) setup in your Archipelago instance, and the permissions associated your user account.
 - Please review the note about the _'remaining free space on your Drupal temporary filesystem. Please be aware of that before running a batch with large files'._ If the amount of remaining free space you see does not seem sufficient for your AMI set processing needs, we recommend contacting your system administrator.	
 - Enqueuing and File Processing Options
-
     - **Enqueue but do not process Batch in realtime** : Check this to enqueue but not trigger the interactive Batch processing. Cron or any other mechanism you have enabled will do the actual operation. This queue is shared by all AMI Sets in this repository and will be processed on a First-In First-Out basis.
     - **Force every File attached to an ADO to be processed in its own Queue item** : Warning: This may make your ingest slower. Check this to force every file attached to an ADO to be downloaded and characterized as an independent process. This bypasses the Number of files Global setting that would otherwise trigger this behavior.
     - **Re download and reprocess every file** : Check this to force every file attached to an ADO to be downloaded and characterized again, even if on a previous Batch run that data was already generated for reuse. IMPORTANT: Needed if e.g the URL of a file is the same but the remote source changed, if you have custom code that modifies the backend naming strategy of files.    
