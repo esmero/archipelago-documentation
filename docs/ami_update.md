@@ -13,9 +13,9 @@ tags:
 
 Archipelago Multi Importer (AMI)'s Update Operations can be used to Update, Replace, or Append metadata values or files for existing Digital Objects and Collections found in your Archipelago. You can prepare and use AMI Update Sets in different ways using one of three functional operations, depending on your update needs. This guide will provide a general overview of the three main functions and how each operation may be useful.
 
-### Important Notes: Preliminary / Pre-requisites
+## Important Notes: Preliminary / Pre-requisites
 
-1. You need to have existing Digital Objects or Collections (ADOs) in your Archipelago to work with. You should have a prepared AMI Udpate Set CSV that contains at least the following columns/headers:
+1. You need to have existing Digital Objects or Collections (ADOs) in your Archipelago to work with. You should have a prepared AMI Update Set CSV that contains at least the following columns/headers:
 - **node_uuid**
     - required
     - should contain the values for any existing ADOs you wish to update
@@ -25,7 +25,7 @@ Archipelago Multi Importer (AMI)'s Update Operations can be used to Update, Repl
     - contains the corresponding label (title) for your existing ADOs
     - can contain modifications for the label (title) values
 - **type**
-    - optional, only required if using the Custom (Expert Mode) approach for your AMI set configuration or targetting changes for 'type' mappings for your ADOs
+    - optional, only required if using the Custom (Expert Mode) approach for your AMI set configuration or targeting changes for 'type' mappings for your ADOs
     - contains the corresponding type values for your existing ADOs
     - can contain modifications for the type values  
     - related to this, AMI Update functionality cannot be used to update/change the underlying Drupal bundle mappings for already-ingested objects. In other words, you cannot use an AMI Update Set to change a Child Object with a 'Page' type originally ingested as a Digital Object -> to a Parent Object with a 'Book' type mapped to the Digital Object Collection/Compound bundle. For these changes, you will need to delete and re-ingest your ADOs.
@@ -34,15 +34,29 @@ Archipelago Multi Importer (AMI)'s Update Operations can be used to Update, Repl
     - follow recommendations and practices described in more below detail
 - **files**
     - optional
-    - on the final 'Process' tab of your AMI Update Set Configuration, if the "Do not touch existing files" option is checked, then existing files will be left untouched. It is recommended to always keep this option checked if you are targetting only Metadata updates.
+    - on the final 'Process' tab of your AMI Update Set Configuration, if the "Do not touch existing files" option is checked, then existing files will be left untouched. It is recommended to always keep this option checked if you are targeting only Metadata updates.
 
 2. You should be familiar with the basic mechanics of AMI Set Configuration noted in [Steps 1-6, here](AMIviaSpreadsheets.md#step-1-plugin-selection).
 
-3. For all Update operations, it is strongly recommended to create a small test batch CSV referencing one to two/three ADOs to test the execution of your desired Update actions on before running your larger Update Sets.
+3. For all Update operations, it is strongly recommended to create a small test batch CSV referencing one to two/three ADOs to test the execution of your desired Update actions on before running your larger Update Sets. There is no 'Undo' or 'Revert Changes' button.
 
-!!! warning "Caution with Templates for Data Transformation"
+## Data Transformation Options for AMI Update Sets
 
-    If you are planning to use the 'Template' or 'Custom' data transformation approach during [Step 3 : Data Transformation](ami_spreadsheet_overview/#step-3-data-transformation-selections) of your AMI Update Set configuration, you will need to have prepared your corresponding AMI Ingest Template to account for the specific Update actions you have planned. 
+As with regular/Create New AMI Sets, you will have to select your preferred Data Tranformation configuration during Step 3 : of your AMI Update Set Configuration.
+
+- 1. Direct
+    - Columns from your spreadsheet source will be cast directly to ADO metadata (JSON), without transformation/further processing (only intended for use with simple data strings or already JSON-encoded snippets/values).
+    - This is likely the most common Data Transformation configuration you will use for **simple** AMI Update Replace and Append Sets.
+- 2. Custom (Expert Mode)
+    - Provides very granular custom data transformation and mapping options
+    - You will likely only use this Data Transformation configuration for more complex AMI Update Sets when you want to differentiate between Data Transformation setups for Digital Objects and Digital Object Collections/Compound Objects/Creative Work Series (such as passing Digital Objects through 'Template' tranformation, and Collections/Compounds through 'Direct' transformation).
+- 3. Template
+    - Columns from your spreadsheet source will be cast to ADO metadata (JSON) using a Twig template setup for JSON output.
+    - This is likely the most common Data Transformation configuration you will use for more **complex** AMI Update Sets. This is the setup you would need to use if you want to use an AMI Update Set with [AMI's LoD Reconciliation](ami_lod_rec.md) to update existing ADOs subject metadata with enriched LoD.
+
+!!! warning "Caution with using Templates for Data Transformation"
+
+    If you are planning to use the 'Template' or 'Custom (Export Mode)' data transformation approach for your AMI Update Set configuration, you will need to have prepared your corresponding AMI Ingest Template to account for the specific Update actions you have planned. 
     
     It is important to keep in mind that all of the metadata elements for your existing ADOs metadata may not necessarily be present in your AMI Update Set Source CSV. For example, you may have only prepared your AMI Update Set Source CSV to contain a limited number of headers/columns, such as only those required (node_uuid, label) and one or two metadata elements you wish to update (such as "subjects"). If you choose to pass your AMI Update Set through a Twig template, the output after Processing your AMI Update Set may overwrite your existing data if you do not have all of the necessary logic/checks in place to preserve the existing metadata if desired.
    
@@ -57,7 +71,7 @@ Archipelago Multi Importer (AMI)'s Update Operations can be used to Update, Repl
 
 ## Update Set Processing Options
 
-Beginning from [Step 7, Processing](AMIviaSpreadsheets#step-7-ami-set-processing) of your AMI Set Configruation, select the Update operation that best corresponds to your targetted Update scenario.
+Beginning from [Step 7, Processing](AMIviaSpreadsheets#step-7-ami-set-processing) of your AMI Set Configuration, select the Update operation that best corresponds to your targeted Update scenario.
 
 ![AMI Update Processing Step](images/ami_update_processing_step.png)
 
@@ -70,9 +84,9 @@ The **Normal** Update Operation 'will update a complete existing ADO's configure
 
 ### 2. Replace Update Operation
 
-The **Replace** Update Operation Replace 'will replace JSON keys found in an ADO's configured target field with new JSON content. Not provided ones (fields/JSON keys) will be kept.' If the processed data contains a JSON key that is already in the ADO’s metadata to be updated, the values in the AMI Update Set CSV will be used, replacing completely the values found in that key in the existing ADO.
+The **Replace** Update Operation Replace 'will replace JSON keys found in an ADO's configured target field with new JSON content. Not provided ones (fields/JSON keys) will be kept.' If the processed data contains a JSON key that is already in the ADO's metadata to be updated, the values in the AMI Update Set CSV will be used, replacing completely the values found in that key in the existing ADO.
 
-The Replace update operation paried with the 'Direct' data transformation is likely the update operation you will use.
+The Replace update operation paired with the 'Direct' data transformation is likely the update operation you will use.
 
 The following scenario describes a common use case for Replace updates:
 - You notice a missing or incorrectly processed field in your original AMI Set/ADOs.
@@ -87,7 +101,7 @@ The following scenario describes a common use case for Replace updates:
 
 The **Append** update operation 'will append values to existing JSON keys in an ADO's configured target field. New ones (fields/JSON keys) will be added too.' If the processed data contains a key that is already in the ADO’s metadata to be updated, attempts will be made to match the "source" type (array, complex object) to add to it. If you have 2 values in a key, and your original/existing data contains a single value, the result will have 3 values (and then it will try to deduplicate too). If the Source data did not contain a key present in the processed data, then it will be added.
 
-The Append operation can be very useful, but it should be used with caution if targetting single values versus arrays. AMI will not permit mis-encoded JSON data to be generated, but you need to consider if your Append update tranforms a previously single-value key into a multiple-value array, how this change may be impacted in any references made in you display or other templates, Views throughout your Archipelago.
+The Append operation can be very useful, but it should be used with caution if targeting single values versus arrays. AMI will not permit malformed JSON data to be generated. **But** you need to consider if your Append update tranforms a previously single-value key into a multiple-value array, how this change may impact any references made in you display or other templates, Views throughout your Archipelago. For example, if your Object Description Display template is not setup to check for iterable (multiple value/array) values for a given element, then the multiple values for an updated ADO may not output as expected.
 
 ___
 

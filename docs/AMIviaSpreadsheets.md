@@ -45,7 +45,7 @@ Select the data transformation approach--how your source data will be transforme
 
 - You will have 3 options for your data transformation approach:
     1. Direct
-        - Columns from your spreadsheet source will be cast directly to ADO metadata (JSON), without transformation/further processing (only intended for use with simple data strings).
+        - Columns from your spreadsheet source will be cast directly to ADO metadata (JSON), without transformation/further processing (only intended for use with simple data strings or already JSON-encoded snippets/values).
     2. Custom (Expert Mode)
         - Provides very granular custom data transformation and mapping options
         - Needs to be used if importing Digital Objects and Digital Object Collections at the same time/from same spreadsheet source (see separate instructions below).
