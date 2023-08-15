@@ -18,6 +18,9 @@ Webform Find and Replace enables you to search against values found within defin
 
 1. Go to `Tools > Advanced Batch Find and Replace`.
 2. Identify and/or Filter the Digital Objects (ADOs) that need updates by Searching and/or using the available [Facets](find_and_replace.md#default-facets-configured).
+  
+  - If using the 'Ingest Method Service URL' for Faceting, please note that using the Find and Replace Webform functionality to update ADOs will cause the original AMI Set URL identified in this Facet to be overwritten and replaced with the specified Webform used during the replacement execution.
+
 3. Either select all (includes results that appear on additional pages) by toggling `Select / deselect all results (all pages, x total)` or toggle the buttons for individual objects.
 4. Expand the `► Raw Metadata (JSON)` for some of the objects and double-check that the metadata field and value you are targeting for replacement is present.
 5. Select `Webform find-and-replace Metadata for Archipelago Digital Objects content item` from the `Action` dropdown.
@@ -36,11 +39,15 @@ Webform Find and Replace enables you to search against values found within defin
 
 - See the [Simulation Mode notes here](find_and_replace/#simulation-mode) for information about this optional simulation/test mode.
 
-### Important Note about Text Based Webform Elements
+### Important Notes about Different Webform Elements
 
 !!! warning "Maximum Length as Defined by your Webform Element Configuration OR Theme Defaults"
 
     For certain text-based webform element types, the maximum field length (`maxlength`) defined in your specific webform element configurations will be enforced during Webform Find and Replace operations. If no maximum length is defined, the Admin Theme will enforce a maximum length of 128 characters. Please see our main [Webforms documentation](webforms.md) for information about configuring webforms in Archipelago.
+
+!!! note "Some Complex Webform Elements Not Available"
+
+    Please note that some complex webform elements are not available for use with Webform Find and Replace. Any webform element that requires user interactions (such as the Nominatim Open Street Maps lookup/query and selection) is note available for usage. The different file upload webform elements are also not available for use with Webform Find and Replace.
 
 9. If you're absolutely certain about the replacement you have targeted, uncheck the 'only simulate and debug affected JSON' option and select `Apply`.
 10. After the operation is executed, [check your changes](find_and_replace/#checking-your-changes).

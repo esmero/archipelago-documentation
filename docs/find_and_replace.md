@@ -53,6 +53,7 @@ You will also see a listing of a few different default Facets configured to help
     - includes 'flattened' keys that may not be readily accessible via Webform elements (such as Archipelago-generated technical and administrative keys)
 - Ingest Method Service URL
     - The URL of the Digital Object/Collection Webforms and AMI Sets present in your repository that were used to create Digital Objects/Collections.
+    - Please note that using the Find and Replace Webform functionality to update ADOs will cause the original AMI Set URL identified in this Facet to be overwritten and replaced with the specified Webform used during the replacement execution.
 
 ## Available Actions
 
