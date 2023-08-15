@@ -47,7 +47,7 @@ In the following example configuration, for the selected 'Senju no oubashi (Senj
 
 _Please see the [Simulation Mode notes here](find_and_replace/#simulation-mode) for information about this configuration option._
 
-9. If you're absolutely certain about the replacement you have targetted, uncheck the 'only simulate and debug affected JSON' option and select `Apply`.
+9. If you're absolutely certain about the replacement you have targeted, uncheck the 'only simulate and debug affected JSON' option and select `Apply`.
 10. After the operation is executed, [check your changes](find_and_replace/#checking-your-changes).
 
 ___

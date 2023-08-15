@@ -27,7 +27,7 @@ The text-based find and replace is case-sensitive and space-sensitive, and while
 6. If selecting objects individually, expand the `Selected X items` and review the list.
 7. Press the `Apply to selected items` button (don't worry, nothing will happen yet).
 8. Add the values for search (`JSON Search String`) and replace (`JSON Replacement String`).
-9. If you're absolutely certain about the replacement you have targetted, uncheck the 'only simulate and debug affected JSON' option and select `Apply`.
+9. If you're absolutely certain about the replacement you have targeted, uncheck the 'only simulate and debug affected JSON' option and select `Apply`.
 
     !!! Note "only simulate and debug affected JSON"
 
