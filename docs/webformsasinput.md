@@ -10,7 +10,7 @@ tags:
   - Handler
 ---
 
-# How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
+# How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO) / Primer on Display Modes
 
 Drupal 8/9 provides a lot of out-of-the-box functionality to setup the way Content Entities (Nodes or in our case ADOs) are exposed to users with the proper credentials. That functionality lives under the "Display Modes" and can be accessed at `yoursite/admin/structure/display-modes`.
 
