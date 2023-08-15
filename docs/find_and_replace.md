@@ -41,6 +41,8 @@ From the main page (display title 'Search and Replace'), you will see:
         
 ![Find and Replace Main Page](images/find_and_replace_main_page.jpg)
 
+### Default Facets Configured
+
 You will also see a listing of a few different default Facets configured to help guide your selection of potential Digital Objects/Collections:
 
 - Object Type

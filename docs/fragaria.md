@@ -37,7 +37,7 @@ You need to make sure the values from the `legacy_PID` JSON key are indexed (as 
 
 4. Enter the Prefix (that follows your domain) for the Redirect Route.
 
-    - Do not use `node/` or `do/` as a Prefix. Even if that will technically work, using either of these Prefix paths will override your existing Paths defined by Drupal and Archipelago.
+    - Do not use `node/` or `do/` as a Prefix. Even if these will technically work (redirect), using either of these Prefix paths will override your existing Paths defined by Drupal and Archipelago.
 
 5. If applicable, enter the the Suffixes (that follow the prefix + the variable part) for the Redirect Route.
 
