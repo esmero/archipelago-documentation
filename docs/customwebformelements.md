@@ -65,7 +65,7 @@ _(*found under Composite Elements in "Add Element" menu)_
 
 * Multi Format Date and Date Range
     - Provides a form element for setting/reading Dates indifferent formats suitable for metadata.
-    - Optional EDTF Validation 
+    - Optional [EDTF](https://www.loc.gov/standards/datetime/) Validation. 
 
 ### Composite Elements:
 
