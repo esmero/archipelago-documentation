@@ -8,7 +8,7 @@ tags:
 
 # Webform Find and Replace
 
-Webform Find and Replace enables you to search against values found within defined Webform elements to apply metadata replacements with targeted care. Below are a guide and some examples of use cases for this Action.
+Webform Find and Replace enables you to search against values found within defined Webform elements to apply metadata replacements with targeted care. Below are a guide and an example use case for this Action.
 
 !!! note
 
@@ -35,22 +35,23 @@ From the dropdown:
 - 3.) Select which value to search for in the [chosen form element] JSON key
 - 4.) Select which value to replace with in the [chosen form element] JSON key
 
+_See the [Simulation Mode notes here](find_and_replace/#simulation-mode) for information about this configuration option._
+
 ### Important Note about Text Based Webform Elements
 
 !!! warning "Maximum Length as Defined by your Webform Element Configuration OR Theme Defaults"
 
-    For certain text-based webform element types, the maximum field length (`maxlength`) defined in your specific webform element configurations will be enforced during Webform Find and Replace operations. If no maximum length is defined, the Admin Theme will enforce a maximum length of 128 characters.
+    For certain text-based webform element types, the maximum field length (`maxlength`) defined in your specific webform element configurations will be enforced during Webform Find and Replace operations. If no maximum length is defined, the Admin Theme will enforce a maximum length of 128 characters. Please see our main [Webforms documentation](webforms.md) for information about configuring webforms in Archipelago.
 
-    Please see our main [Webforms documentation](webforms.md) for information about configuring webforms in Archipelago.
+
+9. If you're absolutely certain about the replacement you have targeted, uncheck the 'only simulate and debug affected JSON' option and select `Apply`.
+10. After the operation is executed, [check your changes](find_and_replace/#checking-your-changes).
+
+## Use Case Example
 
 In the following example configuration, for the selected 'Senju no oubashi (Senju great bridge) object, the *Media Type (type JSON key)* value of "Visual Artwork" will be replaced with the `type` JSON key value of "Photograph".
 
   ![Action Configuration](images/ActionConfiguration_WebformFAR_2022-12.jpg)
-
-_Please see the [Simulation Mode notes here](find_and_replace/#simulation-mode) for information about this configuration option._
-
-9. If you're absolutely certain about the replacement you have targeted, uncheck the 'only simulate and debug affected JSON' option and select `Apply`.
-10. After the operation is executed, [check your changes](find_and_replace/#checking-your-changes).
 
 ___
 
