@@ -21,7 +21,11 @@ In other words, if your Digital Objects have a field and value such as:
 	],	
 ```
 
-You need to make sure the values from the `legacy_PID` JSON key are indexed (as a Solr/Search API Field) and ready for use as part of the Fragaria Redirects configuration.
+You need to make sure the values from the `legacy_PID` JSON key are indexed (as a Solr/Search API Field) and ready for use as part of the Fragaria Redirects configuration. 
+
+!!! note "Best Practice"
+
+    Your new Solr field should to be of field type **"String"** for a perfect match and best results. Using "Full Text" or a related variant Solr field type will allow for a partial match, which might lead multiple original URLs redirecting to the first match in Archipelago.
 
 ## Fragaria Redirect Entity Configuration
 
@@ -32,6 +36,8 @@ You need to make sure the values from the `legacy_PID` JSON key are indexed (as 
 3. Enter a label for the Fragaria Redirect Entity you are configuring.
 
 4. Enter the Prefix (that follows your domain) for the Redirect Route.
+
+    - Do not use `node/` or `do/` as a Prefix. Even if that will technically work, using either of these Prefix paths will override your existing Paths defined by Drupal and Archipelago.
 
 5. If applicable, enter the the Suffixes (that follow the prefix + the variable part) for the Redirect Route.
 
@@ -59,7 +65,7 @@ You need to make sure the values from the `legacy_PID` JSON key are indexed (as 
 
 ### Example Redirects Configuration
 
-![Fragaria Redirects Configuration Example](images/fragaria_redirects_config_example.jpg)
+![Fragaria Redirects Configuration Example](images/fragaria_redirects_config_example.png)
 
 The above example configuration would enable a Temporary redirect from a legacy repository site with a URL of _https://mylegacyrepo.edu//mylegacyrepo/object/mylegacyrepo:1234_ to your new Archipelago PURL of _https://mynewarchipelagorepo.edu/do/mynewADOUUID_.
 

@@ -86,4 +86,4 @@ _(*found under Composite Elements in "Add Element" menu)_
 #### But wait there's more!
 
 You can review the coding behind these custom elements here:
-<https://github.com/esmero/webform_strawberryfield/tree/main/src/Element>
+<https://github.com/esmero/webform_strawberryfield/tree/1.1.0/src/Element>
