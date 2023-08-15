@@ -29,10 +29,10 @@ Webform Find and Replace enables you to search against values found within defin
 8. On the Webform Find and Replace Action Configuration page, you will need to select the configuration options to be applied for your selected ADOs.
 
 - From the dropdown:
-    - 1. Select which Webform you want to use
-    - 2. Select which Form element you want to use
-    - 3. Select which value to search for in the [chosen form element] JSON key
-    - 4. Select which value to replace with in the [chosen form element] JSON key
+    1. Select which Webform you want to use
+    2. Select which Form element you want to use
+    3. Select which value to search for in the [chosen form element] JSON key
+    4. Select which value to replace with in the [chosen form element] JSON key
 
 - See the [Simulation Mode notes here](find_and_replace/#simulation-mode) for information about this optional simulation/test mode.
 
