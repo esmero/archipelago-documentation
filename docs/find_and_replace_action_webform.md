@@ -14,7 +14,7 @@ Webform Find and Replace enables you to search against values found within defin
 
     Please refer to the main [Find and Replace documentation page](find_and_replace.md) for a general overview of [where to find within your Archipelago](find_and_replace.md#where-to-find), a [general overview of default options](find_and_replace.md#main-page-overview) and [important notes and workflow recommendations](find_and_replace.md#important-notes--workflow-recommendations).
 
-## Step by Step 
+## Step by Step Guide
 
 1. Go to `Tools > Advanced Batch Find and Replace`.
 2. Identify and/or Filter the Digital Objects (ADOs) that need updates by Searching and/or using the available [Facets](find_and_replace.md#default-facets-configured).
@@ -34,6 +34,8 @@ From the dropdown:
 - 2.) Select which Form element you want to use
 - 3.) Select which value to search for in the [chosen form element] JSON key
 - 4.) Select which value to replace with in the [chosen form element] JSON key
+
+### Important Note about Text Based Webform Elements
 
 !!! warning "Maximum Length as Defined by your Webform Element Configuration OR Theme Defaults"
 
