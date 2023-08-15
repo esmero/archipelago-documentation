@@ -48,8 +48,17 @@ Webform Find and Replace enables you to search against values found within defin
 
 In the following example configuration, for the selected 'Senju no oubashi (Senju great bridge) object, the *Media Type (type JSON key)* value of "Visual Artwork" will be replaced with the `type` JSON key value of "Photograph".
 
-  ![Action Configuration](images/ActionConfiguration_WebformFAR_2022-12.jpg)
+* Selection of Single ADO and `Webform find-and-replace` Action
 
+    ![Webform Find and Replace Selection and Action](images/SelectionAndAction_WebformFAR_2022-12.jpg)
+
+* Webform Find and Replace Form
+  
+    ![Action Configuration](images/ActionConfiguration_WebformFAR_2022-12.jpg)
+
+* Confirmation of Successfully Executed Changes
+
+    ![Successfully Executed Changes](images/Success_WebformFAR_2022-12.jpg)
 ___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
