@@ -1,3 +1,14 @@
+---
+title: Working with Twig in Archipelago
+tags:
+  - Twig
+  - Twig Templates
+  - Twig Filters
+  - Twig Functions
+  - Examples
+  - JSON
+---
+
 # Working with Twig in Archipelago
 
 The following information can also be found in this Presentation from the "Twig Templates and Archipelago" Spring 2021 Workshop:

@@ -1,3 +1,11 @@
+---
+title: Customizing Webforms: Modifying allowable file extensions
+tags:
+  - Webform
+  - Webform Elements
+  - File Extensions
+---
+
 # Customizing Webforms: Modifying allowable file extensions
 
 A guide to walk users through how to modify the Webform `Descriptive Metadata` to allow additional file extensions to be ingested into Archipelago. This is the default Webform with Archipelago by following [archipelago-deployment](https://github.com/esmero/archipelago-deployment).

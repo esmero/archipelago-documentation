@@ -1,3 +1,14 @@
+---
+title: Twig Recipe Cards for Common Use Cases
+tags:
+  - Twig
+  - Twig Filters
+  - Twig Functions
+  - Twig Templates
+  - Examples
+  - JSON
+---
+
 # Twig Recipe Cards for Common Use Cases
 
 The Twig Recipe Cards below reference common Metadata transformation, display, or other use cases/needs you may have in your own Archipelago repository.

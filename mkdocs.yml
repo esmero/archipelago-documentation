@@ -42,6 +42,7 @@ nav:
       - Creating Display Modes: createdisplaymodes.md
       - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
       - Search Setup through Strawberry Key Name Providers: strawberry_key_name_providers.md
+      - Fragaria Redirects: fragaria.md
     - Content, Metadata & Related Tools:
       - Ingesting Your First Object: firstobject.md
       - Webforms in Archipelago:
@@ -67,10 +68,7 @@ nav:
         - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
         - Twig Recipe Cards for Common Use Cases: twig_recipe_cards.md  
       - Metadata Display Preview: metadata_display_preview.md             
-      - Annotations: annotations.md
-      - General Q&A:
-        - generalqa_index.md
-        - Coming soon: tbd.md        
+      - Annotations: annotations.md   
     - Contributing:
       - Archipelago Contribution Guide: giveortake.md
       - Documentation:
