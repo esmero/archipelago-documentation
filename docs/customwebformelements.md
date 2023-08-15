@@ -1,38 +1,14 @@
+---
+title: Archipelago Custom Webform Elements
+tags:
+  - Webform
+  - Form Mode
+  - Webform Elements
+---
+
 # Archipelago Custom Webform Elements
 
 In addition to the [core elements](https://api.drupal.org/api/drupal/namespace/Drupal%21Core%21Render%21Element/8) provided by the [Drupal Webform module](https://www.drupal.org/project/webform), Archipelago also deploys a robust set of custom webform elements specific to digital repositories metadata needs and use cases.
-
-### Computed Elements:
-
-* Computed Metadata Transplant
-    - Provides an item that takes source values (not only elements) and distributes them into other places/elements via a twig template
-
-* Computed Token
-    - Provides an item to display computed webform submission values using tokens.
-
-* Computed Twig  
-    - Provides an item to display computed webform submission values using Twig
-
-### File Upload Elements:
-
-* Enhancements for Audio, Document, Image, Video file uploads
-    - Backend processing for technical metadata (such as pronom, exif extraction)
-
-* Import Metadata from a File _(such as XML)_
-    - Provides a form element for uploading, saving a file and parsing the content as metadata/webform submission data.
-
-* Import Metadata in CSV format from a File
-    - Provides a form element for uploading, saving a file and parsing the content as metadata/webform submission data.
-
-### Date/Time Elements:
-
-* Multi Format Date and Date Range
-    - Provides a form element for setting/reading Dates indifferent formats suitable for metadata.
-
-### Composite Elements:
-
-* Panorama Tour Builder
-    - Provides a form element to build multi-scene Panorama Tour Builder with hotspots
 
 ### Linked Data:
 
@@ -65,8 +41,49 @@ _(*found under Composite Elements in "Add Element" menu)_
 * Location GEOJSON (Nominatim--Open Street Maps)
     - Provides a form element to collect valid location information (address, longitude, latitude, geolocation) using [Nominatim/Openstreetmap](https://nominatim.openstreetmap.org/ui/search.html) open API
 
+* PubMed MeSH Suggest
+    - Provides a form element to reconciliate against [PubMed MeSH](https://id.nlm.nih.gov/mesh/)
+
+* SNAC Constellation Linked Open Data
+    - Provides a form element to reconciliate against [Social Networks and Archival Context (SNAC)](https://snaccooperative.org/)
+
+* Europeana Entity Suggest
+    - Provides a form element to reconciliate against [Europeana Entity](https://pro.europeana.eu/page/entity)
+
+### File Upload Elements:
+
+* Enhancements for Audio, Document, Image, Video file uploads
+    - Backend processing for technical metadata (such as pronom, exif extraction)
+
+* Import Metadata from a File _(such as XML)_
+    - Provides a form element for uploading, saving a file and parsing the content as metadata/webform submission data.
+
+* Import Metadata in CSV format from a File
+    - Provides a form element for uploading, saving a file and parsing the content as metadata/webform submission data.
+
+### Date/Time Elements:
+
+* Multi Format Date and Date Range
+    - Provides a form element for setting/reading Dates indifferent formats suitable for metadata.
+    - Optional [EDTF](https://www.loc.gov/standards/datetime/) Validation. 
+
+### Composite Elements:
+
+* Panorama Tour Builder
+    - Provides a form element to build multi-scene Panorama Tour Builder with hotspots
+
+### Computed Elements:
+
+* Computed Metadata Transplant
+    - Provides an item that takes source values (not only elements) and distributes them into other places/elements via a twig template
+
+* Computed Token
+    - Provides an item to display computed webform submission values using tokens.
+
+* Computed Twig  
+    - Provides an item to display computed webform submission values using Twig
 
 #### But wait there's more!
 
 You can review the coding behind these custom elements here:
-<https://github.com/esmero/webform_strawberryfield/tree/ISSUE-69/src/Element>
+<https://github.com/esmero/webform_strawberryfield/tree/1.1.0/src/Element>

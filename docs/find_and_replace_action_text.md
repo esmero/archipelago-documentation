@@ -20,14 +20,14 @@ The text-based find and replace is case-sensitive and space-sensitive, and while
 ## Step-by-Step Guide
 
 1. Go to `Tools > Advanced Batch Find and Replace`.
-2. Filter on the objects that need updates by searching and/or faceting.
+2. Identify and/or Filter the Digital Objects (ADOs) that need updates by Searching and/or using the available [Facets](find_and_replace.md#default-facets-configured).
 3. Either select all (includes results that appear on additional pages) by toggling `Select / deselect all results (all pages, x total)` or toggle the buttons for individual objects.
 4. Expand the `► Raw Metadata (JSON)` for some of the objects and double-check that the text being searched is only targeting what is intended and that the replacement text makes sense.
 5. Select `Text based find and replace Metadata for Archipelago Digital Objects content item` from the `Action` dropdown.
 6. If selecting objects individually, expand the `Selected X items` and review the list.
 7. Press the `Apply to selected items` button (don't worry, nothing will happen yet).
 8. Add the values for search (`JSON Search String`) and replace (`JSON Replacement String`).
-9. If you're absolutely certain about the replacement, uncheck `only simulate and debug affected JSON` and `Apply`.
+9. If you're absolutely certain about the replacement you have targeted, uncheck the 'only simulate and debug affected JSON' option and select `Apply`.
 
     !!! Note "only simulate and debug affected JSON"
 

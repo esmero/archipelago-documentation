@@ -1,4 +1,12 @@
-## Webforms in Archipelago
+---
+title: Webforms in Archipelago
+tags:
+  - Webform
+  - Form Mode
+  - Webform Elements
+---
+
+# Webforms in Archipelago
 
 The [Webform Strawberryfield](https://github.com/esmero/webform_strawberryfield) module provides [Drupal Webform](https://www.drupal.org/project/webform) ( == awesome piece of code) integrations for StrawberryField so you can really have control over your Metadata ingests. These custom elements provide Drupal Webform integrations for Archipelago’s StrawberryField so you can have fine grained and detailed control over your Metadata ingests and edits.
 
@@ -18,8 +26,6 @@ Use these webforms or their elements to create a custom webform for your own rep
 
     * [Digital Object Collection](https://github.com/esmero/archipelago-deployment/blob/1.0.0/config/sync/webform.webform.digital_object_collection.yml)
         * [Corresponding Schema.org Type Options](https://github.com/esmero/archipelago-deployment/blob/1.0.0/config/sync/webform.webform_options.schema_org_cw_collections.yml)
-
-* [Community Created Webforms](tbd.md)
 
 ___
 

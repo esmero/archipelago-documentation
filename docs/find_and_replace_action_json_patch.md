@@ -177,7 +177,7 @@ Redundant to say, Batch Actions are intended to be used when a modification need
 ??? note "Keep your JSON Patches (and friends) around"
 
     Since JSON Patching involves writing a, sometimes complex, JSON Document, please keep around an Application (or Text File) where you can copy/paste and save your JSON Patches for resuse or future references. Archipelago will not store nor remember between runs the JSON Patch document you submitted. It is also very useful to copy and have at hand the `RAW JSON` of one of the ADOs you plan to modify as a reference/aid while building the given JSON Patch document.
-`
+
 ## Step 2: JSON Patch Metadata for Archipelago Digital Objects Action Configuration
 
 The default config JSON Patch form will contain an example JSON Patch set of Commands (Document)
