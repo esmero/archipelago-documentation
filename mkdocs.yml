@@ -41,7 +41,10 @@ nav:
       - Strawberryfield Formatters: strawberryfield-formatters.md
       - Creating Display Modes: createdisplaymodes.md
       - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
-      - Search Setup through Strawberry Key Name Providers: strawberry_key_name_providers.md
+      - Search & Solr:
+        - search_solr_index.md
+        - Setup through Strawberry Key Name Providers: strawberry_key_name_providers.md
+        - Advanced Search: search_advanced.md
       - Fragaria Redirects: fragaria.md
     - Content, Metadata & Related Tools:
       - Ingesting Your First Object: firstobject.md
