@@ -1490,22 +1490,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-by-step-guide" class="md-nav__link">
-    Step by Step Guide
-  </a>
-  
-    <nav class="md-nav" aria-label="Step by Step Guide">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#important-notes-about-different-webform-elements" class="md-nav__link">
     Important Notes about Different Webform Elements
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-guide" class="md-nav__link">
+    Step by Step Guide
+  </a>
   
 </li>
       
@@ -1955,22 +1949,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-by-step-guide" class="md-nav__link">
-    Step by Step Guide
-  </a>
-  
-    <nav class="md-nav" aria-label="Step by Step Guide">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#important-notes-about-different-webform-elements" class="md-nav__link">
     Important Notes about Different Webform Elements
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-guide" class="md-nav__link">
+    Step by Step Guide
+  </a>
   
 </li>
       
@@ -2027,41 +2015,6 @@
 <p class="admonition-title">Note</p>
 <p>Please refer to the main <a href="../find_and_replace/">Find and Replace documentation page</a> for a general overview of <a href="../find_and_replace/#where-to-find">where to find within your Archipelago</a>, a <a href="../find_and_replace/#main-page-overview">general overview of default options</a> and <a href="../find_and_replace/#important-notes--workflow-recommendations">important notes and workflow recommendations</a>.</p>
 </div>
-<h2 id="step-by-step-guide">Step by Step Guide</h2>
-<ol>
-<li>Go to <code>Tools &gt; Advanced Batch Find and Replace</code>.</li>
-<li>
-<p>Identify and/or Filter the Digital Objects (ADOs) that need updates by Searching and/or using the available <a href="../find_and_replace/#default-facets-configured">Facets</a>.</p>
-</li>
-<li>
-<p>If using the 'Ingest Method Service URL' for Faceting, please note that using the Find and Replace Webform functionality to update ADOs will cause the original AMI Set URL identified in this Facet to be overwritten and replaced with the specified Webform used during the replacement execution.</p>
-</li>
-<li>
-<p>Either select all (includes results that appear on additional pages) by toggling <code>Select / deselect all results (all pages, x total)</code> or toggle the buttons for individual objects.</p>
-</li>
-<li>Expand the <code>► Raw Metadata (JSON)</code> for some of the objects and double-check that the metadata field and value you are targeting for replacement is present.</li>
-<li>Select <code>Webform find-and-replace Metadata for Archipelago Digital Objects content item</code> from the <code>Action</code> dropdown.</li>
-</ol>
-<p><a class="glightbox" href="../images/SelectionAndAction_WebformFAR_2022-12.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Selection and Action" src="../images/SelectionAndAction_WebformFAR_2022-12.jpg" /></a></p>
-<ol>
-<li>If selecting objects individually, expand the <code>Selected X items</code> and review the list.</li>
-<li>Press the <code>Apply to selected items</code> button (don't worry, nothing will happen yet).  </li>
-<li>
-<p>On the Webform Find and Replace Action Configuration page, you will need to select the configuration options to be applied for your selected ADOs.</p>
-</li>
-<li>
-<p>From the dropdown:</p>
-<ol>
-<li>Select which Webform you want to use</li>
-<li>Select which Form element you want to use</li>
-<li>Select which value to search for in the [chosen form element] JSON key</li>
-<li>Select which value to replace with in the [chosen form element] JSON key</li>
-</ol>
-</li>
-<li>
-<p>See the <a href="find_and_replace/#simulation-mode">Simulation Mode notes here</a> for information about this optional simulation/test mode.</p>
-</li>
-</ol>
 <h3 id="important-notes-about-different-webform-elements">Important Notes about Different Webform Elements</h3>
 <div class="admonition warning">
 <p class="admonition-title">Maximum Length as Defined by your Webform Element Configuration OR Theme Defaults</p>
@@ -2071,7 +2024,28 @@
 <p class="admonition-title">Some Complex Webform Elements Not Available</p>
 <p>Please note that some complex webform elements are not available for use with Webform Find and Replace. Any webform element that requires user interactions (such as the Nominatim Open Street Maps lookup/query and selection) is note available for usage. The different file upload webform elements are also not available for use with Webform Find and Replace.</p>
 </div>
+<h2 id="step-by-step-guide">Step by Step Guide</h2>
 <ol>
+<li>Go to <code>Tools &gt; Advanced Batch Find and Replace</code>.</li>
+<li>Identify and/or Filter the Digital Objects (ADOs) that need updates by Searching and/or using the available <a href="../find_and_replace/#default-facets-configured">Facets</a>.</li>
+<li>If using the 'Ingest Method Service URL' for Faceting, please note that using the Find and Replace Webform functionality to update ADOs will cause the original AMI Set URL identified in this Facet to be overwritten and replaced with the specified Webform used during the replacement execution.</li>
+<li>Either select all (includes results that appear on additional pages) by toggling <code>Select / deselect all results (all pages, x total)</code> or toggle the buttons for individual objects.</li>
+<li>Expand the <code>► Raw Metadata (JSON)</code> for some of the objects and double-check that the metadata field and value you are targeting for replacement is present.</li>
+<li>Select <code>Webform find-and-replace Metadata for Archipelago Digital Objects content item</code> from the <code>Action</code> dropdown.</li>
+</ol>
+<p><a class="glightbox" href="../images/SelectionAndAction_WebformFAR_2022-12.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Selection and Action" src="../images/SelectionAndAction_WebformFAR_2022-12.jpg" /></a></p>
+<ol>
+<li>If selecting objects individually, expand the <code>Selected X items</code> and review the list.</li>
+<li>Press the <code>Apply to selected items</code> button (don't worry, nothing will happen yet).  </li>
+<li>On the Webform Find and Replace Action Configuration page, you will need to select the configuration options to be applied for your selected ADOs.</li>
+<li>From the dropdown:<ol>
+<li>Select which Webform you want to use</li>
+<li>Select which Form element you want to use</li>
+<li>Select which value to search for in the [chosen form element] JSON key</li>
+<li>Select which value to replace with in the [chosen form element] JSON key</li>
+</ol>
+</li>
+<li>See the <a href="find_and_replace/#simulation-mode">Simulation Mode notes here</a> for information about this optional simulation/test mode.</li>
 <li>If you're absolutely certain about the replacement you have targeted, uncheck the 'only simulate and debug affected JSON' option and select <code>Apply</code>.</li>
 <li>After the operation is executed, <a href="find_and_replace/#checking-your-changes">check your changes</a>.</li>
 </ol>
