@@ -32,9 +32,6 @@ Webform Find and Replace enables you to search against values found within defin
 3. Either select all (includes results that appear on additional pages) by toggling `Select / deselect all results (all pages, x total)` or toggle the buttons for individual objects.
 4. Expand the `► Raw Metadata (JSON)` for some of the objects and double-check that the metadata field and value you are targeting for replacement is present.
 5. Select `Webform find-and-replace Metadata for Archipelago Digital Objects content item` from the `Action` dropdown.
-
-   ![Selection and Action](images/SelectionAndAction_WebformFAR_2022-12.jpg)
-
 6. If selecting objects individually, expand the `Selected X items` and review the list.
 7. Press the `Apply to selected items` button (don't worry, nothing will happen yet).  
 8. On the Webform Find and Replace Action Configuration page, you will need to select the configuration options to be applied for your selected ADOs.
