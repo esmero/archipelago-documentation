@@ -26,23 +26,21 @@ Webform Find and Replace enables you to search against values found within defin
 
 6. If selecting objects individually, expand the `Selected X items` and review the list.
 7. Press the `Apply to selected items` button (don't worry, nothing will happen yet).  
-8. On the 'Webform Find and Replace Action Configuration' page, you will need to select the configuration options to be applied for your selected ADOs.
+8. On the Webform Find and Replace Action Configuration page, you will need to select the configuration options to be applied for your selected ADOs.
 
-From the dropdown:
+- From the dropdown:
+    - 1. Select which Webform you want to use
+    - 2. Select which Form element you want to use
+    - 3. Select which value to search for in the [chosen form element] JSON key
+    - 4. Select which value to replace with in the [chosen form element] JSON key
 
-- 1.) Select which Webform you want to use
-- 2.) Select which Form element you want to use
-- 3.) Select which value to search for in the [chosen form element] JSON key
-- 4.) Select which value to replace with in the [chosen form element] JSON key
-
-_See the [Simulation Mode notes here](find_and_replace/#simulation-mode) for information about this configuration option._
+- See the [Simulation Mode notes here](find_and_replace/#simulation-mode) for information about this optional simulation/test mode.
 
 ### Important Note about Text Based Webform Elements
 
 !!! warning "Maximum Length as Defined by your Webform Element Configuration OR Theme Defaults"
 
     For certain text-based webform element types, the maximum field length (`maxlength`) defined in your specific webform element configurations will be enforced during Webform Find and Replace operations. If no maximum length is defined, the Admin Theme will enforce a maximum length of 128 characters. Please see our main [Webforms documentation](webforms.md) for information about configuring webforms in Archipelago.
-
 
 9. If you're absolutely certain about the replacement you have targeted, uncheck the 'only simulate and debug affected JSON' option and select `Apply`.
 10. After the operation is executed, [check your changes](find_and_replace/#checking-your-changes).
