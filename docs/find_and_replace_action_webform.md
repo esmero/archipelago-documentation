@@ -22,7 +22,7 @@ Webform Find and Replace enables you to search against values found within defin
 
 !!! note "Some Complex Webform Elements Not Available"
 
-    Please note that some complex webform elements are not available for use with Webform Find and Replace. Any webform element that requires user interactions (such as the Nominatim Open Street Maps lookup/query and selection) is note available for usage. The different file upload webform elements are also not available for use with Webform Find and Replace.
+    Please note that some complex webform elements are not available for use with Webform Find and Replace. Any webform element that requires user interactions (such as the Nominatim Open Street Maps lookup/query and selection) is not available for usage. The different file upload webform elements are also not available for use with Webform Find and Replace.
 
 ## Step by Step Guide
 
