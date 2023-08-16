@@ -46,7 +46,7 @@ Webform Find and Replace enables you to search against values found within defin
 
 ## Use Case Example
 
-In the following example configuration, for the selected 'Senju no oubashi (Senju great bridge) object, the *Media Type (type JSON key)* value of "Visual Artwork" will be replaced with the `type` JSON key value of "Photograph".
+In the following example configuration, for the selected 'Senju no oubashi (Senju great bridge)' object, the *Media Type (type JSON key)* value of "Visual Artwork" will be replaced with the `type` JSON key value of "Photograph".
 
 * Selection of Single ADO and `Webform find-and-replace` Action
 
