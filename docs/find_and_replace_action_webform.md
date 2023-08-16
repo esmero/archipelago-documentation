@@ -22,7 +22,7 @@ Webform Find and Replace enables you to search against values found within defin
 
 !!! note "Some Complex Webform Elements Not Available"
 
-    Please note that some complex webform elements are not available for use with Webform Find and Replace. Any webform element that requires user interactions (such as the Nominatim Open Street Maps lookup/query and selection) is note available for usage. The different file upload webform elements are also not available for use with Webform Find and Replace.
+    Please note that some complex webform elements are not available for use with Webform Find and Replace. Any webform element that requires user interactions (such as the Nominatim Open Street Maps lookup/query and selection) is not available for usage. The different file upload webform elements are also not available for use with Webform Find and Replace.
 
 ## Step by Step Guide
 
@@ -32,9 +32,6 @@ Webform Find and Replace enables you to search against values found within defin
 3. Either select all (includes results that appear on additional pages) by toggling `Select / deselect all results (all pages, x total)` or toggle the buttons for individual objects.
 4. Expand the `► Raw Metadata (JSON)` for some of the objects and double-check that the metadata field and value you are targeting for replacement is present.
 5. Select `Webform find-and-replace Metadata for Archipelago Digital Objects content item` from the `Action` dropdown.
-
-   ![Selection and Action](images/SelectionAndAction_WebformFAR_2022-12.jpg)
-
 6. If selecting objects individually, expand the `Selected X items` and review the list.
 7. Press the `Apply to selected items` button (don't worry, nothing will happen yet).  
 8. On the Webform Find and Replace Action Configuration page, you will need to select the configuration options to be applied for your selected ADOs.
@@ -51,8 +48,17 @@ Webform Find and Replace enables you to search against values found within defin
 
 In the following example configuration, for the selected 'Senju no oubashi (Senju great bridge) object, the *Media Type (type JSON key)* value of "Visual Artwork" will be replaced with the `type` JSON key value of "Photograph".
 
-  ![Action Configuration](images/ActionConfiguration_WebformFAR_2022-12.jpg)
+* Selection of Single ADO and `Webform find-and-replace` Action
 
+    ![Webform Find and Replace Selection and Action](images/SelectionAndAction_WebformFAR_2022-12.jpg)
+
+* Webform Find and Replace Form
+  
+    ![Action Configuration](images/ActionConfiguration_WebformFAR_2022-12.jpg)
+
+* Confirmation of Successfully Executed Changes
+
+    ![Successfully Executed Changes](images/Success_WebformFAR_2022-12.jpg)
 ___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.

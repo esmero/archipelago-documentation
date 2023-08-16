@@ -39,10 +39,13 @@ You need to have existing Digital Objects or Collections (ADOs) in your Archipel
 
 You should be familiar with the basic mechanics of AMI Set Configuration noted in [Steps 1-6](AMIviaSpreadsheets.md#step-1-plugin-selection).
 
-For all Update operations, it is strongly recommended to both:
+!!! note "Best Practices"
 
-- Create a small test batch CSV referencing one to two/three ADOs to test the execution of your desired Update actions on before running your larger Update Sets. There is no 'Undo' or 'Revert Changes' button.
-- Use the 'Export Archipelago Digital Objects to CSV content item' Action available on the main `Content` page and the `Find and Replace` page menus to generate a CSV of your non-modified objects. 
+    For all AMI Update operations, it is strongly recommended to both:
+    
+    1. Before Updating, use the **'Export Archipelago Digital Objects to CSV content item'** Action available on the main `Content` page and the `Find and Replace` page menus to generate a CSV of your non-modified objects. If something unintended occurs with your Update execution, you could use this CSV of your non-modified objects to restore your objects (or just a field or two) as needed.
+    
+    2. Create a **small test batch CSV** referencing one to two/three ADOs to test the execution of your desired Update actions on before running your larger Update Sets. There is no 'Undo' or 'Revert Changes' button that can be used for an AMI Update Set. You do have the option to 'Revert Revisions' on an object-by-object basis, but that is not ideal for reverting changes that were executing across large batches of ADOs. See the ['Checking Your Changes'](find_and_replace/#checking-your-changes) documentation section for more information about reviewing and potentially reverting Revisions.
 
 ## Data Transformation Options for AMI Update Sets
 
@@ -71,7 +74,7 @@ As with regular/Create New AMI Sets, you will have to select your preferred Data
     
     Independently of IF your CSV contains "subjects" as a header/column, the Twig template will still output an empty "subjects", which, when using the "Replace" mode will wipe out any existing "subjects" in your ADO.
     
-    During any update operation (independently of the functional operation chosen) and IF you are using/passing your CSV through a template, AMI will provide an extra Context key for you to reference in your Twig Template. You can always reference 'dataOriginal.subjects' for example -- all dataOriginal.xx keys will contain the values of the existing metadata for your ADOs. This allows you to make "smart" templates that check IF a certain key/values exists, compare the unmodified (and to be modified) ADO(s) with the new data passed, then generate the desired ouput. 
+    During any update operation (independently of the functional operation chosen) and IF you are using/passing your CSV through a template, AMI will provide an extra Context key for you to reference in your Twig Template. You can always reference 'dataOriginal.subjects' for example -- all dataOriginal.xx keys will contain the values of the existing metadata for your ADOs. This allows you to make "smart" templates that check IF a certain key/values exists, compare the unmodified (and to be modified) ADO(s) with the new data passed, then generate the desired output. 
 
 ## Update Set Processing Options
 
@@ -115,7 +118,7 @@ The **Append** update operation 'will append values to existing JSON keys in an 
 
 ## Other Process Setup Options
 
-For the other AMI Set Process options and steps, please refer to the information found from [Steps 7-10 in this complementary documentation for Create New ADOs AMI Sets](AMIviaSpreadsheets.md#step-7-ami-set-processing).
+For the other AMI Set Process options and steps, please refer to the information found from [Steps 7-10 in this complementary documentation for Create New ADOs AMI Sets](AMIviaSpreadsheets.md#step-7-ami-set-processing). See the ['Checking Your Changes'](find_and_replace/#checking-your-changes) documentation section for more information about reviewing and potentially reverting Revisions.
 
 ___
 
