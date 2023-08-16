@@ -2022,7 +2022,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Some Complex Webform Elements Not Available</p>
-<p>Please note that some complex webform elements are not available for use with Webform Find and Replace. Any webform element that requires user interactions (such as the Nominatim Open Street Maps lookup/query and selection) is note available for usage. The different file upload webform elements are also not available for use with Webform Find and Replace.</p>
+<p>Please note that some complex webform elements are not available for use with Webform Find and Replace. Any webform element that requires user interactions (such as the Nominatim Open Street Maps lookup/query and selection) is not available for usage. The different file upload webform elements are also not available for use with Webform Find and Replace.</p>
 </div>
 <h2 id="step-by-step-guide">Step by Step Guide</h2>
 <ol>
@@ -2032,9 +2032,6 @@
 <li>Either select all (includes results that appear on additional pages) by toggling <code>Select / deselect all results (all pages, x total)</code> or toggle the buttons for individual objects.</li>
 <li>Expand the <code>► Raw Metadata (JSON)</code> for some of the objects and double-check that the metadata field and value you are targeting for replacement is present.</li>
 <li>Select <code>Webform find-and-replace Metadata for Archipelago Digital Objects content item</code> from the <code>Action</code> dropdown.</li>
-</ol>
-<p><a class="glightbox" href="../images/SelectionAndAction_WebformFAR_2022-12.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Selection and Action" src="../images/SelectionAndAction_WebformFAR_2022-12.jpg" /></a></p>
-<ol>
 <li>If selecting objects individually, expand the <code>Selected X items</code> and review the list.</li>
 <li>Press the <code>Apply to selected items</code> button (don't worry, nothing will happen yet).  </li>
 <li>On the Webform Find and Replace Action Configuration page, you will need to select the configuration options to be applied for your selected ADOs.</li>
@@ -2051,8 +2048,21 @@
 </ol>
 <h2 id="use-case-example">Use Case Example</h2>
 <p>In the following example configuration, for the selected 'Senju no oubashi (Senju great bridge) object, the <em>Media Type (type JSON key)</em> value of "Visual Artwork" will be replaced with the <code>type</code> JSON key value of "Photograph".</p>
+<ul>
+<li>
+<p>Selection of Single ADO and <code>Webform find-and-replace</code> Action</p>
+<p><a class="glightbox" href="../images/SelectionAndAction_WebformFAR_2022-12.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Webform Find and Replace Selection and Action" src="../images/SelectionAndAction_WebformFAR_2022-12.jpg" /></a></p>
+</li>
+<li>
+<p>Webform Find and Replace Form</p>
 <p><a class="glightbox" href="../images/ActionConfiguration_WebformFAR_2022-12.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Action Configuration" src="../images/ActionConfiguration_WebformFAR_2022-12.jpg" /></a></p>
+</li>
+<li>
+<p>Confirmation of Successfully Executed Changes</p>
+<p><a class="glightbox" href="../images/Success_WebformFAR_2022-12.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Successfully Executed Changes" src="../images/Success_WebformFAR_2022-12.jpg" /></a></p>
 <hr />
+</li>
+</ul>
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
 <p>Return to the main <a href="../find_and_replace/">Find and Replace documentation page</a> or the <a href="../">Archipelago Documentation main page</a>.</p>
 
@@ -2061,7 +2071,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 15, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 16, 2023</span>
       
         <br>
         Created:

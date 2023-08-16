@@ -2154,11 +2154,18 @@
 </li>
 </ul>
 <p>You should be familiar with the basic mechanics of AMI Set Configuration noted in <a href="../AMIviaSpreadsheets/#step-1-plugin-selection">Steps 1-6</a>.</p>
-<p>For all Update operations, it is strongly recommended to both:</p>
-<ul>
-<li>Create a small test batch CSV referencing one to two/three ADOs to test the execution of your desired Update actions on before running your larger Update Sets. There is no 'Undo' or 'Revert Changes' button.</li>
-<li>Use the 'Export Archipelago Digital Objects to CSV content item' Action available on the main <code>Content</code> page and the <code>Find and Replace</code> page menus to generate a CSV of your non-modified objects. </li>
-</ul>
+<div class="admonition note">
+<p class="admonition-title">Best Practices</p>
+<p>For all AMI Update operations, it is strongly recommended to both:</p>
+<ol>
+<li>
+<p>Before Updating, use the <strong>'Export Archipelago Digital Objects to CSV content item'</strong> Action available on the main <code>Content</code> page and the <code>Find and Replace</code> page menus to generate a CSV of your non-modified objects. If something unintended occurs with your Update execution, you could use this CSV of your non-modified objects to restore your objects (or just a field or two) as needed.</p>
+</li>
+<li>
+<p>Create a <strong>small test batch CSV</strong> referencing one to two/three ADOs to test the execution of your desired Update actions on before running your larger Update Sets. There is no 'Undo' or 'Revert Changes' button that can be used for an AMI Update Set. You do have the option to 'Revert Revisions' on an object-by-object basis, but that is not ideal for reverting changes that were executing across large batches of ADOs. See the <a href="find_and_replace/#checking-your-changes">'Checking Your Changes'</a> documentation section for more information about reviewing and potentially reverting Revisions.</p>
+</li>
+</ol>
+</div>
 <h2 id="data-transformation-options-for-ami-update-sets">Data Transformation Options for AMI Update Sets</h2>
 <p>As with regular/Create New AMI Sets, you will have to select your preferred Data Tranformation configuration during Step 3 : of your AMI Update Set Configuration.</p>
 <ul>
@@ -2186,7 +2193,7 @@
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="s2">&quot;subjects&quot;</span>:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>data.subjects<span class="p">|</span>json_encode<span class="p">|</span>raw<span class="w"> </span><span class="o">}}</span>,<span class="w"> </span>
 </code></pre></div></p>
 <p>Independently of IF your CSV contains "subjects" as a header/column, the Twig template will still output an empty "subjects", which, when using the "Replace" mode will wipe out any existing "subjects" in your ADO.</p>
-<p>During any update operation (independently of the functional operation chosen) and IF you are using/passing your CSV through a template, AMI will provide an extra Context key for you to reference in your Twig Template. You can always reference 'dataOriginal.subjects' for example -- all dataOriginal.xx keys will contain the values of the existing metadata for your ADOs. This allows you to make "smart" templates that check IF a certain key/values exists, compare the unmodified (and to be modified) ADO(s) with the new data passed, then generate the desired ouput. </p>
+<p>During any update operation (independently of the functional operation chosen) and IF you are using/passing your CSV through a template, AMI will provide an extra Context key for you to reference in your Twig Template. You can always reference 'dataOriginal.subjects' for example -- all dataOriginal.xx keys will contain the values of the existing metadata for your ADOs. This allows you to make "smart" templates that check IF a certain key/values exists, compare the unmodified (and to be modified) ADO(s) with the new data passed, then generate the desired output. </p>
 </div>
 <h2 id="update-set-processing-options">Update Set Processing Options</h2>
 <p>Beginning from <a href="../AMIviaSpreadsheets/#step-7-ami-set-processing">Step 7, Processing</a> of your AMI Set Configuration, select the Update operation that best corresponds to your targeted Update scenario.</p>
@@ -2226,7 +2233,7 @@
 </li>
 </ul>
 <h2 id="other-process-setup-options">Other Process Setup Options</h2>
-<p>For the other AMI Set Process options and steps, please refer to the information found from <a href="../AMIviaSpreadsheets/#step-7-ami-set-processing">Steps 7-10 in this complementary documentation for Create New ADOs AMI Sets</a>.</p>
+<p>For the other AMI Set Process options and steps, please refer to the information found from <a href="../AMIviaSpreadsheets/#step-7-ami-set-processing">Steps 7-10 in this complementary documentation for Create New ADOs AMI Sets</a>. See the <a href="find_and_replace/#checking-your-changes">'Checking Your Changes'</a> documentation section for more information about reviewing and potentially reverting Revisions.</p>
 <hr />
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
 <p>Return to the <a href="../">Archipelago Documentation main page</a>.</p>
@@ -2236,7 +2243,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 16, 2023</span>
       
         <br>
         Created:
