@@ -18,22 +18,32 @@ Archipelago's Metadata Display Preview is a very handy tool for your repository 
 
 1. Navigate to the Metadata Display list at `/admin/content/metadatadisplay/list` (or through the admin menu via  `Manage > Content > Metadata Displays`). From the main Metadata Display List page, you can access all of the different display, rendering, and processing templates found in your Archipelago.
 
-    ![Metadata Display List](images/metadata_display_list.jpg)
+    !!! example "Selecting a Metadata Display Template"
+
+        ![Metadata Display List](images/metadata_display_list.jpg)
 
 2. Open and select 'Edit' for the Template you wish to Edit and/or Preview.
 
-    ![Edit Metadata Display](images/edit_metadata_display.jpg)
+    !!! example "Editing a Metadata Display Template"
+
+        ![Edit Metadata Display](images/edit_metadata_display.jpg)
 
 3. You will now be able to select either an Archipelago Digital Object (ADO) or AMI Set to Preview. Both selection types will use an autocomplete search (make sure the autocomplete matches fully against your selection before proceeding).
 
-    - Archipelago Digital Object (ADO) selection:
-    ![ADO Preview Laddie the Dog](images/preview_ado_laddie.jpg)
+    !!! example "Archipelago Digital Object (ADO) selection"
 
-    - AMI Set and Row selection:
-        - For the Row, you can enter either a (CSV row) number: 
+        ![ADO Preview Laddie the Dog](images/preview_ado_laddie.jpg)
+
+    !!! example "AMI Set and Row selection"
+
+        For the Row, you can enter either a (CSV row) number
+
         ![AMI Set Preview Row Number](images/preview_ami_set_row_number.jpg)
 
-        - Or a label found within the Source Data CSV:
+    !!! example "AMI Set and Row selection"
+
+        Or a label found within the Source Data CSV:
+
         ![AMI Set Preview Row Label](images/preview_ami_set_row_label.jpg)
 
 4. After you select your ADO or AMI Set and press the `Show Preview` button, the fuller Preview section will open up on the right side of the screen. The left side will continue to show the Metadata Display Template you originally selected to Edit.
@@ -42,11 +52,13 @@ Archipelago's Metadata Display Preview is a very handy tool for your repository 
 
         It is **strongly recommended** to always select the option to "Show Preview using native Output Format (e.g. HTML)".
 
-    - Archipelago Digital Object (ADO) selection against an HTML Display template:
-    ![Preview ADO HTML Example](images/preview_ado_html_example.jpg)
+    !!! example "Archipelago Digital Object (ADO) selection against an HTML Display template"
+
+        ![Preview ADO HTML Example](images/preview_ado_html_example.jpg)
     
-    - AMI Set and Row selection against a JSON Ingest template:
-    ![Preview AMI Set JSON Example](images/preview_ami_set_json_example.jpg)
+    !!! example "AMI Set and Row selection against a JSON Ingest template"
+
+        ![Preview AMI Set JSON Example](images/preview_ami_set_json_example.jpg)
 
 5. To keep track of the JSON keys used in your template select the `Show Preview with JSON keys used in this template` option before pressing `Show Preview`. For more details see [below](#metadata-display-preview-json-key-variables).
 
