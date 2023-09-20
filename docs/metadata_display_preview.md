@@ -77,6 +77,23 @@ Archipelago's Metadata Display Preview is a very handy tool for your repository 
 
 ## Metadata Display Preview JSON Key Variables
 
+!!! note
+
+    This feature is available as of `strawberryfield/format_strawberryfield:1.2.0.x-dev` and `archipelago/ami:0.6.0.x-dev`. To make use of it before the official 0.6.0/1.2.0 release you can run the following commands:
+
+    1. Alias the next release branches with the current dependency requirement versions:
+        ```shell
+        docker exec -ti esmero-php bash -c "composer require 'archipelago/ami:0.6.0.x-dev as 0.5.0.x-dev' 'strawberryfield/format_strawberryfield:1.2.0.x-dev as 1.1.0.x-dev'"
+        ```
+    2. Then run any database updates:
+        ```shell
+        docker exec -ti esmero-php bash -c "drush updb"
+        ```
+    3. And finally, clear the cache:
+        ```shell
+        docker exec -ti esmero-php bash -c "drush cr"
+        ```
+
 When creating or editing a Metadata Display Twig template, you can keep track of the JSON keys being used in the template by enabling the option after selecting an Archipelago Digital Object (ADO) or AMI Set row before pressing `Show preview`:
 
 !!! example "Enable Metadata Display Preview Variables"
