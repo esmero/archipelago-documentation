@@ -2596,6 +2596,21 @@
 </li>
 </ol>
 <h2 id="metadata-display-preview-json-key-variables">Metadata Display Preview JSON Key Variables</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is available as of <code>strawberryfield/format_strawberryfield:1.2.0.x-dev</code> and <code>archipelago/ami:0.6.0.x-dev</code>. To make use of it before the official 0.6.0/1.2.0 release you can run the following commands:</p>
+<ol>
+<li>Alias the next release branches with the current dependency requirement versions:
+    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require &#39;archipelago/ami:0.6.0.x-dev as 0.5.0.x-dev&#39; &#39;strawberryfield/format_strawberryfield:1.2.0.x-dev as 1.1.0.x-dev&#39;&quot;</span>
+</code></pre></div></li>
+<li>Then run any database updates:
+    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush updb&quot;</span>
+</code></pre></div></li>
+<li>And finally, clear the cache:
+    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush cr&quot;</span>
+</code></pre></div></li>
+</ol>
+</div>
 <p>When creating or editing a Metadata Display Twig template, you can keep track of the JSON keys being used in the template by enabling the option after selecting an Archipelago Digital Object (ADO) or AMI Set row before pressing <code>Show preview</code>:</p>
 <div class="admonition example">
 <p class="admonition-title">Enable Metadata Display Preview Variables</p>
@@ -2632,7 +2647,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 20, 2023</span>
       
         <br>
         Created:
