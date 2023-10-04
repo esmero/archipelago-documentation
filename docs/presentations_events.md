@@ -14,7 +14,7 @@
 - Archipelago Late 2022 Workshop Series:
     - [Session 1 : AMI Essentials and Tricks of the Trade. Pino Navarro, Diego; Sherrick (Lund), Allison; Romabiles, Katie. (November 2022)](https://docs.google.com/presentation/d/1vPc4YfwMCPLVEewWdQaw7bm3UKKl3dnWtRaojoA9OBA/edit?usp=sharing)
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/Nm01tAey6KHqjfJglx8ckxxivaqVBq8aK7w3lKMvDAgB9_xcioCSs0bfO_4_lHjM.kw6JbAqgUkgOuyWm) 
-    - [Session 2: Twig Templating and Metadata Display Preview for AMI Ingest. Pino Navarro, Diego; Sherrick (Lund), Allison; Romabiles, Katie. (December 2022)](https://docs.google.com/presentation/d/10G2OpzkNmu1YWljJFPAVXm2KoByx34TpRSh2milHEFc/edit?usp=sharing)
+    - [Session 2: Twig Templating and Metadata Display Preview for AMI Ingest. Pino Navarro, Diego; Sherrick (Lund), Allison; Romabiles, Katie; Min, Albert. (December 2022)](https://docs.google.com/presentation/d/10G2OpzkNmu1YWljJFPAVXm2KoByx34TpRSh2milHEFc/edit?usp=sharing)
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/pwXUet1qq4ovSo-kXui9LpI9nh5BDXP-Xq0zSTAJGA7ip7eH4uGQYq7uUUai-v8X.K5cSQpnEXqXrUJH-)
     - [Session 3: AMI Set Processing and Advanced Find + Replace (December 2022)](https://docs.google.com/presentation/d/1IKt766c2k-Q_nxEfu45dkyjkyZvSbh5GblpUugnacLw/edit?usp=sharing)
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/9rSVZulDUGrBOSqwDR-11A2HJmp3b9ndvurDgkElHJGE74Jh1zO4HUySLVkJlADn.UOpVnKNaBkq7s_IU)
@@ -23,7 +23,7 @@
 
 - [Open Perspectives Forum. Monger, Jenifer J.; McCarthy, Brenden. (November 2022)](https://vimeo.com/769482312) 
 
-- [Migration, Collaboration and Innovation with Archipelago Commons. Monger, Jenifer J. (Septmember 2022)](https://www.capitalarchivist.org/caa/wp-content/uploads/2022/09/fall_winter_2022-23.pdf#page=7)
+- [Migration, Collaboration and Innovation with Archipelago Commons. Monger, Jenifer J. (September 2022)](https://www.capitalarchivist.org/caa/wp-content/uploads/2022/09/fall_winter_2022-23.pdf#page=7)
 
 - 🍓 [Archipelago 1.0.0 - August 2022 Release Announcement (August 2022)](https://groups.google.com/g/archipelago-commons/c/UHMUdtZ8BFU/m/W8hnZ1guAgAJ) and [updated Specs and Features List](https://docs.google.com/document/d/1_fAcDBLaIilKF_mFXPFzDeWz_aqz7AHxSPwYTd21Nug/edit?usp=sharing)   
 
