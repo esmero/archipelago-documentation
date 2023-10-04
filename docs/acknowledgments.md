@@ -4,7 +4,6 @@
 * [Giancarlo Birello](https://github.com/giancarlobi)
 * [Allison Sherrick](https://github.com/alliomeria)
 * [Katie Romabiles](https://github.com/karomabiles)
-* [Albert Min](https://github.com/aksm)
 
 # Acknowledgments
 
