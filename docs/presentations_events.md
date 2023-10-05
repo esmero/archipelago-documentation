@@ -25,7 +25,7 @@
 
 - [Open Perspectives Forum. Monger, Jenifer J.; McCarthy, Brenden. (November 2022)](https://vimeo.com/769482312) 
 
-- [Migration, Collaboration and Innovation with Archipelago Commons. Monger, Jenifer J. (Septmember 2022)](https://www.capitalarchivist.org/caa/wp-content/uploads/2022/09/fall_winter_2022-23.pdf#page=7)
+- [Migration, Collaboration and Innovation with Archipelago Commons. Monger, Jenifer J. (September 2022)](https://www.capitalarchivist.org/caa/wp-content/uploads/2022/09/fall_winter_2022-23.pdf#page=7)
 
 - 🍓 [Archipelago 1.0.0 - August 2022 Release Announcement (August 2022)](https://groups.google.com/g/archipelago-commons/c/UHMUdtZ8BFU/m/W8hnZ1guAgAJ) and [updated Specs and Features List](https://docs.google.com/document/d/1_fAcDBLaIilKF_mFXPFzDeWz_aqz7AHxSPwYTd21Nug/edit?usp=sharing)   
 
