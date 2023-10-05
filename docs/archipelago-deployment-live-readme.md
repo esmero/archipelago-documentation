@@ -362,7 +362,6 @@ uname -m
 
 * [Diego Pino](https://github.com/DiegoPino)
 * [Allison Lund](https://github.com/alliomeria)
-* [Albert Min](https://github.com/aksm)
 * [Giancarlo Birello](https://github.com/giancarlobi)
 
 ## Acknowledgments
