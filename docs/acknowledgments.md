@@ -3,7 +3,6 @@
 * [Diego Pino](https://github.com/DiegoPino)
 * [Giancarlo Birello](https://github.com/giancarlobi)
 * [Allison Sherrick](https://github.com/alliomeria)
-* [Katie Romabiles](https://github.com/karomabiles)
 
 # Acknowledgments
 

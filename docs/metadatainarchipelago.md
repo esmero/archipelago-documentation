@@ -121,7 +121,7 @@ In the presence of the structure exemplified above the following JSON snipped:
 	]	
 ```
 
-Will tell Archipelago that the JSON key `images` should be treated as containing Entity IDs for a Drupal Entity of type (`entity:file`) File. This has many interessting consequences. Archipelago, on edit/update/ingest will try (hard) to get a hold of Files with ID 1, 2 and 3. If in temporary storage Arhcipelago will move them to its final Permanent Location, will make sure Drupal knows those files are being used by this ADO, will run multiple **Technical Metadata** Extractions and classify internally the Files, adding everything it could learn from them. In practice, this means that Archipelago will write for you additional structures into the JSON enriching your **Metadata**.
+Will tell Archipelago that the JSON key `images` should be treated as containing Entity IDs for a Drupal Entity of type (`entity:file`) File. This has many interessting consequences. Archipelago, on edit/update/ingest will try (hard) to get a hold of Files with ID 1, 2 and 3. If in temporary storage Archipelago will move them to its final Permanent Location, will make sure Drupal knows those files are being used by this ADO, will run multiple **Technical Metadata** Extractions and classify internally the Files, adding everything it could learn from them. In practice, this means that Archipelago will write for you additional structures into the JSON enriching your **Metadata**.
 
 Without this structure, the `images` key would not trigger any logic but will of course still exist and can always still be used as a list of numbers while templating.
 
