@@ -743,6 +743,8 @@
       
         
       
+        
+      
     
     
     
@@ -803,7 +805,7 @@
         
   
   <span class="md-ellipsis">
-    Installing Archipelago Drupal 9 on OSX (macOS)
+    Installing Archipelago Drupal 10 on OSX (macOS)
   </span>
   
 
@@ -823,7 +825,7 @@
         
   
   <span class="md-ellipsis">
-    Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04
+    Installing Archipelago Drupal 10 on Ubuntu 18.04 or 20.04
   </span>
   
 
@@ -843,7 +845,7 @@
         
   
   <span class="md-ellipsis">
-    Installing Archipelago Drupal 9 on Windows 10/11
+    Installing Archipelago Drupal 10 on Windows 10/11
   </span>
   
 
@@ -864,6 +866,26 @@
   
   <span class="md-ellipsis">
     Adding Demo Archipelago Digital Objects (ADOs) to your Repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UpgradeDrupalD9toD10.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrading Drupal 9 to Drupal 10 (1.1.0 to 1.3.0)
   </span>
   
 
@@ -2839,7 +2861,7 @@
 <span class="w">        </span><span class="mi">3</span>
 <span class="w">    </span><span class="p">]</span><span class="w">   </span>
 </code></pre></div>
-<p>Will tell Archipelago that the JSON key <code>images</code> should be treated as containing Entity IDs for a Drupal Entity of type (<code>entity:file</code>) File. This has many interessting consequences. Archipelago, on edit/update/ingest will try (hard) to get a hold of Files with ID 1, 2 and 3. If in temporary storage Arhcipelago will move them to its final Permanent Location, will make sure Drupal knows those files are being used by this ADO, will run multiple <strong>Technical Metadata</strong> Extractions and classify internally the Files, adding everything it could learn from them. In practice, this means that Archipelago will write for you additional structures into the JSON enriching your <strong>Metadata</strong>.</p>
+<p>Will tell Archipelago that the JSON key <code>images</code> should be treated as containing Entity IDs for a Drupal Entity of type (<code>entity:file</code>) File. This has many interessting consequences. Archipelago, on edit/update/ingest will try (hard) to get a hold of Files with ID 1, 2 and 3. If in temporary storage Archipelago will move them to its final Permanent Location, will make sure Drupal knows those files are being used by this ADO, will run multiple <strong>Technical Metadata</strong> Extractions and classify internally the Files, adding everything it could learn from them. In practice, this means that Archipelago will write for you additional structures into the JSON enriching your <strong>Metadata</strong>.</p>
 <p>Without this structure, the <code>images</code> key would not trigger any logic but will of course still exist and can always still be used as a list of numbers while templating.</p>
 <p>This also implies that for a persisted ADO with those values, if you edit the JSON and delete e.g. the number (<code>integer</code> or <code>string</code> representation of an <code>integer</code>) <code>3</code>, Archipelago will disconnect the File Entity with ID 3 from this ADO, remove the enriched metadata and mark the File as not being anymore used by this ADO. If nobody else is using the File it will become <code>temporary</code> and eventually be automatically removed from the system, if that is setup at the Drupal - Filesystem - level.</p>
 <p>Using the same example <code>ap:entitymapping</code> structure, the following snippet:</p>
@@ -3438,7 +3460,7 @@ This is a one time operation that does not <em>stick</em>. What happens if it do
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 14, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 6, 2023</span>
       
         <br>
         Created:
