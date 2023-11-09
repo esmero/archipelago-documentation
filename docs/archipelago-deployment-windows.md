@@ -1,8 +1,8 @@
 ---
-title: "Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04"
+title: "Installing Archipelago Drupal 10 on Windows 10/11"
 tags:
   - Archipelago-deployment
-  - Drupal 9
+  - Drupal 10
   - Windows
   - Ubuntu 18.04
   - Ubuntu 20.04
@@ -19,7 +19,7 @@ tags:
 - [Install Github for Desktop](https://desktop.github.com/)
 - At least 10 Gbytes of free space (to get started)
 - Some basic Unix/Terminal Skills
-- 2-4 Gbytes of RAM (4 Recommended)
+- 4 Gbytes of RAM (8 Recommended)
 
 ### Optional
 
@@ -48,9 +48,8 @@ If you like this, let us know!
 ## Caring & Coding + Fixing + Testing
 
 * [Diego Pino](https://github.com/DiegoPino)
-* [Giancarlo Birello](https://github.com/giancarlobi)
 * [Allison Lund](https://github.com/alliomeria)
-* [Katie Romabiles](https://github.com/karomabiles)
+* [Giancarlo Birello](https://github.com/giancarlobi)
 
 ## License
 

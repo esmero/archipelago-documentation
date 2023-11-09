@@ -1,13 +1,13 @@
 ---
-title: "Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04"
+title: "Installing Archipelago Drupal 10 on Ubuntu 18.04 or 20.04"
 tags:
   - Archipelago-deployment
-  - Drupal 9
+  - Drupal 10
   - Ubuntu 18.04
   - Ubuntu 20.04
 ---
 
-# Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04
+# Installing Archipelago Drupal 10 on Ubuntu 18.04 or 20.04
 
 ## About running terminal commands
 
@@ -108,23 +108,12 @@ Now that you got it, let's deploy:
 ```shell
 git clone https://github.com/esmero/archipelago-deployment.git archipelago-deployment
 cd archipelago-deployment
-git checkout 1.0.0
+git checkout 1.3.0
 ```
 
-And now a hard choice. Which docker-compose/ensemble? Edge? Stable? Legacy? So many choices. For latest/modern stack PHP8/Solr8.11/MySQL8 we recommend:
 
 ```shell
 cp docker-compose-linux.yml docker-compose.yml
-docker-compose pull
-docker-compose up -d
-```
-
-You have something running and do not want to update Databases/Solr indexes: Go legacy. In doubt? Ask us please. We can help.
-
-If you want to stay more traditional (not recommended) and stick with older versions PHP7.4/Solr7.5/MySQL57 we recommend the following:
-
-```shell
-cp docker-compose-legacy.yml docker-compose.yml
 docker-compose pull
 docker-compose up -d
 ```
@@ -160,7 +149,7 @@ pass:minio123
 
 and create a bucket named "archipelago". To do so go to the `Buckets` section in the navigation pane, and click `Create Bucket +`. Type `archipelago` under `Bucket Name` and submit, done! That is where we will persist all your Files and also your File copies of each Digital Object. You can always go there and explore what Archipelago (well really Strawberryfield does the hard work) has persisted so you can get comfortable with our architecture.
 
-## Step 3: Deploy Drupal 9 and the awesome Archipelago Modules
+## Step 3: Deploy Drupal 10 and the awesome Archipelago Modules
 
 The following will run composer inside the esmero-php container to download all dependencies and Drupal Core too.
 
@@ -168,7 +157,7 @@ The following will run composer inside the esmero-php container to download all 
 docker exec -ti esmero-php bash -c "composer install"
 ```
 
-You will see a warning: `Do not run Composer as root/super user! See https://getcomposer.org/root for details` and the a long list of PHP packages. Don't worry. All is good here. Keep following the instructions! Once that command finishes run our setup script:
+You might see a warning: `Do not run Composer as root/super user! See https://getcomposer.org/root for details` and the a long list of PHP packages. Don't worry. All is good here. Keep following the instructions! Once that command finishes run our setup script:
 
 ```shell
 docker exec -ti esmero-php bash -c 'scripts/archipelago/setup.sh'
@@ -184,7 +173,10 @@ If this is the first time you're deploying Drupal using the provided Configurati
 docker exec -ti -u www-data esmero-php bash -c "cd web;../vendor/bin/drush -y si --verbose --existing-config --db-url=mysql://root:esmerodb@esmero-db/drupal --account-name=admin --account-pass=archipelago -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;"
 ```
 
-Note: You will see this warning: `[warning] The "block_content:1cdf7155-eb60-4f27-9e5e-64fffe93127a" was not found`. Nothing to worry about. We will provide the missing part in Step 5.
+Note: You will see these warnings:
+ `[warning] The "block_content:1cdf7155-eb60-4f27-9e5e-64fffe93127a" was not found`
+ `[warning] The "facets_summary_block:search_page_facet_summary" was not found`
+  Nothing to worry about. We will provide the missing part in Step 5.
 
 Note 2: Please be patient. This step takes now 25-30% longer because of how the most recent Drupal Installation code fetches translations and other resources (see `Performed install task`). This means progress might look like getting "stuck", go and get a coffee/tea and let it run to the end.
 
@@ -192,7 +184,7 @@ Once finished, this will give you an `admin` Drupal user with `archipelago` as p
 
 Final note about Steps 2-3: You don't need to, nor should you do this more than once. You can destroy/stop/update, recreate your Docker containers, and start again (`git pull`), and your Drupal and Data will persist once you've passed the `Installation complete` message. I repeat, all other containers' data is persisted inside the `persistent/` folder contained in this cloned git repository. Drupal and all its code is visible, editable, and stable inside your `web/` folder.
 
-## Step 4: Create a "demo "and a "jsonapi" user using drush and assign your "admin" user the Administrator Role (new since Drupal 9).
+## Step 4: Create a "demo "and a "jsonapi" user using drush and assign your "admin" user the Administrator Role.
 
 ```shell
 docker exec -ti esmero-php bash -c 'drush ucrt demo --password="demo"; drush urol metadata_pro "demo"'
@@ -235,9 +227,8 @@ _Installing Archipelago on AWS Ubuntu_ by [Zach Spalding](https://github.com/sen
 ## Caring & Coding + Fixing + Testing
 
 * [Diego Pino](https://github.com/DiegoPino)
+* [Allison Sherrick](https://github.com/alliomeria)
 * [Giancarlo Birello](https://github.com/giancarlobi)
-* [Allison Lund](https://github.com/alliomeria)
-* [Katie Romabiles](https://github.com/karomabiles)
 
 ## License
 

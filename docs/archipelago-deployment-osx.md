@@ -1,13 +1,13 @@
 ---
-title: "Installing Archipelago Drupal 9 on OSX (macOS)"
+title: "Installing Archipelago Drupal 10 on OSX (macOS)"
 tags:
   - Archipelago-deployment
-  - Drupal 9
+  - Drupal 10
   - macOS
   - OSX
 ---
 
-# Installing Archipelago Drupal 9 on OSX (macOS)
+# Installing Archipelago Drupal 10 on OSX (macOS)
 
 ## About running terminal commands
 
@@ -24,8 +24,7 @@ Happy deploying!
 ### OSX (macOS):
 
 - [Install Docker for Mac](https://docs.docker.com/docker-for-mac/)
-  - For OSX (macOS) `Catalina` or `Big Sur` on Intel (i5/i7) the tested version is: `4.0.1(68347)`. You may go newer of course.
-  - For `Big Sur` and `Apple Silicon M1` Chips please read <https://docs.docker.com/docker-for-mac/apple-silicon/>. You may need to enable manual compatibility mode in your `docker-compose.yml` file for the `esmero-php` and `esmero-cantaloupe` containers.
+  - For OSX (macOS) `Ventura` or Higher on Intel (i5/i7) and Apple Silicon Chips (M1/M2/M3) the tested version is: `4.23.0(120376)`. You may go newer of course.
   - In `Preferences` -> `General`: check `Use gRPC FUSE for file sharing` and restart. Specially if you are using your `$HOME` folder for deploying, e.g. `/Users/username`.
   - In `Preferences` -> `Resources`: 4 Gbytes of RAM is the recommended minimun and works; 8 Gbytes is faster and snappier.
 - [Install Github Desktop](https://desktop.github.com).
@@ -80,7 +79,7 @@ Ok, now we are ready to start. Depending on what type of Chip your Apple uses yo
 ```shell
 git clone https://github.com/esmero/archipelago-deployment.git archipelago-deployment
 cd archipelago-deployment
-git checkout 1.0.0
+git checkout 1.3.0
 cp docker-compose-osx.yml docker-compose.yml
 docker-compose pull
 docker-compose up -d
@@ -91,7 +90,7 @@ docker-compose up -d
 ```shell
 git clone https://github.com/esmero/archipelago-deployment.git archipelago-deployment
 cd archipelago-deployment
-git checkout 1.0.0
+git checkout 1.3.0
 cp docker-compose-arm64.yml docker-compose.yml
 docker-compose pull
 docker-compose up -d
@@ -111,7 +110,7 @@ pass:minio123
 
 and once logged in, press on "Buckets" (left tools column) and then on "Create Bucket"  (top right) and under "Bucket Name" type `archipelago`. Leave all other options unchecked for now (you can experiment with those later), and make sure you write `archipelago` (no spaces, lowercase) and press "Save". Done! That is where we will persist all your Files and also your File copies of each Digital Object. You can always go there and explore what Archipelago (well really Strawberryfield does the hard work) has persisted so you can get comfortable with our architecture.
 
-## Step 3: Deploy Drupal 9 and the awesome Archipelago Modules
+## Step 3: Deploy Drupal 10 and the awesome Archipelago Modules
 
 The following will run composer inside the esmero-php container to download all dependencies and Drupal Core too:
 
@@ -135,15 +134,18 @@ If this is the first time you deploy Drupal using the provided Configurations ru
 docker exec -ti -u www-data esmero-php bash -c "cd web;../vendor/bin/drush -y si --verbose --existing-config --db-url=mysql://root:esmerodb@esmero-db/drupal --account-name=admin --account-pass=archipelago -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;"
 ```
 
-Note: You will see this warning: `[warning] The "block_content:1cdf7155-eb60-4f27-9e5e-64fffe93127a" was not found`. Nothing to worry about. We will provide the missing part in Step 5.
+Note: You will see these warnings:
+ `[warning] The "block_content:1cdf7155-eb60-4f27-9e5e-64fffe93127a" was not found`
+ `[warning] The "facets_summary_block:search_page_facet_summary" was not found`
+  Nothing to worry about. We will provide the missing part in Step 5.
 
-Note 2: Please be patient. This step takes now 25-30% longer because of how the most recent Drupal Installation code fetches translations and other resources (see `Performed install task`). This means progress might look like getting "stuck", go and get a coffee/tea and let it run to the end.
+Note 2: Please be patient. This step takes since composer 2.0 25-30% longer because of how the most recent Drupal Installation code fetches translations and other resources (see `Performed install task`). This means progress might look like getting "stuck", go and get a coffee/tea and let it run to the end.
 
 Once finished, this will give you an `admin` Drupal user with `archipelago` as password (Change this if running on a public instance!).
 
 Final Note about Steps 2-3: You don't need to, nor should you do this more than once. You can destroy/stop/update, recreate your Docker containers, and start again (`git pull`), and your Drupal and Data will persist once you're past the `Installation complete` message. I repeat, all other containers' data is persisted inside the `persistent/` folder contained in this cloned git repository. Drupal and all its code is visible, editable, and stable inside your `web/` folder.
 
-## Step 4: Create a "demo "and a "jsonapi" user using drush and assign your "admin" user the Administrator Role (new since Drupal 9).
+## Step 4: Create a "demo "and a "jsonapi" user using drush and assign your "admin" user the Administrator Role.
 
 ```shell
 docker exec -ti esmero-php bash -c 'drush ucrt demo --password="demo"; drush urol metadata_pro "demo"'
@@ -182,9 +184,8 @@ If you like this, let us know!
 ## Caring & Coding + Fixing + Testing
 
 * [Diego Pino](https://github.com/DiegoPino)
+* [Allison Sherrick](https://github.com/alliomeria)
 * [Giancarlo Birello](https://github.com/giancarlobi)
-* [Allison Lund](https://github.com/alliomeria)
-* [Katie Romabiles](https://github.com/karomabiles)
 
 ## License
 
