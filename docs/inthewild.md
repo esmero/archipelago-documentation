@@ -15,10 +15,8 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
     - METRO's public Archipelago playground to experiment, learn, and evaluate.
 
 - [Barnard College](https://digitalcollections.barnard.edu/)
-    - Migration to Archipelago began Summer 2022; Launch of new site late 2022
 
 - [Digital Culture of Metropolitan New York (DCMNY)](http://dcmny.org)
-    - Final stage of migration to Archipelago; Launch of [new site](https://dev.dcmny.org) late 2022
 
 - [Empire Archival Discovery Cooperative (EADC) Finding Aid Toolkit](https://archipelago.senylrc.org/documentation)
     - _Supported by the Southeastern New York Library Resources Council (SENYLRC)_   
@@ -28,25 +26,22 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 
 - [Frick Collection and Webrecorder Team Web Archives Collaboration](https://webarchive.archipelago.nyc)
 
-- Hamilton College Library & IT Services
-    - Migration to Archipelago began Summer 2021
+- Hamilton College Library & IT Services (https://litsdigital.hamilton.edu/)
+    - Migration to Archipelago in final stages; Official launch of new site Autumn 2023
 
 - [Olin College Library Phoenix Files](https://phoenixfiles.olin.edu)
     - *Early adopter - live since Summer 2020
 
 - [New York State COVID-19 Personal History Initiative](https://www.nyspersonalhistory.com)
 
-- [Rensselaer Polytechnic Institute Libraries](https://library.rpi.edu/)
-    - Migration to Archipelago began Summer 2022; Launch of new site late 2022/early 2023
+- [Rensselaer Polytechnic Institute Libraries](https://digitalassets.archives.rpi.edu/)
 
-- [San Diego State University Libraries Digital Collections](https://library.sdsu.edu/find/digital-collections) 
-    - Migration to Archipelago began Summer 2022
+- [San Diego State University Libraries Digital Collections](https://digitalcollections.sdsu.edu)
 
 - [Union College Library](https://arches.union.edu)
 
 - [Western Washington University](https://library.wwu.edu/)
-    - Migration to Archipelago began Summer 2022
-
+    - Migration to Archipelago began Summer 2022; Launch of new site ~Winter 2023
 
 ## Neighborhood Archipelagos
 
@@ -56,12 +51,11 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
     - _Migration to Archipelago began Spring 2022_
 
 - [Association Montessori Internationale](https://montessori-ami.org/)
-
     - _Development of Archipelago environment began Summer 2022_
 
 - [California Revealed](https://repository.californiarevealed.org/)
 
-    - _In-process migration to Archipelago; Launch of new site late 2022/early 2023_
+- [Christian Observatory of the Pro Civitate Christiana](https://janus.amiciosservatorio.org/)
 
 - [Consiglio Nazionale delle Ricerche / National Research Council of Italy](https://www.cnr.it/)
     - [https://dbopen.ba.cnr.it/](https://dbopen.ba.cnr.it/)
@@ -71,9 +65,7 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
         - [Virtual Tour Santuario Paola](http://archipelago.byterfly.eu/do/5aea0a3f-cf03-40cc-9611-924dea1fd806)
 
 - [University of Edinburgh Libraries](https://www.ed.ac.uk/information-services/library-museum-gallery)
-
     - _Development of Archipelago environment began Summer 2022_
-
 
 ## We should be here 
 

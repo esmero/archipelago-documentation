@@ -7,7 +7,7 @@ tags:
 
 # About this Documentation
 
-This documentation was generated with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). The repo/branch is at <https://github.com/esmero/archipelago-documentation/tree/1.0.0>, and the site is built using the following Github workflow: <https://github.com/esmero/archipelago-documentation/blob/1.0.0/.github/workflows/ci.yml>.
+This documentation was generated with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). The repo/branch is at <https://github.com/esmero/archipelago-documentation/tree/1.3.0>, and the site is built using the following Github workflow: <https://github.com/esmero/archipelago-documentation/blob/1.3.0/.github/workflows/ci.yml>.
 
 ## Contributing
 
