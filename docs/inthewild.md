@@ -27,7 +27,7 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 - [Frick Collection and Webrecorder Team Web Archives Collaboration](https://webarchive.archipelago.nyc)
 
 - Hamilton College Library & IT Services (https://litsdigital.hamilton.edu/)
-    - Migration to Archipelago in final stages; Official launch of new site ~Autumn 2023
+    - Migration to Archipelago in final stages; Official launch of new site Autumn 2023
 
 - [Olin College Library Phoenix Files](https://phoenixfiles.olin.edu)
     - *Early adopter - live since Summer 2020
