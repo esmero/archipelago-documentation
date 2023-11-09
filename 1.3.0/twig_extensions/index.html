@@ -1,0 +1,2981 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Project documentation for Archipelago.">
+      
+      
+        <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
+      
+      
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.3.0/twig_extensions/">
+      
+      
+      
+      
+      <link rel="icon" href="../images/strawberries_color.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
+    
+    
+      
+        <title>Twig Extensions - Archipelago Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#twig-extensions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Archipelago Documentation" class="md-header__button md-logo" aria-label="Archipelago Documentation" data-md-component="logo">
+      
+  <img src="../images/strawberries_color.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Archipelago Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Twig Extensions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/esmero/archipelago-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    archipelago-documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Archipelago Documentation" class="md-nav__button md-logo" aria-label="Archipelago Documentation" data-md-component="logo">
+      
+  <img src="../images/strawberries_color.png" alt="logo">
+
+    </a>
+    Archipelago Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/esmero/archipelago-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    archipelago-documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Archipelago 101
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archipelago 101
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourtake/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archipelago's Philosophy & Guiding Principles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strawberryfields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Strawberryfields Forever
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadatainarchipelago/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata in Archipelago
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archifilepersistencestrategy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archipelago's File Persistence Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Instructions and Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Instructions and Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps & Deployment
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps & Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archipelago-Deployment
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Archipelago-Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-osx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Archipelago Drupal 9 on OSX (macOS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-ubuntu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-windows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Archipelago Drupal 9 on Windows 10/11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-democontent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Demo Archipelago Digital Objects (ADOs) to your Repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-upgradeFromD8ToD9.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-upgradeFromRC3.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrading from 1.0.0-RC3 to 1.0.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sslsetup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Set Up SSL for Docker/Archipelago
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archipelago-Deployment-Live
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archipelago-Deployment-Live
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-gitworkflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-moveToLive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moving from archipelago-deployment to archipelago-deployment-live
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-upgradeFromD8ToD9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-upgradeFromRC3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrading from 1.0.0-RC3 to 1.0.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-live-updatingContainers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Docker Containers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utility_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utility Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_4" id="__nav_3_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps Q&A
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps Q&A
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdebug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging PHP in Archipelago
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_minio_logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Min.io Logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_smtp_configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SMTP Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalqa_twig_modules_configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Twig Modules Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Site Administration & Configuration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Site Administration & Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strawberryfield-formatters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Strawberryfield Formatters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../createdisplaymodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Display Modes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archifilepersistencestrategy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archipelago's File Persistence Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_4" id="__nav_3_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Search & Solr
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Search & Solr
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search_solr_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Search and Solr Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strawberry_key_name_providers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup through Strawberry Key Name Providers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search_advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fragaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fragaria Redirects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Content, Metadata & Related Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Content, Metadata & Related Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firstobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ingesting Your First Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webforms in Archipelago
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Webforms in Archipelago
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webforms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Webforms in Archipelago
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webformsasinput/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modifyingfileextensionsinwebform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizing Webforms (Modifying allowable file extensions)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customwebformelements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archipelago Custom Webform Elements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archipelago Multi-Importer (AMI)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Archipelago Multi-Importer (AMI)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ami_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archipelago Multi-Importer (AMI)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ami_spreadsheet_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spreadsheet Formatting Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../googleapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration for Google Sheets API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AMIviaSpreadsheets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ami_lod_rec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linked Data Reconciliation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ami_update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AMI Update Sets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../I7solrImporter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using the Islandora 7 Solr Importer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Find and Replace
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Find and Replace
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../find_and_replace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Batch Find and Replace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../find_and_replace_action_text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text Based Find and Replace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../find_and_replace_action_webform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Webform Find and Replace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../find_and_replace_action_json_patch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSON Patch Find and Replace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Twig Templates and Archipelago
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Twig Templates and Archipelago
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadatatwigs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Twig Templates and Archipelago
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workingtwigs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working With Twig in Archipelago (getting started with custom Twig templates)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../twig_recipe_cards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Twig Recipe Cards for Common Use Cases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata_display_preview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Display Preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Contributing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../giveortake/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archipelago Contribution Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation_about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation_template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Additional Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation_technical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technical Details
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Additional Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Additional Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentations_events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archipelago Presentations & Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inthewild/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archipelagos in the Wild
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CODE_OF_CONDUCT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acknowledgments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Care & Coding + Fixing / Acknowledgments / License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#default-twig-extensions-from-symfony" class="md-nav__link">
+    Default Twig Extensions from Symfony
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-twig-extensions-from-drupal" class="md-nav__link">
+    Default Twig Extensions from Drupal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-twig-extensions-from-archipelago" class="md-nav__link">
+    Default Twig Extensions from Archipelago
+  </a>
+  
+    <nav class="md-nav" aria-label="Default Twig Extensions from Archipelago">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#twig-filters-from-archipelago" class="md-nav__link">
+    Twig Filters from Archipelago
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twig-functions-from-archipelago" class="md-nav__link">
+    Twig Functions from Archipelago
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">Twig</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Twig Filters</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Twig Functions</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Twig Templates</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Examples</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">JSON</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Markdown</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">HTML</span>
+    
+  
+</nav>
+
+
+  
+  
+
+
+<h1 id="twig-extensions">Twig Extensions</h1>
+<p>One advantage of Drupal's integration of the <a href="https://www.drupal.org/docs/theming-drupal/twig-in-drupal">Twig</a> template engine is the availability of extensions (filters and functions).</p>
+<h2 id="default-twig-extensions-from-symfony">Default Twig Extensions from Symfony</h2>
+<p>The <a href="https://symfony.com/">Symfony</a> PHP framework, which is integrated into Drupal Core, provides extensions, which we use in our default templates:</p>
+<ul>
+<li><a href="https://twig.symfony.com/doc/2.x/filters/index.html">Twig Filters from Symfony</a></li>
+<li><a href="https://twig.symfony.com/doc/2.x/functions/index.html">Twig Functions from Symfony</a></li>
+</ul>
+<h2 id="default-twig-extensions-from-drupal">Default Twig Extensions from Drupal</h2>
+<p>Additionally, we have some very handy Drupal-specific extensions:</p>
+<ul>
+<li><a href="https://www.drupal.org/docs/theming-drupal/twig-in-drupal/filters-modifying-variables-in-twig-templates#s-drupal-specific-filters">Twig Filters from Drupal</a></li>
+<li><a href="https://www.drupal.org/docs/theming-drupal/twig-in-drupal/functions-in-twig-templates">Twig Functions from Drupal</a></li>
+</ul>
+<h2 id="default-twig-extensions-from-archipelago">Default Twig Extensions from Archipelago</h2>
+<p>Finally, we have a growing list of extensions that apply to our own specific use cases:</p>
+<h3 id="twig-filters-from-archipelago">Twig Filters from Archipelago</h3>
+<div class="admonition example">
+<p class="admonition-title">edtf_2_human_date</p>
+<p>The <code>edtf_2_human_date</code> filter takes an EDTF date and an optional language code (defaults to English), and converts it to a human-readable format using the <a href="https://github.com/ProfessionalWiki/EDTF">EDTF PHP</a> library. The list of language codes is available <a href="https://github.com/ProfessionalWiki/EDTF/tree/master/i18n">here</a>.</p>
+<p>Let's start with the following metadata fragment:
+<div class="highlight"><span class="filename">Metadata Fragment</span><pre><span></span><code><span class="err">...</span>
+<span class="nt">&quot;subject_wikidata&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="nt">&quot;date_created_edtf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;date_to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">    </span><span class="nt">&quot;date_free&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;~1899&quot;</span><span class="p">,</span>
+</span><span class="w">    </span><span class="nt">&quot;date_from&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;date_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;date_free&quot;</span>
+<span class="p">},</span>
+<span class="nt">&quot;date_created_free&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="err">...</span>
+</code></pre></div></p>
+<p>Then we pass the <code>date_free</code> field through the <code>trim</code> filter (as a precaution, in case there's any accidental whitespace), and then we finally hand off the field to our <code>edtf_2_human_date</code> filter:
+<div class="highlight"><span class="filename">edtf_2_human_date</span><pre><span></span><code><span class="hll"><span class="cp">{{</span> <span class="nv">data.date_created_edtf.date_free</span><span class="o">|</span><span class="nf">trim</span><span class="o">|</span><span class="nf">edtf_2_human_date</span><span class="o">(</span><span class="s1">&#39;en&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+</span>
+<span class="hll"><span class="c">{# Output: Circa 1899 #}</span>
+</span></code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">html_2_markdown</p>
+<p>The <code>html_2_markdown</code> filter, as the name suggests, converts HTML to Markdown.</p>
+<p>We start with this string of HTML:
+<div class="highlight"><span class="filename">HTML string</span><pre><span></span><code><span class="cp">{%</span> <span class="k">set</span> <span class="nv">html_string</span> <span class="o">=</span> <span class="s2">&quot;</span>
+<span class="s2">  &lt;ul&gt;</span>
+<span class="s2">    &lt;li&gt;One thing&lt;/li&gt;</span>
+<span class="s2">    &lt;li&gt;Another thing&lt;/li&gt;</span>
+<span class="s2">    &lt;li&gt;The last thing&lt;/li&gt;</span>
+<span class="s2">  &lt;/ul&gt;</span>
+<span class="s2">&quot;</span> <span class="cp">%}</span>
+</code></pre></div></p>
+<p>Then we pass it to the filter:
+<div class="highlight"><span class="filename">html_2_markdown</span><pre><span></span><code><span class="hll"><span class="cp">{{</span> <span class="nv">html_string</span> <span class="o">|</span> <span class="nf">html_2_markdown</span> <span class="cp">}}</span>
+</span>
+<span class="hll"><span class="c">{# Output:</span>
+</span><span class="hll"><span class="c">  - One thing</span>
+</span><span class="hll"><span class="c">  - Another thing</span>
+</span><span class="hll"><span class="c">  - The last thing</span>
+</span><span class="hll"><span class="c">#}</span>
+</span></code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">markdown_2_html</p>
+<p>The <code>markdown_2_html</code> filter, as the name suggests, is the reverse of the above and converts Markdown to HTML.</p>
+<p>We start with this string of Markdown:
+<div class="highlight"><span class="filename">Markdown string</span><pre><span></span><code><span class="cp">{%</span> <span class="k">set</span> <span class="nv">markdown_string</span> <span class="o">=</span> <span class="s2">&quot;</span>
+<span class="s2">  - One thing</span>
+<span class="s2">  - Another thing</span>
+<span class="s2">  - The last thing</span>
+<span class="s2">&quot;</span> <span class="cp">%}</span>
+</code></pre></div></p>
+<p>Then we pass it to the filter:
+<div class="highlight"><span class="filename">markdown_2_html</span><pre><span></span><code><span class="hll"><span class="cp">{{</span> <span class="nv">markdown_string</span> <span class="o">|</span> <span class="nf">markdown_2_html</span> <span class="cp">}}</span>
+</span>
+<span class="c">{# Output:</span>
+<span class="hll"><span class="c">  &lt;ul&gt;</span>
+</span><span class="hll"><span class="c">    &lt;li&gt;One thing&lt;/li&gt;</span>
+</span><span class="hll"><span class="c">    &lt;li&gt;Another thing&lt;/li&gt;</span>
+</span><span class="hll"><span class="c">    &lt;li&gt;The last thing&lt;/li&gt;</span>
+</span><span class="hll"><span class="c">  &lt;/ul&gt;</span>
+</span><span class="c">#}</span>
+</code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sbf_json_decode</p>
+<p>The <code>sbf_json_decode</code> filter decodes a JSON-encoded string.</p>
+<p>We start with this string of JSON string:
+<div class="highlight"><span class="filename">JSON string</span><pre><span></span><code><span class="cp">{%</span> <span class="k">set</span> <span class="nv">json_string</span> <span class="o">=</span> <span class="s2">&quot;</span>
+<span class="s2">  {</span>
+<span class="s2">    \&quot;date_to\&quot;: \&quot;\&quot;,</span>
+<span class="s2">    \&quot;date_free\&quot;: \&quot;~1899\&quot;,</span>
+<span class="s2">    \&quot;date_from\&quot;: \&quot;\&quot;,</span>
+<span class="s2">    \&quot;date_type\&quot;: \&quot;date_free\&quot;</span>
+<span class="s2">  }</span>
+<span class="s2">&quot;</span> <span class="cp">%}</span>
+</code></pre></div></p>
+<p>Then we pass it to the filter:
+<div class="highlight"><span class="filename">sbf_json_decode</span><pre><span></span><code><span class="hll"><span class="cp">{%</span> <span class="k">json_decoded</span> <span class="o">=</span> <span class="nv">json_string</span> <span class="o">|</span> <span class="nf">sbf_json_decode</span> <span class="cp">%}</span>
+</span>
+<span class="hll"><span class="cp">{{</span> <span class="nv">json_decoded.date_free</span> <span class="cp">}}</span>
+</span><span class="hll"><span class="c">{# Output:</span>
+</span><span class="hll"><span class="c">  ~1899</span>
+</span><span class="hll"><span class="c">#}</span>
+</span></code></pre></div></p>
+</div>
+<h3 id="twig-functions-from-archipelago">Twig Functions from Archipelago</h3>
+<div class="admonition example">
+<p class="admonition-title">clipboard_copy</p>
+<p>The <code>clipboard_copy</code> function, using the <a href="https://github.com/github/clipboard-copy-element">clipboard-copy-element library</a>, takes a provided CSS class for the element(s) whose text we'd like to copy, and targets the CSS class of an existing HTML element on the page or generates an HTML element that can be clicked to copy the text to the user's clipboard.</p>
+<div class="admonition info">
+<p class="admonition-title">Usage</p>
+<div class="highlight"><span class="filename">clipboard_copy usage</span><pre><span></span><code><span class="hll"><span class="cp">{{</span> <span class="nv">clipboard_copy</span><span class="o">(</span><span class="s1">&#39;CSS CLASS&#39;</span><span class="o">,</span><span class="s1">&#39;OPTIONAL CSS CLASS(ES)&#39;</span><span class="o">,</span><span class="s1">&#39;OPTIONAL TEXT&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+</span></code></pre></div>
+<p>This function takes three arguments:</p>
+<ul>
+<li>a CSS class for the element to copy</li>
+<li>an optional CSS class (the default is <code>clipboard-copy-button</code>) or classes (space-separated) for the copy button if auto-generating or a single, unique class if using your own existing button(s) </li>
+<li>optional text (the default is <code>Copy to Clipboard</code>) for the copy button if auto-generating</li>
+</ul>
+</div>
+<p>In the examples below, we want users to be able to copy the text from three different kinds of HTML elements: a <code>div</code>, an <code>input</code>, and an <code>a</code> hyperlink href.</p>
+<details class="example">
+<summary>Copying div element text with auto-generated button</summary>
+<p>First we start by giving the div element(s) we'd like to copy a unique class:</p>
+<div class="highlight"><span class="filename">div element text</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;csl-bib-body-container chicago-fullnote-bibliography&quot;</span><span class="p">&gt;</span>
+<span class="hll">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;copy-csl&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;csl-bib-body&quot;</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;csl-entry&quot;</span><span class="p">&gt;</span>
+      New York Botanical Garden. “Descriptive Guide to the Grounds, Buildings and Collections.”
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Then we pass the class to the function:</p>
+<div class="highlight"><span class="filename">clipboard_copy for div element text</span><pre><span></span><code><span class="hll"><span class="cp">{{</span> <span class="nv">clipboard_copy</span><span class="o">(</span><span class="s1">&#39;csl-bib-body&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">,</span><span class="s1">&#39;Copy Bibliography Entry&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The class can be attached to parent elements of the element we are ultimately targeting if needed, but any intermediate characters may get caught up in the copied text.</p>
+</div>
+<p>Or to give the generated button multiple classes (in case they need additional styling):</p>
+<div class="highlight"><span class="filename">clipboard_copy for div element text</span><pre><span></span><code><span class="hll"><span class="cp">{{</span> <span class="nv">clipboard_copy</span><span class="o">(</span><span class="s1">&#39;csl-bib-body&#39;</span><span class="o">,</span><span class="s1">&#39;custom custom-button&#39;</span><span class="o">,</span><span class="s1">&#39;Copy Bibliography Entry&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+</span></code></pre></div>
+<p>The result for the above <code>div</code> example looks as follows:</p>
+<p><a class="glightbox" href="../images/copy_paste_div.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Copy/Paste Element" src="../images/copy_paste_div.png" /></a></p>
+<p>The following is the HTML for the auto-generated button with no provided CSS class:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clipboard-copy-button&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">clipboard-copy</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;copy-csl&quot;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>Copy Bibliography Entry<span class="p">&lt;/</span><span class="nt">clipboard-copy</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>And the following is HTML for the auto-generated button with multiple CSS classes provided:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom custom-button&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">clipboard-copy</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;copy-csl&quot;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>Copy Bibliography Entry<span class="p">&lt;/</span><span class="nt">clipboard-copy</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The clipboard-copy-element library requires an element ID. If the element being copied does not have an ID, one will automatically generated and assigned. </p>
+</div>
+</details>
+<details class="example">
+<summary>Copying input element value with auto-generated button</summary>
+<p>First we start by giving the input element(s) we'd like to copy a unique class:</p>
+<div class="highlight"><span class="filename">input element value</span><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">attribute</span><span class="o">(</span><span class="nv">data</span><span class="o">,</span> <span class="s1">&#39;as:image&#39;</span><span class="o">)|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span>  <span class="k">or</span> <span class="nv">attribute</span><span class="o">(</span><span class="nv">data</span><span class="o">,</span> <span class="s1">&#39;as:document&#39;</span><span class="o">)|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span>  <span class="cp">%}</span>
+  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;align-middle&quot;</span><span class="p">&gt;</span>Direct Link to Digital Object&#39;s IIIF Presentation Manifest V3 <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://iiif.io/img/logo-iiif-34x30.png&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="cp">{%</span> <span class="k">set</span> <span class="nv">iiifmanifest</span> <span class="o">=</span> <span class="nv">nodeurl</span><span class="o">|</span><span class="nf">render</span> <span class="o">~</span> <span class="s2">&quot;/metadata/iiifmanifest/default.jsonld&quot;</span> <span class="cp">%}</span>
+<span class="hll">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">iiifmanifest</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;iiifmanifest_copy&quot;</span> <span class="na">size</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">iiifmanifest</span><span class="o">|</span><span class="nf">length</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-xs-3 copy-content&quot;</span><span class="p">&gt;</span>
+</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+</code></pre></div>
+<p>Then we pass the class to the function:</p>
+<div class="highlight"><span class="filename">clipboard_copy for input element value</span><pre><span></span><code><span class="hll"><span class="cp">{{</span> <span class="nv">clipboard_copy</span><span class="o">(</span><span class="s1">&#39;copy-content&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">,</span><span class="s2">&quot;Copy Link to Digital Object&#39;s IIIF Presentation Manifest V3&quot;</span><span class="o">)</span> <span class="cp">}}</span>
+</span></code></pre></div>
+<p>Or to give the generated button multiple classes (in case they need additional styling):</p>
+<div class="highlight"><span class="filename">clipboard_copy for input element text</span><pre><span></span><code><span class="hll"><span class="cp">{{</span> <span class="nv">clipboard_copy</span><span class="o">(</span><span class="s1">&#39;copy-content&#39;</span><span class="o">,</span><span class="s1">&#39;custom custom-button&#39;</span><span class="o">,</span><span class="s2">&quot;Copy Link to Digital Object&#39;s IIIF Presentation Manifest V3&quot;</span><span class="o">)</span> <span class="cp">}}</span>
+</span></code></pre></div>
+<p>The result for the above <code>input</code> example looks as follows:</p>
+<p><a class="glightbox" href="../images/copy_paste_input.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Copy/Paste Element" src="../images/copy_paste_input.png" /></a></p>
+<p>The following is the HTML for the auto-generated button with no provided CSS class:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clipboard-copy-button&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">clipboard-copy</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;iiifmanifest_copy&quot;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>Copy Link to Digital Object&#39;s IIIF Presentation Manifest V3<span class="p">&lt;/</span><span class="nt">clipboard-copy</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>And the following is HTML for the auto-generated button with multiple CSS classes provided:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom custom-button&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">clipboard-copy</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;iiifmanifest_copy&quot;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>Copy Link to Digital Object&#39;s IIIF Presentation Manifest V3<span class="p">&lt;/</span><span class="nt">clipboard-copy</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The clipboard-copy-element library requires an element ID. If the element being copied does not have an ID, one will automatically generated and assigned. </p>
+</div>
+</details>
+<details class="example">
+<summary>Copying anchor element hyperlink href with auto-generated button</summary>
+<p>First we start by giving the <code>a</code> element(s) we'd like to copy a unique class:</p>
+<div class="highlight"><span class="filename">anchor element hyperlink href</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;copy-documentation-id&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;copy-documentation-class row&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://docs.archipelago.nyc&quot;</span><span class="p">&gt;</span>Archipelago Documentation<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Then we pass the class to the function:</p>
+<div class="highlight"><span class="filename">clipboard_copy for anchor element hyperlink href</span><pre><span></span><code><span class="hll"><span class="cp">{{</span> <span class="nv">clipboard_copy</span><span class="o">(</span><span class="s1">&#39;copy-documentation-class&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">,</span><span class="s2">&quot;Copy Link to Documentation&quot;</span><span class="o">)</span> <span class="cp">}}</span>
+</span></code></pre></div>
+<p>Or to give the generated button multiple classes (in case they need additional styling):</p>
+<div class="highlight"><span class="filename">clipboard_copy for anchor element text</span><pre><span></span><code><span class="hll"><span class="cp">{{</span> <span class="nv">clipboard_copy</span><span class="o">(</span><span class="s1">&#39;copy-documentation-class&#39;</span><span class="o">,</span><span class="s1">&#39;custom custom-button&#39;</span><span class="o">,</span><span class="s2">&quot;Copy Link to Documentation&quot;</span><span class="o">)</span> <span class="cp">}}</span>
+</span></code></pre></div>
+<p>The result for the above anchor example looks as follows:</p>
+<p><a class="glightbox" href="../images/copy_paste_anchor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Copy/Paste Element" src="../images/copy_paste_anchor.png" /></a></p>
+<p>The following is the HTML for the auto-generated button with no provided CSS class:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clipboard-copy-button&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">clipboard-copy</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;copy-documentation-id&quot;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>Copy Link to Documentation<span class="p">&lt;/</span><span class="nt">clipboard-copy</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>And the following is HTML for the auto-generated button with multiple CSS classes provided:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom custom-button&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">clipboard-copy</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;copy-documentation-id&quot;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>Copy Link to Documentation<span class="p">&lt;/</span><span class="nt">clipboard-copy</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The clipboard-copy-element library requires an element ID. If the element being copied does not have an ID, one will automatically generated and assigned. </p>
+</div>
+</details>
+<p>The above examples automatically generate <code>copy</code> buttons. They can be styled, but if we need more control over the button placement and styling, we can use our own button(s) by ensuring that they meet the following requirements:</p>
+<ol>
+<li>A <code>&lt;copy-clipboard&gt;</code> element (this can be hidden) with a <code>for</code> attribute, whose value is the ID of the source element, attached to the element acting as the button.</li>
+<li>A class on the existing button that can be targeted. The class must either be unique (if a single button) or the number of elements with the class must match the number of source elements.</li>
+<li>A separate class for the copy source(s) with the same requirements as the previous step.</li>
+</ol>
+<details class="example">
+<summary>Copying div element text with custom button</summary>
+<p>First we start by giving the div element(s) we'd like to copy a unique class:</p>
+<div class="highlight"><span class="filename">div element text</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;csl-bib-body-container chicago-fullnote-bibliography&quot;</span><span class="p">&gt;</span>
+<span class="hll">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;copy-csl&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;csl-bib-body&quot;</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;csl-entry&quot;</span><span class="p">&gt;</span>
+      New York Botanical Garden. “Descriptive Guide to the Grounds, Buildings and Collections.”
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Then we generate the button and pass the class to the function:</p>
+<div class="highlight"><span class="filename">clipboard_copy custom button for div element text</span><pre><span></span><code><span class="hll"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom-button btn btn-primary btn-sm&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">  <span class="p">&lt;</span><span class="nt">clipboard-copy</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;copy-csl&quot;</span><span class="p">&gt;</span>Copy Text<span class="p">&lt;/</span><span class="nt">clipboard-copy</span><span class="p">&gt;</span>
+</span><span class="hll"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span>
+<span class="hll"><span class="cp">{{</span> <span class="nv">clipboard_copy</span><span class="o">(</span><span class="s1">&#39;csl-bib-body&#39;</span><span class="o">,</span><span class="s1">&#39;custom-button&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The clipboard-copy-element library requires an element ID. If the element being copied does not have an ID, one will automatically generated and assigned. </p>
+</div>
+</details>
+<details class="example">
+<summary>Copying input element value with custom button</summary>
+<p>First we start by giving the input element(s) we'd like to copy a unique class:</p>
+<div class="highlight"><span class="filename">input element value</span><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">attribute</span><span class="o">(</span><span class="nv">data</span><span class="o">,</span> <span class="s1">&#39;as:image&#39;</span><span class="o">)|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span>  <span class="k">or</span> <span class="nv">attribute</span><span class="o">(</span><span class="nv">data</span><span class="o">,</span> <span class="s1">&#39;as:document&#39;</span><span class="o">)|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span>  <span class="cp">%}</span>
+  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;align-middle&quot;</span><span class="p">&gt;</span>Direct Link to Digital Object&#39;s IIIF Presentation Manifest V3 <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://iiif.io/img/logo-iiif-34x30.png&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="cp">{%</span> <span class="k">set</span> <span class="nv">iiifmanifest</span> <span class="o">=</span> <span class="nv">nodeurl</span><span class="o">|</span><span class="nf">render</span> <span class="o">~</span> <span class="s2">&quot;/metadata/iiifmanifest/default.jsonld&quot;</span> <span class="cp">%}</span>
+<span class="hll">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">iiifmanifest</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;iiifmanifest_copy&quot;</span> <span class="na">size</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">iiifmanifest</span><span class="o">|</span><span class="nf">length</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-xs-3 copy-content&quot;</span><span class="p">&gt;</span>
+</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+</code></pre></div>
+<p>Then we generate the button and pass the class to the function:</p>
+<div class="highlight"><span class="filename">clipboard_copy custom button for input element value</span><pre><span></span><code><span class="hll"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom-button btn btn-primary btn-sm&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">  <span class="p">&lt;</span><span class="nt">clipboard-copy</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;iiifmanifest_copy&quot;</span><span class="p">&gt;</span>Copy Input<span class="p">&lt;/</span><span class="nt">clipboard-copy</span><span class="p">&gt;</span>
+</span><span class="hll"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span>
+<span class="hll"><span class="cp">{{</span> <span class="nv">clipboard_copy</span><span class="o">(</span><span class="s1">&#39;copy-content&#39;</span><span class="o">,</span><span class="s1">&#39;custom-button&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The clipboard-copy-element library requires an element ID. If the element being copied does not have an ID, one will automatically generated and assigned. </p>
+</div>
+</details>
+<details class="example">
+<summary>Copying anchor element with custom button</summary>
+<p>First we start by giving the <code>a</code> element(s) we'd like to copy a unique class:</p>
+<div class="highlight"><span class="filename">anchor element hyperlink href</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;copy-documentation-id&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;copy-documentation-class row&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://docs.archipelago.nyc&quot;</span><span class="p">&gt;</span>Archipelago Documentation<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Then we generate the button and pass the class to the function:</p>
+<div class="highlight"><span class="filename">clipboard_copy custom button for anchor element hyperlink href</span><pre><span></span><code><span class="hll"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom-button btn btn-primary btn-sm&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">  <span class="p">&lt;</span><span class="nt">clipboard-copy</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;copy-documentation-id&quot;</span><span class="p">&gt;</span>Copy Link<span class="p">&lt;/</span><span class="nt">clipboard-copy</span><span class="p">&gt;</span>
+</span><span class="hll"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span>
+<span class="hll"><span class="cp">{{</span> <span class="nv">clipboard_copy</span><span class="o">(</span><span class="s1">&#39;copy-documentation-class&#39;</span><span class="o">,</span><span class="s1">&#39;custom-button&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The clipboard-copy-element library requires an element ID. If the element being copied does not have an ID, one will automatically generated and assigned. </p>
+</div>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sbf_entity_ids_by_label</p>
+<p>The <code>sbf_entity_ids_by_label</code> function, as the name suggests, provides a Drupal entity ID for the following Drupal entity types:</p>
+<ul>
+<li>node</li>
+<li>taxonomy_term</li>
+<li>group</li>
+<li>user </li>
+</ul>
+<p>If we start with the user entity <code>jsonapi</code>, we can do the following:
+<div class="highlight"><span class="filename">sbf_entity_ids_by_label</span><pre><span></span><code><span class="hll"><span class="cp">{%</span> <span class="k">set</span> <span class="nv">jsonapi_user_ids</span><span class="o">=</span><span class="nv">sbf_entity_ids_by_label</span><span class="o">(</span><span class="s1">&#39;jsonapi&#39;</span><span class="o">,</span><span class="s1">&#39;user&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">)</span> <span class="cp">%}</span>
+</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">jsonapi_user_id</span> <span class="k">in</span> <span class="nv">jsonapi_user_ids</span> <span class="cp">%}</span>
+<span class="hll">  <span class="cp">{{</span> <span class="nv">jsonapi_user_id</span> <span class="cp">}}</span>
+</span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+
+<span class="c">{# Output:</span>
+<span class="hll"><span class="c">  3</span>
+</span><span class="c">#}</span>
+</code></pre></div></p>
+<p>As you can see above, the <code>sbf_entity_ids_by_label</code> function takes three arguments:</p>
+<ul>
+<li>the entity label</li>
+<li>the entity type (see above for supported types)</li>
+<li>an optional entity bundle</li>
+</ul>
+<p>We then loop through the returned result, which is an array of IDs (in this case, just a single one).</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sbf_search_api</p>
+<p>The <code>sbf_search_api</code> function executes a search API query against a specified index.</p>
+<div class="highlight"><span class="filename">sbf_search_api</span><pre><span></span><code><span class="hll"><span class="cp">{%</span> <span class="k">set</span> <span class="nv">search_results</span><span class="o">=</span><span class="nv">sbf_search_api</span><span class="o">(</span><span class="s1">&#39;default_solr_index&#39;</span><span class="o">,</span><span class="s1">&#39;strawberry&#39;</span><span class="o">,[],{</span><span class="s1">&#39;status&#39;</span><span class="o">:</span><span class="m">1</span><span class="o">},[])</span> <span class="cp">%}</span>
+</span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">labels</span><span class="o">=</span><span class="nv">search_results</span><span class="o">[</span><span class="s1">&#39;results&#39;</span><span class="o">][</span><span class="s1">&#39;13&#39;</span><span class="o">][</span><span class="s1">&#39;fields&#39;</span><span class="o">][</span><span class="s1">&#39;label_2&#39;</span><span class="o">]</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="cp">{%</span> <span class="k">for</span> <span class="nv">label</span> <span class="k">in</span> <span class="nv">labels</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">label</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>As you can see above, the <code>sbf_search_api</code> function takes eight arguments:</p>
+<ul>
+<li>The machine name of the Search API index to search against (string)</li>
+<li>A full text term to search (string)</li>
+<li>An array of full text fields to search the term against. If empty all will be used. (array)</li>
+<li>The fields =&gt; filters to match against (associative array)</li>
+<li>The fields to facet (array)</li>
+<li>The fields to sort against (associative array)</li>
+<li>Offset for the results (int)</li>
+</ul>
+<p>For this example we end up with the following output:</p>
+<ul>
+<li>JPEG File Interchange Format</li>
+<li>Organic farming--United States</li>
+<li>Strawberries</li>
+<li>Strawberry Field at Thorpes Organic Family Farm</li>
+<li>organic agriculture</li>
+<li>strawberries</li>
+</ul>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 16, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 8, 2022</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/esmero" target="_blank" rel="noopener" title="Archipelago Commons + esmero" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://groups.google.com/g/archipelago-commons" target="_blank" rel="noopener" title="Archipelago Commons Google Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 4v7H5.17L4 12.17V4h11m1-2H3a1 1 0 0 0-1 1v14l4-4h10a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1m5 4h-2v9H6v2a1 1 0 0 0 1 1h11l4 4V7a1 1 0 0 0-1-1Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://archipelagocommons.slack.com" target="_blank" rel="noopener" title="Archipelago Commons Slack Channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
