@@ -61,5 +61,5 @@ jobs:
           git fetch origin gh-pages --depth=1 &&
           # no making it default yet, but the previous command was missing the action
           #mike deploy --update-aliases 1.3.0 &&
-          #mike set-default --push 1.3.0 || echo "No changes to commit"
           mike deploy --update-aliases --push 1.3.0 || echo "No changes to commit"
+          mike set-default --push 1.3.0 || echo "No changes to commit"
