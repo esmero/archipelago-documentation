@@ -7,8 +7,19 @@
     [METRO's Digital Services Team](https://metro.org/digital-services) facilitated many different internal training sessions throughout 2020-2022. If you and your team need access to any of these sessions that were recorded, please [contact us](mailto:repositorysupport@metro.org). Thank you!
 
 ## 2023
-- [Experimental IIIF Kitchen using Archipelago. Pino Navarro, Diego; Sherrick, Allison. (June 2023)](https://tinyurl.com/apiiif2023)
-- [Mapping an Engineer Through IIIF. Monger, Jenifer J.; McCarthy, Brenden; Pino Navarro, Diego; Sherrick, Allison. (June 2023)](https://tinyurl.com/2x9mshx5)
+
+- IIIF Search API and Dynamic/evolving Manifest Generation: Facing the Unknown. Diego Alberto Pino Navarro, Allison Sherrick.
+    - [📺 Recording available](https://www.youtube.com/watch?v=z9yay9J16T0&t=1050s)
+
+DLF Forum (November 2023)
+    - [Working and Learning the IIIF Search API in Archipelago. Diego Pino Navarro, Allison Sherrick.](https://osf.io/p4m9s/)
+    - [Working with Open-Schema JSON in Archipelago. Allison Sherrick, Diego Pino Navarro, Martha Tenney, Joanna DiPasquale, Corinne Chatnik.](https://osf.io/dx3fm/)
+    - [Slaying the Migration Dragon: Approaches to Navigating an Open Source System Migration. Lisa McFall, Sarah Walden McGowan, Brenden McCarthy, Shay Foley.](https://osf.io/aymhd/)
+
+IIIF Annual Conference (June 2023)
+- [Experimental IIIF Kitchen using Archipelago. Pino Navarro, Diego; Sherrick, Allison.](https://tinyurl.com/apiiif2023)
+- [Mapping an Engineer Through IIIF. Monger, Jenifer J.; McCarthy, Brenden; Pino Navarro, Diego; Sherrick, Allison.](https://tinyurl.com/2x9mshx5)
+
 - Into Archipelago Commons: Access, Innovation and Community in Modern Archives.  Monger, Jenifer J.; McCarthy, Brenden; Corinne Chatnik. (June 2023)
 - Implementing Archipelago: An Innovative, Community Driven, Open-Source Repository. Corinne Chatnik, Union College; Martha Tenney, Barnard College. (June 2023)
 - [For the Love of Data and Ourselves: The Bumpy, Technical Road to Modern Archives. Monger, Jenifer J.; McCarthy, Brenden. (January/February 2023)](https://mydigitalpublication.com/publication/?m=30305&l=1)
