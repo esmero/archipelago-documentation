@@ -16,7 +16,7 @@
     - [Working with Open-Schema JSON in Archipelago. Allison Sherrick, Diego Pino Navarro, Martha Tenney, Joanna DiPasquale, Corinne Chatnik.](https://osf.io/dx3fm/)
     - [Slaying the Migration Dragon: Approaches to Navigating an Open Source System Migration. Lisa McFall, Sarah Walden McGowan, Brenden McCarthy, Shay Foley.](https://osf.io/aymhd/)
 
--IIIF Annual Conference (June 2023)
+- IIIF Annual Conference (June 2023)
     - [Experimental IIIF Kitchen using Archipelago. Pino Navarro, Diego; Sherrick, Allison.](https://tinyurl.com/apiiif2023)
     - [Mapping an Engineer Through IIIF. Monger, Jenifer J.; McCarthy, Brenden; Pino Navarro, Diego; Sherrick, Allison.](https://tinyurl.com/2x9mshx5)
 
