@@ -2,7 +2,7 @@ site_name: Archipelago Documentation
 site_url: https://docs.archipelago.nyc
 repo_url: https://github.com/esmero/archipelago-documentation
 repo_name: archipelago-documentation
-edit_uri: commits/1.1.0/docs/
+edit_uri: commits/1.3.0/docs/
 site_description: Project documentation for Archipelago.
 site_author: The Digital Services Team at Metropolitan New York Library Council
 nav:
@@ -67,8 +67,8 @@ nav:
       - Twig Templates and Archipelago:
         - metadatatwigs.md
         - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
-        - Twig Recipe Cards for Common Use Cases: twig_recipe_cards.md  
-        - Metadata Display Preview: metadata_display_preview.md             
+        - Twig Recipe Cards for Common Use Cases: twig_recipe_cards.md
+        - Metadata Display Preview: metadata_display_preview.md
       - Annotations: annotations.md
     - Archipelago Multi-Importer (AMI):
       - ami_index.md
@@ -89,7 +89,7 @@ nav:
           - Documentation Template: documentation_template.md
           - Additional Features: documentation_features.md
           - Technical Details: documentation_technical.md
-      - Care & Coding + Fixing / Acknowledgments / License: acknowledgments.md	  
+      - Care & Coding + Fixing / Acknowledgments / License: acknowledgments.md
 theme:
   name: material
   favicon: images/strawberries_color.png
