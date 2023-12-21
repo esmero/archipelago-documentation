@@ -12,13 +12,13 @@
         <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
       
       
-        <link rel="canonical" href="https://docs.archipelago.nyc/1.3.0/archipelago-deployment-democontent/">
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.3.0/strawberryrunners_pager_ocr/">
       
       
-        <link rel="prev" href="../archipelago-deployment-windows/">
+        <link rel="prev" href="../strawberryrunners/">
       
       
-        <link rel="next" href="../archipelago-deployment-UpgradeDrupalD9toD10/">
+        <link rel="next" href="../strawberryrunners_webpage_text/">
       
       
       <link rel="icon" href="../images/strawberries_color.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Adding Demo Archipelago Digital Objects (ADOs) to your Repository - Archipelago Documentation</title>
+        <title>Strawberry Runners Post-Processing - Archipelago Documentation</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adding-demo-archipelago-digital-objects-ados-to-your-repository" class="md-skip">
+        <a href="#reviewing-and-adjusting-the-pager-and-ocr-post-processor-operations" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Adding Demo Archipelago Digital Objects (ADOs) to your Repository
+              Strawberry Runners Post-Processing
             
           </span>
         </div>
@@ -510,10 +510,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -529,12 +527,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -548,7 +546,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             DevOps & Deployment
@@ -559,10 +557,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -588,12 +584,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
@@ -607,7 +603,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1_1">
             <span class="md-nav__icon md-icon"></span>
             Archipelago-Deployment
@@ -702,30 +698,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Adding Demo Archipelago Digital Objects (ADOs) to your Repository
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../archipelago-deployment-democontent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,125 +710,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-new-way-archipelago-100-rc2-or-higher" class="md-nav__link">
-    <span class="md-ellipsis">
-      The new way Archipelago 1.0.0-RC2 or higher.
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-only-step" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: (only step)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 1: (only step)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#old-way-a-running-archipelago-10-beta3-or-higher" class="md-nav__link">
-    <span class="md-ellipsis">
-      Old way, A running Archipelago 1.0-Beta3 or higher.
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-get-the-content" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Get the content
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-ingest-the-objects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Ingest the Objects
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 2: Ingest the Objects">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#need-help-blue-screen-missed-a-step-need-a-hug-another-hug" class="md-nav__link">
-    <span class="md-ellipsis">
-      Need help? Blue Screen? Missed a step? Need a hug? Another Hug?
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caring-coding-fixing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Caring &amp; Coding + Fixing
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      License
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1307,8 +1164,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1328,12 +1187,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -1347,7 +1206,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Site Administration & Configuration
@@ -1421,8 +1280,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1438,12 +1299,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_4" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2_4" id="__nav_3_2_4_label" tabindex="0">
@@ -1457,7 +1318,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2_4">
             <span class="md-nav__icon md-icon"></span>
             Strawberry Runners Background/Post-Processing
@@ -1489,10 +1350,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../strawberryrunners_pager_ocr/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1501,6 +1371,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -2806,113 +2677,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-new-way-archipelago-100-rc2-or-higher" class="md-nav__link">
-    <span class="md-ellipsis">
-      The new way Archipelago 1.0.0-RC2 or higher.
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-only-step" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: (only step)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 1: (only step)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#old-way-a-running-archipelago-10-beta3-or-higher" class="md-nav__link">
-    <span class="md-ellipsis">
-      Old way, A running Archipelago 1.0-Beta3 or higher.
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-get-the-content" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Get the content
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-ingest-the-objects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Ingest the Objects
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 2: Ingest the Objects">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#need-help-blue-screen-missed-a-step-need-a-hug-another-hug" class="md-nav__link">
-    <span class="md-ellipsis">
-      Need help? Blue Screen? Missed a step? Need a hug? Another Hug?
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caring-coding-fixing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Caring &amp; Coding + Fixing
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      License
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2930,13 +2694,37 @@
     
     
     
-      <span class="md-tag">Archipelago Digital Objects</span>
+      <span class="md-tag">Strawberry Runners</span>
     
   
     
     
     
-      <span class="md-tag">Demo Content</span>
+      <span class="md-tag">HOCR</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">OCR</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Pager</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Post-processing</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Background Processing</span>
     
   
 </nav>
@@ -2946,84 +2734,274 @@
   
 
 
-<h1 id="adding-demo-archipelago-digital-objects-ados-to-your-repository">Adding Demo Archipelago Digital Objects (ADOs) to your Repository</h1>
-<p>We make this optional since we feel  not everyone wants to have Digital Objects from other people using space in their system. 
-Still, if you are new to Archipelago we encourage you to do this. Its a simply way to get started without thinking too much. 
-You can learn and test. Then delete and move over. </p>
-<h2 id="prerequisites">Prerequisites</h2>
-<h3 id="the-new-way-archipelago-100-rc2-or-higher">The new way Archipelago 1.0.0-RC2 or higher.</h3>
+<h1 id="reviewing-and-adjusting-the-pager-and-ocr-post-processor-operations">Reviewing and adjusting the <code>pager</code> and <code>ocr</code> Post-Processor operations</h1>
+<p>The <code>pager</code> and <code>ocr</code> Post-processor operations are likely the most important pair of Strawberry Runners in your Archipelago.</p>
+<p>As stated on the <a href="docs/strawberryrunners.md">Strawberry Runners overview page</a>, the <code>pager</code> action uses the 'Post processor that extracts/generates Ordered Sequences of files/pages/children using Files present in an ADO' plugin. Nested one level in, the <code>ocr</code> action uses the 'Post processor that Runs OCR/HORC against files' plugin. The <code>ocr</code> operations will be executed after the completion of the <code>pager</code> operations.</p>
+<p>Common changes you may wish to make for the <code>pager</code> and/or <code>ocr</code> operations include adding or removing particular types of Archipelago Digital Objects to apply these operations to.</p>
+<h1 id="pager-settings">Pager Settings</h1>
+<p>To review or adjust the configurations for the <code>pager</code> operation, select <code>Edit</code> from the <code>Operations</code> menu.</p>
+<p>In the <code>pager</code> settings, you will see the following configuration options:</p>
+<p><a class="glightbox" href="../images/sbr_pager.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Strawberry Runners Pager" src="../images/sbr_pager.png" /></a></p>
+<ol>
+<li>
+<p>Label: </p>
 <ul>
-<li>You installed it either via the Step by Step <a href="../archipelago-deployment-osx/">deployment on OSX</a>, the one for <a href="../archipelago-deployment-ubuntu/">Ubuntu</a> or using your secret powers directly on a VM/Metal/Cloud/EC2 or even a raspberryPI.</li>
-<li>You followed the guides without being too creative which means you have an <code>jsonapi</code> drupal user and an <code>admin</code> one and you can login and out of your server.</li>
-<li>You remember your <code>admin</code> user. (If you followed one of the deployment guides, password will be <code>archipelago</code>)</li>
+<li>Label for this Processor; which should be a unique machine-readable name</li>
+<li>Can only contain lowercase letters, numbers, and underscores</li>
+<li>We do not recommend changing this Label from the default <code>pager</code>. </li>
 </ul>
-<h2 id="step-1-only-step">Step 1: (only step)</h2>
+</li>
+<li>
+<p>Strawberry Runner Post Processor Plugin:</p>
 <ul>
-<li>Log into your Archipelago using the <code>admin</code> user. </li>
-<li>Navigate to <code>Content</code> -&gt; <code>Ami Sets</code>. You will see a single <code>AMI Set</code> already in place. </li>
-<li>On the Drop Down Menu to the right (The <code>edit</code> Button), press on the little <code>down arrow</code> and choose <code>Process</code>. </li>
-<li>A new Form will appear. Under <code>DESIRED ADOS STATUSES AFTER PROCESS</code>, change all from Draft to Published, leave <code>Enqueue but do not process Batch in realtime</code> unchecked and press "Confirm". The Ingest will start and a progress bar will advance. Once ready a list of Ingest Objects should appear.</li>
-<li>You are done!</li>
+<li>The <code>Post processor that extracts/generates Ordered Sequences of files/pages/children using Files present in an ADO</code> should be selected.</li>
+<li>We do not recommend changing this Plugin selection.</li>
 </ul>
-<h3 id="old-way-a-running-archipelago-10-beta3-or-higher">Old way, A running Archipelago 1.0-Beta3 or higher.</h3>
+</li>
+<li>
+<p>Checkbox to mark this processor plugin as active </p>
 <ul>
-<li>You installed it either via the Step by Step <a href="../archipelago-deployment-osx/">deployment on OSX</a>, the one for <a href="../archipelago-deployment-ubuntu/">Ubuntu</a> or using your secret powers directly on a VM/Metal/Cloud/EC2 or even a raspberryPI.</li>
-<li>You followed the guides without being too creative which means you have a <code>jsonapi</code> drupal user and you can login and out of your server.</li>
+<li>We recommend keeping this checked as <code>active</code> at all times, but you may wish to temporarily disable this if you are performing certain types of administrative review tasks such as running large test ingests where you plan on deleting the ADOs before a final ingest.</li>
+<li>If you accidentally uncheck this and need to re-trigger the <code>pager</code> (and corresponding nested <code>ocr</code> action), you can use Archipelago's <a href="docs/find_and_replace.md">Find and Replace</a> to first select a specific group of Digital Objects you wish to target for Post-Processing, then select the <code>Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item</code> from the <a href="docs/find_and_replace.md">Find and Replace</a> <code>Actions menu</code>.</li>
 </ul>
-<h2 id="step-1-get-the-content">Step 1: Get the content</h2>
-<p>Go into your <code>archipelago-deployment</code> folder and into the <code>d8content</code> folder that is inside it, e.g.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>archipelago-deployment/d8content
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/esmero/archipelago-recyclables
-</code></pre></div>
-<h2 id="step-2-ingest-the-objects">Step 2: Ingest the Objects</h2>
+</li>
+<li>
+<p>ADO type(s) to limit this processor to:</p>
 <ul>
-<li>If running Docker execute:</li>
+<li>A single ADO type or a comma delimited list of ado types that qualify to be Processed.</li>
+<li>Leave empty to apply to all ADOs. If you do not provide any specific ADO types here, the processor will be applied for all ADOs with the JSON keys selected in the next step.</li>
+<li>Default ADO types specified are: 'Document,Book,Article'  </li>
+<li>You may wish to add additional types of document/multiple-paged type of ADOs to this list that are custom to you Archipelago environment. </li>
 </ul>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;d8content/archipelago-recyclables/deploy_ados.sh&#39;</span>
-</code></pre></div>
-<p>You will see multiple outputs similar to this:</p>
-<div class="highlight"><pre><span></span><code>Files<span class="w"> </span><span class="k">in</span><span class="w"> </span>provided<span class="w"> </span>location:
-<span class="w"> </span>-<span class="w"> </span>anne_001.jpg
-<span class="w"> </span>-<span class="w"> </span>anne_002.jpg
-<span class="w"> </span>-<span class="w"> </span>anne_003.jpg
-<span class="w"> </span>-<span class="w"> </span>anne_004.jpg
-<span class="w"> </span>-<span class="w"> </span>anne_005.jpg
-<span class="w"> </span>-<span class="w"> </span>anne_006.jpg
-<span class="w"> </span>-<span class="w"> </span>anne_007.jpg
-<span class="w"> </span>-<span class="w"> </span>anne_008.jpg
-<span class="w"> </span>-<span class="w"> </span>anne_009.jpg
-<span class="w"> </span>-<span class="w"> </span>anne_010.jpg
-File<span class="w"> </span>anne_001.jpg<span class="w"> </span>sucessfully<span class="w"> </span>uploaded<span class="w"> </span>with<span class="w"> </span>Internal<span class="w"> </span>Drupal<span class="w"> </span>file<span class="w"> </span>ID<span class="w"> </span><span class="m">5</span>
-File<span class="w"> </span>anne_002.jpg<span class="w"> </span>sucessfully<span class="w"> </span>uploaded<span class="w"> </span>with<span class="w"> </span>Internal<span class="w"> </span>Drupal<span class="w"> </span>file<span class="w"> </span>ID<span class="w"> </span><span class="m">6</span><span class="w"> </span>
-File<span class="w"> </span>anne_003.jpg<span class="w"> </span>sucessfully<span class="w"> </span>uploaded<span class="w"> </span>with<span class="w"> </span>Internal<span class="w"> </span>Drupal<span class="w"> </span>file<span class="w"> </span>ID<span class="w"> </span><span class="m">7</span>
-File<span class="w"> </span>anne_004.jpg<span class="w"> </span>sucessfully<span class="w"> </span>uploaded<span class="w"> </span>with<span class="w"> </span>Internal<span class="w"> </span>Drupal<span class="w"> </span>file<span class="w"> </span>ID<span class="w"> </span><span class="m">8</span>
-File<span class="w"> </span>anne_005.jpg<span class="w"> </span>sucessfully<span class="w"> </span>uploaded<span class="w"> </span>with<span class="w"> </span>Internal<span class="w"> </span>Drupal<span class="w"> </span>file<span class="w"> </span>ID<span class="w"> </span><span class="m">9</span><span class="w"> </span>
-File<span class="w"> </span>anne_006.jpg<span class="w"> </span>sucessfully<span class="w"> </span>uploaded<span class="w"> </span>with<span class="w"> </span>Internal<span class="w"> </span>Drupal<span class="w"> </span>file<span class="w"> </span>ID<span class="w"> </span><span class="m">10</span><span class="w"> </span>
-File<span class="w"> </span>anne_007.jpg<span class="w"> </span>sucessfully<span class="w"> </span>uploaded<span class="w"> </span>with<span class="w"> </span>Internal<span class="w"> </span>Drupal<span class="w"> </span>file<span class="w"> </span>ID<span class="w"> </span><span class="m">11</span><span class="w"> </span>
-File<span class="w"> </span>anne_008.jpg<span class="w"> </span>sucessfully<span class="w"> </span>uploaded<span class="w"> </span>with<span class="w"> </span>Internal<span class="w"> </span>Drupal<span class="w"> </span>file<span class="w"> </span>ID<span class="w"> </span><span class="m">12</span>
-File<span class="w"> </span>anne_009.jpg<span class="w"> </span>sucessfully<span class="w"> </span>uploaded<span class="w"> </span>with<span class="w"> </span>Internal<span class="w"> </span>Drupal<span class="w"> </span>file<span class="w"> </span>ID<span class="w"> </span><span class="m">13</span><span class="w"> </span>
-File<span class="w"> </span>anne_010.jpg<span class="w"> </span>sucessfully<span class="w"> </span>uploaded<span class="w"> </span>with<span class="w"> </span>Internal<span class="w"> </span>Drupal<span class="w"> </span>file<span class="w"> </span>ID<span class="w"> </span><span class="m">14</span>
-New<span class="w"> </span>Object<span class="w"> </span><span class="s1">&#39;Anne of Green Gables : Chapters 1 and 2&#39;</span><span class="w"> </span>with<span class="w"> </span>UUID<span class="w"> </span>9eb28775-d73a-4904-bc79-f0e925075bc5<span class="w"> </span>successfully<span class="w"> </span>ingested.<span class="w"> </span>Thanks!
-</code></pre></div>
-<p>The gist here is that if the script says <code>Thanks</code> you are good.</p>
+</li>
+<li>
+<p>The JSON key that contains the desired source files:</p>
 <ul>
-<li>If you are not running Docker (You are a unicorn or at least a hacker) you will need to tune/copy/modify the following script:
-<code>archipelago-deployment/d8content/archipelago-recyclables/deploy_ados.sh</code></li>
+<li>By default, the <code>as:image</code> and <code>as:document</code> keys are selected.</li>
+<li>We do not recommend changing this selection.</li>
 </ul>
-<p>Inside you will find lines like this one: </p>
-<div class="highlight"><pre><span></span><code>drush<span class="w"> </span>archipelago:jsonapi-ingest<span class="w"> </span>/var/www/html/d8content/archipelago-recyclables/ado/0c2dc01a-7dc2-48a9-b4fd-3f82331ec803.json<span class="w"> </span>--uuid<span class="o">=</span>0c2dc01a-7dc2-48a9-b4fd-3f82331ec803<span class="w"> </span>--bundle<span class="o">=</span>digital_object<span class="w"> </span>--uri<span class="o">=</span>http://esmero-web<span class="w"> </span>--files<span class="o">=</span>/var/www/html/d8content/archipelago-recyclables/ado/0c2dc01a-7dc2-48a9-b4fd-3f82331ec803<span class="w"> </span>--user<span class="o">=</span>jsonapi<span class="w"> </span>--password<span class="o">=</span>jsonapi<span class="w"> </span>--moderation_state<span class="o">=</span>published<span class="p">;</span>
-</code></pre></div>
-<p>What you want here is to modify/replace the absolute paths that point your demo objects (.json) and their assets (folders with the same name). Basically replace every entry of <code>/var/www/html/d8content/archipelago-recyclables/</code> with the path to <code>archipelago-recyclables</code>.</p>
-<h3 id="need-help-blue-screen-missed-a-step-need-a-hug-another-hug">Need help? Blue Screen? Missed a step? Need a hug? Another Hug?</h3>
-<p>If you have trouble running this or see errors or need help with a step (its only two steps), please let us know (ASAP!). You can either open an <code>issue</code> in this repository or use the <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Google Group</a>. We are here to help.</p>
-<h2 id="caring-coding-fixing">Caring &amp; Coding + Fixing</h2>
+</li>
+<li>
+<p>Mimetypes(s) to limit this Processor to:</p>
 <ul>
-<li><a href="https://github.com/DiegoPino">Diego Pino</a></li>
-<li><a href="https://github.com/giancarlobi">Giancarlo Birello</a></li>
-<li><a href="https://github.com/alliomeria">Allison Lund</a></li>
+<li>A single Mimetype type or a comma separated list of mimetypes that qualify to be Processed.</li>
+<li>Leave empty to apply any file.</li>
+<li>Default mimetypes are: 'application/pdf,image/tiff,image/jpeg,image/jp2'  </li>
 </ul>
-<h2 id="license">License</h2>
-<p><a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3</a></p>
+</li>
+<li>
+<p>Within the ADO's metadata, the JSON key that contains the language in ISO639-3 (3 letter) format to be used for OCR/NLP processing via Tesseract.</p>
+<ul>
+<li>Default JSON key specified is: 'language_iso639_3'</li>
+</ul>
+</li>
+<li>
+<p>Please provide a default language in ISO639-3 (3 letter) format. If none is provided we will use 'eng'.</p>
+<ul>
+<li>Default language specified is: 'eng'</li>
+</ul>
+</li>
+<li>
+<p>Timeout in seconds for this process.</p>
+<ul>
+<li>If the process runs out of time it can still be processed again</li>
+<li>Default selection is: 10</li>
+</ul>
+</li>
+<li>
+<p>Order or execution in the global chain.</p>
+<ul>
+<li>Default selection is: 0</li>
+</ul>
+</li>
+</ol>
+<h1 id="ocr-hocr-settings">OCR / HOCR Settings</h1>
+<p>To review or adjust the configurations for the <code>ocr</code> operation, select <code>Edit</code> from the <code>Operations</code> menu.</p>
+<p>In the <code>pager</code> settings, you will see several different configuration options.</p>
+<p><a class="glightbox" href="../images/sbr_ocr_part1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Strawberry Runners OCR Part 1" src="../images/sbr_ocr_part1.png" /></a></p>
+<ol>
+<li>
+<p>Label: </p>
+<ul>
+<li>Label for this Processor; which should be a unique machine-readable name</li>
+<li>Can only contain lowercase letters, numbers, and underscores</li>
+<li>We do not recommend changing this Label from the default <code>ocr</code>. </li>
+</ul>
+</li>
+<li>
+<p>Strawberry Runner Post Processor Plugin:</p>
+<ul>
+<li>The <code>Post processor that Runs OCR/HORC against files</code> should be selected.</li>
+<li>We do not recommend changing this Plugin selection.</li>
+</ul>
+</li>
+<li>
+<p>Checkbox to mark this processor plugin as active </p>
+<ul>
+<li>We recommend keeping this checked as <code>active</code> at all times, but you may wish to temporarily disable this if you are performing certain types of administrative review tasks such as running large test ingests where you plan on deleting the ADOs before a final ingest.</li>
+<li>If you accidentally uncheck this and need to re-trigger the <code>pager</code> (and corresponding nested <code>ocr</code> action), you can use Archipelago's <a href="docs/find_and_replace.md">Find and Replace</a> to first select a specific group of Digital Objects you wish to target for Post-Processing, then select the <code>Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item</code> from the <a href="docs/find_and_replace.md">Find and Replace</a> <code>Actions menu</code>.</li>
+</ul>
+</li>
+<li>
+<p>The type of source data this processor works on:</p>
+<ul>
+<li>Select from where the source file this processor needs is fetched.</li>
+<li>Default selection of 'File entities referenced in the as:filetype JSON structure'.</li>
+<li>You also have the option of selecting 'Full file paths passed by another processor', but we do not recommend using this option as it is less granular in its application.      </li>
+</ul>
+</li>
+<li>
+<p>ADO type(s) to limit this processor to:</p>
+<ul>
+<li>A single ADO type or a comma delimited list of ado types that qualify to be Processed</li>
+<li>Leave empty to apply to all ADOs. If you do not provide any specific ADO types here, the processor will be applied for all ADOs with the JSON keys selected in the next step.</li>
+<li>Default ADO types specified are: 'Document,Book,Article'  </li>
+<li>You may wish to add additional types of document/multiple-paged type of ADOs to this list that are custom to you Archipelago environment. </li>
+</ul>
+</li>
+<li>
+<p>The JSON key that contains the desired source files:</p>
+<ul>
+<li>By default, the <code>as:image</code> and <code>as:document</code> keys are selected.</li>
+<li>We do not recommend changing this selection.</li>
+</ul>
+</li>
+<li>
+<p>Mimetypes(s) to limit this Processor to:</p>
+<ul>
+<li>A single Mimetype type or a comma separated list of mimetypes that qualify to be Processed.</li>
+<li>Leave empty to apply any file.</li>
+<li>Default mimetypes are: 'application/pdf,image/tiff,image/jpeg,image/jp2'  </li>
+</ul>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Advanced OCR/HOCR Settings</p>
+<p>We do not recommend making changes to the follow settings unless you are the System Administrator.</p>
+</div>
+<ol>
+<li>
+<p>The system path to the ghostscript (gs) binary that will be executed by this processor.</p>
+<ul>
+<li>A full system path to the gs binary present in the same environment your PHP runs</li>
+<li>Default path specified is: '/usr/bin/gs'</li>
+</ul>
+</li>
+<li>
+<p>Any additional argument your executable binary requires.</p>
+<ul>
+<li>Any arguments your ghostscript (gs) binary requires to run. Use %file as replacement for the file if the executable requires the filename to be passed under a specific argument. We recommend testing with -r150 (150dpi image extraction) for better performance but -r300 can be also used if source Images in a PDF are small</li>
+<li>Default argument specified is: -r150 %file</li>
+</ul>
+</li>
+<li>
+<p>The system path to the Tesseract binary that will be executed by this processor.</p>
+<ul>
+<li>A full system path to the Tesseract binary present in the same environment your PHP runs</li>
+<li>Default path specified is: '/usr/bin/tesseract'</li>
+</ul>
+</li>
+<li>
+<p>Within the ADO's metadata, the JSON key that contains the language in ISO639-3 (3 letter) format to be used for OCR/NLP processing via Tesseract.</p>
+<ul>
+<li>Default JSON key specified is: 'language_iso639_3'</li>
+</ul>
+</li>
+</ol>
+<p><a class="glightbox" href="../images/sbr_ocr_part2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Strawberry Runners OCR Part 2" src="../images/sbr_ocr_part2.png" /></a></p>
+<ol>
+<li>
+<p>Please provide a default language in ISO639-3 (3 letter) format. If none is provided we will use 'eng' </p>
+<ul>
+<li>Default language specified is: 'eng'</li>
+</ul>
+</li>
+<li>
+<p>Any additional argument for your tesseract binary.</p>
+<ul>
+<li>Any arguments your binary requires to run. Use %file as replacement for the file that is output by the GS binary. Use %language as replacement for the chosen language.</li>
+<li>Default arguments specified are: '%file stdout -l %language hocr'</li>
+</ul>
+</li>
+<li>
+<p>The data/languages folder for Tesseract</p>
+<ul>
+<li>Absolute path where the Languages are stored in the Server. This will be used in --tessdata-dir</li>
+<li>Default path specified is: '/usr/share/tessdata'  </li>
+</ul>
+</li>
+<li>
+<p>The system path to the pdfalto binary that will be executed by this processor.</p>
+<ul>
+<li>A full system path to the pdfalto binary present in the same environment your PHP runs, e.g /usr/local/bin/pdfalto</li>
+<li>Default path specified is: '/usr/bin/pdfalto'</li>
+</ul>
+</li>
+<li>
+<p>Any additional argument for your pdfalto binary.</p>
+<ul>
+<li>Any arguments your binary requires to run. Use %file as replacement for the file that is output by the pdfalto binary.</li>
+<li>Default arguments specified are: '%file -q</li>
+</ul>
+</li>
+<li>
+<p>The expected and desired output of this processor.</p>
+<ul>
+<li>If the output is just data and "One or more Files" is selected all data will be dumped into a file and handled as such.</li>
+<li>Default selection is: 'Data/Values that can be serialized to JSON'</li>
+<li>Additional optional is to select 'One or more Files', but it is not recommended unless to use this for the default <code>ocr</code> operation since this will alter how the data is incorporated in the Search API (Solr index).</li>
+</ul>
+</li>
+<li>
+<p>Where and how the output will be used.</p>
+<ul>
+<li>Default select is: 'In a Search API Document using the Strawberryfield Flavor Data Source (e.g used for HOCR highlight)'  </li>
+<li>Additional option to select 'As Input for another processor Plugin' --which will only have an effect if another Processor is setup to consume this output.</li>
+</ul>
+</li>
+<li>
+<p>The queue to use for this processor.</p>
+<ul>
+<li>The primary queue will be execute in realtime while the Secondary will be execute in background</li>
+<li>Default selection is for the 'Secondary queue in background'</li>
+</ul>
+</li>
+<li>
+<p>Checkbox to Use NLP (Natural Language Processing) to extract entities from Text</p>
+<ul>
+<li>If checked Full text will be processed for Natural language Entity extraction using Polyglot.</li>
+<li>Default option is to have the option checked. </li>
+</ul>
+</li>
+<li>
+<p>The URL location of your NLP64 server.</p>
+<ul>
+<li>Defaults to http://esmero-nlp:6400</li>
+</ul>
+</li>
+<li>
+<p>Which method(NER) to use</p>
+<ul>
+<li>The NER NLP method to use to extract Agents, Places and Sentiment.</li>
+<li>Default selection: 'Polyglot (faster)'</li>
+<li>Alternation selection: 'spaCy (more accurate)'</li>
+</ul>
+</li>
+<li>
+<p>Timeout in seconds for this process.</p>
+<ul>
+<li>900</li>
+<li>If the process runs out of time it can still be processed again.</li>
+</ul>
+</li>
+<li>Order or execution in the global chain.<ul>
+<li>0</li>
+</ul>
+</li>
+</ol>
+<hr />
+<p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
+<p>Return to the main <a href="../strawberryrunners/">Strawberry Runners</a> or the <a href="../">Archipelago Documentation main page</a>.</p>
 
 
 
@@ -3046,7 +3024,7 @@ New<span class="w"> </span>Object<span class="w"> </span><span class="s1">&#39;A
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 9, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2023</span>
   </span>
 
     
@@ -3056,7 +3034,7 @@ New<span class="w"> </span>Object<span class="w"> </span><span class="s1">&#39;A
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 24, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 18, 2023</span>
   </span>
 
     
