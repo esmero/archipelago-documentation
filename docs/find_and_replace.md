@@ -70,7 +70,7 @@ The default options available through the Action dropdown menu include:
 - *`Delete selected entities/translations`
 
 _* denotes Action options that are also shared with the main `Content` Page Action Menu_
-_You can read more about [Strawberry Runners Post-Processing Actions here](docs/strawberryrunners.md)_ 
+_You can read more about [Strawberry Runners Post-Processing Actions here](strawberryrunners.md)_ 
 
 ![Find and Replace Actions](images/find_and_replace_actions.jpg)
 
