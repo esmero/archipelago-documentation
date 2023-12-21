@@ -12,7 +12,7 @@ tags:
 
 If you already have a well-set-up and well-loved Archipelago (RC2 or your own custom version) running Drupal 8 (D8), this documentation will allow you to update to Drupal 9 (D9) without major issues.
 
-D8 is no longer supported as of the end of November 2021. D9 has been around for a little while and even if every module is not supported yet, what you need and want for **Archipelago** has long been D9-ready. 
+D8 is no longer supported as of the end of November 2021. D9 has been around for a little while and even if every module is not supported yet, what you need and want for **Archipelago** has long been D9-ready.
 
 ## Requirements
 
@@ -45,7 +45,7 @@ docker ps
 ### Step 3:
 
 Now let's `tar.gz` the whole ensemble with data and configs. As an example we will save this into your `$HOME` folder.
-As a good practice we append the **current date **(YEAR-MONTH-DAY) to the filename. Here we assume today is December 1st of 2021.
+As a good practice we append the **current date** (YEAR-MONTH-DAY) to the filename. Here we assume today is December 1st of 2021.
 
 ```shell
 
@@ -56,7 +56,7 @@ sudo tar -czvpf $HOME/archipelago-deployment-live-backup-20211201.tar.gz ../../.
 The process may take a few minutes. Now let's verify that all is there and that the `tar.gz` is not corrupt.
 
 ```shell
-tar -tvvf $HOME/archipelago-deployment-live-backup-20211201.tar.gz 
+tar -tvvf $HOME/archipelago-deployment-live-backup-20211201.tar.gz
 ```
 
 You will see a listing of files. If corrupt (Do you have enough space? Did your ssh connection drop?) you will see the following:
@@ -112,7 +112,7 @@ Time to fetch the `1.0.0-RC3` branch and update our `docker-compose` and `compos
 ```shell
 cd deploy/ec2-docker
 docker-compose down
-git checkout 1.0.0-RC3 
+git checkout 1.0.0-RC3
 ```
 
 Then copy the appropriate `docker-compose` file for your architecture:
@@ -169,7 +169,7 @@ repo_docs-->
 Finally, pull the images, and bring up the ensemble:
 
 ```shell
-docker compose pull 
+docker compose pull
 docker compose up -d
 ```
 
@@ -179,7 +179,7 @@ Give all a little time to start. The latest `min.io` adds a new console, and you
 docker ps
 ```
 
-You should see something like this: 
+You should see something like this:
 
 ```shell
 CONTAINER ID   IMAGE                                    COMMAND                  CREATED          STATUS          PORTS                                                           NAMES
@@ -212,8 +212,8 @@ Well done! If you see **no** issues and all ends in a **Green colored message** 
 
 #### What if not all is OK and I see red and a lot of dependency explanations?
 
-If you have manually installed packages via composer in the past that are NO longer Drupal 9 compatible you may see errors. 
-In that case you need to check each package website's (normally https://www.drupal.org/project/the_module_name) and check if there is a Drupal 9 compatible version. 
+If you have manually installed packages via composer in the past that are NO longer Drupal 9 compatible you may see errors.
+In that case you need to check each package website's (normally https://www.drupal.org/project/the_module_name) and check if there is a Drupal 9 compatible version.
 
 If so run:
 
@@ -221,7 +221,7 @@ If so run:
 docker exec -ti esmero-php bash -c "composer require 'drupal/the_module_name:^VERSION_NUMBER_THAT_WORKS_ON_DRUPAL9_' --update-with-dependencies --no-update" and run **Step 3 ** again (and again until all is cleared)
 ```
 
-If not: try to find a replacement module that does something simular, but in any case you may end having to remove before proceding. Give us a ping/slack/google group/open a github ISSUE if you find yourself uncertain about this. 
+If not: try to find a replacement module that does something simular, but in any case you may end having to remove before proceding. Give us a ping/slack/google group/open a github ISSUE if you find yourself uncertain about this.
 
 ```shell
 docker exec -ti esmero-php bash -c "composer remove drupal/the_module_name --no-update"
@@ -242,7 +242,7 @@ docker exec -ti esmero-php bash -c "drush updatedb"
 
 Previously D8 installations had a "module/profile" driven installation. Those are no longer used or even exist as part of core, but a profile can't be changed once installed so you have to do the following to avoid Drupal complaining about our new and simpler way of doing things (a small roll back):
 
-```shell 
+```shell
 docker exec -ti esmero-php bash -c "sed -i 's/minimal: 1000/standard: 1000/g' config/sync/core.extension.yml"
 docker exec -ti esmero-php bash -c "sed -i 's/profile: minimal/profile: standard/g' config/sync/core.extension.yml"
 ```
@@ -253,19 +253,19 @@ Now you can Sync your new Archipelago 1.0.0-RC3 and bring all the new configs an
 
 #### A Partial Sync, which will bring new configs and update existing ones but will **not** remove ones that only exist in your custom setup, e.g. new Webforms or View Modes.
 
-```shell 
+```shell
 docker exec esmero-php drush cim -y --partial
 ```
 
 #### A Complete Sync, which will bring new configs and update existing ones but will also remove all the ones that are not part of RC3. It's a like clean factory reset.
 
-```shell 
+```shell
 docker exec esmero-php drush cim -y
 ```
 
 If all goes well here and you see no errors it's time to reindex `Solr` because there are new Fields. Run the following:
 
-```shell 
+```shell
 docker exec esmero-php drush search-api-reindex
 docker exec esmero-php drush search-api-index
 ```

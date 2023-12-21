@@ -23,22 +23,22 @@ Running Archipelago Commons on a live public instance using SSL with Blob/Object
 
 ## Requirements
 
-### Minimal
+### Minimal (not recommended for production)
 
 - 4 Gbytes of RAM (e.g AWS EC2 t3.medium) 2 CPUs, Single SSD Drive of 100 Gbytes
 
-### Recommend base line
+### Base line for production
 
 - 8 Gbytes of RAM (AWS EC2 t3.medium)  2 CPUs, Single SSD Drive of 100 Gbytes, optional: one magnetic Drive of 500 Gbytes for Caches/Temp files/Backups.
 
-### Good for all large repository
+### Recommended for production
 
-- 16 Gbytes of RAM (AWS EC2 m6g.xlarge - Graviton)  4 CPUs, Single SSD Drive of 200 Gbytes, optional: one magnetic Drive of 1TB for Caches/Temp files/Backups.
+- 16 Gbytes of RAM (AWS EC2 m6g.xlarge - Graviton) 4 CPUs, Single SSD Drive of 200 Gbytes, optional: one magnetic Drive of 1TB for Caches/Temp files/Backups.
 
 ### OS:
 
-- Ubuntu 20.04 /Amazon Linux 2/Debian 10.9 / AlmaLinux (Centos replacement) matching your CPU architecture (of course)
-- Most recent `Docker` running as a service and `docker-compose`
+- Ubuntu 22.04 /Amazon Linux 2 or Amazon Linux 2023/Debian 10 "Buster"/ AlmaLinux (Centos replacement) matching your CPU architecture (of course)
+- Most recent `Docker` running as a service and `docker-compose` or `docker compose`
 
 ### Skills and the important human aspect
 
@@ -72,7 +72,7 @@ Setup your system using your favorite package manager with
 - git
 - htop
 - tree
-- docker-compose
+- docker-compose or `docker compose` (V2) if running the most recent docker service. See https://docs.docker.com/compose/migrate/
 
 e.g. for Amazon Linux 2 (x86/amd64) these steps are tested:
 
@@ -99,7 +99,7 @@ In your location of choice clone this repo
 ```shell
 git clone https://github.com/esmero/archipelago-deployment-live
 cd archipelago-deployment-live
-git checkout 1.0.0
+git checkout 1.3.0
 ```
 
 ### Step 3. Setup your enviromental variables for Docker/Services
@@ -117,7 +117,8 @@ and editing it
 nano deploy/ec2-docker/.env
 ```
 
-The content of that file would be similar to this.
+The content of that file would be similar to this. 
+`Note`: There are a few extra commented lines at the end only used for: https://docs.archipelago.nyc/1.3.0/security_bots/ if you decide to go that way.
 
 ```env
 ARCHIPELAGO_ROOT=/home/ec2-user/archipelago-deployment-live
@@ -241,7 +242,7 @@ Archipelago will do that for you whenever it's about to expire so no need to dea
 
 Now press CTRL+C. `docker-compose` will shutdown gracefully. Good!
 
-### Step 5. Deploy Drupal 9
+### Step 5. Deploy Drupal 10
 
 #### Composer and Drupal
 
@@ -313,8 +314,8 @@ Now your `deploy.sh` and `update_deployed.sh` are update and ready. Let's ingest
 docker exec -ti esmero-php bash -c 'scripts/archipelago/deploy.sh'
 ```
 
-NOTE: `update_deployed.sh` is not needed when deploying for the first time and totally **discouraged** on a customized Archipelago. 
-If you make modifications to your `Twig templates`, that command will replace the ones shipped by us with fresh copies overwriting all your modifications. Only run to restore larger errors or when needing to update non-customized ones with newer versions.
+**IMPORTANT:**  `update_deployed.sh` is not needed when deploying for the first time and totally **discouraged** on a customized Archipelago. 
+If you make modifications to your `Twig templates`, that command will **replace** the ones shipped by us with fresh copies overwriting all your modifications. Only run to restore larger errors or when needing to update **everything** ones with newer versions and you don't care for your own customization. Please read https://docs.archipelago.nyc/1.3.0/utility_scripts/ for more ways of managing exporting/importing Metadata Display Entities (Twig templates).
 
 ### Step 7. Set your public IIIF server URL to your actual domain
 
@@ -345,7 +346,7 @@ Finally Done! Now you can log into your new Archipelago using `https` and start 
 ## Deployment on ARM64/v8(Graviton, Apple M1) system:
 
 This applies to AWS `m6g` and `t3g` Instances and is documented inline in this guide. Please open an [ISSUE](https://github.com/esmero/archipelago-deployment-live/issues) in this repository if you run into any problems.
-Please review <https://github.com/esmero/archipelago-deployment-live/blob/1.0.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml> for more info.
+Please review <https://github.com/esmero/archipelago-deployment-live/blob/1.3.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml> for more info.
 
 ### How do I know my Architecture?
 
