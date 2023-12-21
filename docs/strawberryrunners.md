@@ -38,13 +38,19 @@ On the Strawberry Runners Settings page, you will see the Archipelago default po
 
 ## Reviewing and Adjusting the default Post-Processors
 
-From the main Strawberry Runner Settings page, you can review and adjust the settings for the default Archipelago configurations by selecting `Edit` from the `Operations menu. 
+From the main Strawberry Runner Settings page, you can review and adjust the settings for the default Archipelago configurations by selecting `Edit` from the `Operations`` menu. 
 
 Please see the following guides for:
 
 - [Adjusting the `pager` and `ocr` operations](strawberryrunners_pager_ocr.md)
 - [Adjusting the `wacz_page_extractor` and `webpage` operations](strawberryrunners_webpage_text.md)
 - [Adjusting the `warc_to_wacz` operation](strawberryrunners_wacz_binary.md)
+
+## Triggering Post-Processing Actions Manually
+
+After making adjustments to Strawberry Runners Post-Processing configurations, you may want to trigger/re-trigger a particular action manually.
+
+You can use Archipelago's [Find and Replace](docs/find_and_replace.md) to first select a specific group of Digital Objects you wish to target for Post-Processing, then select the `Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item` from the [Find and Replace](docs/find_and_replace.md) `Actions menu`.
 
 ### Additional Post Processor Operations
 
