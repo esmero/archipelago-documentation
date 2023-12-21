@@ -26,8 +26,7 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 
 - [Frick Collection and Webrecorder Team Web Archives Collaboration](https://webarchive.archipelago.nyc)
 
-- Hamilton College Library & IT Services (https://litsdigital.hamilton.edu/)
-    - Migration to Archipelago in final stages; Official launch of new site Autumn 2023
+- [Hamilton College Library & IT Services](https://litsdigital.hamilton.edu/)
 
 - [Olin College Library Phoenix Files](https://phoenixfiles.olin.edu)
     - *Early adopter - live since Summer 2020
@@ -41,17 +40,17 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 - [Union College Library](https://arches.union.edu)
 
 - [Western Washington University](https://library.wwu.edu/)
-    - Migration to Archipelago began Summer 2022; Launch of new site ~Winter 2023
+    - Migration to Archipelago began Summer 2022; Launch of new site ~Winter 2023/24
 
 ## Neighborhood Archipelagos
 
 From all around our beautiful shared world. 🏡 🏫 🏛️ 
 
 - [Amherst College](https://acdc.amherst.edu)
-    - _Migration to Archipelago began Spring 2022_
+    - Migration to Archipelago began Spring 2022
 
 - [Association Montessori Internationale](https://montessori-ami.org/)
-    - _Development of Archipelago environment began Summer 2022_
+    - Development of Archipelago environment began Summer 2022; Launch of new site Spring 2024
 
 - [California Revealed](https://repository.californiarevealed.org/)
 
