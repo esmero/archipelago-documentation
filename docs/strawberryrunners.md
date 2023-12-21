@@ -50,7 +50,7 @@ Please see the following guides for:
 
 After making adjustments to Strawberry Runners Post-Processing configurations, you may want to trigger/re-trigger a particular action manually.
 
-You can use Archipelago's [Find and Replace](docs/find_and_replace.md) to first select a specific group of Digital Objects you wish to target for Post-Processing, then select the `Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item` from the [Find and Replace](docs/find_and_replace.md) `Actions menu`.
+You can use Archipelago's [Find and Replace](find_and_replace.md) to first select a specific group of Digital Objects you wish to target for Post-Processing, then select the `Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item` from the [Find and Replace](find_and_replace.md) `Actions menu`.
 
 ### Additional Post Processor Operations
 
