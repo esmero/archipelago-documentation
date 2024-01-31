@@ -83,7 +83,7 @@ You'll notice that there are four plugins, each with different options, availabl
 
 ## Creating a Solr Field
 
-1. Go to `Administration > Configuration > Search and metadata > Search API > Drupal Content to Solr 8 > Fields`.
+1. Go to `Administration > Configuration > Search and metadata > Search API > Drupal Content to Solr 9 > Fields`.
 2. Press the `Add fields` button.
 3. Search for the field created above (expand the `🍓 Strawberry (Descriptive Metadata source) (field_descriptive_metadata)`, e.g. for the key mapped above, look for `field_descriptive_metadata:date_created_edtf_date_free`.
 4. Scroll down after adding to make sure the `Type` for the field is correct (`date` for the example in this guide).
