@@ -28,7 +28,7 @@ Archipelago uses [solr-ocrhighlighting v0.8.4](https://github.com/dbmdz/solr-ocr
 
 ## In-a-nutshell : JSON data to Strawberry Keyname Providers to Solr
 
-If you don't have the bandwidth to read the (stellar) [Metadata in Archipelago](metadatainarchipelago.md) documentation, focus on the following in-a-nutshell understanding of the way Archipelago's Search and Solr is crafted. follow the step-by-step instructions found in [Strawberry Key Name Providers, Solr Field, and Facet Configuration](strawberry_key_name_providers.md):
+If you don't have the bandwidth to read the (stellar) [Metadata in Archipelago](metadatainarchipelago.md) documentation, focus on the following in-a-nutshell understanding of the way Archipelago's Search and Solr is crafted. Then follow the step-by-step instructions found in [Strawberry Key Name Providers, Solr Field, and Facet Configuration](strawberry_key_name_providers.md):
 
 ![Search in-a-nutshell overview](images/SearchInANutshell_Twig_JSON_Metadata_Diego_doodle.jpg)
 
