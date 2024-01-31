@@ -22,6 +22,10 @@ Before diving into any Search and Solr configuration changes, we strongly recomm
 ### Archipelago and Solr
 Archipelago's latest Release (1.1.0) uses [Apache Solr 9.1](https://solr.apache.org/guide/solr/9_1/index.html), which incorporates some [major improvements and changes from Solr 8](https://solr.apache.org/guide/solr/9_1/upgrade-notes/major-changes-in-solr-9.html). Please refer to the [primary Solr documentation](https://solr.apache.org/guide/solr/9_1/index.html) for the most comprehensive and in-depth information about Solr's wide breadth of functionality and configuration options.
 
+### OCR Highlights
+
+Archipelago uses [solr-ocrhighlighting v0.8.4](https://github.com/dbmdz/solr-ocrhighlighting/releases/tag/wip), built by the Development Team at the [Bavarian State Library](https://github.com/dbmdz). See our [Strawberry Runners Post-Processing documentation](strawberryrunners.md) for more information about configuring page-based HOCR/OCR extraction for image and pdf-based ADOs and options for sending that output to the Search API.
+
 ## In-a-nutshell : JSON data to Strawberry Keyname Providers to Solr
 
 If you don't have the bandwidth to read the (stellar) [Metadata in Archipelago](metadatainarchipelago.md) documentation, focus on the following in-a-nutshell understanding of the way Archipelago's Search and Solr is crafted. follow the step-by-step instructions found in [Strawberry Key Name Providers, Solr Field, and Facet Configuration](strawberry_key_name_providers.md):
@@ -40,7 +44,7 @@ If you don't have the bandwidth to read the (stellar) [Metadata in Archipelago](
 
 3. Solr Fields: you need to configure your desired Solr Fields to source from the Strawberry Keynames you have configured. By default, Archipelago also provider Solr Fields sourced from your HOCR data and the Rendered HTML output of your ADOs.
 
-* *3.5.* Drupal Views: for your regular Search, Advanced Search, and potentially other specialized Views, you can configure to search within specific and/or a variety of Solr Fields. 
+* _*3.5._ Drupal Views: for your regular Search, Advanced Search, and potentially other specialized Views, you can configure to search within specific and/or a variety of Solr Fields. 
 
 4. Search Results: your metadata and data, as configured through Keyname Providers and Fields, indexed into your Solr. 
 
@@ -48,10 +52,7 @@ If you don't have the bandwidth to read the (stellar) [Metadata in Archipelago](
 
 * [Strawberry Key Name Providers, Solr Field, and Facet Configuration](strawberry_key_name_providers.md) 
 * [Advanced Search](search_advanced.md)
-
-## OCR Highlights
-
-Archipelago uses [solr-ocrhighlighting v0.8.4](https://github.com/dbmdz/solr-ocrhighlighting/releases/tag/wip), built by the Development Team at the [Bavarian State Library](https://github.com/dbmdz).
+* 
 
 ___
 
