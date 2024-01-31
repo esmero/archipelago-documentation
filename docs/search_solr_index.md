@@ -40,7 +40,7 @@ If you don't have the bandwidth to read the (stellar) [Metadata in Archipelago](
 
 3. Solr Fields: you need to configure your desired Solr Fields to source from the Strawberry Keynames you have configured. By default, Archipelago also provider Solr Fields sourced from your HOCR data and the Rendered HTML output of your ADOs.
 
-* 3.5. Drupal Views: for your regular Search, Advanced Search, and potentially other specialized Views, you can configure to search within specific and/or a variety of Solr Fields. 
+* *3.5.* Drupal Views: for your regular Search, Advanced Search, and potentially other specialized Views, you can configure to search within specific and/or a variety of Solr Fields. 
 
 4. Search Results: your metadata and data, as configured through Keyname Providers and Fields, indexed into your Solr. 
 
