@@ -36,7 +36,12 @@ The default Advanced Search Page includes the following:
 
 ![Advanced Search Default](images/AdvancedSearchDefault.png)
 
-The five Facets associated with the default Advanced Search can be found at `Administration > Configuration > Search and metadata > Facets` under the `Facet source - search_api:views_page__advanced_search__page_1`. The corresponding Facet Blocks can be found at `/admin/structure/block/list/archipelago_subtheme` in the `Sidebar Second` section. Please see the [this documentation for more information about Keyname Providers, Solr Fields, and Facet Configurations](strawberry_key_name_providers.md)
+The five Facets associated with the default Advanced Search can be found at `Administration > Configuration > Search and metadata > Facets` under the `Facet source - search_api:views_page__advanced_search__page_1`.
+
+The Custom Block containing the Default Advanced Search Note can be found at `/admin/content/block` or as a Tab on the main Content page.
+
+The corresponding Facet Blocks and Custom Block can be found at `/admin/structure/block/list/archipelago_subtheme` in the `Sidebar Second` section. Please see the [this documentation for more information about Keyname Providers, Solr Fields, and Facet Configurations](strawberry_key_name_providers.md)
+
 
 ## Advanced Search View
 
