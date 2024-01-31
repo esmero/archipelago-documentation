@@ -13,9 +13,9 @@ tags:
 Archipelago's [Strawberry Runners (SBR)](https://github.com/esmero/strawberry_runners) module provides provides a set of post-processing capabilities for the JSON based metadata, files and entities that comprise your Archipelago Digital Objects (ADOs). These post-processing actions are based on dispatched events, direct http calls, and invoked webhooks from partner services (such as Min.io, AWS S3 or self-invoked). 
 
 The default Archipelago SBR post-processor configurations include operations that:
-    - perform page-based HOCR/OCR for image and pdf-based ADOs, send the output to the Search API, and use Natural Language Processing to extract entities from the output
-    - extract text from pages within a Webarchives File and send the output to the Search API
-    - convert WARC format Webarchives Files into WACZ format and attach the new WACZ file to the original source ADO to complement the WARC original 
+* perform page-based HOCR/OCR for image and pdf-based ADOs, send the output to the Search API, and use Natural Language Processing to extract entities from the output
+* extract text from pages within a Webarchives File and send the output to the Search API
+* convert WARC format Webarchives Files into WACZ format and attach the new WACZ file to the original source ADO to complement the WARC original 
 
 SBR actions can be chained and nested to enable ordered operations, such as first extract individual pages in an ordered sequence and then run HOCR/OCR across the individual pages.
 
