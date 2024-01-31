@@ -53,7 +53,9 @@ In this step you will need to make determinations on how you would like to map y
 - If you had left "Collapse Multi Children Objects" unselected, you will also need to specify the Islandora Content Model to ADO types mapping for possible Children.
 
  ![Islandora 7 Solr Importer Step 2 Mappings No Collapse](images/I7step2_sect2_nocollapse_updated_2022-11.jpg)
+
 - You can also specify an ADO (Object or Collection) to be used as the Parent of Imported Objects. By selecting an existing ADO (Object or Collection) here using the autocomplete/search, the generated AMI set .csv file will contain an 'ismemberof' column containing the UUID of the selected ADO for every row.
+
 - Under "_Additional Datastreams to Fetch_", you can select any number and/or combination of extra file datastreams to retrieve from your harvest. Please note that the I7 Importer will fetch every possible datastream that is present in your source I7 repository, but the additional file datastreams referenced may not be associated with actual files for every digital object.
 
 ![Islandora 7 Solr Importer Islandora Mappings](images/I7step2_sect2_IslandoraMappings_updated_2022-11.jpg)
