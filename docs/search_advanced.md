@@ -192,7 +192,7 @@ If you specify to 'Use Classic Mode', you will also see:
     * only appears on form when 'Use Classic Mode' is enabled, hidden and unchecked in default
     * strongly recommended to enable for Classic Mode setups
     
-- Please see above note in Part 1 of the Advanced Search Filter Form to also select the option to '- Option to 'Limit the available operators' when using Classic Mode.  
+- Please see above note in [Part 1 of the Advanced Search Filter Form](search_advanced.md#part-1-of-the-advanced-search-filter-form) to also select the option to 'Limit the available operators' when using Classic Mode.  
 
 #### End of Advanced Search Filter Form
 
