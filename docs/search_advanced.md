@@ -91,7 +91,7 @@ Next is the beginning of the fuller Operator and Additional Options:
 - Option to 'Limit the available operators'
     * Limit the available operators to be shown on the exposed filter
     * unchecked checked in default
-    * recommended to enable for Classic Mode _(see further notes related to Classic Mode below)_
+    * recommended to enable for Classic Mode _(see further notes related to [Classic Mode](search_advanced.md#classic-mode) below)_
 - Operator identifier: Text field to specify 'the URL after the ? to identify this operator'
     * set to 'sbf_advanced_search_api_fulltext_op' in default
 - Option to 'Allow multiple selections' (Enable to allow users to select multiple items)
