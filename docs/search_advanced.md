@@ -188,7 +188,7 @@ In the last part of the form, you will see:
 If you specify to 'Use Classic Mode', you will also see:
 
 - Option to  'Add a Remove button to every Advanced Search Field combo.'
-    * This will allow a user to remove a specific Advanced Search Field/And/or/Text. Only works on Classic Mode
+    * This will allow a user to remove a specific Advanced Search Field/And/or/Text. Only works on Classic Mode.
     * only appears on form when 'Use Classic Mode' is enabled, hidden and unchecked in default
     * strongly recommended to enable for Classic Mode setups
     
