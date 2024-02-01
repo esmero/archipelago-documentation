@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
@@ -60,17 +60,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2795,7 +2793,7 @@
 <li>(optional) Break at first line in PHP scripts: uncheck. If you leave this selected, you will have to manually step through a breakpoint from Drupal's main index.php file on every request, which is quite annoying. However, leaving this box checked can be useful for making sure the connection is working at first, before you have set any internal breakpoints.</li>
 </ul>
 <p>Your settings should look like this. Hit APPLY and OK.
-<a class="glightbox" href="../images/xdebug/debug-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/debug-settings.png" /></a>    </p>
+<a class="glightbox" href="../images/xdebug/debug-settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/debug-settings.png" /></a>    </p>
 </li>
 <li>
 <p>Go to <code>Preferences &gt; Languages &amp; Frameworks &gt; PHP &gt; Servers</code>. We will create a new server here. Use these settings:</p>
@@ -2808,7 +2806,7 @@
 <li>In the <code>Absolute path on the server</code> add <code>/var/www/html</code></li>
 </ul>
 <p>Hit APPLY and OK and close the window.</p>
-<p><a class="glightbox" href="../images/xdebug/server-settings-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/server-settings-2.png" /></a>    </p>
+<p><a class="glightbox" href="../images/xdebug/server-settings-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/server-settings-2.png" /></a>    </p>
 </li>
 <li>
 <p>Go to <code>Run &gt; Edit Configurations</code>. Hit the <code>+</code> Button to create a new PHP Remote Debug. Name whatever you want, I called mine <code>Archipelago</code>. Use these settings:</p>
@@ -2817,7 +2815,7 @@
 <li>Server: select <code>docker-debug-server</code> from dropdown (we created this in step 3)</li>
 <li>IDE Key: <code>archipelago</code> (this matches the key set in our container)</li>
 </ul>
-<p><a class="glightbox" href="../images/xdebug/edit-configurations.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/edit-configurations.png" /></a>    </p>
+<p><a class="glightbox" href="../images/xdebug/edit-configurations.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/edit-configurations.png" /></a>    </p>
 </li>
 <li>
 <p>Note: If you try to validate your connection, it will fail. But that's ok.</p>
@@ -2829,29 +2827,29 @@
 <li>Url to validation script: <code>http://localhost:8001</code></li>
 </ul>
 <p>Hit VALIDATE. You should get a series of green check marks. If you get a warning about missing <code>php.ini</code> file, that is OK, our file has a different name in the container (<code>xdebug.ini</code>) and is still being read correctly.
-<a class="glightbox" href="../images/xdebug/validate-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/validate-2.png" /></a>    </p>
+<a class="glightbox" href="../images/xdebug/validate-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/validate-2.png" /></a>    </p>
 </li>
 </ol>
 <h1 id="set-up-browser-integration">Set up Browser Integration</h1>
 <ol>
 <li>
 <p>We have had success using the <a href="https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en">XDebug Helper</a> extension in Chrome. Once you have the extension installed, right-click on the bug icon in the top right of your chrome browser window and select "Options" to configure the IDE key. Under "IDE", select "Other", and in the text box, enter "archipelago"</p>
-<p><a class="glightbox" href="../images/xdebug/xdebut-helper-menu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/xdebut-helper-menu.png" title="XDebug Helper Options" /></a>
-<a class="glightbox" href="../images/xdebug/xdebug-helper-set-key.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/xdebug-helper-set-key.png" title="XDebug Helper IDE Key" /></a></p>
+<p><a class="glightbox" href="../images/xdebug/xdebut-helper-menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/xdebut-helper-menu.png" title="XDebug Helper Options" /></a>
+<a class="glightbox" href="../images/xdebug/xdebug-helper-set-key.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/xdebug-helper-set-key.png" title="XDebug Helper IDE Key" /></a></p>
 </li>
 </ol>
 <h1 id="actually-debugging">Actually Debugging!</h1>
 <ol>
 <li>
 <p>Hit the button (top right bar of PHPStorm) that looks like a telephone, for <code>Start Listening for PHP Debug Connections</code>.</p>
-<p><a class="glightbox" href="../images/xdebug/telephone.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/telephone.png" /></a></p>
+<p><a class="glightbox" href="../images/xdebug/telephone.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/telephone.png" /></a></p>
 </li>
 <li>
 <p>Now, you can use <code>Run &gt; Debug</code> and select the <code>Archipelago</code> named configuration that we created in the previous steps. The debugging console will appear. It will say it is waiting for incoming connection from 'archipelago'
  .</p>
-<p><a class="glightbox" href="../images/xdebug/phpstorm-run-xdebug-archipelago-menu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/phpstorm-run-xdebug-archipelago-menu.png" /></a>
-<a class="glightbox" href="../images/xdebug/waiting-archipelago.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/waiting-archipelago.png" /></a>
-<a class="glightbox" href="../images/xdebug/waiting.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/waiting.png" /></a></p>
+<p><a class="glightbox" href="../images/xdebug/phpstorm-run-xdebug-archipelago-menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/phpstorm-run-xdebug-archipelago-menu.png" /></a>
+<a class="glightbox" href="../images/xdebug/waiting-archipelago.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/waiting-archipelago.png" /></a>
+<a class="glightbox" href="../images/xdebug/waiting.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Debug" src="../images/xdebug/waiting.png" /></a></p>
 </li>
 <li>
 <p>Right now the debugging session is not enabled. Browse to  <code>localhost:8001</code>. Click on the gray XDebug Helper icon at the top right of your window and select the green "Debug" button. This will tell chrome to set the xdebug session key when you reload the page.</p>
@@ -3008,10 +3006,10 @@ xdebug.start_with_request=yes
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

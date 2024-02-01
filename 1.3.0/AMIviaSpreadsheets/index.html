@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
@@ -60,17 +60,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -3068,7 +3066,7 @@
 <li>Google Sheets Importer</li>
 <li>
 <p>Spreadsheet Importer  (if using local CSV file)</p>
-<p><a class="glightbox" href="../images/PluginImporterSelect_GoogleSheets.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Plugin Importer Select" src="../images/PluginImporterSelect_GoogleSheets.jpg" /></a></p>
+<p><a class="glightbox" href="../images/PluginImporterSelect_GoogleSheets.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Plugin Importer Select" src="../images/PluginImporterSelect_GoogleSheets.jpg" /></a></p>
 </li>
 </ul>
 <p><em>*The <code>Remote JSON API Importer</code> and additional remote import source options (for other repository systems) will be covered in separate tutorials following future releases.</em></p>
@@ -3081,14 +3079,14 @@
 <li>Enter the ID of your Google Sheet</li>
 <li>Enter the Cell Range for your Google Sheet</li>
 </ul>
-<p><a class="glightbox" href="../images/AMIstep2googlesheets_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Google Sheets Importer" src="../images/AMIstep2googlesheets_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/AMIstep2googlesheets_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Google Sheets Importer" src="../images/AMIstep2googlesheets_updated_2022-11.jpg" /></a></p>
 </li>
 <li>
 <p>If using Spreadsheet Importer:</p>
 <ul>
 <li>Under the 'Upload your file' section, select 'Choose File' to upload the CSV you will be using. After the file is finished uploading, you will have the option to 'Remove' and select a different file if needed.</li>
 </ul>
-<p><a class="glightbox" href="../images/AMIstep2spreadsheet_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spreadsheet Importer" src="../images/AMIstep2spreadsheet_updated_2022-11.jpg" /></a>  </p>
+<p><a class="glightbox" href="../images/AMIstep2spreadsheet_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spreadsheet Importer" src="../images/AMIstep2spreadsheet_updated_2022-11.jpg" /></a>  </p>
 </li>
 </ul>
 <h4 id="step-3-data-transformation-selections">Step 3: Data Transformation Selections</h4>
@@ -3117,7 +3115,7 @@
 </li>
 <li>
 <p>Lastly, for this step, you will need to select the destination Fields and Bundles for your New ADOs. If your spreadsheet source only contains Digital Objects, select <code>Strawberry (Descriptive Metadata source) for Digital Object</code></p>
-<p><a class="glightbox" href="../images/AMIstep3JSONtemplateDataTransformation_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Step 3 Data Transformation Mappings" src="../images/AMIstep3JSONtemplateDataTransformation_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/AMIstep3JSONtemplateDataTransformation_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Step 3 Data Transformation Mappings" src="../images/AMIstep3JSONtemplateDataTransformation_updated_2022-11.jpg" /></a></p>
 </li>
 </ul>
 <h4 id="step-4-global-ado-mappings">Step 4: Global ADO Mappings</h4>
@@ -3141,7 +3139,7 @@
 <li>By default, the option to automatically assigns UUIDs is selected. Keep 'Automatically assign UUID' checked unless your source data already contains UUIDs in a <code>node_uuid</code> column.</li>
 <li>
 <p>Under the 'Base ADO mappings', select the <code>label</code> column for ADO Label. This selection is only used as a fail-safe (in case your AMI JSON Ingest Template does not have any mapping for a column to be mapped to the JSON <code>label</code> key, or your source data csv does not contain a <code>label</code> if going Direct for data transformation).</p>
-<p><a class="glightbox" href="../images/AMIstep4GlobalADOmappings_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Step 4 Global ADO Mappings 1" src="../images/AMIstep4GlobalADOmappings_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/AMIstep4GlobalADOmappings_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Step 4 Global ADO Mappings 1" src="../images/AMIstep4GlobalADOmappings_updated_2022-11.jpg" /></a></p>
 </li>
 </ul>
 <h4 id="step-5-zip-upload">Step 5: ZIP upload</h4>
@@ -3150,7 +3148,7 @@
 <li>You may choose to upload a ZIP file containing all or some of the corresponding files specified in your csv/spreadsheet.</li>
 <li>
 <p>The file upload size restrictions specified in your Archipelago instance will apply here (512MB maximum by default). </p>
-<p><a class="glightbox" href="../images/ami/AMIstep5zip.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Step 5 Zip" src="../images/ami/AMIstep5zip.jpg" /></a> </p>
+<p><a class="glightbox" href="../images/ami/AMIstep5zip.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Step 5 Zip" src="../images/ami/AMIstep5zip.jpg" /></a> </p>
 <ul>
 <li>Please note, when creating your ZIP file (in particular, within an OSX environment): only select the folders and files needed, not the top/enclosing folder they are in. </li>
 </ul>
@@ -3158,21 +3156,21 @@
 </ul>
 <details class="info">
 <summary>Click to view screenshot of example ZIP file creation in OSX</summary>
-<p><a class="glightbox" href="../images/ExampleZipOSX.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Example ZIP OSX" src="../images/ExampleZipOSX.jpg" /></a></p>
+<p><a class="glightbox" href="../images/ExampleZipOSX.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example ZIP OSX" src="../images/ExampleZipOSX.jpg" /></a></p>
 </details>
 <h4 id="step-6-ami-set-confirmation">Step 6: AMI Set Confirmation</h4>
 <p>You will now see a message letting you know that 'Your source data was saved and is available as a CSV at <code>linktotheAMIgenerated.csv</code></p>
 <p>The message will also let you know that your New AMI Set was created and provide a link to the AMI Set page.</p>
-<p><a class="glightbox" href="../images/AMIStep6_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Step 6" src="../images/AMIStep6_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/AMIStep6_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Step 6" src="../images/AMIStep6_updated_2022-11.jpg" /></a></p>
 <h4 id="step-7-ami-set-processing">Step 7: AMI Set Processing</h4>
 <p>Your newly created AMI Set will now need to be Processed.</p>
 <p>If you clicked on the 'see it here' link in Step 6, you will be brought to the AMI Set page for review. You may also select <code>Process</code> from the <code>Operations</code> menu for the AMI set from the main <code>AMI sets</code> page. From the <code>Process</code> page you can review the JSON configuration for your set (determined by your selections in the preceding steps).</p>
 <details class="info">
 <summary>Optional step to review the settings configured in your AMI Set</summary>
 <p>You may wish to double check the settings configured in your AMI Set in the Raw Metadata (JSON) on the AMI Set <code>View</code> tab before Processing.</p>
-<p><a class="glightbox" href="../images/AMIsetAdminReview_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Set Admin Review" src="../images/AMIsetAdminReview_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/AMIsetAdminReview_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Set Admin Review" src="../images/AMIsetAdminReview_updated_2022-11.jpg" /></a></p>
 </details>
-<p><a class="glightbox" href="../images/AMIsetAdminProcess_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Admin Set Process" src="../images/AMIsetAdminProcess_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/AMIsetAdminProcess_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Admin Set Process" src="../images/AMIsetAdminProcess_updated_2022-11.jpg" /></a></p>
 <p>To Process this set, navigate to the <code>Process</code> tab. You will have multiple options related to the Processing outcome for your AMI Set.</p>
 <ul>
 <li><strong>Skip ADO processing on missing File</strong> : If enabled a referenced missed file or one that can not be processed from the source, remote or local will make AMI skip the affected ROW. Enabled by default for better QA during processing. </li>
@@ -3198,14 +3196,14 @@
 <p>If the chose to 'Enqueue' your AMI Set and the Queue operations for your Archipelago instance have been configured, you can simply leave your AMI Set in the Queue for Processing on the preconfigured schedule. Common timing for AMI Set Processes schedules are typically setup to run every three to six hours. Contact your Archipelago Administrators for details about your particular Archipelago's Processing schedule.</p>
 <h4 id="step-8-queue-manager-push-may-be-restricted-to-administrator-users-only">Step 8: Queue Manager Push (may be restricted to Administrator Users only)</h4>
 <p>If you chose to place your AMI set in the Queue to Process in step 7 and you wish to manually kickstart the Queue Processes, navigate to the Queue Manager found at <code>/admin/config/system/queue-ui</code>. (Be sure to select the <code>Queue Manager</code> under the System section, not the <code>Queue Manager for Hydroponic Service</code> under the Archipelago section).</p>
-<p><a class="glightbox" href="../images/AMIqueueMgr_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Queue Manager" src="../images/AMIqueueMgr_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/AMIqueueMgr_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Queue Manager" src="../images/AMIqueueMgr_updated_2022-11.jpg" /></a></p>
 <p>To Process your AMI Set immediately from the Queue Manager page, select the checkbox next to the 'AMI Digital Object Ingester Queue Worker'. Keep the <code>Action</code> menu set to <code>Batch Process</code> and click the <code>Apply to selected items</code> button.</p>
-<p><a class="glightbox" href="../images/AMIqueueMgrBatchProcess_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Queue Manager Batch" src="../images/AMIqueueMgrBatchProcess_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/AMIqueueMgrBatchProcess_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Queue Manager Batch" src="../images/AMIqueueMgrBatchProcess_updated_2022-11.jpg" /></a></p>
 <h4 id="step-9-processing-and-ado-creation">Step 9: Processing and ADO Creation</h4>
 <p>Your AMI set will now be Processed. You can follow the set's progress through the <code>Processing queues</code> loading screen.</p>
-<p><a class="glightbox" href="../images/AMIprocessingQueue_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Processing Queues" src="../images/AMIprocessingQueue_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/AMIprocessingQueue_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Processing Queues" src="../images/AMIprocessingQueue_updated_2022-11.jpg" /></a></p>
 <p>After your AMI set is Processed, you will receive confirmation messages letting you know your Digital Objects were successfully created. </p>
-<p><a class="glightbox" href="../images/AMIsetSuccess_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Set Succes" src="../images/AMIsetSuccess_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/AMIsetSuccess_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Set Succes" src="../images/AMIsetSuccess_updated_2022-11.jpg" /></a></p>
 <p>From this message, you can click on each ADO title to review the new created Digital Object (or Collection) if you wish. Or, you may proceed to step 10.  </p>
 <h4 id="step-10-review-your-newly-created-digital-objects-directly-or-via-ami-set-report">Step 10: Review your newly created Digital Objects directly or via AMI Set Report</h4>
 <ul>
@@ -3215,7 +3213,7 @@
 <ul>
 <li>
 <p>From the main <code>AMI sets</code> page, select <code>Report</code> from the <code>Operations</code> menu for the AMI set you wish to review.
-<a class="glightbox" href="../images/AMIsetsPageReportOp.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Sets Page Report Operation" src="../images/AMIsetsPageReportOp.jpg" /></a></p>
+<a class="glightbox" href="../images/AMIsetsPageReportOp.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Sets Page Report Operation" src="../images/AMIsetsPageReportOp.jpg" /></a></p>
 </li>
 <li>
 <p>This Report will contain information related to the last Processing operation run against your AMI Set.</p>
@@ -3228,7 +3226,7 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" href="../images/AMIreportOverview.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Sets Page Report Operation" src="../images/AMIreportOverview.jpg" /></a></p>
+<p><a class="glightbox" href="../images/AMIreportOverview.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Sets Page Report Operation" src="../images/AMIreportOverview.jpg" /></a></p>
 <ul>
 <li>You can use information found in the Reports tab to identify review your created ADOs one-by-one and identify any errors or issues that may have come up during the Process if needed.  </li>
 </ul>
@@ -3258,7 +3256,7 @@
 </li>
 <li>You may also wish to Select which columns contain filenames, entities or URLS where files can be fetched from. For most Collection objects, you will likely leave unselected or choose <code>images</code> if you are uploading a thumbnail image for your Collection.</li>
 </ul>
-<p><a class="glightbox" href="../images/AMIcustomModeCollections_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Custom Mode Collections" src="../images/AMIcustomModeCollections_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/AMIcustomModeCollections_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Custom Mode Collections" src="../images/AMIcustomModeCollections_updated_2022-11.jpg" /></a></p>
 </li>
 <li>
 <p>For <strong>each</strong> non-Creative Work Series (Compound) Digital Object type in your spreadsheet source:</p>
@@ -3268,7 +3266,7 @@
 <li>Then select which columns contain filenames, entities or URLS where files can be fetched from. Select what columns correspond to the Digital Object types found in your spreadsheet source.</li>
 <li>
 <p>For example, for 'Map' type Digital Objects, you would select the following options (as depicted in this screenshot):</p>
-<p><a class="glightbox" href="../images/AMIcustomDigitalObjectMappings_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Custom Digital Object Mappings" src="../images/AMIcustomDigitalObjectMappings_updated_2022-11.jpg" /></a>  </p>
+<p><a class="glightbox" href="../images/AMIcustomDigitalObjectMappings_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Custom Digital Object Mappings" src="../images/AMIcustomDigitalObjectMappings_updated_2022-11.jpg" /></a>  </p>
 </li>
 </ul>
 </li>
@@ -3296,7 +3294,7 @@
 <li>In order to make sure that Digital Objects containing the corresponding UUID or spreadsheet row number for any corresponding Collections, make sure <code>ismemberof</code> is also selected in the ADO Parent Columns. In order to make sure that Digital Objects containing the corresponding UUID or spreadsheet row number for any corresponding Parent ADOs (Creative Work Series/Compounds), make sure <code>ispartof</code> is also selected in the ADO Parent Columns.</li>
 <li>
 <p>Select the corresponding Columns for the Required ADO mappings.</p>
-<p><a class="glightbox" href="../images/AMIstep4GlobalADOmappings_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Step 4 Global ADO Mappings 1" src="../images/AMIstep4GlobalADOmappings_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/AMIstep4GlobalADOmappings_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Step 4 Global ADO Mappings 1" src="../images/AMIstep4GlobalADOmappings_updated_2022-11.jpg" /></a></p>
 </li>
 </ul>
 <h4 id="step-5-10">Step 5-10:</h4>
@@ -3416,10 +3414,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

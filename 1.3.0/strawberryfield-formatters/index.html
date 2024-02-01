@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
@@ -60,17 +60,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2822,10 +2820,10 @@
 <li>(<strong>Blue</strong>) Display the <code>Object Description</code> and <code>Type of Resource</code>.</li>
 <li>(<strong>Green</strong>) Display the Raw JSON Metadata and IIIF Presentation Manifest.</li>
 </ul>
-<p><a class="glightbox" href="../images/strawberryfield-formatters/01_my-first-digital-object.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image Viewer" src="../images/strawberryfield-formatters/01_my-first-digital-object.jpg" /></a></p>
+<p><a class="glightbox" href="../images/strawberryfield-formatters/01_my-first-digital-object.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image Viewer" src="../images/strawberryfield-formatters/01_my-first-digital-object.jpg" /></a></p>
 <h2 id="in-greater-detail">In Greater Detail</h2>
 <p>When editing an ADO, at the top of the Webform page there is a tab titled <code>Manage display</code> which will take us to where all the Formatters live. <em>Take note that the <code>DISPLAY SETTINGS</code> shown in the screenshot below are using the <strong>Default</strong> View mode.</em></p>
-<p><a class="glightbox" href="../images/strawberryfield-formatters/02_managedisplay.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Display Settings" src="../images/strawberryfield-formatters/02_managedisplay.jpg" /></a></p>
+<p><a class="glightbox" href="../images/strawberryfield-formatters/02_managedisplay.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Display Settings" src="../images/strawberryfield-formatters/02_managedisplay.jpg" /></a></p>
 <p>Once the page loads the <code>Default</code> View mode is automatically selected. However, because we are editing an object with the <code>Media type</code> <code>Photograph</code>, we need to edit the View mode <code>Digital Object Full View</code> since it is the <em>Default</em> View mode for this <code>Media type</code>.</p>
 <h4 id="how-to-find-and-configure-which-view-mode-is-default-per-media-type">How to find and configure which View mode is Default per Media type</h4>
 <p>The <strong>ADO Type to View mode Mapping</strong> page tells the ADOs which View mode to use by default per Media type. This page can be accessed at <code>yoursite//admin/config/archipelago/viewmode_mapping</code></p>
@@ -2924,7 +2922,7 @@
 </tbody>
 </table>
 </details>
-<p><a class="glightbox" href="../images/strawberryfield-formatters/03_default-managedisplay.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Selecting Digital Object Full View" src="../images/strawberryfield-formatters/03_default-managedisplay.jpg" /></a></p>
+<p><a class="glightbox" href="../images/strawberryfield-formatters/03_default-managedisplay.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Selecting Digital Object Full View" src="../images/strawberryfield-formatters/03_default-managedisplay.jpg" /></a></p>
 <p>There are two sections in <code>Manage display</code> for <code>Digital Object Full View</code>: 1) <strong>Content</strong> and 2) <strong>Disabled</strong>. Moving a field into <strong>Content</strong> means this formatter will be used to the display the ADO in some way. The formatters moved to <strong>Disabled</strong> are inactive and are subsequently not being used for displaying the ADO.</p>
 <p>There are four fields named <code>🍓Strawberry</code> and each one is a copy of the field <code>🍓Strawberry (Descriptive Metadata source)</code>. Since the names of the fields do not imply their function, they have been named <em>Strawberry</em> in four different ways (Italiano, Deutsch, Diné Bizaad, and English) in order to organize and help users visually remember which field is doing what for the <code>Display</code>.</p>
 <p>Recall <em>My First Digital Object</em> at beginning of this document where there were 3 sections highlighted in <strong>Red</strong>, <strong>Blue</strong>, and <strong>Green</strong>.</p>
@@ -2933,15 +2931,15 @@
 <li>In <strong>Blue</strong> (<code>🍓Erdbeere</code>) there is the <a href="tbd.md">Strawberry Field Formatter for Custom Metadata Templates</a> which displays the raw JSON metadata using configurable Twig templates. In this example, the default Twig template uses the JSON key <code>type</code> to display the <code>Type of Resource</code>.</li>
 <li>In <strong>Green</strong> (<code>🍓Strawberry (Descriptive Metadata)</code>) there is the <a href="tbd.md">Strawberry Default Formatter</a> which is used to display the Raw JSON Metadata.</li>
 </ul>
-<p><a class="glightbox" href="../images/strawberryfield-formatters/04_strawberryfields.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Strawberry Fields" src="../images/strawberryfield-formatters/04_strawberryfields.jpg" /></a></p>
+<p><a class="glightbox" href="../images/strawberryfield-formatters/04_strawberryfields.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Strawberry Fields" src="../images/strawberryfield-formatters/04_strawberryfields.jpg" /></a></p>
 <h2 id="at-the-end-of-the-day">At the end of the day</h2>
 <p>The decision for how your metadata is displayed is totally in your control.</p>
 <p>Under the <code>WIDGET</code> column, there is a quick description/overview of what the formatter is doing.</p>
-<p><a class="glightbox" href="../images/strawberryfield-formatters/05_widget.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Widget" src="../images/strawberryfield-formatters/05_widget.jpg" /></a></p>
+<p><a class="glightbox" href="../images/strawberryfield-formatters/05_widget.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Widget" src="../images/strawberryfield-formatters/05_widget.jpg" /></a></p>
 <p>And by clicking on the gear icon under the <code>OPERATIONS</code> column, all of the options for configuring the formatter are revealed. To use <code>🍓Fragola</code> as an example (the Formatter for IIIF media), we can choose which JSON Key is being used to fetch the IIIF Media URLs (found inside the raw JSON being played with <code>Strawberry Default Formatter</code>), the maximum height and width of the viewer, etc.</p>
-<p><a class="glightbox" href="../images/strawberryfield-formatters/06_fragola.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Fragola" src="../images/strawberryfield-formatters/06_fragola.jpg" /></a></p>
+<p><a class="glightbox" href="../images/strawberryfield-formatters/06_fragola.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fragola" src="../images/strawberryfield-formatters/06_fragola.jpg" /></a></p>
 <p>And then with <code>🍓Erdbeere</code> (the Formatter for Custom Metadata Templates) there is the option, among many others, to configure which Twig template the formatter will use for displaying your Metadata.</p>
-<p><a class="glightbox" href="../images/strawberryfield-formatters/07_erdbeere.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Erdbeere" src="../images/strawberryfield-formatters/07_erdbeere.jpg" /></a></p>
+<p><a class="glightbox" href="../images/strawberryfield-formatters/07_erdbeere.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Erdbeere" src="../images/strawberryfield-formatters/07_erdbeere.jpg" /></a></p>
 <p>More information about Managing Metadata Displays with Twig Templates can be found <a href="../metadatatwigs/">here</a>.</p>
 <hr />
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
@@ -3058,10 +3056,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

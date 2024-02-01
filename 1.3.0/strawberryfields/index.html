@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
@@ -60,17 +60,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2800,7 +2798,7 @@
 
 
 <h1 id="strawberryfields-forever">Strawberryfields Forever</h1>
-<p><a class="glightbox" href="../images/strawberries.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Strawberries" src="../images/strawberries.png" /></a></p>
+<p><a class="glightbox" href="../images/strawberries.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Strawberries" src="../images/strawberries.png" /></a></p>
 <h2 id="what-strawberry-fields-does-why-we-built-it-and-what-issues-it-addresses">What Strawberry fields does, why we built it, and what issues it addresses</h2>
 <p>Archipelago integrates transparently into the Drupal 8 ecosystem using its Core Content Entity System (Nodes), Discovery (Search API) and in general all its Core Components plus a few well maintained external ones.</p>
 <p>By design (and because we think its imperative), Archipelago takes full charge of the metadata layer and associated media assets by implementing a highly configurable, smart Drupal field written in JSON named <a href="https://github.com/esmero/strawberryfield/tree/1.0.0"><code>Strawberryfield</code></a> that attaches to any content.</p>
@@ -2815,7 +2813,7 @@
 <p>All these integrations are made to help local needs and community identities to survive the never-ending race for the next metadata schema. They are made to prototype, plan, and grow independently of how metadata will need to be exposed yesterday or tomorrow. And we plan to add more.</p>
 <p>Explore what other features <a href="../strawberryfield-formatters/"><code>webform_strawberryfield</code></a> provides to help with ingesting, reading, and interacting with your metadata during that process.</p>
 <h2 id="exposing">Exposing</h2>
-<p><a class="glightbox" href="../images/jsonupcaststar.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="JSONupcaststar" src="../images/jsonupcaststar.png" /></a></p>
+<p><a class="glightbox" href="../images/jsonupcaststar.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="JSONupcaststar" src="../images/jsonupcaststar.png" /></a></p>
 <p><code>Format Strawberryfield</code> (we had even a better name but...) deals with taking your JSON based metadata and <code>casting</code>, mashing, mixing, exposing, displaying, and transforming it to allow rich interaction for users and other systems with your digital objects.</p>
 <p>In its guts (or heart?), Archipelago does something quite simple but core to our concept of repository: it transforms in realtime the <em>close to your needs open schema metadata</em> that lives in strawberryfield as JSON into <em>close to other one's fixed schema needs metadata</em>; any destination format, using a fast, cached templating system. A templating system that is core to Drupal, called <code>Twig</code>:</p>
 <ul>
@@ -2940,10 +2938,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

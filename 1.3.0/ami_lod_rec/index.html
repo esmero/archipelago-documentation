@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
@@ -60,17 +60,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2898,16 +2896,16 @@
 <p>Your source spreadsheet will also need to contain at least one column containing terms/names (values) you want to reconcile against an LoD Authority Source. Multiple values should be separated by '|@|'.</p>
 <h2 id="step-1-select-the-ami-set-you-will-be-working-with">Step 1: Select the AMI Set you will be working with.</h2>
 <p>From the main AMI Sets List page, click on your AMI Set's Name, or select the 'Edit' option from the Operations menu on the right-hand side of the Sets list.</p>
-<p><a class="glightbox" href="../images/ami/AMIsetsList.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Sets List" src="../images/ami/AMIsetsList.jpg" /></a></p>
+<p><a class="glightbox" href="../images/ami/AMIsetsList.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Sets List" src="../images/ami/AMIsetsList.jpg" /></a></p>
 <h2 id="step-2-reconcile-lod-tab">Step 2: Reconcile LoD Tab</h2>
 <p>Navigate to the Reconcile LoD tab.</p>
-<p><a class="glightbox" href="../images/ami/AMIreconcileLodTab.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Reconcile LoD Tab" src="../images/ami/AMIreconcileLodTab.jpg" /></a></p>
+<p><a class="glightbox" href="../images/ami/AMIreconcileLodTab.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reconcile LoD Tab" src="../images/ami/AMIreconcileLodTab.jpg" /></a></p>
 <h2 id="step-3-lod-reconciling-selections">Step 3: LoD Reconciling Selections</h2>
 <p>From the list of columns from your spreadsheet source, select which columns you want to reconcile against LoD providers. </p>
 <p>Under the LoD Sources section, select how your chosen Columns will be LoD reconciled.
 - LoD reconcile options will be on the left, LoD Authority Sources will be on the right.
 - Example: 'local_subjects' will be mapped to 'LoC subjects (LCSH)'</p>
-<p><a class="glightbox" href="../images/ami/AMI_LodSources.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI LoD Sources" src="../images/ami/AMI_LodSources.jpg" /></a></p>
+<p><a class="glightbox" href="../images/ami/AMI_LodSources.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI LoD Sources" src="../images/ami/AMI_LodSources.jpg" /></a></p>
 <details class="info">
 <summary>Full list of potential LoD Authority Sources</summary>
 <ul>
@@ -2932,19 +2930,19 @@
 </ul>
 </details>
 <p>To preview the values contained in the column(s) you selected, click the 'Inspect cleaned/split up column values' button. </p>
-<p><a class="glightbox" href="../images/ami/AMIreconcileValuePreview.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI LoD" src="../images/ami/AMIreconcileValuePreview.jpg" /></a></p>
+<p><a class="glightbox" href="../images/ami/AMIreconcileValuePreview.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI LoD" src="../images/ami/AMIreconcileValuePreview.jpg" /></a></p>
 <p><strong><em>Tip</em></strong>: <em>This preview step provides you with the opportunity to return to your AMI Set source CSV and make any necessary label/term corrections such as outliers and formatting errors before processing. This can be done multiple times until your source set is fully prepared. If using this workflow, you will tick the 'Re-process only adding new terms/LoD Authority Sources' processing option after replacing your updated source CSV (see screenshot below)</em></p>
 <p>When ready, there are multiple processing options to select from depending on your current need/workflow.
  - To process immediately, select 'Process LoD from Source'
  - To enqueue the batch process, select 'Enqueue but do not process Batch in real time.
  - To add new data (i.e. terms, LoD Authority Sources) to existing reconciliation (e.g after replacing 
    source CSV data), select 'Re-process only adding new terms/LoD Authority Sources</p>
-<p><a class="glightbox" href="../images/processLoD.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Process LoD" src="../images/processLoD.jpg" /></a></p>
+<p><a class="glightbox" href="../images/processLoD.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Process LoD" src="../images/processLoD.jpg" /></a></p>
 <p><em>Important note: if you have previously run LoD Reconciliation for your AMI set, this action will overwrite any manually corrected LoD on your Processed CSV. Please make sure you have a backup if unsure.</em></p>
 <p>Depending on the size of your AMI Set, the Reconciliation processing may take a few minutes. </p>
-<p><a class="glightbox" href="../images/ami/AMIbatchReconcile.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI LoD Reconciling Success" src="../images/ami/AMIbatchReconcile.jpg" /></a></p>
+<p><a class="glightbox" href="../images/ami/AMIbatchReconcile.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI LoD Reconciling Success" src="../images/ami/AMIbatchReconcile.jpg" /></a></p>
 <p>When the process is finished, you will see a brief confirmation message.</p>
-<p><a class="glightbox" href="../images/ami/AMI_LodRecSuccess.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI LoD Reconciling Success" src="../images/ami/AMI_LodRecSuccess.jpg" /></a></p>
+<p><a class="glightbox" href="../images/ami/AMI_LodRecSuccess.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI LoD Reconciling Success" src="../images/ami/AMI_LodRecSuccess.jpg" /></a></p>
 <h2 id="step-4-edit-reconciled-lod">Step 4: Edit Reconciled LoD</h2>
 <p>Open the 'Edit Reconciled LoD' tab.</p>
 <p>You will see a table (form) containing:
@@ -2952,7 +2950,7 @@
 - The CSV Column Header/Key from the source spreadsheet where the value is found
 - A Checked option you can use to denote that an LoD mapping has been reviewed/revisioned
 - The Linked Data Label and URL pairing selected during the LoD reconciliation process</p>
-<p><a class="glightbox" href="../images/ami/AMIeditReconciledLoD.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIeditReconciledLoD.jpg" /></a></p>
+<p><a class="glightbox" href="../images/ami/AMIeditReconciledLoD.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIeditReconciledLoD.jpg" /></a></p>
 <p>The results table will show 10 original terms and mappings per page. You can advance through the pages using the page numbers and navigational arrows above and below the table.</p>
 <h2 id="step-5-review-and-edit-your-reconciled-lod-mappings">Step 5: Review and Edit your Reconciled LoD Mappings</h2>
 <p>Review the LoD reconciliation mappings, to make sure the best terms were selected for your metadata.</p>
@@ -2963,9 +2961,9 @@
 <li>If desired, click the Checked option to mark that the term was reviewed/revisioned.</li>
 </ul>
 <p>As you advance through your review process, it is recommended that you use the 'Save Current LoD Page' at the bottom of each results page as you work. This will preserve the corrections you may have made and update the LoD Reconciled data for your AMI Set within the editing form.</p>
-<p><a class="glightbox" href="../images/ami/AMIreconcileSaveCurrentPageSuccess.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIreconcileSaveCurrentPageSuccess.jpg" /></a></p>
+<p><a class="glightbox" href="../images/ami/AMIreconcileSaveCurrentPageSuccess.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIreconcileSaveCurrentPageSuccess.jpg" /></a></p>
 <p>When you have finished editing/reviewing your data, you must select 'Save all LoD back to CSV File' or else your LoD selections will not be preserved.</p>
-<p><a class="glightbox" href="../images/ami/AMIreconcileSaveAllSuccess.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIreconcileSaveAllSuccess.jpg" /></a></p>
+<p><a class="glightbox" href="../images/ami/AMIreconcileSaveAllSuccess.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIreconcileSaveAllSuccess.jpg" /></a></p>
 <h2 id="step-6-ami-set-review-and-twig-metadata-display-preparation">Step 6: AMI Set Review and Twig (Metadata Display) Preparation</h2>
 <p>You will now need to make sure that the Metadata Display (Twig) Template you selected to use during your initial AMI Set configuration is setup to Process your LoD mapped Label and URL selections into your Digital Objects and Collections JSON metadata.</p>
 <p>For every JSON key/element in your metadata that you need to process the LoD Reconciled data into, you need to specify in your Template that data for this element will be read from the 'Processed Data' LoD information. </p>
@@ -2995,7 +2993,7 @@
 <li>'loc_rdftype_GenreForm' =&gt;  LoC MADS RDF by type: Genre Form</li>
 <li>'loc_rdftype_Geographic' =&gt; LoC MADS RDF by type: Geographic</li>
 <li>'loc_rdftype_Temporal' =&gt;  LoC MADS RDF by type: Temporal</li>
-<li>'loc_rdftype_ExtraterrestrialArea' =&gt; LoC MADS RDF by type: Extraterrestrial Area <img alt="👾" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f47e.svg" title=":space_invader:" /></li>
+<li>'loc_rdftype_ExtraterrestrialArea' =&gt; LoC MADS RDF by type: Extraterrestrial Area <img alt="👾" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f47e.svg" title=":space_invader:" /></li>
 <li>'viaf_subjects_thing' =&gt; VIAF</li>
 <li>'getty_aat_fuzzy' =&gt; Getty aat Fuzzy</li>
 <li>'getty_aat_terms' =&gt; Getty aat Terms</li>
@@ -3120,10 +3118,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

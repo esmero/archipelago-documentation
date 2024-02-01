@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
@@ -60,17 +60,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -887,13 +885,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-disableremove-for-additional-select-drupal-modules" class="md-nav__link">
+  <a href="#step-4-disableremove-additional-drupal-modules-and-loosen-up-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Disable/Remove for additional select Drupal modules
+      Step 4: Disable/Remove additional Drupal modules and loosen up dependencies
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step 4: Disable/Remove for additional select Drupal modules">
+    <nav class="md-nav" aria-label="Step 4: Disable/Remove additional Drupal modules and loosen up dependencies">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3069,13 +3067,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-disableremove-for-additional-select-drupal-modules" class="md-nav__link">
+  <a href="#step-4-disableremove-additional-drupal-modules-and-loosen-up-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Disable/Remove for additional select Drupal modules
+      Step 4: Disable/Remove additional Drupal modules and loosen up dependencies
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step 4: Disable/Remove for additional select Drupal modules">
+    <nav class="md-nav" aria-label="Step 4: Disable/Remove additional Drupal modules and loosen up dependencies">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3257,14 +3255,14 @@
 </code></pre></div>
 <p>If anything is still running, wait a little longer and run the command again.</p>
 <h3 id="step-3">Step 3:</h3>
-<p>Now let's <code>tar.gz</code> the whole ensemble with data and configs. As an example we will save this into your <code>$HOME</code> folder. 
-As a good practice we append the <strong>current date </strong>(YEAR-MONTH-DAY) to the filename. Here we assume today is October 31st of 2023.</p>
+<p>Now let's <code>tar.gz</code> the whole ensemble with data and configs. As an example we will save this into your <code>$HOME</code> folder.
+As a good practice we append the <strong>current date</strong> (YEAR-MONTH-DAY) to the filename. Here we assume today is October 31st of 2023.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>..
 sudo<span class="w"> </span>tar<span class="w"> </span>-czvpf<span class="w"> </span><span class="nv">$HOME</span>/archipelago-deployment-D9-20231031.tar.gz<span class="w"> </span>archipelago-deployment
 <span class="nb">cd</span><span class="w"> </span>archipelago-deployment
 </code></pre></div>
 <p>The process may take a few minutes. Now let's verify that all is there and that the <code>tar.gz</code> is not corrupt.</p>
-<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-tvvf<span class="w"> </span><span class="nv">$HOME</span>/archipelago-deployment-D9-20231031.tar.gz<span class="w"> </span>
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-tvvf<span class="w"> </span><span class="nv">$HOME</span>/archipelago-deployment-D9-20231031.tar.gz
 </code></pre></div>
 <p>You will see a listing of files, and at the end you will see something like this: <code>Archive Format: POSIX pax interchange format, Compression: gzip</code>. If corrupt (Do you have enough space? Did your ssh connection drop?) you will see the following:</p>
 <div class="highlight"><pre><span></span><code>tar:<span class="w"> </span>Unrecognized<span class="w"> </span>archive<span class="w"> </span>format
@@ -3304,7 +3302,7 @@ docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> 
 <p>Give all a little time to start. Please be patient. To ensure all is well, run (more than once if necessary) the following:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps
 </code></pre></div>
-<p>You should see something like this: </p>
+<p>You should see something like this:</p>
 <div class="highlight"><pre><span></span><code>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">                                      </span>COMMAND<span class="w">                  </span>CREATED<span class="w">          </span>STATUS<span class="w">          </span>PORTS<span class="w">                              </span>NAMES
 355e13878b7e<span class="w">   </span>nginx<span class="w">                                      </span><span class="s2">&quot;/docker-entrypoint.…&quot;</span><span class="w">   </span><span class="m">10</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">10</span><span class="w"> </span>minutes<span class="w">   </span><span class="m">0</span>.0.0.0:8001-&gt;80/tcp<span class="w">               </span>esmero-web
 86b685008158<span class="w">  </span>solr:8.11.2<span class="w">                                 </span><span class="s2">&quot;docker-entrypoint.s…&quot;</span><span class="w">   </span><span class="m">10</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">10</span><span class="w"> </span>minutes<span class="w">   </span><span class="m">0</span>.0.0.0:8983-&gt;8983/tcp<span class="w">             </span>esmero-solr
@@ -3316,7 +3314,7 @@ a81c36d51a81<span class="w">   </span>esmero/esmero-nlp:fasttext-multiarch<span 
 </code></pre></div>
 <p>Important here is the <code>STATUS</code> column. It <strong>needs</strong> to be a number that goes up in time every time you run <code>docker ps</code> again (and again).</p>
 <h3 id="step-3-updates-for-key-drupal-and-archipelago-modules">Step 3. Updates for key Drupal and Archipelago modules</h3>
-<p>Now we are going to tell <code>composer</code> to update the key Drupal and Archipelago modules. </p>
+<p>Now we are going to tell <code>composer</code> to update the key Drupal and Archipelago modules.</p>
 <p>First we are going to disable and remove a few minor Drupal modules. Run the following commands (in order):</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush pm-uninstall fancy_file_delete&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush pm:uninstall quickedit&quot;</span>
@@ -3333,11 +3331,12 @@ docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </spa
 sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">666</span><span class="w"> </span>web/sites/default/*settings.php
 sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">666</span><span class="w"> </span>web/sites/default/*services.yml
 </code></pre></div>
-<h3 id="step-4-disableremove-for-additional-select-drupal-modules">Step 4: Disable/Remove for additional select Drupal modules</h3>
+<h3 id="step-4-disableremove-additional-drupal-modules-and-loosen-up-dependencies">Step 4: Disable/Remove additional Drupal modules and loosen up dependencies</h3>
 <p>We are going to remove additional select Drupal modules that are not 1.3.0 or D10 compliant.</p>
 <p>Please run each of the following commands separately, in order, and do not skip any commands.</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer remove symfony/http-kernel symfony/yaml --no-update&quot;</span>
-docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require drupal/config_inspector:^2 --no-update&quot;</span><span class="w"> </span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;composer remove egulias/email-validator --no-update&#39;</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require drupal/config_inspector:^2 --no-update&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush pm:uninstall jsonapi_earlyrendering_workaround&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer remove drupal/jsonapi_earlyrendering_workaround --no-update&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require &#39;drupal/core:^10&#39; &#39;drupal/core-recommended:^10&#39; &#39;drupal/core-composer-scaffold:^10&#39; &#39;drupal/core-project-message:^10&#39; --update-with-dependencies --no-update&quot;</span>
@@ -3353,10 +3352,9 @@ docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </spa
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer remove fileeye/mimemap --no-update&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require drupal/imagemagick:^3 --no-update&quot;</span><span class="w">  </span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer remove fileeye/mimemap --no-update&quot;</span><span class="w">    </span>
-docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush pm:uninstall jsonapi_earlyrendering_workaround&quot;</span>
-docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer remove drupal/jsonapi_earlyrendering_workaround --no-update&quot;</span>
-docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require &#39;drupal/imce:^3.0&#39; --no-update&quot;</span><span class="w"> </span>
-docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require &#39;drupal/search_api_attachments:^9.0&#39; --no-update&quot;</span><span class="w"> </span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require &#39;drupal/imce:^3.0&#39; --no-update&quot;</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require &#39;drupal/search_api_attachments:^9.0&#39; --no-update&quot;</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require drupal/search_api_solr:^4.3 solarium/solarium ^6.3 --no-update&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require &#39;drupal/twig_tweak:^3.2&#39; --no-update&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require &#39;drupal/webform_entity_handler:^2.0&#39; --no-update&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require &#39;drupal/webformnavigation:^2.0&#39; --no-update&quot;</span>
@@ -3364,12 +3362,12 @@ docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </spa
 </code></pre></div>
 <p>Well done! If you see <strong>no</strong> issues and all ends in <strong>Green colored messages</strong>, all is good!  <a href="#step-5-update-composerjson">Jump to Step 5</a></p>
 <h4 id="what-if-all-is-not-ok-and-i-see-red-and-a-lot-of-dependency-explanations">What if all is not OK, and I see red and a lot of dependency explanations?</h4>
-<p>If you have manually installed packages via composer in the past that are NO longer Drupal 10 compatible you may see errors. 
-In that case you need to check each package website's (normally https://www.drupal.org/project/the_module_name) and check if there is a Drupal 10 compatible version. </p>
+<p>If you have manually installed packages via composer in the past that are NO longer Drupal 10 compatible you may see errors.
+In that case you need to check each package website's (normally https://www.drupal.org/project/the_module_name) and check if there is a Drupal 10 compatible version.</p>
 <p>If so run:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require &#39;drupal/the_module_name:^VERSION_NUMBER_THAT_WORKS_ON_DRUPAL10_&#39; --update-with-dependencies --no-update&quot;</span><span class="w"> </span>and<span class="w"> </span>run<span class="w"> </span>**Step<span class="w"> </span><span class="m">3</span><span class="w"> </span>**<span class="w"> </span>again<span class="w"> </span><span class="o">(</span>and<span class="w"> </span>again<span class="w"> </span><span class="k">until</span><span class="w"> </span>all<span class="w"> </span>is<span class="w"> </span>cleared<span class="o">)</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require drupal/the_module_name:^VERSION_NUMBER_THAT_WORKS_ON_DRUPAL10_ --update-with-dependencies --no-update&quot;</span><span class="w"> </span>and<span class="w"> </span>run<span class="w"> </span>**Step<span class="w"> </span><span class="m">3</span>**<span class="w"> </span>again<span class="w"> </span><span class="o">(</span>and<span class="w"> </span>again<span class="w"> </span><span class="k">until</span><span class="w"> </span>all<span class="w"> </span>is<span class="w"> </span>cleared<span class="o">)</span>
 </code></pre></div>
-<p>If not, try to find a replacement module that does something similar, but in any case you may end up having to remove before proceeding. Give us a ping/slack/google group/open a github ISSUE if you find yourself uncertain about this. </p>
+<p>If not, try to find a replacement module that does something similar, but in any case you may end up having to remove before proceeding. Give us a ping/slack/google group/open a github ISSUE if you find yourself uncertain about this.</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush pm-uninstall the_module_name&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer remove drupal/the_module_name --no-update&quot;</span>
 </code></pre></div>
@@ -3396,14 +3394,14 @@ docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </spa
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require mglaman/composer-drupal-lenient&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer config --merge --json extra.drupal-lenient.allowed-list &#39;[\&quot;drupal/form_mode_manager\&quot;]&#39;&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require &#39;drupal/form_mode_manager:2.x-dev@dev&#39;&quot;</span>
-docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require &#39;drupal/color:^1.0&#39;&quot;</span><span class="w"> </span>
-docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require drupal/hal&quot;</span><span class="w">  </span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require &#39;drupal/color:^1.0&#39;&quot;</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require drupal/hal&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require drupal/aggregator&quot;</span>
-docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require drupal/ckeditor&quot;</span><span class="w">  </span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require drupal/ckeditor&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require drupal/seven&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require archipelago/archipelago_subtheme:1.3.0.x-dev&quot;</span>
-docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush pm:uninstall quickedit&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer require drupal/quickedit drupal/classy drupal/stable&quot;</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush pm:uninstall quickedit&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush pm:uninstall hal&quot;</span>
 docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush pm:install jquery_ui&quot;</span>
 </code></pre></div>
@@ -3416,7 +3414,7 @@ docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </spa
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>cim<span class="w"> </span>-y<span class="w"> </span>--partial<span class="w">   </span>
 </code></pre></div>
 <h4 id="a-complete-sync-which-will-bring-new-things-and-update-existing-but-will-also-remove-all-the-ones-that-are-not-part-of-130-its-a-like-clean-factory-reset">A Complete Sync, which will bring new things and update existing but will also remove all the ones that are not part of 1.3.0. It's a like clean factory reset.</h4>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>cim<span class="w"> </span>-y<span class="w"> </span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>cim<span class="w"> </span>-y
 </code></pre></div>
 <p>If all goes well here and you see no errors it's time to reindex <code>Solr</code> because there are new Fields. Run the following:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>search-api-reindex
@@ -3428,11 +3426,11 @@ docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </spa
 <p>Recommended: If you want to add new templates and menu items 1.3.0 provides, run this:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;scripts/archipelago/deploy.sh&#39;</span>
 </code></pre></div>
-<p>Once that is done, you can choose to update all Metadata Displays (twig templates) we ship with new 1.3.0 versions (heavily adjusted IIIF manifests, better Object description template using Macros). Before you do this, we <strong>strongly</strong> recommend that you first make sure to manually (copy/paste) backup any Twig templates you have modified. If unsure, do not run the command that comes after this warning! You can always manually copy the new templates from the <code>d8content/metadatadisplays</code> folder which contains text versions (again, copy/paste) of each shipped template you can pick and use when you feel ready. </p>
+<p>Once that is done, you can choose to update all Metadata Displays (twig templates) we ship with new 1.3.0 versions (heavily adjusted IIIF manifests, better Object description template using Macros). Before you do this, we <strong>strongly</strong> recommend that you first make sure to manually (copy/paste) backup any Twig templates you have modified. If unsure, do not run the command that comes after this warning! You can always manually copy the new templates from the <code>d8content/metadatadisplays</code> folder which contains text versions (again, copy/paste) of each shipped template you can pick and use when you feel ready.</p>
 <p>If you are sure (like really?) you want to overwrite the ones you modified (sure, just checking?), then you can run this:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;scripts/archipelago/update_deployed.sh&#39;</span>
 </code></pre></div>
-<p>Done! (For realz now) </p>
+<p>Done! (For realz now)</p>
 <h3 id="step-9-or-should-we-say-10">Step 9 (or should we say 10)</h3>
 <p>Please login to your Archipelago and test/check all is working! Enjoy 1.3.0 and Drupal 10. Thanks!</p>
 <hr />
@@ -3468,7 +3466,7 @@ docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </spa
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 9, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 1, 2024</span>
   </span>
 
     
@@ -3558,10 +3556,10 @@ docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </spa
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

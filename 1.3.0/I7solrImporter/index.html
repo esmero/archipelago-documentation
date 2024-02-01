@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../images/strawberries_color.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
@@ -60,17 +60,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2894,7 +2892,7 @@
 <p>From either the main Content page or the AMI Sets List page, select the 'Start an AMI set' button to begin.</p>
 <h2 id="step-1-plugin-selection">Step 1: Plugin Selection</h2>
 <p>Select the Islandora 7 Solr Importer from the dropdown menu.</p>
-<p><a class="glightbox" href="../images/I7step1_plugin_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Islandora 7 Solr Importer Step 1 Plugin " src="../images/I7step1_plugin_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/I7step1_plugin_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Islandora 7 Solr Importer Step 1 Plugin " src="../images/I7step1_plugin_updated_2022-11.jpg" /></a></p>
 <h2 id="step-2-section-1-solr-server-configuration">Step 2, section 1: Solr Server Configuration</h2>
 <p>You will only have the option to select 'Create New ADOs' as the Operation you would like to perform.</p>
 <p>For the Solr Server Configuration section, you will need to provide all of the following information:</p>
@@ -2918,7 +2916,7 @@
 <ul>
 <li>As an example, for a collection of 1500 objects that you wanted to split into three AMI ingests of 500 objects, you would specify the Starting Row as 0 for the first set and Number of Rows as 500. For the second set, your Starting Row would be Row 501; for the third set, 1001). In this example, the Number of Rows would always be 500.</li>
 </ul>
-<p><a class="glightbox" href="../images/I7step2_serverconfig_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Islandora 7 Solr Importer Step 2 Server Configuration" src="../images/I7step2_serverconfig_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/I7step2_serverconfig_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Islandora 7 Solr Importer Step 2 Server Configuration" src="../images/I7step2_serverconfig_updated_2022-11.jpg" /></a></p>
 <h2 id="step-2-section-2-islandora-mappings">Step 2, section 2: Islandora Mappings</h2>
 <p>In this step you will need to make determinations on how you would like to map your Islandora 7 digital objects to your Archipelago repository and whether or not you would like to fetch additional file datastreams, such as those for thumbnail images, transcripts, OCRs/HOCRs, etc.</p>
 <ul>
@@ -2935,10 +2933,16 @@
 <p>If you had left "Collapse Multi Children Objects" unselected, you will also need to specify the Islandora Content Model to ADO types mapping for possible Children.</p>
 </li>
 </ul>
-<p><a class="glightbox" href="../images/I7step2_sect2_nocollapse_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Islandora 7 Solr Importer Step 2 Mappings No Collapse" src="../images/I7step2_sect2_nocollapse_updated_2022-11.jpg" /></a>
-- You can also specify an ADO (Object or Collection) to be used as the Parent of Imported Objects. By selecting an existing ADO (Object or Collection) here using the autocomplete/search, the generated AMI set .csv file will contain an 'ismemberof' column containing the UUID of the selected ADO for every row.
-- Under "<em>Additional Datastreams to Fetch</em>", you can select any number and/or combination of extra file datastreams to retrieve from your harvest. Please note that the I7 Importer will fetch every possible datastream that is present in your source I7 repository, but the additional file datastreams referenced may not be associated with actual files for every digital object.</p>
-<p><a class="glightbox" href="../images/I7step2_sect2_IslandoraMappings_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Islandora 7 Solr Importer Islandora Mappings" src="../images/I7step2_sect2_IslandoraMappings_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/I7step2_sect2_nocollapse_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Islandora 7 Solr Importer Step 2 Mappings No Collapse" src="../images/I7step2_sect2_nocollapse_updated_2022-11.jpg" /></a></p>
+<ul>
+<li>
+<p>You can also specify an ADO (Object or Collection) to be used as the Parent of Imported Objects. By selecting an existing ADO (Object or Collection) here using the autocomplete/search, the generated AMI set .csv file will contain an 'ismemberof' column containing the UUID of the selected ADO for every row.</p>
+</li>
+<li>
+<p>Under "<em>Additional Datastreams to Fetch</em>", you can select any number and/or combination of extra file datastreams to retrieve from your harvest. Please note that the I7 Importer will fetch every possible datastream that is present in your source I7 repository, but the additional file datastreams referenced may not be associated with actual files for every digital object.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="../images/I7step2_sect2_IslandoraMappings_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Islandora 7 Solr Importer Islandora Mappings" src="../images/I7step2_sect2_IslandoraMappings_updated_2022-11.jpg" /></a></p>
 <p><em>Language from form itself:</em></p>
 <p><em>Additional datastreams to fetch. OBJ datastream will always be fetched. Not all datastreams listed here might be present once your data is fetched.</em></p>
 <ul>
@@ -2948,7 +2952,7 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" href="../images/I7step2_sect2_DSplacement_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Islandora Solr Importer Datastream Placement" src="../images/I7step2_sect2_DSplacement_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/I7step2_sect2_DSplacement_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Islandora Solr Importer Datastream Placement" src="../images/I7step2_sect2_DSplacement_updated_2022-11.jpg" /></a></p>
 <h2 id="step-3-data-transformation-selections">Step 3: Data Transformation Selections</h2>
 <p>Select the data transformation approach--how your source data will be transformed into ADO (Archipelago Digital Object) Metadata. As noted in the list below, <strong>'Custom (Expert Mode)'</strong> is the recommended choice for AMI sets generated using the Islandora 7 Solr Importer plugin.</p>
 <ul>
@@ -2980,7 +2984,7 @@
 <li>Select <code>Template</code> and use the AMI Ingest JSON template that corresponds with your metadata elements.</li>
 <li>
 <p>Select <code>images</code>, <code>documents</code>, and <code>audios</code> for the file source/fetching.</p>
-<p><a class="glightbox" href="../images/I7step3_DataTransformation_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Islandora Solr Importer Data Transformation" src="../images/I7step3_DataTransformation_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/I7step3_DataTransformation_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Islandora Solr Importer Data Transformation" src="../images/I7step3_DataTransformation_updated_2022-11.jpg" /></a></p>
 </li>
 </ul>
 </li>
@@ -3001,17 +3005,17 @@
 <li>Do not select any column for 'Sequence'</li>
 <li>Select the <code>label</code> column for ADO Label</li>
 </ul>
-<p><a class="glightbox" href="../images/I7step4_GlobalADOMap_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Islandora Solr Importer Global ADO Mappings" src="../images/I7step4_GlobalADOMap_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/I7step4_GlobalADOMap_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Islandora Solr Importer Global ADO Mappings" src="../images/I7step4_GlobalADOMap_updated_2022-11.jpg" /></a></p>
 </li>
 </ul>
 <h2 id="step-5-zip-upload-and-ami-set-naming">Step 5: ZIP upload and AMI Set naming</h2>
 <p>For standard Spreadsheet or Google Sheets AMI ingests, you would use this step to provide an optional ZIP file containing your assets. </p>
 <p>For your Islandora 7 Solr Importer process, the generated AMI set.csv file will contain the necessary URLs to the corresponding Islandora 7 file datastreams for each object as needed. Select next to skip this ZIP upload step and proceed. </p>
 <p>After you provide a title for your AMI set under "<em>Please Name your AMI set</em>", select "<em>Press to Create Set</em>"</p>
-<p><a class="glightbox" href="../images/I7step5_Zip_AMI_Naming_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Islandora 7 Solr Importer Zip upload and AMI Set naming" src="../images/I7step5_Zip_AMI_Naming_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/I7step5_Zip_AMI_Naming_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Islandora 7 Solr Importer Zip upload and AMI Set naming" src="../images/I7step5_Zip_AMI_Naming_updated_2022-11.jpg" /></a></p>
 <h2 id="step-6-ami-set-confirmation">Step 6: AMI Set Confirmation</h2>
 <p>You will now see a message letting your know your "New AMI Set was created". You will be able to review the generated .csv file directly from this page under Source Data File.</p>
-<p><a class="glightbox" href="../images/I7step7_Set_Creation_updated_2022-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Islandora 7 Solr Importer AMI Set Confirmation" src="../images/I7step7_Set_Creation_updated_2022-11.jpg" /></a></p>
+<p><a class="glightbox" href="../images/I7step7_Set_Creation_updated_2022-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Islandora 7 Solr Importer AMI Set Confirmation" src="../images/I7step7_Set_Creation_updated_2022-11.jpg" /></a></p>
 <p>While you may immediately select "Process" from this AMI Set Confirmation page to use the Islandora 7 Importer generated .csv file as-is to ingest the ADOs in your AMI set, it is strongly recommended that you review the .csv file first. AMI is configured to trim unecessary (for Archipelago) and de-duplicate redundant Solr source data, but you may wish to pare down the sourced data even further and/or conduct general metadata review and cleanup before migrating your content. You will also likely want to make adjustments to your AMI Ingest JSON Template based on your review, depending on the variation of metadata columns/keys found in your source repostiory. </p>
 <h2 id="next-steps">Next Steps</h2>
 <p>To proceed with Processing your AMI Set, <a href="../AMIviaSpreadsheets/#step-7-ami-set-processing">click here</a> to be directed to the main <a href="../AMIviaSpreadsheets/">Ingesting Digital Objects via Spreadsheets</a>.</p>
@@ -3040,7 +3044,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 31, 2024</span>
   </span>
 
     
@@ -3130,10 +3134,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
