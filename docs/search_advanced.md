@@ -85,12 +85,15 @@ You will then see a section for configuring the starting Operator to use for the
 
 Next is the beginning of the fuller Operator and Additional Options:
 
-- Option to 'Expose operator' (Allow the user to choose the operator)
-     * checked in default
-- Option to 'Limit the available operators' (Limit the available operators to be shown on the exposed filter)
-     * unchecked checked in default
+- Option to 'Expose operator' 
+    * Allow the user to choose the operator
+    * checked in default
+- Option to 'Limit the available operators'
+    * Limit the available operators to be shown on the exposed filter
+    * unchecked checked in default
+    * recommended to enable for Classic Mode _(see further notes related to Classic Mode below)_
 - Operator identifier: Text field to specify 'the URL after the ? to identify this operator'
-     * set to 'sbf_advanced_search_api_fulltext_op' in default
+    * set to 'sbf_advanced_search_api_fulltext_op' in default
 - Option to 'Allow multiple selections' (Enable to allow users to select multiple items)
 - Option to 'Remember the last selection' (Enable to remember the last selection made by the user)
 - Parse mode : dropdown menu to choose how the search keys will be parsed
@@ -173,9 +176,27 @@ In the last part of the form, you will see:
 - Option to 'Expose between search fields operator'
     * Allow the user to choose the operator between Multiple Search Fields (AND/OR)
     * checked in default    
-- Option to 'Use Classic Mode'
-    * This mode mimics older catalog search interfaces, where adding/removing fields does not trigger automatic refreshing of the Search results. Search only triggers on the default Form Filter submit button. Fully depends on Javascript to get around Views Exposed Filters in forms always submitting on any interaction.
+    
+#### Classic Mode
+
+- Option to 'Use Classic Mode' : When you select the 'Classic Mode', your Advanced Search form will interact in a way that mimics older catalog search interfaces. This means that:
+    * when you add/remove fields, this does not trigger automatic refreshing of the Search results
+    * search only triggers on the default Form Filter submit button
+    * this mode fully depends on Javascript to get around Views Exposed Filters in forms always submitting on any interaction.
     * unchecked in default
+    
+If you specify to 'Use Classic Mode', you will also see:
+
+- Option to  'Add a Remove button to every Advanced Search Field combo.'
+    * This will allow a user to remove a specific Advanced Search Field/And/or/Text. Only works on Classic Mode
+    * only appears on form when 'Use Classic Mode' is enabled, hidden and unchecked in default
+    * strongly recommended to enable for Classic Mode setups
+    
+- Please see above note in Part 1 of the Advanced Search Filter Form to also select the option to '- Option to 'Limit the available operators' when using Classic Mode.  
+
+#### End of Advanced Search Filter Form
+
+For both the normal, modern Advanced Search setup and also with Classic Mode enabled, you will also see:
 
 - Multiple/add more Search Fields operator (AND/OR) fields identifier
     * Text field to specify what will appear in the URL after the ? to identify the operator used in the filter when multiple Search Fields and their extra options are exposed.
