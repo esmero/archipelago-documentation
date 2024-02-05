@@ -17,9 +17,6 @@ This guide covers how to add a 'Search Within Collection' Exposed Form Block to 
 
 Before diving into any Search and Solr configuration changes, we strongly recommend that you read our [Metadata in Archipelago](metadatainarchipelago.md) overview documentation, which provides important context for understanding how the shape of your Archipelago Digital Objects/Collections (ADOs) metadata will inform your Search and Solr options and outcomes. If you don't have the bandwidth to read the (stellar) [Metadata in Archipelago](metadatainarchipelago.md) documentation, we recommend you read through our [in-a-nutshell](/search_solr_index/#in-a-nutshell-json-data-to-strawberry-keyname-providers-to-solr) overview.
 
-You may also wish to pair this 'Search Within Collection' Exposed Form Block with related Facets (setup on the same corresponding collection membership View). You can find follow the step-by-step instructions in our [Strawberry Key Name Providers, Solr Field, and Facet Configuration documentation](strawberry_key_name_providers.md). 
-
-
 ## Step 1:  Open the Collection Membership View
 
 Navigate to the Collection Membership view found at:
