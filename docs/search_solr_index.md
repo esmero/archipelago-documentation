@@ -52,6 +52,7 @@ If you don't have the bandwidth to read the (stellar) [Metadata in Archipelago](
 
 * [Strawberry Key Name Providers, Solr Field, and Facet Configuration](strawberry_key_name_providers.md) 
 * [Advanced Search](search_advanced.md)
+* [How to Add a 'Search Within Collection' Block](search-within-collection.md)
 
 ___
 
