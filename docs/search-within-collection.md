@@ -24,10 +24,9 @@ Navigate to the Collection Membership view found at:
 - `/admin/structure/views/view/collection_membership`
 - Through the `Structure` menu > `Views` > `Collection Membership`
 
-![Collection Membership View](images/CollectionMembershipView.png)
-
 This View is setup to list the member Digital Objects of a Collection and is driven by Solr.
 
+![Collection Membership View](images/CollectionMembershipView.png)
 
 ## Step 2. Adjust the View's Advanced tab settings
 
