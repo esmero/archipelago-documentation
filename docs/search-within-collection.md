@@ -61,7 +61,7 @@ Select **'Apply'** and continue to the next Step.
 
 ## Step 4. Review/adjust options and Save the Updated View
 
-Review the changes you made to the Collection Membership View. Optionally further adjust the options if desired (for example, you may choose to remove the date from the Sorting Criteria). If you make any further changes select, 'Apply' before exiting.
+Review the changes you made to the Collection Membership View. Optionally further adjust the options if desired. For example, you may choose to change the Submit button label to an alternate term instead of 'Apply'). If you make any further changes select, 'Apply' before exiting.
 
 ![Exposed Form Block Options](images/ExposedFormBlockOptions.png)
 
