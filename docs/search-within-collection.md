@@ -114,17 +114,17 @@ In the top section of the form, we recommend the following settings:
     
 ![Exposed Form Block Settings Form Top](images/ExposedFormBlockSettingsFormTop.png)
 
-Select 'Save block' when you are finished configuring the Block's Settings.
+Select **'Save block'** when you are finished configuring the Block's Settings.
 
 ## Step 7. Position the Block and Save.
 
-Drag to re-order and position the Exposed Form Block to sit above the Collection Membership block in the `Content` section. This will position the Exposed Form Block above the list of Collection Member Objects.
+Drag to re-order and position the Exposed Form Block to sit above the Collection Membership block in the `Content` section. This will position the Exposed Form Block above the list of Collection Member Objects on the display pages for Collections.
 
-After you have positioned the blocks, Scroll down to the bottom of the `Block layout` page and select *'Save blocks'*.
+After you have positioned the blocks, scroll down to the bottom of the `Block layout` page and select **'Save blocks'**.
 
 ## Step 8. 
 
-Navigate to a Collection and test out a Search in the search box that is in place above the 'Objects in this Collection.
+Navigate to a Collection and test out a Search in the search box that is now in place above the 'Objects in this Collection' listing.
 
 In this screenshot, you can see a demonstrative Search for 'map' within one of the Archipelago Demo Collections.
 
