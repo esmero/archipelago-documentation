@@ -57,7 +57,7 @@ On the lower section of the form, adust the configuration options as follows:
 - Searched fields : leave all unselected, so "If no fields are selected, all available fulltext fields will be searched."
 - Minimum keyword length : set to '1'
 
-Select **'Apply'** and continue to next Step.
+Select **'Apply'** and continue to the next Step.
 
 ## Step 4. Review/adjust options and Save the Updated View
 
