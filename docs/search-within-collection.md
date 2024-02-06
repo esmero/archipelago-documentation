@@ -42,7 +42,7 @@ On the left-hand side of the Collection Membership View form, under the 'Filter 
 
 At the top of the 'Configure filter criterion: Search: Fulltext search' form that opens:
 
-- Select the option to 'Expose this filter to visitors, to allow them to change it'.
+- Select the option to **'Expose this filter to visitors, to allow them to change it'**.
 
 On the lower section of the form, adust the configuration options as follows:
 
@@ -57,7 +57,7 @@ On the lower section of the form, adust the configuration options as follows:
 - Searched fields : leave all unselected, so "If no fields are selected, all available fulltext fields will be searched."
 - Minimum keyword length : set to '1'
 
-Select *Apply* and continue to next Step.
+Select **Apply** and continue to next Step.
 
 ## Step 4. Review/adjust options and Save the Updated View
 
@@ -65,7 +65,7 @@ Review the changes you made to the Collection Membership View. Optionally furthe
 
 ![Exposed Form Block Options](images/ExposedFormBlockOptions.png)
 
-*'Save'* your changes made to the View before proceeding.
+**'Save'** your changes made to the View before proceeding.
 
 Your updated Collection Membership View should look like the following now:
 
@@ -82,11 +82,11 @@ Select the `Archipelago Base Theme` (or whatever theme you are using):
 
 - `admin/structure/block/list/archipelago_subtheme`
 
-Navigate to the 'Content' section of the theme and select *'Place Block'*.
+Navigate to the 'Content' section of the theme and select **'Place Block'**.
 
 ![Theme Content Region Default](images/ThemeContentRegionDefault.png)
 
-Search for the 'Exposed form: collection_membership-block_1' and select *'Place Block'*.
+Search for the 'Exposed form: collection_membership-block_1' and select **'Place Block'**.
 
 ![Exposed Form Collection Membership Block](images/ExposedFormCollectionMembershipBlock.png)
 
