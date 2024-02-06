@@ -40,9 +40,11 @@ On the left-hand side of the Collection Membership View form, under the 'Filter 
 
 ![Add Filter Criteria](images/AddFilterCriteria.png)
 
-At the top of the 'Configure filter criterion: Search: Fulltext search' form that opens, select the option to 'Expose this filter to visitors, to allow them to change it'.
+At the top of the 'Configure filter criterion: Search: Fulltext search' form that opens:
 
-On the form below, adust the following configuration options:
+- Select the option to 'Expose this filter to visitors, to allow them to change it'.
+
+On the lower section of the form, adust the configuration options as follows:
 
 - Remove any text from 'Label' or 'Description
 - Operator: select/check 'Contains all of these words'
@@ -55,15 +57,15 @@ On the form below, adust the following configuration options:
 - Searched fields : leave all unselected, so "If no fields are selected, all available fulltext fields will be searched."
 - Minimum keyword length : set to '1'
 
-Select Apply and continue to next Step.
+Select *Apply* and continue to next Step.
 
 ## Step 4. Review/adjust options and Save the Updated View
 
-Review and optionally adjust the options. If you make any changes select, 'Apply' before exiting.
+Review the changes you made to the Collection Membership View. Optionally further adjust the options if desired (for example, you may choose to remove the date from the Sorting Criteria). If you make any further changes select, 'Apply' before exiting.
 
 ![Exposed Form Block Options](images/ExposedFormBlockOptions.png)
 
-'Save' your changes made to the View before proceeding.
+*'Save'* your changes made to the View before proceeding.
 
 Your updated Collection Membership View should look like the following now:
 
