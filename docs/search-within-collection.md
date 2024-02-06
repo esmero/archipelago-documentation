@@ -36,7 +36,7 @@ Open the 'Advanced' tab settings and change the 'Exposed form in block' to *'Yes
 
 ## Step 3. Add the Fulltext Search Filter Criteria for the View
 
-Under the 'Filter criteria' section, add and configure the 'Fulltext Search' Criteria for the Collection Membership View.
+On the left-hand side of the Collection Membership View form, under the 'Filter criteria' section, add and configure the 'Fulltext search' Criteria.
 
 ![Add Filter Criteria](images/AddFilterCriteria.png)
 
