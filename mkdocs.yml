@@ -29,6 +29,7 @@ nav:
         - Start: archipelago-deployment-live-readme.md
         - Github Workflow: archipelago-deployment-live-gitworkflow.md
         - Moving from archipelago-deployment to archipelago-deployment-live: archipelago-deployment-live-moveToLive.md
+        - Upgrading Drupal 9 to Drupal 10 (1.1.0 to 1.3.0): archipelago-deployment-live-UpgradeDrupalD9toD10.md  
         - Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3): archipelago-deployment-live-upgradeFromD8ToD9.md
         - Upgrading from 1.0.0-RC3 to 1.0.0: archipelago-deployment-live-upgradeFromRC3.md
         - Updating Docker Containers: archipelago-deployment-live-updatingContainers.md
