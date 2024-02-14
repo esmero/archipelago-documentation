@@ -98,3 +98,9 @@ _(*also found under Composite Elements in "Add Element" menu)_
 
 You can review the coding behind these custom elements here:
 <https://github.com/esmero/webform_strawberryfield/tree/1.3.0/src/Element>
+
+___
+
+Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
+
+Return to the [Archipelago Documentation main page](index.md).
