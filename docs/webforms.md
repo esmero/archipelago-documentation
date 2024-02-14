@@ -10,6 +10,14 @@ tags:
 
 The [Webform Strawberryfield](https://github.com/esmero/webform_strawberryfield) module provides [Drupal Webform](https://www.drupal.org/project/webform) ( == awesome piece of code) integrations for StrawberryField so you can really have control over your Metadata ingests. These custom elements provide Drupal Webform integrations for Archipelago’s StrawberryField so you can have fine grained and detailed control over your Metadata ingests and edits.
 
+## Where to Find
+
+You can access Webforms in Archipelago at:
+- `Admin > Structure > Webforms`
+- `/admin/structure/webform/`
+
+![Default Archipelago Webforms](images/DefaultArchipelagoWebforms.png)
+
 ### Instructions and Guides
 
 * [How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)](webformsasinput.md)
