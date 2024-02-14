@@ -81,9 +81,8 @@ Archipelago's custom webform element 'Webform LoD from CSV attached to an ADO su
 
 ![Webform LoD from CSV in Action](images/WebformLoDfromCSVinAction.png)
 
-You can now begin using this custom locab vocabulary element when using the corresponding webform to Edit and Update your Digital Objects. You may also wish to add this same element to the Default Digital Object Collection/Creative Work Series webform.
+You can now begin using this custom vocab vocabulary element when using the corresponding webform (where you added this element) to Edit and Update your Digital Objects. You may also wish to add this same element to the Default Digital Object Collection/Creative Work Series webform.
     
-
 ___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
