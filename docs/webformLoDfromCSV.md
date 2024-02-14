@@ -55,7 +55,7 @@ Archipelago's custom webform element 'Webform LoD from CSV attached to an ADO su
 
 * Autocomplete settings
 
-    - In the 'Choose an ADO', begin typing to search for the Digital Object that holds a CSV containing the Vocabulary you want to autocomplete.
+    - In the 'Choose an ADO' box, begin typing to search for the Digital Object that holds a CSV containing the Vocabulary you want to autocomplete.
     - Under 'The CSV column(header name) that will be used for autocompleting', enter 'label'
     - Under 'The CSV column(header name) that will be used for the URL value', enter 'uri'
     - 'Autocomplete limit'
