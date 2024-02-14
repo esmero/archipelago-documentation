@@ -8,7 +8,7 @@ tags:
 
 # Archipelago Custom Webform Elements
 
-In addition to the [core elements](https://api.drupal.org/api/drupal/namespace/Drupal%21Core%21Render%21Element/8) provided by the [Drupal Webform module](https://www.drupal.org/project/webform), Archipelago also deploys a robust set of custom webform elements specific to digital repositories metadata needs and use cases.
+In addition to the [core elements](https://api.drupal.org/api/drupal/namespace/Drupal%21Core%21Render%21Element) provided by the [Drupal Webform module](https://www.drupal.org/project/webform), Archipelago also deploys a robust set of custom webform elements specific to digital repositories metadata needs and use cases.
 
 ### Linked Data:
 
@@ -49,6 +49,17 @@ _(*found under Composite Elements in "Add Element" menu)_
 
 * Europeana Entity Suggest
     - Provides a form element to reconciliate against [Europeana Entity](https://pro.europeana.eu/page/entity)
+    
+### Custom/Local Webform LoD Elements
+
+_(*also found under Composite Elements in "Add Element" menu)_
+
+* Webform Options LoD suggest
+    - Provides a form element autocomplete labels/urls(values) from Webform Options.
+
+* Webform LoD from CSV attached to an ADO suggest
+    - Provides a form element autocomplete labels/urls(values) from a CSV attached to a Digital Object.
+    - Documentation Guide found here: [Using Archipelago's 'Webform LoD from CSV attached to an ADO suggest'](WebformLoDfromCSV.md)
 
 ### File Upload Elements:
 
@@ -86,4 +97,4 @@ _(*found under Composite Elements in "Add Element" menu)_
 #### But wait there's more!
 
 You can review the coding behind these custom elements here:
-<https://github.com/esmero/webform_strawberryfield/tree/1.1.0/src/Element>
+<https://github.com/esmero/webform_strawberryfield/tree/1.3.0/src/Element>
