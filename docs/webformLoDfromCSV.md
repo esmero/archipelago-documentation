@@ -39,7 +39,7 @@ Go to `Admin > Structure > Webforms` and select the 'Build' button beside the De
 
 Scroll down to the 'Subjects and Other Classifications' page of the Webform and select 'Add Element'.
 
-    ![Webform Add Element](images/WebformAddElement.png)
+![Webform Add Element](images/WebformAddElement.png)
 
 ### 5. Webform from LoD from CSV attached to an ADO suggest
 
@@ -101,8 +101,8 @@ Save your new form element settings. Then Save your updated Webform.
 
 Navigate to a Digital Object in your repository that you would like to use this new custom vocabulary element with. 
 
-    - Select 'Edit' for that Digital Object and navigate to the 'Subjects and Other Classifications' page of the webform.
-    - Begin typing a label found in your prepared CSV associated with the webform element.
+* Select 'Edit' for that Digital Object and navigate to the 'Subjects and Other Classifications' page of the webform.
+* Begin typing a label found in your prepared CSV associated with the webform element.
 
     ![Webform LoD from CSV in Action](images/WebformLoDfromCSVinAction.png)
 
