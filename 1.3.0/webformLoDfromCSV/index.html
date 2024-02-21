@@ -3017,13 +3017,17 @@
 <p>Archipelago's custom webform element 'Webform LoD from CSV attached to an ADO suggest' provides a form element autocomplete labels/urls(values) from a CSV attached to a Digital Object. Using this element affords a way for you to utilize a custom local vocabulary, a subset of labels and URIs from a wider LoD authority source, or an LoD vocabulary that does not have an accessible API or public query service.</p>
 <h2 id="step-by-step">Step-by-step</h2>
 <h3 id="1-prepare-your-csv-file">1. Prepare your CSV File</h3>
-<p>To use this element, you need to first have prepared a CSV file containing two columns only:
-* one column for 'label' containing the labels for your vocabulary
-* one column for 'uris' containing the corresponding uris for your vocabulary</p>
+<p>To use this element, you need to first have prepared a CSV file containing two columns only:</p>
+<ul>
+<li>one column for 'label' containing the labels for your vocabulary</li>
+<li>one column for 'uris' containing the corresponding uris for your vocabulary</li>
+</ul>
 <h3 id="2-new-ado-using-your-csv-file">2. New ADO Using Your CSV File</h3>
-<p>Create a new Digital Object, and attached the prepared CSV file to the new Digital Object.
-* Be sure to provide a unique label to help you identify this Object in future steps.
-* It is recommended that you do not Publish this Object.</p>
+<p>Create a new Digital Object, and attached the prepared CSV file to the new Digital Object.</p>
+<ul>
+<li>Be sure to provide a unique label to help you identify this Object in future steps.</li>
+<li>It is recommended that you do not Publish this Object.</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are not yet familiar with how to create a Digtial Object, please refer to <a href="../firstobject/">this guide</a>.</p>
@@ -3034,15 +3038,17 @@
 <p>Scroll down to the 'Subjects and Other Classifications' page of the Webform and select 'Add Element'.</p>
 <p><a class="glightbox" href="../images/WebformAddElement.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Webform Add Element" src="../images/WebformAddElement.png" /></a></p>
 <h3 id="5-webform-from-lod-from-csv-attached-to-an-ado-suggest">5. Webform from LoD from CSV attached to an ADO suggest</h3>
-<p>In the 'Select an element to add ..' popup that opens:
-* Wither scroll down to select the 'Composite Element' section or search for the 'Webform LoD from CSV attached to an ADO suggest.' 
-* Select 'Add Element'.</p>
+<p>In the 'Select an element to add ..' popup that opens:</p>
+<ul>
+<li>Either scroll down to select the 'Composite Element' section or search for the 'Webform LoD from CSV attached to an ADO suggest.' </li>
+<li>Select 'Add Element'.</li>
+</ul>
 <p><a class="glightbox" href="../images/WebformLoDfromCSVaddElement.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Webform LoD From CSV Add Element" src="../images/WebformLoDfromCSVaddElement.png" /></a></p>
 <h3 id="6-adjust-element-settings">6. Adjust Element Settings</h3>
 <p>In the Edit tab that opens for your newly added element, you will need to review the following sections.</p>
 <ul>
 <li>
-<p>Element Settings</p>
+<p><strong>Element Settings</strong></p>
 <ul>
 <li>provide a Title for element</li>
 <li>check that the Key generated from the Title you supply is well formed and make changes if needed</li>
@@ -3053,7 +3059,7 @@
 <p><a class="glightbox" href="../images/WebformLoDfromCSVgeneralSettings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Webform LoD from CSV General Settings" src="../images/WebformLoDfromCSVgeneralSettings.png" /></a></p>
 <ul>
 <li>
-<p>Webform LoD from CSV attached to an ADO suggest settings:</p>
+<p><strong>Webform LoD from CSV attached to an ADO suggest settings</strong>:</p>
 <ul>
 <li>It is recommended to keept both 'label' and 'uri' checked as Visible.</li>
 <li>You may also wish to mark both elements as 'Required'</li>
@@ -3063,22 +3069,22 @@
 <p><a class="glightbox" href="../images/WebformLoDfromCSVautocompleteSettings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Webform LoD from CSV Autocomplete Settings" src="../images/WebformLoDfromCSVautocompleteSettings.png" /></a></p>
 <ul>
 <li>
-<p>Autocomplete settings</p>
+<p><strong>Autocomplete settings</strong></p>
 <ul>
 <li>In the 'Choose an ADO' box, begin typing to search for the Digital Object that holds a CSV containing the Vocabulary you want to autocomplete.</li>
 <li>Under 'The CSV column(header name) that will be used for autocompleting', enter 'label'</li>
 <li>Under 'The CSV column(header name) that will be used for the URL value', enter 'uri'</li>
-<li>'Autocomplete limit'<ul>
+<li><strong>'Autocomplete limit'</strong><ul>
 <li>determines the maximum number of matches to be displayed</li>
 <li>recommended that you set to '10'.</li>
 </ul>
 </li>
-<li>'Autocomplete minimum number of characters'<ul>
+<li><strong>'Autocomplete minimum number of characters'</strong><ul>
 <li>determines the minimum number of characters a user must type before a search is performed</li>
 <li>recommended that you set to '3'.</li>
 </ul>
 </li>
-<li>'Autocomplete matching operator'<ul>
+<li><strong>'Autocomplete matching operator'</strong><ul>
 <li>determines the method used to collect autocomplete suggestions</li>
 <li>recommended to use 'Starts with'          </li>
 </ul>
@@ -3095,9 +3101,10 @@
 <h3 id="8-save-your-work">8. Save Your Work</h3>
 <p>Save your new form element settings. Then Save your updated Webform.</p>
 <h3 id="9-use-your-new-webform-element">9. Use Your New Webform Element</h3>
-<p>Navigate to a Digital Object in your repository that you would like to use this new custom vocabulary element with. 
-* Select 'Edit' for that Digital Object and navigate to the 'Subjects and Other Classifications' page of the webform.
-* Begin typing a label found in your prepared CSV associated with the webform element.</p>
+<p>Navigate to a Digital Object in your repository that you would like to use this new custom vocabulary element with. </p>
+<pre><code>- Select 'Edit' for that Digital Object and navigate to the 'Subjects and Other Classifications' page of the webform.
+- Begin typing a label found in your prepared CSV associated with the webform element.
+</code></pre>
 <p><a class="glightbox" href="../images/WebformLoDfromCSVinAction.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Webform LoD from CSV in Action" src="../images/WebformLoDfromCSVinAction.png" /></a></p>
 <p>You can now begin using this custom vocab vocabulary element when using the corresponding webform (where you added this element) to Edit and Update your Digital Objects. You may also wish to add this same element to the Default Digital Object Collection/Creative Work Series webform.</p>
 <hr />
