@@ -59,7 +59,7 @@ _(*also found under Composite Elements in "Add Element" menu)_
 
 * Webform LoD from CSV attached to an ADO suggest
     - Provides a form element autocomplete labels/urls(values) from a CSV attached to a Digital Object.
-    - Documentation Guide found here: [Using Archipelago's 'Webform LoD from CSV attached to an ADO suggest'](WebformLoDfromCSV.md)
+    - Documentation Guide found here: [Using Archipelago's 'Webform LoD from CSV attached to an ADO suggest'](webformLoDfromCSV.md)
 
 ### File Upload Elements:
 
