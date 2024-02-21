@@ -26,11 +26,12 @@ Archipelago's custom webform element 'Webform LoD from CSV attached to an ADO su
 
     If you are not yet familiar with how to create a Digtial Object, please refer to [this guide](firstobject.md).
 
+
 3. Go to `Admin > Structure > Webforms` and select the 'Build' button beside the Default Descriptive Metadata Webform.
 
 4. Scroll down to the 'Subjects and Other Classifications' page of the Webform and select 'Add Element'.
 
-![Webform Add Element](images/webformAddElement.png)
+![Webform Add Element](images/WebformAddElement.png)
 
 5. In the 'Select an element to add ..' popup that opens, either scroll down to select the 'Composite Element' section or search for the 'Webform LoD from CSV attached to an ADO suggest.' Select 'Add Element'.
 
