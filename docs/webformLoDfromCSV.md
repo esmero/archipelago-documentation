@@ -12,12 +12,12 @@ Archipelago's custom webform element 'Webform LoD from CSV attached to an ADO su
 
 ## Step-by-step
 
-1. To use this element, you need to first have prepared a CSV file containing two columns only:
+### 1. To use this element, you need to first have prepared a CSV file containing two columns only:
 
     - one column for 'label' containing the labels for your vocabulary
     - one column for 'uris' containing the corresponding uris for your vocabulary
     
-2. Create a new Digital Object, and attached the prepared CSV file to the new Digital Object.
+### 2. Create a new Digital Object, and attached the prepared CSV file to the new Digital Object.
 
     - Be sure to provide a unique label to help you identify this Object in future steps.
     - It is recommended that you do not Publish this Object.
@@ -27,17 +27,19 @@ Archipelago's custom webform element 'Webform LoD from CSV attached to an ADO su
     If you are not yet familiar with how to create a Digtial Object, please refer to [this guide](firstobject.md).
 
 
-3. Go to `Admin > Structure > Webforms` and select the 'Build' button beside the Default Descriptive Metadata Webform.
+### 3. Go to `Admin > Structure > Webforms` and select the 'Build' button beside the Default Descriptive Metadata Webform.
 
-4. Scroll down to the 'Subjects and Other Classifications' page of the Webform and select 'Add Element'.
+### 4. Scroll down to the 'Subjects and Other Classifications' page of the Webform and select 'Add Element'.
 
 ![Webform Add Element](images/WebformAddElement.png)
 
-5. In the 'Select an element to add ..' popup that opens, either scroll down to select the 'Composite Element' section or search for the 'Webform LoD from CSV attached to an ADO suggest.' Select 'Add Element'.
+### 5. In the 'Select an element to add ..' popup that opens:
+* Wither scroll down to select the 'Composite Element' section or search for the 'Webform LoD from CSV attached to an ADO suggest.' 
+* Select 'Add Element'.
 
 ![Webform LoD From CSV Add Element](images/WebformLoDfromCSVaddElement.png)
 
-6. In the Edit tab that opens for your newly added element, you will need to review the following sections.
+### 6. In the Edit tab that opens for your newly added element, you will need to review the following sections.
 
 * Element Settings
 
@@ -69,16 +71,18 @@ Archipelago's custom webform element 'Webform LoD from CSV attached to an ADO su
           - determines the method used to collect autocomplete suggestions
           - recommended to use 'Starts with'          
 
-7. Navigate to the 'Advanced' tab for this Webform element.
+### 7. Navigate to the 'Advanced' tab for this Webform element.
 
     - Open the 'Multiple settings' section
     - dDeselect the options to 'Allow users to sort elements' and 'Allow users to add more items'
     
 ![Webform LoD from CSV Advanced Tab](images/WebformLoDfromCSVadvancedTab.png)
 
-8. Save your new form element settings. Then Save your updated Webform.
+### 8. Save your new form element settings. Then Save your updated Webform.
 
-9. Navigate to a Digital Object in your repository that you would like to use this new custom vocabulary element with. Select 'Edit' for that Digital Object and navigate to the 'Subjects and Other Classifications' page of the webform. Begin typing a label found in your prepared CSV associated with the webform element.
+### 9. Navigate to a Digital Object in your repository that you would like to use this new custom vocabulary element with. 
+* Select 'Edit' for that Digital Object and navigate to the 'Subjects and Other Classifications' page of the webform.
+* Begin typing a label found in your prepared CSV associated with the webform element.
 
 ![Webform LoD from CSV in Action](images/WebformLoDfromCSVinAction.png)
 
