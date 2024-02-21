@@ -39,7 +39,7 @@ Go to `Admin > Structure > Webforms` and select the 'Build' button beside the De
 
 Scroll down to the 'Subjects and Other Classifications' page of the Webform and select 'Add Element'.
 
-  ![Webform Add Element](images/WebformAddElement.png)
+    ![Webform Add Element](images/WebformAddElement.png)
 
 ### 5. Webform from LoD from CSV attached to an ADO suggest
 
@@ -48,7 +48,7 @@ In the 'Select an element to add ..' popup that opens:
 * Either scroll down to select the 'Composite Element' section or search for the 'Webform LoD from CSV attached to an ADO suggest.' 
 * Select 'Add Element'.
 
-  ![Webform LoD From CSV Add Element](images/WebformLoDfromCSVaddElement.png)
+    ![Webform LoD From CSV Add Element](images/WebformLoDfromCSVaddElement.png)
 
 ### 6. Adjust Element Settings
 
@@ -60,14 +60,14 @@ In the Edit tab that opens for your newly added element, you will need to review
     - check that the Key generated from the Title you supply is well formed and make changes if needed
     - specify the 'Allowed number of values'
 
-  ![Webform LoD from CSV General Settings](images/WebformLoDfromCSVgeneralSettings.png)
+    ![Webform LoD from CSV General Settings](images/WebformLoDfromCSVgeneralSettings.png)
 
 * **Webform LoD from CSV attached to an ADO suggest settings**:
 
     - It is recommended to keept both 'label' and 'uri' checked as Visible.
     - You may also wish to mark both elements as 'Required'
     
-  ![Webform LoD from CSV Autocomplete Settings](images/WebformLoDfromCSVautocompleteSettings.png)
+    ![Webform LoD from CSV Autocomplete Settings](images/WebformLoDfromCSVautocompleteSettings.png)
 
 * **Autocomplete settings**
 
@@ -88,10 +88,10 @@ In the Edit tab that opens for your newly added element, you will need to review
 
 Navigate to the 'Advanced' tab for this Webform element.
 
-    - Open the 'Multiple settings' section
-    - dDeselect the options to 'Allow users to sort elements' and 'Allow users to add more items'
+* Open the 'Multiple settings' section
+* Deselect the options to 'Allow users to sort elements' and 'Allow users to add more items'
     
-  ![Webform LoD from CSV Advanced Tab](images/WebformLoDfromCSVadvancedTab.png)
+    ![Webform LoD from CSV Advanced Tab](images/WebformLoDfromCSVadvancedTab.png)
 
 ### 8. Save Your Work
 
@@ -104,7 +104,7 @@ Navigate to a Digital Object in your repository that you would like to use this 
     - Select 'Edit' for that Digital Object and navigate to the 'Subjects and Other Classifications' page of the webform.
     - Begin typing a label found in your prepared CSV associated with the webform element.
 
-  ![Webform LoD from CSV in Action](images/WebformLoDfromCSVinAction.png)
+    ![Webform LoD from CSV in Action](images/WebformLoDfromCSVinAction.png)
 
 You can now begin using this custom vocab vocabulary element when using the corresponding webform (where you added this element) to Edit and Update your Digital Objects. You may also wish to add this same element to the Default Digital Object Collection/Creative Work Series webform.
     
