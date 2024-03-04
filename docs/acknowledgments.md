@@ -6,7 +6,8 @@
 
 # Acknowledgments
 
-This software is a [Metropolitan New York Library Council](https://metro.org) Open-Source initiative and part of the Archipelago Commons project.
+Archipelago Commons is an Open Source repository software that is developed and supported at the Metropolitan New York Library Council (METRO)
+a [Metropolitan New York Library Council](https://metro.org).
 
 # License
 
