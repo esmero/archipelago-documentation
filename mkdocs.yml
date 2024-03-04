@@ -95,8 +95,8 @@ nav:
       - Care & Coding + Fixing / Acknowledgments / License: acknowledgments.md
 theme:
   name: material
-  favicon: images/strawberries_color.png
-  logo: images/strawberries_color.png
+  favicon: images/ArchipelagoLogo-favicon-32x32.png
+  logo: images/ArchipelagoLogo-DumplingFinal2024Web240pxPurple.png
   features:
     - navigation.instant
     - navigation.top
