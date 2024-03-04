@@ -5,6 +5,8 @@ repo_name: archipelago-documentation
 edit_uri: commits/1.3.0/docs/
 site_description: Project documentation for Archipelago.
 site_author: The Digital Services Team at Metropolitan New York Library Council
+extra_css:
+  - stylesheets/extras.css
 nav:
   - Home: index.md
   - Archipelago 101:
