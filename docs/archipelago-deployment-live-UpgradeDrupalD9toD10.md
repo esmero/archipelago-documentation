@@ -201,7 +201,7 @@ docker exec -ti esmero-php bash -c "drush pm:uninstall jsonapi_earlyrendering_wo
 docker exec -ti esmero-php bash -c "composer remove drupal/jsonapi_earlyrendering_workaround --no-update"
 docker exec -ti esmero-php bash -c "composer require 'drupal/core:^10' 'drupal/core-recommended:^10' 'drupal/core-composer-scaffold:^10' 'drupal/core-project-message:^10' --update-with-dependencies --no-update"
 docker exec -ti esmero-php bash -c "composer require 'drupal/core-dev:^10' --dev --update-with-dependencies --no-update"
-docker exec -ti esmero-php bash -c "composer remove drupal/google_api_client"
+docker exec -ti esmero-php bash -c "composer remove drupal/google_api_client --no-update"
 docker exec -ti esmero-php bash -c "composer require 'drush/drush:^12' --no-update"
 docker exec -ti esmero-php bash -c "composer require drupal/twig_tweak:^2 --no-update"
 docker exec -ti esmero-php bash -c "composer require drupal/config_inspector:^2 --no-update"
