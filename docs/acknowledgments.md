@@ -6,8 +6,7 @@
 
 # Acknowledgments
 
-Archipelago Commons is an Open Source repository software that is developed and supported at the Metropolitan New York Library Council (METRO)
-a [Metropolitan New York Library Council](https://metro.org).
+Archipelago Commons is an Open Source repository software that is developed and supported at the [Metropolitan New York Library Council (METRO)](https://metro.org).
 
 # License
 
