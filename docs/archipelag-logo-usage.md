@@ -39,7 +39,7 @@ The Archipelago Commons Logo is available in a few different iterations. You sho
 
 ### Solid Black Outline
 
-![Solid Black Outline Archipelago Commons Dumpling Logo](images/ArchipelagoCommonsLogoSolidBlackOutline/ArchipelagoCommonsLogoDumpling_Final_2024_Web_320px_Outline_Black.png)
+![Solid Black Outline Archipelago Commons Dumpling Logo](images/ArchipelagoCommonsLogoSolidBlackOutline/ArchipelagoCommonsLogoDumpling_Final_2024_Web_480px_Outline_Black.png)
 
 * [Link to Zip File Containing 480px, 320px, and 240px versions](images/ArchipelagoCommonsLogoSolidBlackOutline.zip)
 
