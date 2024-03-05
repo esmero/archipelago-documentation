@@ -46,9 +46,7 @@ The Archipelago Commons Logo is available in a few different iterations. You sho
 ### Solid White Outline
 
 <div style="background-color:rgb(66,69,71);padding:0.5rem">
-
 ![Solid White Outline Archipelago Commons Dumpling Logo](images/ArchipelagoCommonsLogoSolidWhiteOutline/ArchipelagoCommonsLogoDumpling_Final_2024_Web_480px_Outline_White_ghost.png)
-
 </div>
 
 * [Link to Zip File Containing 480px, 320px, and 240px versions](images/ArchipelagoCommonsLogoSolidWhiteOutline.zip)
