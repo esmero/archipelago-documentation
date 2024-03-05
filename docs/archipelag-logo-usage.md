@@ -45,11 +45,17 @@ The Archipelago Commons Logo is available in a few different iterations. You sho
 
 ### Solid White Outline
 
+<div style="background-color:rgb(66,69,71);padding:0.5rem">
+
 ![Solid White Outline Archipelago Commons Dumpling Logo](images/ArchipelagoCommonsLogoSolidWhiteOutline/ArchipelagoCommonsLogoDumpling_Final_2024_Web_480px_Outline_White_ghost.png)
+
+</div>
 
 * [Link to Zip File Containing 480px, 320px, and 240px versions](images/ArchipelagoCommonsLogoSolidWhiteOutline.zip)
 
 ### Stamp Versions: Black or White Outline
+
+Please only use the Stamp Versions of the Archipelago Commons logo if you do not have space to use the Primary or Alternate Color versions of the Logo.
 
 ![Archipelago Commons Logo Stamp Versions](images/ArchipelagoCommonsLogoStamp/ArchipelagoCommonsLogo_2024_320px_Stamp_Black_Outline.png)
 
@@ -90,6 +96,7 @@ We are very excited to see the Archipelago Commons Logo presented on your instit
 8. Do not stretch, distort, or add decorative effects such as emboss or drop shadow, or otherwise modify the Archipelago Commons Logo.
 9. Do not alter the colors of the Archipelago Commons Logo or make it transparent.
 10. Do not place or embed the Archipelago Commons Logo within a box or carrier.
+11. Do not use the Archipelago Commons Favicon images outside actual Favicon application.
 
 ## Questions About Proper Usage
 
