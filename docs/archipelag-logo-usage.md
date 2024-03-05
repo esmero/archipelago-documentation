@@ -9,9 +9,9 @@ tags:
 
 ## Our Logo
 
-The Archipelago Commons Logo features an illustrated dumbo octopus, named Dumpling, swimming beside the Archipelago Commons name. This logo is used for branding identity and visual representation for Archipelago Commons, an open-source repository software that is developed and supported at the [Metropolitan New York Library Council (METRO)](https://metro.org). 
+The Archipelago Commons Logo features an illustrated dumbo octopus, named Dumpling, swimming beside the Archipelago Commons name. This logo is used for branding identity and visual representation for Archipelago Commons, an open-source repository software that is developed and supported at the [Metropolitan New York Library Council (METRO)](https://metro.org).
 
-This logo was developed with care by the [METRO's Digital Services Team](https://metro.org/digital-services), Diego Pino Navarro and Allison Sherrick. This logo was drawn by Diego Pino Navarro. Allison Sherrick collaborated with Diego in the logo design process, and authored these Archipelago Commons Logo Usage Guidelines.
+This logo was developed with care by [METRO's Digital Services Team](https://metro.org/digital-services), and was drawn by Diego Pino Navarro.
 
 ### Logo License
 
