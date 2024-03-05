@@ -85,8 +85,8 @@ nav:
       - Archipelago Presentations & Events: presentations_events.md
       - Archipelagos in the Wild: inthewild.md
       - Code of Conduct: CODE_OF_CONDUCT.md
-      - Archipelago Commons Logo Usage Guidelines: CODE_OF_CONDUCT.md      
-      - Contributing Code/Docs: archipelag-logo-usage.md
+      - Archipelago Commons Logo Usage Guidelines: archipelag-logo-usage.md    
+      - Contributing Code/Docs:
         - Archipelago Contribution Guide: giveortake.md
         - Documentation:
           - documentation_about.md
