@@ -99,7 +99,7 @@ nav:
 theme:
   name: material
   favicon: images/ArchipelagoLogo-favicon-32x32.png
-  logo: images/ArchipelagoLogo-DumplingFinal2024Web240pxPurple.png
+  logo: images/ArchipelagoLogo-DumplingFinal2024Web240pxPurpleWhiteText.png
   features:
     - navigation.instant
     - navigation.top
