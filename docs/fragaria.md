@@ -11,7 +11,7 @@ Archipelago's Fragaria Redirect Module is a Drupal 9/10 module that provides dyn
 
 ### Prerequisites
 
-Before proceeding with the following configuration steps, you need to first create the [Strawberry Key Name Provider and Solr Field](/docs/strawberry_key_name_providers.md) that corresponds to the Field that will be matched against the variable part of the route exists.
+Before proceeding with the following configuration steps, you need to first create the [Strawberry Key Name Provider and Solr Field](strawberry_key_name_providers.md) that corresponds to the Field that will be matched against the variable part of the route exists.
 
 In other words, if your Digital Objects have a field and value such as:
 
