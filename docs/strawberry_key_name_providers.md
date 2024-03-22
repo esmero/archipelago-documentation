@@ -15,8 +15,8 @@ In order to expose the Strawberry Field JSON keys (and values) for Archipelago D
 
 * [Creating first a *Strawberry Key Name Provider*](strawberry_key_name_providers.md#creating-a-strawberry-key-name-provider)
 * [Creating a corresponding Solr Field](strawberry_key_name_providers.md#creating-a-solr-field) necessary for Search and Views exposure
-* [Creation of Facets](strawberry_key_name_providers.md#creating-a-facet)
-* [Creation of Facet blocks](strawberry_key_name_providers.md#creating-a-block-for-the-facet) on your theme as needed 
+* [Creating of Facets](strawberry_key_name_providers.md#creating-a-facet)
+* [Creating of Facet blocks](strawberry_key_name_providers.md#creating-a-block-for-the-facet) on your theme as needed 
 
 
 ## Creating a Strawberry Key Name Provider
