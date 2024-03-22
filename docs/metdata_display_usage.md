@@ -32,7 +32,7 @@ Archipelago's Metadata Display Usage tab is an extension of [Metadata Display Pr
 
 !!! note "Before Making Any Changes"
 
-    Before diving into Metadata Display Usage review and making changes to what/where tempaltes are used, we recommend reading our [Twigs in Archipelago documentation](metadatatwigs.md) overview guide and also our [Working with Twig](workingtwigs.md) primer.
+    Before diving into Metadata Display Usage review and making changes to what/where templates are used, we recommend reading our [Twigs in Archipelago documentation](metadatatwigs.md) overview guide and also our [Working with Twig](workingtwigs.md) primer.
 
 ___
 
