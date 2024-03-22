@@ -18,13 +18,15 @@ Archipelago's Metadata Display Usage tab is an extension of [Metadata Display Pr
 
 2. Click on the Template Name or select 'Edit' for the Template you wish to review and navigate to the 'Usage' tab.
 
-    ![Metadata Display Usage Tab](images/mdp_usage_tab.png)
-
 3. On the Usage tab for every Template in your Archipelago, you will be able to see the 'Label' and 'How' (direct or indirect) usage information for the following four areas across your whole system:
     - Exposed Metadata Display Entities (*such as an exposed Dublin Core XML endpoint*)
     - AMI sets (*[Archipelago Multi Importer](ami_index.md)*)
     - Entity View Modes (*[Primer on View/Display Modes](webformsasinput.md)*)
     - Views (*Templates can be used by Views for rendering outputs, amongst other uses*)
+  
+    ![Metadata Display Usage Tab](images/mdp_usage_tab.png)
+
+    ![Metadata Display Usage Tab View Section](images/mdp_usage_tab_view_section.png)   
 
 4. For each usage section noted above, you will be able to navigate to any corresponding Exposed Metadata Display Entity, AMI Set, Entity View Mode, or View to make changes to the template usage.
 
