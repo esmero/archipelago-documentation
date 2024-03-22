@@ -87,6 +87,8 @@ While a lot of core needs and use cases are covered with the Twig Templates ship
 - This section contains [Full Examples of Common Use Cases](workingtwigs.md#full-examples-for-common-uses-cases)
 - This section covers a [Recommended Workflow](workingtwigs.md#a-recommended-workflow)
 - You may also want learn more about what `format_strawberryfield` can do and what many other possibilities are exposed through our templating system in this guide: [Strawberryfield Formatters](strawberryfield-formatters.md).
+- [Metadata Display Preview](metadata_display_preview.md): use Preview to check your template outputs against Archipelago Digital Objects or AMI Sets.
+- [Metadata Display Usage](metadata_display_usage.md): use the Usage tab to check where a Metadata Dispaly Template is currently being used across your Archipelago.
 
 ___
 
