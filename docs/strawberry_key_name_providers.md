@@ -11,10 +11,13 @@ tags:
 
 For an overview of how Strawberry Key Name Providers fit within the context of the rest of Archipelago, please see the [Drupal and JSON](metadatainarchipelago.md#drupal-and-json) section in our [Metadata in Archipelago](metadatainarchipelago.md) overview documentation.
 
-In order to expose the Strawberry Field JSON keys (and values) for Archipelago Digital Objects (ADOs) to Search/Solr, Views, and Facets, we need to make use of a plugin system called *Strawberry Key Name Providers*. The following guide covers
-- Configuring first the *Strawberry Key Name Providers*
-- Then configuring the corresponding Solr Fields necessary for Search and Views exposure
-- Finally, the configuration of Facets and placement of Facet blocks on your theme as needed.
+In order to expose the Strawberry Field JSON keys (and values) for Archipelago Digital Objects (ADOs) to Search/Solr, Views, and Facets, we need to make use of a plugin system called *Strawberry Key Name Providers*. The following guide covers:
+
+* [Creating first a *Strawberry Key Name Provider*](strawberry_key_name_providers.md#creating-a-strawberry-key-name-provider)
+* [Creating a corresponding Solr Field](strawberry_key_name_providers.md#creating-a-solr-field) necessary for Search and Views exposure
+* [Creation of Facets](strawberry_key_name_providers.md#creating-a-facet)
+* [Creation of Facet blocks](strawberry_key_name_providers.md#creating-a-block-for-the-facet) on your theme as needed 
+
 
 ## Creating a Strawberry Key Name Provider
 
@@ -91,6 +94,12 @@ You'll notice that there are four plugins, each with different options, availabl
     1. Go to `Administration > Configuration > Search and metadata > Search API` and click on the link to the index for your Drupal data.
     2. Press the `Queue all items for reindexing` button.
     3. Let cron reindex or press the `Index now` button.
+
+
+!!! note "Important Note About Facets and Facet Blocks"
+
+    You cannot reuse the same Facets or Facet Blocks for different Views display outputs. You need to create a unique Facet and corresponding Facet Block for every distinct `Facet Source` you will be using in your Archipelago. For example, if you have both `List` and `Grid` style Views setup for your Search display outputs, you will need to create Facets for your desired Subjects, etc. for both the `List` and `Grid` View Sources. You will then need to place your Facet Blocks in the appropriate region and make sure each Facet Block corresponds to the correct underlying `View` using the `View inclusion` settings for the Facet Block.
+
 
 ## Creating a Facet
 
