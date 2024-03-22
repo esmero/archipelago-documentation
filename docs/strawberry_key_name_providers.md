@@ -13,10 +13,10 @@ For an overview of how Strawberry Key Name Providers fit within the context of t
 
 In order to expose the Strawberry Field JSON keys (and values) for Archipelago Digital Objects (ADOs) to Search/Solr, Views, and Facets, we need to make use of a plugin system called *Strawberry Key Name Providers*. The following guide covers:
 
-    - [Configuring first the *Strawberry Key Name Providers*](strawberry_key_name_providers.md#creating-a-strawberry-key-name-provider)
-    - Then [creating and configuring the corresponding Solr Fields](strawberry_key_name_providers.md#creating-a-solr-field) necessary for Search and Views exposure
-    - Next the configuration of [Facets](strawberry_key_name_providers.md#creating-a-facet)
-    - Finally, placement of [Facet blocks](strawberry_key_name_providers.md#creating-a-block-for-the-facet) on your theme as needed 
+* [Configuring first the *Strawberry Key Name Providers*](strawberry_key_name_providers.md#creating-a-strawberry-key-name-provider)
+* Then [creating and configuring the corresponding Solr Fields](strawberry_key_name_providers.md#creating-a-solr-field) necessary for Search and Views exposure
+* Next the configuration of [Facets](strawberry_key_name_providers.md#creating-a-facet)
+* Finally, placement of [Facet blocks](strawberry_key_name_providers.md#creating-a-block-for-the-facet) on your theme as needed 
 
 ## Creating a Strawberry Key Name Provider
 
