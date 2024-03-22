@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../images/ArchipelagoLogo-favicon-32x32.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.10ba22f1.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -1528,7 +1528,7 @@
           
   
   <span class="md-ellipsis">
-    Setup through Strawberry Key Name Providers
+    Strawberry Key Name Providers, Solr Field, and Facet Configuration
   </span>
   
 
@@ -1539,7 +1539,7 @@
         
   
   <span class="md-ellipsis">
-    Setup through Strawberry Key Name Providers
+    Strawberry Key Name Providers, Solr Field, and Facet Configuration
   </span>
   
 
@@ -2129,6 +2129,8 @@
       
         
       
+        
+      
     
     
       
@@ -2234,6 +2236,27 @@
   
   <span class="md-ellipsis">
     Metadata Display Preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata_display_usage.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Display Usage
   </span>
   
 
@@ -3040,10 +3063,13 @@
 
 <h1 id="strawberry-key-name-providers-solr-field-and-facet-configuration">Strawberry Key Name Providers, Solr Field, and Facet Configuration</h1>
 <p>For an overview of how Strawberry Key Name Providers fit within the context of the rest of Archipelago, please see the <a href="../metadatainarchipelago/#drupal-and-json">Drupal and JSON</a> section in our <a href="../metadatainarchipelago/">Metadata in Archipelago</a> overview documentation.</p>
-<p>In order to expose the Strawberry Field JSON keys (and values) for Archipelago Digital Objects (ADOs) to Search/Solr, Views, and Facets, we need to make use of a plugin system called <em>Strawberry Key Name Providers</em>. The following guide covers
-- Configuring first the <em>Strawberry Key Name Providers</em>
-- Then configuring the corresponding Solr Fields necessary for Search and Views exposure
-- Finally, the configuration of Facets and placement of Facet blocks on your theme as needed.</p>
+<p>In order to expose the Strawberry Field JSON keys (and values) for Archipelago Digital Objects (ADOs) to Search/Solr, Views, and Facets, we need to make use of a plugin system called <em>Strawberry Key Name Providers</em>. The following guide covers:</p>
+<ul>
+<li><a href="./#creating-a-strawberry-key-name-provider">Creating first a <em>Strawberry Key Name Provider</em></a></li>
+<li><a href="./#creating-a-solr-field">Creating a corresponding Solr Field</a> necessary for Search and Views exposure</li>
+<li><a href="./#creating-a-facet">Creation of Facets</a></li>
+<li><a href="./#creating-a-block-for-the-facet">Creation of Facet blocks</a> on your theme as needed </li>
+</ul>
 <h2 id="creating-a-strawberry-key-name-provider">Creating a Strawberry Key Name Provider</h2>
 <ol>
 <li>
@@ -3119,6 +3145,10 @@
 </ol>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Important Note About Facets and Facet Blocks</p>
+<p>You cannot reuse the same Facets or Facet Blocks for different Views display outputs. You need to create a unique Facet and corresponding Facet Block for every distinct <code>Facet Source</code> you will be using in your Archipelago. For example, if you have both <code>List</code> and <code>Grid</code> style Views setup for your Search display outputs, you will need to create Facets for your desired Subjects, etc. for both the <code>List</code> and <code>Grid</code> View Sources. You will then need to place your Facet Blocks in the appropriate region and make sure each Facet Block corresponds to the correct underlying <code>View</code> using the <code>View inclusion</code> settings for the Facet Block.</p>
+</div>
 <h2 id="creating-a-facet">Creating a Facet</h2>
 <ol>
 <li>Go to <code>Administration &gt; Configuration &gt; Search and metadata &gt; Facets</code>.</li>
@@ -3183,7 +3213,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 31, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 22, 2024</span>
   </span>
 
     
@@ -3276,7 +3306,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../assets/javascripts/bundle.bd41221c.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../images/ArchipelagoLogo-favicon-32x32.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.10ba22f1.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -1577,9 +1577,54 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#1-json-data-for-your-archipelago-digital-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. JSON Data for your Archipelago Digital Objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-strawberry-keyname-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Strawberry Keyname Providers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#excerpted-from-metadata-in-archipelago" class="md-nav__link">
     <span class="md-ellipsis">
       Excerpted from Metadata in Archipelago
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-solr-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Solr Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-drupal-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Drupal Views
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-search-results-facets" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Search Results &amp; Facets
     </span>
   </a>
   
@@ -1619,7 +1664,7 @@
         
   
   <span class="md-ellipsis">
-    Setup through Strawberry Key Name Providers
+    Strawberry Key Name Providers, Solr Field, and Facet Configuration
   </span>
   
 
@@ -2096,6 +2141,8 @@
       
         
       
+        
+      
     
     
       
@@ -2201,6 +2248,27 @@
   
   <span class="md-ellipsis">
     Metadata Display Preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata_display_usage.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Display Usage
   </span>
   
 
@@ -2903,9 +2971,54 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#1-json-data-for-your-archipelago-digital-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. JSON Data for your Archipelago Digital Objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-strawberry-keyname-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Strawberry Keyname Providers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#excerpted-from-metadata-in-archipelago" class="md-nav__link">
     <span class="md-ellipsis">
       Excerpted from Metadata in Archipelago
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-solr-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Solr Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-drupal-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Drupal Views
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-search-results-facets" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Search Results &amp; Facets
     </span>
   </a>
   
@@ -3007,31 +3120,22 @@
 <h2 id="in-a-nutshell-json-data-to-strawberry-keyname-providers-to-solr">In-a-nutshell : JSON data to Strawberry Keyname Providers to Solr</h2>
 <p>If you don't have the bandwidth to read the (stellar) <a href="../metadatainarchipelago/">Metadata in Archipelago</a> documentation, focus on the following in-a-nutshell understanding of the way Archipelago's Search and Solr is crafted. Then follow the step-by-step instructions found in <a href="../strawberry_key_name_providers/">Strawberry Key Name Providers, Solr Field, and Facet Configuration</a> to get started customizing your Search setup.</p>
 <p><a class="glightbox" href="../images/SearchInANutshell_Twig_JSON_Metadata_Diego_doodle.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Search in-a-nutshell overview" src="../images/SearchInANutshell_Twig_JSON_Metadata_Diego_doodle.jpg" /></a></p>
-<ol>
-<li>
-<p>JSON Data for your Archipelago Digital Objects: you need to have your descriptive metadata in JSON keys and values for ADOs and Collections in your Archipelago. Your JSON metadata and (extracted technical) data is the crucial source for Search and Solr.</p>
-</li>
-<li>
-<p>Strawberry Keyname Providers: you need to have corresponding Strawberry Keyname Providers configured to feed the <em>values</em> from your desired JSON keys to Solr fields. One of the most powerful tools in Archipelago's Search functionality comes from the extensibility of Strawberry Keyname Providers, which can be used to source specific data points from a variety of JSON keys found in your repository.</p>
-</li>
-</ol>
+<h4 id="1-json-data-for-your-archipelago-digital-objects">1. JSON Data for your Archipelago Digital Objects</h4>
+<p>You need to have your descriptive metadata in JSON keys and values for ADOs and Collections in your Archipelago. Your JSON metadata and (extracted technical) data is the crucial source for Search and Solr.</p>
+<h4 id="2-strawberry-keyname-providers">2. Strawberry Keyname Providers</h4>
+<p>You need to have corresponding Strawberry Keyname Providers configured to feed the <em>values</em> from your desired JSON keys to Solr fields. One of the most powerful tools in Archipelago's Search functionality comes from the extensibility of Strawberry Keyname Providers, which can be used to source specific data points from a variety of JSON keys found in your repository.</p>
 <details class="info">
 <summary>More about Strawberry Keyname Providers</summary>
 <h4 id="excerpted-from-metadata-in-archipelago">Excerpted from <a href="../metadatainarchipelago/">Metadata in Archipelago</a></h4>
 <p>One of the challenges of our flexible approach is how to allow Drupal to access the JSON in a way, as native as possible, to generate filtered listings via Drupal Views, free text Search and Faceting. To make this happen Strawberry Field uses a JSON Querying and Exposing as "Native Field Properties" logic. Through a special type of Plugin system named Strawberry Key Name Providers and associated Configuration Entities (can be found at /admin/structure/strawberry_keynameprovider), you have control on which keys and values of your JSON are going to be exposed as field properties of any Strawberry Field, allowing Drupal through this to access values in a flat manner and expose them to the Search API natively. The access to the values of any JSON is done via JMESPATH expressions and then transformed either to a list of values or even "cast" into more complex data Data types, like an Entity Reference (means a connection to another Entity).
 This gives you a lot of power and control and makes a lot of very heavy operations lighter. You can even plan upfront or evolve these properties in time.</p>
 </details>
-<ol>
-<li>
-<p>Solr Fields: you need to configure your desired Solr Fields to source from the Strawberry Keynames you have configured. By default, Archipelago also provider Solr Fields sourced from your HOCR data and the Rendered HTML output of your ADOs.</p>
-</li>
-<li>
-<p><em>*3.5.</em> Drupal Views: for your regular Search, Advanced Search, and potentially other specialized Views, you can configure to search within specific and/or a variety of Solr Fields. </p>
-</li>
-<li>
-<p>Search Results: your metadata and data, as configured through Keyname Providers and Fields, indexed into your Solr. </p>
-</li>
-</ol>
+<h4 id="3-solr-fields">3. Solr Fields</h4>
+<p>You need to configure your desired Solr Fields to source from the Strawberry Keynames you have configured. By default, Archipelago also provider Solr Fields sourced from your HOCR data and the Rendered HTML output of your ADOs.</p>
+<h4 id="4-drupal-views">4. Drupal Views</h4>
+<p>For your regular Search, Advanced Search, and potentially other specialized Views, you can configure to search within specific and/or a variety of Solr Fields. </p>
+<h4 id="5-search-results-facets">5. Search Results &amp; Facets</h4>
+<p>Your metadata and data, as configured through Keyname Providers and Fields, Facets and Facet Blocks, indexed into your Solr. </p>
 <h2 id="instructions-and-guides">Instructions and Guides</h2>
 <ul>
 <li><a href="../strawberry_key_name_providers/">Strawberry Key Name Providers, Solr Field, and Facet Configuration</a> </li>
@@ -3063,7 +3167,7 @@ This gives you a lot of power and control and makes a lot of very heavy operatio
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 6, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 22, 2024</span>
   </span>
 
     
@@ -3156,7 +3260,7 @@ This gives you a lot of power and control and makes a lot of very heavy operatio
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../assets/javascripts/bundle.bd41221c.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
