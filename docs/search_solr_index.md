@@ -47,11 +47,11 @@ You need to have corresponding Strawberry Keyname Providers configured to feed t
 #### 3. Solr Fields
 You need to configure your desired Solr Fields to source from the Strawberry Keynames you have configured. By default, Archipelago also provider Solr Fields sourced from your HOCR data and the Rendered HTML output of your ADOs.
 
-#### _*3.5._ Drupal Views 
+#### 4. Drupal Views 
 For your regular Search, Advanced Search, and potentially other specialized Views, you can configure to search within specific and/or a variety of Solr Fields. 
 
-#### 4. Search Results
-Your metadata and data, as configured through Keyname Providers and Fields, indexed into your Solr. 
+#### 5. Search Results & Facets
+Your metadata and data, as configured through Keyname Providers and Fields, Facets and Facet Blocks, indexed into your Solr. 
 
 ## Instructions and Guides
 
