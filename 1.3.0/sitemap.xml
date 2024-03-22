@@ -241,17 +241,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.archipelago.nyc/1.3.0/metadata_display_usage/</loc>
+         <lastmod>2024-03-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.archipelago.nyc/1.3.0/metadatainarchipelago/</loc>
          <lastmod>2024-03-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.archipelago.nyc/1.3.0/metadatatwigs/</loc>
-         <lastmod>2024-03-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.archipelago.nyc/1.3.0/metdata_display_usage/</loc>
          <lastmod>2024-03-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
