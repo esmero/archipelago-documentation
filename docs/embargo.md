@@ -131,7 +131,7 @@ To apply either (or both) of the examples noted below, begin by navigating to th
 
 - Found at `/metadatadisplay/list` or `Content > Metadata Displays`
 
-You will most likely only need to apply Embargo-related conditional logic to the primary 'Object Description' template, depending on the particular [Metadata Display Usage](metdata_display_usage.md) setup in your Archipelago.
+You will most likely only need to apply Embargo-related conditional logic to the primary 'Object Description' template, depending on the particular [Metadata Display Usage](metadata_display_usage.md) setup in your Archipelago.
 
 #### Object Description Template Example 1
 
