@@ -114,7 +114,7 @@ Within the selected StrawberryField Formatter, navigate to the bottom section of
 
 Depending on which Display Mode and particular StrawberryField Formatter you are editing, you may see additional options related to the IIIF Manifest.
 
-![Embargo StrawberryField Formatter Example 2](images/EmbargoFormatter2.png)
+![Embargo StrawberryField Formatter Example 2](images/embargoFormatter2.png)
 
 - If the particular viewer you are editing is setup to use an Exposed Metadata Endpoint, you can also simplify the response and use the option at the end. (Return 401 in case of an Embargo, removing your need of delegating the decision to twig logic. Archipelago will resolve the Embargo and if the user can't see it it will return an access denied (401 code). 
 
