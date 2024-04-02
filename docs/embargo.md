@@ -71,7 +71,7 @@ Functional mechanism for your specified key:
     }
     ```
 
-Functional results for objects with future dates in the 'embargo_ip_bypass' key: 
+Functional results for objects with IP range/s specified in the 'embargo_ip_bypass' key: 
 
 - File media viewer does not display for individuals accessing the Digital Object from IP addresses not listed in the 'embargo_ip_bypass' key in 
 - Metadata record displays as usual.
