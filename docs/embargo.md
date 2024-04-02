@@ -71,7 +71,7 @@ Functional mechanism for your specified key:
     }
     ```
 
-Functional results for objects with future dates in the 'embargo_ip_bypass' key: 
+Functional results for objects with IP range/s specified in the 'embargo_ip_bypass' key: 
 
 - File media viewer does not display for individuals accessing the Digital Object from IP addresses not listed in the 'embargo_ip_bypass' key in 
 - Metadata record displays as usual.
@@ -110,18 +110,18 @@ Within the selected StrawberryField Formatter, navigate to the bottom section of
     - Please be careful about providing the same keys used for users that can by pass an Embargo. You can add multiple ones (keys) separated by comma. Some viewers use multiple file types, such as audio files and text-based subtitle files, and in that case please add all of the corresponding file type keys. In case of multiple keys for the same type (e.g. "audios1", "audios2"), the key names will be also used for grouping. Leave empty to not provide any alternate Embargo option at all.
     - This means you can add conditional logic to your IIIF Manifest (Twig Template) to do things such as "return an empty manifest and skip the images", or provide alternative images in case of an Embargo.
 
-- Option to 'Use Global IIIF Urls'. It is recommended to keep this enabled (as by default).
+- Option to 'Use Global IIIF Urls'. This is enabled by default.
 
 Depending on which Display Mode and particular StrawberryField Formatter you are editing, you may see additional options related to the IIIF Manifest.
 
-![Embargo StrawberryField Formatter Example 2](images/EmbargoFormatter2.png)
+![Embargo StrawberryField Formatter Example 2](images/embargoFormatter2.png)
 
-- If the particular viewer you are editing is setup to use an Exposed Metadata Endpoint, you can also simplify the response and use the option at the end. (Return 401 in case of an Embargo, removing your need of delegating the decision to twig logic. Archipelago will resolve the Embargo and if the user can't see it it will return an access denied (401 code). 
+- If the particular viewer you are editing is setup to use an Exposed Metadata Endpoint, you can also simplify the response and use the option at the end--'Return 401 in case of an Embargo', removing your need of delegating the decision to twig logic. Archipelago will resolve the Embargo and if the user can't see it, will return an access denied (401 code).
+- You can find the 'Exposed Metadata using Twig Configuration entities' at `/admin/config/archipelago/metadataexpose`.
 
 ![Embargo Exposed Metadata Endpoint](images/embargoEndpoint.png)
 
 - If you decide **not** to code the your response to an Embargo on the IIIF manifest, you should at least enable the Formatter setting noted above to Hide the Viewer in the presence of an Embargo'.
-- You can find the 'Exposed Metadata using Twig Configuration entities' at `/admin/config/archipelago/metadataexpose`.
 
 ### Twig Template Configuration Option
 
@@ -131,7 +131,7 @@ To apply either (or both) of the examples noted below, begin by navigating to th
 
 - Found at `/metadatadisplay/list` or `Content > Metadata Displays`
 
-You will most likely only need to apply Embargo-related conditional logic to the primary 'Object Description' template, depending on the particular [Metadata Display Usage](metdata_display_usage.md) setup in your Archipelago.
+You will most likely only need to apply Embargo-related conditional logic to the primary 'Object Description' template, depending on the particular [Metadata Display Usage](metadata_display_usage.md) setup in your Archipelago.
 
 #### Object Description Template Example 1
 
@@ -155,15 +155,20 @@ The following example conditional logic is already provided in the default Archi
 ```twig
 {# -- Embargo option -- #} 
 {% set file_download_restricted = false %} 
-{% if data_Embargo.Embargoed == true %} 
+
+{% if data_embargo.embargoed == true %} 
    {# also restrict if Embargoed #} 
    {% set file_download_restricted = true %} 
 {% endif %} 
 ```
 
-Example output when applied within the default Archipelago Object Description Output --and paired with the Formatter Embargo Configuration noted above:
+Example output when applied within the default Archipelago Object Description Output --and paired with the Formatter Embargo Configuration noted above (the Download menu tab does not show the media file downloand link):
 
 ![Embargo Twig Output 2](images/embargoTwigOutput2.png)
+
+## Final Considerations
+
+There is a specialized Permission found at `admin/people/permissions` under the Strawberry Metadata and Media Field Formatters section, which allows you to specify that certain User Roles can 'See Embargoed object metadata and assets'. Please note, this Permission is not ACL. Enforced Embargo configured JSON keys will not act on Formatters if a user has this enabled. If an Object is Embargoed this permission will allow any role with this assigned to bypass it.
 
 ___
 
