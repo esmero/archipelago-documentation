@@ -20,7 +20,7 @@ You can find the main Metadata Based Embargo settings configuration form at:
 
 This form allows you to enable/disable Embargo functionality enforced at the Formatter level and configure on which JSON Key/values those will act.
 
-To apply your Embargo restrictions, make sure you select the checkbox for 'Is Embargo checking and enforcing globally active?'.
+For either (or both) Embargo options, you will to select the checkbox for 'Is Embargo checking and enforcing globally active?'
 
 !!! note "Important Note: Your Metadata Keys and Values Matter"
 
@@ -123,7 +123,6 @@ Depending on which Display Mode and particular StrawberryField Formatter you are
 
 - If you decide **not** to code the your response to an Embargo on the IIIF manifest, you should at least enable the Formatter setting noted above to Hide the Viewer in the presence of an Embargo'.
 
-
 ### Twig Template Configuration Option
 
 Please first familiarize yourself with [Twig Templates and Archipelago](metadatatwigs.md) and [Working With Twig in Archipelago](workingtwigs.md).
@@ -156,6 +155,7 @@ The following example conditional logic is already provided in the default Archi
 ```twig
 {# -- Embargo option -- #} 
 {% set file_download_restricted = false %} 
+
 {% if data_embargo.embargoed == true %} 
    {# also restrict if Embargoed #} 
    {% set file_download_restricted = true %} 
