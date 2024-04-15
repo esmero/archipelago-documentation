@@ -87,9 +87,8 @@ Select the data transformation approach--how your source data will be transforme
 
 - Lastly, for this step, you will need to select the destination Fields and Bundles for your New ADOs. If your spreadsheet source only contains Digital Objects, select `Strawberry (Descriptive Metadata source) for Digital Object`
 
-    - If using Sheet 1 of the Demo AMI Ingest set (found above):
-        - Select `Template` and use the AMI Ingest JSON template that corresponds with your metadata elements.
-        - Select `images`, `documents`, and `audios` for the file source/fetching.
+    - Select `Template` and use the AMI Ingest JSON template that corresponds with your metadata elements.
+    - Examples of potential file source columns include: `images`, `documents`, `audios`, `videos`, etc.
 
              ![Islandora Solr Importer Data Transformation](images/I7step3_DataTransformation_updated_2022-11.jpg)
 
@@ -97,16 +96,12 @@ Select the data transformation approach--how your source data will be transforme
 
 Select your global ADO mappings.
 
-- Even if empty (no values), select `node_uuid` and any relationship predicate columns (such as `ismemberof`).
-- By default, the option to automatically assigns UUIDs is selected. If you have existing UUIds, unselect this option.
+- Even if empty (no values), select any relationship predicate columns (such as `ismemberof` and `ispartof`, if present) for ADO Parent columns.
+- By default, the option to automatically assigns UUIDs is selected. Unchecking this option is not permitted when using the I7 Solr Importer.
 - Select the corresponding Columns for the Required ADO mappings.
-- If using Sheet 1 of the Demo AMI Ingest set (found above):
-    - Select both `ismemberof` and `node_uuid` for ADO Parent columns
-    - Keep 'Automatically assign UUID' checked
-    - Do not select any column for 'Sequence'
-    - Select the `label` column for ADO Label
+    - Select the `mods_titleinfo_title` column for ADO Label
 
-     ![Islandora Solr Importer Global ADO Mappings](images/I7step4_GlobalADOMap_updated_2022-11.jpg)
+     ![Islandora Solr Importer Global ADO Mappings](images/I7step4_GlobalADOMap_updated_2024-04.png)
 
 ## Step 5: ZIP upload and AMI Set naming
 
