@@ -39,8 +39,7 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 
 - [Union College Library](https://arches.union.edu)
 
-- [Western Washington University](https://library.wwu.edu/)
-    - Migration to Archipelago began Summer 2022; Launch of new site ~Winter 2023/24
+- [Western Washington University]([https://library.wwu.edu/](https://mabel.wwu.edu))
 
 ## Neighborhood Archipelagos
 
