@@ -90,7 +90,7 @@ Select the data transformation approach--how your source data will be transforme
     - Select `Template` and use the AMI Ingest JSON template that corresponds with your metadata elements.
     - Examples of potential file source columns include: `images`, `documents`, `audios`, `videos`, etc.
 
-             ![Islandora Solr Importer Data Transformation](images/I7step3_DataTransformation_updated_2022-11.jpg)
+     ![Islandora Solr Importer Data Transformation](images/I7step3_DataTransformation_updated_2022-11.jpg)
 
 ## Step 4: Global ADO Mappings
 
