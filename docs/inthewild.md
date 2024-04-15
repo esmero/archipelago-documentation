@@ -39,7 +39,7 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 
 - [Union College Library](https://arches.union.edu)
 
-- [Western Washington University]([https://library.wwu.edu/](https://mabel.wwu.edu))
+- [Western Washington University]([https://library.wwu.edu)
 
 ## Neighborhood Archipelagos
 
