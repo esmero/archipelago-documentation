@@ -88,7 +88,7 @@ Select the data transformation approach--how your source data will be transforme
 - Lastly, for this step, you will need to select the destination Fields and Bundles for your New ADOs. If your spreadsheet source only contains Digital Objects, select `Strawberry (Descriptive Metadata source) for Digital Object`
 
     - Select `Template` and use the AMI Ingest JSON template that corresponds with your metadata elements.
-    - Select `images`, `documents`, and `audios` for the file source/fetching.
+    - Examples of potential file source columns include: `images`, `documents`, `audios`, `videos`, etc.
 
              ![Islandora Solr Importer Data Transformation](images/I7step3_DataTransformation_updated_2022-11.jpg)
 
