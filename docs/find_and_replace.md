@@ -91,6 +91,12 @@ After reviewing the 'Important Notes & Workflow Recommendations' below, please s
 
     The Actions available through Archipelago's Advanced Batch Find and Replace can potentially have repository-wide effects. It is strongly recommended that you proceed with caution when executing any of the available Actions. 
 
+
+!!! warning "Adding New Facets"
+
+    The default Facet available through Archipelago's Advanced Batch Find and Replace have an important selection made on each individual Facet. For every [new Facet you add](strawberry_key_name_providers.md) for Find and Replace, you need to select the checkboxes for both the 'VBO batch handler' settings to use the `VBO Batch Facet processor`, and the selection within the 'VBO batch handler settings' to `Use URL based facets in VBO Batches`. You need to make sure these are selected so that the "visible" list/count of objects you filter with a Facet is respected during actual VBO process execution of batch changes you make for any Find and Replace Actions..
+
+
 ## Simulation Mode 
 
 Before executing any of the available Find and Replace Actions, the best-practice workflow recommendation is to **always** first run in Simulation Mode:
