@@ -11,8 +11,6 @@ tags:
 
 # Reviewing and adjusting the `wacz_page_extractor` and `webpage` Post-Processor operations
 
-The `wacz_page_extractor` and `webpage` Post-processor operations are likely the most important pair of Strawberry Runners in your Archipelago.
-
 As stated on the [Strawberry Runners overview page](docs/strawberryrunners.md), the `wacz_page_extractor` action uses the 'Post processor that extracts/generates Indexed Page Content from WACZ files in an ADO' plugin. Nested one level in, the `webpage` action uses the 'Post processor that Indexes WACZ Frictionless data Search Index to Search API' plugin. The webpage operations will be executed after the completion of the wacz_page_extractor operations. The `ocr` operations will be executed after the completion of the `pager` operations.
 
 ## Wacz Page Extractor Settings
