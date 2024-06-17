@@ -27,9 +27,9 @@ Next, in the default Exposed Metadata Endpoints API Endpoints (generated from th
 
 ## 3. Pathway into and out of the Solr Index
 
-Then, Archipelago's backend re-creates the IIIF manifest using this data (basically repeats what the client did before), but uses JMESPATHs to extract just what is needed, flipping the order of the structure and putting IIIF Image IDs, as "top keys" referencing canvases and their #xywh selectors, if present.
+Then, Archipelago's backend recreates an ADO's IIIF manifest using this data (basically repeats what the client did before), but uses JMESPATHs to extract just what is needed, flipping the order of the structure and putting IIIF Image IDs, as "top keys" referencing canvases and their #xywh selectors (for the annotation text), if present.
 
-Using this transformed data, Archipelago's backend search is able to be limited to OCR generated only by those images (important as Archipelago repositories can contain millions of OCR'd documents). Archipelago's internal search then returns natively, via the [Bavarian State Library’s Solr OCR highlight plugin](https://github.com/dbmdz/solr-ocrhighlighting/), the relevant hits within a specified ADO. These are then reprocessed to be IIIF compliant (W3C) annotations and then reverted back to results as “canvases with images”.
+Using this transformed data, Archipelago's backend search is able to be limited to OCR generated only by those images (importantly, as Archipelago repositories can contain millions of OCR'd documents). Archipelago's internal search then returns natively, via the [Bavarian State Library’s Solr OCR highlight plugin](https://github.com/dbmdz/solr-ocrhighlighting/), the relevant hits within a specified ADO. These are then reprocessed to be IIIF compliant (W3C) annotations and then reverted back to results as “canvases with images”.
 
 ## Things to keep in mind
 
