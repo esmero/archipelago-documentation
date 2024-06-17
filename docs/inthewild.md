@@ -4,15 +4,15 @@ Explore Archipelago instances running free across digital realms.
 
 !!! note
 
-    _*Please be aware that some of the following Archipelago instances are still brewing and these links may change. Stay tuned for future updates to live production sites when available._
+    _*Please be aware that some of the following Archipelago instances are still brewing and these links may change._
 
 
 ## METRO + Archipelago
 
 The Archipelagos listed below are supported by the [Digital Services Team at the Metropolitan New York Library Council](https://metro.org/digital-services). 🧑‍🌾 🐝 🍓
 
-- [Archipelago Playground](http://play.archipelago.nyc) and [Studio Site](https://studio.archipelago.nyc/)
-    - METRO's public Archipelago playground to experiment, learn, and evaluate.
+- [Archipelago (Early/Legacy) Playground](http://play.archipelago.nyc) and [Studio Site](https://studio.archipelago.nyc/)
+    - METRO's public (play..) and internal (studio..) Archipelago playgrounds to experiment, learn, and evaluate.
 
 - [Barnard College](https://digitalcollections.barnard.edu/)
 
@@ -30,6 +30,9 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 
 - [Olin College Library Phoenix Files](https://phoenixfiles.olin.edu)
     - *Early adopter - live since Summer 2020
+ 
+- New York Archives Finding Aids Discovery Portal
+    - *Migration and development kicked off Spring 2024
 
 - [New York State COVID-19 Personal History Initiative](https://www.nyspersonalhistory.com)
 
@@ -46,7 +49,6 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 From all around our beautiful shared world. 🏡 🏫 🏛️ 
 
 - [Amherst College](https://acdc.amherst.edu)
-    - Migration to Archipelago began Spring 2022
 
 - [Association Montessori Internationale](https://montessori-ami.org/)
     - Development of Archipelago environment began Summer 2022; Launch of new site Spring 2024
@@ -63,7 +65,7 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
         - [Virtual Tour Santuario Paola](http://archipelago.byterfly.eu/do/5aea0a3f-cf03-40cc-9611-924dea1fd806)
 
 - [University of Edinburgh Libraries](https://www.ed.ac.uk/information-services/library-museum-gallery)
-    - _Development of Archipelago environment began Summer 2022_
+    - _Development of Archipelago environment began late 2022/3
 
 ## We should be here 
 
