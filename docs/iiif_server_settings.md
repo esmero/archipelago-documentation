@@ -1,5 +1,5 @@
 ---
-title: IIIF Content Search API Integration
+title: IIF Server Settings Form Default Settings
 tags:
   - IIIF
   - IIIF Server Settings Form
