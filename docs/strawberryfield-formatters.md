@@ -22,44 +22,49 @@ Once the page loads the `Default` View mode is automatically selected. However, 
 
 #### How to find and configure which View mode is Default per Media type
 
-The **ADO Type to View mode Mapping** page tells the ADOs which View mode to use by default per Media type. This page can be accessed at `yoursite//admin/config/archipelago/viewmode_mapping`
+The **ADO Type to View mode Mapping** page tells the ADOs which View mode to use by default per Media type. This page can be accessed at `~yoursite/admin/config/archipelago/viewmode_mapping`
 
 ??? info "Formatters Shipped with Archipelago"
 
     1. Default
     2. Collection listing
     3. Digital Object Full View
-    4. Digital Object with 3D Viewer
-    5. Digital Object with A/V Player
-    6. Digital Object with Book Reader
-    7. Digital Object with Mirador Viewer
-    8. Digital Object with Pannellum Panorama
+    4. Digital Object Image Only for Carousel
+    5. Digital Object with 3D Viewer
+    6. Digital Object with Audio Player
+    7. Digital Object with Book Reader
+    8. Digital Object with Mirador Viewer
     9. Digital Object with PDF Viewer
-    10. Digital Object with Replay.web Webarchive Player
-    11. Digital Object with Replay.web Webarchive with Navbars
-    12. Digital Object with Video Player
+    10. Digital Object with Pannellum Panorama
+    11. Digital Object with Video Player
+    12. Digital Object with Replay.web WARC Replay.web Widget
     13. Digital Object with thumbnail and abstract
+    14. Digital Object with thumbnail for Grid
+    _For Digital Object Collections/Compound Objects/CreativeWorkSeries_
+    15. Digital Object Collection with Mirador Viewer
+    16. Digital Object Creative Work Series with Mirador Viewer
+    
 
 ??? info "Default View Mode Mappings by Media Type"
 
     |JSON (Media) Type | View Mode Name                   |  
     |----------|----------------------------------|
-    |1. Video     | Digital Object with Video Player |
-    |2. 3DModel   | Digital Object with 3D Viewer    |
-    |3. Photograph| Digital Object Full View         |
-    |4. Thesis   | Digital Object with PDF Viewer    |
-    |5. Panorama   | Digital Object with Pannellum Panorama  |
-    |6. Book   | Digital Object with Book Reader  |
-    |7. Podcast   | Digital Object with A/V Player |
-    |8. Collection   | Collection Listing |
-    |9. Article   | Digital Object with PDF Viewer  |
-    |10. Map   | Digital Object with Mirador Viewer  |
-    |11. MusicRecording   | Digital Object with A/V Player  |
-    |12. Sculpture  | Digital Object with 3D Viewer  |
-    |13. VisualArtwork  | Digital Object with Video Player  |
-    |14. Painting  | Digital Object with Mirador Viewer  |
-    |15. WebPage  | Digital Object with Replay.web Webarchive Player |
-    |16. PanoramaTour | Digital Object with Pannellum Panorama  |
+    |Video     | Digital Object with Video Player |
+    |3DModel   | Digital Object with 3D Viewer    |
+    |Photograph| Digital Object Full View         |
+    |Thesis   | Digital Object with PDF Viewer    |
+    |Panorama   | Digital Object with Pannellum Panorama  |
+    |Book   | Digital Object with Book Reader  |
+    |Podcast   | Digital Object with A/V Player |
+    |Collection   | Collection Listing |
+    |Article   | Digital Object with PDF Viewer  |
+    |Map   | Digital Object with Mirador Viewer  |
+    |MusicRecording   | Digital Object with A/V Player  |
+    |Sculpture  | Digital Object with 3D Viewer  |
+    |VisualArtwork  | Digital Object with Video Player  |
+    |Painting  | Digital Object with Mirador Viewer  |
+    |WebPage  | Digital Object with Replay.web Webarchive Player |
+    |PanoramaTour | Digital Object with Pannellum Panorama  |
 
 ![Selecting Digital Object Full View](images/strawberryfield-formatters/03_default-managedisplay.jpg)
 
