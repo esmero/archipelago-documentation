@@ -11,7 +11,7 @@ tags:
 
 # IIIF Content Search API Integration
 
-Beginning in release 1.4.0, Archipelago features IIIF Content Search API integration with attendant default configurations and settings.
+Beginning in release 1.3.0 and now fully mature in 1.4.0, Archipelago features IIIF Content Search API integration with attendant default configurations and settings.
 
 Through a non-trifling amount of code and maths, Archipelago speaks the IIIF Content Search API language using data from your Archipelago's Digital Objects, to enable you to search within Mirador (or other supported viewers) for specific hits within OCR, VTT file, or manually created textual annotations. 
 
