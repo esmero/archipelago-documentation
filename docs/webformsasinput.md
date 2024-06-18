@@ -14,7 +14,7 @@ tags:
 
 Drupal 8/9 provides a lot of out-of-the-box functionality to setup the way Content Entities (Nodes or in our case ADOs) are exposed to users with the proper credentials. That functionality lives under the "Display Modes" and can be accessed at `yoursite/admin/structure/display-modes`.
 
-![Display Modes](images/display-modes.jpg)
+![Display Modes](images/display-modes-2024.png)
 
 In a few quick words, The Display Mode Concept covers: formatting your Content Entities and their associated Fields so when a user lands on a Content Page, they are displayed in a certain, hopefully pleasing, way and also how users with proper Credentials can fill inputs/edit values for each `field` a Content Entity provides.
 
@@ -33,13 +33,32 @@ So, resuming, this is what lives under the Concept of a "Display Mode":
 
 ## View Mode
 
-![See all your View Modes](images/view-modes.jpg)
-
 - Each field attached to a Content Entity can have a Formatter applied and most of them have configuration options.
 - Formatters do one thing right: they take the raw, stored value and make it "visible" inside Drupal.
 - Which formatters are available will depend on the "type" of field the Content Entity has.
     - E.g A Node title/Label will have a Title formatter with the option of just displaying a text or a text with a link to the entity.
     - More Complex and fun Fields, like the ones of type `SBF` will provide a large list of possible `Formatters`, like IIIF driven viewers, Video formatters, Metadata Display (Twig template driven) ones, etc. This is because a SBF type of field has much more than just a text value, it contains a full graph of metadata and properties, inclusive links to Files and provenance metadata.
+ 
+All of the Default View Modes Bundled in Archipelago:
+* Collection listing		
+* Digital Object Collection with Mirador Viewer		
+* Digital Object Creative Work Series with Mirador Viewer		
+* Digital Object Full View		
+* Digital Object Image Only for Carousel		
+* Digital Object Oral History with Multiple Media		
+* Digital Object with 3D Viewer		
+* Digital Object with Audio Player		
+* Digital Object with Book Reader		
+* Digital Object with Mirador Viewer		
+* Digital Object with Pannellum Panorama		
+* Digital Object with PDF Viewer		
+* Digital Object with thumbnail and abstract		
+* Digital Object with thumbnail for Grid		
+* Digital Object with Video Player		
+* Digital Object with WARC Replay.web Widget		
+* Search index		
+* Search result highlighting input		
+* Plus Drupal default View Modes: RSS, Teaser, and Token
 
 ## Form Mode
 
