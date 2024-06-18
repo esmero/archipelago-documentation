@@ -21,6 +21,26 @@ Please also see the related [IIIF Server Settings Form](iiif_server_settings.md)
 
 First, Archipelago's default IIIF Manifest templates explicitly state that they support the 3 versions of IIIF Content Search APIS in the 'service' key.
 
+```JSON 
+"service": [ 
+        { 
+            "id": "{{ baseurl }}iiifcontentsearch/v2/do/{{ node.uuid.value }}/metadatadisplayexposed/iiifmanifest/mode/advanced/page/0", 
+            "type": "SearchService2" 
+        }, 
+        { 
+            "id": "{{ baseurl }}iiifcontentsearch/v1/do/{{ node.uuid.value }}/metadatadisplayexposed/iiifmanifest/mode/advanced/page/0", 
+            "type": "SearchService1", 
+            "@context": "http://iiif.io/api/search/1/context.json", 
+            "profile": "http://iiif.io/api/search/1/search" 
+        }, 
+        { 
+            "@id": "{{ baseurl }}iiifcontentsearch/v1/do/{{ node.uuid.value }}/metadatadisplayexposed/iiifmanifest/mode/advanced/page/0", 
+            "@context": "http://iiif.io/api/search/0/context.json", 
+            "profile": "http://iiif.io/api/search/0/search" 
+        } 
+    ], 
+```
+
 ## 2. API Endpoints Exposure
 
 Next, in the default Exposed Metadata Endpoints API Endpoints (generated from the IIIF templates), Archipelago provides the specific structure needed for the IIIF Content Search API. Archipelago passes the data about “the template containing it”, the IIIF API version, if simple or advanced, and the Archipelago Digital Object resource UUID we are searching against (the one that contains the RAW data feeding the template, or at least the Top level/parent one of that).
