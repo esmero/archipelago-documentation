@@ -2,7 +2,7 @@ site_name: Archipelago Documentation
 site_url: https://docs.archipelago.nyc
 repo_url: https://github.com/esmero/archipelago-documentation
 repo_name: archipelago-documentation
-edit_uri: commits/1.3.0/docs/
+edit_uri: commits/1.4.0/docs/
 site_description: Project documentation for Archipelago.
 site_author: The Digital Services Team at Metropolitan New York Library Council
 extra_css:
@@ -10,6 +10,7 @@ extra_css:
 nav:
   - Home: index.md
   - Archipelago 101:
+    - Core Documentation Guides: 101_guides_list.md
     - Archipelago's Philosophy & Guiding Principles: ourtake.md
     - Strawberryfields Forever: strawberryfields.md
     - Metadata in Archipelago: metadatainarchipelago.md
@@ -44,25 +45,29 @@ nav:
     - Site Administration & Configuration:
       - Strawberryfield Formatters: strawberryfield-formatters.md
       - Creating Display Modes: createdisplaymodes.md
+      - Primer on Display Modes: webformsasinput.md
+      - IIIF Server Settings: iiif_server_settings.md
       - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
       - Strawberry Runners Background/Post-Processing: 
         - strawberryrunners.md
         - Pager and OCR Post-processor: strawberryrunners_pager_ocr.md
         - Webpage Text Post-processor: strawberryrunners_webpage_text.md
         - WACZ Binary Post-processor: strawberryrunners_wacz_binary.md
+        - Subtitle Post-processor: strawberryrunners_subtitle.md
       - Search & Solr:
         - search_solr_index.md
         - Strawberry Key Name Providers, Solr Field, and Facet Configuration: strawberry_key_name_providers.md
         - Advanced Search: search_advanced.md
         - Search Within Collections: search-within-collection.md
+        - IIIF Content Search: iiif-content-search.md
       - Fragaria Redirects: fragaria.md
       - Embargo & Access Restrictions: embargo.md
     - Content and Metadata Tools:
       - Ingesting Your First Object: firstobject.md
       - Webforms in Archipelago:
         - webforms.md
-        - How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO): webformsasinput.md
-        - Customizing Webforms (Modifying allowable file extensions): modifyingfileextensionsinwebform.md
+        - How to Create a Webform as an Input Method: webformsasinput.md
+        - Modifying allowable file extensions: modifyingfileextensionsinwebform.md
         - Archipelago Custom Webform Elements: customwebformelements.md
         - Using Archipelago's Webform LoD from CSV attached to an ADO suggest: webformLoDfromCSV.md
       - Find and Replace:

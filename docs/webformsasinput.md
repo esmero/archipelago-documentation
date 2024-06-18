@@ -1,5 +1,5 @@
 ---
-title: How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
+title: Primer on Display Modes & How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
 tags:
   - Webform
   - Form Mode
@@ -10,11 +10,9 @@ tags:
   - Handler
 ---
 
-# How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO) / Primer on Display Modes
+# Primer on Display Modes & How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
 
-Drupal 8/9 provides a lot of out-of-the-box functionality to setup the way Content Entities (Nodes or in our case ADOs) are exposed to users with the proper credentials. That functionality lives under the "Display Modes" and can be accessed at `yoursite/admin/structure/display-modes`.
-
-![Display Modes](images/display-modes.jpg)
+Drupal 9/10 provides a lot of out-of-the-box functionality to setup the way Content Entities (Nodes or in our case ADOs) are exposed to users with the proper credentials. That functionality lives under the "Display Modes" >> and can be accessed at `yoursite/admin/structure/display-modes`.
 
 In a few quick words, The Display Mode Concept covers: formatting your Content Entities and their associated Fields so when a user lands on a Content Page, they are displayed in a certain, hopefully pleasing, way and also how users with proper Credentials can fill inputs/edit values for each `field` a Content Entity provides.
 
@@ -29,11 +27,13 @@ First, formatting output (basically building the front facing page for each cont
 
 The main difference, other than their purpose (Output v/s Input) is that, on View Modes, the settings you apply to each field are associated to "Formatters" and on Form Modes, the settings you apply to each field are connected to "Widgets".
 
-So, resuming, this is what lives under the Concept of a "Display Mode":
+**Please note that this guides features some older screenshots using earlier versions of Archipelago/Drupal Adminsitrative Theming. Please pardon any jumps between themes.*
+
+So, resuming, this is what lives under the Concept of a "Display Mode"...
 
 ## View Mode
 
-![See all your View Modes](images/view-modes.jpg)
+![Display Modes - View Modes](images/display-modes-2024.png)
 
 - Each field attached to a Content Entity can have a Formatter applied and most of them have configuration options.
 - Formatters do one thing right: they take the raw, stored value and make it "visible" inside Drupal.
@@ -41,9 +41,32 @@ So, resuming, this is what lives under the Concept of a "Display Mode":
     - E.g A Node title/Label will have a Title formatter with the option of just displaying a text or a text with a link to the entity.
     - More Complex and fun Fields, like the ones of type `SBF` will provide a large list of possible `Formatters`, like IIIF driven viewers, Video formatters, Metadata Display (Twig template driven) ones, etc. This is because a SBF type of field has much more than just a text value, it contains a full graph of metadata and properties, inclusive links to Files and provenance metadata.
 
+### All of the Default View Modes Bundled in Archipelago 
+
+??? info "Click to see the full list of Default View Modes"
+    * Collection listing		
+    * Digital Object Collection with Mirador Viewer		
+    * Digital Object Creative Work Series with Mirador Viewer		
+    * Digital Object Full View		
+    * Digital Object Image Only for Carousel		
+    * Digital Object Oral History with Multiple Media		
+    * Digital Object with 3D Viewer		
+    * Digital Object with Audio Player		
+    * Digital Object with Book Reader		
+    * Digital Object with Mirador Viewer		
+    * Digital Object with Pannellum Panorama		
+    * Digital Object with PDF Viewer		
+    * Digital Object with thumbnail and abstract		
+    * Digital Object with thumbnail for Grid		
+    * Digital Object with Video Player		
+    * Digital Object with WARC Replay.web Widget		
+    * Search index		
+    * Search result highlighting input		
+    * _Plus Drupal default View Modes: RSS, Teaser, and Token_
+
 ## Form Mode
 
-![Form Modes](images/form-modes.jpg)
+![Form Modes](images/forms-modes-2024.png)
 
 - Each field attached to a Content Entity can have a Widget applied and most of them have configuration options.
 - Widgets do one thing right: they expose some type of Form/UI interaction that allows a user to input data into the Entity, under that specific field. And of course they make sure that what you input is validated and saved (if good) correctly.
@@ -56,11 +79,11 @@ So, resuming, this is what lives under the Concept of a "Display Mode":
     If you chose a widget other than the raw JSON, the widget will take the raw JSON to build, massage and enrich the data so that it can be presented in a visual format by the SBF. This is because a SBF type of field has much more than just a text value. It contains a full graph of metadata and properties, inclusive links to Files and provenance metadata, which for example allows us to use an Upload field directly in the attached/configured webform.
 - Form modes also have an additional benefit. Each one can have fine grained permissions. That way you can have many different Form Modes, but allow only certain ones to be visible, or usable by users of a given Drupal Role.
 
-### I think i get this...but how can i use this knowledge now?
+### I think I get this...but how can I use this knowledge now?
 
 Good question! So, to enable, configure, and customize these Display Modes you have to navigate to your `Content Type` Configuration page in your running Archipelago. This is found at `/admin/structure/types`. Note: the way things are named in Drupal can be confusing to even the most deeply committed Drupal user, so bear in mind some terms will change. Feel free to read and re-read.
 
-![Display Mode Managment for Content Types](images/managing-display-modes.jpg)
+![Display Mode Management for Content Types](images/managing-display-modes-2024.png)
 
 You can see that for every existent Content Type, there is a drop down menu with options:
 
@@ -69,7 +92,12 @@ You can see that for every existent Content Type, there is a drop down menu with
 
 ## Manage Display
 
-![Manage Display](images/manage-display.jpg)
+For Digital Objects:
+![Manage Display Digital Object](images/manage-display-2024.png)
+
+For Digital Object Collections and Compounds/Creative Work Series
+![Manage Display Digital Object Collections and Compounds/Creative Work Series](images/manage-display-coll.png)
+
 
 On the top you will see all your View Modes Listed, with the `Default` one selected and expanded.
 The Table that follows has one row per Field attached/part of this Content Type. Some of the fields are part of the Content Type itself, in this case Digital Object (bundled) and some other ones are common to every Content Entity derived from a Node.
@@ -97,7 +125,7 @@ You can play with this, experiment and change some settings to get more comforta
 
 ## Manage Form Display
 
-![Manage Display](images/manage-form-display.jpg)
+![Manage Display](images/manage-form-display-2024.png)
 
 On the top you will see all your Form Modes Listed, with the `Default` one selected and expanded.
 The Table that follows has one row per Field attached/partof this Content Type. The list of fields here is shorter, the SBF CopyFields are not present because all data goes really only into real fields. Also some other, display only ones (means you can not modify them) will not appear here. Again, Some of the fields are part of the Content Type itself, in this case Digital Object (bundled) and some other ones are common to every Content Entity derived from a Node.

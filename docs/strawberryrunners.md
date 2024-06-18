@@ -15,7 +15,8 @@ Archipelago's [Strawberry Runners (SBR)](https://github.com/esmero/strawberry_ru
 The default Archipelago SBR post-processor configurations include operations that:
 - perform page-based HOCR/OCR for image and pdf-based ADOs, send the output to the Search API, and use Natural Language Processing to extract entities from the output
 - extract text from pages within a Webarchives File and send the output to the Search API
-- convert WARC format Webarchives Files into WACZ format and attach the new WACZ file to the original source ADO to complement the WARC original 
+- convert WARC format Webarchives Files into WACZ format and attach the new WACZ file to the original source ADO to complement the WARC original
+- extract textual values from subtitle/transcript VTT files and generates time/space transmuted OCR
 
 SBR actions can be chained and nested to enable ordered operations, such as first extract individual pages in an ordered sequence and then run HOCR/OCR across the individual pages.
 
@@ -28,13 +29,14 @@ You can access the Strawberry Runners Settings:
 
 On the Strawberry Runners Settings page, you will see the Archipelago default post processor configurations (unless modified).
 
-![Strawberry Runners Home](images/strawberryrunnershome.png)
+![Strawberry Runners Home](images/strawberryrunnershome_updated.png)
 
 1. The `pager` action uses the 'Post processor that extracts/generates Ordered Sequences of files/pages/children using Files present in an ADO' plugin.
 2. Nested one level in, the `ocr` action uses the 'Post processor that Runs OCR/HORC against files' plugin. The `ocr` operations will be executed after the completion of the `pager` operations.
 3. The `wacz_page_extractor` action uses the 'Post processor that extracts/generates Indexed Page Content from WACZ files in an ADO' plugin.
 4. Nested one level in, the `webpage` action uses the 'Post processor that Indexes WACZ Frictionless data Search Index to Search API' plugin. The `webpage` operations will be executed after the completion of the `wacz_page_extractor` operations.
 5. The `warc_to_wacz` action uses the 'Post processor that uses a System Binary to process * files' operations.
+6. The `subtitle` action extracts textual values from subtitle/transcript VTT files and generates time/space transmuted OCR. This transmuted OCR can be used to search within a time-based video or audio file's corresponding subtitle/transcript VTT file(s), then navigate to the matching time of the video or audio file within a media viewer.
 
 ## Reviewing and Adjusting the default Post-Processors
 
@@ -45,6 +47,7 @@ Please see the following guides for:
 - [Adjusting the `pager` and `ocr` operations](strawberryrunners_pager_ocr.md)
 - [Adjusting the `wacz_page_extractor` and `webpage` operations](strawberryrunners_webpage_text.md)
 - [Adjusting the `warc_to_wacz` operation](strawberryrunners_wacz_binary.md)
+- [Adjusting the `subtitle` operation](strawberryrunners_subtitle.md)
 
 ## Triggering Post-Processing Actions Manually
 
@@ -56,3 +59,6 @@ You can use Archipelago's [Find and Replace](find_and_replace.md) to first selec
 
 Archipelago also includes the `Post processor that writes/reads Frictionless Data Packages` plugin. Please keep a lookout for future documentation related to using this plugin.
 
+___
+
+Return to the [Archipelago Documentation main page](index.md).

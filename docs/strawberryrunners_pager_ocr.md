@@ -177,6 +177,7 @@ In the `pager` settings, you will see several different configuration options.
 23. Timeout in seconds for this process.
     - 900
     - If the process runs out of time it can still be processed again.
+
 24. Order or execution in the global chain.
     - 0
 
