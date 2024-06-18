@@ -12,9 +12,7 @@ tags:
 
 # Primer on Display Modes & How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
 
-Drupal 8/9 provides a lot of out-of-the-box functionality to setup the way Content Entities (Nodes or in our case ADOs) are exposed to users with the proper credentials. That functionality lives under the "Display Modes" and can be accessed at `yoursite/admin/structure/display-modes`.
-
-![Display Modes](images/display-modes-2024.png)
+Drupal 8/9 provides a lot of out-of-the-box functionality to setup the way Content Entities (Nodes or in our case ADOs) are exposed to users with the proper credentials. That functionality lives under the "Display Modes" >> and can be accessed at `yoursite/admin/structure/display-modes`.
 
 In a few quick words, The Display Mode Concept covers: formatting your Content Entities and their associated Fields so when a user lands on a Content Page, they are displayed in a certain, hopefully pleasing, way and also how users with proper Credentials can fill inputs/edit values for each `field` a Content Entity provides.
 
@@ -32,6 +30,8 @@ The main difference, other than their purpose (Output v/s Input) is that, on Vie
 So, resuming, this is what lives under the Concept of a "Display Mode":
 
 ## View Mode
+
+![Display Modes - View Modes](images/display-modes-2024.png)
 
 - Each field attached to a Content Entity can have a Formatter applied and most of them have configuration options.
 - Formatters do one thing right: they take the raw, stored value and make it "visible" inside Drupal.
