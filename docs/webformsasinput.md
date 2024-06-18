@@ -79,7 +79,7 @@ All of the Default View Modes Bundled in Archipelago:
 
 Good question! So, to enable, configure, and customize these Display Modes you have to navigate to your `Content Type` Configuration page in your running Archipelago. This is found at `/admin/structure/types`. Note: the way things are named in Drupal can be confusing to even the most deeply committed Drupal user, so bear in mind some terms will change. Feel free to read and re-read.
 
-![Display Mode Managment for Content Types](images/managing-display-modes.jpg)
+![Display Mode Managment for Content Types](images/managing-display-modes-2024.png)
 
 You can see that for every existent Content Type, there is a drop down menu with options:
 
