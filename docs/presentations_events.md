@@ -6,6 +6,23 @@
 
     [METRO's Digital Services Team](https://metro.org/digital-services) facilitated many different internal training sessions throughout 2020-2022. If you and your team need access to any of these sessions that were recorded, please [contact us](mailto:repositorysupport@metro.org). Thank you!
 
+## 2024
+
+- Archipelago Summer Workshop Series : [more details coming soon](https://groups.google.com/g/archipelago-commons/c/T3im4-gp8og/m/62HL9RMoAQAJ)
+
+- IIIF Annual Conference (June 2024)
+    - [Creating a Better Balance: Respectful Reuse & ML/AI Tags in IIIF Manifests](https://docs.google.com/presentation/d/18rggHeFld7HOJefmVc6ku_7M5edLfgfZkpnQZiagSOA/edit?usp=share_link). Allison Sherrick, Diego Pino Navarro.
+    - [Transdimensional mutations for audio/moving media annotations in IIIF Content Search](https://docs.google.com/presentation/d/1qtVirRG5_4z2RHg6RH5cCu4dwxU1v-IH93lSrK-fZ34/edit?usp=share_link). Allison Sherrick, Diego Pino Navarro.
+    - 📺 Recordings will be made available on the [IIIF Youtube channel](https://www.youtube.com/@IIIF-Consortium) in early Summer 2024.
+
+- Open Repositories Annual Conference (June 2024):
+    - [Hybrid ML/AI driven search as cataloging aid in Archipelago Commons](https://tinyurl.com/hybrydMLOR2024). Diego Pino Navarro.
+    - [Creating a better balance: the need for tools and practices to combat AI harvests and resource flooding in repository environments](https://tinyurl.com/AIBOTSOR2024). Diego Pino Navarro, Allison Sherrick.
+    - Collaboration Across Borders. Jessica Barlow, Lisa Lamont, Matt Ferrill, Hilario Castillo Castillo, Kristofer Patrón Soberano.
+    - Copies of the slides for all presentations will be uploaded to the [Open Repositories Zenodo](https://zenodo.org/communities/openrepos/records?q=&l=list&p=1&s=10&sort=newest) in early Summer 2024.
+
+- Public Release of IOI's InfraFinder Tool (Spring 2024): [Archipelago Commons on Infrafinder](https://infrafinder.investinopen.org/solutions/archipelago-commons)
+
 ## 2023
 
 - IIIF Search API and Dynamic/evolving Manifest Generation: Facing the Unknown. Diego Alberto Pino Navarro, Allison Sherrick.
@@ -15,6 +32,8 @@
     - [Working and Learning the IIIF Search API in Archipelago. Diego Pino Navarro, Allison Sherrick.](https://osf.io/p4m9s/)
     - [Working with Open-Schema JSON in Archipelago. Allison Sherrick, Diego Pino Navarro, Martha Tenney, Joanna DiPasquale, Corinne Chatnik.](https://osf.io/dx3fm/)
     - [Slaying the Migration Dragon: Approaches to Navigating an Open Source System Migration. Lisa McFall, Sarah Walden McGowan, Brenden McCarthy, Shay Foley.](https://osf.io/aymhd/)
+
+- [Archipelago 1.3.0 Release Announcement (October 31, 2023)](https://groups.google.com/g/archipelago-commons/c/zvJOVzC1WnQ/m/7A-vW5HBBgAJ) 
 
 - IIIF Annual Conference (June 2023)
     - [Experimental IIIF Kitchen using Archipelago. Pino Navarro, Diego; Sherrick, Allison.](https://tinyurl.com/apiiif2023)
@@ -49,21 +68,6 @@
 
 - Formation of the Archipelago Working Group (April 2022)
     - In the Spring of 2022, METRO supported the creation of a select group of both early adopters and longtime members of the Archipelago community to provide a dedicated space for Archipelago power users to build upon their demonstrated use-explorations, contribute further to the platform and have a direct influence on roadmap code, direction, and timeline. This group will also work on documentation needs, use cases and outreach (including public showcases, trainings/workshops, and other events).
-
-??? info "Archipelago Working Group Members"
-
-    - Giancarlo Birello at CNR Italy
-    - Jennifer Palmentiero at SENYLRC
-    - Brenden McCarthy at RPI
-    - Lisa McFall at Hamilton College
-    - Megan Tyne at Association Montessori Internationale 
-    - Carl Jones at MIT Libraries
-    - Martha Tenney at Barnard College Library
-    - David Bass / Max Bronsema at Western Washington University
-    - Sarah Walden McGowan at Amherst College
-    - Prashanth B at Vipassana Research Institute
-    - Ianthe Sutherland at University at Edinburgh
-    - Corinne Chatnik at Union College
 
 - [Toward Empathetic Digital Repositories: An Interview with Diego Pino Navarro (January 2022)](https://digitalcommons.lsu.edu/jcdl/vol2/iss1/1/)
 
