@@ -19,7 +19,7 @@ Top 10 guides we recommend you review as you get started working with Archipelag
 
 5. [Archipelago Multi Importer](ami_index.md): all about Archipelago's batch ingest and update functionality
 
-6. [Search and Solr Overview](search_solr_index.md): for repositories, it's all about the search!
+6. [Search and Solr Overview](search_solr_index.md): for repositories, it's all about the search
      * [In-a-nutshell : JSON data to Strawberry Keyname Providers to Solr](search_solr_index.md#in-a-nutshell-json-data-to-strawberry-keyname-providers-to-solr): essential overview of the pipeline from JSON data into and out of Solr
      * [Strawberry Key Name Providers, Solr Field, and Facet Configuration](strawberry_key_name_providers.md): fundamental information for site adminisrators
 
