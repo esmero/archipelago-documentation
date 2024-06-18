@@ -16,7 +16,7 @@ As stated on the [Strawberry Runners overview page](docs/strawberryrunners.md), 
 
 We strongly recommend using caution when making any adjustments to the default `subtitle` configurations as this may result in unexpected issues with the transmuted OCR values in your Solr Index. Also, the `subtitle` Strawberry Runner Post-Processor needs to used with corresponding related default IIIF Configuration Form Settings. 
 
-# Pager Settings
+# Subtitle Settings
 
 To review or adjust the configurations for the `subtitle` operation, select `Edit` from the `Operations` menu.
 
