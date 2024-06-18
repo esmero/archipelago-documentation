@@ -22,9 +22,11 @@ Once the page loads the `Default` View mode is automatically selected. However, 
 
 #### How to find and configure which View mode is Default per Media type
 
-The **ADO Type to View mode Mapping** page tells the ADOs which View mode to use by default per Media type. This page can be accessed at `~yoursite/admin/config/archipelago/viewmode_mapping`
+The **ADO Type to View Mode Mapping** page tells the ADOs which View mode to use by default per Media type. You can find the ADO Type to View Mode Mapping Form at `~yoursite/admin/config/archipelago/viewmode_mapping`
 
-??? info "Formatters Shipped with Archipelago"
+![ADO Type to View Mode Mapping Form](images/ado-type-to-view-mode-mapping.png)
+
+??? info "Strawberryfield Formatters Shipped and Configured with Archipelago"
 
     1. Default
     2. Collection listing
@@ -45,26 +47,10 @@ The **ADO Type to View mode Mapping** page tells the ADOs which View mode to use
     16. Digital Object Creative Work Series with Mirador Viewer
     
 
-??? info "Default View Mode Mappings by Media Type"
+??? info "Default View Modes"
 
-    |JSON (Media) Type | View Mode Name                   |  
-    |----------|----------------------------------|
-    |Video     | Digital Object with Video Player |
-    |3DModel   | Digital Object with 3D Viewer    |
-    |Photograph| Digital Object Full View         |
-    |Thesis   | Digital Object with PDF Viewer    |
-    |Panorama   | Digital Object with Pannellum Panorama  |
-    |Book   | Digital Object with Book Reader  |
-    |Podcast   | Digital Object with A/V Player |
-    |Collection   | Collection Listing |
-    |Article   | Digital Object with PDF Viewer  |
-    |Map   | Digital Object with Mirador Viewer  |
-    |MusicRecording   | Digital Object with A/V Player  |
-    |Sculpture  | Digital Object with 3D Viewer  |
-    |VisualArtwork  | Digital Object with Video Player  |
-    |Painting  | Digital Object with Mirador Viewer  |
-    |WebPage  | Digital Object with Replay.web Webarchive Player |
-    |PanoramaTour | Digital Object with Pannellum Panorama  |
+    You can see the full list of [Default View Modes included in Archipelago here](/webformsasinput.md#view-mode), and you can access your Archipelago's ADO Type to View Mode Mapping at `~yoursite/admin/config/archipelago/viewmode_mapping`.
+    
 
 ![Selecting Digital Object Full View](images/strawberryfield-formatters/03_default-managedisplay.jpg)
 
