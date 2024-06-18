@@ -1,5 +1,5 @@
 ---
-title: Archipelago 101: Core Documentation Guides
+title: Archipelago 101 - Core Documentation Guides
 tags:
   - Archipelago 101
   - Documentation
@@ -26,7 +26,7 @@ Top 10 guides we recommend you review as you get started working with Archipelag
 
 7. [Advanced Batch Find and Replace](find_and_replace.md): targetted batch updates for your ADO metadata
 
-8. [Strawberry Runners Post-Processing Configuration](strawberryrunners.md)
+8. [Strawberry Runners Post-Processing Configuration](strawberryrunners.md): background post-processing defaults and options for all your file transformation and data indexing needs
 
 9. [Archipelago Local Deployment Guide](archipelago-deployment-readme.md): get your own local Archipelago up and running in about 15 minutes
 
