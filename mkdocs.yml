@@ -10,6 +10,7 @@ extra_css:
 nav:
   - Home: index.md
   - Archipelago 101:
+    - Core Documentation Guides: 101_guides_list.md
     - Archipelago's Philosophy & Guiding Principles: ourtake.md
     - Strawberryfields Forever: strawberryfields.md
     - Metadata in Archipelago: metadatainarchipelago.md
