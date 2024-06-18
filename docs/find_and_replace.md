@@ -95,6 +95,8 @@ After reviewing the 'Important Notes & Workflow Recommendations' below, please s
 !!! warning "Adding New Facets"
 
     The default Facets available through Archipelago's Advanced Batch Find and Replace have an important configuration selection made on each individual Facet. For every [new Facet you add](strawberry_key_name_providers.md) for Find and Replace, you need to select the checkboxes for both the 'VBO batch handler' settings to use the `VBO Batch Facet processor`, and the selection within the 'VBO batch handler settings' to `Use URL based facets in VBO Batches`. You need to make sure these are selected so that the "visible" list/count of objects you filter using a Facet is respected during actual VBO process execution of batch changes you make for any Find and Replace Actions.
+    Also, please be aware that Drupal's VBO does not pass a "limit" (except if your VIEW has actually a "SHOW" a defined number of results which most users will never use). Because of that, when you run a VBO-based action, the default batch limitation will be set to the Search API/Solr defined Limit. You can view this Limit information at
+'~yoursite/admin/config/search/search-api/server/esmero_solr/edit', under the Advanced Tab. This all means that if you first set a Limit of 100 in your Search API/SOLR defined Limit, then you see 1000 objects in your Find and Replace results and select all 1000 results for batch change operations, when you run your Find and Replace action only 100 changes will be processed. There is no way Archipelago can work around that VBO related behavior (for now, except open an ISSUE, perhaps a way can be found!).
 
 
 ## Simulation Mode 
