@@ -31,7 +31,7 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 - [Olin College Library Phoenix Files](https://phoenixfiles.olin.edu)
     - *Early adopter - live since Summer 2020
  
-- New York Archives Finding Aids Discovery Portal
+- [New York State Archives](https://www.archives.nysed.gov) Finding Aids Discovery Portal
     - *Migration and development kicked off Spring 2024
 
 - [New York State COVID-19 Personal History Initiative](https://www.nyspersonalhistory.com)
