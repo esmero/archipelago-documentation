@@ -37,6 +37,7 @@ On the IIIF Server Settings Form page, you will see the following:
 
 4. Checkbox to 'Enable IIIF Content Search API V1 and V2 endpoints'.
     - Checked by default in later (1.4.0+) versions of Archipelago.
+    - See the [related IIIF Manifest snippet shared here](iiif-content-search.md#1-iiif-manifest-templates)
     - APIs are accesible at the following path: "/iiifcontentsearch/{version}/do/{node_uuid}/metadatadisplayexposed/{metadataexposeconfig_entity}/mode/{mode}/page/{page}" with:
       - {version} one of [v1,v2]
       - {node_uuid} the UUID of the ADO whose Manifest you want to search inside
