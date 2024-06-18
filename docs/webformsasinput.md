@@ -12,7 +12,7 @@ tags:
 
 # Primer on Display Modes & How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO)
 
-Drupal 8/9 provides a lot of out-of-the-box functionality to setup the way Content Entities (Nodes or in our case ADOs) are exposed to users with the proper credentials. That functionality lives under the "Display Modes" >> and can be accessed at `yoursite/admin/structure/display-modes`.
+Drupal 9/10 provides a lot of out-of-the-box functionality to setup the way Content Entities (Nodes or in our case ADOs) are exposed to users with the proper credentials. That functionality lives under the "Display Modes" >> and can be accessed at `yoursite/admin/structure/display-modes`.
 
 In a few quick words, The Display Mode Concept covers: formatting your Content Entities and their associated Fields so when a user lands on a Content Page, they are displayed in a certain, hopefully pleasing, way and also how users with proper Credentials can fill inputs/edit values for each `field` a Content Entity provides.
 
