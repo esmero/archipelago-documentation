@@ -66,7 +66,7 @@ nav:
       - Ingesting Your First Object: firstobject.md
       - Webforms in Archipelago:
         - webforms.md
-        - How to Create a Webform as an Input: webformsasinput.md
+        - How to Create a Webform as an Input Method: webformsasinput.md
         - Modifying allowable file extensions: modifyingfileextensionsinwebform.md
         - Archipelago Custom Webform Elements: customwebformelements.md
         - Using Archipelago's Webform LoD from CSV attached to an ADO suggest: webformLoDfromCSV.md
