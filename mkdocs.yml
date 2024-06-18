@@ -44,25 +44,29 @@ nav:
     - Site Administration & Configuration:
       - Strawberryfield Formatters: strawberryfield-formatters.md
       - Creating Display Modes: createdisplaymodes.md
+      - Primer on Display Modes: webformsasinput.md
+      - IIIF Server Settings: iiif_server_settings.md
       - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
       - Strawberry Runners Background/Post-Processing: 
         - strawberryrunners.md
         - Pager and OCR Post-processor: strawberryrunners_pager_ocr.md
         - Webpage Text Post-processor: strawberryrunners_webpage_text.md
         - WACZ Binary Post-processor: strawberryrunners_wacz_binary.md
+        - Subtitle Post-processor: strawberryrunners_subtitle.md
       - Search & Solr:
         - search_solr_index.md
         - Strawberry Key Name Providers, Solr Field, and Facet Configuration: strawberry_key_name_providers.md
         - Advanced Search: search_advanced.md
         - Search Within Collections: search-within-collection.md
+        - IIIF Content Search: iiif-content-search.md
       - Fragaria Redirects: fragaria.md
       - Embargo & Access Restrictions: embargo.md
     - Content and Metadata Tools:
       - Ingesting Your First Object: firstobject.md
       - Webforms in Archipelago:
         - webforms.md
-        - How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO): webformsasinput.md
-        - Customizing Webforms (Modifying allowable file extensions): modifyingfileextensionsinwebform.md
+        - How to Create a Webform as an Input: webformsasinput.md
+        - Modifying allowable file extensions: modifyingfileextensionsinwebform.md
         - Archipelago Custom Webform Elements: customwebformelements.md
         - Using Archipelago's Webform LoD from CSV attached to an ADO suggest: webformLoDfromCSV.md
       - Find and Replace:
