@@ -6,7 +6,7 @@ Archipelago is a mix of deeply integrated custom-coded Drupal modules (made with
 
 Archipelago's primary focus is to serve the greater [`GLAM community`](https://en.wikipedia.org/wiki/GLAM_(industry_sector)) (libraries, archives, museums, universities and colleges, cultural heritage organizations) by providing a flexible, consistent, and unified way of describing, storing, linking, exposing metadata and media assets that make up rich repository collections all around our shared beautiful world. We respect identities and existing workflows, and we endeavor to design Archipelago in ways that empower communities of every size, shade, and shape.
 
-Finally, Archipelago tries to stay humble, slim, and nimble in nature with a small codebase full of inline comments and `@todos`. All of our work is driven by a clear and [concise but thoughtful planned technical roadmap --updated in tandem with new releases](https://github.com/esmero/archipelago-deployment/issues/243).
+Finally, Archipelago tries to stay humble, slim, and nimble in nature with a small codebase full of inline comments and `@todos`. All of our work is driven by a clear and [concise but thoughtful planned technical roadmap --updated in tandem with new releases](https://github.com/esmero/archipelago-deployment/issues/269).
 
 We recommend you start with the [Core Documentation Guides listed here](101_guides_list.md) as you begin your Archipelago explorations. 
 ___
