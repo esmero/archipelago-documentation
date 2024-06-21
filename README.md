@@ -16,7 +16,7 @@ Archipelago was dreamt as a multi-tenant, distributed, capable system (as its na
 
 Archipelago's primary focus is to serve the greater [`GLAM community`](https://en.wikipedia.org/wiki/GLAM_(industry_sector)) by providing a flexible, consistent, and unified way of describing, storing, linking, exposing metadata and media assets. We respect identities and existing workflows. We endeavor to design Archipelago in ways that empower communities of every size and shape.
 
-Finally, Archipelago tries to stay humble, slim, and nimble in nature with a small code base full of inline comments and `@todos`. All of our work is driven by a clear and [concise but thoughtful planned technical roadmap --updated in tandem with new releases](https://github.com/esmero/archipelago-deployment/issues/103).
+Finally, Archipelago tries to stay humble, slim, and nimble in nature with a small code base full of inline comments and `@todos`. All of our work is driven by a clear and [concise but thoughtful planned technical roadmap --updated in tandem with new releases]([https://github.com/esmero/archipelago-deployment/issues/103](https://github.com/esmero/archipelago-deployment/issues/269)).
 
 # Contributing
 Archipelago welcomes and appreciates any type of contribution, from use cases and needs, questions, documentation, devops and configuration and -- of course -- code, fixes, or new features. To make the process less painful, we recommend you first to read our documentation and deploy a local instance. After that please follow [this set of guidelines](docs/giveortake.md) to help you get started.
