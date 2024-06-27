@@ -65,7 +65,7 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
         - [Virtual Tour Santuario Paola](http://archipelago.byterfly.eu/do/5aea0a3f-cf03-40cc-9611-924dea1fd806)
 
 - [University of Edinburgh Libraries](https://www.ed.ac.uk/information-services/library-museum-gallery)
-    - _Development of Archipelago environment began late 2022/3
+    - _*Development of Archipelago environment began late 2022/3_
 
 ## We should be here 
 
