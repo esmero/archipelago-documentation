@@ -93,14 +93,6 @@ Will replace JSON keys found in an ADO's configured target field(s) with new JSO
 - If the processed data contains a JSON key that is already in the ADO's metadata to be updated, the values in the AMI Update Set CSV will be used, replacing completely the values found in that key in the existing ADO.
 - The Replace update operation paired with the 'Direct' data transformation is likely the update operation you will use.
 
-
-### 2. Complete (All JSON keys) Update Operation
-
-The **Complete (All JSON keys)** Update Operation (formerly labeled 'Normal' in previous Archipelago releases) 'will update a complete existing ADO's JSON data with all new JSON data.' This will replace **all the existing JSON, everything** in an ADO with new processed data. 
-
-- The Complete (All JSON keys) update operation is powerful and can overwrite your whole JSON object record if not paired with a template that has all the extra checks/logic needed to preserve existing data if desired (see note of 'Caution with Templates for Data Transformation' above). 
-- It is also recommended to only use the Complete (All JSON keys) approach if you need to re-process the majority of the metadata fields for ADOs.
-
 #### Common use case scenario for Replace updates:
 
 - You notice a missing or incorrectly processed field in your original AMI Set/ADOs.
@@ -110,6 +102,13 @@ The **Complete (All JSON keys)** Update Operation (formerly labeled 'Normal' in 
 - You select the **Direct** data transformation approach on the AMI configuration.
 - You select the **Replace** update operation and keep 'Do not touch existing files' checked.
 - With this setup, the new field and values are added to the existing JSON for the impacted ADOs.
+
+### 2. Complete (All JSON keys) Update Operation
+
+The **Complete (All JSON keys)** Update Operation (formerly labeled 'Normal' in previous Archipelago releases) 'will update a complete existing ADO's JSON data with all new JSON data.' This will replace **all the existing JSON, everything** in an ADO with new processed data. 
+
+- The Complete (All JSON keys) update operation is powerful and can overwrite your whole JSON object record if not paired with a template that has all the extra checks/logic needed to preserve existing data if desired (see note of 'Caution with Templates for Data Transformation' above). 
+- It is also recommended to only use the Complete (All JSON keys) approach if you need to re-process the majority of the metadata fields for ADOs.
 
 ### 3. Append Update Operation
 
