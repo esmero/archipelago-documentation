@@ -84,19 +84,22 @@ Beginning from [Step 7, Processing](AMIviaSpreadsheets.md#step-7-ami-set-process
 
 ![AMI Update Type Options](images/ami_update_type_options.png)
 
-### 1. Normal Update Operation 
+### 1. Replace Update Operation
 
-The **Normal** Update Operation 'will update a complete existing ADO's configured target field with new JSON Content.' This will replace everything in an ADO with new processed data. 
+The **Replace** Update Operation Replace 'will replace JSON keys found in an ADO's configured target field(s) with new JSON values. Not provided JSON keys will be kept.'
 
-- The Normal update operation is powerful and can overwrite your whole JSON object record if not paired with a template that has all the extra checks/logic needed to preserve existing data if desired (see note of 'Caution with Templates for Data Transformation' above). 
-- It is also recommended to only use the Normal Update approach if you need to re-process most of the metadata fields for ADOs.
-
-### 2. Replace Update Operation
-
-The **Replace** Update Operation Replace 'will replace JSON keys found in an ADO's configured target field with new JSON content. Not provided ones (fields/JSON keys) will be kept.'
+Will replace JSON keys found in an ADO's configured target field(s) with new JSON values. Not provided JSON keys will be kept.
 
 - If the processed data contains a JSON key that is already in the ADO's metadata to be updated, the values in the AMI Update Set CSV will be used, replacing completely the values found in that key in the existing ADO.
 - The Replace update operation paired with the 'Direct' data transformation is likely the update operation you will use.
+
+
+### 2. Complete (All JSON keys) Update Operation
+
+The **Complete (All JSON keys)** Update Operation (formerly labeled 'Normal' in previous Archipelago releases) 'will update a complete existing ADO's JSON data with all new JSON data.' This will replace **all the existing JSON, everything** in an ADO with new processed data. 
+
+- The Complete (All JSON keys) update operation is powerful and can overwrite your whole JSON object record if not paired with a template that has all the extra checks/logic needed to preserve existing data if desired (see note of 'Caution with Templates for Data Transformation' above). 
+- It is also recommended to only use the Complete (All JSON keys) approach if you need to re-process the majority of the metadata fields for ADOs.
 
 #### Common use case scenario for Replace updates:
 
@@ -110,7 +113,7 @@ The **Replace** Update Operation Replace 'will replace JSON keys found in an ADO
 
 ### 3. Append Update Operation
 
-The **Append** update operation 'will append values to existing JSON keys in an ADO's configured target field. New ones (fields/JSON keys) will be added too.' 
+The **Append** update operation 'will append values to existing JSON key(s) in an ADO's configured target field(s). New JSON keys will be added too.' 
 
 - If the processed data contains a key that is already in the ADO’s metadata to be updated, attempts will be made to match the "source" type (array, complex object) to add to it. If you have 2 values in a key, and your original/existing data contains a single value, the result will have 3 values (and then it will try to deduplicate too). If the Source data did not contain a key present in the processed data, then it will be added.
 - The Append operation can be very useful, but it should be used with caution if targeting single values versus arrays. AMI will not permit malformed JSON data to be generated. **But** you need to consider if your Append update tranforms a previously single-value key into a multiple-value array, how this change may impact any references made in you display or other templates, Views throughout your Archipelago. 
