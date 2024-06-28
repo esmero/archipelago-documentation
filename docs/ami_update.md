@@ -80,9 +80,9 @@ As with regular/Create New AMI Sets, you will have to select your preferred Data
 
 Beginning from [Step 7, Processing](AMIviaSpreadsheets.md#step-7-ami-set-processing) of your AMI Set Configuration, select the Update operation that best corresponds to your targeted Update scenario.
 
-![AMI Update Processing Step](images/ami_update_processing_step.png)
+![AMI Update Processing Step](images/ami_update_processing_step_updated.png)
 
-![AMI Update Type Options](images/ami_update_type_options.png)
+![AMI Update Type Options](images/ami_update_type_options_updated.png)
 
 ### 1. Replace Update Operation
 
