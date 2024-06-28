@@ -88,8 +88,6 @@ Beginning from [Step 7, Processing](AMIviaSpreadsheets.md#step-7-ami-set-process
 
 The **Replace** Update Operation Replace 'will replace JSON keys found in an ADO's configured target field(s) with new JSON values. Not provided JSON keys will be kept.'
 
-Will replace JSON keys found in an ADO's configured target field(s) with new JSON values. Not provided JSON keys will be kept.
-
 - If the processed data contains a JSON key that is already in the ADO's metadata to be updated, the values in the AMI Update Set CSV will be used, replacing completely the values found in that key in the existing ADO.
 - The Replace update operation paired with the 'Direct' data transformation is likely the update operation you will use.
 
