@@ -16,10 +16,9 @@
     - 📺 Recordings will be made available on the [IIIF Youtube channel](https://www.youtube.com/@IIIF-Consortium) in early Summer 2024.
 
 - Open Repositories Annual Conference (June 2024):
-    - [Hybrid ML/AI driven search as cataloging aid in Archipelago Commons](https://tinyurl.com/hybrydMLOR2024). Diego Pino Navarro.
-    - [Creating a better balance: the need for tools and practices to combat AI harvests and resource flooding in repository environments](https://tinyurl.com/AIBOTSOR2024). Diego Pino Navarro, Allison Sherrick.
-    - Collaboration Across Borders. Jessica Barlow, Lisa Lamont, Matt Ferrill, Hilario Castillo Castillo, Kristofer Patrón Soberano.
-    - Copies of the slides for all presentations will be uploaded to the [Open Repositories Zenodo](https://zenodo.org/communities/openrepos/records?q=&l=list&p=1&s=10&sort=newest) in early Summer 2024.
+    - [Hybrid ML/AI driven search as cataloging aid in Archipelago Commons](https://doi.org/10.5281/zenodo.12542556). Diego Pino Navarro.
+    - [Creating a better balance: the need for tools and practices to combat AI harvests and resource flooding in repository environments](https://doi.org/10.5281/zenodo.12579304). Diego Pino Navarro, Allison Sherrick.
+    - [Collaboration Across Borders](https://doi.org/10.5281/zenodo.12579392). Jessica Barlow, Lisa Lamont, Matt Ferrill, Hilario Castillo Castillo, Kristofer Patrón Soberano.
 
 - Public Release of IOI's InfraFinder Tool (Spring 2024): [Archipelago Commons on Infrafinder](https://infrafinder.investinopen.org/solutions/archipelago-commons)
 
