@@ -23,6 +23,12 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
     - **Multiple files (of the same type) can be placed in a single cell, separated by a semicolon ( ; ).**
     - For Digital Objects comprised of multiple types of files, such as an Oral History Interview with an audio file and a PDF transcript file, you can place different file types within different corresponding columns for the same Row.
     - It is recommended that filepaths are copied/stored as plain (non-hyperlinked) formatted text.
+ 
+!!! warning "Caution with using Quotation Marks"
+
+    Archipelago is very JSON-forward (friendly!) and makes assumptions about JSON encoding coming from CSV documents. If you are planning to start and end values with quotation marks in your CSV file, such as for `label` values, you need to enter the values encapsulated between the UTF-8 (unicode) character for straight quotations--in the CSV cell (corresponding row + column).   
+    For example, in order for the ingested object to have the label (title) value processed as "Strawberry-Bed" for the ingested Archipelago Digital Object you need to enter the data as "\u0022Strawberry-Bed\u0022" in the corresponding `label` cell in your AMI Set CSV.
+
 
 - **Every spreadsheet/CSV file should contain the following Columns:**
     - `type`
