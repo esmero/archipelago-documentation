@@ -24,7 +24,8 @@ http://localhost:8001/ap/api/oai_pmh/oai?verb=ListRecords&set=c80703db-4644-4f9c
 
 ??? info "Click to see the Example Test Drive Results"
 
-    ![OAI PMH Results Example](images/oai_pmh_example_snapshot.png)
+![OAI PMH Results Example](images/oai_pmh_example_snapshot.png)
+
 
 ## 1. Default OAI-PMH Configuration Form
 
