@@ -10,13 +10,13 @@ tags:
 
 Archipelago's Metadata API Module is a special Strawberryfield Formatter Module that implements Metadata API Endpoints and uses Views and Metadata Display Entities as a configuration option to provide dynamic APIs based on Metadata present in each Archipelago Digital Object (or Node) that contains a Strawberryfield type of field (JSON). 
 
-Beginning with Archipelago 1.4.0, Archipelago is shipped with a standard implementation of a set of OAI-PMH functions. This includes a full Open API Configuration for OAI-PMH in the Metadata API Module, a corresponding OAI-PMH View, and two corresponding OAI-PMH Metadata Display Templates (Item, and a Wrapper to output object data in Dublin Core). All of these components are necessary to enable OAI-PMH functionality in your Archipelago. Please see the notes below that further explain the specific OAI-PMH `verbs` (request and response types) supported by Archipelago's default configuration. Please see the [OAI Protocol for Metadata Harvesting Specifications](https://www.openarchives.org/OAI/openarchivesprotocol.html) for more information about OAI-PMH functions.
+Beginning with Archipelago 1.4.0, Archipelago is shipped with a standard implementation of a set of OAI-PMH functions. This includes a full Open API Configuration for OAI-PMH in the Metadata API Module, a corresponding OAI-PMH View, and two corresponding OAI-PMH Metadata Display Templates (Wrapper and Item to output object data into Dublin Core XML). All of these components are necessary to enable OAI-PMH functionality in your Archipelago. Please see the notes below that further explain the specific OAI-PMH `verbs` (request and response types) supported by Archipelago's default configuration. Please see the [OAI Protocol for Metadata Harvesting Specifications](https://www.openarchives.org/OAI/openarchivesprotocol.html) for more information about OAI-PMH functions.
 
-## Quick Local Test Drive
+### Quick Local Test Drive for OAI-PMH
 
 The default configurations (specifically the View, see more details below) limits the OAI-PMH queries to members of the 'Biodiversity Heritage Library Collection' (Node #25 as ingested via the default AMI Demo Set).
 
-To give this a quick test drive in your local Archipelago deployment, copy and paste the following query into your browser:
+To give this a quick test drive in your running local 1.4.0 Archipelago deployment, copy and paste the following query into your browser:
 
 ```shell
 http://localhost:8001/ap/api/oai_pmh/oai?verb=ListRecords&set=c80703db-4644-4f9c-99d4-46a12c500870&metadataPrefix=oai_dc
@@ -24,8 +24,7 @@ http://localhost:8001/ap/api/oai_pmh/oai?verb=ListRecords&set=c80703db-4644-4f9c
 
 ??? info "Click to see the Example Test Drive Results"
 
-![OAI PMH Results Example](images/oai_pmh_example_snapshot.png)
-
+    ![OAI PMH Results Example](images/oai_pmh_example_snapshot.png)
 
 ## 1. Default OAI-PMH Configuration Form
 
@@ -200,18 +199,21 @@ As stated above, the Default OAI-PMH View is configured to limit the OAI-PMH que
 
 ![Default OAI-PMH View](images/oai_pmh_view.png)
 
-
 ## 3. Default OAI-PMH Templates
 
-The default OAI-PMH functionality relies on using two Metadata Display Templates, one for wrapping or setting the query results within a standard structure, and one for outputting individual query results (such as the Dublin Core XML for a specific Archipelago Digital Object).
+The default OAI-PMH functionality relies on using two Metadata Display Templates, one for wrapping or setting the query results within a standard structure, and one for outputting individual query results (such as the Dublin Core XML for a specific Archipelago Digital Object). The two different templates are specified at the bottom of the OAI-PMH Configuration Form described above.
+
+![Default OAI-PMH Metadata Display](images/oai_pmh_metadata_display.png)
 
 ### OAI-PMH Wrapper Template
 
 - Found at: http://localhost:8001/metadatadisplay/17
+- The Metadata display Entity (Twig) used to generate data for the API wrapper response.
 
 ### OAI-PMH Item with DC Template
 
 - Found at: http://localhost:8001/metadatadisplay/18
+- The Metadata display Entity (Twig) to be used to generate data at this endpoint.
 
 !!! warning "Caution with making changes"
 
