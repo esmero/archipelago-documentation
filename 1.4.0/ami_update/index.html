@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../images/ArchipelagoLogo-favicon-32x32.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
       
@@ -1233,6 +1233,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -1725,6 +1729,48 @@
   
   <span class="md-ellipsis">
     Embargo & Access Restrictions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open_api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata API Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimental_tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Experimental Tools
   </span>
   
 
@@ -2545,22 +2591,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-normal-update-operation" class="md-nav__link">
+  <a href="#1-replace-update-operation" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Normal Update Operation
+      1. Replace Update Operation
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-replace-update-operation" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Replace Update Operation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Replace Update Operation">
+    <nav class="md-nav" aria-label="1. Replace Update Operation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2574,6 +2611,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-complete-all-json-keys-update-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Complete (All JSON keys) Update Operation
+    </span>
+  </a>
   
 </li>
         
@@ -3077,22 +3123,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-normal-update-operation" class="md-nav__link">
+  <a href="#1-replace-update-operation" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Normal Update Operation
+      1. Replace Update Operation
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-replace-update-operation" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Replace Update Operation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Replace Update Operation">
+    <nav class="md-nav" aria-label="1. Replace Update Operation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3106,6 +3143,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-complete-all-json-keys-update-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Complete (All JSON keys) Update Operation
+    </span>
+  </a>
   
 </li>
         
@@ -3270,16 +3316,10 @@
 </div>
 <h2 id="update-set-processing-options">Update Set Processing Options</h2>
 <p>Beginning from <a href="../AMIviaSpreadsheets/#step-7-ami-set-processing">Step 7, Processing</a> of your AMI Set Configuration, select the Update operation that best corresponds to your targeted Update scenario.</p>
-<p><a class="glightbox" href="../images/ami_update_processing_step.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Update Processing Step" src="../images/ami_update_processing_step.png" /></a></p>
-<p><a class="glightbox" href="../images/ami_update_type_options.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Update Type Options" src="../images/ami_update_type_options.png" /></a></p>
-<h3 id="1-normal-update-operation">1. Normal Update Operation</h3>
-<p>The <strong>Normal</strong> Update Operation 'will update a complete existing ADO's configured target field with new JSON Content.' This will replace everything in an ADO with new processed data. </p>
-<ul>
-<li>The Normal update operation is powerful and can overwrite your whole JSON object record if not paired with a template that has all the extra checks/logic needed to preserve existing data if desired (see note of 'Caution with Templates for Data Transformation' above). </li>
-<li>It is also recommended to only use the Normal Update approach if you need to re-process most of the metadata fields for ADOs.</li>
-</ul>
-<h3 id="2-replace-update-operation">2. Replace Update Operation</h3>
-<p>The <strong>Replace</strong> Update Operation Replace 'will replace JSON keys found in an ADO's configured target field with new JSON content. Not provided ones (fields/JSON keys) will be kept.'</p>
+<p><a class="glightbox" href="../images/ami_update_processing_step_updated.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Update Processing Step" src="../images/ami_update_processing_step_updated.png" /></a></p>
+<p><a class="glightbox" href="../images/ami_update_type_options_updated.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Update Type Options" src="../images/ami_update_type_options_updated.png" /></a></p>
+<h3 id="1-replace-update-operation">1. Replace Update Operation</h3>
+<p>The <strong>Replace</strong> Update Operation Replace 'will replace JSON keys found in an ADO's configured target field(s) with new JSON values. Not provided JSON keys will be kept.'</p>
 <ul>
 <li>If the processed data contains a JSON key that is already in the ADO's metadata to be updated, the values in the AMI Update Set CSV will be used, replacing completely the values found in that key in the existing ADO.</li>
 <li>The Replace update operation paired with the 'Direct' data transformation is likely the update operation you will use.</li>
@@ -3296,8 +3336,14 @@
 <li>You select the <strong>Replace</strong> update operation and keep 'Do not touch existing files' checked.</li>
 <li>With this setup, the new field and values are added to the existing JSON for the impacted ADOs.</li>
 </ul>
+<h3 id="2-complete-all-json-keys-update-operation">2. Complete (All JSON keys) Update Operation</h3>
+<p>The <strong>Complete (All JSON keys)</strong> Update Operation (formerly labeled 'Normal' in previous Archipelago releases) 'will update a complete existing ADO's JSON data with all new JSON data.' This will replace <strong>all the existing JSON, everything</strong> in an ADO with new processed data. </p>
+<ul>
+<li>The Complete (All JSON keys) update operation is powerful and can overwrite your whole JSON object record if not paired with a template that has all the extra checks/logic needed to preserve existing data if desired (see note of 'Caution with Templates for Data Transformation' above). </li>
+<li>It is also recommended to only use the Complete (All JSON keys) approach if you need to re-process the majority of the metadata fields for ADOs.</li>
+</ul>
 <h3 id="3-append-update-operation">3. Append Update Operation</h3>
-<p>The <strong>Append</strong> update operation 'will append values to existing JSON keys in an ADO's configured target field. New ones (fields/JSON keys) will be added too.' </p>
+<p>The <strong>Append</strong> update operation 'will append values to existing JSON key(s) in an ADO's configured target field(s). New JSON keys will be added too.' </p>
 <ul>
 <li>If the processed data contains a key that is already in the ADO’s metadata to be updated, attempts will be made to match the "source" type (array, complex object) to add to it. If you have 2 values in a key, and your original/existing data contains a single value, the result will have 3 values (and then it will try to deduplicate too). If the Source data did not contain a key present in the processed data, then it will be added.</li>
 <li>The Append operation can be very useful, but it should be used with caution if targeting single values versus arrays. AMI will not permit malformed JSON data to be generated. <strong>But</strong> you need to consider if your Append update tranforms a previously single-value key into a multiple-value array, how this change may impact any references made in you display or other templates, Views throughout your Archipelago. <ul>
@@ -3332,7 +3378,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 16, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 28, 2024</span>
   </span>
 
     
@@ -3425,7 +3471,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
