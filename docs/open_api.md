@@ -12,6 +12,8 @@ Archipelago's Metadata API Module is a special Strawberryfield Formatter Module 
 
 Beginning with Archipelago 1.4.0, Archipelago is shipped with a standard implementation of a set of OAI-PMH functions. This includes a full Open API Configuration for OAI-PMH in the Metadata API Module, a corresponding OAI-PMH View, and two corresponding OAI-PMH Metadata Display Templates (Wrapper and Item to output object data into Dublin Core XML). All of these components are necessary to enable OAI-PMH functionality in your Archipelago. Please see the notes below that further explain the specific OAI-PMH `verbs` (request and response types) supported by Archipelago's default configuration. Please see the [OAI Protocol for Metadata Harvesting Specifications](https://www.openarchives.org/OAI/openarchivesprotocol.html) for more information about OAI-PMH functions.
 
+This module could be extended to be used with other Open APIs, in addition to the default OAI-PMH configurations.
+
 ### Quick Local Test Drive for OAI-PMH
 
 The default configurations (specifically the View, see more details below) limits the OAI-PMH queries to members of the 'Biodiversity Heritage Library Collection' (Node #25 as ingested via the default AMI Demo Set).
