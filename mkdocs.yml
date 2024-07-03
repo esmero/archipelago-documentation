@@ -62,6 +62,8 @@ nav:
         - IIIF Content Search: iiif-content-search.md
       - Fragaria Redirects: fragaria.md
       - Embargo & Access Restrictions: embargo.md
+      - Metadata API Module: open_api.md
+      - Experimental Tools: experimental_tools.md
     - Content and Metadata Tools:
       - Ingesting Your First Object: firstobject.md
       - Webforms in Archipelago:

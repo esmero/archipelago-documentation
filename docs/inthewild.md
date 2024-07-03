@@ -51,7 +51,7 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
 - [Amherst College](https://acdc.amherst.edu)
 
 - [Association Montessori Internationale](https://montessori-ami.org/)
-    - Development of Archipelago environment began Summer 2022; Launch of new site Spring 2024
+    - Development of Archipelago environment began Summer 2022; Launch of new site late 2024
 
 - [California Revealed](https://repository.californiarevealed.org/)
 
@@ -64,8 +64,12 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
     - [http://archipelago.byterfly.eu/](http://archipelago.byterfly.eu/) 🦋
         - [Virtual Tour Santuario Paola](http://archipelago.byterfly.eu/do/5aea0a3f-cf03-40cc-9611-924dea1fd806)
 
+- [Universidad Nacional Autónoma de México](https://archivodigital.iibi.unam.mx/es)
+
 - [University of Edinburgh Libraries](https://www.ed.ac.uk/information-services/library-museum-gallery)
     - _*Development of Archipelago environment began late 2022/3_
+ 
+- [Vipassana Treasures](https://tod.vridhamma.org/)
 
 ## We should be here 
 
