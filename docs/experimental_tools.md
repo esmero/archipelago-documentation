@@ -22,10 +22,10 @@ Please review [Allison & Diego's recent 2024 Conference Presentations](presentat
 
 ### 1. Experimental Image ML comparison (integrated)
 
-As a logged in user, you can find this tool:
+As a logged in user, you can find the 'Image KNN Similarity Search' tool:
 
-- Through the `Tools` menu > `Text Similarity Search`
-- Directly at `/search/ .. ` 
+- Through the `Tools` menu > `ML Image Similarity Search`
+- Directly at `/search_ml_images` 
 
 Uses these pre-trained models:
 
@@ -41,12 +41,12 @@ Conduct a search for an image in your Archipelago repository, then click on one 
 
 ### 2. Experimental Text Similarity Search 
 
-As a logged in user, you can find this tool:
+As a logged in user, you can find the 'Sbert KNN search on OCR-ed Pages Content' tool:
 
-- Through the `Tools` menu > `Text Similarity Search`
-- Directly at `/search/ .. ` 
+- Through the `Tools` menu > `ML Text Similarity Search`
+- Directly at `/search_sbert/` 
 
-- Uses SBert/384 Vector Size embedding with assigned Task on short sentences over uncorrected OCR
+Uses SBert/384 Vector Size embedding with assigned Task on short sentences over uncorrected OCR
 
 #### How could I test this?
 
