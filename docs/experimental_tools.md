@@ -17,7 +17,7 @@ Please review [Allison & Diego's recent 2024 Conference Presentations](presentat
 - New Archipelago ML supporting code (lots of maths!)
 - New Strawberry Runners Post-Processing pipelines for Image and Text Vectorization
 - New Solr Fields for storing the vectorized image or text fragments
-- New Views for enabling search and results from Solr
+- New Views and contextual and exposed filters for enabling search and results from Solr
 - New UI Interfaces for interacting with these tools
 
 ### 1. Experimental Image ML comparison (integrated)
