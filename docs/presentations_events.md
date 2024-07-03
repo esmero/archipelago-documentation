@@ -13,7 +13,7 @@
 - IIIF Annual Conference (June 2024)
     - [Creating a Better Balance: Respectful Reuse & ML/AI Tags in IIIF Manifests](https://docs.google.com/presentation/d/18rggHeFld7HOJefmVc6ku_7M5edLfgfZkpnQZiagSOA/edit?usp=share_link). Allison Sherrick, Diego Pino Navarro.
     - [Transdimensional mutations for audio/moving media annotations in IIIF Content Search](https://docs.google.com/presentation/d/1qtVirRG5_4z2RHg6RH5cCu4dwxU1v-IH93lSrK-fZ34/edit?usp=share_link). Allison Sherrick, Diego Pino Navarro.
-    - 📺 Recordings will be made available on the [IIIF Youtube channel](https://www.youtube.com/@IIIF-Consortium) in early Summer 2024.
+    - 📺 Recordings made available on the [IIIF Youtube channel](https://www.youtube.com/@IIIF-Consortium).
 
 - Open Repositories Annual Conference (June 2024):
     - [Hybrid ML/AI driven search as cataloging aid in Archipelago Commons](https://doi.org/10.5281/zenodo.12542556). Diego Pino Navarro.
