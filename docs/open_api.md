@@ -199,6 +199,8 @@ As stated above, the Default OAI-PMH View is configured to limit the OAI-PMH que
 
 ![Default OAI-PMH View](images/oai_pmh_view.png)
 
+* Please note: this View is using the **Full Pager**, and this is required for properly outputting the fuller lists of results for OAI-PMH queries.
+
 ## 3. Default OAI-PMH Templates
 
 The default OAI-PMH functionality relies on using two Metadata Display Templates, one for wrapping or setting the query results within a standard structure, and one for outputting individual query results (such as the Dublin Core XML for a specific Archipelago Digital Object). The two different templates are specified at the bottom of the OAI-PMH Configuration Form described above.
