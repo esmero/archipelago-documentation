@@ -22,14 +22,14 @@ jobs:
         with:
           fetch-depth: 1
           repository: esmero/archipelago-deployment
-          ref: 1.3.0
+          ref: 1.4.0
           path: ./archipelago-deployment
           token:  ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
           repository: esmero/archipelago-deployment-live
-          ref: 1.3.0
+          ref: 1.4.0
           path: ./archipelago-deployment-live
           token:  ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v4
