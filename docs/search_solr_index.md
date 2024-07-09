@@ -58,6 +58,7 @@ Your metadata and data, as configured through Keyname Providers and Fields, Face
 * [Strawberry Key Name Providers, Solr Field, and Facet Configuration](strawberry_key_name_providers.md) 
 * [Advanced Search](search_advanced.md)
 * [How to Add a 'Search Within Collection' Block](search-within-collection.md)
+* For Live Archipelago Deployment Site Administrators: [Upgrading Solr](archipelago-deployment-live-search_solr_index.md)
 
 ___
 
