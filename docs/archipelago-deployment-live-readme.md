@@ -37,7 +37,7 @@ Running Archipelago Commons on a live public instance using SSL with Blob/Object
 
 ### OS:
 
-- Ubuntu 22.04 /Amazon Linux 2 or Amazon Linux 2023/Debian 10 "Buster"/ AlmaLinux (Centos replacement) matching your CPU architecture (of course)
+- Ubuntu 22.04 LTS /Ubuntu 24.04 LTS/Amazon Linux 2023/Debian 10 "Buster" matching your CPU architecture (of course)
 - Most recent `Docker` running as a service and `docker-compose` or `docker compose`
 
 ### Skills and the important human aspect
@@ -74,11 +74,11 @@ Setup your system using your favorite package manager with
 - tree
 - docker-compose or `docker compose` (V2) if running the most recent docker service. See https://docs.docker.com/compose/migrate/
 
-e.g. for Amazon Linux 2 (x86/amd64) these steps are tested:
+e.g. for Amazon Linux 2023 (x86/amd64) these steps are tested:
 
 ```shell
 sudo yum update -y
-sudo amazon-linux-extras install -y docker
+sudo yum install -y docker
 sudo service docker start
 sudo usermod -a -G docker ec2-user
 sudo chkconfig docker on
@@ -99,7 +99,7 @@ In your location of choice clone this repo
 ```shell
 git clone https://github.com/esmero/archipelago-deployment-live
 cd archipelago-deployment-live
-git checkout 1.3.0
+git checkout 1.4.0
 ```
 
 ### Step 3. Setup your enviromental variables for Docker/Services
@@ -118,7 +118,7 @@ nano deploy/ec2-docker/.env
 ```
 
 The content of that file would be similar to this. 
-`Note`: There are a few extra commented lines at the end only used for: https://docs.archipelago.nyc/1.3.0/security_bots/ if you decide to go that way.
+`Note`: There are a few extra commented lines at the end only used for: https://docs.archipelago.nyc/1.4.0/security_bots/ if you decide to go that way.
 
 ```env
 ARCHIPELAGO_ROOT=/home/ec2-user/archipelago-deployment-live
@@ -171,11 +171,6 @@ This means you will use the `docker-compose-aws-s3-arm64.yml`. Do the following:
 ```shell
 cp deploy/ec2-docker/docker-compose-aws-s3-arm64.yml deploy/ec2-docker/docker-compose.yml
 ```
-
-##### Optional (expert) extra domains (does not apply to ARM64/Apple M1 Architecture):
-
-If you have more than a single domain you may create a text file inside 
-`config_storage/nginxconfig/certbot_extra_domains/your.domain.org` and write for each subdomain there an entry/line.
 
 #### OR Running self-signed? (optional and does not apply to ARM64/Apple M1 Architecture): 
 
@@ -315,7 +310,7 @@ docker exec -ti esmero-php bash -c 'scripts/archipelago/deploy.sh'
 ```
 
 **IMPORTANT:**  `update_deployed.sh` is not needed when deploying for the first time and totally **discouraged** on a customized Archipelago. 
-If you make modifications to your `Twig templates`, that command will **replace** the ones shipped by us with fresh copies overwriting all your modifications. Only run to restore larger errors or when needing to update **everything** ones with newer versions and you don't care for your own customization. Please read https://docs.archipelago.nyc/1.3.0/utility_scripts/ for more ways of managing exporting/importing Metadata Display Entities (Twig templates).
+If you make modifications to your `Twig templates`, that command will **replace** the ones shipped by us with fresh copies overwriting all your modifications. Only run to restore larger errors or when needing to update **everything** ones with newer versions and you don't care for your own customization. Please read https://docs.archipelago.nyc/1.4.0/utility_scripts/ for more ways of managing exporting/importing Metadata Display Entities (Twig templates).
 
 ### Step 7. Set your public IIIF server URL to your actual domain
 
@@ -338,7 +333,7 @@ Let's modify `pub_server_url`. Replace in the following command `your.domain.org
 NOTE: We are passing the `-y` flag to `drush` avoid that way having to answer "yes".
 
 ```shell
-docker exec -ti esmero-php bash -c "drush -y config-set format_strawberryfield.iiif_settings pub_server_url https://your.domain.org/cantaloupe/iiif/2"
+docker exec -ti esmero-php bash -c "drush config-set -y format_strawberryfield.iiif_settings pub_server_url https://your.domain.org/cantaloupe/iiif/2"
 ```
 
 Finally Done! Now you can log into your new Archipelago using `https` and start exploring. Thank you for following this guide!
@@ -346,7 +341,7 @@ Finally Done! Now you can log into your new Archipelago using `https` and start 
 ## Deployment on ARM64/v8(Graviton, Apple M1) system:
 
 This applies to AWS `m6g` and `t3g` Instances and is documented inline in this guide. Please open an [ISSUE](https://github.com/esmero/archipelago-deployment-live/issues) in this repository if you run into any problems.
-Please review <https://github.com/esmero/archipelago-deployment-live/blob/1.3.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml> for more info.
+Please review <https://github.com/esmero/archipelago-deployment-live/blob/1.4.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml> for more info.
 
 ### How do I know my Architecture?
 

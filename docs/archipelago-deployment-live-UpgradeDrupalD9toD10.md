@@ -356,7 +356,7 @@ Please login to your Archipelago and test/check all is working! Enjoy 1.3.0 and 
 
 ### Step 10
 
-If all looks good and you are not missing any functionality (please be thorough about testing), it is time to Jump to [Upgrading to Solr 9.11](search_solr_index.md#archipelago-and-solr)
+If all looks good and you are not missing any functionality (please be thorough about testing), it is time to Jump to [Upgrading to Solr 9.x](archipelago-deployment-live-search_solr_index.md#archipelago-deployment-live-archipelago-deployment-live-upgrading-solr)
 
 ___
 
