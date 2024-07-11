@@ -1860,23 +1860,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#whats-under-the-hood-enabling-these-tools" class="md-nav__link">
+  <a href="#whats-under-the-hood-powering-these-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      What's under the hood enabling these tools?
+      What's under the hood powering these tools?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What's under the hood enabling these tools?">
+    <nav class="md-nav" aria-label="What's under the hood powering these tools?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-experimental-image-ml-comparison-integrated" class="md-nav__link">
+  <a href="#enabling-the-new-nlp-container-triggering-related-post-processing" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Experimental Image ML comparison (integrated)
+      Enabling the new nlp container &amp; triggering related post-processing
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Experimental Image ML comparison (integrated)">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimental-image-ml-comparison-integrated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experimental Image ML comparison (integrated)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experimental Image ML comparison (integrated)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1894,13 +1903,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-experimental-text-similarity-search" class="md-nav__link">
+  <a href="#experimental-text-similarity-search" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Experimental Text Similarity Search
+      Experimental Text Similarity Search
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Experimental Text Similarity Search">
+    <nav class="md-nav" aria-label="Experimental Text Similarity Search">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3129,23 +3138,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#whats-under-the-hood-enabling-these-tools" class="md-nav__link">
+  <a href="#whats-under-the-hood-powering-these-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      What's under the hood enabling these tools?
+      What's under the hood powering these tools?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What's under the hood enabling these tools?">
+    <nav class="md-nav" aria-label="What's under the hood powering these tools?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-experimental-image-ml-comparison-integrated" class="md-nav__link">
+  <a href="#enabling-the-new-nlp-container-triggering-related-post-processing" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Experimental Image ML comparison (integrated)
+      Enabling the new nlp container &amp; triggering related post-processing
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Experimental Image ML comparison (integrated)">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimental-image-ml-comparison-integrated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experimental Image ML comparison (integrated)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experimental Image ML comparison (integrated)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3163,13 +3181,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-experimental-text-similarity-search" class="md-nav__link">
+  <a href="#experimental-text-similarity-search" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Experimental Text Similarity Search
+      Experimental Text Similarity Search
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Experimental Text Similarity Search">
+    <nav class="md-nav" aria-label="Experimental Text Similarity Search">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3244,15 +3262,41 @@
 <h1 id="experimental-machine-learning-ml-tools">Experimental Machine Learning (ML) Tools</h1>
 <p>Archipelago 1.4.0 Local Deployment Release was shipped with a set of experimental Machine Learning (ML) Tools for testing and assessing the applicable use of such tools/workflows within a general repository environment. These tools should not be considered 'final product' integrations, and should not be exposed to end users--there are intentional configurations in place that limit exposure of these endpoints to authenticated users only.</p>
 <p>Please review <a href="presentations_events/#2024">Allison &amp; Diego's recent 2024 Conference Presentations</a> related to this important topic in our shared field for a fuller understanding of our team's ethical perspectives and the considerations we keep related to ML tools and applications.</p>
-<h2 id="whats-under-the-hood-enabling-these-tools">What's under the hood enabling these tools?</h2>
+<h2 id="whats-under-the-hood-powering-these-tools">What's under the hood powering these tools?</h2>
 <ul>
 <li>New Archipelago ML supporting code (lots of maths!)</li>
 <li>New Strawberry Runners Post-Processing pipelines for Image and Text Vectorization</li>
 <li>New Solr Fields for storing the vectorized image or text fragments</li>
 <li>New Views and contextual and exposed filters for enabling search and results from Solr</li>
 <li>New UI Interfaces for interacting with these tools</li>
+<li>New <code>nlp</code> Docker Container (<code>esmero/esmero-nlp:1.1.1-multiarch</code>)</li>
 </ul>
-<h3 id="1-experimental-image-ml-comparison-integrated">1. Experimental Image ML comparison (integrated)</h3>
+<p>All of the above items, except for the new <code>nlp</code> Docker Container, are available out-of-the-box in default local deployment configurations. However, to use the tools you will first need to switch the <code>nlp</code> Docker Container being used from the default <code>esmero/esmero-nlp:fasttext-multiarch</code> to the <code>esmero/esmero-nlp:1.1.1-multiarch</code> in your <code>docker-compose.yml</code> file.</p>
+<h3 id="enabling-the-new-nlp-container-triggering-related-post-processing">Enabling the new <code>nlp</code> container &amp; triggering related post-processing</h3>
+<ol>
+<li>In your <code>archipelago-deployment</code> folder, navigate to and open the <code>docker-compose.yml</code> file.</li>
+<li>Comment out (add # at the beggining of) line 76 for <code>image: "esmero/esmero-nlp:fasttext-multiarch"</code></li>
+<li>Remove the comment (# at the begnning) for line 78 for <code>image: "esmero/esmero-nlp:1.1.1-multiarch"</code></li>
+<li>Save your changes.</li>
+<li>
+<p>In your terminal, while still in your <code>archipelago-deployment</code> folder, run:
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>pull
+</code></pre></div></p>
+</li>
+<li>
+<p>After the new <code>nlp</code> container finishes pulling and downloading, run:
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up
+docker<span class="w"> </span>ps
+</code></pre></div>
+Then check that the new <code>nlp</code>container now shows <code>esmero/esmero-nlp:1.1.1-multiarch</code> under IMAGE.</p>
+</li>
+<li>
+<p>While logged in as an adminsitrator, use <a href="../find_and_replace/#available-actions">Archipelago's Advanced Batch Find and Replace</a> to select all of the objects ingested into your repository and run the <code>Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item</code> Action. If you have not yet ingested any objects into your Archipelago, you can skip this and proceed to the next step. </p>
+</li>
+<li>Wait for the <a href="http://localhost:8001/admin/config/system/queue-ui">Background Post-processing Queues</a> and your <a href="http://localhost:8001/admin/config/search/search-api/index/default_solr_index">Solr Index</a> to finish updating after you have either run the AMI Demo Set and/or ingested objects through the webforms/your own AMI set(s). Feel free to give the <a href="http://localhost:8001/admin/config/system/cron">Cron</a> a push to start ahead of the default 3 hour schedule. Please be patient with this post-processing and indexing process, as the ML parts of this process (image and text extraction, vector generation) can take some time to complete.</li>
+</ol>
+<p>When all of the above steps are completed, you will be ready to start using the following experimental tools.</p>
+<h3 id="experimental-image-ml-comparison-integrated">Experimental Image ML comparison (integrated)</h3>
 <p>As a logged in user, you can find the 'Image KNN Similarity Search' tool:</p>
 <ul>
 <li>Through the <code>Tools</code> menu &gt; <code>ML Image Similarity Search</code></li>
@@ -3267,7 +3311,7 @@
 <p>Also uses IIIF Content Search API Object detection of Integrated Annotations</p>
 <h4 id="how-could-i-test-this">How could I test this?</h4>
 <p>Conduct a search for an image in your Archipelago repository, then click on one of the images found in the results set. In the section below the top search results, you can review the output of the Image Similarity searches. You could also select a particular image Annotation to use for the Image Similarity search and comparison.</p>
-<h3 id="2-experimental-text-similarity-search">2. Experimental Text Similarity Search</h3>
+<h3 id="experimental-text-similarity-search">Experimental Text Similarity Search</h3>
 <p>As a logged in user, you can find the 'Sbert KNN search on OCR-ed Pages Content' tool:</p>
 <ul>
 <li>Through the <code>Tools</code> menu &gt; <code>ML Text Similarity Search</code></li>
@@ -3302,7 +3346,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 3, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 11, 2024</span>
   </span>
 
     
