@@ -27,7 +27,7 @@ All of the above items, except for the new `nlp` Docker Container, are available
 
 1. In your `archipelago-deployment` folder, navigate to and open the `docker-compose.yml` file.
 2. Comment out (add # at the beggining of) line 76 for `image: "esmero/esmero-nlp:fasttext-multiarch"`
-3. Remove the comment (# at the begnning) for line 78 for `image: "esmero/esmero-nlp:1.4.1-arm64"` OR `"esmero/esmero-nlp:1.4.1-amd64"` (depending on your particular computer platform CPU.
+3. Remove the comment (# at the begnning) for line 78 for `image: "esmero/esmero-nlp:1.4.1-arm64"` OR `"esmero/esmero-nlp:1.4.1-amd64"` (depending on your particular computer platform CPU type).
 4. Save your changes.
 5. In your terminal, while still in your `archipelago-deployment` folder, run:
 ```shell
