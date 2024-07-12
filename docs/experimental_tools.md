@@ -19,15 +19,15 @@ Please review [Allison & Diego's recent 2024 Conference Presentations](presentat
 - New Solr Fields for storing the vectorized image or text fragments
 - New Views and contextual and exposed filters for enabling search and results from Solr
 - New UI Interfaces for interacting with these tools
-- New `nlp` Docker Container (`esmero/esmero-nlp:1.1.1-multiarch`)
+- New `nlp` Docker Container (`esmero/esmero-nlp:1.4.1-arm64` or `esmero/esmero-nlp:1.4.1-amd64`)
 
-All of the above items, except for the new `nlp` Docker Container, are available out-of-the-box in default local deployment configurations. However, to use the tools you will first need to switch the `nlp` Docker Container being used from the default `esmero/esmero-nlp:fasttext-multiarch` to the `esmero/esmero-nlp:1.1.1-multiarch` in your `docker-compose.yml` file.
+All of the above items, except for the new `nlp` Docker Container, are available out-of-the-box in default local deployment configurations. However, to use the tools you will first need to switch the `nlp` Docker Container being used from the default `esmero/esmero-nlp:fasttext-multiarch` to `esmero/esmero-nlp:1.4.1-arm64` or `esmero/esmero-nlp:1.4.1-amd64` in your `docker-compose.yml` file.
 
 ### Enabling the new `nlp` container & triggering related post-processing
 
 1. In your `archipelago-deployment` folder, navigate to and open the `docker-compose.yml` file.
 2. Comment out (add # at the beggining of) line 76 for `image: "esmero/esmero-nlp:fasttext-multiarch"`
-3. Remove the comment (# at the begnning) for line 78 for `image: "esmero/esmero-nlp:1.4.1-arm64"` OR `"esmero/esmero-nlp:1.4.1-amd64"` (depending on your particular computer platform CPU type).
+3. Remove the comment (# at the begnning) for line 78 for `image: "esmero/esmero-nlp:1.4.1-arm64"` OR `image: "esmero/esmero-nlp:1.4.1-amd64"` (depending on your particular computer platform CPU type).
 4. Save your changes.
 5. In your terminal, while still in your `archipelago-deployment` folder, run:
 ```shell
@@ -36,10 +36,10 @@ docker-compose pull
 
 6. After the new `nlp` container finishes pulling and downloading, run:
 ```shell
-docker-compose up
+docker-compose up -d
 docker ps
 ```
-Then check that the new `nlp`container now shows `esmero/esmero-nlp:1.1.1-multiarch` under IMAGE.
+Then check that the new `nlp`container now shows one of `esmero/esmero-nlp:1.4.1-arm64` or `esmero/esmero-nlp:1.4.1-amd64` depending on your Platform/CPU under IMAGE.
 
 7. While logged in as an adminsitrator, use [Archipelago's Advanced Batch Find and Replace](find_and_replace.md#available-actions) to select all of the objects ingested into your repository and run the `Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item` Action. If you have not yet ingested any objects into your Archipelago, you can skip this and proceed to the next step. 
 8. Wait for the [Background Post-processing Queues](http://localhost:8001/admin/config/system/queue-ui) and your [Solr Index](http://localhost:8001/admin/config/search/search-api/index/default_solr_index) to finish updating after you have either run the AMI Demo Set and/or ingested objects through the webforms/your own AMI set(s). Feel free to give the [Cron](http://localhost:8001/admin/config/system/cron) a push to start ahead of the default 3 hour schedule. Please be patient with this post-processing and indexing process, as the ML parts of this process (image and text extraction, vector generation) can take some time to complete.
