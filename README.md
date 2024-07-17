@@ -21,10 +21,10 @@ We recommend you start with the [Core Documentation Guides listed here](101_guid
 # Contributing
 Archipelago welcomes and appreciates any type of contribution, from use cases and needs, questions, documentation, devops and configuration and -- of course -- code, fixes, or new features. To make the process less painful, we recommend you first to read our documentation and deploy a local instance. After that please follow [this set of guidelines](docs/giveortake.md) to help you get started.
 
-## Caring & Coding + Fixing
+## Caring & Documenting & Coding + Fixing
+* [Allison Sherrick](https://github.com/alliomeria)
 * [Diego Pino](https://github.com/DiegoPino)
 * [Giancarlo Birello](https://github.com/giancarlobi)
-* [Allison Sherrick](https://github.com/alliomeria)
 
 ## Acknowledgments
 This software is a [Metropolitan New York Library Council](https://metro.org) Open-Source initiative and part of the Archipelago Commons project.
