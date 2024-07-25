@@ -10,6 +10,9 @@
 
 - Archipelago Summer Workshop Series : [more details coming soon](https://groups.google.com/g/archipelago-commons/c/T3im4-gp8og/m/62HL9RMoAQAJ)
 
+- IIIF AI/ML Community Group (July 2024)
+    - [Creating a Better Balance: Respectful Reuse & ML/AI Tags in IIIF Manifests](https://www.youtube.com/watch?v=FUHHLq34NRc). Allison Sherrick.
+
 - IIIF Annual Conference (June 2024)
     - [Creating a Better Balance: Respectful Reuse & ML/AI Tags in IIIF Manifests](https://docs.google.com/presentation/d/18rggHeFld7HOJefmVc6ku_7M5edLfgfZkpnQZiagSOA/edit?usp=share_link). Allison Sherrick, Diego Pino Navarro.
     - [Transdimensional mutations for audio/moving media annotations in IIIF Content Search](https://docs.google.com/presentation/d/1qtVirRG5_4z2RHg6RH5cCu4dwxU1v-IH93lSrK-fZ34/edit?usp=share_link). Allison Sherrick, Diego Pino Navarro.
