@@ -12,6 +12,9 @@
     - Session 1: Archipelago 1.4.0 Local Deployment & Features Tour
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/RiRgNWskhO9wsnIDKvFHSed_c3o-hHNzBgea3S0RSqpBqX40_ZRamUeTjGC6-VjP.OIN6p3ZjHZNG-z5R?startTime=1722953192000)
 
+- IIIF AI/ML Community Group (July 2024)
+    - [Creating a Better Balance: Respectful Reuse & ML/AI Tags in IIIF Manifests](https://www.youtube.com/watch?v=FUHHLq34NRc). Allison Sherrick.
+
 - IIIF Annual Conference (June 2024)
     - [Creating a Better Balance: Respectful Reuse & ML/AI Tags in IIIF Manifests](https://docs.google.com/presentation/d/18rggHeFld7HOJefmVc6ku_7M5edLfgfZkpnQZiagSOA/edit?usp=share_link). Allison Sherrick, Diego Pino Navarro.
     - [Transdimensional mutations for audio/moving media annotations in IIIF Content Search](https://docs.google.com/presentation/d/1qtVirRG5_4z2RHg6RH5cCu4dwxU1v-IH93lSrK-fZ34/edit?usp=share_link). Allison Sherrick, Diego Pino Navarro.
