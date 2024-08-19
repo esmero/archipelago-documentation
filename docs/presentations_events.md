@@ -13,7 +13,7 @@
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/RiRgNWskhO9wsnIDKvFHSed_c3o-hHNzBgea3S0RSqpBqX40_ZRamUeTjGC6-VjP.OIN6p3ZjHZNG-z5R?startTime=1722953192000)
     - Session 2: Review of Display/View Modes and Strawberryfield Formatters
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/O9a6mqfHvXzjbgGSzwFt9vPbSWH4UKkDOTTvEtmlnVoIgqOsJPFqX-e8ym95n6vp.B40Hg6nwB4bn7_oh)
-        - 
+
 - IIIF AI/ML Community Group (July 2024)
     - [Creating a Better Balance: Respectful Reuse & ML/AI Tags in IIIF Manifests](https://www.youtube.com/watch?v=FUHHLq34NRc). Allison Sherrick.
 
