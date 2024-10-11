@@ -50,8 +50,7 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
 
 - [Amherst College](https://acdc.amherst.edu)
 
-- [Association Montessori Internationale](https://montessori-ami.org/)
-    - Development of Archipelago environment began Summer 2022; Launch of new site late 2024
+- [Association Montessori Internationale](https://archives.montessori-ami.org/)
 
 - [California Revealed](https://repository.californiarevealed.org/)
 

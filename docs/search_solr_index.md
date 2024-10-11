@@ -20,7 +20,7 @@ Archipelago's default Search and Solr configurations are intended to cover the m
 Before diving into any Search and Solr configuration changes, we strongly recommend that you read our [Metadata in Archipelago](metadatainarchipelago.md) overview documentation, which provides important context for understanding how the shape of your Archipelago Digital Objects/Collections (ADOs) metadata will inform your Search and Solr options and outcomes.
 
 ### Archipelago and Solr
-Archipelago's latest Release (1.1.0) uses [Apache Solr 9.1](https://solr.apache.org/guide/solr/9_1/index.html), which incorporates some [major improvements and changes from Solr 8](https://solr.apache.org/guide/solr/9_1/upgrade-notes/major-changes-in-solr-9.html). Please refer to the [primary Solr documentation](https://solr.apache.org/guide/solr/9_1/index.html) for the most comprehensive and in-depth information about Solr's wide breadth of functionality and configuration options.
+Archipelago's latest Release (1.4.0) uses [Apache Solr 9.2](https://solr.apache.org/guide/solr/9_2/index.html), which incorporates some [major improvements and changes from Solr 8](https://solr.apache.org/guide/solr/9_2/upgrade-notes/major-changes-in-solr-9.html). Please refer to the [primary Solr documentation](https://solr.apache.org/guide/solr/9_2/index.html) for the most comprehensive and in-depth information about Solr's wide breadth of functionality and configuration options.
 
 ### OCR Highlights
 
@@ -58,6 +58,7 @@ Your metadata and data, as configured through Keyname Providers and Fields, Face
 * [Strawberry Key Name Providers, Solr Field, and Facet Configuration](strawberry_key_name_providers.md) 
 * [Advanced Search](search_advanced.md)
 * [How to Add a 'Search Within Collection' Block](search-within-collection.md)
+* [IIIF Content Search](iiif-content-search.md)
 * For Live Archipelago Deployment Site Administrators: [Upgrading Solr](archipelago-deployment-live-search_solr_index.md)
 
 ___

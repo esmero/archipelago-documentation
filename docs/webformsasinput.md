@@ -87,8 +87,8 @@ Good question! So, to enable, configure, and customize these Display Modes you h
 
 You can see that for every existent Content Type, there is a drop down menu with options:
 
-- Manage Display: will lead you to configuration page where you can setup each View Mode and its settings for a given Content Type
-- Manage Form Display: will lead you to configuration page where you can setup each View Mode and its settings for a given Content Type
+- Manage Display: will lead you to configuration page where you can setup each View/Display Mode and its settings for a given Content Type
+- Manage Form Display: will lead you to configuration page where you can setup each Form Mode and its settings
 
 ## Manage Display
 
