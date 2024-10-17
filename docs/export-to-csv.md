@@ -4,14 +4,14 @@ Archipelago has a specialty Action, labeled `Export Archipelago Digital Objects 
 
 ## Where to Find
 
-In default Archipelago deployments, this speciality action is found at the Action menus for the main Content page:
+In default Archipelago deployments, this speciality action is found in the `Action` menu for the main Content page:
 
 - Accessed through the `Content` menu item
 - Directly at `/admin/content`
 
 ![Export To CSV Action from Content](images/export-to-csv-action-from-content.png)
 
-And the [Advanced Batch Find and Replace](find_and_replace.md) view:
+And in the `Action` menu for the [Advanced Batch Find and Replace](find_and_replace.md) view:
 
 - Accessed through the `Tools` menu > `Advanced Batch Find and Replace` 
 - Directly at `/search-and-replace`
@@ -28,15 +28,19 @@ After selecting a group of ADOs through either the 'Content' or 'Find and Replac
 
 ![Export To CSV Action Configuration](images/export-to-csv-action-configuration.png)
 
-Select `Apply` when you are ready to move forward to the next step of using this action.
+Select `Apply` when you are ready to move forward to the next step of using this Action.
 
 ## Executing the Action and Downloading the CSV
 
-After selecting your Export ADOs to CSV Configuration Options, you will be directed to a page showing a summary preview of the 'Items selected' (display list of ADOs may be truncated depending on the amount of items), and then will need to select `Execute Action` to proceed.
+After selecting your Export ADOs to CSV Configuration Options, you will be directed to a page showing a summary list of the 'Items selected' (list may be truncated depending on the amount of items you selected). You will then need to select `Execute Action` to proceed.
 
-Generating the CSV (and possibly a corresponding AMI Set, if you selected that option) will be processed in real time. This may take a few seconds to a few minutes, depending on the amount of items you selected to include. You will see a progress bar generate while the Action is running.
+Selecting `Execute Action` will trigger the generation of the CSV in real time, directly in your browser session. This may take a few seconds to a few minutes, depending on the amount of items you selected to include. You will see a progress bar updating while this Action is running.
 
-When the Action is finished, you will see a temporary Status Message stating: "Your source data was saved and is available as CSV at", followed by a link to the CSV file generated. Be sure to click on the CSV link and download before navigating away from this temporary Status message.
+When the Action is finished, you will see a temporary Status Message stating: "Your source data was saved and is available as CSV at", followed by a link to the CSV file generated. Be sure to click on the CSV link and download before navigating away from this temporary Status message. No worries if you accidently navigate away from this page before downloading the generated CSV, you can find a temporary copy of the CSV file generated at:
+- Accessed through the `Content` menu > `Media Files`
+- Directly at `/admin/content/files`
+
+*Or:* you can simply configure and run the Action again to generate another copy of the CSV if needed.
 
 If you selected the option to attach to `Attach CSV to a new AMI Set`, you will also see a status message stating: "Well Done! New AMI Set was created and you can see it here" (and 'see it here' will be linked to the corresponding AMI Set). You will be able to access the AMI Set from the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`.
 
@@ -44,9 +48,9 @@ If you selected the option to attach to `Attach CSV to a new AMI Set`, you will 
 
 ## Recommendations
 
-This specialty Action can be quite useful for generating CSVs to use for reviewing select batches of materials found in your repository, but it is not intended to be used to generate an output of all of your Archipelago repository's digital objects and collections. Depending on the size of your repository, generating a CSV for all of your assets may exceed the timeout processing limits and also result in a CSV file that is unable to be opened by standard spreadsheet software such as Google Sheets or MS Excel.
+This specialty Action is quite useful for generating CSVs to use for reviewing select batches of materials found in your repository, but it is not intended to be used to generate a complete CSV containing all of your Archipelago repository's digital objects and collections. Depending on the size of your repository, generating a CSV for all of your assets may exceed your browser's timeout processing limits/bandwidth and also result in a CSV file that is unable to be opened by standard spreadsheet software such as Google Sheets or MS Excel.
 
-We would recommend using the [Find and Replace view](find_and_replace.md) to narrow down your selected ADOs more easily using the Facets available. We would also recommend keeping your selected batches to an amount of objects you can reasonably assess and review using your normal spreadsheet review workflows and software.
+We would recommend executing this specialty Action using Archipelago's [Find and Replace](find_and_replace.md) to narrow down your selected ADOs more easily using the Facets available for the Find and Replace interface. We would also recommend keeping your selected batches limited to an amount of objects you can reasonably assess and review using your normal spreadsheet review workflows and software.
 
 ___
 
