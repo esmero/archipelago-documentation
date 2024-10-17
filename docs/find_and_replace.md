@@ -66,11 +66,12 @@ The default options available through the Action dropdown menu include:
 - *`Publish Digital Object`
 - *`Unpublish Digital Object`
 - *`Change the author of content`
-- `Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item`
+- **`Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item`
 - *`Delete selected entities/translations`
 
 _* denotes Action options that are also shared with the main `Content` Page Action Menu_
-_You can read more about [Strawberry Runners Post-Processing Actions here](strawberryrunners.md)_ 
+
+_**You can read more about [Strawberry Runners Post-Processing Actions here](strawberryrunners.md)_
 
 ![Find and Replace Actions](images/find_and_replace_actions.jpg)
 
