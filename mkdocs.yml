@@ -11,6 +11,7 @@ nav:
   - Home: index.md
   - Archipelago 101:
     - Core Documentation Guides: 101_guides_list.md
+    - Archipelago Glossary: archipelago-glossary.md
     - Archipelago's Philosophy & Guiding Principles: ourtake.md
     - Strawberryfields Forever: strawberryfields.md
     - Metadata in Archipelago: metadatainarchipelago.md
@@ -68,6 +69,7 @@ nav:
       - Experimental ML Tools: experimental_tools.md
     - Content and Metadata Tools:
       - Ingesting Your First Object: firstobject.md
+      - Export ADOs to CSV Action: export-to-csv.md
       - Webforms in Archipelago:
         - webforms.md
         - How to Create a Webform as an Input Method: webformsasinput.md

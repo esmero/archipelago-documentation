@@ -45,6 +45,7 @@ Documentation related to the Strawberryfield modules can be found here: [Strawbe
 - [International Image Interoperability Framework (IIIF)](https://iiif.io/)
 - [Internet Archive BookReader](https://github.com/internetarchive/bookreader)
 - [Mirador](https://projectmirador.org)
+- [OpenSeadragon](https://openseadragon.github.io)
 - [Pannellum](https://github.com/mpetroff/pannellum)
 - [Replayweb.page Webarchive Player](https://github.com/webrecorder/replayweb.page)
 - [Solr OCR Highlighting](https://github.com/dbmdz/solr-ocrhighlighting)
