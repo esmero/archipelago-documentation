@@ -56,7 +56,7 @@ This specialty Action is quite useful for generating CSVs to use for reviewing s
     
     You can find the related Solr configurations sections the `Advanced` section of the 'Edit search server' page found at `/admin/config/search/search-api/server/esmero_solr/edit`. Take caution with making any changes here, and be aware that changing the maximum query settings will impact your Solr query setup sitewide, not just as pertains to the 'Export ADOs to CSV' Action.
 
-    ![Export To CSV Action Known Solr Issue](export-to-csv-known-solr-issue.png)
+    ![Export To CSV Action Known Solr Issue](images/export-to-csv-known-solr-issue.png)
 
 We would recommend executing this specialty Action using Archipelago's [Find and Replace](find_and_replace.md) to narrow down your selected ADOs more easily using the Facets available for the Find and Replace interface. We would also recommend keeping your selected batches limited to an amount of objects you can reasonably assess and review using your normal spreadsheet review workflows and software.
 
