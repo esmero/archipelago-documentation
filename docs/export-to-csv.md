@@ -24,7 +24,7 @@ After selecting a group of ADOs through either the 'Content' or 'Find and Replac
 2. **Do not export Media/Files**: when enabled, file references and their associated technical Metadata (as:filetype JSON keys, e.g as:image) will be skipped. This allows pure Descriptive Metadata to be exported to CSV.
 3. **Convert Media to Portable Absolute URLs**: when enabled, all File references will be converted to absolute URLs and their associated technical Metadata (as:filetype JSON keys, e.g as:image) will be skipped. This allows CSVs to be used to ingest new ADOs in other repositories.
 4. **Attach CSV to a new AMI Set**: when checked, a new AMI set with the exported data will be created and configured for "Updating" existing ADOs.
-5. If attaching to a new AMI Set, you will have the option to: **Please Give your AMI Set a name**. If empty we will create a (quite) generic one for you (which defaults to 'CSV Export/Import AMI Set').
+5. If attaching to a new AMI Set, you will have the option to **Please Give your AMI Set a name**: If empty, Archipelago will create a (quite) generic one for you (defaults to 'CSV Export/Import AMI Set').
 
 ![Export To CSV Action Configuration](images/export-to-csv-action-configuration.png)
 
