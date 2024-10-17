@@ -360,10 +360,10 @@ docker ps
 We will copy DB, min.io (File and ADO storage as files) and Drupal's private (temporary files, caches) folders to its new place:
 
 ```shell
-sudo cp -rpv persistent/db ../archipelago-deployment-live/data_storage/
-sudo cp -rpv persistent/solrcore ../archipelago-deployment-live/data_storage/
-sudo cp -rpv persistent/miniodata/ ../archipelago-deployment-live/data_storage/minio-data
-sudo cp -rpv private ../archipelago-deployment-live/drupal/
+sudo cp -rpv persistent/db ../archipelago-deployment-live/data_storage/db
+sudo cp -rpv persistent/solrcore ../archipelago-deployment-live/data_storage/solrcore
+sudo cp -rpv persistent/miniodata ../archipelago-deployment-live/data_storage/minio-data
+sudo cp -rpv private ../archipelago-deployment-live/drupal/private
 ```
 
 Running `-rpv` will copy verbosely and recursively while preserving original permissions.
@@ -433,9 +433,9 @@ No need to stop Docker again. We can do this while your Archipelago is still run
 We will copy all important folders over. From your `archipelago-deployment` folder run:
 
 ```shell
-sudo cp -rpv vendor ../archipelago-deployment-live/drupal/
-sudo cp -rpv web ../archipelago-deployment-live/drupal/
-sudo cp -rpv config ../archipelago-deployment-live/drupal/
+sudo cp -rpv vendor ../archipelago-deployment-live/drupal/vendor
+sudo cp -rpv web ../archipelago-deployment-live/drupal/web
+sudo cp -rpv config ../archipelago-deployment-live/drupal/config
 ```
 
 And also, selectively, a few files we know you are very fond of!
@@ -529,8 +529,8 @@ Finally, let's adapt the `docker-compose` file we need to our previous (but stil
 For x86/AMD, run (for ARM64/Apple M1 please check the [parent Documentation](archipelago-deployment-live-readme.md#deployment-on-arm64v8graviton-apple-m1-system)):
 
 ```shell
-cp $HOME/archipelago-deployment-live/deploy/ec2-docker/docker-compose-aws-s3.yml $HOME/archipelago-deployment-live/deploy/ec2-docker/docker-compose.yml
-nano $HOME/archipelago-deployment-live/deploy/ec2-docker/docker-compose.yml
+cp $home/archipelago-deployment-live/deploy/ec2-docker/docker-compose-aws-s3.yml $home/archipelago-deployment-live/deploy/ec2-docker/docker-compose.yml
+nano $home/archipelago-deployment-live/deploy/ec2-docker/docker-compose.yml
 ```
 
 And replace the content with this slightly modified version. Note: we really only changed the lines after this comment: `# THIS DIFFERS FROM THE NORMAL ONE...`.
