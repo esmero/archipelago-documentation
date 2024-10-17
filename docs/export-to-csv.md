@@ -48,7 +48,15 @@ If you selected the option to attach to `Attach CSV to a new AMI Set`, you will 
 
 ## Recommendations
 
-This specialty Action is quite useful for generating CSVs to use for reviewing select batches of materials found in your repository, but it is not intended to be used to generate a complete CSV containing all of your Archipelago repository's digital objects and collections. Depending on the size of your repository, generating a CSV for all of your assets may exceed your browser's timeout processing limits/bandwidth and also result in a CSV file that is unable to be opened by standard spreadsheet software such as Google Sheets or MS Excel.
+This specialty Action is quite useful for generating CSVs to use for reviewing select batches of materials found in your repository, but it is not intended to be used to generate a complete CSV containing all of your Archipelago repository's digital objects and collections. Depending on the size of your repository, generating a CSV for all of your assets may exceed your browser's timeout processing limits/bandwidth (see 'Known Solr-Related Issue' note below) and also result in a CSV file that is unable to be opened by standard spreadsheet software such as Google Sheets or MS Excel.
+
+!!! note "Known Solr-Related Issue"
+
+    Solr has a fixed limits configured for the maxiumum number of results able to retrieved, so if you make a very large query/select a very large number of ADOs to include that exceeds your fixed limits for Solr, you will only retrieve up to the maximum specified in your Solr limits.
+    
+    You can find the related Solr configurations sections the `Advanced` section of the 'Edit search server' page found at `/admin/config/search/search-api/server/esmero_solr/edit`. Take caution with making any changes here, and be aware that changing the maximum query settings will impact your Solr query setup sitewide, not just as pertains to the 'Export ADOs to CSV' Action.
+
+    ![Export To CSV Action Known Solr Issue](export-to-csv-known-solr-issue.png)
 
 We would recommend executing this specialty Action using Archipelago's [Find and Replace](find_and_replace.md) to narrow down your selected ADOs more easily using the Facets available for the Find and Replace interface. We would also recommend keeping your selected batches limited to an amount of objects you can reasonably assess and review using your normal spreadsheet review workflows and software.
 
