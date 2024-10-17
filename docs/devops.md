@@ -10,6 +10,7 @@ At the core of the Archipelago philosophy is our commitment to both simplicity a
 - [Solr (Search)](https://lucene.apache.org/solr/)
 - [Cantaloupe (Image Server)](https://cantaloupe-project.github.io/)
 - [S3 Storage (Mini.io or any other S3 flavor)](https://min.io/)
+- [NLP + ML Server](https://github.com/esmero/nlpserver-fasttext)
 
 Installation is entirely [Dockerized](https://www.docker.com) and scripted with [easy-to-follow directions](archipelago-deployment-readme.md).
 
@@ -21,10 +22,11 @@ Installation is entirely [Dockerized](https://www.docker.com) and scripted with 
   esmero-php | PHP-FPM | Has all binaries for postprocessing/exif/ocr/etc. Runs PHP code. 
   esmero-db | Database | AMD and INTEL processors: MYSQL 8<br />ARM processors: MariaDB 
   esmero-minio | Storage                     | S3 API compatible Backend file and ADO as file storage. In a local it will do all the S3 stuff, on a live instance it can server as file routing to AWS S3, Azure Blob Storage, etc. 
-  esmero-solr | Solr |Currently version 8.8.2
-  esmero-nlp | Natural Language Processing | NLP64 server for entity extraction, language detection, etc. 
+  esmero-solr | Solr |Currently version 9.1.1
+  esmero-nlp | Natural Language Processing | NLP64 server for entity extraction, language detection, ML, etc.
+  esmero-cantaloupe | IIIF Media Server| Customized Server used to provide IIIF Image API/Media access 
 
-_Information related to non-Dockerized installation and configruation can be found here: [Traditional Installation Notes](traditional-install.md)_
+_Information related to non-Dockerized installation and configruation can be found here: [Traditional Installation Notes](traditional-install.md)
 
 ### Strawberryfield Modules at the heart of every Archipelago:
 
