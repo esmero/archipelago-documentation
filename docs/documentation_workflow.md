@@ -44,12 +44,12 @@ tags:
    ```
    You may need to install Python on your machine. [Download Python](https://www.python.org/downloads/) or use your favorite operating system package manager such as Homebrew. 
 
-7. Now you can build the site locally, e.g. for the documentation using the 1.0.0 branch:
+7. Now you can build the site locally, e.g. for the documentation using the 1.4.0 branch:
    ```shell
-   mike deploy 1.0.0
-   mike set-default 1.0.0
+   mike deploy 1.4.0
+   mike set-default 1.4.0
    ```
-   If you create a new branch to match the issue number as in step 3, you would use your branch instead of 1.0.0. For example, a branch of ISSUE-129.
+   If you create a new branch to match the issue number as in step 3, you would use your branch instead of 1.4.0. For example, a branch of ISSUE-129.
    ```shell
    mike deploy ISSUE-129
    mike set-default ISSUE-129
