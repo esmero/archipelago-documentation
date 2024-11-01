@@ -40,6 +40,7 @@ nav:
         - Upgrading from 1.0.0-RC3 to 1.0.0: archipelago-deployment-live-upgradeFromRC3.md
         - Updating Docker Containers: archipelago-deployment-live-updatingContainers.md
       - Utility Scripts: utility_scripts.md
+      - Managing Bots: security_bots.md
       - DevOps Q&A:
         - Debugging PHP in Archipelago: xdebug.md 
         - Min.io Logging: generalqa_minio_logging.md
