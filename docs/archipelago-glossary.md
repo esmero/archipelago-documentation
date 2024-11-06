@@ -218,7 +218,7 @@ Related Documentation: [Search & Solr Overview - Strawberry Keyname Providers](s
 
 Strawberryfield Modules are the Archipelago specific modules at the heart of our system.
 
-- [Strawberryfield](strawberryfields.md)
+- Strawberryfield
     - [Github Repository](https://github.com/esmero/strawberryfield)
     - [Related documentation](strawberryfields.md)
 - Format Strawberryfield
