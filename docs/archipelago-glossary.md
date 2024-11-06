@@ -8,7 +8,7 @@ If you are not seeing a term listed here, try using the 'Search' found above to 
 
 Abbreviation of Archipelago Digital Object. Can be used to refer to ADO Collections/Compounds/Creative Work Series Parents as well.
 
-Essentially, any Content type that uses a 'Strawberry Field' (see reference below) is an ADO.
+Essentially, any Content type that uses a 'Strawberryfield' (see reference below) is an ADO.
 
 ### ADO to View Mode Mapping
 
@@ -30,7 +30,7 @@ Related documentation: [Archipelago Multi-Importer (AMI) - AMI Set Entity](ami_i
 
 ### AMI Reports / Reports Tab
 
-The AMI Reports tab contains information related to the last Processing operation run against your AMI Set.
+The AMI Reports tab contains information related to the last Processing operation performed for an AMI Set.
 
 Related documentation: [Step 10: Review your newly created Digital Objects directly or via AMI Set Report](AMIviaSpreadsheets.md/#step-10-review-your-newly-created-digital-objects-directly-or-via-ami-set-report).
 
@@ -42,13 +42,13 @@ Related documentation: [AMI Update Sets](ami_update.md).
 
 ### `ap:entitymapping` (JSON key)
 
-This key is used to provide structural mapping hints for Archipelago, such as whether an ADO uses 'images' or 'ispartof'. 
+This key is used to provide structural mapping hints for Archipelago, such as whether an ADO uses `images` or `ispartof`. 
 
 Related documentation: [Metadata in Archipelago - The ap:entitymapping key](metadatainarchipelago.md#the-apentitymapping-key)
 
 ### `as:{as_file_type}` (JSON key)
 
-This key is used to provide filetype mapping information for Archipelago, and will be automatically generated depending on the type of file associated with an ADO.. 
+This key is used to provide filetype mapping information for Archipelago, and will be automatically generated depending on the type of file(s) associated with an ADO. 
 
 Related documentation: [Metadata in Archipelago - The as:{as_file_type} key](metadatainarchipelago.md#the-asas_file_type-keys)
 
@@ -62,7 +62,7 @@ See 'Digital Object Collection / Compound Object / Creative Work Series' below.
 
 ### Data Transformation Selections
 
-The data transformation approach used in an AMI Set, and determines how your source data will be transformed into ADOs upon AMI Set Processing.
+The data transformation approach used in an AMI Set that determines how your source data will be transformed into ADOs upon AMI Set Processing.
 
 Related documentation: [Step 3. Data Transformation Selections](AMIviaSpreadsheets.md/#step-3-data-transformation-selections).
 
@@ -138,7 +138,7 @@ See also `ap:entitymapping` key above.
 
 ### `label` (JSON key)
 
-This key is used for the title of the Digital Object or Collection, and is required for all ADOs. 
+This key is used for the title of the Digital Object or Collection. This key is **required** for all ADOs. 
 
 Related documentation: [Metadata in Archipelago - The label key](metadatainarchipelago.md#the-label-key)
 
@@ -162,7 +162,7 @@ Related documentation: [Twig Templates and Archipelago](metadatatwigs.md)
 
 ### Metadata Display Preview
 
-Archipelago's Metadata Display Preview is a very handy tool for your repository toolkit that enables you to preview the output of your Metadata Display (Twig) Templates (found at /metadatadisplay/list).
+Archipelago's Metadata Display Preview is a very handy tool for your repository toolkit that enables you to preview the output of your Metadata Display (Twig) Templates (found at `/metadatadisplay/list`).
 
 Related documentation: [Metadata Display Preview](metadata_display_preview.md)
 
@@ -182,7 +182,7 @@ Related documentation: [Step 7: AMI Set Processing](AMIviaSpreadsheets.md/#step-
 
 See 'Find and Replace' above.
 
-### Search & Solr
+### Search and Solr
 
 Refers to the integrations of related (Archipelago, Drupal) Search and Solr Index components in Archipelago.
 
@@ -190,9 +190,9 @@ Related documentation: [Search & Solr Overview](search-solr-index.md)
 
 ### Strawberryfield (or Strawberry Field)
 
-The flexible, extensible JSON Blob Field attached to every Archipelago Digital Object / Collection / Compound Object / Creative Work Series.
+The flexible, extensible JSON blob Field attached to every Archipelago Digital Object / Collection / Compound Object / Creative Work Series.
 
-The Strawberryfield contains all of the data and metadata associated with ADOs in this single field.
+The Strawberryfield contains all of the data and metadata associated with ADOs in a single Field (per ADO).
 
 In default Archipelagos, can be viewed in the 'Raw JSON' display beneath every ADO when logged in as an authenticated user.
 
@@ -210,7 +210,7 @@ More information found at: [Strawberryfield Formatters](strawberryfield-formatte
 
 ### Strawberry Keyname Provider
 
-Strawberry Keyname Providers are a crucial part of the Search & Solr setup in Archipelago, that feed the values from your desired JSON keys to Solr fields.
+Strawberry Keyname Providers feed the values from your desired JSON keys to Solr fields. They are a crucial part of the Search and Solr setup in Archipelago.
 
 Related Documentation: [Search & Solr Overview - Strawberry Keyname Providers](search_solr_index.md#2-strawberry-keyname-providers)
 
@@ -218,12 +218,12 @@ Related Documentation: [Search & Solr Overview - Strawberry Keyname Providers](s
 
 Strawberryfield Modules are the Archipelago specific modules at the heart of our system.
 
-- Strawberryfield
+- [Strawberryfield](strawberryfields.md)
     - [Github Repository](https://github.com/esmero/strawberryfield)
     - [Related documentation](strawberryfields.md)
 - Format Strawberryfield
     - [Github Repository](https://github.com/esmero/format_strawberryfield)
-    - [Related documentation](
+    - [Related documentation](strawberryfield-formatters.md)
 - Webform Strawberryfield
     - [Github Repository](https://github.com/esmero/webform_strawberryfield)
     - [Related documentation](webforms.md)
@@ -233,7 +233,7 @@ Strawberryfield Modules are the Archipelago specific modules at the heart of our
 - Archipelago Multi-Importer (AMI)
     - [Github Repository](https://github.com/esmero/ami)
     - [Related documentation](ami_index.md)
-- Fragaria 
+- Fragaria (Redirects)
     - [Github Repository](https://github.com/esmero/fragaria)
     - [Related Documentation](fragaria.md)
 
@@ -251,9 +251,7 @@ See 'Metadata Display Entities' above.
 
 ### `type` (JSON key)
 
-This key is used for the Digital Object or Digital Object Collection/  semantic Type, such as 'Photograph' or 'Collection'.
-
-This key is required for all ADOs.
+This key is used for the Digital Object or Digital Object Collection/semantic Type, such as 'Photograph' or 'Collection'. This key is **required** for all ADOs.
 
 Related documentation: [Metadata in Archipelago - The type key](metadatainarchipelago.md#the-type-key)
 
