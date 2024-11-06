@@ -114,7 +114,7 @@ This key, in default Archipelago configurations, is used for Collection Membersh
 
 This key can contain multiple values if appropriate for your repository's Collections structure.
 
-For ingested ADOs, this key will contain 'node id' integers for corresponding Collection(s).
+For ingested ADOs, this key will contain 'Drupal Node id' integers for corresponding Collection(s).
 
 In AMI sets, this key can contain integers to connect to an object's corresponding row in the same spreadsheet/CSV, or a UUID for an already ingested Collection object.
 
