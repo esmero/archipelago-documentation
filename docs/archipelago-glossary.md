@@ -128,7 +128,7 @@ This key, in default Archipelago configurations, is used for Parent-Child Object
 
 This key should contain single values only, due to the nature of the Parent-Child Object Relationship.
 
-For ingested ADOs, this key will contain 'node id' integers for a corresponding Parent Object.
+For ingested ADOs, this key will contain 'Drupal Node id' integers for a corresponding Parent Object.
 
 In AMI sets, this key can contain integers to connect to an object's corresponding row in the same spreadsheet/CSV, or a UUID for an already ingested Parent object.
 
