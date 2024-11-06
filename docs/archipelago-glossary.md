@@ -2,19 +2,19 @@
 
 This list provides quick reference points for some of the most common Archipelago terminology you are likely to encounter.
 
-If you are not seeing a term listed here, try using the 'Search' above to look for your term across all documentation pages.
+If you are not seeing a term listed here, try using the 'Search' found above to look for your term across all documentation pages.
 
 ### ADOs : Archipelago Digital Objects and Collections
 
 Abbreviation of Archipelago Digital Object. Can be used to refer to ADO Collections/Compounds/Creative Work Series Parents as well.
 
-Essentially, any Content type that uses a Strawberry Field is an ADO.
+Essentially, any Content type that uses a 'Strawberry Field' (see reference below) is an ADO.
 
 ### ADO to View Mode Mapping
 
 This refers to the 'ADO to View Mode Mapping' form found at `/admin/config/archipelago/viewmode_mapping`. This form is used to determine the 'Display Mode' used for an ADO based on the object's `type`.
 
-See the 'Display Mode' and `type` references below.
+See also the 'Display Mode' and `type` references below.
 
 ### AMI: Archipelago Multi Importer
 
