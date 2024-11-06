@@ -66,14 +66,14 @@ Select your global ADO mappings.
 
 ??? info "Click to read more about Archipelago's default relationship mappings"
 
-        - `ismemberof` and/or `ispartof` (and/or whatever predicate corresponds with the relationship you are mapping)
-        - these columns can be used to connect related objects using the object-to-object relationship that matches your needs
-        - in default Archipelago configurations, `ismemberof` is used for Collection Membership and `ispartof` is used for Parent-Child Object Relationships (so a Child ADO would reference the Parent ADO in `ispartof`)
-        - these columns can hold 3 types of values
-            - empty (no value)
-            - an integer to connect an object to another object's corresponding row in the same spreadsheet/CSV
-              * Ex: Row 2 corresponds to a Digital Object Collection; for a Digital Object corresponding to Row 3, the 'ismemberof' column contains a value of '2'. The Digital Object in Row 3 would be ingested as a member of the Digital Object Collection in Row 2.
-            - a UUID to connect with an already ingested object
+    - `ismemberof` and/or `ispartof` (and/or whatever predicate corresponds with the relationship you are mapping)
+    - these columns can be used to connect related objects using the object-to-object relationship that matches your needs
+    - in default Archipelago configurations, `ismemberof` is used for Collection Membership and `ispartof` is used for Parent-Child Object Relationships (so a Child ADO would reference the Parent ADO in `ispartof`)
+    - these columns can hold 3 types of values
+    - empty (no value)
+    - an integer to connect an object to another object's corresponding row in the same spreadsheet/CSV
+    * Ex: Row 2 corresponds to a Digital Object Collection; for a Digital Object corresponding to Row 3, the 'ismemberof' column contains a value of '2'. The Digital Object in Row 3 would be ingested as a member of the Digital Object Collection in Row 2.
+    - a UUID to connect with an already ingested object
 
 - By default, the option to automatically assigns UUIDs is selected. Keep 'Automatically assign UUID' checked unless your source data already contains UUIDs in a `node_uuid` column.
 - Under the 'Base ADO mappings', select the `label` column for ADO Label. This selection is only used as a fail-safe (in case your AMI JSON Ingest Template does not have any mapping for a column to be mapped to the JSON `label` key, or your source data csv does not contain a `label` if going Direct for data transformation).
