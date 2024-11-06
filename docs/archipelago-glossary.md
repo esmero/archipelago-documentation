@@ -12,7 +12,7 @@ Essentially, any Content type that uses a Strawberry Field is an ADO.
 
 ### ADO to View Mode Mapping
 
-This refers to the 'ADO to View Mode Mapping' form found at `/admin/config/archipelago/viewmode_mapping`. This form is used to determine the 'Display Mode' used for an ADO based on the objects `type`.
+This refers to the 'ADO to View Mode Mapping' form found at `/admin/config/archipelago/viewmode_mapping`. This form is used to determine the 'Display Mode' used for an ADO based on the object's `type`.
 
 See the 'Display Mode' and `type` references below.
 
