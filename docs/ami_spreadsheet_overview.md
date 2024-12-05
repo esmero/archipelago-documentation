@@ -20,8 +20,10 @@ There are multiple ways a spreadsheet/CSV file can be structured to work with AM
             `s3://myAMIuploads/myAMIdocument.pdf`
         - Example remote filepath:
             `https://dogsaregreat.edu/dogs.tiff`
-        - Example zip filepath:
-            `dogs.tiff` (no need for a leading /)        
+        - Example zip filepath for zip files with no enclosing folders:
+            `dogs.tiff` (no need for a leading / before the filename)
+        - Example zip filepath for zip files with an 'images' enclosing folder:
+            `images/dogs.tiff` (no need for a leading / before the images folder)              
 
     - **Multiple files (of the same type) can be placed in a single cell, separated by a semicolon ( ; ).**
     - For Digital Objects comprised of multiple types of files, such as an Oral History Interview with an audio file and a PDF transcript file, you can place different file types within different corresponding columns for the same Row.
