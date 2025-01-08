@@ -16,6 +16,8 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 
 - [Barnard College](https://digitalcollections.barnard.edu/)
 
+- [Dig DC - District of Columbia Public Library (DCPL)](https://digdc.dclibrary.org)
+
 - [Digital Culture of Metropolitan New York (DCMNY)](http://dcmny.org)
 
 - [Empire Archival Discovery Cooperative (EADC) Finding Aid Toolkit](https://archipelago.senylrc.org/documentation)
