@@ -3266,11 +3266,13 @@
 
 <h1 id="strawberry-runners-post-processing-configuration">Strawberry Runners Post-Processing Configuration</h1>
 <p>Archipelago's <a href="https://github.com/esmero/strawberry_runners">Strawberry Runners (SBR)</a> module provides provides a set of post-processing capabilities for the JSON based metadata, files and entities that comprise your Archipelago Digital Objects (ADOs). These post-processing actions are based on dispatched events, direct http calls, and invoked webhooks from partner services (such as Min.io, AWS S3 or self-invoked). </p>
-<p>The default Archipelago SBR post-processor configurations include operations that:
-- perform page-based HOCR/OCR for image and pdf-based ADOs, send the output to the Search API, and use Natural Language Processing to extract entities from the output
-- extract text from pages within a Webarchives File and send the output to the Search API
-- convert WARC format Webarchives Files into WACZ format and attach the new WACZ file to the original source ADO to complement the WARC original
-- extract textual values from subtitle/transcript VTT files and generates time/space transmuted OCR</p>
+<p>The default Archipelago SBR post-processor configurations include operations that:</p>
+<ul>
+<li>perform page-based HOCR/OCR for image and pdf-based ADOs, send the output to the Search API, and use Natural Language Processing to extract entities from the output</li>
+<li>extract text from pages within a Webarchives File and send the output to the Search API</li>
+<li>convert WARC format Webarchives Files into WACZ format and attach the new WACZ file to the original source ADO to complement the WARC original</li>
+<li>extract textual values from subtitle/transcript VTT files and generates time/space transmuted OCR</li>
+</ul>
 <p>SBR actions can be chained and nested to enable ordered operations, such as first extract individual pages in an ordered sequence and then run HOCR/OCR across the individual pages.</p>
 <h2 id="strawberry-runners-settings-overview">Strawberry Runners Settings Overview</h2>
 <p>You can access the Strawberry Runners Settings:</p>
@@ -3326,7 +3328,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 3, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 17, 2025</span>
   </span>
 
     
