@@ -3258,24 +3258,24 @@
 
 <h1 id="reviewing-and-adjusting-the-subtitle-post-processor-operations">Reviewing and adjusting the <code>subtitle</code> Post-Processor operations</h1>
 <p>As stated on the <a href="docs/strawberryrunners.md">Strawberry Runners overview page</a>, the <code>subtitle</code> action extracts textual values from subtitle/transcript VTT files and generates time/space transmuted OCR. This transmuted OCR can be used to search within a time-based video or audio file's corresponding subtitle/transcript VTT file(s), then navigate to the matching time of the video or audio file within a media viewer.</p>
-<p>We strongly recommend using caution when making any adjustments to the default <code>subtitle</code> configurations as this may result in unexpected issues with the transmuted OCR values in your Solr Index. Also, the <code>subtitle</code> Strawberry Runner Post-Processor needs to used with corresponding related default IIIF Configuration Form Settings. </p>
+<p>We strongly recommend using caution when making any adjustments to the default <code>subtitle</code> configurations as this may result in unexpected issues with the transmuted OCR values in your Solr Index. Also, the <code>subtitle</code> Strawberry Runner Post-Processor needs to used with corresponding related default IIIF Server Settings Form. </p>
 <h1 id="subtitle-settings">Subtitle Settings</h1>
 <p>To review or adjust the configurations for the <code>subtitle</code> operation, select <code>Edit</code> from the <code>Operations</code> menu.</p>
 <p>In the <code>subtitle</code> settings, you will see the following configuration options:</p>
-<p><a class="glightbox" href="../images/sbr_subtitle.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Strawberry Runners Pager" src="../images/sbr_subtitle.png" /></a></p>
+<p><a class="glightbox" href="../images/sbr_subtitle.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Strawberry Runners Subtitle" src="../images/sbr_subtitle.png" /></a></p>
 <ol>
 <li>
 <p>Label: </p>
 <ul>
 <li>Label for this Processor; which should be a unique machine-readable name</li>
 <li>Can only contain lowercase letters, numbers, and underscores</li>
-<li>We do not recommend changing this Label from the default <code>pager</code>. </li>
+<li>We do not recommend changing this Label from the default <code>subtitle</code>. </li>
 </ul>
 </li>
 <li>
 <p>Strawberry Runner Post Processor Plugin:</p>
 <ul>
-<li>The <code>Post processor that extracts/generates Ordered Sequences of files/pages/children using Files present in an ADO</code> should be selected.</li>
+<li>The <code>Post processor that extracts subtitles and generates time/space transmuted OCR</code> should be selected.</li>
 <li>We do not recommend changing this Plugin selection.</li>
 </ul>
 </li>
@@ -3283,7 +3283,15 @@
 <p>Checkbox to mark this processor plugin as active </p>
 <ul>
 <li>We recommend keeping this checked as <code>active</code> at all times, but you may wish to temporarily disable this if you are performing certain types of administrative review tasks such as running large test ingests where you plan on deleting the ADOs before a final ingest.</li>
-<li>If you accidentally uncheck this and need to re-trigger the <code>pager</code> (and corresponding nested <code>ocr</code> action), you can use Archipelago's <a href="../find_and_replace/">Find and Replace</a> to first select a specific group of Digital Objects you wish to target for Post-Processing, then select the <code>Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item</code> from the <a href="../find_and_replace/">Find and Replace</a> <code>Actions menu</code>.</li>
+<li>If you accidentally uncheck this and need to re-trigger the <code>subtitle</code> Post-Processor, you can use Archipelago's <a href="../find_and_replace/">Find and Replace</a> to first select a specific group of Digital Objects you wish to target for Post-Processing, then select the <code>Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item</code> from the <a href="../find_and_replace/">Find and Replace</a> <code>Actions menu</code>.</li>
+</ul>
+</li>
+<li>
+<p>The type of source data this processor works on:</p>
+<ul>
+<li>Select from where the source file this processor needs is fetched.</li>
+<li>Default selection of 'File entities referenced in the as:filetype JSON structure'.</li>
+<li>You also have the option of selecting 'Full file paths passed by another processor', but we do not recommend using this option as the default <code>subtitle</code> Post-Processor has not been configured to be nested within a preceding Post-Processor set of operations.</li>
 </ul>
 </li>
 <li>
@@ -3291,14 +3299,13 @@
 <ul>
 <li>A single ADO type or a comma delimited list of ado types that qualify to be Processed.</li>
 <li>Leave empty to apply to all ADOs. If you do not provide any specific ADO types here, the processor will be applied for all ADOs with the JSON keys selected in the next step.</li>
-<li>Default ADO types specified are: 'Document,Book,Article'  </li>
-<li>You may wish to add additional types of document/multiple-paged type of ADOs to this list that are custom to you Archipelago environment. </li>
+<li>We recommend leaving empty.</li>
 </ul>
 </li>
 <li>
 <p>The JSON key that contains the desired source files:</p>
 <ul>
-<li>By default, the <code>as:image</code> and <code>as:document</code> keys are selected.</li>
+<li>By default, <code>as:text</code> key is selected.</li>
 <li>We do not recommend changing this selection.</li>
 </ul>
 </li>
@@ -3307,15 +3314,15 @@
 <ul>
 <li>A single Mimetype type or a comma separated list of mimetypes that qualify to be Processed.</li>
 <li>Leave empty to apply any file.</li>
-<li>Default mimetypes are: 'application/pdf,image/tiff,image/jpeg,image/jp2'  </li>
+<li>Default mimetypes are: 'text/vtt'</li>
 </ul>
 </li>
-<li>
-<p>Within the ADO's metadata, the JSON key that contains the language in ISO639-3 (3 letter) format to be used for OCR/NLP processing via Tesseract.</p>
-<ul>
-<li>Default JSON key specified is: 'language_iso639_3'</li>
-</ul>
-</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Do not set to apply to general text files</p>
+<p>We do not recommend making changes to use this <code>subtitle</code> Post-Processor for non-structured, general text based transcript files. The transmutation operations executed require the parsing of VTT structured files specifically.  </p>
+</div>
+<ol>
 <li>
 <p>Please provide a default language in ISO639-3 (3 letter) format. If none is provided we will use 'eng'.</p>
 <ul>
@@ -3323,24 +3330,65 @@
 </ul>
 </li>
 <li>
+<p>The expected and desired output of this processor.</p>
+<ul>
+<li>If the output is just data and "One or more Files" is selected all data will be dumped into a file and handled as such.</li>
+<li>Default selection is: 'Data/Values that can be serialized to JSON'</li>
+<li>Additional optional is to select 'One or more Files', but it is not recommended unless to use this for the default <code>ocr</code> operation since this will alter how the data is incorporated in the Search API (Solr index).</li>
+</ul>
+</li>
+<li>
+<p>Where and how the output will be used.</p>
+<ul>
+<li>Default select is: 'In a Search API Document using the Strawberryfield Flavor Data Source (e.g used for HOCR highlight)'  </li>
+<li>Additional option to select 'As Input for another processor Plugin' --which will only have an effect if another Processor is setup to consume this output.</li>
+</ul>
+</li>
+<li>
+<p>The queue to use for this processor.</p>
+<ul>
+<li>The primary queue will be execute in realtime while the Secondary will be execute in background</li>
+<li>Default selection is for the 'Primary queue in realtime'</li>
+</ul>
+</li>
+<li>
+<p>Checkbox to Use NLP (Natural Language Processing) to extract entities from Text</p>
+<ul>
+<li>If checked Full text will be processed for Natural language Entity extraction using Polyglot.</li>
+<li>Default option is to have the option checked. </li>
+</ul>
+</li>
+<li>
+<p>The URL location of your NLP64 server.</p>
+<ul>
+<li>Defaults to http://esmero-nlp:6400</li>
+</ul>
+</li>
+<li>
+<p>Which method(NER) to use</p>
+<ul>
+<li>The NER NLP method to use to extract Agents, Places and Sentiment.</li>
+<li>Default selection: 'Polyglot (faster)'</li>
+<li>Alternation selection: 'spaCy (more accurate)'</li>
+</ul>
+</li>
+<li>
 <p>Timeout in seconds for this process.</p>
 <ul>
-<li>If the process runs out of time it can still be processed again</li>
-<li>Default selection is: 10</li>
+<li>300</li>
+<li>If the process runs out of time it can still be processed again.</li>
 </ul>
 </li>
 <li>
 <p>Order or execution in the global chain.</p>
 <ul>
-<li>Default selection is: 0</li>
+<li>0</li>
 </ul>
 </li>
 </ol>
-<h3 id="related-iiif-configuration-form-and-iiif-content-search-guides">Related IIIF Configuration Form and IIIF Content Search Guides</h3>
-<ul>
-<li><a href="../iiif_server_settings/">IIIF Configuration Form</a></li>
-<li><a href="../iiif-content-search/">IIIF Content Search API Overview</a></li>
-</ul>
+<h1 id="related-iiif-server-settings-form-default-settings">Related IIIF Server Settings Form Default Settings</h1>
+<p>The <code>subtitle</code> Strawberry Runner Post-Processor needs to used with corresponding related default settings of your Archipelago's IIIF Server Settings Form. </p>
+<p>Please refer to the <a href="../iiif_server_settings/">IIIF Server Settings Form documentation</a> for more detailed information.</p>
 <hr />
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
 <p>Return to the main <a href="../strawberryrunners/">Strawberry Runners</a> or the <a href="../">Archipelago Documentation main page</a>.</p>
