@@ -22,7 +22,7 @@ To review or adjust the configurations for the `subtitle` operation, select `Edi
 
 In the `subtitle` settings, you will see the following configuration options:
 
-![Strawberry Runners Pager](images/sbr_pager.png)
+![Strawberry Runners Pager](images/sbr_subtitle.png)
 
 1. Label: 
     - Label for this Processor; which should be a unique machine-readable name
