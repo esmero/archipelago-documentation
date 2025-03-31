@@ -107,6 +107,7 @@ nav:
         - Documentation:
           - documentation_about.md
           - Documentation Template: documentation_template.md
+          - Documentation Github Workflow: documentation_workflow.md
           - Additional Features: documentation_features.md
           - Technical Details: documentation_technical.md
       - Care & Coding + Fixing / Acknowledgments / License: acknowledgments.md
