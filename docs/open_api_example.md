@@ -31,6 +31,7 @@ https://YOUR-DOMAIN/ap/api/oai_pmh/oai?verb=ListRecords&set=SET-UUID&metadataPre
   - Structure -> Views, and then select edit for the view OAI exposed entity reference
   - In the filter criteria, find the filter named Content datasource: 🍓 Strawberry (Descriptive Metadata source) » entity_sbf_entity_reference_ismemberof » ID (= 25)
   - Select that filter and change the ID value to the one you have just made note of. In the following screenshot, it has bee set to an ID of 292.
+
   ![Updating the Filter ID](images/view-metadata-entity_sbf_entity_reference_ismemberof.png)
 
 ### Find the set UUID of the collection
