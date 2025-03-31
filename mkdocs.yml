@@ -66,8 +66,9 @@ nav:
         - IIIF Content Search: iiif-content-search.md
       - Fragaria Redirects: fragaria.md
       - Embargo & Access Restrictions: embargo.md
-      - Metadata API Module: open_api.md
-       - Configuration of Metadata View, an example: open_api.md
+      - Metadata API Module:
+        - How the Metadata API Module works: open_api.md
+        - Configuration of the Metadata View, an example: open_api_example.md
       - Experimental ML Tools: experimental_tools.md
     - Content and Metadata Tools:
       - Ingesting Your First Object: firstobject.md
