@@ -35,14 +35,14 @@ nav:
         - Moving from archipelago-deployment to archipelago-deployment-live: archipelago-deployment-live-moveToLive.md
         - Upgrading Archipelago 1.3.0 to 1.4.0 (Drupal 10.1 to 10.2.x): archipelago-deployment-live-UpgradeFrom1dot3.md
         - Upgrading Solr: archipelago-deployment-live-search_solr_index.md
-        - Upgrading Drupal 9 to Drupal 10 (1.1.0 to 1.3.0): archipelago-deployment-live-UpgradeDrupalD9toD10.md  
+        - Upgrading Drupal 9 to Drupal 10 (1.1.0 to 1.3.0): archipelago-deployment-live-UpgradeDrupalD9toD10.md
         - Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3): archipelago-deployment-live-upgradeFromD8ToD9.md
         - Upgrading from 1.0.0-RC3 to 1.0.0: archipelago-deployment-live-upgradeFromRC3.md
         - Updating Docker Containers: archipelago-deployment-live-updatingContainers.md
       - Utility Scripts: utility_scripts.md
       - Managing Bots: security_bots.md
       - DevOps Q&A:
-        - Debugging PHP in Archipelago: xdebug.md 
+        - Debugging PHP in Archipelago: xdebug.md
         - Min.io Logging: generalqa_minio_logging.md
         - SMTP Configuration: generalqa_smtp_configuration.md
         - Twig Modules Configuration: generalqa_twig_modules_configuration.md
@@ -52,7 +52,7 @@ nav:
       - Primer on Display Modes: webformsasinput.md
       - IIIF Server Settings: iiif_server_settings.md
       - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
-      - Strawberry Runners Background/Post-Processing: 
+      - Strawberry Runners Background/Post-Processing:
         - strawberryrunners.md
         - Pager and OCR Post-processor: strawberryrunners_pager_ocr.md
         - Webpage Text Post-processor: strawberryrunners_webpage_text.md
@@ -66,7 +66,9 @@ nav:
         - IIIF Content Search: iiif-content-search.md
       - Fragaria Redirects: fragaria.md
       - Embargo & Access Restrictions: embargo.md
-      - Metadata API Module: open_api.md
+      - Metadata API Module:
+        - How the Metadata API Module works: open_api.md
+        - Configuration of the Metadata View, an example: open_api_example.md
       - Experimental ML Tools: experimental_tools.md
     - Content and Metadata Tools:
       - Ingesting Your First Object: firstobject.md
@@ -81,7 +83,7 @@ nav:
         - find_and_replace.md
         - Text Based Find and Replace: find_and_replace_action_text.md
         - Webform Find and Replace: find_and_replace_action_webform.md
-        - JSON Patch Find and Replace: find_and_replace_action_json_patch.md 
+        - JSON Patch Find and Replace: find_and_replace_action_json_patch.md
       - Twig Templates and Archipelago:
         - metadatatwigs.md
         - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
@@ -101,7 +103,7 @@ nav:
       - Archipelago Presentations & Events: presentations_events.md
       - Archipelagos in the Wild: inthewild.md
       - Code of Conduct: CODE_OF_CONDUCT.md
-      - Archipelago Commons Logo Usage Guidelines: archipelag-logo-usage.md    
+      - Archipelago Commons Logo Usage Guidelines: archipelag-logo-usage.md
       - Contributing Code/Docs:
         - Archipelago Contribution Guide: giveortake.md
         - Documentation:
@@ -160,7 +162,7 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
 extra:
   social:
     - icon: fontawesome/brands/github
