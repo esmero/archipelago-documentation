@@ -2107,9 +2107,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#understanding-the-oai-pmh-api-url-format" class="md-nav__link">
+  <a href="#understanding-the-archipelago-digital-object-and-oai-pmh-api-url-format" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding the OAI-PMH API URL format
+      Understanding the Archipelago Digital Object and OAI-PMH API URL format
     </span>
   </a>
   
@@ -2126,27 +2126,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#update-the-default-view-to-retrieve-the-correct-collection" class="md-nav__link">
+  <a href="#update-the-default-oai-pmh-view-to-specify-your-chosen-collection" class="md-nav__link">
     <span class="md-ellipsis">
-      Update the default view to retrieve the correct collection
+      Update the default OAI-PMH View to specify your chosen Collection
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#find-the-set-uuid-of-the-collection" class="md-nav__link">
+  <a href="#identify-the-uuid-of-the-chosen-collection" class="md-nav__link">
     <span class="md-ellipsis">
-      Find the set UUID of the collection
+      Identify the UUID of the chosen Collection
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#craft-your-new-url" class="md-nav__link">
+  <a href="#craft-your-specified-oai-pmh-url" class="md-nav__link">
     <span class="md-ellipsis">
-      Craft your new URL
+      Craft your specified OAI-PMH URL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-to-view-the-oai-pmh-rest-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions to view the OAI-PMH REST URL
     </span>
   </a>
   
@@ -2154,15 +2163,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#permissions-to-view-the-rest-url" class="md-nav__link">
-    <span class="md-ellipsis">
-      Permissions to view the REST URL
-    </span>
-  </a>
   
 </li>
         
@@ -3559,9 +3559,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#understanding-the-oai-pmh-api-url-format" class="md-nav__link">
+  <a href="#understanding-the-archipelago-digital-object-and-oai-pmh-api-url-format" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding the OAI-PMH API URL format
+      Understanding the Archipelago Digital Object and OAI-PMH API URL format
     </span>
   </a>
   
@@ -3578,27 +3578,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#update-the-default-view-to-retrieve-the-correct-collection" class="md-nav__link">
+  <a href="#update-the-default-oai-pmh-view-to-specify-your-chosen-collection" class="md-nav__link">
     <span class="md-ellipsis">
-      Update the default view to retrieve the correct collection
+      Update the default OAI-PMH View to specify your chosen Collection
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#find-the-set-uuid-of-the-collection" class="md-nav__link">
+  <a href="#identify-the-uuid-of-the-chosen-collection" class="md-nav__link">
     <span class="md-ellipsis">
-      Find the set UUID of the collection
+      Identify the UUID of the chosen Collection
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#craft-your-new-url" class="md-nav__link">
+  <a href="#craft-your-specified-oai-pmh-url" class="md-nav__link">
     <span class="md-ellipsis">
-      Craft your new URL
+      Craft your specified OAI-PMH URL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-to-view-the-oai-pmh-rest-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions to view the OAI-PMH REST URL
     </span>
   </a>
   
@@ -3606,15 +3615,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#permissions-to-view-the-rest-url" class="md-nav__link">
-    <span class="md-ellipsis">
-      Permissions to view the REST URL
-    </span>
-  </a>
   
 </li>
         
@@ -3666,37 +3666,37 @@
 
 <h1 id="notes-for-adapting-archipelagos-default-oai-pmh-configurations-for-an-ilsdiscovery-layer">Notes for Adapting Archipelago's Default OAI-PMH Configurations for an ILS/Discovery Layer</h1>
 <p>This set of notes can be used to assist with using Archipelago's Metadata API Module and provided default OAI-PMH configurations to expose Archipelago collections and objects to an ILS/Discovery Layer. </p>
-<p>In the example scenario described below, an institution has the Metadata API Module installed and configured in their Archipelago instance already, and is using the Archipelago default OAI-PMH Dublin Core (DC) Twig template without any changes for their local metadata schema.</p>
 <p>Please refer to the <a href="../open_api/">main Metadata API Module documentation</a> for more information about the provided default configurations and templates.</p>
 <h2 id="example-of-using-the-metadata-api-module">Example of using the Metadata API Module</h2>
+<p>In the example scenario described below, an institution has the Metadata API Module installed and configured in their Archipelago instance already, and is using the Archipelago default OAI-PMH Dublin Core (DC) Twig template without any changes for their local metadata schema.</p>
 <h3 id="open-archives-initiative-protocol-for-metadata-harvesting-oai-pmh">Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH)</h3>
-<p>The OAI-PMH protocol allows for sharing information from one repository to another. In this example we are interested in sharing a collection of objects we have in Archipelago with an ILS/Discovery Layer index. The metadata API module helpfully translates Drupal node IDs and strawberry field UUIDs into the proper formats for sharing. The Metadata API module comes out of the box with a Dublin Core (DC) Twig template which we can use without modification for this example.</p>
-<h3 id="understanding-the-oai-pmh-api-url-format">Understanding the OAI-PMH API URL format</h3>
-<p>The URL that one uses in Archipelago is set via code and a Drupal view. The view limits the returned data to a singular collection by default. This collection value is the isMemberOf ID in your metadata. The URL also contains a set value and that is the UUID of the collection as found in the collection metadata.</p>
-<p>The URL will always look like the following:</p>
-<div class="highlight"><pre><span></span><code>https://YOUR-DOMAIN/ap/api/oai_pmh/oai?verb<span class="o">=</span>ListRecords<span class="p">&amp;</span><span class="nv">set</span><span class="o">=</span>SET-UUID<span class="p">&amp;</span><span class="nv">metadataPrefix</span><span class="o">=</span>oai_dc
+<p>As found on the <a href="https://www.openarchives.org/pmh/">Open Archives Initiative Protocol for Metadata Harvesting</a> homepage, "(OAI-PMH) is a low-barrier mechanism for repository interoperability. Data Providers are repositories that expose structured metadata via OAI-PMH. Service Providers then make OAI-PMH service requests to harvest that metadata. OAI-PMH is a set of six verbs or services that are invoked within HTTP."</p>
+<h3 id="understanding-the-archipelago-digital-object-and-oai-pmh-api-url-format">Understanding the Archipelago Digital Object and OAI-PMH API URL format</h3>
+<p>In Archipelago, the URL used for OAI-PMH requests is defined by code and a configurable Drupal View. The View limits the returned data to a singular collection by default. The collection value is the <code>ismemberof</code> ID found in an Archipelago Digital Object Collections's Raw JSON metadata. For every Archipelago Digital Object/Collection, the URL will be formatted to include the UUID of the ADO/Collection like so: <code>http(s)://yourdomain.ext/do/{node_uuid}/</code></p>
+<p>Per the standards requried for OAI-PMH and the configured site base URL, the OAI-PMH URL will always look something like the following:</p>
+<div class="highlight"><pre><span></span><code>https://yourdomain.ext/ap/api/oai_pmh/oai?verb<span class="o">=</span>ListRecords<span class="p">&amp;</span><span class="nv">set</span><span class="o">=</span>SET-UUID<span class="p">&amp;</span><span class="nv">metadataPrefix</span><span class="o">=</span>oai_dc
 </code></pre></div>
 <h3 id="configuring-archipelago-to-output-the-collection-you-want-to-share">Configuring Archipelago to output the collection you want to share</h3>
-<h4 id="update-the-default-view-to-retrieve-the-correct-collection">Update the default view to retrieve the correct collection</h4>
+<h4 id="update-the-default-oai-pmh-view-to-specify-your-chosen-collection">Update the default OAI-PMH View to specify your chosen Collection</h4>
 <ol>
-<li>Go to any object that is part of your collection as a logged in user with the proper permissions to view ADO Tools.</li>
-<li>Select ADO Tools, and search the metadata for "ismemberof". You will see a numeric ID, make a note of that ID to use in the next step.</li>
-<li>With your ismemberof ID known go to the view:</li>
-<li>Structure -&gt; Views, and then select edit for the view OAI exposed entity reference</li>
-<li>In the filter criteria, find the filter named Content datasource: 🍓 Strawberry (Descriptive Metadata source) » entity_sbf_entity_reference_ismemberof » ID (= 25)</li>
-<li>Select that filter and change the ID value to the one you have just made note of. In the following screenshot, it has bee set to an ID of 292.</li>
+<li>Go to any digital object that is part of your Collection as a logged in user with the proper permissions to view 'ADO Tools' OR the 'Raw JSON' Formatter.</li>
+<li>Either select the 'ADO Tools' tab at the top of a digital object page OR open the 'Raw JSON' section found at the bottom of a digital object page. Search the JSON metadata for "ismemberof". You will see a numeric ID, make a note of that ID to use in the next step.</li>
+<li>With your <code>ismemberof</code> ID in hand, go to the related OAI-PMH View:</li>
+<li><code>Structure -&gt; Views</code>, and then select Edit for the View titled "OAI exposed entity reference".</li>
+<li>In the Filter Criteria section of the View, find the Filter named "Content datasource: 🍓 Strawberry (Descriptive Metadata source) » entity_sbf_entity_reference_ismemberof » ID (= 25)"</li>
+<li>Select that Filter and change the ID value to the one you have just made note of. In the following screenshot, the ID has been changed to "292".</li>
 </ol>
 <p><a class="glightbox" href="../images/view-metadata-entity_sbf_entity_reference_ismemberof.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Updating the Filter ID" src="../images/view-metadata-entity_sbf_entity_reference_ismemberof.png" /></a></p>
-<h4 id="find-the-set-uuid-of-the-collection">Find the set UUID of the collection</h4>
+<h4 id="identify-the-uuid-of-the-chosen-collection">Identify the UUID of the chosen Collection</h4>
 <ol>
-<li>Navigate in Archipelago to the top level collection that your object from earlier is a member of.</li>
-<li>Retrieve the UUID of the collection. You may have this printed on your default TWIG display for a collection already, if so copy and paste. If not, select ADO Tools and in the metadate find the "node_uuid" and make note of that.</li>
+<li>Navigate to the top level Collection that you identified before, the one you just set the node ID for in the OAI-PMH corresponding Drupal View.</li>
+<li>Retrieve the UUID of the Collection. As stated earlier on this page, by default, for every Archipelago Digital Object/Collection, the URL will be formatted to include the UUID of the ADO/Collection like so: <code>http(s)://yourdomain.ext/do/{node_uuid}/</code>. You can retrieve that UUID from the default URL. You may also have the UUID value included on your default Metadata Display Twig Template for Collections already. You can also use the 'ADO Tools' tab to identifty <code>"node_uuid"</code>. </li>
 </ol>
-<h4 id="craft-your-new-url">Craft your new URL</h4>
-<p>With your view updated and knowing your node_uuid you can form your API URL. Put your node_uuid as the set parameter, it would look like this, but with your node_uuid.</p>
+<h4 id="craft-your-specified-oai-pmh-url">Craft your specified OAI-PMH URL</h4>
+<p>With your View updated to reference the chosen Collection's Drupal Node ID and your Archipelago UUID ("node_uuid" value), you can now form your needed OAI-PMH API URL. Set your <code>node_uuid</code> value as the set parameter, as shown in this example (but replacing with your chose Collection's UUID value):</p>
 <div class="highlight"><pre><span></span><code>https://YOUR-DOMAIN/api/oai_pmh/oai?verb<span class="o">=</span>ListRecords<span class="p">&amp;</span><span class="nv">set</span><span class="o">=</span>67acd47d-3cfd-427d-ada0-79b918e028e5<span class="p">&amp;</span><span class="nv">metadataPrefix</span><span class="o">=</span>oai_dc
 </code></pre></div>
-<p>The metadata API module configuration is what is taking that node_uuid and passing it back as the set for the API.</p>
+<p>The Metadata API module will use the provided UUID value to identify the chosen Collection as the <a href="https://www.openarchives.org/OAI/openarchivesprotocol.html#Set">'set' parameter defined in the OAI-PMH API specs</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="w">                        </span><span class="o">{</span>
 <span class="w">                            </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;set&quot;</span>,
 <span class="w">                            </span><span class="s2">&quot;in&quot;</span>:<span class="w"> </span><span class="s2">&quot;query&quot;</span>,
@@ -3710,8 +3710,8 @@
 <span class="w">                                </span><span class="s2">&quot;format&quot;</span>:<span class="w"> </span><span class="s2">&quot;uuid&quot;</span>
 <span class="w">                            </span><span class="o">}</span>
 </code></pre></div>
-<h3 id="permissions-to-view-the-rest-url">Permissions to view the REST URL</h3>
-<p>If you plan to share the URL to be consumed by other tools note that by default only the administrator role can access the URL. You need to allow view permission by role by selecting which role you want to allow access via the View/access Metadata APIs permission at /admin/people/permissions.</p>
+<h4 id="permissions-to-view-the-oai-pmh-rest-url">Permissions to view the OAI-PMH REST URL</h4>
+<p>In the likely event that you are planning to share the URL to be referenced by another system, such as your instution's ILS/Discovery Layer, note that by default only the 'administrator' role has permissions set to access the URL. You need to update the default View permissions by selecting which additional roles you want to be able to access the OAI-PMH URL. You can review and update the appropriate the Metadata API permissions at <code>~/admin/people/permissions</code>.</p>
 <p>__</p>
 <p>Return to the <a href="../">Archipelago Documentation main page</a>.</p>
 
@@ -3736,7 +3736,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 4, 2025 18:36:07">April 4, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 4, 2025 19:20:07">April 4, 2025</span>
   </span>
 
     
