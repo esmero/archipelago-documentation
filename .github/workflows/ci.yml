@@ -63,3 +63,4 @@ jobs:
           #mike deploy --update-aliases 1.5.0 &&
           mike deploy --update-aliases --push 1.5.0 || echo "No changes to commit"
           mike set-default --push 1.5.0 || echo "No changes to commit"
+
