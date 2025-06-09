@@ -33,7 +33,7 @@ Running Archipelago Commons on a live public instance using SSL with Blob/Object
 
 ### Recommended for production
 
-- 16 Gbytes of RAM (AWS EC2 m6g.xlarge - Graviton) 4 CPUs, Single SSD Drive of 200 Gbytes, optional: one magnetic Drive of 1TB for Caches/Temp files/Backups.
+- 16 Gbytes of RAM or more (AWS EC2 m6g.xlarge - Graviton) 4 CPUs, Single SSD Drive of 200 Gbytes, optional: one magnetic Drive of 1TB for Caches/Temp files/Backups.
 
 ### OS:
 
@@ -99,7 +99,7 @@ In your location of choice clone this repo
 ```shell
 git clone https://github.com/esmero/archipelago-deployment-live
 cd archipelago-deployment-live
-git checkout 1.4.0
+git checkout 1.5.0
 ```
 
 ### Step 3. Setup your enviromental variables for Docker/Services
@@ -132,6 +132,9 @@ MINIO_FOLDER_PREFIX_MEDIA=media/
 MINIO_BUCKET_CACHE=THE_NAME_OF_YOUR_S3_BUCKET_FOR_IIIF_STORAGE
 MINIO_FOLDER_PREFIX_CACHE=iiifcache/
 REDIS_PASSWORD=YOUR_REDIS_PASSWORD
+PHP_MEMORY_LIMIT=MEGABYTES_OF_MEMORY_ASSIGNED_TO_PHP_WEB
+PHP_CLI_MEMORY_LIMIT=MEGABYTES_OF_MEMORY_ASSIGNED_TO_PHP_CLI_DRUSH_HYDROPONICS
+ANUBIS_PRIVATE_KEY=ed25519_PRIVATE_KEY
 ```
 
 What does each key mean?
@@ -147,6 +150,9 @@ What does each key mean?
 - `MINIO_BUCKET_CACHE`: The name of your IIIF Cache storage Bucket. May be the same as `MINIO_BUCKET_MEDIA`. If different make sure your your `MINIO_ACCESS_KEY` and/or IAM role ACL have permission to read write to this one too.
 - `MINIO_FOLDER_PREFIX_CACHE`:  The `folder` (a prefix really) where Cantaloupe will/can write its `iiif` caches. `iiifcache/` is a _lovely_ name we use a lot. **IMPORTANT:** Always terminate these with a `/`.
 - `REDIS_PASSWORD`: Password for your REDIS (Drupal Cache/Queue storage) if you decide to enable the Drupal REDIS module.
+- `PHP_MEMORY_LIMIT`: PHP's (esmero-php) Memory limit in Megabytes without the "M" at the end(so just a number). Defaults to 1024
+- `PHP_CLI_MEMORY_LIMIT`: PHP's (esmero-php) client (the php command, drush and hydropinics) Memory limit in Megabytes without the "M" at the end(so just a number) t. Defaults to PHP_MEMORY_LIMIT. If you are going to enabled Search API Background indexing, new to 1.5.0, then this number should be ideally 2048 so the queue can render/ingest/and do its Drupal magic.
+- `ANUBIS_PRIVATE_KEY`: New to 1.5.0. Because we (and you) do not like ML Bots (or people making money out of your data and re-selling the output as canned/simplified answers), you should put the output of ```openssl rand -hex 32``` in this key.
 
 `IMPORTANT NOTE`: For AWS EC2. If you selected an `IAM role` for your server when setting it up/deploying it, `min.io` will use the AWS EC2-backed internal API to request access to your S3. This means the ROLE itself needs to have read/write access (ACL) to the given Bucket(s) and your key/secrets won't be able to override that. Please do not ignore this note. It will save you a LOT of frustration and coffee. You can also run an EC2 instace without a given IAM and in that case just the ACCESS_KEY/SECRET will matter.
 
@@ -204,7 +210,10 @@ NOTE: If you want to use AWS S3 storage for the self signed version replace the 
 
 ### Step 4. First Run
 
+Be sure you are in your archipelago-deployment-live (Git) base folder.
+
 #### First Permissions
+
 
 ```shell
 sudo chown 8183:8183 config_storage/iiifconfig/cantaloupe.properties
@@ -212,6 +221,52 @@ sudo chown -R 8183:8183 data_storage/iiifcache
 sudo chown -R 8183:8183 data_storage/iiiftmp
 sudo chown -R 8983:8983 data_storage/solrcore
 ```
+
+#### Second, Choices (so many)
+
+Now now. Archipelago 1.5.0 now ships with [Anubis](https://anubis.techaro.lol/), an OSS Application Firewall/middleware that will alliviate some very valid concerns (and late night server hiccups, even costs related issues) related to AI/ML/Bot swarms and unwanted traffic. But you need to choose. And you need to choose now. Want it enabled immediately? Later on? In any case we need to do some setup. Not hard. Let's get started.
+
+##### Anubis needs some rules (even if you decide not to run them yet)
+
+The following files are needed by Anubis and mounted on start. if you get this wrong a `docker logs -f esmero-anubis` will tell you the rules are not present and traffic will be blocked. Don't get it wrong!
+
+```
+cp config_storage/anubisconfig/allow.yaml.default config_storage/anubisconfig/allow.yaml
+cp config_storage/anubisconfig/deny.yaml.default config_storage/anubisconfig/deny.yaml
+cp config_storage/anubisconfig/botPolicies.yaml.default config_storage/anubisconfig/botPolicies.yaml 
+```
+
+We also want your Internet domain to be setup here. Replace in the following command `your.domain.org` with the domain you setup in your `.env` file and run:
+
+```
+sed -i 's/http:\/\/esmero-web/https:\/\/your.domain.org/g' config_storage/anubisconfig/allow.yaml 
+```
+
+And! Make sure (please) you did not skip the documentation (did you? gosh.) and by doing so also forgot to setup the ANUBIS_PRIVATE_KEY key in `.env`?
+
+If you indeed forgot, run:
+
+```openssl rand -hex 32```
+
+Edit `.env` and add the output of that command to the `ANUBIS_PRIVATE_KEY=` enviromental key. 
+
+##### Anubis wants to know if they are invited
+
+In old times you would just trust our default NGINX template setup. We do know you ended modifying it and tunning it. So. Now you have two templates. One that invites Anubis to intercept all traffic and help with bots, one that works as before and only includes our most basic IP Deny and Agent based rules (which are also present in Anubi's one).
+
+If you want Anubis to be intercepting NGINX traffic from the moment your services go up, please do this
+
+```
+cp config_storage/nginxconfig/template/nginx.conf.template.anubis config_storage/nginxconfig/template/nginx.conf.template
+```
+
+If you want to run NGINX first without any intercepting please do. You can always come back to this later on.
+
+```
+cp config_storage/nginxconfig/template/nginx.conf.template.default config_storage/nginxconfig/template/nginx.conf.template
+```
+
+That is all. DONE! Danke!
 
 #### Actual first run
 
@@ -272,7 +327,7 @@ docker exec -ti esmero-php bash -c 'scripts/archipelago/setup.sh'
 
 And now you can deploy Drupal! 
 
-**IMPORTANT:** Make sure you replace in the following command inside `root:MYSQL_ROOT_PASSWORD` the `MYSQL_ROOT_PASSWORD` string with the **value** you used/assigned in your `.env` file for `MYSQL_ROOT_PASSWORD`. And replace `ADMIN_PASSWORD` with a password that is safe and you won't forget! That passwords is for your Drupal super user (uid:0).
+**IMPORTANT:** Make sure you replace in the following command inside `root:MYSQL_ROOT_PASSWORD` the `MYSQL_ROOT_PASSWORD` string with the **value** you used/assigned in your `.env` file for `MYSQL_ROOT_PASSWORD`. And replace `ADMIN_PASSWORD` with a password that is safe and you won't forget! That passwords is for your Drupal super user (uid:1).
 
 ```shell
 docker exec -ti -u www-data esmero-php bash -c "cd web;../vendor/bin/drush -y si --verbose --existing-config --db-url=mysql://root:MYSQL_ROOT_PASSWORD@esmero-db/drupal --account-name=admin --account-pass=ADMIN_PASSWORD -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;"
