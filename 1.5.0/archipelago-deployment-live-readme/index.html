@@ -1201,6 +1201,39 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#second-choices-so-many" class="md-nav__link">
+    <span class="md-ellipsis">
+      Second, Choices (so many)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Second, Choices (so many)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anubis-needs-some-rules-even-if-you-decide-not-to-run-them-yet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anubis needs some rules (even if you decide not to run them yet)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anubis-wants-to-know-if-they-are-invited" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anubis wants to know if they are invited
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#actual-first-run" class="md-nav__link">
     <span class="md-ellipsis">
       Actual first run
@@ -3920,6 +3953,39 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#second-choices-so-many" class="md-nav__link">
+    <span class="md-ellipsis">
+      Second, Choices (so many)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Second, Choices (so many)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anubis-needs-some-rules-even-if-you-decide-not-to-run-them-yet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anubis needs some rules (even if you decide not to run them yet)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anubis-wants-to-know-if-they-are-invited" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anubis wants to know if they are invited
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#actual-first-run" class="md-nav__link">
     <span class="md-ellipsis">
       Actual first run
@@ -4084,7 +4150,7 @@
 </ul>
 <h3 id="recommended-for-production">Recommended for production</h3>
 <ul>
-<li>16 Gbytes of RAM (AWS EC2 m6g.xlarge - Graviton) 4 CPUs, Single SSD Drive of 200 Gbytes, optional: one magnetic Drive of 1TB for Caches/Temp files/Backups.</li>
+<li>16 Gbytes of RAM or more (AWS EC2 m6g.xlarge - Graviton) 4 CPUs, Single SSD Drive of 200 Gbytes, optional: one magnetic Drive of 1TB for Caches/Temp files/Backups.</li>
 </ul>
 <h3 id="os">OS:</h3>
 <ul>
@@ -4139,7 +4205,7 @@ sudo<span class="w"> </span>reboot
 <p>In your location of choice clone this repo</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/esmero/archipelago-deployment-live
 <span class="nb">cd</span><span class="w"> </span>archipelago-deployment-live
-git<span class="w"> </span>checkout<span class="w"> </span><span class="m">1</span>.4.0
+git<span class="w"> </span>checkout<span class="w"> </span><span class="m">1</span>.5.0
 </code></pre></div>
 <h3 id="step-3-setup-your-enviromental-variables-for-dockerservices">Step 3. Setup your enviromental variables for Docker/Services</h3>
 <h4 id="setup-enviromentals">Setup Enviromentals</h4>
@@ -4162,6 +4228,9 @@ MINIO_FOLDER_PREFIX_MEDIA=media/
 MINIO_BUCKET_CACHE=THE_NAME_OF_YOUR_S3_BUCKET_FOR_IIIF_STORAGE
 MINIO_FOLDER_PREFIX_CACHE=iiifcache/
 REDIS_PASSWORD=YOUR_REDIS_PASSWORD
+PHP_MEMORY_LIMIT=MEGABYTES_OF_MEMORY_ASSIGNED_TO_PHP_WEB
+PHP_CLI_MEMORY_LIMIT=MEGABYTES_OF_MEMORY_ASSIGNED_TO_PHP_CLI_DRUSH_HYDROPONICS
+ANUBIS_PRIVATE_KEY=ed25519_PRIVATE_KEY
 </code></pre></div>
 <p>What does each key mean?</p>
 <ul>
@@ -4176,6 +4245,9 @@ REDIS_PASSWORD=YOUR_REDIS_PASSWORD
 <li><code>MINIO_BUCKET_CACHE</code>: The name of your IIIF Cache storage Bucket. May be the same as <code>MINIO_BUCKET_MEDIA</code>. If different make sure your your <code>MINIO_ACCESS_KEY</code> and/or IAM role ACL have permission to read write to this one too.</li>
 <li><code>MINIO_FOLDER_PREFIX_CACHE</code>:  The <code>folder</code> (a prefix really) where Cantaloupe will/can write its <code>iiif</code> caches. <code>iiifcache/</code> is a <em>lovely</em> name we use a lot. <strong>IMPORTANT:</strong> Always terminate these with a <code>/</code>.</li>
 <li><code>REDIS_PASSWORD</code>: Password for your REDIS (Drupal Cache/Queue storage) if you decide to enable the Drupal REDIS module.</li>
+<li><code>PHP_MEMORY_LIMIT</code>: PHP's (esmero-php) Memory limit in Megabytes without the "M" at the end(so just a number). Defaults to 1024</li>
+<li><code>PHP_CLI_MEMORY_LIMIT</code>: PHP's (esmero-php) client (the php command, drush and hydropinics) Memory limit in Megabytes without the "M" at the end(so just a number) t. Defaults to PHP_MEMORY_LIMIT. If you are going to enabled Search API Background indexing, new to 1.5.0, then this number should be ideally 2048 so the queue can render/ingest/and do its Drupal magic.</li>
+<li><code>ANUBIS_PRIVATE_KEY</code>: New to 1.5.0. Because we (and you) do not like ML Bots (or people making money out of your data and re-selling the output as canned/simplified answers), you should put the output of <code>openssl rand -hex 32</code> in this key.</li>
 </ul>
 <p><code>IMPORTANT NOTE</code>: For AWS EC2. If you selected an <code>IAM role</code> for your server when setting it up/deploying it, <code>min.io</code> will use the AWS EC2-backed internal API to request access to your S3. This means the ROLE itself needs to have read/write access (ACL) to the given Bucket(s) and your key/secrets won't be able to override that. Please do not ignore this note. It will save you a LOT of frustration and coffee. You can also run an EC2 instace without a given IAM and in that case just the ACCESS_KEY/SECRET will matter.</p>
 <p>Now that you know, you also know that these values <strong>should not be shared</strong> and this <code>.env</code> file <strong>should not be committed/kept in version control</strong>. Please be careful.</p>
@@ -4207,12 +4279,37 @@ cp<span class="w"> </span>deploy/ec2-docker/docker-compose-selfsigned.yml<span c
 <p>Make sure your logged in user can read/write to it.</p>
 <p>NOTE: If you want to use AWS S3 storage for the self signed version replace the minio Service yaml block with this <a href="https://github.com/esmero/archipelago-deployment-live/blob/e90cf7701f1ae8e0a580a0901aaadb669baa21fd/deploy/ec2-docker/docker-compose-aws-s3.yml#L108-L125">Service Block</a> in your new <code>deploy/ec2-docker/docker-compose.yml</code>. You can mix and match services and even remove all <code>:cached</code> statements for <em>improved</em> R/W volumen performance.</p>
 <h3 id="step-4-first-run">Step 4. First Run</h3>
+<p>Be sure you are in your archipelago-deployment-live (Git) base folder.</p>
 <h4 id="first-permissions">First Permissions</h4>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span><span class="m">8183</span>:8183<span class="w"> </span>config_storage/iiifconfig/cantaloupe.properties
 sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">8183</span>:8183<span class="w"> </span>data_storage/iiifcache
 sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">8183</span>:8183<span class="w"> </span>data_storage/iiiftmp
 sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">8983</span>:8983<span class="w"> </span>data_storage/solrcore
 </code></pre></div>
+<h4 id="second-choices-so-many">Second, Choices (so many)</h4>
+<p>Now now. Archipelago 1.5.0 now ships with <a href="https://anubis.techaro.lol/">Anubis</a>, an OSS Application Firewall/middleware that will alliviate some very valid concerns (and late night server hiccups, even costs related issues) related to AI/ML/Bot swarms and unwanted traffic. But you need to choose. And you need to choose now. Want it enabled immediately? Later on? In any case we need to do some setup. Not hard. Let's get started.</p>
+<h5 id="anubis-needs-some-rules-even-if-you-decide-not-to-run-them-yet">Anubis needs some rules (even if you decide not to run them yet)</h5>
+<p>The following files are needed by Anubis and mounted on start. if you get this wrong a <code>docker logs -f esmero-anubis</code> will tell you the rules are not present and traffic will be blocked. Don't get it wrong!</p>
+<div class="highlight"><pre><span></span><code>cp config_storage/anubisconfig/allow.yaml.default config_storage/anubisconfig/allow.yaml
+cp config_storage/anubisconfig/deny.yaml.default config_storage/anubisconfig/deny.yaml
+cp config_storage/anubisconfig/botPolicies.yaml.default config_storage/anubisconfig/botPolicies.yaml 
+</code></pre></div>
+<p>We also want your Internet domain to be setup here. Replace in the following command <code>your.domain.org</code> with the domain you setup in your <code>.env</code> file and run:</p>
+<div class="highlight"><pre><span></span><code>sed -i &#39;s/http:\/\/esmero-web/https:\/\/your.domain.org/g&#39; config_storage/anubisconfig/allow.yaml 
+</code></pre></div>
+<p>And! Make sure (please) you did not skip the documentation (did you? gosh.) and by doing so also forgot to setup the ANUBIS_PRIVATE_KEY key in <code>.env</code>?</p>
+<p>If you indeed forgot, run:</p>
+<p><code>openssl rand -hex 32</code></p>
+<p>Edit <code>.env</code> and add the output of that command to the <code>ANUBIS_PRIVATE_KEY=</code> enviromental key. </p>
+<h5 id="anubis-wants-to-know-if-they-are-invited">Anubis wants to know if they are invited</h5>
+<p>In old times you would just trust our default NGINX template setup. We do know you ended modifying it and tunning it. So. Now you have two templates. One that invites Anubis to intercept all traffic and help with bots, one that works as before and only includes our most basic IP Deny and Agent based rules (which are also present in Anubi's one).</p>
+<p>If you want Anubis to be intercepting NGINX traffic from the moment your services go up, please do this</p>
+<div class="highlight"><pre><span></span><code>cp config_storage/nginxconfig/template/nginx.conf.template.anubis config_storage/nginxconfig/template/nginx.conf.template
+</code></pre></div>
+<p>If you want to run NGINX first without any intercepting please do. You can always come back to this later on.</p>
+<div class="highlight"><pre><span></span><code>cp config_storage/nginxconfig/template/nginx.conf.template.default config_storage/nginxconfig/template/nginx.conf.template
+</code></pre></div>
+<p>That is all. DONE! Danke!</p>
 <h4 id="actual-first-run">Actual first run</h4>
 <p>Time to spin our docker containers for the first time. We will start all without going into background so log/error checking is easier, especially if you have selected a Valid/Signed Cert choice and also want to be sure S3 keys/access are working.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>deploy/ec2-docker
@@ -4247,7 +4344,7 @@ docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </spa
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;scripts/archipelago/setup.sh&#39;</span>
 </code></pre></div>
 <p>And now you can deploy Drupal! </p>
-<p><strong>IMPORTANT:</strong> Make sure you replace in the following command inside <code>root:MYSQL_ROOT_PASSWORD</code> the <code>MYSQL_ROOT_PASSWORD</code> string with the <strong>value</strong> you used/assigned in your <code>.env</code> file for <code>MYSQL_ROOT_PASSWORD</code>. And replace <code>ADMIN_PASSWORD</code> with a password that is safe and you won't forget! That passwords is for your Drupal super user (uid:0).</p>
+<p><strong>IMPORTANT:</strong> Make sure you replace in the following command inside <code>root:MYSQL_ROOT_PASSWORD</code> the <code>MYSQL_ROOT_PASSWORD</code> string with the <strong>value</strong> you used/assigned in your <code>.env</code> file for <code>MYSQL_ROOT_PASSWORD</code>. And replace <code>ADMIN_PASSWORD</code> with a password that is safe and you won't forget! That passwords is for your Drupal super user (uid:1).</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;cd web;../vendor/bin/drush -y si --verbose --existing-config --db-url=mysql://root:MYSQL_ROOT_PASSWORD@esmero-db/drupal --account-name=admin --account-pass=ADMIN_PASSWORD -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;&quot;</span>
 </code></pre></div>
 <h3 id="step-6-users-and-initial-content">Step 6. Users and initial Content.</h3>
@@ -4325,7 +4422,7 @@ Please review <a href="https://github.com/esmero/archipelago-deployment-live/blo
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 26, 2024 18:28:47 UTC">August 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 9, 2025 20:33:59 UTC">June 9, 2025</span>
   </span>
 
     
