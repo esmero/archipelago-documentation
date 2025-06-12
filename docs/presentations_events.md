@@ -30,7 +30,7 @@
     - Session 3: Search & Solr Overview
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/vA6kYIzUdoyd63ERG3Lo0iMZqe7RZrAsHfMP01khYj5agdWkfvmdMXGVVqVOGbCr.Pu5cexb4keuxM8C0)
      
-- 🍓[Archipelago 1.4.0 Release Announcement (Junly 2024)](https://groups.google.com/g/archipelago-commons/c/DEsbblWPg4U/m/C3JfuPIhAgAJ)
+- 🍓[Archipelago 1.4.0 Release Announcement (June 2024)](https://groups.google.com/g/archipelago-commons/c/DEsbblWPg4U/m/C3JfuPIhAgAJ)
 
 - IIIF AI/ML Community Group (July 2024)
     - [Creating a Better Balance: Respectful Reuse & ML/AI Tags in IIIF Manifests](https://www.youtube.com/watch?v=FUHHLq34NRc). Allison Sherrick.
