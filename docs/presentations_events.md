@@ -12,7 +12,7 @@
     - Archipelago Commons: blooms, new growth and healthy trees from the community garden.  Allison Sherrick, Diego Pino Navarro.
     - A year of Hybrid ML/AI cataloging aid in Archipelago Commons: The state, the lessons and probable future(s) explained through a real production implementation. Diego Pino Navarro, Allison Sherrick.
     - Managing Access to Open Repositories in the Age of Generative AI. Allison Sherrick, Scott Prater, Martin Klein, Petr Knoth, Matteo Cancellieri.
-    - Helping to preserve and share Oaxaca's history. Lisa Lamot, Matt Ferrill.
+    - Helping to preserve and share Oaxaca's history. Lisa Lamont, Matt Ferrill.
 
 - 🍓[Archipelago 1.5.0 Release Announcement (June 2025)](https://groups.google.com/g/archipelago-commons/c/hBUvGBJT-uk/m/PQo0Sv8dAgAJ?pli=1&mc_cid=f499d7c63d) and [detailed change log document](https://docs.google.com/document/d/1D08IboWq8pEapqczSv_7nhJENSVbvpLyB5M0Fg9A78A/edit?tab=t.0)
 
