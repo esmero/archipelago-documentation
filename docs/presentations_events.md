@@ -57,14 +57,18 @@
     - [Working with Open-Schema JSON in Archipelago. Allison Sherrick, Diego Pino Navarro, Martha Tenney, Joanna DiPasquale, Corinne Chatnik.](https://osf.io/dx3fm/)
     - [Slaying the Migration Dragon: Approaches to Navigating an Open Source System Migration. Lisa McFall, Sarah Walden McGowan, Brenden McCarthy, Shay Foley.](https://osf.io/aymhd/)
 
-- [Archipelago 1.3.0 Release Announcement (October 31, 2023)](https://groups.google.com/g/archipelago-commons/c/zvJOVzC1WnQ/m/7A-vW5HBBgAJ) 
+- 🍓 [Archipelago 1.3.0 Release Announcement (October 31, 2023)](https://groups.google.com/g/archipelago-commons/c/zvJOVzC1WnQ/m/7A-vW5HBBgAJ) 
 
 - IIIF Annual Conference (June 2023)
     - [Experimental IIIF Kitchen using Archipelago. Pino Navarro, Diego; Sherrick, Allison.](https://tinyurl.com/apiiif2023)
     - [Mapping an Engineer Through IIIF. Monger, Jenifer J.; McCarthy, Brenden; Pino Navarro, Diego; Sherrick, Allison.](https://tinyurl.com/2x9mshx5)
 
 - Into Archipelago Commons: Access, Innovation and Community in Modern Archives.  Monger, Jenifer J.; McCarthy, Brenden; Corinne Chatnik. (June 2023)
+
 - Implementing Archipelago: An Innovative, Community Driven, Open-Source Repository. Corinne Chatnik, Union College; Martha Tenney, Barnard College. (June 2023)
+
+- 🍓 [Archipelago 1.1.0 - Release Announcement (June 2023)](https://groups.google.com/g/archipelago-commons/c/2irBijaK8Xs/m/JDaXqUl-BAAJ)
+
 - [For the Love of Data and Ourselves: The Bumpy, Technical Road to Modern Archives. Monger, Jenifer J.; McCarthy, Brenden. (January/February 2023)](https://mydigitalpublication.com/publication/?m=30305&l=1)
 
 ## 2022
@@ -83,7 +87,7 @@
 
 - [Migration, Collaboration and Innovation with Archipelago Commons. Monger, Jenifer J. (September 2022)](https://www.capitalarchivist.org/caa/wp-content/uploads/2022/09/fall_winter_2022-23.pdf#page=7)
 
-- 🍓 [Archipelago 1.0.0 - August 2022 Release Announcement (August 2022)](https://groups.google.com/g/archipelago-commons/c/UHMUdtZ8BFU/m/W8hnZ1guAgAJ) and [updated Specs and Features List](https://docs.google.com/document/d/1_fAcDBLaIilKF_mFXPFzDeWz_aqz7AHxSPwYTd21Nug/edit?usp=sharing)   
+- 🍓 [Archipelago 1.0.0 - Release Announcement (August 2022)](https://groups.google.com/g/archipelago-commons/c/UHMUdtZ8BFU/m/W8hnZ1guAgAJ) and [updated Specs and Features List](https://docs.google.com/document/d/1_fAcDBLaIilKF_mFXPFzDeWz_aqz7AHxSPwYTd21Nug/edit?usp=sharing)   
 
 - Open Repositories June 2022
     - [Collaborative W3C Web Annotations using Annotorious in Archipelago and computer vision explorations as cataloger aids. Pino Navarro, Diego; Simon, Rainer.](https://docs.google.com/presentation/d/1qnRh_IX4Z5HmQPBb-iABXT5EtBPeaTJoG1bCbmPh2WE/edit?usp=sharing)
