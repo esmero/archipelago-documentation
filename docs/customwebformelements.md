@@ -28,6 +28,9 @@ _(*found under Composite Elements in "Add Element" menu)_
 * Multi LoD Source Agent Items
     - Provides a form element to reconciliate Agents against Multiple sources of Agents
 
+* Multi LoD Source Scholarly Agent Items
+    - Provides a form element to reconciliate Agents against Multiple Sources of Scholarly Agents.
+
 * Wikidata
     - Provides a form element to reconciliate against Wikidata Items and Agents
         - via [Wikidata Action API](https://www.mediawiki.org/wiki/API:Main_page)
@@ -40,6 +43,9 @@ _(*found under Composite Elements in "Add Element" menu)_
 
 * Location GEOJSON (Nominatim--Open Street Maps)
     - Provides a form element to collect valid location information (address, longitude, latitude, geolocation) using [Nominatim/Openstreetmap](https://nominatim.openstreetmap.org/ui/search.html) open API
+
+* ORCID
+    - Provides a form element to reconciliate against [ORCID](https://info.orcid.org)
 
 * PubMed MeSH Suggest
     - Provides a form element to reconciliate against [PubMed MeSH](https://id.nlm.nih.gov/mesh/)
@@ -72,6 +78,9 @@ _(*also found under Composite Elements in "Add Element" menu)_
 * Import Metadata in CSV format from a File
     - Provides a form element for uploading, saving a file and parsing the content as metadata/webform submission data.
 
+* TuS (resumable) file
+    - Provides a form element for uploading and saving an file.
+
 ### Date/Time Elements:
 
 * Multi Format Date and Date Range
@@ -97,7 +106,7 @@ _(*also found under Composite Elements in "Add Element" menu)_
 #### But wait there's more!
 
 You can review the coding behind these custom elements here:
-<https://github.com/esmero/webform_strawberryfield/tree/1.3.0/src/Element>
+[https://github.com/esmero/webform_strawberryfield/tree/1.5.0/src/Element](https://github.com/esmero/webform_strawberryfield/tree/1.5.0/src/Element)
 
 ___
 
