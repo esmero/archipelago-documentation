@@ -22,10 +22,10 @@ You can access AMI through the `AMI Sets` tab on the main Content page found at 
 * [Spreadsheet Formatting Overview](ami_spreadsheet_overview.md)
 * [Configure the Google Sheets API](googleapi.md)
 * [Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets](AMIviaSpreadsheets.md)
-* [Using AMI's Linked Data Reconciliation](/ami_lod_rec.md)
+* [Using AMI's Linked Data Reconciliation](ami_lod_rec.md)
 * [Using AMI's Update Operations](ami_update.md)
 * [Using the I7 Solr Importer](I7solrImporter.md)
-* [Please see the Archipelago Late 2022 Workshop Series Recordings for AMI related recordings](presentations_events.md#2022)
+* [Archipelago Late 2022 Workshop Series Recordings for AMI related recordings](presentations_events.md#2022)
 
 ## AMI Overview and Under-the-Hood Explanations
 
