@@ -6,6 +6,18 @@
 
     [METRO's Digital Services Team](https://metro.org/digital-services) facilitated many different internal training sessions throughout 2020-2022. If you and your team need access to any of these sessions that were recorded, please [contact us](mailto:repositorysupport@metro.org). Thank you!
 
+## 2025
+
+- Open Repositories Annual Conference (June 2025):
+    - Archipelago Commons: blooms, new growth and healthy trees from the community garden.  Allison Sherrick, Diego Pino Navarro.
+    - A year of Hybrid ML/AI cataloging aid in Archipelago Commons: The state, the lessons and probable future(s) explained through a real production implementation. Diego Pino Navarro, Allison Sherrick.
+    - Managing Access to Open Repositories in the Age of Generative AI. Allison Sherrick, Scott Prater, Martin Klein, Petr Knoth, Matteo Cancellieri.
+    - Helping to preserve and share Oaxaca's history. Lisa Lamot, Matt Ferrill.
+
+- IIIF Annual Conference (June 2025):
+    - "Flitting" the Digital Collections overhaul at Edinburgh. Scott Renton, Lucy Pennington.
+    - 📺 Recording made available on the [IIIF Youtube channel](https://www.youtube.com/@IIIF-Consortium).
+
 ## 2024
 
 - Archipelago Summer Workshop Series (August 2024) : [registration details here](https://groups.google.com/g/archipelago-commons/c/T3im4-gp8og/m/rySJxCvPAwAJ)
