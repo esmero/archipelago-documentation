@@ -7,9 +7,25 @@ tags:
 
 # Archipelago Multi-Importer (AMI)
 
-[Archipelago Multi-Importer (AMI)](https://github.com/esmero/ami) is a module for batch/bulk/mass ingests of Archipelago digital objects (ADOs) and collections. AMI also enables you to perform batch administrative actions, such as updating, patching/revising, or deleting digital objects and collections. AMI's Solr Importer plugin can be used to create AMI ingests and migrating content from existing Solr-sourcable digital repositories (such as Islandora 7).
+[Archipelago Multi-Importer (AMI)](https://github.com/esmero/ami) is a module for batch/bulk/mass ingests of Archipelago digital objects (ADOs) and collections. AMI also enables you to perform batch administrative actions, such as updating, patching/revising, or deleting digital objects and collections. AMI's Solr Importer plugin can be used to create AMI ingests and migrating content from existing Solr-sourcable digital repositories (such as I7). Archipelago's 1.5.0 Release also introduced an EAD Sync Plugin for ingesting and updating EAD finding aid and container list digital objects, and AMI Set Actions. With AMI Set Actions, you can now patch, export, publish, delete, and trigger post processing using Archipelago's background processing capabilities.
 
 ![AMI Overview Diego Doodle](images/AMI_Overview_Diego_Doodle.jpg)
+
+## Getting started with AMI
+
+You can access AMI through the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`.
+
+![AMI Sets List Updated](images/AMIsetsList_1-5-0.png)
+
+## AMI Guides
+
+* [Spreadsheet Formatting Overview](ami_spreadsheet_overview.md)
+* [Configure the Google Sheets API](googleapi.md)
+* [Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets](AMIviaSpreadsheets.md)
+* [Using AMI's Linked Data Reconciliation](/ami_lod_rec.md)
+* [Using AMI's Update Operations](ami_update.md)
+* [Using the I7 Solr Importer](I7solrImporter.md)
+* [Please see the Archipelago Late 2022 Workshop Series Recordings for AMI related recordings](presentations_events.md#2022)
 
 ## AMI Overview and Under-the-Hood Explanations
 
@@ -35,25 +51,23 @@ Please review the [Metadata in Archipelago overview](metadatainarchipelago.md) t
     
     This module also provides a simple search/replace text VBO action (handles JSON as text) and a full blown JSONPATCH VBO action to batch modify ADOs. The last one is extremely powerful permitting multiple operations at the same time with tests. E.g replace a certain value, add another value, remove another value only if a certain test (e.g “type”:”Article” and “date_of_digital”: “2020-09-09”) matches. If any tests fail the whole operation will be canceled for that ADO. An incomplete “Webform” VBO action is present but not fully functional yet. This one allows you to choose a Webform, a certain element inside that Webform and then find and replace using the same Interface you would see while editing/adding a new ADO via the web form workflow.
 
-## Getting started with AMI
 
-You can access AMI through the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`.
-
-![AMI Sets List Updated](images/AMIsetsList_updated_2022-11.jpg)
 
 ## Google Sheets API Configuration
 
-If you plan on using the Google Sheets Importer option, you will need to [Configure the Google Sheets API](googleapi.md).
+If you plan on using the Google Sheets Importer option, you will need to [Configure the Google Sheets API](googleapi.md). 
+
+*_2025 Note about Google API Changes: please be aware that Google APIs have been shifting authentication requirements frequently, so you may need to review additional documentation from Google in order to proceed with Google Sheets API configuration.*_
 
 ## Example Spreadsheet/CSV
 
-Please refer to or use a fresh/new copy of the [Demo Archipelago Digital Objects (ADOs) spreadsheet](https://github.com/esmero/archipelago-deployment/blob/1.0.0/d8content/ami_set_entity_01.csv) to import a small set of Digital Objects, using the same assets part of the [One-Step Demo content ingest guide](archipelago-deployment-democontent.md).
+Please refer to or use a fresh/new copy of the [Demo Archipelago Digital Objects (ADOs) spreadsheet](https://github.com/esmero/archipelago-deployment/blob/1.5.0/d8content/ami_set_entity_01.csv) to import a small set of Digital Objects, using the same assets part of the [One-Step Demo content ingest guide](archipelago-deployment-democontent.md).
 
 ## Example JSON template
 
-This JSON template can be used during the Data Transformation (step 3) of your AMI Import. This particular template corresponds with the metadata elements found in the Default Descriptive Metadata and Default Digital Object Collection webforms shipped with Archipelago 1.0.0.
+This JSON template can be used during the Data Transformation (step 3) of your AMI Import. This particular template corresponds with the metadata elements found in the Default Descriptive Metadata and Default Digital Object Collection webforms shipped with Archipelago.
 
-??? info "Click to view the example 1.0.0 AMI JSON template"
+??? info "Click to view the very simple example 1.5.0 AMI JSON template"
     
     To use this template, copy and paste the JSON below directly into a new Metadata Display, found here for a local `http://localhost:8001/metadatadisplay/list` or `http://yoursite.org/metadatadisplay/list`. Select `JSON` as the 'Primary mime type this Twig Template entity will generate as output' for this new Metadata Display.
     
