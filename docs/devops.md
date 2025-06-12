@@ -21,8 +21,8 @@ Installation is entirely [Dockerized](https://www.docker.com) and scripted with 
   esmero-web | NGNIX | Routes calls to esmero-php
   esmero-php | PHP-FPM | Has all binaries for postprocessing/exif/ocr/etc. Runs PHP code. 
   esmero-db | Database | AMD and INTEL processors: MYSQL 8<br />ARM processors: MariaDB 
-  esmero-minio | Storage                     | S3 API compatible Backend file and ADO as file storage. In a local it will do all the S3 stuff, on a live instance it can server as file routing to AWS S3, Azure Blob Storage, etc. 
-  esmero-solr | Solr |Currently version 9.1.1
+  esmero-minio | Storage | S3 API compatible Backend file and ADO as file storage. In a local it will do all the S3 stuff, on a live instance it can server as file routing to AWS S3, Azure Blob Storage, etc. 
+  esmero-solr | Solr | Currently version 9.8.4
   esmero-nlp | Natural Language Processing | NLP64 server for entity extraction, language detection, ML, etc.
   esmero-cantaloupe | IIIF Media Server| Customized Server used to provide IIIF Image API/Media access 
 
@@ -36,12 +36,14 @@ Installation is entirely [Dockerized](https://www.docker.com) and scripted with 
 - [Strawberry Runners](https://github.com/esmero/strawberry_runners)
 - [Archipelago Multi-Importer (AMI)](https://github.com/esmero/ami)
 - [Fragaria Redirects](https://github.com/esmero/fragaria)
+- [Strawberry Shortcake](https://github.com/esmero/strawberry_shortcake)
 
 Documentation related to the Strawberryfield modules can be found here: [Strawberryfields Forever](strawberryfields.md)
 
 ### Archipelago also extends these powerful tools:
 
 - [Annotorius](https://github.com/recogito/annotorious)
+- [Anubis](https://github.com/TecharoHQ/anubis)
 - [Drupal Webform Module](https://www.drupal.org/project/webform)
 - [International Image Interoperability Framework (IIIF)](https://iiif.io/)
 - [Internet Archive BookReader](https://github.com/internetarchive/bookreader)
