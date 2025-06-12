@@ -57,7 +57,7 @@ Please review the [Metadata in Archipelago overview](metadatainarchipelago.md) t
 
 If you plan on using the Google Sheets Importer option, you will need to [Configure the Google Sheets API](googleapi.md). 
 
-*_2025 Note about Google API Changes: please be aware that Google APIs have been shifting authentication requirements frequently, so you may need to review additional documentation from Google in order to proceed with Google Sheets API configuration.*_
+*2025 Note about Google API Changes: please be aware that Google APIs have been shifting authentication requirements frequently, so you may need to review additional documentation from Google in order to proceed with Google Sheets API configuration.*
 
 ## Example Spreadsheet/CSV
 
