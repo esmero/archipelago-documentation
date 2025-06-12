@@ -14,6 +14,8 @@
     - Managing Access to Open Repositories in the Age of Generative AI. Allison Sherrick, Scott Prater, Martin Klein, Petr Knoth, Matteo Cancellieri.
     - Helping to preserve and share Oaxaca's history. Lisa Lamot, Matt Ferrill.
 
+- 🍓[Archipelago 1.5.0 Release Announcement (June 2025)](https://groups.google.com/g/archipelago-commons/c/hBUvGBJT-uk/m/PQo0Sv8dAgAJ?pli=1&mc_cid=f499d7c63d) and [detailed change log document](https://docs.google.com/document/d/1D08IboWq8pEapqczSv_7nhJENSVbvpLyB5M0Fg9A78A/edit?tab=t.0)
+
 - IIIF Annual Conference (June 2025):
     - "Flitting" the Digital Collections overhaul at Edinburgh. Scott Renton, Lucy Pennington.
     - 📺 Recording made available on the [IIIF Youtube channel](https://www.youtube.com/@IIIF-Consortium).
@@ -27,6 +29,8 @@
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/O9a6mqfHvXzjbgGSzwFt9vPbSWH4UKkDOTTvEtmlnVoIgqOsJPFqX-e8ym95n6vp.B40Hg6nwB4bn7_oh)
     - Session 3: Search & Solr Overview
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/vA6kYIzUdoyd63ERG3Lo0iMZqe7RZrAsHfMP01khYj5agdWkfvmdMXGVVqVOGbCr.Pu5cexb4keuxM8C0)
+     
+- 🍓[Archipelago 1.4.0 Release Announcement (Junly 2024)](https://groups.google.com/g/archipelago-commons/c/DEsbblWPg4U/m/C3JfuPIhAgAJ)
 
 - IIIF AI/ML Community Group (July 2024)
     - [Creating a Better Balance: Respectful Reuse & ML/AI Tags in IIIF Manifests](https://www.youtube.com/watch?v=FUHHLq34NRc). Allison Sherrick.
