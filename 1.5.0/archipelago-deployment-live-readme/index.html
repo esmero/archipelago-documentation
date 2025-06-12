@@ -4216,7 +4216,7 @@ and editing it</p>
 <div class="highlight"><pre><span></span><code>nano<span class="w"> </span>deploy/ec2-docker/.env
 </code></pre></div>
 <p>The content of that file would be similar to this. 
-<code>Note</code>: There are a few extra commented lines at the end only used for: https://docs.archipelago.nyc/1.4.0/security_bots/ if you decide to go that way.</p>
+<code>Note</code>: There are a few extra commented lines at the end only used for: https://docs.archipelago.nyc/1.5.0/security_bots/ if you decide to go that way.</p>
 <div class="highlight"><pre><span></span><code>ARCHIPELAGO_ROOT=/home/ec2-user/archipelago-deployment-live
 ARCHIPELAGO_EMAIL=your@validemail.org
 ARCHIPELAGO_DOMAIN=your.domain.org
@@ -4364,7 +4364,7 @@ docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </spa
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;scripts/archipelago/deploy.sh&#39;</span>
 </code></pre></div>
 <p><strong>IMPORTANT:</strong>  <code>update_deployed.sh</code> is not needed when deploying for the first time and totally <strong>discouraged</strong> on a customized Archipelago. 
-If you make modifications to your <code>Twig templates</code>, that command will <strong>replace</strong> the ones shipped by us with fresh copies overwriting all your modifications. Only run to restore larger errors or when needing to update <strong>everything</strong> ones with newer versions and you don't care for your own customization. Please read https://docs.archipelago.nyc/1.4.0/utility_scripts/ for more ways of managing exporting/importing Metadata Display Entities (Twig templates).</p>
+If you make modifications to your <code>Twig templates</code>, that command will <strong>replace</strong> the ones shipped by us with fresh copies overwriting all your modifications. Only run to restore larger errors or when needing to update <strong>everything</strong> ones with newer versions and you don't care for your own customization. Please read https://docs.archipelago.nyc/1.5.0/utility_scripts/ for more ways of managing exporting/importing Metadata Display Entities (Twig templates).</p>
 <h3 id="step-7-set-your-public-iiif-server-url-to-your-actual-domain">Step 7. Set your public IIIF server URL to your actual domain</h3>
 <p>By default archipelago ships with a public facing and an internal facing IIIF Server URLs configured. These urls are used by a number of IIIF enabled viewers and need to be changed to reflect your new reality (a real Domain name and a proxied path!). These settings belong to the <code>strawberryfield/format_strawberryfield</code> module. </p>
 <p>First check your current settings:</p>
@@ -4381,7 +4381,7 @@ NOTE: We are passing the <code>-y</code> flag to <code>drush</code> avoid that w
 <p>Finally Done! Now you can log into your new Archipelago using <code>https</code> and start exploring. Thank you for following this guide!</p>
 <h2 id="deployment-on-arm64v8graviton-apple-m1-system">Deployment on ARM64/v8(Graviton, Apple M1) system:</h2>
 <p>This applies to AWS <code>m6g</code> and <code>t3g</code> Instances and is documented inline in this guide. Please open an <a href="https://github.com/esmero/archipelago-deployment-live/issues">ISSUE</a> in this repository if you run into any problems.
-Please review <a href="https://github.com/esmero/archipelago-deployment-live/blob/1.4.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml">https://github.com/esmero/archipelago-deployment-live/blob/1.4.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml</a> for more info.</p>
+Please review <a href="https://github.com/esmero/archipelago-deployment-live/blob/1.5.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml">https://github.com/esmero/archipelago-deployment-live/blob/1.5.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml</a> for more info.</p>
 <h3 id="how-do-i-know-my-architecture">How do I know my Architecture?</h3>
 <p>Run </p>
 <div class="highlight"><pre><span></span><code>uname<span class="w"> </span>-m<span class="w"> </span>
@@ -4422,7 +4422,7 @@ Please review <a href="https://github.com/esmero/archipelago-deployment-live/blo
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 9, 2025 20:33:59 UTC">June 9, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 12, 2025 14:21:46 UTC">June 12, 2025</span>
   </span>
 
     
