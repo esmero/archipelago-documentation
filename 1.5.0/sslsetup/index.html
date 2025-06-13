@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-setup-ssl-for-dockerarchipelago" class="md-skip">
+        <a href="#how-to-setup-ssl-for-a-local-archipelago-deployment-not-archipelago-deployment-live" class="md-skip">
           Skip to content
         </a>
       
@@ -934,18 +934,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#manual-configuration-steps-for-an-ec2-aws-server" class="md-nav__link">
+  <a href="#manual-configuration-steps-for-a-linux-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Manual Configuration Steps for an EC2 AWS Server
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-contributed-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      User contributed documentation:
+      Manual Configuration Steps for a Linux Server
     </span>
   </a>
   
@@ -3474,18 +3465,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#manual-configuration-steps-for-an-ec2-aws-server" class="md-nav__link">
+  <a href="#manual-configuration-steps-for-a-linux-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Manual Configuration Steps for an EC2 AWS Server
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-contributed-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      User contributed documentation:
+      Manual Configuration Steps for a Linux Server
     </span>
   </a>
   
@@ -3510,301 +3492,257 @@
   
 
 
-<h1 id="how-to-setup-ssl-for-dockerarchipelago">How to Setup SSL for Docker/Archipelago</h1>
-<p><em><em>Work-In-Progress Note</em> This documentation page is still under construction and content may change with future updates. Please use caution when implementing any instructions referenced herein, as there may be missing steps or corresponding configuration files. Thank you for your patience as we continue to update Archipelago's documentation.</em></p>
-<p>The steps found below describe one potential manual SSL configuration for Archipelago deployments. A <code>git clone</code> deployment option will be available for future releases.</p>
-<h3 id="manual-configuration-steps-for-an-ec2-aws-server">Manual Configuration Steps for an EC2 AWS Server</h3>
-<p>This process takes less than 10 minutes of reading YML files and editing a few files (described below) to get SSL running and setup with auto-renewal.</p>
+<h1 id="how-to-setup-ssl-for-a-local-archipelago-deployment-not-archipelago-deployment-live">How to Setup SSL for a local Archipelago Deployment (NOT Archipelago Deployment Live)</h1>
+<p><em><em>Note:</em> For a complete production deployment with SSL please follow the <a href="https://github.com/esmero/archipelago-deployment-live">Archipelago Deployment Live</a> strategy. This documentation is only meant for power users that need to expose a local/development deployment via a qualified Domain Name and SSL.</em></p>
+<p>The steps found below describe a potential manual SSL configuration for a local Archipelago deployment exposed to the internet using a qualified domain name and SSL. We will not move the Database, Solr or the actual Drupal Deployment folder in this documentation, only enable SSL using the existing local deployment file structure.</p>
+<h3 id="manual-configuration-steps-for-a-linux-server">Manual Configuration Steps for a Linux Server</h3>
+<p>Assuming you already have an <a href="https://github.com/esmero/archipelago-deployment">Archipelago deployment</a> that is exposed via HTTP via port <code>8001</code>, this process takes less than 10 minutes of reading YML files and editing the files (described below) to get SSL running and setup with auto-renewal.</p>
+<p>First: Make sure your Domain name is correctly resolving against your Server's Public IP address. We will use the same NGINX Docker container and setup our live instances uses, that includes an automatic request and renovation of SSL Certificates against https://certbot.eff.org.</p>
 <ol>
+<li>Open a terminal and <code>cd</code> into your cloned Archipelago Deployment github repository base folder. We will create , inside the /persistent folder (which already exists,) an extra folder structure via the following command.
+    <div class="highlight"><pre><span></span><code><span class="w">  </span>mkdir<span class="w"> </span>-p<span class="w"> </span>persistent/nginxconfig/template
+</code></pre></div></li>
 <li>
-<p>First, configure Certbot, following the instructions found on https://certbot.eff.org.</p>
-</li>
-<li>
-<p>Inside a /persistent partition, establish the following folder structure.
-<em>Note: you can keep the existing folder structure if you so choose. A benefit of the following structure is that it decouples the git clone of archipelago-deployment, which is made to be self sustainable and good for coding or smaller deployments.</em></p>
-<div class="highlight"><pre><span></span><code><span class="o">[</span>ec2-user@ip-17x-xx-x-xxx<span class="w"> </span>persistent<span class="o">]</span>$<span class="w"> </span>ls<span class="w"> </span>-lah
-total<span class="w"> </span>64K
-drwxr-xr-x<span class="w"> </span><span class="m">14</span><span class="w"> </span>root<span class="w">           </span>root<span class="w">  </span><span class="m">4</span>.0K<span class="w"> </span>Oct<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">23</span>:11<span class="w"> </span>.
-dr-xr-xr-x<span class="w"> </span><span class="m">19</span><span class="w"> </span>root<span class="w">           </span>root<span class="w">  </span><span class="m">275</span><span class="w"> </span>Dec<span class="w"> </span><span class="m">15</span><span class="w">  </span><span class="m">2019</span><span class="w"> </span>..
-drwxr-xr-x<span class="w">  </span><span class="m">8</span><span class="w">       </span><span class="m">999</span><span class="w">  </span><span class="m">999</span><span class="w">   </span><span class="m">4096</span><span class="w"> </span>Oct<span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">20</span>:07<span class="w"> </span>db
-drwxr-xr-x<span class="w"> </span><span class="m">13</span><span class="w"> </span>root<span class="w">           </span>root<span class="w">  </span><span class="m">4</span>.0K<span class="w"> </span>Oct<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">23</span>:03<span class="w"> </span>drupal8
-drwxr-xr-x<span class="w">  </span><span class="m">5</span><span class="w">           </span><span class="m">8183</span><span class="w">  </span><span class="m">8183</span><span class="w">   </span><span class="m">4</span>.0K<span class="w"> </span>Feb<span class="w"> </span><span class="m">23</span><span class="w">  </span><span class="m">2020</span><span class="w"> </span>iiifcache
-drwxr-xr-x<span class="w">  </span><span class="m">2</span><span class="w"> </span>root<span class="w">           </span>root<span class="w">  </span><span class="m">4</span>.0K<span class="w"> </span>Feb<span class="w"> </span><span class="m">23</span><span class="w">  </span><span class="m">2020</span><span class="w"> </span>iiifconfig
-drwxr-xr-x<span class="w">  </span><span class="m">4</span><span class="w"> </span>root<span class="w">           </span>root<span class="w">  </span><span class="m">4</span>.0K<span class="w"> </span>Oct<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:45<span class="w"> </span>nginx_conf
-drwxr-xr-x<span class="w">  </span><span class="m">3</span><span class="w"> </span>root<span class="w">           </span>root<span class="w">  </span><span class="m">4</span>.0K<span class="w"> </span>Feb<span class="w"> </span><span class="m">26</span><span class="w">  </span><span class="m">2019</span><span class="w"> </span>solrconfig
-drwxr-xr-x<span class="w">  </span><span class="m">3</span><span class="w">           </span><span class="m">8983</span><span class="w"> </span><span class="m">8983</span><span class="w">  </span><span class="m">4</span>.0K<span class="w"> </span>Feb<span class="w"> </span><span class="m">26</span><span class="w">  </span><span class="m">2019</span><span class="w"> </span>solrcore
-</code></pre></div>
-<p>To get to this point, create a git clone of archipelago deployment and then copy the content of the /persistent out of the repo folder into this structure. The original (or what is left) archipelago-deployment ends inside a drupal8 folder here.</p>
-</li>
-<li>
-<p>Copy and paste the following to create a local copy of this file:</p>
+<p>Inside the new <code>template</code> folder create a new file named <code>nginx.conf.template</code> with the following content.</p>
 <details class="info">
-<summary>docker-compose.yml</summary>
-<p>**Be sure to replace youremail@gmail.com with your email address.</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.5&#39;</span>
-<span class="w"> </span><span class="nt">services</span><span class="p">:</span>
-<span class="w">   </span><span class="nt">web</span><span class="p">:</span>
-<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-web</span>
-<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">staticfloat/nginx-certbot</span>
-<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-<span class="w">     </span><span class="nt">environment</span><span class="p">:</span>
-<span class="w">       </span><span class="nt">CERTBOT_EMAIL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;youremail@gmail.com&quot;</span>
-<span class="w">     </span><span class="nt">ports</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;80:80&quot;</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;443:443&quot;</span>
-<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/nginx_conf/conf.d:/etc/nginx/user.conf.d:ro</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/nginx_conf/certbot_extra_domains:/etc/nginx/certbot/extra_domains:ro</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/drupal8:/var/www/html:cached</span>
-<span class="w">     </span><span class="nt">depends_on</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">solr</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">php</span>
-<span class="w">     </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">     </span><span class="nt">networks</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
-<span class="w">   </span><span class="nt">php</span><span class="p">:</span>
-<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-php</span>
-<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;esmero/php-7.3-fpm:latest&quot;</span>
-<span class="w">     </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">     </span><span class="nt">networks</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
-<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${PWD}:/var/www/html:cached</span>
-<span class="w">   </span><span class="nt">solr</span><span class="p">:</span>
-<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-solr</span>
-<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;solr:7.5.0&quot;</span>
-<span class="w">     </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">     </span><span class="nt">ports</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8983:8983&quot;</span>
-<span class="w">     </span><span class="nt">networks</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
-<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/solrcore:/opt/solr/server/solr/mycores:cached</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/solrconfig:/drupalconfig:cached</span>
-<span class="w">     </span><span class="nt">entrypoint</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker-entrypoint.sh</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">solr-precreate</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drupal</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/drupalconfig</span>
-<span class="w">   </span><span class="c1"># see https://hub.docker.com/_/mysql/</span>
-<span class="w">   </span><span class="nt">db</span><span class="p">:</span>
-<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:5.7</span>
-<span class="w">     </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--max_allowed_packet=256M</span>
-<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-db</span>
-<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-<span class="w">     </span><span class="nt">environment</span><span class="p">:</span>
-<span class="w">       </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmerodb</span>
-<span class="w">     </span><span class="nt">networks</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
-<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/db:/var/lib/mysql:cached</span>
-<span class="w">   </span><span class="nt">iiif</span><span class="p">:</span>
-<span class="w">     </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-cantaloupe</span>
-<span class="w">     </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;esmero/cantaloupe-s3:4.1.6&quot;</span>
-<span class="w">     </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-<span class="w">     </span><span class="nt">ports</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8183:8182&quot;</span>
-<span class="w">     </span><span class="nt">networks</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
-<span class="w">     </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/iiifconfig:/etc/cantaloupe</span>
-<span class="w">       </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/persistent/iiifcache:/var/cache/cantaloupe</span>
-<span class="w"> </span><span class="nt">networks</span><span class="p">:</span>
-<span class="w">   </span><span class="nt">host-net</span><span class="p">:</span>
-<span class="w">     </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
-<span class="w">   </span><span class="nt">esmero-net</span><span class="p">:</span>
-<span class="w">     </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
-<span class="w">     </span><span class="nt">internal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div>
-</details>
-<p><em>Note: This file shows how the folders in Step 1 are being used, and how SSL is being automatically deployed and renewed (without any human interaction other than starting the docker-compose and watching the logs).</em></p>
-</li>
-<li>
-<p>Now copy and paste the following to create a local copy of this file:</p>
-<details class="info">
-<summary>ngnix.conf</summary>
-<p>**Be sure to replace all instances of yoursite.org with your own domain.</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c1"># goes into /persistent/nginx_conf/conf.d/nginx.conf</span>
-<span class="w"> </span>upstream<span class="w"> </span>cantaloupe<span class="w"> </span><span class="o">{</span>
-<span class="w">  </span>server<span class="w">  </span>esmero-cantaloupe:8182<span class="p">;</span>
-<span class="w">  </span><span class="o">}</span>
+<summary>nginx.conf.template</summary>
+<div class="highlight"><pre><span></span><code>upstream<span class="w"> </span>cantaloupe<span class="w"> </span><span class="o">{</span>
+<span class="w"> </span>server<span class="w"> </span>esmero-cantaloupe:8182<span class="p">;</span>
+<span class="w"> </span>keepalive<span class="w"> </span><span class="m">32</span><span class="p">;</span>
+<span class="o">}</span>
 
-<span class="w">  </span>server<span class="w"> </span><span class="o">{</span>
-<span class="w">    </span>listen<span class="w">              </span><span class="m">443</span><span class="w"> </span>ssl<span class="p">;</span>
-<span class="w">    </span>server_name<span class="w">         </span>yoursite.org<span class="p">;</span>
-<span class="w">    </span>ssl_certificate<span class="w">     </span>/etc/letsencrypt/live/yourstie.org/fullchain.pem<span class="p">;</span>
-<span class="w">    </span>ssl_certificate_key<span class="w"> </span>/etc/letsencrypt/live/yoursite.org/privkey.pem<span class="p">;</span>
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">   </span>listen<span class="w">              </span><span class="m">443</span><span class="w"> </span>ssl<span class="p">;</span>
+<span class="w">   </span>server_name<span class="w">         </span><span class="si">${</span><span class="nv">FQDN</span><span class="si">}</span><span class="p">;</span>
+<span class="w">   </span>ssl_certificate<span class="w">     </span>/etc/letsencrypt/live/<span class="si">${</span><span class="nv">FQDN</span><span class="si">}</span>/fullchain.pem<span class="p">;</span>
+<span class="w">   </span>ssl_certificate_key<span class="w"> </span>/etc/letsencrypt/live/<span class="si">${</span><span class="nv">FQDN</span><span class="si">}</span>/privkey.pem<span class="p">;</span>
+<span class="w">   </span>client_max_body_size<span class="w"> </span>512M<span class="p">;</span><span class="w"> </span><span class="c1">## Match with PHP from FPM container</span>
 
-<span class="w">     </span>client_max_body_size<span class="w"> </span>512M<span class="p">;</span><span class="w"> </span><span class="c1">## Match with PHP from FPM container</span>
+<span class="w">   </span>root<span class="w"> </span>/var/www/html/web<span class="p">;</span><span class="w"> </span><span class="c1">## &lt;-- Your only path reference.</span>
 
-<span class="w">    </span>root<span class="w"> </span>/var/www/html/web<span class="p">;</span><span class="w"> </span><span class="c1">## &lt;-- Your only path reference.</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="nv">$http_user_agent</span><span class="w"> </span>~*<span class="w"> </span><span class="o">(</span>go<span class="se">\-</span>http<span class="p">|</span>zgrab<span class="p">|</span>mj12bot<span class="p">|</span>meta<span class="se">\-</span>externalagent<span class="p">|</span>oai<span class="se">\-</span>searchbot<span class="p">|</span>tiktok<span class="p">|</span>tiktokspider<span class="p">|</span>lplinkcheck<span class="p">|</span>netcrawl<span class="p">|</span>npbot<span class="p">|</span>AliyunSecBot<span class="p">|</span>bytedance<span class="p">|</span>bytespider<span class="p">|</span>gptbot<span class="p">|</span>semrush<span class="p">|</span>petalbot<span class="p">|</span>amazonbot<span class="p">|</span>ahrefsbot<span class="p">|</span>zhanzhang<span class="p">|</span>semrushbot<span class="p">|</span>brightbot<span class="p">|</span>imagesiftbot<span class="p">|</span>barkrowler<span class="p">|</span>friendlycrawler<span class="p">|</span>turnitin<span class="p">|</span>claudebot<span class="p">|</span>python-requests<span class="p">|</span>aiohttp<span class="p">|</span>semanticscholarbot<span class="p">|</span>go<span class="se">\-</span>http<span class="se">\-</span>client<span class="p">|</span>facebookexternalhit<span class="o">))</span><span class="w"> </span><span class="o">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="m">444</span><span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
 
-<span class="w">    </span>fastcgi_send_timeout<span class="w"> </span>120s<span class="p">;</span>
-<span class="w">    </span>fastcgi_read_timeout<span class="w"> </span>120s<span class="p">;</span>
-<span class="w">    </span>fastcgi_pass_request_headers<span class="w"> </span>on<span class="p">;</span>
+<span class="w">   </span>fastcgi_send_timeout<span class="w"> </span>120s<span class="p">;</span>
+<span class="w">   </span>fastcgi_read_timeout<span class="w"> </span>120s<span class="p">;</span>
+<span class="w">   </span>fastcgi_pass_request_headers<span class="w"> </span>on<span class="p">;</span>
+<span class="w">   </span>proxy_connect_timeout<span class="w"> </span>60s<span class="p">;</span>
+<span class="w">   </span>proxy_send_timeout<span class="w"> </span>120s<span class="p">;</span>
+<span class="w">   </span>proxy_read_timeout<span class="w"> </span>300s<span class="p">;</span>
 
-<span class="w">    </span>fastcgi_buffers<span class="w"> </span><span class="m">16</span><span class="w"> </span>16k<span class="p">;</span>
-<span class="w">    </span>fastcgi_buffer_size<span class="w"> </span>32k<span class="p">;</span>
+<span class="w">   </span>fastcgi_buffers<span class="w"> </span><span class="m">16</span><span class="w"> </span>16k<span class="p">;</span>
+<span class="w">   </span>fastcgi_buffer_size<span class="w"> </span>32k<span class="p">;</span>
 
-<span class="w">    </span><span class="c1"># Cantaloupe proxypass</span>
-<span class="w">    </span>location<span class="w"> </span>/cantaloupe/<span class="w"> </span><span class="o">{</span>
-<span class="w">       </span>proxy_set_header<span class="w"> </span>X-Forwarded-Proto<span class="w"> </span><span class="nv">$scheme</span><span class="p">;</span>
-<span class="w">       </span>proxy_set_header<span class="w"> </span>X-Forwarded-Host<span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
-<span class="w">       </span>proxy_set_header<span class="w"> </span>X-Forwarded-Port<span class="w"> </span><span class="nv">$server_port</span><span class="p">;</span>
-<span class="w">       </span>proxy_set_header<span class="w"> </span>X-Forwarded-Path<span class="w"> </span>/cantaloupe/<span class="p">;</span>
-<span class="w">       </span>proxy_set_header<span class="w"> </span>X-Forwarded-For<span class="w"> </span><span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
-<span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="nv">$request_uri</span><span class="w"> </span>~*<span class="w"> </span><span class="s2">&quot;/cantaloupe/(.*)&quot;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
-<span class="w">         </span>proxy_pass<span class="w"> </span>http://cantaloupe/<span class="nv">$1</span><span class="p">;</span>
-<span class="w">       </span><span class="o">}</span>
-<span class="w">    </span><span class="o">}</span>
+<span class="w">   </span><span class="c1"># Please adapt to your needs</span>
+<span class="w">   </span>proxy_buffers<span class="w"> </span><span class="m">16</span><span class="w"> </span>16k<span class="p">;</span><span class="w">  </span>
+<span class="w">   </span>proxy_buffer_size<span class="w"> </span>16k<span class="p">;</span>
 
-<span class="w">    </span><span class="nv">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/favicon.ico<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span>log_not_found<span class="w"> </span>off<span class="p">;</span>
-<span class="w">        </span>access_log<span class="w"> </span>off<span class="p">;</span>
-<span class="w">    </span><span class="o">}</span>
+<span class="w">   </span><span class="c1">#gzip</span>
+<span class="w">   </span>gzip<span class="w"> </span>on<span class="p">;</span>
+<span class="w">   </span>gzip_disable<span class="w"> </span><span class="s2">&quot;msie6&quot;</span><span class="p">;</span>
 
-<span class="w">    </span><span class="nv">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/robots.txt<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span>allow<span class="w"> </span>all<span class="p">;</span>
-<span class="w">        </span>log_not_found<span class="w"> </span>off<span class="p">;</span>
-<span class="w">        </span>access_log<span class="w"> </span>off<span class="p">;</span>
-<span class="w">    </span><span class="o">}</span>
+<span class="w">   </span>gzip_vary<span class="w"> </span>on<span class="p">;</span>
+<span class="w">   </span>gzip_proxied<span class="w"> </span>any<span class="p">;</span>
+<span class="w">   </span>gzip_comp_level<span class="w"> </span><span class="m">6</span><span class="p">;</span>
+<span class="w">   </span>gzip_buffers<span class="w"> </span><span class="m">16</span><span class="w"> </span>8k<span class="p">;</span>
+<span class="w">   </span>gzip_http_version<span class="w"> </span><span class="m">1</span>.1<span class="p">;</span>
+<span class="w">   </span>gzip_min_length<span class="w"> </span><span class="m">256</span><span class="p">;</span>
+<span class="w">   </span>gzip_types
+<span class="w">     </span>application/atom+xml
+<span class="w">     </span>application/geo+json
+<span class="w">     </span>application/javascript
+<span class="w">     </span>application/x-javascript
+<span class="w">     </span>application/json
+<span class="w">     </span>application/ld+json
+<span class="w">     </span>application/manifest+json
+<span class="w">     </span>application/rdf+xml
+<span class="w">     </span>application/rss+xml
+<span class="w">     </span>application/xhtml+xml
+<span class="w">     </span>application/xml
+<span class="w">     </span>font/eot
+<span class="w">     </span>font/otf
+<span class="w">     </span>font/ttf
+<span class="w">     </span>image/svg+xml
+<span class="w">     </span>text/css
+<span class="w">     </span>text/javascript
+<span class="w">     </span>text/plain
+<span class="w">     </span>text/xml<span class="p">;</span>
 
-<span class="w">    </span><span class="c1"># Very rarely should these ever be accessed outside of your lan</span>
-<span class="w">    </span>location<span class="w"> </span>~*<span class="w"> </span><span class="se">\.</span><span class="o">(</span>txt<span class="p">|</span>log<span class="o">)</span>$<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span>deny<span class="w"> </span>all<span class="p">;</span>
-<span class="w">    </span><span class="o">}</span>
+<span class="w">   </span><span class="c1"># Cantaloupe proxypass</span>
+<span class="w">   </span>location<span class="w"> </span>/cantaloupe/<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span>proxy_http_version<span class="w"> </span><span class="m">1</span>.1<span class="p">;</span>
+<span class="w">      </span>proxy_set_header<span class="w">   </span><span class="s2">&quot;Connection&quot;</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="w">      </span>proxy_set_header<span class="w"> </span>X-Forwarded-Proto<span class="w"> </span><span class="nv">$scheme</span><span class="p">;</span>
+<span class="w">      </span>proxy_set_header<span class="w"> </span>X-Forwarded-Host<span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
+<span class="w">      </span>proxy_set_header<span class="w"> </span>X-Forwarded-Port<span class="w"> </span><span class="nv">$server_port</span><span class="p">;</span>
+<span class="w">      </span>proxy_set_header<span class="w"> </span>X-Forwarded-Path<span class="w"> </span>/cantaloupe/<span class="p">;</span>
+<span class="w">      </span>proxy_set_header<span class="w"> </span>X-Forwarded-For<span class="w"> </span><span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+<span class="w">      </span>proxy_read_timeout<span class="w"> </span>120s<span class="p">;</span><span class="w"> </span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="nv">$request_uri</span><span class="w"> </span>~*<span class="w"> </span><span class="s2">&quot;/cantaloupe/(.*)&quot;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>proxy_pass<span class="w"> </span>http://cantaloupe/<span class="nv">$1</span><span class="p">;</span>
+<span class="w">      </span><span class="o">}</span>
+<span class="w">   </span><span class="o">}</span>
 
-<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span><span class="se">\.</span>.*/.*<span class="se">\.</span>php$<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">403</span><span class="p">;</span>
-<span class="w">    </span><span class="o">}</span>
+<span class="w"> </span><span class="c1"># Tus upload to allow resumes </span>
+<span class="w"> </span>location<span class="w"> </span>~*<span class="w"> </span>/webform_strawberry/tus_upload<span class="w"> </span><span class="o">{</span>
+<span class="w">       </span>proxy_request_buffering<span class="w">  </span>off<span class="p">;</span>
+<span class="w">       </span>proxy_buffering<span class="w">          </span>off<span class="p">;</span>
+<span class="w">       </span>proxy_http_version<span class="w">       </span><span class="m">1</span>.1<span class="p">;</span>
+<span class="w">       </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri</span>/<span class="w"> </span>/index.php?<span class="nv">$request_uri</span><span class="p">;</span>
+<span class="w">  </span><span class="o">}</span><span class="w"> </span>
 
-<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span>^/sites/.*/private/<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">403</span><span class="p">;</span>
-<span class="w">    </span><span class="o">}</span>
 
-<span class="w">    </span><span class="c1"># Allow &quot;Well-Known URIs&quot; as per RFC 5785</span>
-<span class="w">    </span>location<span class="w"> </span>~*<span class="w"> </span>^/.well-known/<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span>allow<span class="w"> </span>all<span class="p">;</span>
-<span class="w">    </span><span class="o">}</span>
+<span class="w">  </span><span class="nv">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/favicon.ico<span class="w"> </span><span class="o">{</span>
+<span class="w">       </span>log_not_found<span class="w"> </span>off<span class="p">;</span>
+<span class="w">       </span>access_log<span class="w"> </span>off<span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
 
-<span class="w">    </span><span class="c1"># Block access to &quot;hidden&quot; files and directories whose names begin with a</span>
-<span class="w">    </span><span class="c1"># period. This includes directories used by version control systems such</span>
-<span class="w">    </span><span class="c1"># as Subversion or Git to store control files.</span>
-<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span><span class="o">(</span>^<span class="p">|</span>/<span class="o">)</span><span class="se">\.</span><span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">403</span><span class="p">;</span>
-<span class="w">    </span><span class="o">}</span>
+<span class="w">   </span><span class="nv">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/robots.txt<span class="w"> </span><span class="o">{</span>
+<span class="w">       </span>allow<span class="w"> </span>all<span class="p">;</span>
+<span class="w">       </span>log_not_found<span class="w"> </span>off<span class="p">;</span>
+<span class="w">       </span>access_log<span class="w"> </span>off<span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
 
-<span class="w">    </span>location<span class="w"> </span>/<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span>/index.php?<span class="nv">$query_string</span><span class="p">;</span><span class="w"> </span><span class="c1"># For Drupal &gt;= 7</span>
-<span class="w">    </span><span class="o">}</span>
+<span class="w">   </span><span class="c1"># Very rarely should .txt and .log ever be accessed</span>
+<span class="w">   </span><span class="c1"># But now we allow /do/ download endpoints to serve .txt and .log</span>
 
-<span class="w">    </span>location<span class="w"> </span>@rewrite<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span>rewrite<span class="w"> </span>^/<span class="o">(</span>.*<span class="o">)</span>$<span class="w"> </span>/index.php?q<span class="o">=</span><span class="nv">$1</span><span class="p">;</span>
-<span class="w">    </span><span class="o">}</span>
+<span class="w">  </span>location<span class="w"> </span>~*<span class="w"> </span>^<span class="o">(</span>?!/do/.+/<span class="o">(</span>file<span class="p">|</span>metadata<span class="o">)</span>/<span class="o">(</span>?!<span class="se">\.</span><span class="o">(</span>txt<span class="p">|</span>log<span class="o">)</span>$<span class="o">))</span>.*<span class="se">\.</span><span class="o">(</span>txt<span class="p">|</span>log<span class="o">)</span>$<span class="w"> </span><span class="o">{</span>
+<span class="w">       </span>deny<span class="w"> </span>all<span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
 
-<span class="w">    </span><span class="c1"># Don&#39;t allow direct access to PHP files in the vendor directory.</span>
-<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span>/vendor/.*<span class="se">\.</span>php$<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span>deny<span class="w"> </span>all<span class="p">;</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">404</span><span class="p">;</span>
-<span class="w">    </span><span class="o">}</span>
+<span class="w">   </span>location<span class="w"> </span>~<span class="w"> </span><span class="se">\.</span>.*/.*<span class="se">\.</span>php$<span class="w"> </span><span class="o">{</span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="m">403</span><span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
 
-<span class="w">    </span><span class="c1"># Allow Modules to be updated via UI (still we believe composer is the way)    </span>
-<span class="w">    </span>rewrite<span class="w"> </span>^/core/authorize.php/core/authorize.php<span class="o">(</span>.*<span class="o">)</span>$<span class="w"> </span>/core/authorize.php<span class="nv">$1</span><span class="p">;</span>
+<span class="w">   </span>location<span class="w"> </span>~<span class="w"> </span>^/sites/.*/private/<span class="w"> </span><span class="o">{</span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="m">403</span><span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
 
-<span class="w">    </span><span class="c1"># In Drupal 8, we must also match new paths where the &#39;.php&#39; appears in</span>
-<span class="w">    </span><span class="c1"># the middle, such as update.php/selection. The rule we use is strict,</span>
-<span class="w">    </span><span class="c1"># and only allows this pattern with the update.php front controller.</span>
-<span class="w">    </span><span class="c1"># This allows legacy path aliases in the form of</span>
-<span class="w">    </span><span class="c1"># blog/index.php/legacy-path to continue to route to Drupal nodes. If</span>
-<span class="w">    </span><span class="c1"># you do not have any paths like that, then you might prefer to use a</span>
-<span class="w">    </span><span class="c1"># laxer rule, such as:</span>
-<span class="w">    </span><span class="c1">#   location ~ \.php(/|$) {</span>
-<span class="w">    </span><span class="c1"># The laxer rule will continue to work if Drupal uses this new URL</span>
-<span class="w">    </span><span class="c1"># pattern with front controllers other than update.php in a future</span>
-<span class="w">    </span><span class="c1"># release.</span>
-<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span><span class="s1">&#39;\.php$|^/update.php&#39;</span><span class="w"> </span><span class="o">{</span>
-<span class="w">        </span>fastcgi_split_path_info<span class="w"> </span>^<span class="o">(</span>.+?<span class="se">\.</span>php<span class="o">)(</span><span class="p">|</span>/.*<span class="o">)</span>$<span class="p">;</span>
-<span class="w">        </span>include<span class="w"> </span>fastcgi_params<span class="p">;</span>
-<span class="w">        </span><span class="c1"># Block httpoxy attacks. See https://httpoxy.org/.</span>
-<span class="w">        </span>fastcgi_param<span class="w"> </span>HTTP_PROXY<span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
-<span class="w">        </span>fastcgi_param<span class="w"> </span>SCRIPT_FILENAME<span class="w"> </span><span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span>
-<span class="w">        </span>fastcgi_param<span class="w"> </span>PATH_INFO<span class="w"> </span><span class="nv">$fastcgi_path_info</span><span class="p">;</span>
-<span class="w">        </span>fastcgi_param<span class="w"> </span>PHP_VALUE<span class="w"> </span><span class="s2">&quot;upload_max_filesize=512M \n post_max_size=512M&quot;</span><span class="p">;</span>
-<span class="w">        </span>proxy_read_timeout<span class="w"> </span>900s<span class="p">;</span>
-<span class="w">        </span>fastcgi_intercept_errors<span class="w"> </span>on<span class="p">;</span>
-<span class="w">        </span>fastcgi_pass<span class="w"> </span>esmero-php:9000<span class="p">;</span>
-<span class="w">    </span><span class="o">}</span>
+<span class="w">   </span><span class="c1"># Allow &quot;Well-Known URIs&quot; as per RFC 5785</span>
+<span class="w">   </span>location<span class="w"> </span>~*<span class="w"> </span>^/.well-known/<span class="w"> </span><span class="o">{</span>
+<span class="w">       </span>allow<span class="w"> </span>all<span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
 
-<span class="w">     </span><span class="c1"># Fighting with Styles? This little gem is amazing.</span>
-<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span>^/sites/.*/files/styles/<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="c1"># For Drupal &gt;= 7</span>
-<span class="w">        </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span>@rewrite<span class="p">;</span>
-<span class="w">    </span><span class="o">}</span>
+<span class="w">   </span><span class="c1"># Block access to &quot;hidden&quot; files and directories whose names begin with a</span>
+<span class="w">   </span><span class="c1"># period. This includes directories used by version control systems such</span>
+<span class="w">   </span><span class="c1"># as Subversion or Git to store control files.</span>
+<span class="w">   </span>location<span class="w"> </span>~<span class="w"> </span><span class="o">(</span>^<span class="p">|</span>/<span class="o">)</span><span class="se">\.</span><span class="w"> </span><span class="o">{</span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="m">403</span><span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
 
-<span class="w">    </span><span class="c1"># Handle private files through Drupal.</span>
-<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span>^/system/files/<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="c1"># For Drupal &gt;= 7</span>
-<span class="w">        </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span>/index.php?<span class="nv">$query_string</span><span class="p">;</span>
-<span class="w">    </span><span class="o">}</span>
+<span class="w">   </span>location<span class="w"> </span>/<span class="w"> </span><span class="o">{</span>
+<span class="w">       </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span>/index.php?<span class="nv">$query_string</span><span class="p">;</span><span class="w"> </span><span class="c1"># For Drupal &gt;= 7</span>
+<span class="w">   </span><span class="o">}</span>
+
+<span class="w">   </span>location<span class="w"> </span>@rewrite<span class="w"> </span><span class="o">{</span>
+<span class="w">       </span>rewrite<span class="w"> </span>^/<span class="o">(</span>.*<span class="o">)</span>$<span class="w"> </span>/index.php?q<span class="o">=</span><span class="nv">$1</span><span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
+
+<span class="w">   </span><span class="c1"># Don&#39;t allow direct access to PHP files in the vendor directory.</span>
+<span class="w">   </span>location<span class="w"> </span>~<span class="w"> </span>/vendor/.*<span class="se">\.</span>php$<span class="w"> </span><span class="o">{</span>
+<span class="w">       </span>deny<span class="w"> </span>all<span class="p">;</span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="m">404</span><span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
+
+<span class="w">   </span><span class="c1"># Allow Modules to be updated via UI (still we believe composer is the way)</span>
+<span class="w">   </span>rewrite<span class="w"> </span>^/core/authorize.php/core/authorize.php<span class="o">(</span>.*<span class="o">)</span>$<span class="w"> </span>/core/authorize.php<span class="nv">$1</span><span class="p">;</span>
+
+<span class="w">   </span><span class="c1"># In Drupal 8, we must also match new paths where the &#39;.php&#39; appears in</span>
+<span class="w">   </span><span class="c1"># the middle, such as update.php/selection. The rule we use is strict,</span>
+<span class="w">   </span><span class="c1"># and only allows this pattern with the update.php front controller.</span>
+<span class="w">   </span><span class="c1"># This allows legacy path aliases in the form of</span>
+<span class="w">   </span><span class="c1"># blog/index.php/legacy-path to continue to route to Drupal nodes. If</span>
+<span class="w">   </span><span class="c1"># you do not have any paths like that, then you might prefer to use a</span>
+<span class="w">   </span><span class="c1"># laxer rule, such as:</span>
+<span class="w">   </span><span class="c1">#   location ~ \.php(/|$) {</span>
+<span class="w">   </span><span class="c1"># The laxer rule will continue to work if Drupal uses this new URL</span>
+<span class="w">   </span><span class="c1"># pattern with front controllers other than update.php in a future</span>
+<span class="w">   </span><span class="c1"># release.</span>
+<span class="w">   </span>location<span class="w"> </span>~<span class="w"> </span><span class="s1">&#39;\.php$|^/update.php&#39;</span><span class="w"> </span><span class="o">{</span>
+<span class="w">       </span>fastcgi_split_path_info<span class="w"> </span>^<span class="o">(</span>.+?<span class="se">\.</span>php<span class="o">)(</span><span class="p">|</span>/.*<span class="o">)</span>$<span class="p">;</span>
+<span class="w">       </span>include<span class="w"> </span>fastcgi_params<span class="p">;</span>
+<span class="w">       </span><span class="c1"># Block httpoxy attacks. See https://httpoxy.org/.</span>
+<span class="w">       </span>fastcgi_param<span class="w"> </span>HTTP_PROXY<span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="w">       </span>fastcgi_param<span class="w"> </span>SCRIPT_FILENAME<span class="w"> </span><span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span>
+<span class="w">       </span>fastcgi_param<span class="w"> </span>PATH_INFO<span class="w"> </span><span class="nv">$fastcgi_path_info</span><span class="p">;</span>
+<span class="w">       </span>fastcgi_param<span class="w"> </span>PHP_VALUE<span class="w"> </span><span class="s2">&quot;upload_max_filesize=512M \n post_max_size=512M&quot;</span><span class="p">;</span>
+<span class="w">       </span>proxy_read_timeout<span class="w"> </span>900s<span class="p">;</span>
+<span class="w">       </span>fastcgi_intercept_errors<span class="w"> </span>on<span class="p">;</span>
+<span class="w">       </span>fastcgi_keep_conn<span class="w"> </span>on<span class="p">;</span>
+<span class="w">       </span>fastcgi_pass<span class="w"> </span>esmero-php:9000<span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
+
+<span class="w">    </span><span class="c1"># Fighting with Styles? This little gem is amazing.</span>
+<span class="w">   </span>location<span class="w"> </span>~<span class="w"> </span>^/sites/.*/files/styles/<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="c1"># For Drupal &gt;= 7</span>
+<span class="w">       </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span>@rewrite<span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
+
+<span class="w">   </span><span class="c1"># Handle private files through Drupal.</span>
+<span class="w">   </span>location<span class="w"> </span>~<span class="w"> </span>^/system/files/<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="c1"># For Drupal &gt;= 7</span>
+<span class="w">       </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span>/index.php?<span class="nv">$query_string</span><span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
+<span class="w">   </span><span class="c1"># Enforce clean URLs</span>
+<span class="w">   </span><span class="c1"># Removes index.php from urls like www.example.com/index.php/my-page --&gt; www.example.com/my-page</span>
+<span class="w">   </span><span class="c1"># Could be done with 301 for permanent or other redirect codes.</span>
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="nv">$request_uri</span><span class="w"> </span>~*<span class="w"> </span><span class="s2">&quot;^(.*/)index\.php/(.*)&quot;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="m">307</span><span class="w"> </span><span class="nv">$1$2</span><span class="p">;</span>
+<span class="w">   </span><span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
 </details>
 </li>
 <li>
-<p>Create the following folder:</p>
-<div class="highlight"><pre><span></span><code>/persistent/nginx_conf/conf.d/
+<p>Edit your existing <code>docker-compose.yml</code> file and replace ONLY! the <code>web:</code> container definition with the following snippet, making sure you preseve the original identation. Replace <code>youremail@domainname.org</code> with your own (real) email and <code>domainname.org</code> with your fully qualified domain name. You can also use a subdomain if that is the case.</p>
+<details class="info">
+<summary>docker-compose.yml</summary>
+<div class="highlight"><pre><span></span><code><span class="nt">web</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-web</span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jonasal/nginx-certbot</span>
+<span class="w">  </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">  </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">CERTBOT_EMAIL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">youremail@domainname.org</span>
+<span class="w">    </span><span class="nt">ENVSUBST_VARS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FQDN</span>
+<span class="w">    </span><span class="nt">FQDN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">domainname.org</span>
+<span class="w">    </span><span class="nt">NGINX_ENVSUBST_OUTPUT_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/nginx/user_conf.d</span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;80:80&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;443:443&quot;</span>
+<span class="w">  </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${PWD}/persistent/nginxconfig/template/nginx.conf.template:/etc/nginx/templates/nginx.conf.template:ro</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${PWD}/web:/var/www/html/web:cached</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${PWD}/persistent/letsencrypt:/etc/letsencrypt</span>
+<span class="w">  </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">solr</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">php</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
 </code></pre></div>
+</details>
 </li>
 <li>
-<p>Place the ngnix.conf file inside the <code>/conf.d/</code> folder.</p>
+<p>Before restarting anything, make sure both ports <code>443</code> and <code>80</code> are open if you are running behind a firewall. Port <code>80</code> and the <code>.well-known</code> URI location are used by <code>Certbot</code> to validate/confirm the SSL certificate request. </p>
 </li>
 <li>
-<p>Create also this other folder:</p>
-<div class="highlight"><pre><span></span><code>/persistent/nginx_conf/certbot_extra_domains/
-</code></pre></div>
-</li>
-<li>
-<p>Inside the <code>/certbot_extra_domains/</code> folder, create a text file named the same way as your domain (which can/or not contain additional subdomains but needs to exist).</p>
-<div class="highlight"><pre><span></span><code>cat<span class="w">  </span>/persistent/nginx_conf/certbot_extra_domains/yoursite.org
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">4</span>.0K<span class="w"> </span>Oct<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:46<span class="w"> </span>.
-drwxr-xr-x<span class="w"> </span><span class="m">4</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">4</span>.0K<span class="w"> </span>Oct<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:45<span class="w"> </span>..
--rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">   </span><span class="m">48</span><span class="w"> </span>Oct<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:46<span class="w"> </span>yoursite.org
-</code></pre></div>
-<p><em>Optionally, create additional subdomains if needed.</em></p>
-<div class="highlight"><pre><span></span><code>cat<span class="w">  </span>/persistent/nginx_conf/certbot_extra_domains/yoursite.org
-subdomain.yoursite.org
-anothersub.yoursite.org
-</code></pre></div>
-</li>
-<li>
-<p>Make sure you have edited the <code>docker-compose.yml</code> and <code>ngnix.conf</code> files you created to match your own information. Also make sure to also adjust the paths if you do not want the /persistent approach described in Step 1.</p>
-</li>
-<li>
-<p>Run the following commands:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>-compose<span class="w"> </span>up<span class="w"> </span>-d
+<p>Run the following commands, line by line (and replace <code>docker-compose</code> with <code>docker compose</code> if running on an Apple Mac or modern Windows PC):</p>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>down
+docker-compose<span class="w"> </span>pull
+docker-compose<span class="w"> </span>up<span class="w"> </span>-d
 docker<span class="w"> </span>ps
 </code></pre></div>
-<p>You should see this:</p>
-<div class="highlight"><pre><span></span><code>b5a04747ee06<span class="w">        </span>staticfloat/nginx-certbot<span class="w">    </span><span class="s2">&quot;/bin/bash /scripts/…&quot;</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>days<span class="w"> </span>ago<span class="w">          </span>Up<span class="w"> </span><span class="m">8</span><span class="w"> </span>days<span class="w">           </span><span class="m">0</span>.0.0.0:80-&gt;80/tcp,<span class="w"> </span><span class="m">0</span>.0.0.0:443-&gt;443/tcp<span class="w">   </span>esmero-web
-84afae094b57<span class="w">        </span>esmero/php-7.3-fpm:latest<span class="w">    </span><span class="s2">&quot;docker-php-entrypoi…&quot;</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>days<span class="w"> </span>ago<span class="w">          </span>Up<span class="w"> </span><span class="m">8</span><span class="w"> </span>days<span class="w">           </span><span class="m">9000</span>/tcp<span class="w">                                   </span>esmero-php
-13a9214acfd0<span class="w">        </span>esmero/cantaloupe-s3:4.1.6<span class="w">   </span><span class="s2">&quot;sh -c &#39;java -Dcanta…&quot;</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>days<span class="w"> </span>ago<span class="w">          </span>Up<span class="w"> </span><span class="m">8</span><span class="w"> </span>days<span class="w">           </span><span class="m">0</span>.0.0.0:8183-&gt;8182/tcp<span class="w">                     </span>esmero-cantaloupe
-044dd5bc7245<span class="w">        </span>mysql:5.7<span class="w">                    </span><span class="s2">&quot;docker-entrypoint.s…&quot;</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>days<span class="w"> </span>ago<span class="w">          </span>Up<span class="w"> </span><span class="m">8</span><span class="w"> </span>days<span class="w">           </span><span class="m">3306</span>/tcp,<span class="w"> </span><span class="m">33060</span>/tcp<span class="w">                        </span>esmero-db
-31f4f0f45acc<span class="w">        </span>solr:7.5.0<span class="w">                   </span><span class="s2">&quot;docker-entrypoint.s…&quot;</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>days<span class="w"> </span>ago<span class="w">          </span>Up<span class="w"> </span><span class="m">8</span><span class="w"> </span>days<span class="w">           </span><span class="m">0</span>.0.0.0:8983-&gt;8983/tcp<span class="w">                     </span>esmero-solr
+<p>You should see amongst output lines the new NGINX container with an output similar to this:</p>
+<div class="highlight"><pre><span></span><code>1d7414a12387<span class="w">        </span>jonasal/nginx-certbot<span class="w">        </span><span class="s2">&quot;/docker-entrypoint.…&quot;</span><span class="w">   </span><span class="m">1</span><span class="w"> </span>minute<span class="w"> </span>ago<span class="w">       </span>Up<span class="w"> </span><span class="m">1</span><span class="w"> </span>minute<span class="w">       </span><span class="m">0</span>.0.0.0:80-&gt;80/tcp,<span class="w"> </span>:::80-&gt;80/tcp,<span class="w"> </span><span class="m">0</span>.0.0.0:443-&gt;443/tcp,<span class="w"> </span>:::443-&gt;443/tcp<span class="w">   </span>esmero-web
 </code></pre></div>
 </li>
+</ol>
+<p>Double check your nginx logs (<code>docker logs -f esmero-web -n 100</code>) for any errors or if you are getting an 500 error when accesing your Archipelago publicly via <code>https</code> under your new domain. </p>
+<ol>
 <li>
-<p>SSL has now been configured for your Archipelago instance.</p>
+<p>Access your website using <code>https://yourdomain.org</code> and verify you can log-in. Once logged in, navigate to <code>/admin/config/archipelago/iiif</code> and under <code>Base URL of your IIIF Media Server public accessible from the Outside World.</code> change <code>localhost:8183/iiif/2</code> to <code>https://yourdomain.org/cantaloupe/iiif/2</code>. Save. </p>
+</li>
+<li>
+<p>SSL has now been configured for your Archipelago Local instance. If you plan on running long term a production machine, please use the <a href="https://github.com/esmero/archipelago-deployment-live">Archipelago Deployment Live</a> strategy. We, as a community, do not support this strategy long term, mostly because there is no proper separation between configurations/data and Drupal itself.</p>
 </li>
 </ol>
-<h3 id="user-contributed-documentation">User contributed documentation:</h3>
-<p><em>Adding SSL to Archipelago running docker</em> by <a href="https://github.com/senyzspalding">Zachary Spalding</a>: <a href="https://youtu.be/rfH5TLzIRIQ">https://youtu.be/rfH5TLzIRIQ</a></p>
-<hr />
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
 <p>Return to the <a href="../">Archipelago Documentation main page</a>.</p>
 
@@ -3829,7 +3767,7 @@ docker<span class="w"> </span>ps
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2021 23:56:27 UTC">October 18, 2021</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 13, 2025 19:11:36 UTC">June 13, 2025</span>
   </span>
 
     
