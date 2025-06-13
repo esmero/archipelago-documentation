@@ -1,219 +1,166 @@
-# How to Setup SSL for Docker/Archipelago
+# How to Setup SSL for a local Archipelago Deployment (NOT Archipelago Deployment Live)
 
-_*Work-In-Progress Note* This documentation page is still under construction and content may change with future updates. Please use caution when implementing any instructions referenced herein, as there may be missing steps or corresponding configuration files. Thank you for your patience as we continue to update Archipelago's documentation._
+_*Note:* For a complete production deployment with SSL please follow the [Archipelago Deployment Live](https://github.com/esmero/archipelago-deployment-live) strategy. This documentation is only meant for power users that need to expose a local/development deployment via a qualified Domain Name and SSL._
 
-The steps found below describe one potential manual SSL configuration for Archipelago deployments. A `git clone` deployment option will be available for future releases.
+The steps found below describe a potential manual SSL configuration for a local Archipelago deployment exposed to the internet using a qualified domain name and SSL. We will not move the Database, Solr or the actual Drupal Deployment folder in this documentation, only enable SSL using the existing local deployment file structure.
 
-### Manual Configuration Steps for an EC2 AWS Server
+### Manual Configuration Steps for a Linux Server
 
-This process takes less than 10 minutes of reading YML files and editing a few files (described below) to get SSL running and setup with auto-renewal.
+Assuming you already have an [Archipelago deployment](https://github.com/esmero/archipelago-deployment) that is exposed via HTTP via port `8001`, this process takes less than 10 minutes of reading YML files and editing the files (described below) to get SSL running and setup with auto-renewal.
 
-1. First, configure Certbot, following the instructions found on https://certbot.eff.org.
+First: Make sure your Domain name is correctly resolving against your Server's Public IP address. We will use the same NGINX Docker container and setup our live instances uses, that includes an automatic request and renovation of SSL Certificates against https://certbot.eff.org.
 
-1. Inside a /persistent partition, establish the following folder structure.
-_Note: you can keep the existing folder structure if you so choose. A benefit of the following structure is that it decouples the git clone of archipelago-deployment, which is made to be self sustainable and good for coding or smaller deployments._
-
+1. Open a terminal and `cd` into your cloned Archipelago Deployment github repository base folder. We will create , inside the /persistent folder (which already exists,) an extra folder structure via the following command.
     ```Shell
-    [ec2-user@ip-17x-xx-x-xxx persistent]$ ls -lah
-    total 64K
-    drwxr-xr-x 14 root           root  4.0K Oct  5 23:11 .
-    dr-xr-xr-x 19 root           root  275 Dec 15  2019 ..
-    drwxr-xr-x  8  		999  999   4096 Oct 13 20:07 db
-    drwxr-xr-x 13 root           root  4.0K Oct  5 23:03 drupal8
-    drwxr-xr-x  5           8183  8183   4.0K Feb 23  2020 iiifcache
-    drwxr-xr-x  2 root           root  4.0K Feb 23  2020 iiifconfig
-    drwxr-xr-x  4 root           root  4.0K Oct  5 22:45 nginx_conf
-    drwxr-xr-x  3 root           root  4.0K Feb 26  2019 solrconfig
-    drwxr-xr-x  3           8983 8983  4.0K Feb 26  2019 solrcore
+      mkdir -p persistent/nginxconfig/template
     ```
+2. Inside the new `template` folder create a new file named `nginx.conf.template` with the following content.
 
-    To get to this point, create a git clone of archipelago deployment and then copy the content of the /persistent out of the repo folder into this structure. The original (or what is left) archipelago-deployment ends inside a drupal8 folder here.
-
-2. Copy and paste the following to create a local copy of this file:
-
-    ??? info "docker-compose.yml"
-    
-        **Be sure to replace youremail@gmail.com with your email address.
-    
-        ```YAML
-         version: '3.5'
-         services:
-           web:
-             container_name: esmero-web
-             image: staticfloat/nginx-certbot
-             restart: always
-             environment:
-               CERTBOT_EMAIL: "youremail@gmail.com"
-             ports:
-               - "80:80"
-               - "443:443"
-             volumes:
-               - /persistent/nginx_conf/conf.d:/etc/nginx/user.conf.d:ro
-               - /persistent/nginx_conf/certbot_extra_domains:/etc/nginx/certbot/extra_domains:ro
-               - /persistent/drupal8:/var/www/html:cached
-             depends_on:
-               - solr
-               - php
-             tty: true
-             networks:
-               - host-net
-               - esmero-net
-           php:
-             container_name: esmero-php
-             restart: always
-             image: "esmero/php-7.3-fpm:latest"
-             tty: true
-             networks:
-               - host-net
-               - esmero-net
-             volumes:
-               - ${PWD}:/var/www/html:cached
-           solr:
-             container_name: esmero-solr
-             restart: always
-             image: "solr:7.5.0"
-             tty: true
-             ports:
-               - "8983:8983"
-             networks:
-               - host-net
-               - esmero-net
-             volumes:
-               - /persistent/solrcore:/opt/solr/server/solr/mycores:cached
-               - /persistent/solrconfig:/drupalconfig:cached
-             entrypoint:
-               - docker-entrypoint.sh
-               - solr-precreate
-               - drupal
-               - /drupalconfig
-           # see https://hub.docker.com/_/mysql/
-           db:
-             image: mysql:5.7
-             command: --max_allowed_packet=256M
-             container_name: esmero-db
-             restart: always
-             environment:
-               MYSQL_ROOT_PASSWORD: esmerodb
-             networks:
-               - host-net
-               - esmero-net
-             volumes:
-               - /persistent/db:/var/lib/mysql:cached
-           iiif:
-             container_name: esmero-cantaloupe
-             image: "esmero/cantaloupe-s3:4.1.6"
-             restart: always
-             ports:
-               - "8183:8182"
-             networks:
-               - host-net
-               - esmero-net
-             volumes:
-               - /persistent/iiifconfig:/etc/cantaloupe
-               - /persistent/iiifcache:/var/cache/cantaloupe
-         networks:
-           host-net:
-             driver: bridge
-           esmero-net:
-             driver: bridge
-             internal: true
-        ```
-    
-    _Note: This file shows how the folders in Step 1 are being used, and how SSL is being automatically deployed and renewed (without any human interaction other than starting the docker-compose and watching the logs)._
-
-3. Now copy and paste the following to create a local copy of this file:
-
-    ??? info "ngnix.conf"
-        **Be sure to replace all instances of yoursite.org with your own domain.
-        
-        ```Shell
-         # goes into /persistent/nginx_conf/conf.d/nginx.conf
+    ??? info "nginx.conf.template"
+   
+         ```Shell
          upstream cantaloupe {
-          server  esmero-cantaloupe:8182;
-          }
-        
-          server {
+          server esmero-cantaloupe:8182;
+          keepalive 32;
+         }
+
+         server {
             listen              443 ssl;
-            server_name         yoursite.org;
-            ssl_certificate     /etc/letsencrypt/live/yourstie.org/fullchain.pem;
-            ssl_certificate_key /etc/letsencrypt/live/yoursite.org/privkey.pem;
-        
-             client_max_body_size 512M; ## Match with PHP from FPM container
-        
+            server_name         ${FQDN};
+            ssl_certificate     /etc/letsencrypt/live/${FQDN}/fullchain.pem;
+            ssl_certificate_key /etc/letsencrypt/live/${FQDN}/privkey.pem;
+            client_max_body_size 512M; ## Match with PHP from FPM container
+
             root /var/www/html/web; ## <-- Your only path reference.
-        
+
+           if ($http_user_agent ~* (go\-http|zgrab|mj12bot|meta\-externalagent|oai\-searchbot|tiktok|tiktokspider|lplinkcheck|netcrawl|npbot|AliyunSecBot|bytedance|bytespider|gptbot|semrush|petalbot|amazonbot|ahrefsbot|zhanzhang|semrushbot|brightbot|imagesiftbot|barkrowler|friendlycrawler|turnitin|claudebot|python-requests|aiohttp|semanticscholarbot|go\-http\-client|facebookexternalhit)) {
+                  return 444;
+            }
+
             fastcgi_send_timeout 120s;
             fastcgi_read_timeout 120s;
             fastcgi_pass_request_headers on;
-        
+            proxy_connect_timeout 60s;
+            proxy_send_timeout 120s;
+            proxy_read_timeout 300s;
+
             fastcgi_buffers 16 16k;
             fastcgi_buffer_size 32k;
-        
+    
+            # Please adapt to your needs
+            proxy_buffers 16 16k;  
+            proxy_buffer_size 16k;
+
+            #gzip
+            gzip on;
+            gzip_disable "msie6";
+
+            gzip_vary on;
+            gzip_proxied any;
+            gzip_comp_level 6;
+            gzip_buffers 16 8k;
+            gzip_http_version 1.1;
+            gzip_min_length 256;
+            gzip_types
+              application/atom+xml
+              application/geo+json
+              application/javascript
+              application/x-javascript
+              application/json
+              application/ld+json
+              application/manifest+json
+              application/rdf+xml
+              application/rss+xml
+              application/xhtml+xml
+              application/xml
+              font/eot
+              font/otf
+              font/ttf
+              image/svg+xml
+              text/css
+              text/javascript
+              text/plain
+              text/xml;
+
             # Cantaloupe proxypass
             location /cantaloupe/ {
+               proxy_http_version 1.1;
+               proxy_set_header   "Connection" "";
                proxy_set_header X-Forwarded-Proto $scheme;
                proxy_set_header X-Forwarded-Host $host;
                proxy_set_header X-Forwarded-Port $server_port;
                proxy_set_header X-Forwarded-Path /cantaloupe/;
                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+               proxy_read_timeout 120s; 
                if ($request_uri ~* "/cantaloupe/(.*)") {
                  proxy_pass http://cantaloupe/$1;
                }
             }
-        
-            location = /favicon.ico {
+
+          # Tus upload to allow resumes 
+          location ~* /webform_strawberry/tus_upload {
+                proxy_request_buffering  off;
+                proxy_buffering          off;
+                proxy_http_version       1.1;
+                try_files $uri $uri/ /index.php?$request_uri;
+           } 
+
+
+           location = /favicon.ico {
                 log_not_found off;
                 access_log off;
             }
-        
+
             location = /robots.txt {
                 allow all;
                 log_not_found off;
                 access_log off;
             }
-        
-            # Very rarely should these ever be accessed outside of your lan
-            location ~* \.(txt|log)$ {
+
+            # Very rarely should .txt and .log ever be accessed
+            # But now we allow /do/ download endpoints to serve .txt and .log
+
+           location ~* ^(?!/do/.+/(file|metadata)/(?!\.(txt|log)$)).*\.(txt|log)$ {
                 deny all;
             }
-        
+
             location ~ \..*/.*\.php$ {
                 return 403;
             }
-        
+
             location ~ ^/sites/.*/private/ {
                 return 403;
             }
-        
+
             # Allow "Well-Known URIs" as per RFC 5785
             location ~* ^/.well-known/ {
                 allow all;
             }
-        
+
             # Block access to "hidden" files and directories whose names begin with a
             # period. This includes directories used by version control systems such
             # as Subversion or Git to store control files.
             location ~ (^|/)\. {
                 return 403;
             }
-        
+
             location / {
                 try_files $uri /index.php?$query_string; # For Drupal >= 7
             }
-        
+
             location @rewrite {
                 rewrite ^/(.*)$ /index.php?q=$1;
             }
-        
+
             # Don't allow direct access to PHP files in the vendor directory.
             location ~ /vendor/.*\.php$ {
                 deny all;
                 return 404;
             }
-        
-            # Allow Modules to be updated via UI (still we believe composer is the way)    
+
+            # Allow Modules to be updated via UI (still we believe composer is the way)
             rewrite ^/core/authorize.php/core/authorize.php(.*)$ /core/authorize.php$1;
-        
+
             # In Drupal 8, we must also match new paths where the '.php' appears in
             # the middle, such as update.php/selection. The rule we use is strict,
             # and only allows this pattern with the update.php front controller.
@@ -235,81 +182,77 @@ _Note: you can keep the existing folder structure if you so choose. A benefit of
                 fastcgi_param PHP_VALUE "upload_max_filesize=512M \n post_max_size=512M";
                 proxy_read_timeout 900s;
                 fastcgi_intercept_errors on;
+                fastcgi_keep_conn on;
                 fastcgi_pass esmero-php:9000;
             }
-        
+
              # Fighting with Styles? This little gem is amazing.
             location ~ ^/sites/.*/files/styles/ { # For Drupal >= 7
                 try_files $uri @rewrite;
             }
-        
+
             # Handle private files through Drupal.
             location ~ ^/system/files/ { # For Drupal >= 7
                 try_files $uri /index.php?$query_string;
             }
-        }
+            # Enforce clean URLs
+            # Removes index.php from urls like www.example.com/index.php/my-page --> www.example.com/my-page
+            # Could be done with 301 for permanent or other redirect codes.
+            if ($request_uri ~* "^(.*/)index\.php/(.*)") {
+                return 307 $1$2;
+            }
+         }
+         ```       
+
+2. Edit your existing `docker-compose.yml` file and replace ONLY! the `web:` container definition with the following snippet, making sure you preseve the original identation. Replace `youremail@domainname.org` with your own (real) email and `domainname.org` with your fully qualified domain name. You can also use a subdomain if that is the case.
+
+    ??? info "docker-compose.yml"
+    
+        ```YAML
+        web:
+          container_name: esmero-web
+          image: jonasal/nginx-certbot
+          restart: always
+          environment:
+            CERTBOT_EMAIL: youremail@domainname.org
+            ENVSUBST_VARS: FQDN
+            FQDN: domainname.org
+            NGINX_ENVSUBST_OUTPUT_DIR: /etc/nginx/user_conf.d
+          ports:
+              - "80:80"
+              - "443:443"
+          volumes:
+              - ${PWD}/persistent/nginxconfig/template/nginx.conf.template:/etc/nginx/templates/nginx.conf.template:ro
+              - ${PWD}/web:/var/www/html/web:cached
+              - ${PWD}/persistent/letsencrypt:/etc/letsencrypt
+          depends_on:
+            - solr
+            - php
+            - db
         ```
 
-4. Create the following folder:
+3. Before restarting anything, make sure both ports `443` and `80` are open if you are running behind a firewall. Port `80` and the `.well-known` URI location are used by `Certbot` to validate/confirm the SSL certificate request. 
+
+4. Run the following commands, line by line (and replace `docker-compose` with `docker compose` if running on an Apple Mac or modern Windows PC):
 
     ```Shell
-    /persistent/nginx_conf/conf.d/
-    ```
-
-5. Place the ngnix.conf file inside the `/conf.d/` folder.
-
-6. Create also this other folder:
-
-    ```Shell
-    /persistent/nginx_conf/certbot_extra_domains/
-    ```
-
-7. Inside the `/certbot_extra_domains/` folder, create a text file named the same way as your domain (which can/or not contain additional subdomains but needs to exist).
-
-    ```Shell
-    cat  /persistent/nginx_conf/certbot_extra_domains/yoursite.org
-    ```
-    
-    ```Shell
-    drwxr-xr-x 2 root root 4.0K Oct  5 22:46 .
-    drwxr-xr-x 4 root root 4.0K Oct  5 22:45 ..
-    -rw-r--r-- 1 root root   48 Oct  5 22:46 yoursite.org
-    ```
-    
-    _Optionally, create additional subdomains if needed._
-    
-    ```Shell
-    cat  /persistent/nginx_conf/certbot_extra_domains/yoursite.org
-    subdomain.yoursite.org
-    anothersub.yoursite.org
-    ```
-
-8. Make sure you have edited the `docker-compose.yml` and `ngnix.conf` files you created to match your own information. Also make sure to also adjust the paths if you do not want the /persistent approach described in Step 1.
-
-9. Run the following commands:
-
-    ```Shell
-    docker -compose up -d
+    docker-compose down
+    docker-compose pull
+    docker-compose up -d
     docker ps
     ```
 
-    You should see this:
+    You should see amongst output lines the new NGINX container with an output similar to this:
     
     ```Shell
-    b5a04747ee06        staticfloat/nginx-certbot    "/bin/bash /scripts/…"   8 days ago          Up 8 days           0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp   esmero-web
-    84afae094b57        esmero/php-7.3-fpm:latest    "docker-php-entrypoi…"   8 days ago          Up 8 days           9000/tcp                                   esmero-php
-    13a9214acfd0        esmero/cantaloupe-s3:4.1.6   "sh -c 'java -Dcanta…"   8 days ago          Up 8 days           0.0.0.0:8183->8182/tcp                     esmero-cantaloupe
-    044dd5bc7245        mysql:5.7                    "docker-entrypoint.s…"   8 days ago          Up 8 days           3306/tcp, 33060/tcp                        esmero-db
-    31f4f0f45acc        solr:7.5.0                   "docker-entrypoint.s…"   8 days ago          Up 8 days           0.0.0.0:8983->8983/tcp                     esmero-solr
+    1d7414a12387        jonasal/nginx-certbot        "/docker-entrypoint.…"   1 minute ago       Up 1 minute       0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp   esmero-web
     ```
 
-10. SSL has now been configured for your Archipelago instance.
+Double check your nginx logs (```docker logs -f esmero-web -n 100```) for any errors or if you are getting an 500 error when accesing your Archipelago publicly via `https` under your new domain. 
 
-### User contributed documentation:
+5. Access your website using `https://yourdomain.org` and verify you can log-in. Once logged in, navigate to `/admin/config/archipelago/iiif` and under `Base URL of your IIIF Media Server public accessible from the Outside World.` change `localhost:8183/iiif/2` to `https://yourdomain.org/cantaloupe/iiif/2`. Save. 
 
-_Adding SSL to Archipelago running docker_ by [Zachary Spalding](https://github.com/senyzspalding): <https://youtu.be/rfH5TLzIRIQ>
-
-___
+6. SSL has now been configured for your Archipelago Local instance. If you plan on running long term a production machine, please use the [Archipelago Deployment Live](https://github.com/esmero/archipelago-deployment-live) strategy. We, as a community, do not support this strategy long term, mostly because there is no proper separation between configurations/data and Drupal itself.
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
