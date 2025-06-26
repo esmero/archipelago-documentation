@@ -18,7 +18,7 @@
 
 - IIIF Annual Conference (June 2025):
     - "Flitting" the Digital Collections overhaul at Edinburgh. Scott Renton, Lucy Pennington.
-    - 📺 Recording made available on the [IIIF Youtube channel](https://www.youtube.com/@IIIF-Consortium).
+    - 📺 Recording made available on the [IIIF Youtube channel](https://youtu.be/32sk2SWyG1M).
 
 ## 2024
 
