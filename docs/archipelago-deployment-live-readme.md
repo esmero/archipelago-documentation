@@ -8,6 +8,8 @@ tags:
 
 A Cloud / Local production ready Archipelago Deployment using Docker and soon Kubernetes.
 
+Last updated: June 19th 2025.
+
 
 ## What is this repo for?
 
@@ -327,10 +329,12 @@ docker exec -ti esmero-php bash -c 'scripts/archipelago/setup.sh'
 
 And now you can deploy Drupal! 
 
-**IMPORTANT:** Make sure you replace in the following command inside `root:MYSQL_ROOT_PASSWORD` the `MYSQL_ROOT_PASSWORD` string with the **value** you used/assigned in your `.env` file for `MYSQL_ROOT_PASSWORD`. And replace `ADMIN_PASSWORD` with a password that is safe and you won't forget! That passwords is for your Drupal super user (uid:1).
+**IMPORTANT:** Make sure you replace in the following command inside `root:MYSQL_ROOT_PASSWORD` the `MYSQL_ROOT_PASSWORD` string with the **value** you used/assigned in your `.env` file for `MYSQL_ROOT_PASSWORD`. And replace `ADMIN_PASSWORD` with a password that is safe and you won't forget! That passwords is for your Drupal super user (uid:1). 
+
+**IMPORTANT 2:** Also make sure you are INDEED running Drush Version 13. (`docker exec -ti -u www-data esmero-php bash -c "drush version"`). Why this last comment? This is just in case you "cloned" this repository before we made that change (always do a git clone before starting!). The original guide of 1.5.0 (June 10th 2025) used Drush 12 and because of some bugs/warnings we upgraded composer.json and its lock (June 19th 2025!) to drush 13, adding a new argument to the following command.
 
 ```shell
-docker exec -ti -u www-data esmero-php bash -c "cd web;../vendor/bin/drush -y si --verbose --existing-config --db-url=mysql://root:MYSQL_ROOT_PASSWORD@esmero-db/drupal --account-name=admin --account-pass=ADMIN_PASSWORD -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;"
+docker exec -ti -u www-data esmero-php bash -c "cd web;../vendor/bin/drush -y si --verbose --existing-config --extra=--skip-ssl --db-url=mysql://root:MYSQL_ROOT_PASSWORD@esmero-db/drupal --account-name=admin --account-pass=ADMIN_PASSWORD -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;"
 ```
 
 ### Step 6. Users and initial Content.
