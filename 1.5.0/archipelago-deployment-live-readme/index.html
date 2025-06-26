@@ -4128,6 +4128,7 @@
 
 <h1 id="archipelago-deployment-live">Archipelago Deployment Live</h1>
 <p>A Cloud / Local production ready Archipelago Deployment using Docker and soon Kubernetes.</p>
+<p>Last updated: June 19th 2025.</p>
 <h2 id="what-is-this-repo-for">What is this repo for?</h2>
 <p>Running Archipelago Commons on a live public instance using SSL with Blob/Object Storage backend </p>
 <ul>
@@ -4344,8 +4345,9 @@ docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </spa
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;scripts/archipelago/setup.sh&#39;</span>
 </code></pre></div>
 <p>And now you can deploy Drupal! </p>
-<p><strong>IMPORTANT:</strong> Make sure you replace in the following command inside <code>root:MYSQL_ROOT_PASSWORD</code> the <code>MYSQL_ROOT_PASSWORD</code> string with the <strong>value</strong> you used/assigned in your <code>.env</code> file for <code>MYSQL_ROOT_PASSWORD</code>. And replace <code>ADMIN_PASSWORD</code> with a password that is safe and you won't forget! That passwords is for your Drupal super user (uid:1).</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;cd web;../vendor/bin/drush -y si --verbose --existing-config --db-url=mysql://root:MYSQL_ROOT_PASSWORD@esmero-db/drupal --account-name=admin --account-pass=ADMIN_PASSWORD -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;&quot;</span>
+<p><strong>IMPORTANT:</strong> Make sure you replace in the following command inside <code>root:MYSQL_ROOT_PASSWORD</code> the <code>MYSQL_ROOT_PASSWORD</code> string with the <strong>value</strong> you used/assigned in your <code>.env</code> file for <code>MYSQL_ROOT_PASSWORD</code>. And replace <code>ADMIN_PASSWORD</code> with a password that is safe and you won't forget! That passwords is for your Drupal super user (uid:1). </p>
+<p><strong>IMPORTANT 2:</strong> Also make sure you are INDEED running Drush Version 13. (<code>docker exec -ti -u www-data esmero-php bash -c "drush version"</code>). Why this last comment? This is just in case you "cloned" this repository before we made that change (always do a git clone before starting!). The original guide of 1.5.0 (June 10th 2025) used Drush 12 and because of some bugs/warnings we upgraded composer.json and its lock (June 19th 2025!) to drush 13, adding a new argument to the following command.</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;cd web;../vendor/bin/drush -y si --verbose --existing-config --extra=--skip-ssl --db-url=mysql://root:MYSQL_ROOT_PASSWORD@esmero-db/drupal --account-name=admin --account-pass=ADMIN_PASSWORD -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;&quot;</span>
 </code></pre></div>
 <h3 id="step-6-users-and-initial-content">Step 6. Users and initial Content.</h3>
 <p>After installation is done (may take a few) you can install initial users and assign them roles. Copy each line separately. A missing permission will not let you ingest the initial Metadata Displays and AMI set.</p>
@@ -4422,7 +4424,7 @@ Please review <a href="https://github.com/esmero/archipelago-deployment-live/blo
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 12, 2025 14:21:46 UTC">June 12, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2025 15:51:17 UTC">June 26, 2025</span>
   </span>
 
     

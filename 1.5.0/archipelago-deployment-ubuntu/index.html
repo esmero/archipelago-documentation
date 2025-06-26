@@ -3907,9 +3907,9 @@ pass:minio123
 <p>Explanation: That script will append some important configurations to your local <code>web/sites/default/settings.php</code>.</p>
 <p>Note: We say <code>local</code> because your whole Drupal web root (the one you cloned) is also mounted inside the esmero-php and esmero-web containers. So edits to PHP files, for example, can be done without accessing the container directly from your local folder.</p>
 <p>If this is the first time you're deploying Drupal using the provided Configurations run:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;cd web;../vendor/bin/drush -y si --verbose --existing-config --db-url=mysql://root:esmerodb@esmero-db/drupal --account-name=admin --account-pass=archipelago -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;&quot;</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;cd web;../vendor/bin/drush -y si --verbose --existing-config --extra=--skip-ssl --db-url=mysql://root:esmerodb@esmero-db/drupal --account-name=admin --account-pass=archipelago -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;&quot;</span>
 </code></pre></div>
-<p>Note: You will see these warnings:</p>
+<p>Note: You will see warnings like these:</p>
 <p><code>[warning] The "block_content:9aa72fb1-2817-44a7-8fb5-a3eb51166e83" was not found</code>
  <code>[warning] The "block_content:1cdf7155-eb60-4f27-9e5e-64fffe93127a" was not found</code>
  <code>[warning] The "facets_summary_block:advance" was not found</code>
@@ -3969,7 +3969,7 @@ pass:minio123
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 29, 2025 18:32:01 UTC">May 29, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2025 15:51:17 UTC">June 26, 2025</span>
   </span>
 
     
