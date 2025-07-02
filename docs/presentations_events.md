@@ -9,16 +9,16 @@
 ## 2025
 
 - Open Repositories Annual Conference (June 2025):
-    - Archipelago Commons: blooms, new growth and healthy trees from the community garden.  Allison Sherrick, Diego Pino Navarro.
-    - A year of Hybrid ML/AI cataloging aid in Archipelago Commons: The state, the lessons and probable future(s) explained through a real production implementation. Diego Pino Navarro, Allison Sherrick.
-    - Managing Access to Open Repositories in the Age of Generative AI. Allison Sherrick, Scott Prater, Martin Klein, Petr Knoth, Matteo Cancellieri.
-    - Helping to preserve and share Oaxaca's history. Lisa Lamont, Matt Ferrill.
+    - [Archipelago Commons: blooms, new growth and healthy trees from the community garden](https://zenodo.org/records/15758510).  Allison Sherrick, Diego Pino Navarro.
+    - [A year of Hybrid ML/AI cataloging aid in Archipelago Commons: The state, the lessons and probable future(s) explained through a real production implementation](https://zenodo.org/records/15758520). Diego Pino Navarro, Allison Sherrick.
+    - Managing Access to Open Repositories in the Age of Generative AI [(slides for Archipelago/METRO Portion only)](https://docs.google.com/presentation/d/10BuWi8QnqQTcFB7Uylxwhlp6kNFfS802F2Uk0qeIfJs/edit?usp=sharing). Allison Sherrick, Scott Prater, Martin Klein, Petr Knoth, Matteo Cancellieri.
+    - [Helping to preserve and share Oaxaca's history](https://zenodo.org/records/15758660). Lisa Lamont, Matt Ferrill.
 
 - 🍓[Archipelago 1.5.0 Release Announcement (June 2025)](https://groups.google.com/g/archipelago-commons/c/hBUvGBJT-uk/m/PQo0Sv8dAgAJ?pli=1&mc_cid=f499d7c63d) and [detailed change log document](https://docs.google.com/document/d/1D08IboWq8pEapqczSv_7nhJENSVbvpLyB5M0Fg9A78A/edit?tab=t.0)
 
 - IIIF Annual Conference (June 2025):
     - "Flitting" the Digital Collections overhaul at Edinburgh. Scott Renton, Lucy Pennington.
-    - 📺 Recording made available on the [IIIF Youtube channel](https://youtu.be/32sk2SWyG1M).
+    - 📺 Recording made available on the [IIIF Youtube channel](https://www.youtube.com/watch?v=32sk2SWyG1M&t=2722s).
 
 ## 2024
 
