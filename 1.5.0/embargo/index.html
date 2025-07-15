@@ -2012,13 +2012,31 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-configurations-needed-display-mode-formatters-and-twig-templates" class="md-nav__link">
+  <a href="#option-3-global-ip-range-bypass-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional Configurations Needed: Display Mode Formatters and Twig Templates
+      Option 3: Global IP Range Bypass Mode
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Additional Configurations Needed: Display Mode Formatters and Twig Templates">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonus-option-embargo-direct-file-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bonus Option: Embargo Direct File Paths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#but-wait-theres-more-additional-configurations-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      But Wait There's More! Additional Configurations Needed
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="But Wait There&#39;s More! Additional Configurations Needed">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2093,6 +2111,24 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#views-based-options-for-contextual-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Views Based Options for Contextual Filters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-based-permissions-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Based Permissions Options
+    </span>
+  </a>
   
 </li>
         
@@ -3589,13 +3625,31 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-configurations-needed-display-mode-formatters-and-twig-templates" class="md-nav__link">
+  <a href="#option-3-global-ip-range-bypass-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional Configurations Needed: Display Mode Formatters and Twig Templates
+      Option 3: Global IP Range Bypass Mode
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Additional Configurations Needed: Display Mode Formatters and Twig Templates">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonus-option-embargo-direct-file-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bonus Option: Embargo Direct File Paths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#but-wait-theres-more-additional-configurations-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      But Wait There's More! Additional Configurations Needed
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="But Wait There&#39;s More! Additional Configurations Needed">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3673,6 +3727,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#views-based-options-for-contextual-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Views Based Options for Contextual Filters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-based-permissions-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Based Permissions Options
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3735,20 +3807,21 @@
 
 
 <h1 id="embargo-access-restrictions-in-archipelago">Embargo &amp; Access Restrictions in Archipelago</h1>
-<p>Archipelago features two primary different Metadata Based Embargo / Access Restriction options for limiting access to materials when needed.</p>
+<p>Archipelago features three primary Metadata Based Embargo / Access Restriction options for limiting access to materials when needed.</p>
 <p>You can find the main Metadata Based Embargo settings configuration form at:</p>
 <ul>
 <li><code>admin/config/archipelago/metadatabased_Embargo</code></li>
 <li>Through the <code>Configuration</code> menu &gt; <code>Archipelago</code> &gt; <code>Metadata based Embargo settings</code></li>
 </ul>
-<p><a class="glightbox" href="../images/embargoForm.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Embargo Form" src="../images/embargoForm.png" /></a></p>
+<p><a class="glightbox" href="../images/embargoForm_updated.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Embargo Form" src="../images/embargoForm_updated.png" /></a></p>
 <p>This form allows you to enable/disable Embargo functionality enforced at the Formatter level and configure on which JSON Key/values those will act.</p>
-<p>For either (or both) Embargo options, you will to select the checkbox for 'Is Embargo checking and enforcing globally active?'</p>
+<p>For any singular or multiple Embargo options, you will need to enable by first selecting the checkbox for 'Is Embargo checking and enforcing globally active?'</p>
+<p>You will also want to review the <a href="./#but-wait-there's-more-additional-configurations-needed">Additional Configurations Needed</a> section of this guide, and pair your primary Embargo/Access Restriction settings with the more granular options found for Display Modes, Twig Templates, Views, and User Permissions.</p>
 <div class="admonition note">
 <p class="admonition-title">Important Note: Your Metadata Keys and Values Matter</p>
 <p>Please also keep in mind that the Embargo Options noted below need to draw the necessary related metadata values as defined in specific keys. You cannot specify to use either Embargo by Date or Embargo Bypass by IP without also defining the values in your Digital Object/Collection metadata.</p>
 </div>
-<h2 id="option-1-embargo-by-date">Option 1: Embargo by Date</h2>
+<h3 id="option-1-embargo-by-date">Option 1: Embargo by Date</h3>
 <p>The first Embargo option you have is to define a "JSON key present in your metadata that contains an Embargo lift date that will be used to Embargo Metadata and Media."</p>
 <ul>
 <li>Archipelago recommended default key is 'date_embargo_lift'</li>
@@ -3770,7 +3843,7 @@
 <li>File media viewer does not display until the date set in the 'date_embargo_lift' key in the Digital Object's JSON metadata has passed.</li>
 <li>Metadata record displays as usual.</li>
 </ul>
-<h2 id="option-2-embargo-bypass-by-ip">Option 2: Embargo Bypass by IP</h2>
+<h3 id="option-2-embargo-bypass-by-ip">Option 2: Embargo Bypass by IP</h3>
 <p>The second Embargo option you have is to define a "JSON key present in your metadata that contains an allowed to bypass Embargo through a visitor IP or IP range that will be used to Embargo Metadata and Media".</p>
 <p>Functional mechanism for your specified key: </p>
 <ul>
@@ -3794,7 +3867,19 @@
 <li>Metadata record displays as usual.</li>
 <li>No caching for any objects with values for this 'embargo_ip_bypass' key</li>
 </ul>
-<h2 id="additional-configurations-needed-display-mode-formatters-and-twig-templates">Additional Configurations Needed: Display Mode Formatters and Twig Templates</h2>
+<h3 id="option-3-global-ip-range-bypass-mode">Option 3: Global IP Range Bypass Mode</h3>
+<p>The third Embargo option you have is to define a 'Global IP Range Bypass Mode' to select one of three modes to determine the order preference for global versus granular Embargo bypasses. These distinct modes only affect already embargoed ADOs with "Embargo bypass by IP" values defined. </p>
+<p>The three Global IP Range Bypass Modes are:</p>
+<ul>
+<li>Global IP Range will override any "Embargo bypass by IP" values defined at the granular ADO level </li>
+<li>Global IP Range will be added to "Embargo bypass by IP" values defined at the granular ADO level</li>
+<li>Global IP Range will be ignored when an ADO holds "Embargo bypass by IP" values at the granular level</li>
+</ul>
+<p>After selecting your desired Mode, you will need to enter the Global IP addresses and ranges for the embargo bypass. You will need to specify IP addresses in CDIR format, and enter one IP/IP Range per line in the available form box.</p>
+<p>The default ranges provided for the Archipelago Local Deployment demonstrate an example of an internal IP address and range. These should be considered for reference only, and not used in production/live Archipelago instances.</p>
+<h3 id="bonus-option-embargo-direct-file-paths">Bonus Option: Embargo Direct File Paths</h3>
+<p>An additional bonus option, to add onto one of the three primary Embargo options, is the ability to 'Embargo Direct File Paths'. If this additional option is enabled, users that cannot bypass an embargo, even if they know the direct path to a file, will not be able to download or stream. The Site administrator will be responsible of hiding Formatters (Viewers) that are file-based to avoid them showing up without media. Formatters will not act automatically hiding themselves on this option. Note: this has performance implications, specially on streamed media, even if the user is allowed to see an ADO that holds a file.</p>
+<h2 id="but-wait-theres-more-additional-configurations-needed">But Wait There's More! Additional Configurations Needed</h2>
 <p>In order to enforce the Embargo options noted above, you have multiple options for configuration. You can use a singular or combination of the options described below, depending on your use cases and desired Embargo application. It is recommended that you at least apply the necessary Display Mode Formatter Configuration Options. You may also optionally wish to apply Twig Template changes noted further below.</p>
 <h3 id="display-mode-formatter-configuration-options">Display Mode Formatter Configuration Options</h3>
 <p>First, to better understand this functionality area, please first familiarize yourself with Archipelago's <a href="../webformsasinput/">Primer on Display Modes</a> and <a href="../strawberryfield-formatters/">Strawberryfield Formatters</a>.</p>
@@ -3865,8 +3950,29 @@
 </code></pre></div>
 <p>Example output when applied within the default Archipelago Object Description Output --and paired with the Formatter Embargo Configuration noted above (the Download menu tab does not show the media file downloand link):</p>
 <p><a class="glightbox" href="../images/embargoTwigOutput2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Embargo Twig Output 2" src="../images/embargoTwigOutput2.png" /></a></p>
+<h3 id="views-based-options-for-contextual-filters">Views Based Options for Contextual Filters</h3>
+<p>For even more granularity, you can enable additional access/embargo checks within a Contextual Filter for a View. </p>
+<p>For example, in the Collection block View (found at <code>/admin/structure/views/view/collection_membership</code> in default Archipelago instances), you could:</p>
+<ul>
+<li>Choose to enable a Validator for 'ADO access and Embargo Validator'</li>
+<li>Then also specify the additional checks to 'Validate user has access to the <em>Content</em>'</li>
+<li>And select the ADO Access/Embargo operation to check as 'View &amp; bypass embargo (if any)'</li>
+<li>Select that a 'Single ID' for the 'Multiple arguments' parameter</li>
+<li>Then select 'Hide View' for the 'Action to take if filter value does not validate'</li>
+</ul>
+<p><a class="glightbox" href="../images/embargoExtraViewOptions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Embargo Views Contextual Filter Option" src="../images/embargoExtraViewOptions.png" /></a></p>
+<p>Applying the changes described above would prevent the list of collection children from being shown if the Parent Collection itself was embargoed.</p>
+<h3 id="role-based-permissions-options">Role Based Permissions Options</h3>
+<p>There is a specialized set of permissions found at <code>admin/people/permissions</code> under the Strawberry Metadata and Media Field Formatters section, which allows you to specify that certain User Roles can 'See Embargoed object metadata and assets'. Please note, this Permission is not ACL. Enforced Embargo configured JSON keys will not act on if a user has this enabled. If an Object is Embargoed this permission will allow any role with this assigned to bypass it.</p>
+<p>Archipelago 1.5.0 instituted the following custom User Role Permissions related to embargo/access restrictions:</p>
+<ul>
+<li>See All Date/Time Embargoed object metadata and assets: This is not ACL. Enforced Embargo configured JSON keys will not act on Formatters if a user has this enabled. If an Object is embargoed by Time/date, this permission will allow any role with this assigned to bypass it.</li>
+<li>See All Embargoed object metadata and assets: This is not ACL. Enforced Embargo configured JSON keys will not act on Formatters if a user has this enabled. If an Object is embargoed this permission will allow any role with this assigned to bypass it.</li>
+<li>See All IP Embargoed object metadata and assets: This is not ACL. Enforced Embargo configured JSON keys will not act on Formatters if a user has this enabled. If an Object is embargoed by IP/IP Ranges, this permission will allow any role with this assigned to bypass it.</li>
+</ul>
+<p><a class="glightbox" href="../images/embargoPermissions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Embargo Permissions" src="../images/embargoPermissions.png" /></a></p>
 <h2 id="final-considerations">Final Considerations</h2>
-<p>There is a specialized Permission found at <code>admin/people/permissions</code> under the Strawberry Metadata and Media Field Formatters section, which allows you to specify that certain User Roles can 'See Embargoed object metadata and assets'. Please note, this Permission is not ACL. Enforced Embargo configured JSON keys will not act on Formatters if a user has this enabled. If an Object is Embargoed this permission will allow any role with this assigned to bypass it.</p>
+<p>For all of the Embargo and Access configurations and settings available, it is always recommended to first test your configurations using demo/test ADOs to ensure you have configured the correct combination of embargo settings before using any of these modes for production ADOs.</p>
 <hr />
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
 <p>Return to the <a href="../">Archipelago Documentation main page</a>.</p>
@@ -3892,7 +3998,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 2, 2024 19:36:51 UTC">April 2, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 15, 2025 19:04:10 UTC">July 15, 2025</span>
   </span>
 
     
