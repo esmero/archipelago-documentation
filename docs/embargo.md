@@ -9,24 +9,24 @@ tags:
 
 # Embargo & Access Restrictions in Archipelago
 
-Archipelago features two primary different Metadata Based Embargo / Access Restriction options for limiting access to materials when needed.
+Archipelago features three different Metadata Based Embargo / Access Restriction options for limiting access to materials when needed.
 
 You can find the main Metadata Based Embargo settings configuration form at:
 
 - `admin/config/archipelago/metadatabased_Embargo`
 - Through the `Configuration` menu > `Archipelago` > `Metadata based Embargo settings`
 
-![Embargo Form](images/embargoForm.png)
+![Embargo Form](images/embargoForm_updated_.png)
 
 This form allows you to enable/disable Embargo functionality enforced at the Formatter level and configure on which JSON Key/values those will act.
 
-For either (or both) Embargo options, you will to select the checkbox for 'Is Embargo checking and enforcing globally active?'
+For any singular or multiple Embargo options, you will need to enable by first selecting the checkbox for 'Is Embargo checking and enforcing globally active?'
 
 !!! note "Important Note: Your Metadata Keys and Values Matter"
 
     Please also keep in mind that the Embargo Options noted below need to draw the necessary related metadata values as defined in specific keys. You cannot specify to use either Embargo by Date or Embargo Bypass by IP without also defining the values in your Digital Object/Collection metadata.
 
-## Option 1: Embargo by Date
+### Option 1: Embargo by Date
 
 The first Embargo option you have is to define a "JSON key present in your metadata that contains an Embargo lift date that will be used to Embargo Metadata and Media."
 
@@ -50,7 +50,7 @@ Functional results for objects with future dates in the 'date_embargo_lift' key:
 - File media viewer does not display until the date set in the 'date_embargo_lift' key in the Digital Object's JSON metadata has passed.
 - Metadata record displays as usual.
 
-## Option 2: Embargo Bypass by IP
+### Option 2: Embargo Bypass by IP
 
 The second Embargo option you have is to define a "JSON key present in your metadata that contains an allowed to bypass Embargo through a visitor IP or IP range that will be used to Embargo Metadata and Media".
 
@@ -77,7 +77,20 @@ Functional results for objects with IP range/s specified in the 'embargo_ip_bypa
 - Metadata record displays as usual.
 - No caching for any objects with values for this 'embargo_ip_bypass' key
 
-## Additional Configurations Needed: Display Mode Formatters and Twig Templates
+### Option 3: Global IP Range Bypass Mode
+
+The third Embargo option you have is to define a 'Global IP Range Bypass Mode' to select one of three modes to determine the order preference for global versus granular Embargo bypasses. These distinct modes only affect already embargoed ADOs with "Embargo bypass by IP" values defined. It is recommended to use test ADOs to ensure you have configured the correct combination of embargo settings before using any of these modes for production ADOs.
+
+The three Global IP Range Bypass Modes are:
+
+- Global IP Range will override any "Embargo bypass by IP" values defined at the granular ADO level 
+- Global IP Range will be added to "Embargo bypass by IP" values defined at the granular ADO level
+- Global IP Range will be ignored when an ADO holds "Embargo bypass by IP" values at the granular level
+
+After selecting your desired Mode, you will need to enter the Global IP addresses and ranges for the embargo bypass. You will need to specify IP addresses in CDIR format, and enter one IP/IP Range per line in the available form box.
+
+
+## But Wait There's More! : Additional Configurations Needed: Display Mode Formatters and Twig Templates
 
 In order to enforce the Embargo options noted above, you have multiple options for configuration. You can use a singular or combination of the options described below, depending on your use cases and desired Embargo application. It is recommended that you at least apply the necessary Display Mode Formatter Configuration Options. You may also optionally wish to apply Twig Template changes noted further below.
 
