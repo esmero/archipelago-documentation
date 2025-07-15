@@ -89,8 +89,9 @@ The three Global IP Range Bypass Modes are:
 
 After selecting your desired Mode, you will need to enter the Global IP addresses and ranges for the embargo bypass. You will need to specify IP addresses in CDIR format, and enter one IP/IP Range per line in the available form box.
 
+The default ranges provided for the Archipelago Local Deployment demonstrate an example of an internal IP address and range. These should be considered for reference only, and not used in production/live Archipelago instances.
 
-## But Wait There's More! : Additional Configurations Needed: Display Mode Formatters and Twig Templates
+## But Wait There's More! Additional Configurations Needed: Display Mode Formatters and Twig Templates
 
 In order to enforce the Embargo options noted above, you have multiple options for configuration. You can use a singular or combination of the options described below, depending on your use cases and desired Embargo application. It is recommended that you at least apply the necessary Display Mode Formatter Configuration Options. You may also optionally wish to apply Twig Template changes noted further below.
 
