@@ -9,24 +9,26 @@ tags:
 
 # Embargo & Access Restrictions in Archipelago
 
-Archipelago features two primary different Metadata Based Embargo / Access Restriction options for limiting access to materials when needed.
+Archipelago features three primary Metadata Based Embargo / Access Restriction options for limiting access to materials when needed.
 
 You can find the main Metadata Based Embargo settings configuration form at:
 
 - `admin/config/archipelago/metadatabased_Embargo`
 - Through the `Configuration` menu > `Archipelago` > `Metadata based Embargo settings`
 
-![Embargo Form](images/embargoForm.png)
+![Embargo Form](images/embargoForm_updated.png)
 
 This form allows you to enable/disable Embargo functionality enforced at the Formatter level and configure on which JSON Key/values those will act.
 
-For either (or both) Embargo options, you will to select the checkbox for 'Is Embargo checking and enforcing globally active?'
+For any singular or multiple Embargo options, you will need to enable by first selecting the checkbox for 'Is Embargo checking and enforcing globally active?'
+
+You will also want to review the [Additional Configurations Needed](embargo.md#but-wait-there's-more-additional-configurations-needed) section of this guide, and pair your primary Embargo/Access Restriction settings with the more granular options found for Display Modes, Twig Templates, Views, and User Permissions.
 
 !!! note "Important Note: Your Metadata Keys and Values Matter"
 
     Please also keep in mind that the Embargo Options noted below need to draw the necessary related metadata values as defined in specific keys. You cannot specify to use either Embargo by Date or Embargo Bypass by IP without also defining the values in your Digital Object/Collection metadata.
 
-## Option 1: Embargo by Date
+### Option 1: Embargo by Date
 
 The first Embargo option you have is to define a "JSON key present in your metadata that contains an Embargo lift date that will be used to Embargo Metadata and Media."
 
@@ -50,7 +52,7 @@ Functional results for objects with future dates in the 'date_embargo_lift' key:
 - File media viewer does not display until the date set in the 'date_embargo_lift' key in the Digital Object's JSON metadata has passed.
 - Metadata record displays as usual.
 
-## Option 2: Embargo Bypass by IP
+### Option 2: Embargo Bypass by IP
 
 The second Embargo option you have is to define a "JSON key present in your metadata that contains an allowed to bypass Embargo through a visitor IP or IP range that will be used to Embargo Metadata and Media".
 
@@ -77,7 +79,25 @@ Functional results for objects with IP range/s specified in the 'embargo_ip_bypa
 - Metadata record displays as usual.
 - No caching for any objects with values for this 'embargo_ip_bypass' key
 
-## Additional Configurations Needed: Display Mode Formatters and Twig Templates
+### Option 3: Global IP Range Bypass Mode
+
+The third Embargo option you have is to define a 'Global IP Range Bypass Mode' to select one of three modes to determine the order preference for global versus granular Embargo bypasses. These distinct modes only affect already embargoed ADOs with "Embargo bypass by IP" values defined. 
+
+The three Global IP Range Bypass Modes are:
+
+- Global IP Range will override any "Embargo bypass by IP" values defined at the granular ADO level 
+- Global IP Range will be added to "Embargo bypass by IP" values defined at the granular ADO level
+- Global IP Range will be ignored when an ADO holds "Embargo bypass by IP" values at the granular level
+
+After selecting your desired Mode, you will need to enter the Global IP addresses and ranges for the embargo bypass. You will need to specify IP addresses in CDIR format, and enter one IP/IP Range per line in the available form box.
+
+The default ranges provided for the Archipelago Local Deployment demonstrate an example of an internal IP address and range. These should be considered for reference only, and not used in production/live Archipelago instances.
+
+### Bonus Option: Embargo Direct File Paths
+
+An additional bonus option, to add onto one of the three primary Embargo options, is the ability to 'Embargo Direct File Paths'. If this additional option is enabled, users that cannot bypass an embargo, even if they know the direct path to a file, will not be able to download or stream. The Site administrator will be responsible of hiding Formatters (Viewers) that are file-based to avoid them showing up without media. Formatters will not act automatically hiding themselves on this option. Note: this has performance implications, specially on streamed media, even if the user is allowed to see an ADO that holds a file.
+
+## But Wait There's More! Additional Configurations Needed
 
 In order to enforce the Embargo options noted above, you have multiple options for configuration. You can use a singular or combination of the options described below, depending on your use cases and desired Embargo application. It is recommended that you at least apply the necessary Display Mode Formatter Configuration Options. You may also optionally wish to apply Twig Template changes noted further below.
 
@@ -166,9 +186,37 @@ Example output when applied within the default Archipelago Object Description Ou
 
 ![Embargo Twig Output 2](images/embargoTwigOutput2.png)
 
+### Views Based Options for Contextual Filters
+
+For even more granularity, you can enable additional access/embargo checks within a Contextual Filter for a View. 
+
+For example, in the Collection block View (found at `/admin/structure/views/view/collection_membership` in default Archipelago instances), you could:
+
+- Choose to enable a Validator for 'ADO access and Embargo Validator'
+- Then also specify the additional checks to 'Validate user has access to the *Content*'
+- And select the ADO Access/Embargo operation to check as 'View & bypass embargo (if any)'
+- Select that a 'Single ID' for the 'Multiple arguments' parameter
+- Then select 'Hide View' for the 'Action to take if filter value does not validate'
+
+![Embargo Views Contextual Filter Option](images/embargoExtraViewOptions.png)
+
+Applying the changes described above would prevent the list of collection children from being shown if the Parent Collection itself was embargoed.
+
+### Role Based Permissions Options
+
+There is a specialized set of permissions found at `admin/people/permissions` under the Strawberry Metadata and Media Field Formatters section, which allows you to specify that certain User Roles can 'See Embargoed object metadata and assets'. Please note, this Permission is not ACL. Enforced Embargo configured JSON keys will not act on if a user has this enabled. If an Object is Embargoed this permission will allow any role with this assigned to bypass it.
+
+Archipelago 1.5.0 instituted the following custom User Role Permissions related to embargo/access restrictions:
+
+- See All Date/Time Embargoed object metadata and assets: This is not ACL. Enforced Embargo configured JSON keys will not act on Formatters if a user has this enabled. If an Object is embargoed by Time/date, this permission will allow any role with this assigned to bypass it.
+- See All Embargoed object metadata and assets: This is not ACL. Enforced Embargo configured JSON keys will not act on Formatters if a user has this enabled. If an Object is embargoed this permission will allow any role with this assigned to bypass it.
+- See All IP Embargoed object metadata and assets: This is not ACL. Enforced Embargo configured JSON keys will not act on Formatters if a user has this enabled. If an Object is embargoed by IP/IP Ranges, this permission will allow any role with this assigned to bypass it.
+
+![Embargo Permissions](images/embargoPermissions.png)
+
 ## Final Considerations
 
-There is a specialized Permission found at `admin/people/permissions` under the Strawberry Metadata and Media Field Formatters section, which allows you to specify that certain User Roles can 'See Embargoed object metadata and assets'. Please note, this Permission is not ACL. Enforced Embargo configured JSON keys will not act on Formatters if a user has this enabled. If an Object is Embargoed this permission will allow any role with this assigned to bypass it.
+For all of the Embargo and Access configurations and settings available, it is always recommended to first test your configurations using demo/test ADOs to ensure you have configured the correct combination of embargo settings before using any of these modes for production ADOs.
 
 ___
 
