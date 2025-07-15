@@ -204,7 +204,7 @@ Applying the changes described above would prevent the list of collection childr
 
 ### Role Based Permissions Options
 
-There is a specialized set of permissions found at `admin/people/permissions` under the Strawberry Metadata and Media Field Formatters section, which allows you to specify that certain User Roles can 'See Embargoed object metadata and assets'. Please note, this Permission is not ACL. Enforced Embargo configured JSON keys will not act on Formatters if a user has this enabled. If an Object is Embargoed this permission will allow any role with this assigned to bypass it.
+There is a specialized set of permissions found at `admin/people/permissions` under the Strawberry Metadata and Media Field Formatters section, which allows you to specify that certain User Roles can 'See Embargoed object metadata and assets'. Please note, this Permission is not ACL. Enforced Embargo configured JSON keys will not act on if a user has this enabled. If an Object is Embargoed this permission will allow any role with this assigned to bypass it.
 
 Archipelago 1.5.0 instituted the following custom User Role Permissions related to embargo/access restrictions:
 
