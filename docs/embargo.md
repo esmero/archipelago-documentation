@@ -22,7 +22,7 @@ This form allows you to enable/disable Embargo functionality enforced at the For
 
 For any singular or multiple Embargo options, you will need to enable by first selecting the checkbox for 'Is Embargo checking and enforcing globally active?'
 
-You will also want to review the [Additional Configurations Needed](embargo.md#but-wait-there's-more-additional-configurations-needed) section of this guide, and pair your primary Embargo/Access Restriction settings with the more granular options found for Display Modes, Twig Templates, Views, and User Permissions.
+You will also want to review the [Additional Configurations Needed](embargo.md#but-wait-theres-more-additional-configurations-needed) section of this guide, and pair your primary Embargo/Access Restriction settings with the more granular options found for Display Modes, Twig Templates, Views, and User Permissions.
 
 !!! note "Important Note: Your Metadata Keys and Values Matter"
 
