@@ -16,7 +16,7 @@ You can find the main Metadata Based Embargo settings configuration form at:
 - `admin/config/archipelago/metadatabased_Embargo`
 - Through the `Configuration` menu > `Archipelago` > `Metadata based Embargo settings`
 
-![Embargo Form](images/embargoForm_updated_.png)
+![Embargo Form](images/embargoForm_updated.png)
 
 This form allows you to enable/disable Embargo functionality enforced at the Formatter level and configure on which JSON Key/values those will act.
 
