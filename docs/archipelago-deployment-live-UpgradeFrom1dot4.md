@@ -503,7 +503,7 @@ then replace your local `deploy.sh` and `update_deployed.sh` scripts which can b
  and
 `https://raw.githubusercontent.com/esmero/archipelago-deployment-live/refs/heads/1.5.0/drupal/scripts/archipelago/update_deployed.sh`
 
-from the new release and, as described in the general (from zero) [deployment instructions](https://github.com/esmero/archipelago-deployment-live/blob/1.5archipelago-deployment-live-readme.md) replace the `http://esmero-web` with your real domain.
+from the new release and, as described in the general (from zero) [1.5.0 Deployment Instructions](archipelago-deployment-live-readme.md) replace the `http://esmero-web` with your real domain.
 On a terminal navigate to your base archipelago deployment folder and run the following command replacing `your.domain.org` with your actual domain.
 
 ```shell
