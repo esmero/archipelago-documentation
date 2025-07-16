@@ -97,7 +97,7 @@ ___
 We mean this. This is a **new step**. Running a Production Server requires some informed decision making and thus, we believe, a good pre-step is reviewing what [changed between releases](https://github.com/esmero/archipelago-deployment-live/compare/1.3.0...1.4.0). 
 
 
-### Step 1: Edit docker-composer.yml (optional)
+### Step 1: Edit docker-compose.yml (optional)
 
 For this release there are no larger updates on the Docker backend level (good!). Solr 9 was updated from 9.1 to 9.2 and Database (MYSQL and MariaDB) also got a version bump. [Esmero NLP with Machine Learning Model Endpoints](https://github.com/esmero/archipelago-deployment/blob/04a50d342708b2b6f63eed9bf6a6c98e68f1a691/docker-compose-linux.yml#L78) is not meant for production/public access and right now is for community evaluation only. Reasons are many: some technical (CPU/GPU and memory consumption not suited for a medium server) but mostly about usefulness, use cases, real needs driving the use of the tools we developed and the very much needed Community Discussion and Consensus on our Field's (GLAM) ethical concerns about this.
 
