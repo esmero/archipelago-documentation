@@ -66,6 +66,8 @@ After making adjustments to Strawberry Runners Post-Processing configurations, y
 
 You can use Archipelago's [Find and Replace](find_and_replace.md) to first select a specific group of Digital Objects you wish to target for Post-Processing, then select the `Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item` from the [Find and Replace](find_and_replace.md) `Actions menu`.
 
+For Archipelago 1.5.0 and up, you can also use the '[Run Action on Processed ADOs](AMIviaSpreadsheets.md#optional-step-11-run-action-on-processed-ados)' tab to run that same Action as well.
+
 ### Additional Post Processor Operations
 
 Archipelago also includes the `Post processor that writes/reads Frictionless Data Packages` plugin. Please keep a lookout for future documentation related to using this plugin.
