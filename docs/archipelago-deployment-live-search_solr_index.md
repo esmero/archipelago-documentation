@@ -120,7 +120,7 @@ https://github.com/esmero/archipelago-deployment-live/tree/1.4.0/data_storage/so
 Also (please) read the official documentation here https://solr.apache.org/guide/8_9/solr-upgrade-notes.html
 
 
-### Step 1: Edit docker-composer.yml 
+### Step 1: Edit docker-compose.yml 
 
 You want to replace your current Solr Service (in its enterity. Please make sure indendation is 1:1). 
 
@@ -183,7 +183,7 @@ This step requires some nerve. Be sure you know where you are inside your termin
 
 Inside your archipelago-deployment-live folder run:
 
-```SHELL
+```shell
 cd data_storage/solrcore
 pwd
 ```
@@ -195,21 +195,21 @@ You should see something like
 
 Which means you are in the correct folder. Now time to clean your index (really think twice here ok? You have a backup. Never run any of these without a backup)
 
-```SHELL
+```shell
 sudo rm -rf *
 ```
 
 Now we need the new configurations for your Solr (so then docker container can re-create the index from scratch). Remember we downloaded a reference/empty Archipelago Deployment Live 1.4.0 at `/home/ec2-user/archipelago-deployment-live-1.4.0`.
 We are going to use the files there to replace your own configs. `cd` back to your live deployment assuming here it is (still) `/home/ec2-user/archipelago-deployment-live`
 
-```SHELL
+```shell
 cd /home/ec2-user/archipelago-deployment-live
 cp -rpv /home/ec2-user/archipelago-deployment-live-1.4.0/config_storage/solrconfig/conf/* /home/ec2-user/archipelago-deployment-live/config_storage/solrconfig/conf/.
 ```
 
 Now we need to remove the old OCR library and replace with the new one
 
-```SHELL
+```shell
 rm /home/ec2-user/archipelago-deployment-live/data_storage/solrlib/solr-ocrhighlighting-0.7.1.jar
 cp -rpv /home/ec2-user/archipelago-deployment-live-1.4.0/data_storage/solrlib/solr-ocrhighlighting-0.8.4-SNAPSHOT.jar /home/ec2-user/archipelago-deployment-live//data_storage/solrlib/.
 ```
