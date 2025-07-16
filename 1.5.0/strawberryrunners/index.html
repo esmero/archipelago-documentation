@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.archipelago.nyc/1.5.0/strawberryrunners/">
       
       
-        <link rel="prev" href="../archifilepersistencestrategy/">
+        <link rel="prev" href="../queuesexplainer/">
       
       
         <link rel="next" href="../strawberryrunners_pager_ocr/">
@@ -1623,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../queuesexplainer.md" class="md-nav__link">
+      <a href="../queuesexplainer/" class="md-nav__link">
         
   
   
@@ -1901,7 +1901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strawberryrunners_text.md" class="md-nav__link">
+      <a href="../strawberryrunners_text/" class="md-nav__link">
         
   
   
@@ -3700,8 +3700,14 @@
 <li>extract text from pages within a Webarchives File and send the output to the Search API</li>
 <li>convert WARC format Webarchives Files into WACZ format and attach the new WACZ file to the original source ADO to complement the WARC original</li>
 <li>extract textual values from subtitle/transcript VTT files and generates time/space transmuted OCR</li>
+<li>extract text from Files and send the output to the Search API</li>
 </ul>
 <p>SBR actions can be chained and nested to enable ordered operations, such as first extract individual pages in an ordered sequence and then run HOCR/OCR across the individual pages.</p>
+<div class="admonition note">
+<p class="admonition-title">Important Note: Local vs Live/Production Instances</p>
+<p>The Local Archipelago Deployment features a few additional post-processor operations related to the <a href="../experimental_tools/">Experimental ML Tools</a>. Please refer to that documentation for more information about those additional post-processors and their usage.</p>
+<p>This guide only covers the primary Strawberry Runners Post-Processors. </p>
+</div>
 <h2 id="strawberry-runners-settings-overview">Strawberry Runners Settings Overview</h2>
 <p>You can access the Strawberry Runners Settings:</p>
 <ul>
@@ -3709,7 +3715,7 @@
 <li>Directly at <code>/admin/config/archipelago/strawberry_runners</code> </li>
 </ul>
 <p>On the Strawberry Runners Settings page, you will see the Archipelago default post processor configurations (unless modified).</p>
-<p><a class="glightbox" href="../images/strawberryrunnershome_updated.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Strawberry Runners Home" src="../images/strawberryrunnershome_updated.png" /></a></p>
+<p><a class="glightbox" href="../images/strawberryrunnershome_updated_2025_July.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Strawberry Runners Home" src="../images/strawberryrunnershome_updated_2025_July.png" /></a></p>
 <ol>
 <li>The <code>pager</code> action uses the 'Post processor that extracts/generates Ordered Sequences of files/pages/children using Files present in an ADO' plugin.</li>
 <li>Nested one level in, the <code>ocr</code> action uses the 'Post processor that Runs OCR/HORC against files' plugin. The <code>ocr</code> operations will be executed after the completion of the <code>pager</code> operations.</li>
@@ -3717,19 +3723,22 @@
 <li>Nested one level in, the <code>webpage</code> action uses the 'Post processor that Indexes WACZ Frictionless data Search Index to Search API' plugin. The <code>webpage</code> operations will be executed after the completion of the <code>wacz_page_extractor</code> operations.</li>
 <li>The <code>warc_to_wacz</code> action uses the 'Post processor that uses a System Binary to process * files' operations.</li>
 <li>The <code>subtitle</code> action extracts textual values from subtitle/transcript VTT files and generates time/space transmuted OCR. This transmuted OCR can be used to search within a time-based video or audio file's corresponding subtitle/transcript VTT file(s), then navigate to the matching time of the video or audio file within a media viewer.</li>
+<li>The <code>text</code> action extracts text from Files.</li>
 </ol>
 <h2 id="reviewing-and-adjusting-the-default-post-processors">Reviewing and Adjusting the default Post-Processors</h2>
-<p>From the main Strawberry Runner Settings page, you can review and adjust the settings for the default Archipelago configurations by selecting <code>Edit</code> from the `Operations`` menu. </p>
+<p>From the main Strawberry Runner Settings page, you can review and adjust the settings for the default Archipelago configurations by selecting <code>Edit</code> from the <code>Operations</code> menu. </p>
 <p>Please see the following guides for:</p>
 <ul>
 <li><a href="../strawberryrunners_pager_ocr/">Adjusting the <code>pager</code> and <code>ocr</code> operations</a></li>
 <li><a href="../strawberryrunners_webpage_text/">Adjusting the <code>wacz_page_extractor</code> and <code>webpage</code> operations</a></li>
 <li><a href="../strawberryrunners_wacz_binary/">Adjusting the <code>warc_to_wacz</code> operation</a></li>
 <li><a href="../strawberryrunners_subtitle/">Adjusting the <code>subtitle</code> operation</a></li>
+<li><a href="../strawberryrunners_text/">Adjusting the <code>text</code> operation</a></li>
 </ul>
 <h2 id="triggering-post-processing-actions-manually">Triggering Post-Processing Actions Manually</h2>
 <p>After making adjustments to Strawberry Runners Post-Processing configurations, you may want to trigger/re-trigger a particular action manually.</p>
 <p>You can use Archipelago's <a href="../find_and_replace/">Find and Replace</a> to first select a specific group of Digital Objects you wish to target for Post-Processing, then select the <code>Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item</code> from the <a href="../find_and_replace/">Find and Replace</a> <code>Actions menu</code>.</p>
+<p>For Archipelago 1.5.0 and up, you can also use the '<a href="../AMIviaSpreadsheets/#optional-step-11-run-action-on-processed-ados">Run Action on Processed ADOs</a>' tab to run that same Action as well.</p>
 <h3 id="additional-post-processor-operations">Additional Post Processor Operations</h3>
 <p>Archipelago also includes the <code>Post processor that writes/reads Frictionless Data Packages</code> plugin. Please keep a lookout for future documentation related to using this plugin.</p>
 <hr />
@@ -3756,7 +3765,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 17, 2025 16:51:49 UTC">January 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 16, 2025 20:26:16 UTC">July 16, 2025</span>
   </span>
 
     
