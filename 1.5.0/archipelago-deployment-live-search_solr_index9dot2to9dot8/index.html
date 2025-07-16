@@ -12,7 +12,7 @@
         <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
       
       
-        <link rel="canonical" href="https://docs.archipelago.nyc/1.5.0/drupal_core_update/">
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.5.0/archipelago-deployment-live-search_solr_index9dot2to9dot8/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Updating Drupal Core in Archipelago - Archipelago Documentation</title>
+        <title>Archipelago-deployment-live: Upgrading Solr 9.2 to 9.8 - Archipelago Documentation</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#updating-drupal-core-in-archipelago" class="md-skip">
+        <a href="#archipelago-deployment-live-140-to-150-upgrading-solr-92-to-98" class="md-skip">
           Skip to content
         </a>
       
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Updating Drupal Core in Archipelago
+              Archipelago-deployment-live: Upgrading Solr 9.2 to 9.8
             
           </span>
         </div>
@@ -3504,9 +3504,222 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#stepsguides" class="md-nav__link">
+  <a href="#what-is-this-documentation-for" class="md-nav__link">
     <span class="md-ellipsis">
-      Steps/Guides
+      What is this documentation for?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backing-up-and-preparing-for-the-upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backing up and preparing for the upgrade
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backing up and preparing for the upgrade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-to-solr-98" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading to Solr 9.8
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrading to Solr 9.8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-get-familiar-with-what-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 0: Get familiar with what changed.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-edit-docker-composeryml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Edit docker-composer.yml
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2a-hopefully-try-to-upgrade-without-reindexing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2A: Hopefully try to upgrade without reindexing.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2A: Hopefully try to upgrade without reindexing.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-mayor-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a mayor change?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2b-wipe-clean" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2B: Wipe clean.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2B: Wipe clean.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-the-new-configs-get-the-new-ocr-highlight-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get the new configs. Get the new OCR Highlight library
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-docker-pull-and-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: docker pull and check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-optional-new-drupal-solr-field-configs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4 (Optional): New Drupal Solr Field configs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-re-index-drupal-search-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Re-index Drupal Search API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 6: DONE!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#need-help-strange-logs-searching-for-happiness-leads-to-no-results-missed-a-step-need-a-hug-or-someone-that-listens-to-you-in-silence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Need help? Strange logs? Searching for happiness leads to no results? Missed a step? Need a hug or someone that listens to you in silence?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caring-coding-fixing-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caring &amp; Coding + Fixing + Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
     </span>
   </a>
   
@@ -3531,31 +3744,19 @@
       
       
       
-        <span class="md-tag">Archipelago-deployment</span>
-      
-    
-      
-      
-      
         <span class="md-tag">Archipelago-deployment-live</span>
       
     
       
       
       
-        <span class="md-tag">DevOps</span>
+        <span class="md-tag">Drupal 10</span>
       
     
       
       
       
-        <span class="md-tag">Drupal</span>
-      
-    
-      
-      
-      
-        <span class="md-tag">Drupal Core</span>
+        <span class="md-tag">Solr 9</span>
       
     
   </nav>
@@ -3565,46 +3766,224 @@
   
 
 
-<h1 id="updating-drupal-core-in-archipelago">Updating Drupal Core in Archipelago</h1>
-<p>Drupal, the project, <a href="https://www.drupal.org/about/core/policies/core-release-cycles/schedule">puts out new core releases on a regular schedule</a>. Your Archipelago site needs to apply the security updates and possibly minor releases between major core updates. Major core updates will typically coincide with an updated Archipelago stable release. </p>
-<p>Updating core is done via <a href="https://www.drupal.org/docs/develop/using-composer/manage-dependencies">Composer</a>:</p>
-<h2 id="stepsguides">Steps/Guides</h2>
-<ol>
-<li>First you will want to verify Drupal Core will update itself and the dependencies. To do so, you run the following command:
-    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer update &quot;</span>drupal/core-*:^9<span class="s2">&quot; --with-all-dependencies --dry-run</span>
+<h1 id="archipelago-deployment-live-140-to-150-upgrading-solr-92-to-98">Archipelago-deployment-live 1.4.0 to 1.5.0: Upgrading Solr 9.2 to 9.8</h1>
+<h2 id="what-is-this-documentation-for">What is this documentation for?</h2>
+<p>This documentation will help you ugprade your Solr Index from 9.2 to 9.8 releases. And is meant to be a guide/helper. There is no simple way of saying this, but because the way a Solr index (sort of a Binary tree) is built, any larger
+change in the schema, field type definitions requires either a complete reindex but really, most of the time, a wipe, and start fresh situation. There is no perfect way around and sometimes, depending on your own customizations might also NOT be required at all.</p>
+<p>So we will have to check logs before deciding. </p>
+<p>Even if there are <strong>very complex</strong> ways of keeping an old Server running and serving searches
+while you re-index a new one, but honestly, and assuming you are reading this guide because your primary Job is not managing Solr, the how and approach will depend on your existing knowledge of Solr, your skills (even memory!) to execute so, and documenting those hacks are beyond the scope of this documentation. What is proven is what we explain in this document</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>An <a href="https://github.com/esmero/archipelago-deployment-live">archipelago-deployment-live</a> instance (working, tested) deployed using provided instructions via Docker running either Solr 8.x or Solr &lt;= 9.2</li>
+<li>Good knowledge, patience and instincts (+ courage and time) on how to run Terminal Commands.</li>
+<li>Patience(again but also patience from your users since search will be unavailable until you reindex). You can't skip steps here.</li>
+<li>For shell Commands documented here please copy line by line--not the whole block.</li>
+<li>You are running already version control and know how to git pull/push/merge.</li>
+</ul>
+<h2 id="backing-up-and-preparing-for-the-upgrade">Backing up and preparing for the upgrade</h2>
+<p>Backups are always going to be your best friends. Archipelago's code, database, and settings are mostly self-contained in your current <code>archipelago-deployment-live</code> repo folder, and backing up is simple because of that.</p>
+<h3 id="step-1">Step 1:</h3>
+<p>To make upgrading simpler we will clone archipelago-deployment-live (empty one) into a different folder. That way we can copy complete folders of configs and files instead of fetching them from github one by one.</p>
+<p>Go to your home folder (for the sake of this documentation it will be <code>/home/ec2-user</code> but you can also use the <code>$HOME</code> environmental variable instead )</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/home/ec2-user
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/esmero/archipelago-deployment-live<span class="w"> </span>archipelago-deployment-live-1.5.0
+<span class="nb">cd</span><span class="w"> </span>archipelago-deployment-live-1.5.0
+git<span class="w"> </span>switch<span class="w"> </span><span class="m">1</span>.5.0
 </code></pre></div>
-    The <code>--dry-run</code> flag will allow you to see what will be updated. Once you review the updates and are ready to go with the full update, you will run the same command without the <code>dry-run</code> flag.</li>
-<li>Update Core and the dependencies:
-    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer update &quot;</span>drupal/core-*:^9<span class="s2">&quot; --with-all-dependencies&quot;</span>
-</code></pre></div></li>
-<li>Sometimes the database needs to be updated after the update of the files. The following command will prompt you to type yes if there are updates to be done, or it will not return anything if no updates are needed:
-    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush updatedb&quot;</span>
-</code></pre></div></li>
-<li>Clear the Drupal cache:
-    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush cache:rebuild&quot;</span>
+<p>Now, on a terminal, <code>cd</code> into your running (again: not the previously cloned one, your actual running one) <code>archipelago-deployment-live</code> folder, then <code>cd</code> inside the <code>deploy/ec2-docker</code> subfolders and shut down your <code>docker-compose</code> ensemble by running the following:</p>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>down
 </code></pre></div>
-Occasionally there will be other Drupal modules that Archipelago uses, and they need to be updated at the same time you run a Core update. This is an example of updating Drupal Webform, which was required for moving to Drupal 9.5.x:</li>
-</ol>
-<div class="admonition example">
-<p class="admonition-title">Updating a Drupal module</p>
-<ol>
-<li>Use Composer to update a module to a specific release:
-    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;composer update &quot;</span>drupal/webform:6.1.4
-</code></pre></div></li>
-<li>Check for database updates and apply them if necessary:
-    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush updatedb&quot;</span>
+<h3 id="step-2">Step 2:</h3>
+<p>Verify that all containers are actually down. The following command should return an empty listing:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps
 </code></pre></div>
-    or
-    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush updb&quot;</span>
-</code></pre></div></li>
-<li>Clear the cache again:
-    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush cache:rebuild&quot;</span>
+<p>If anything is still running, wait a little longer and run the command again.</p>
+<h3 id="step-3">Step 3:</h3>
+<p>Note: If you are coming from the more general Upgrade 1.5.0 guide you probably already did the backend a few minutes ago. Skip to Step 4 if you are certain you did.</p>
+<p>Now let's <code>tar.gz</code> the whole ensemble with data and configs. We will exclude here the local source caches generated by Cantaloupe. If these or not exist will depend on how custom your
+deployment is.</p>
+<p>As an example we will save this into your <code>$HOME</code> folder. As a good practice we append the <strong>current date</strong> (YEAR-MONTH-DAY) to the filename. Here we assume today is July 16th of 2025.</p>
+<p>We will <code>cd</code> back to the parent folder of your running <code>archipelago-deployment-live</code> folder, so three levels down, assuming you are right now inside <code>archipelago-deployment-live/deploy/ec2-docker</code></p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>../../..
+sudo<span class="w"> </span>tar<span class="w"> </span>--exclude<span class="o">=</span>archipelago-deployment-live/data_storage/iiifcache<span class="w"> </span>--exclude<span class="o">=</span>archipelago-deployment-live/data_storage/iiiftmp<span class="w"> </span>-czvpf<span class="w"> </span><span class="nv">$HOME</span>/archipelago-deployment-D10-20250716.tar.gz<span class="w"> </span>archipelago-deployment-live
 </code></pre></div>
-    or
-    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;drush cr&quot;</span>
-</code></pre></div></li>
-</ol>
-</div>
+<p>The process may take a few minutes. Now let's verify that all is there and that the <code>tar.gz</code> is not corrupt.</p>
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-tvvf<span class="w"> </span><span class="nv">$HOME</span>/archipelago-deployment-D10-20250716.tar.gz
+</code></pre></div>
+<p>You will see a listing of files, and at the end you will see something like this: <code>Archive Format: POSIX pax interchange format, Compression: gzip</code>. If corrupt (Do you have enough space? Did your ssh connection drop?) you will see the following:</p>
+<div class="highlight"><pre><span></span><code>tar:<span class="w"> </span>Unrecognized<span class="w"> </span>archive<span class="w"> </span>format
+</code></pre></div>
+<h3 id="step-4">Step 4:</h3>
+<p><code>cd</code> again into your running <code>archipelago-deployment-live</code> folder, then <code>cd</code> inside the <code>deploy/ec2-docker</code>
+Restart your <code>docker-compose</code> ensemble, and wait a little while for all to start.</p>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<h3 id="step-5">Step 5:</h3>
+<p>Export/backup all of your live Archipelago 1.4.0 (or 1.3.0?), Drupal 10 configurations (this allows you to compare/come back in case you lose something custom during the upgrade).</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>mkdir<span class="w"> </span>config/backup
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>cex<span class="w"> </span>--destination<span class="o">=</span>/var/www/html/config/backup
+</code></pre></div>
+<p>Good. Now it's safe to begin the upgrade process.</p>
+<hr />
+<h2 id="upgrading-to-solr-98">Upgrading to Solr 9.8</h2>
+<h3 id="step-0-get-familiar-with-what-changed">Step 0: Get familiar with what changed.</h3>
+<p>Running a Production Server requires some informed decision making and thus, we believe, a good pre-step is reviewing what <a href="https://github.com/esmero/archipelago-deployment-live/compare/1.3.0...1.4.0">changed between releases</a>. 
+In specific focus on this folder.</p>
+<p>https://github.com/esmero/archipelago-deployment-live/tree/1.5.0/config_storage/solrconfig/conf</p>
+<p>and</p>
+<p>https://github.com/esmero/archipelago-deployment-live/tree/1.5.0/data_storage/solrlib</p>
+<h3 id="step-1-edit-docker-composeryml">Step 1: Edit docker-composer.yml</h3>
+<p>You want to replace your current Solr Service (in its enterity. Please make sure indendation is 1:1) with this.</p>
+<div class="highlight"><pre><span></span><code>  solr:
+    container_name: esmero-solr
+    restart: always
+    image: &quot;solr:9.8.1&quot;
+    # If running Docker &lt; 20.10.10 please uncomment the following lines
+    # See https://solr.apache.org/guide/solr/latest/upgrade-notes/major-changes-in-solr-9.html#solr-9-2 
+    #security_opt:
+    #  - seccomp:unconfined
+    tty: true
+    environment:
+      SOLR_HEAP: 1024m
+      SOLR_OPTS: -Dsolr.jetty.request.header.size=65535 -Dsolr.install.dir=/opt/solr
+      SOLR_MODULES: &quot;extraction,langid,ltr,analysis-extras,scripting&quot;
+      SOLR_LOG_LEVEL: &quot;WARN&quot;
+    ports:
+      - &quot;8983:8983&quot;
+    networks:
+      - host-net
+      - esmero-net
+    volumes:
+      - ${ARCHIPELAGO_ROOT}/data_storage/solrcore:/var/solr/data
+      - ${ARCHIPELAGO_ROOT}/config_storage/solrconfig:/drupalconfig
+      - ${ARCHIPELAGO_ROOT}/data_storage/solrlib:/var/solr/data/lib
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - drupal
+      - /drupalconfig
+</code></pre></div>
+<p>Please double check and use any of these as reference:</p>
+<ul>
+<li>https://github.com/esmero/archipelago-deployment-live/blob/1.5.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml</li>
+<li>https://github.com/esmero/archipelago-deployment-live/blob/1.5.0/deploy/ec2-docker/docker-compose-aws-s3.yml</li>
+</ul>
+<p>For this, if you have not already, navigate to  <code>deploy/ec2-docker</code> and run:</p>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>down
+</code></pre></div>
+<p>Then open your docker-compose.yml file, find the <code>solr:</code> key and replace with the previous YAML snippet. If for some unknown reason your voluments do not match our defaults, please adapt to your custom edits so they match where the Solr Core and Libraries are saved:</p>
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>docker-compose.yml
+</code></pre></div>
+<p>Save your changes.</p>
+<h3 id="step-2a-hopefully-try-to-upgrade-without-reindexing">Step 2A: Hopefully try to upgrade without reindexing.</h3>
+<p>If you are coming from a "I deployed 1.4.0 and have been running Solr without touching anything on the backend" situation, Step 2A might be for you!</p>
+<p>To be sure: if after comparing https://github.com/esmero/archipelago-deployment-live/tree/1.5.0/config_storage/solrconfig/conf with your current live configuration found inside your archipelago-deployment-live at <code>data_storage/solrcore/drupal/conf</code>, you don't see MAYOR field definition changes, there is extra hope. Solr 9.8 does bring larger changes in the way Libraries (now named Modules) are used so we still will need to customize some of your Live configurations and check logs afterwards.</p>
+<h4 id="what-is-a-mayor-change">What is a mayor change?</h4>
+<p>Look for <code>schema_extra_types.xml</code> on both 1.5.0 and your <code>data_storage/solrcore/drupal/conf</code>. Diff them. If, for example your live/running <code>schema_extra_types.xml</code> has a field definition like</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;fieldType</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text_ngramstring&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;solr.TextField&quot;</span><span class="w"> </span><span class="na">positionIncrementGap=</span><span class="s">&quot;100&quot;</span><span class="w"> </span><span class="na">termPositions=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="na">termOffsets=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">storeOffsetsWithPositions=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>while 1.5.0 has (it has)
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;fieldType</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text_ngramstring&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;solr.TextField&quot;</span><span class="w"> </span><span class="na">positionIncrementGap=</span><span class="s">&quot;100&quot;</span><span class="w"> </span><span class="na">termPositions=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">termOffsets=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">storeOffsetsWithPositions=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">termVectors=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+</code></pre></div></p>
+<p>Then <code>`"text_ngramstring"</code> will differ in the way it stores its values at the physical index, and some changes might require a complete re-index. You could still try 2A but if something fails (logs) you migth end having to <a href="#step-2b-wipe-clean">jump to Step 2B</a>.</p>
+<p>If your live/running <code>schema_extra_types.xml</code> has entries with <code>name="some_name" that is not present in 1.5.0, then you might need to manually edit your future live</code>schema_extra_types.xml`, after copying from 1.5.0, to ensure your custom types are preserved. If unsure <a href="#step-2b-wipe-clean">jump to Step 2B</a>.</p>
+<p>If you are still here, then let's upgrade!</p>
+<p>We need the new configurations for your Solr. Remember we downloaded a reference/empty Archipelago Deployment Live 1.5.0. For this guide let's assume it is located at <code>/home/ec2-user/archipelago-deployment-live-1.5.0</code>.
+We are going to use the files there to replace your startup and also live configs. <code>cd</code> back to your live deployment assuming here it is (still) <code>/home/ec2-user/archipelago-deployment-live</code>
+Run (line by line)</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/home/ec2-user/archipelago-deployment-live
+cp<span class="w"> </span>-rpv<span class="w"> </span>/home/ec2-user/archipelago-deployment-live-1.5.0/config_storage/solrconfig/conf/*<span class="w"> </span>config_storage/solrconfig/conf/.
+sudo<span class="w"> </span>cp<span class="w"> </span>-rpv<span class="w"> </span>/home/ec2-user/archipelago-deployment-live-1.5.0/config_storage/solrconfig/conf/*<span class="w"> </span>data_storage/solrcore/drupal/conf/.
+sudo<span class="w"> </span>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">8983</span>:8983<span class="w"> </span>data_storage/solrcore
+</code></pre></div>
+<p>Now we need to remove the old OCR library and replace with the new one</p>
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>/home/ec2-user/archipelago-deployment-live/data_storage/solrlib/*.jar
+cp<span class="w"> </span>-rpv<span class="w"> </span>/home/ec2-user/archipelago-deployment-live-1.5.0/data_storage/solrlib/solr-ocrhighlighting-0.9.4-SNAPSHOT.jar<span class="w"> </span>data_storage/solrlib/.
+</code></pre></div>
+<p>Done. You can jump to Step 3!</p>
+<h3 id="step-2b-wipe-clean">Step 2B: Wipe clean.</h3>
+<p>You decided Step 2A was not right for you and you are 100% aware going this route here will require reindexing which, depending on the size of your repository might span from several hours to days. you Sure?</p>
+<h4 id="get-the-new-configs-get-the-new-ocr-highlight-library">Get the new configs. Get the new OCR Highlight library</h4>
+<p>Wait! (breath.)</p>
+<p>Repating: This step is only required if you are moving from Solr 8.x to 9.x or inside 9.x you have <code>solr field type</code> definition changes. If you had a stock 1.3.0 with Solr 9.1 or a stock 1.4.0 with solr 9.2 and want to move to solr 9.8 you can skip deleting everything and go back to Step 2A!</p>
+<p>This step requires some nerve. Be sure you know where you are inside your terminal (always)</p>
+<p>Inside your archipelago-deployment-live folder run:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>data_storage/solrcore
+<span class="nb">pwd</span>
+</code></pre></div>
+<p>You should see something like 
+<div class="highlight"><pre><span></span><code>/home/ec2-user/archipelago-deployment-live/data_storage/solrcore
+</code></pre></div></p>
+<p>Which means you are in the correct folder. Now time to clean your index (really think twice here ok? You have a backup. <strong>Never</strong> run any of these without a backup)</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>*
+</code></pre></div>
+<p>Now we need the new configurations for your Solr (so then docker container can re-create the index from scratch). Remember we downloaded a reference/empty Archipelago Deployment Live 1.4.0 at <code>/home/ec2-user/archipelago-deployment-live-1.4.0</code>.
+We are going to use the files there to replace your own configs. <code>cd</code> back to your live deployment assuming here it is (still) <code>/home/ec2-user/archipelago-deployment-live</code></p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/home/ec2-user/archipelago-deployment-live
+cp<span class="w"> </span>-rpv<span class="w"> </span>/home/ec2-user/archipelago-deployment-live-1.5.0/config_storage/solrconfig/conf/*<span class="w"> </span>config_storage/solrconfig/conf/.
+</code></pre></div>
+<p>Now we need to remove the old OCR library and replace with the new one</p>
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>/home/ec2-user/archipelago-deployment-live/data_storage/solrlib/*.jar
+cp<span class="w"> </span>-rpv<span class="w"> </span>/home/ec2-user/archipelago-deployment-live-1.5.0/data_storage/solrlib/solr-ocrhighlighting-0.9.4-SNAPSHOT.jar<span class="w"> </span>data_storage/solrlib/.
+</code></pre></div>
+<p>Done.</p>
+<h3 id="step-3-docker-pull-and-check">Step 3: docker pull and check</h3>
+<p>Time to fetch the latest Solr:</p>
+<p>Navigate to your <code>deploy/ec2-docker</code> and run:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>pull
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<p>Give all a little time to start. Please be patient. To ensure all is well, run (more than once if necessary) the following:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps
+</code></pre></div>
+<p>You should see something like this if you synced all containers to the latest (your versions and database might vary depending on your server's platform, hashes and time up too depending on when you ran the commands):</p>
+<div class="highlight"><pre><span></span><code>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">                                                  </span>COMMAND<span class="w">                  </span>CREATED<span class="w">          </span>STATUS<span class="w">          </span>PORTS<span class="w">                              </span>NAMES
+5b06ee366f58<span class="w">   </span>jonasal/nginx-certbot<span class="w">                                  </span><span class="s2">&quot;/docker-entrypoint.…&quot;</span><span class="w">   </span><span class="m">10</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">10</span><span class="w"> </span>minutes<span class="w">   </span><span class="m">0</span>.0.0.0:8001-&gt;80/tcp<span class="w">               </span>esmero-web
+1409f41b6068<span class="w">   </span>solr:9.8.1<span class="w">                                             </span><span class="s2">&quot;docker-entrypoint.s…&quot;</span><span class="w">   </span><span class="m">10</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">10</span><span class="w"> </span>minutes<span class="w">   </span><span class="m">0</span>.0.0.0:8983-&gt;8983/tcp<span class="w">             </span>esmero-solr
+e9361ed424ab<span class="w">   </span>esmero/cantaloupe-s3:6.0.5-noturbojpeg-multiarch<span class="w">       </span><span class="s2">&quot;sh -c &#39;java -Dcanta…&quot;</span><span class="w">   </span><span class="m">10</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">10</span><span class="w"> </span>minutes<span class="w">   </span><span class="m">0</span>.0.0.0:8183-&gt;8182/tcp<span class="w">             </span>esmero-cantaloupe
+1dc524aeb6b4<span class="w">   </span>mariadb:10.6.22-focal<span class="w">                                  </span><span class="s2">&quot;docker-entrypoint.s…&quot;</span><span class="w">   </span><span class="m">10</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">10</span><span class="w"> </span>minutes<span class="w">   </span><span class="m">3306</span>/tcp<span class="w">                           </span>esmero-db
+85bedadf9732<span class="w">   </span>redis:6.2-alpine<span class="w">                                       </span><span class="s2">&quot;docker-entrypoint.s…&quot;</span><span class="w">   </span><span class="m">10</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">   </span><span class="m">10</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">                                     </span>esmero-redis
+6a9e9d8647a9<span class="w">   </span>minio/minio:RELEASE.2022-06-11T19-55-32Z<span class="w">               </span><span class="s2">&quot;/usr/bin/docker-ent…&quot;</span><span class="w">   </span><span class="m">10</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">10</span><span class="w"> </span>minutes<span class="w">   </span><span class="m">0</span>.0.0.0:9000-9001-&gt;9000-9001/tcp<span class="w">   </span>esmero-minio
+aa82d6b42ec6<span class="w">   </span>esmero/php-8.3-fpm:1.5.0-multiarch<span class="w">                     </span><span class="s2">&quot;docker-php-entrypoi…&quot;</span><span class="w">   </span><span class="m">10</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">10</span><span class="w"> </span>minutes<span class="w">   </span><span class="m">9000</span>/tcp<span class="w">                           </span>esmero-php
+458e826199bd<span class="w">   </span>esmero/esmero-nlp:1.4.2-multiarch<span class="w">                      </span><span class="s2">&quot;/usr/local/bin/entr…&quot;</span><span class="w">   </span><span class="m">10</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">10</span><span class="w"> </span>minutes<span class="w">   </span><span class="m">0</span>.0.0.0:6400-&gt;6400/tcp<span class="w">             </span>esmero-nlp
+</code></pre></div>
+<p>Important here is the <code>STATUS</code> column. It <strong>needs</strong> to be a number that goes up in time every time you run <code>docker ps</code> again (and again).</p>
+<p>Check your Solr logs for failure messages.</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>esmero-solr<span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
+</code></pre></div>
+<p>Try searching (general one first, then a full text involving OCR - highlights - e.g in IABookReader or Mirador) in your repo.</p>
+<h3 id="step-4-optional-new-drupal-solr-field-configs">Step 4 (Optional): New Drupal Solr Field configs</h3>
+<p>You might want to review/compare (now or later) your current Drupal Search API Index against our most current one here:</p>
+<p>In specific:</p>
+<ul>
+<li>https://github.com/esmero/archipelago-deployment-live/blob/1.5.0/drupal/config/sync/search_api.server.esmero_solr.yml</li>
+<li>https://github.com/esmero/archipelago-deployment-live/blob/1.5.0/drupal/config/sync/search_api.index.default_solr_index.yml</li>
+</ul>
+<p>and anything that starts with <code>search_api.</code> too.</p>
+<p>If you decide/not decide to syncronize Drupal's Search API Server, Index and fields is personal decision (optional). We do recommend it but your Solr Index <strong>might have many</strong> customizations already, so a better/pro approach would be do <code>diff</code> the .yml files and decide selectively.</p>
+<p>If you make Drupal Search API changes, go to Step 5
+if you did execute Step 2B (wipe) go to Step 5
+If neither you are DONE! (Step 6)</p>
+<h3 id="step-5-re-index-drupal-search-api">Step 5: Re-index Drupal Search API</h3>
+<p>Only run this if you ran Step 2B and/or Step 4. SKIP IF NOT.</p>
+<p>Run the following:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>search-api-reindex
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>search-api-index
+</code></pre></div>
+<p>Check your Drupal logs, try some searches.</p>
+<h3 id="step-6-done">STEP 6: DONE!</h3>
+<p>Done! Hurrah!</p>
+<hr />
+<h3 id="need-help-strange-logs-searching-for-happiness-leads-to-no-results-missed-a-step-need-a-hug-or-someone-that-listens-to-you-in-silence">Need help? Strange logs? Searching for happiness leads to no results? Missed a step? Need a hug or someone that listens to you in silence?</h3>
+<p>If you see any issues or errors or need help with a step, please let us know (ASAP!). You can either open an <code>issue</code> in this repository or use the <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Google Group</a>. We are here to help.</p>
+<h2 id="caring-coding-fixing-testing">Caring &amp; Coding + Fixing + Testing</h2>
+<ul>
+<li><a href="https://github.com/DiegoPino">Diego Pino</a></li>
+<li><a href="https://github.com/alliomeria">Allison Sherrick</a></li>
+</ul>
+<h2 id="license">License</h2>
+<p><a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3</a></p>
 
 
 
@@ -3627,7 +4006,7 @@ Occasionally there will be other Drupal modules that Archipelago uses, and they 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 28, 2023 17:43:39 UTC">February 28, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 16, 2025 19:14:43 UTC">July 16, 2025</span>
   </span>
 
     
@@ -3637,7 +4016,7 @@ Occasionally there will be other Drupal modules that Archipelago uses, and they 
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 28, 2023 17:43:39 UTC">February 28, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 16, 2025 19:14:43 UTC">July 16, 2025</span>
   </span>
 
     
