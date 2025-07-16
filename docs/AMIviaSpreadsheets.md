@@ -113,9 +113,9 @@ If you clicked on the 'see it here' link in Step 6, you will be brought to the A
    
     You may wish to double check the settings configured in your AMI Set in the Raw Metadata (JSON) on the AMI Set `View` tab before Processing.
 
-    ![AMI Set Admin Review](images/AMIsetAdminReview_updated_2022-11.jpg)
+    ![AMI Set Admin Review](images/AMIsetAdminReview_updated_2025_July.png)
 
-![AMI Admin Set Process](images/AMIsetAdminProcess_updated_2022-11.jpg)
+![AMI Admin Set Process](images/AMIsetAdminProcess_updated_2025_July.png)
 
 To Process this set, navigate to the `Process` tab. You will have multiple options related to the Processing outcome for your AMI Set.
 
@@ -132,7 +132,7 @@ To Process this set, navigate to the `Process` tab. You will have multiple optio
 
 You will be returned to `AMI sets` page and see a brief confirmation message regarding the Enqueuing and Processing options you selected.
   
-If you chose to 'Confirm" and Process your AMI Set immediately, proceed to Step 9: Processing and ADO Creation.
+If you chose to 'Confirm' and Process your AMI Set immediately, proceed to Step 9: Processing and ADO Creation.
 
 If the chose to 'Enqueue' your AMI Set and the Queue operations for your Archipelago instance have been configured, you can simply leave your AMI Set in the Queue for Processing on the preconfigured schedule. Common timing for AMI Set Processes schedules are typically setup to run every three to six hours. Contact your Archipelago Administrators for details about your particular Archipelago's Processing schedule.
 
@@ -142,9 +142,9 @@ If you chose to place your AMI set in the Queue to Process in step 7 and you wis
 
 ![AMI Queue Manager](images/AMIqueueMgr_updated_2022-11.jpg)
 
-To Process your AMI Set immediately from the Queue Manager page, select the checkbox next to the 'AMI Digital Object Ingester Queue Worker'. Keep the `Action` menu set to `Batch Process` and click the `Apply to selected items` button.
+To Process your AMI Set immediately from the Queue Manager page, first select the checkbox next to the 'AMI CSV Expander and ADO Enqueuer Queue Worker'. Keep the `Action` menu set to `Batch Process` and click the `Apply to selected items` button. Let that selected process run. Then, select the checkbox next to 'AMI Digital Object Ingester Queue Worker' and run that operation as well.
 
-![AMI Queue Manager Batch](images/AMIqueueMgrBatchProcess_updated_2022-11.jpg)
+![AMI Queue Manager Batch](images/AMIqueueMgrBatchProcess_updated_2025_July.png)
 
 #### Step 9: Processing and ADO Creation
 
@@ -154,17 +154,12 @@ Your AMI set will now be Processed. You can follow the set's progress through th
 
 After your AMI set is Processed, you will receive confirmation messages letting you know your Digital Objects were successfully created. 
 
-![AMI Set Succes](images/AMIsetSuccess_updated_2022-11.jpg)
-  
-From this message, you can click on each ADO title to review the new created Digital Object (or Collection) if you wish. Or, you may proceed to step 10.  
+#### Step 10: Review your newly created Digital Objects using AMI Set Report
 
-#### Step 10: Review your newly created Digital Objects directly or via AMI Set Report
+To review your newly created Digital Objects and Collections, you can use the **AMI Set Report** tab to ensure that your AMI Set ingested correctly.
 
-- Option 1: Return to the main Content page found at `/admin/content` and review your newly created Digital Objects. After ensuring that files and metadata elements were mapped correctly, you may choose to change the Status for your Digital Objects to 'Published'.
-- Option 2: Use the **AMI Set Report**
-    - From the main `AMI sets` page, select `Report` from the `Operations` menu for the AMI set you wish to review.
-    ![AMI Sets Page Report Operation](images/AMIsetsPageReportOp.jpg)
-    
+You can view an AMI Set's Report tab either directly within the AMI Set, top tab for 'Report' OR from the main `AMI sets` page, select `Report` from the `Operations` menu for the AMI set you wish to review.
+
     - This Report will contain information related to the last Processing operation run against your AMI Set.
     - For each Digital Object or Collection row that was Processed, you will see:
         - a `datetime` stamp
@@ -172,9 +167,15 @@ From this message, you can click on each ADO title to review the new created Dig
         - a `message` summarizing the Processing outcome--including a title/label link to the created ADO if successful
         - a `details` summary containing system information related to the operations.
 
-    ![AMI Sets Page Report Operation](images/AMIreportOverview.jpg)
+![AMI Sets Page Report Operation](images/AMIreportOverview_updated_2025_July.png)
 
-    - You can use information found in the Reports tab to identify review your created ADOs one-by-one and identify any errors or issues that may have come up during the Process if needed.  
+You can use information found in the Reports tab to identify review your created ADOs one-by-one and identify any errors or issues that may have come up during the Process if needed.
+
+At the bottom of the AMI Report tab (for Archipelago 1.5.0 and up), you will see two buttons that permit you to either 'Download Log' or 'Download and Clear Log afterwards'. You can use either of these options to download a copy of the AMI Set's latest Report.
+
+#### Optional Step 11: Run Action on Processed ADOS
+
+Lastly, you may wish to run a batch Action against your already-processed ADOs for a particular AMI Set. Using the 'Run Action on Processed ADOs' tab for an AMI Set, you can select from the [available Actions](find_and_replace.md#available-actions) found in your Archipelago instance. The most common Actions you might wish to run for an AMI Set's ADOs include 'Publish' or 'Unpublish', and 'Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item' (read more about [Archipelago's Strawberry Runners Post-Processing Options here](strawberryrunners.md)).
 
 ## Ingesting _Both_ New Digital Objects and Collections and/or Creative Work Series (Compound) Objects in the same spreadsheet
 
@@ -234,7 +235,7 @@ Select your global ADO mappings.
 
     ![AMI Step 4 Global ADO Mappings 1](images/AMIstep4GlobalADOmappings_updated_2022-11.jpg)
 
-#### Step 5-10:
+#### Step 5-10/11:
 
 Follow the same instructions found in Steps 5-10 above. As part of step 10, make sure your Digital Objects were ingested into the corresponding Collections you mapped them to in your spreadsheet source. Please note, you will need to Publish the Digital Objects before the Objects will appear in the Collection's View page (whether accessed as a logged-in Admin user or Anonymous/Public user). Celebrate your next AMI success with another fresh coffee, tea, or cookie!
 
