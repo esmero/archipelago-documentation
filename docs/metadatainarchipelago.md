@@ -4,7 +4,7 @@
 
 ![Twig and JSON and Metadata in Archipelago](images/Twig_JSON_Metadata_Diego_doodle.jpg)
 
-Archipelago's **RAW metadata** is stored as **JSON** and this is core to our architecture. To avoid writing RAW over and over, this document will refer to **RAW Metadata** simply as **Metadata**.
+Archipelago's **RAW metadata** is stored as **JSON** inside a special Drupal field of type `Strawberry Field`, and this is core to our architecture. To avoid writing RAW over and over, this document will refer to **RAW Metadata** simply as **Metadata**.
 
 **Data** and **Metadata** can be extremely complex and extensive. The use cases that define what **Data**, **Media** and **Metadata** to collect, to catalog and expose, to use during search and discovery or to enable interactive functionality, including questions like  "what public facing *schemas*, *formats* and *serializations* I need or want to be compliant with" are as diverse and complex as the Metadata driving them.
 
@@ -26,13 +26,13 @@ Finally Metadata is very close to their generators. Means you and your peers wil
 
 ## Drupal and JSON
 
-Drupal, the OSS CMS system Archipelago uses and extends, is RDB driven. This means that `Content Types` normally follow the idea of an *Entity* with *Fields* attached. Each of these *Fields* becomes then a Database Table and the sum of all these fields living under a `Content Type` definition, a fixed schema. 
+Drupal, the OSS CMS system Archipelago uses and extends, is `Relational Database` (RDB) driven. This means that `Content Types` normally follow the idea of an *Entity* with *Fields* attached. Each of these *Fields* becomes then a Database Table and the sum of all these fields living under a `Content Type` definition, a fixed schema. 
 
 For integration and interoperability reasons with the larger Drupal ecosystem, we inherit in Archipelago the idea of an *Entity*, in specific, a *Content Entity* (Node) and `Content Type` (Bundled fields for a Node). But instead of generating (and encouraging) the use of hundreds of fixed fields to describe your Digital Objects we put all Metadata as JSON, means a **JSON BLOB**, into a single smart Field of type `Strawberry Field`. 🍓 
 
-We go a long way of making as much as possible flexible and dynamic. This also implies the definition (and separation) of what an *Archipelago Digital Object* (ADO) is in our Architecture v/s what a general Drupal Content Type (e.g a static page or a blog post) is defined in code as: "Any Content type that uses a Strawberry Field is an ADO and will be processed as such". No configuration is needed. In other words, all is a NODE but any node that uses a Strawberry Field gets a different treatment and will be named in Archipelago an ADO.
+We go a long way of making as much as possible flexible and dynamic. This also implies the definition (and separation) of what an *Archipelago Digital Object* (ADO) is in our Architecture v/s what a general Drupal Content Type (e.g a static page or a blog post) is defined in code as: "Any Content type that uses a Strawberry Field is an ADO and will be processed as such". No configuration is needed. In other words, all is a NODE but any node that uses a Strawberry Field gets a different treatment and will be named in Archipelago an ADO. As you lear more about Archipelago you will also find `Strawberry Fields` used in other Entity types (so not ADOs), being the most common used one the AMI set.
 
-One of the challenges of our flexible approach is how to allow Drupal to access the JSON in a way, as native as possible, to generate filtered listings via Drupal Views, free text Search and Faceting. To make this happen Strawberry Field uses a JSON Querying and Exposing as "Native Field Properties" logic. Through a special type of Plugin system named *Strawberry Key Name Providers* and associated *Configuration Entities* (can be found at `/admin/structure/strawberry_keynameprovider`), you have control on which keys and values of your JSON are going to be exposed as field properties of any Strawberry Field, allowing Drupal through this to access values in a flat manner and expose them to the Search API natively. The access to the values of any JSON is done via [JMESPATH](https://jmespath.org) expressions and then transformed either to a list of values or even "cast" into more complex data Data types, like an Entity Reference (means a connection to another Entity).
+One of the challenges of our flexible approach is how to allow Drupal to access the JSON in a way, as native as possible, to generate filtered listings via Drupal Views, free text Search and Faceting. To make this happen Strawberry Field uses a JSON Querying and Exposing as "Native Field Properties" logic. Through a special type of Plugin system named *Strawberry Key Name Providers* and associated *Configuration Entities* (can be found at `/admin/structure/strawberry_keynameprovider`), you have control on which keys and values of your JSON are going to be exposed as field properties of any Strawberry Field, allowing Drupal through this to access values in a flat manner and expose them to the Search API natively. The access to the values of any JSON is done via [JMESPATH](https://jmespath.org) expressions and then transformed either to a list of values or even "cast" into more complex data Data types, like an Entity Reference (means a connection to another Entity) or Dates.
 
 This gives you a lot of power and control and makes a lot of very heavy operations lighter. You can even plan upfront or evolve these properties in time. 
 
@@ -86,7 +86,7 @@ Archipelago will use the `label` key's value to populate the ADO's (Drupal Node)
 
 Because of the need of having **Technical Metadata**, **Descriptive Metadata** and **Semantic Metadata** while generating different representations of your JSON via Metadata Display Entities (Twig templates) transformations, we store and characterize Files attached to an ADO as part of the JSON. We also use a set of special keys to map and cast JSON keys and values to Drupal's internal Entities system via their Numeric and/or UUID IDs. 
 
-Through this, Archipelago will also move files between upload locations and permanent storage, execute Technical metadata extraction, keep track of ADO to ADO relationships (e.g *ispartof* or *ismemberof*) and emulate what a traditional `Drupal Entity Reference field` would do without the limitations (speed and immutability) a static RDB definition imposes.
+Through this, Archipelago will also move files between upload locations and permanent storage, execute Technical metadata extraction, keep track of ADO to ADO relationships (e.g *ispartof* or *ismemberof*), e.g when building Breadcrumbs, and emulate what a traditional `Drupal Entity Reference field` would do without the limitations (speed and immutability) a static RDB definition imposes.
 
 #### The `ap:entitymapping` key
 
@@ -121,11 +121,11 @@ In the presence of the structure exemplified above the following JSON snipped:
 	]	
 ```
 
-Will tell Archipelago that the JSON key `images` should be treated as containing Entity IDs for a Drupal Entity of type (`entity:file`) File. This has many interessting consequences. Archipelago, on edit/update/ingest will try (hard) to get a hold of Files with ID 1, 2 and 3. If in temporary storage Archipelago will move them to its final Permanent Location, will make sure Drupal knows those files are being used by this ADO, will run multiple **Technical Metadata** Extractions and classify internally the Files, adding everything it could learn from them. In practice, this means that Archipelago will write for you additional structures into the JSON enriching your **Metadata**.
+Will tell Archipelago that the JSON key `images` should be treated as containing Entity IDs for a Drupal Entity of type (`entity:file`) File. This has many interessting consequences. Archipelago, on edit/update/ingest will try (hard) to get a hold of Files with ID 1, 2 and 3. If in temporary storage, Archipelago will move them to its final Permanent Location, will make sure Drupal knows those files are being used by this ADO, will run multiple **Technical Metadata** Extractions and classify internally the Files, adding everything it could learn from them. In practice, this means that Archipelago will write for you additional structures into the JSON enriching your **Metadata**.
 
 Without this structure, the `images` key would not trigger any logic but will of course still exist and can always still be used as a list of numbers while templating.
 
-This also implies that for a persisted ADO with those values, if you edit the JSON and delete e.g. the number (`integer` or `string` representation of an `integer`) `3`, Archipelago will disconnect the File Entity with ID 3 from this ADO, remove the enriched metadata and mark the File as not being anymore used by this ADO. If nobody else is using the File it will become `temporary` and eventually be automatically removed from the system, if that is setup at the Drupal - Filesystem - level.
+This also implies that for a persisted ADO with those values, if you edit the JSON and delete e.g. the number (`integer` or `string` representation of an `integer`) `3`, Archipelago will disconnect the File Entity with ID 3 from this ADO, remove the enriched metadata and mark the File as not being anymore used by this ADO. If nobody else is using the File it will become `temporary` and eventually be automatically removed from the system, if that is setup at the Drupal - Filesystem - level (Configuration Setting).
 
 Using the same example `ap:entitymapping` structure, the following snippet:
 
@@ -143,7 +143,7 @@ Entity mapping key also drives a very special compatibility addition to any ADO.
 
 The following Computed fields are provided:
 
-- `field_file_drop`: Computed Entity Reference Field. Needed also for JSON API level upload of Files to an ADO (Drupal need). It will expose all File Entities referenced in an ADO, independently of the type of the File.
+- `field_file_drop`: Computed Entity Reference Field. Needed also for `JSON API` level upload of Files to an ADO (a Drupal need). It will expose all File Entities referenced in an ADO, independently of the type of the File.
 - `field_sbf_nodetonode`: Computed Entity Reference Field. It will expose all Nodes (other ADOs) Entities referenced in an ADO, independently of the Content type and/or the semantic predicate (*ismemberof*, *ispartof*, etc) used.
 
 These Fields, because of their native Drupal nature, can be used directly everywhere, e.g. in the Search API to index all related ADOs (or any of their Fields and subproperties, even deeply chained, tree down) without having to specify what predicate is used. Said differently, they act as aggregators, as a generic "isrelatedto" property bringing all together.
@@ -222,7 +222,7 @@ Every Classified File inside the `as:{AS_FILE_TYPE}` key will be contained in a 
 
 We use a Property instead of a "List or Array" of Technical Metadata because this allows us (at code level) to access quickly from e.g. `as:image` structure all the data for a File Entity with UUID `ef596613-b2e7-444e-865d-efabbf1c59b0` without iterating. (Also now you know what urn:uuid:ef596613-b2e7-444e-865d-efabbf1c59b0 means.)
 
-Next, inside that property, the following Data provides basic Information about the File so you can access/make decisions when Templating. Notice the duplication of similar data at different levels. Duplication is on purpose and again, allows you to access certain JSON values (or filter) quicker without having to go to other keys or hierarchies to make decisions.
+Next, inside that property, the following Data provides basic Information about the File so you can access/make decisions when Templating. Notice the duplication of similar data at different levels. Duplication is on purpose, and again, allows you to access certain JSON values (or filter) quicker without having to go to other parent keys or hierarchies to make decisions.
 
 ```JSON 
 {
@@ -252,7 +252,7 @@ Next, inside that property, the following Data provides basic Information about 
 - `"checksum"`: The Checksum (calculated) of this File via ``"crypHashFunc"``
 - `"dr:filesize"`:  The File size in Bytes.
 - `"dr:mimetype"`:  The Drupal level infered Mime Type. Archipelago extends this list. This is based on the File Extension.
-- `"sequence"`:  A number (integer) denoting order of this file relative to other files of the same type inside the JSON. Which default type ordering is used will depend on how the ADO was created/edited, but can be overriden using **Control Metadata**.
+- `"sequence"`:  A number (integer) denoting order of this file *relative* to other files of the same type inside the JSON. Which default type ordering is used will depend on how the ADO was created/edited, but can be overriden using **Control Metadata**.
 
 ##### Technical File level Metadata
 
@@ -289,7 +289,7 @@ The above mentioned File Persister Service Settings form allows you to also set 
 }
 ```
 
-`"flv:pronom"`: Droid, a File Signature detection tool will find a  matching `pronom_id `for your File based on  https://www.nationalarchives.gov.uk/aboutapps/pronom/droid-signature-files.htm. This detection type is deeper that EXIF or the mime type based on extension, reading from binary data. It allows you to get small differences between formats (even if e.g both are JP2) and thus make decisions like "Will `Cantaloupe IIIF Image Server` be able to handle this type?". This has also positive Digital Preservation consequences.
+`"flv:pronom"`: Droid, a File Signature detection tool will find a  matching `pronom_id` for your File based on  https://www.nationalarchives.gov.uk/aboutapps/pronom/droid-signature-files.htm. This detection type is deeper that EXIF or the mime type based on extension, reading from binary data. It allows you to get small differences between formats (even if e.g both are JP2) and thus make decisions like "Will `Cantaloupe IIIF Image Server` be able to handle this type?". This has also positive Digital Preservation consequences.
 
 ```JSON
 {
@@ -664,16 +664,105 @@ The above mentioned File Persister Service Settings form allows you to also set 
 }
 ```
 
-@TODO: add the extra special key used by Strawberry Runners when it attaches a file. e.g WARC to WACZ
+`"flv:warc_to_wacz"`: This is a special sub-structure generated by one of our shipped [**Strawberry Runners** Module](strawberryrunners.md) Plugin Config entries, in this case with a Machine name (or ID) of `warc_to_wacz`. In specific, the `System Binary` Plugin. The fact that is named `warc_to_wacz` is based on that specific configuration so depending on how your own Plugin machine names (you can add more) are defined you might find other variations. Could be `"flv:video_to_mp4"` if you decided to add a System Binary Processor that uses `ffmpeg` to transform any video File to MP4 and name it `video_to_mp4` (machine name). This structure is created as a way for that processor to signal it generated and attached, for a specific `as:{AS_FILE_TYPE}` entry, a new file. It is always added to the Source file, not the destination one.
+
+Using the `"flv:warc_to_wacz"` example: If you upload a warc file (`.warc.gz`) and let `Strawberry Runners` run their queues, you will end with a new structure [exemplified further down here](#complete-strawberry-runners-flv-example). In that example, all keys/values under `"urn:uuid:0a395d23-1536-4704-b37a-b8a3ff5b400a"` correspond to the original file and in there `"flv:warc_to_wacz"`will be automatically by the strawberry runners processor. Everything under "urn:uuid:d5588d26-afcb-44e9-a1c8-395f1e79e3a8" is for the newly generated `WACZ` file (which is a fully independent file/and follows the same rules as any other). Finally (if you are folliwing the normal rules of files) also a new top level key (and in this case named idem) will be added
+
+```JSON
+"flv:warc_to_wacz": [
+        3996
+    ]
+```
+
+holding the Drupal File ID. Same as with any upload key (e.g "documents"), but managed by the Strawberry runners Plugin (and also added to the `ap:entitymapping` structure by `Strawberry runners` for you).
+
+
+##### Complete strawberry runners flv example
+
+
+```JSON
+{
+"as:document": {
+        "urn:uuid:d5588d26-afcb-44e9-a1c8-395f1e79e3a8": {
+            "type": "Document",
+            "url": "s3:\/\/eb3\/application-sbr-e3885fa26f3f6315e5753e30d83830b4-application-mywebarchive-warc-0a395d23-1536-4704-b37a-b8a3ff5b400a-warc-d5588d26-afcb-44e9-a1c8-395f1e79e3a8.warc.wacz",
+            "crypHashFunc": "md5",
+            "checksum": "eb3a2738f7224ed9f0dfe2c97e4a1502",
+            "dr:for": "flv:warc_to_wacz",
+            "dr:fid": 3996,
+            "dr:uuid": "d5588d26-afcb-44e9-a1c8-395f1e79e3a8",
+            "dr:filesize": 1455902,
+            "dr:mimetype": "application\/vnd.datapackage+zip",
+            "name": "warc_to_wacz_from_0a395d23-1536-4704-b37a-b8a3ff5b400a.warc.wacz",
+            "tags": [],
+            "flv:exif": {
+                "FileSize": "1456 kB",
+                "MIMEType": "application\/zip"
+            },
+            "flv:pronom": {
+                "pronom_id": "info:pronom\/x-fmt\/263",
+                "label": "ZIP Format",
+                "mimetype": "application\/zip",
+                "detection_type": "signature"
+            },
+            "sequence": 1
+        },
+        "urn:uuid:0a395d23-1536-4704-b37a-b8a3ff5b400a": {
+            "type": "Document",
+            "url": "s3:\/\/c04\/application-mywebarchive-warc-0a395d23-1536-4704-b37a-b8a3ff5b400a.warc.gz",
+            "crypHashFunc": "md5",
+            "checksum": "c045b10c4afdd55bfb3118d12328c83f",
+            "dr:for": "large_files",
+            "dr:fid": 3995,
+            "dr:uuid": "0a395d23-1536-4704-b37a-b8a3ff5b400a",
+            "dr:filesize": 1445159,
+            "dr:mimetype": "application\/warc",
+            "name": "mywebarchive.warc.gz",
+            "tags": [],
+            "flv:exif": {
+                "FileSize": "1445 kB",
+                "MIMEType": "application\/x-gzip"
+            },
+            "flv:pronom": {
+                "pronom_id": "info:pronom\/x-fmt\/266",
+                "label": "GZIP Format",
+                "mimetype": "application\/gzip",
+                "detection_type": "signature"
+            },
+            "sequence": 2,
+            "flv:warc_to_wacz": {
+                "@context": "https:\/\/www.w3.org\/ns\/activitystreams",
+                "type": "Create",
+                "summary": "Generator",
+                "endTime": "2025-07-15T14:25:34-04:00",
+                "actor": {
+                    "type": "Service",
+                    "name": "warc_to_wacz"
+                }
+            }
+        }
+    },
+    "flv:warc_to_wacz": [
+        3996
+    ] 
+}
+```
+
+
 
 ##### Did you #know?
 
 If you delete a whole `as:{AS_FILE_TYPE}` structure or one of the File level structures (a `urn:uuid:{uuid}` key and its children), Archipelago will recreate it. If you modify any internal value contained in it, Archipelago will do nothing and will trust you (and if you do strange things like modifying the `url` something might even fail e.g in a IIIF Metadata Display Entity Twig Template). No data edit there will trigger a modification/moving/deletion of a File (or e.g write back EXIF to be binary). You will have time to revert to a previous revision (version) of the ADO if any manual change was done. So, should you modify/delete this structures? Almost never. Ever. But you might find needs for that someday. Also to be noted. Producing this structure for a large file in S3:// is intensive. It needs to be downloaded to a local path and if the File is a few Gigabytes in size Archipelago might even run out of PHP processing time. If that ever happens you can also copy/paste from a previous revision of the ADO the relevant piece. If archipelago finds it (implied in the previous explanation) it will not have to regenerate it. The AMI module does this in an async/enqueued way to avoid time out issues and can reuse a cached metadata extraction between runs, but when working directly on an ADO via e.g a webform or via RAW edit, take that in account. 
 More work is being done to allow also one on one async File operations and larger uploads via the web.
 
-#### The `ap:tasks` keys
+#### Control Metadata
 
-As mentioned briefly before, there is also **Control Metadata**. What do we mean with that? Control metadata in Archipelago's way of allowing you to give, through metadata, (that you might want to preserve or not) instructions to Archipelago that relate to processing. Let's start with the basic one:
+As mentioned briefly before, there is also **Control Metadata**. What do we mean with that? Control metadata in Archipelago's way of allowing you to give, through metadata, (that you might want to preserve or not) instructions to Archipelago that relate to processing.
+
+
+##### The `"ap:tasks"` keys 
+
+ Let's start with the basic one:
 
 ```JSON
 {
@@ -726,7 +815,6 @@ In the absence of `"ap:forcepost"` the  value is implicitly `false`, same as set
 	"ap:tasks": {
 		"ap:ami": {
 			"metadata_display": 7
-			
 		}
 	}
 }
@@ -738,6 +826,170 @@ Said differently, you could push JSON from a totally different system and if the
 This is a one time operation that does not *stick*. What happens if it does not run well, fails, errors out or the Template referenced does not exist? You get a second change (everyone deserves one), the Original ingested JSON, without transformations is kept. All this is very similar to what the AMI module does via a CSV but in this case its atomic. We know what you are thinking. You can process data twice, via AMI and then at the end pass it again through another template based on a certain logic coming from the first? yes. you can!
 
 In the future `"ap:ami"` might contain more keys to do more advanced File level actions. Archipelago is being constantly enhanced!
+
+```JSON
+{
+	"ap:tasks": {
+		"ap:forcefilemanage": true
+	}
+}
+```
+
+`"ap:forcefilemanage"` is a new key (as of Archipelago 1.5.0) that you might never need to use at all (we hope so). This key allows a user with ADO editing permissions to "force" a `file` reconnection to the backend (Final Storage). Why/when is this useful? The internet is a cold/dark place and sometimes services might become unavailable. And sometimes, certain services might also interact "transiently" strange and not fullfil all expectations. In Concrete: As explained before in the file management section of this documentation, on File Upload (either via a webform or AMI) Archipelago will take hold of the File and manage its final destination (e.g. S3) for you. During that process a File that is marked (Drupal lingo) as temporary is identified, technical metadata generated (including where it should live in the backedn) and then moved to the Backend (S3) and renamed to what is stored inside the `"url"` key. Said differently, how/where it should be saved is calculated before the actual file is moved. We really (really) try very very hard to never ever lose files and manage the complete cycle in a consistent manner. But on very special situations, e.g. if your S3 backend becomes unreachable, times out bacause of excessive load or other unexpected tragic sitautions, or (this might be news to you) you are uploading `live` a very large file, and instead of running one of the following: Local Filesystem as final storage, AWS S3 Directly, or Minio Directly, you are using Minio as a gateway (Don't!) the `S3 API` specs will force that file upload to happen as "multipart" (means chunks, and we do so) but one of those chunks could fail/time out. This is VERY uncommon, and you might never see this happen at all. But if that happens the `as:{AS_FILE_TYPE}` will look the same as if the file actually uploaded. We will still make the temporary file "permanent" but it will stay in your Server's local storage instead. And yes, you will see a log entry, but you might miss that log. As a result, IIIF (Cantaloupe) won't have access to it and your file won't be "protected" on the cloud.
+
+You will (in practice) notice that the actual File (based on its ID) at `/admin/content/files` (when hovering over its name) will not have an s3:// URL but will be in one of: `private://` or `temporary://` or `public://` URLs. If a IIIF Viewer is enabled for the ADO that holds it, it will not show anything (you might get a warning/not found/404 code of sorts). You can still download it though and it is also permanent and safe. Just not "tidy". By using this key, you can force Archipelago to "overwork" and, on a new ADO save operation, try uploading and managing yet again, without having to literally replace the file manually. Once the file is reconnected, the key will be automatically removed. We hope you never need it!
+
+##### The `"ap:viewerhints"` keys
+
+Ideally, you will want to (homogenely) control how a Viewer/Formatter shows your ADOs at the View Mode/Formatter settings level. But sometimes you might want, for certain specific ADOs and for certain -capable - viewers, to have "overrides" that allow you to "escape" the normalized configurations and trigger, per viewer/formatter/setting, options/exceptions.
+
+The way this key works is the following, starting with common use cases:
+
+######  Strawberry Field 3D Model Formatter
+
+Camera UP is inverted for a given STL/OBJ file, but all other ADOs have a normal Camera, so you will want to override just that ADO
+
+```JSON
+{
+"ap:viewerhints": {
+    "strawberry_3d_formatter": {
+      "cameraUpVector": [0, 1, 0]
+    }
+  }
+}
+```
+
+In this case `"strawberry_3d_formatter"` is the PHP Code level/annotation name of the `Strawberry Field 3D Model Formatter` Plugin. "cameraUpVector" is the setting you can override. The value is a 3D vector, with the `Y` component pointing UP. This is quite specific (dark magic!) and as we add more, we will document them here.
+
+Not all Formatters can be overriden. In the future `""ap:viewerhints""` might cover more viewers! Which other ones allow this now and how is listed next:
+
+###### Strawberry Field Media Formatter using OpenSeadragon for IIIF media
+
+For OSD, basically anything [here](https://openseadragon.github.io/docs/OpenSeadragon.html#.Options) can be overriden. And multiple Options at the same time too. 
+
+The Following example shows the "Rotation Control" and sets "crossOriginPolicy" to 'Anonymous'
+
+```JSON
+{
+"ap:viewerhints": {
+    "strawberry_media_formatter": {
+      "options": {
+        "showRotationControl": true,
+        "crossOriginPolicy":"Anonymous"  
+      }
+    }
+  }
+}
+```
+
+###### Strawberry Field Panorama Formatter using Pannellum
+
+Panorama Viewer can have per Panorama but also per Panorama at the Tour level (when using connected panoramas) overrides. All what can be override is documented [here](https://github.com/mpetroff/pannellum/blob/master/doc/json-config-parameters.md)
+
+For an Individual Panorama Object we can disable the mouse Zooming via:
+
+```JSON
+{
+"ap:viewerhints": {
+    "strawberry_pannellum_formatter": {
+      "mouseZoom": false
+    }
+  }
+}
+```
+
+Same effect, but for a Panorama Scene  that is part of a Tour - e.g only for Scene "1" (this goes into the RAW JSON of the tour ADO itself) 
+
+```JSON
+{
+"ap:viewerhints": {
+    "strawberry_pannellum_formatter": {
+      "1": {
+        "mouseZoom": false
+      }
+    }
+  }
+}
+```
+
+###### Strawberry Field Media Formatter using the Mirador IIIF Viewer plugin
+
+Mirador can be highly customized by overriding/setting any of [these settings](https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js) except for `windows[0].manifestId` which is provided by Archipelago. Please be aware you need to convert the JS values there to the "JSON" equivalent.
+
+To hide the Workspace Control panel and have the SideBard Open by default, you would add the following
+
+```JSON
+{
+"ap:viewerhints": {
+    "strawberry_mirador_formatter": {
+      "window": {
+        "sideBarOpen": true, 
+      }
+      "workspaceControlPanel": {
+        "enabled": false
+        }
+    }
+  }
+}
+```
+
+because Mirador uses internally Open Seadragon for Image tiling, all the OSD options [seen at](#strawberry-field-media-formatter-using-openSeadragon-for-iiif-media) can be used too.
+
+e.g to always blend on OSD
+
+```JSON
+{
+"ap:viewerhints": {
+    "strawberry_mirador_formatter": {
+      "osdConfig" {
+         "alwaysBlend": true
+      }
+    }
+  }
+}
+```
+
+A fuller example would be:
+
+```JSON
+{
+"ap:viewerhints": {
+    "strawberry_mirador_formatter": {
+      "window": {
+        "allowClose": false,
+        "allowFullscreen": true,
+        "allowMaximize": false,
+        "allowTopMenuButton": true,
+        "allowWindowSideBar": true,
+        "sideBarPanel": "search",
+        "defaultSidebarPanelHeight": 201,
+        "defaultSidebarPanelWidth": 235,
+        "defaultView": "single",
+        "hideWindowTitle": true,
+        "sideBarOpen": false,
+        "switchCanvasOnSearch": true,
+        "panels": {
+            "info": false,
+            "attribution": false,
+            "canvas": true,
+            "annotations": false,
+            "search": true,
+            "layers": true
+        }
+      },
+      "workspace": {
+          "draggingEnabled": true,
+          "allowNewWindows": false,
+          "isWorkspaceAddVisible": false,
+          "showZoomControls": true
+      },
+      "workspaceControlPanel": {
+          "enabled": false
+      }
+    }
+  }
+}
+```
 
 ##### Activity Stream
 
