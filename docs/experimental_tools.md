@@ -8,9 +8,15 @@ tags:
 
 # Experimental Machine Learning (ML) Tools
 
-Archipelago 1.4.0 Local Deployment Release was shipped with a set of experimental Machine Learning (ML) Tools for testing and assessing the applicable use of such tools/workflows within a general repository environment. These tools should not be considered 'final product' integrations, and should not be exposed to end users--there are intentional configurations in place that limit exposure of these endpoints to authenticated users only.
+Archipelago 1.5.0 (and previously 1.4.0) Local Deployment Release was shipped with a set of experimental Machine Learning (ML) Tools for testing and assessing the applicable use of such tools/workflows within a general repository environment. These tools should not be considered 'final product' integrations, and should not be exposed to end users--there are intentional configurations in place that limit exposure of these endpoints to authenticated users only.
 
-Please review [Allison & Diego's recent 2024 Conference Presentations](https://docs.archipelago.nyc/1.4.0/presentations_events/#2024) related to this important topic in our shared field for a fuller understanding of our team's ethical perspectives and the considerations we keep related to ML tools and applications.
+Please review [Allison & Diego's 2024 Conference Presentations](https://docs.archipelago.nyc/1.4.0/presentations_events/#2024) related to this important topic in our shared field for a fuller understanding of our team's ethical perspectives and the considerations we keep related to ML tools and applications.
+
+!!! note "Important Note: Documentation Updates Pending"
+
+    This documentation has not yet been updated to reflect the updates and explansions made to these tools for the 2025 Archipelago 1.5.0 Release. Please check back for updates in the future.
+    
+
 
 ## What's under the hood powering these tools?
 
