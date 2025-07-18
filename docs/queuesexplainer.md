@@ -143,7 +143,7 @@ You can access the secondary background / Hydroponics Service Queue Manager:
 
 ![Background Queue Processing Manager Advanced Settings](images/hyroponics_queue_advanced_settings.png)
 
-- If you are not running under under the esmero-php:7.x docker containers you need to provide the following settings. 
+- If you are not running Archipelago under the `esmero-php` docker containers (not common/advanced) you will need to provide the following settings.
 - You will have the option to enter:
     1. The full system path to your composer vendor drush installation (including the actual drush php script).For a standard archipelago-deployment docker the right path is "/var/www/html/vendor/drush/drush/drush*
     2. A full system path we can use as $HOME directory for your webserver user. For a standard archipelago-deployment via Docker please DO NOT ADD this. For others the webserver user (e.g www-data) may need at least read permissions
