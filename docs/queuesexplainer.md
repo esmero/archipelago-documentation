@@ -153,6 +153,7 @@ You can access the secondary background / Hydroponics Service Queue Manager:
 - This will enable you to determine the different Search API Indexes (holding Nodes/Strawberry Flavors) should Hydroponics contribute to.
 - Checkbox for 'Drupal Content to Solr 9' is enabled by default
 - If your site has different Search API Indexes, they will be listed here.
+- Search Index operations under Hydroponics differ from queue operations. They do not run until indexing everything but will only contribute to indexing until a fixed available memory threshold is reached, continuing on a next Hydroponics wake-up cycle to avoid using resources needed for other tasks.
 
 #### Number of items to be indexed by Hydroponics at the same time .
 - Similar to the Search API's "Cron Batch size" config option. Defines how many Search API Items will be sent at once to the backend server.
