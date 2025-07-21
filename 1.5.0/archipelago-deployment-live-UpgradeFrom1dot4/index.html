@@ -4281,13 +4281,10 @@ Anything that is a nested set of keys, e.g for:</p>
 <div class="highlight"><pre><span></span><code>--&gt; it will be converted into a composer JSON merge command, as documented [here](https://getcomposer.org/doc/03-cli.md#modifying-extra-values) 
 
 **Start this part of the upgrade process** by running the following commands (line by line):
-
-```
-docker exec -ti esmero-php bash -c &quot;composer config --json --merge allow-plugins.tbachert/spi true&quot; 
-docker exec -ti esmero-php bash -c &quot;composer config --json --merge description &#39;Project template for Drupal 10 /Archipelago projects with composer&#39;&quot;
-```
-
-Do you have custom Patches (not provided by Archipelago) that are not provided by the following snippet (see the `extra` section of your composer.json)?
+</code></pre></div>
+docker exec -ti esmero-php bash -c "composer config --json --merge allow-plugins.tbachert/spi true" 
+docker exec -ti esmero-php bash -c "composer config --json --merge description 'Project template for Drupal 10 /Archipelago projects with composer'"
+<div class="highlight"><pre><span></span><code>Do you have custom Patches (not provided by Archipelago) that are not provided by the following snippet (see the `extra` section of your composer.json)?
 
 ```json
 &quot;patches&quot;: {
@@ -4543,7 +4540,7 @@ aa82d6b42ec6<span class="w">   </span>esmero/php-8.3-fpm:1.5.0-multiarch<span cl
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 16, 2025 19:58:15 UTC">July 16, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 21, 2025 17:03:53 UTC">July 21, 2025</span>
   </span>
 
     
