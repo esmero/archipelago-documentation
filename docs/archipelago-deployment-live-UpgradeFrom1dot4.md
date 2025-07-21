@@ -237,7 +237,8 @@ So. With all this information at hand our goal is to Patch your current running 
 The gist: Convert each `+` followed into a `composer require` and each `-` that is not preceded or followed by a + into a `composer delete` command and also a few JSON merges. And run them one by one.
 Anything that is a nested set of keys, e.g for:
 
-```@ ["config","allow-plugins","tbachert/spi"]
+```shell
+@ ["config","allow-plugins","tbachert/spi"]
 + true
 ```
 
