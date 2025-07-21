@@ -239,7 +239,8 @@ Anything that is a nested set of keys, e.g for:
 
 ```@ ["config","allow-plugins","tbachert/spi"]
 + true
-````
+```
+
 
 --> it will be converted into a composer JSON merge command, as documented [here](https://getcomposer.org/doc/03-cli.md#modifying-extra-values) 
 
@@ -267,7 +268,8 @@ Do you have custom Patches (not provided by Archipelago) that are not provided b
                 "Fixes OpenAPI 1.8 compat": "https://github.com/DiegoPino/openapi-psr7-validator/commit/94e9df4c152d0db46cfa475fa8bb319ff5ac551a.patch"
              }
           }
-````
+```
+
 
 If the answer is "YES", then please edit (nano/pico/vi/vim) your composer.json and only remove (if present) the following entry. If there is a "drupal/core" entry, and the only one present is the following you can delete the whole "drupal/core" key. If you have other "drupal/core" entries, only delete the one with key "https://www.drupal.org/project/drupal/issues/3364109". Make sure your composer.json IS STILL VALID JSON after your change and save it.
 
