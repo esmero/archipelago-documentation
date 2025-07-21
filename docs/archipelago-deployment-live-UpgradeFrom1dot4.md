@@ -246,10 +246,12 @@ Anything that is a nested set of keys, e.g for:
 
 **Start this part of the upgrade process** by running the following commands (line by line):
 
+
 ```
 docker exec -ti esmero-php bash -c "composer config --json --merge allow-plugins.tbachert/spi true" 
 docker exec -ti esmero-php bash -c "composer config --json --merge description 'Project template for Drupal 10 /Archipelago projects with composer'"
 ```
+
 
 Do you have custom Patches (not provided by Archipelago) that are not provided by the following snippet (see the `extra` section of your composer.json)?
 
