@@ -11,11 +11,11 @@ tags:
 
 # IIIF Content Search API Integration
 
-Beginning in release 1.3.0 and now fully mature in 1.4.0, Archipelago features IIIF Content Search API integration with attendant default configurations and settings.
+Beginning in release 1.3.0, further matured in 1.4.0, and more fully expanded in 1.5.0 to incorporate optional search across associated metadata fields, Archipelago features IIIF Content Search API integration with attendant default configurations and settings.
 
-Through a non-trifling amount of code and maths, Archipelago speaks the IIIF Content Search API language using data from your Archipelago's Digital Objects, to enable you to search within Mirador (or other supported viewers) for specific hits within OCR, VTT file, or manually created textual annotations. 
+Through a non-trifling amount of code and maths, Archipelago speaks the IIIF Content Search API language using data from your Archipelago's Digital Objects, to enable you to search within Mirador (or other supported viewers) for specific hits within OCR, VTT file, manually created textual annotations, or within ADO associated metadata in Solr. 
 
-Please also see the related [IIIF Server Settings Form](iiif_server_settings.md), and Strawberry Runners guides for [Reviewing and adjusting the `pager` and `ocr` Post-Processor operations](strawberryrunners_pager_ocr.md) and [Reviewing and Adjusting the `subtitle` Post-Processor operations](strawberryrunners_subtitle.md).
+Please also see the related [IIIF Server Settings Form](iiif_server_settings.md), and Strawberry Runners guides for [Reviewing and adjusting the `pager` and `ocr` Post-Processor operations](strawberryrunners_pager_ocr.md), [Reviewing and Adjusting the `subtitle` Post-Processor operations](strawberryrunners_subtitle.md), and [Reviewing and adjusting the text Post-Processor operations](strawberryrunners_text.md).
 
 ## 1. IIIF Manifest Templates
 
