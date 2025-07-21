@@ -4276,32 +4276,30 @@ Restart your <code>docker-compose</code> ensemble, and wait a little while for a
 <p>So. With all this information at hand our goal is to Patch your current running composer.json (which as said before will/might have Packages/patches and other things Archipelago does not provide and we can't nor want to touch) by just affecting what Archipelago provides/changed between the last and the current release.</p>
 <p>The gist: Convert each <code>+</code> followed into a <code>composer require</code> and each <code>-</code> that is not preceded or followed by a + into a <code>composer delete</code> command and also a few JSON merges. And run them one by one.
 Anything that is a nested set of keys, e.g for:</p>
-<p>```@ ["config","allow-plugins","tbachert/spi"]
-+ true
-<div class="highlight"><pre><span></span><code>--&gt; it will be converted into a composer JSON merge command, as documented [here](https://getcomposer.org/doc/03-cli.md#modifying-extra-values) 
-
-**Start this part of the upgrade process** by running the following commands (line by line):
+<div class="highlight"><pre><span></span><code>@<span class="w"> </span><span class="o">[</span><span class="s2">&quot;config&quot;</span>,<span class="s2">&quot;allow-plugins&quot;</span>,<span class="s2">&quot;tbachert/spi&quot;</span><span class="o">]</span>
++<span class="w"> </span><span class="nb">true</span>
 </code></pre></div>
-docker exec -ti esmero-php bash -c "composer config --json --merge allow-plugins.tbachert/spi true" 
-docker exec -ti esmero-php bash -c "composer config --json --merge description 'Project template for Drupal 10 /Archipelago projects with composer'"
-<div class="highlight"><pre><span></span><code>Do you have custom Patches (not provided by Archipelago) that are not provided by the following snippet (see the `extra` section of your composer.json)?
-
-```json
-&quot;patches&quot;: {
-             &quot;drupal/facets&quot;: {
-                &quot;D10.3 Facet Ajax fix&quot;: &quot;https://www.drupal.org/files/issues/2024-08-10/3052574-session-not-set-warning-251.patch&quot;
-             },
-             &quot;drupal/better_exposed_filters&quot;: {
-                &quot;D10.3 Reset Fix&quot;: &quot;https://www.drupal.org/files/issues/2024-07-08/3459811-6.patch&quot;
-             },
-             &quot;ankitpokhrel/tus-php&quot;: {
-                &quot;Less Cache writes during upload fix&quot;: &quot;patches/tus-file-cache.patch&quot;
-             },
-             &quot;league/openapi-psr7-validator&quot;: {
-                &quot;Fixes OpenAPI 1.8 compat&quot;: &quot;https://github.com/DiegoPino/openapi-psr7-validator/commit/94e9df4c152d0db46cfa475fa8bb319ff5ac551a.patch&quot;
-             }
-          }
-</code></pre></div></p>
+<p>--&gt; it will be converted into a composer JSON merge command, as documented <a href="https://getcomposer.org/doc/03-cli.md#modifying-extra-values">here</a> </p>
+<p><strong>Start this part of the upgrade process</strong> by running the following commands (line by line):</p>
+<div class="highlight"><pre><span></span><code>docker exec -ti esmero-php bash -c &quot;composer config --json --merge allow-plugins.tbachert/spi true&quot; 
+docker exec -ti esmero-php bash -c &quot;composer config --json --merge description &#39;Project template for Drupal 10 /Archipelago projects with composer&#39;&quot;
+</code></pre></div>
+<p>Do you have custom Patches (not provided by Archipelago) that are not provided by the following snippet (see the <code>extra</code> section of your composer.json)?</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;patches&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="nt">&quot;drupal/facets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;D10.3 Facet Ajax fix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.drupal.org/files/issues/2024-08-10/3052574-session-not-set-warning-251.patch&quot;</span>
+<span class="w">             </span><span class="p">},</span>
+<span class="w">             </span><span class="nt">&quot;drupal/better_exposed_filters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;D10.3 Reset Fix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.drupal.org/files/issues/2024-07-08/3459811-6.patch&quot;</span>
+<span class="w">             </span><span class="p">},</span>
+<span class="w">             </span><span class="nt">&quot;ankitpokhrel/tus-php&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;Less Cache writes during upload fix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;patches/tus-file-cache.patch&quot;</span>
+<span class="w">             </span><span class="p">},</span>
+<span class="w">             </span><span class="nt">&quot;league/openapi-psr7-validator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;Fixes OpenAPI 1.8 compat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/DiegoPino/openapi-psr7-validator/commit/94e9df4c152d0db46cfa475fa8bb319ff5ac551a.patch&quot;</span>
+<span class="w">             </span><span class="p">}</span>
+<span class="w">          </span><span class="p">}</span>
+</code></pre></div>
 <p>If the answer is "YES", then please edit (nano/pico/vi/vim) your composer.json and only remove (if present) the following entry. If there is a "drupal/core" entry, and the only one present is the following you can delete the whole "drupal/core" key. If you have other "drupal/core" entries, only delete the one with key "https://www.drupal.org/project/drupal/issues/3364109". Make sure your composer.json IS STILL VALID JSON after your change and save it.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&quot;patches&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">     </span><span class="nt">&quot;drupal/core&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -4540,7 +4538,7 @@ aa82d6b42ec6<span class="w">   </span>esmero/php-8.3-fpm:1.5.0-multiarch<span cl
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 21, 2025 17:08:24 UTC">July 21, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 21, 2025 17:09:30 UTC">July 21, 2025</span>
   </span>
 
     
