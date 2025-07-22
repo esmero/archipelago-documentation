@@ -328,7 +328,7 @@ docker exec -ti esmero-php bash -c "composer require archipelago/ami:0.9.0.x-dev
 
 ```shell
 docker exec -ti esmero-php bash -c "composer remove devizzent/cebe-php-openapi webmozart/path-util --no-update"
-
+```
 
 ```shell
 docker exec -ti esmero-php bash -c "composer require cebe/php-openapi:1.8 cweagans/composer-patches:^1 drupal/aggregator:^2.2 drupal/better_exposed_filters:^7 drupal/ds:^3.23 drupal/facets:2.0.x-dev  drupal/search_api:1.x-dev@dev drupal/search_api_solr:^4.3 drupal/twig_field:^2  drupal/webform:^6.2   react/child-process:^0.6 react/event-loop:^1.5 react/promise:^3.2 vlucas/phpdotenv:^5.6 ankitpokhrel/tus-php:^2.4 drupal/codemirror_editor:^2.0  --update-with-dependencies --no-update"
