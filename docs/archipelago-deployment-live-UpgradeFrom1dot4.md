@@ -102,18 +102,16 @@ ___
 
 We mean this. This is a **new step**. Running a Production Server requires some informed decision making and thus, we believe, a good pre-step is reviewing what [changed between releases](https://github.com/esmero/archipelago-deployment-live/compare/1.4.0...1.5.0). 
 
+In previous releases we shared with you all a list of step by step commands (which we do here too) but, given that we know (someone told us!) you are running your own extra modules, extre themes, probably already updated some libraries or even patches we want to share a  (or a DYI future proof) new way of "understanding" an upgrade that will apply, from now on, to every release (and is version independent).
 
-### Step 1. Updates for key Drupal and Archipelago modules
-
-In previous releases we shared with you all a list of step by step commands (which we will do too) but, given that we know (someone told us!) you are running your own extra modules, extre themes, probably already updated some libraries or even patches we want to recommend a new way of "understanding" an upgrade that will apply, from now on, to every release (and is version independent).
+**Note:** you don't need to run the following commands, we already condensend all needed command derived from this explanation on STEP 1 for you, but: learning how to `diff` a JSON file (as is composer.json) or even a YAML file (e.g when comparing Drupal configurations) is a good goal if you are in charge of supporting/maintinging a live instance of Archipelago.
 
 This approach entails:
 - Understand what changed between Archipelago releases in composer.json
 - Understand what is different between the current (vanilla)  Archipelago releaseand your own/live (custom) composer.json.
-- And use this superpower/new knowledge to approach the update in a simpler/consistent way.
+- And use this superpower/new knowledge *in the future* to approach the update in a simpler/consistent way.
 
-
-To be able to do this we will introduce a new tool named [jd](https://github.com/josephburnett/jd#command-line-usage). Note: you don't need to run this tool to follow the upgrade steps, we already did this for you, but: learning how to `diff` a JSON file (as is composer.json) or even a YAML file (e.g when comparing Drupal configurations) is a good goal if you are in charge of supporting/maintinging a live instance of Archipelago.
+To be able to explain this, we will introduce a new tool named [jd](https://github.com/josephburnett/jd#command-line-usage). 
 
 In concrete, to exemplify the approach, the following command `diffs` two composer.json files (downloaded from https://raw.githubusercontent.com/esmero/archipelago-deployment-live/refs/heads/1.4.0/drupal/composer.default.json and https://raw.githubusercontent.com/esmero/archipelago-deployment-live/refs/heads/1.5.0/drupal/composer.default.json respectively) 
 
@@ -228,31 +226,29 @@ The `@` symbolizes the JSON key(s) that is/are affected. A `+` means new to 1.5.
 
 If you are still with us (sorry this might be a lot, but DevOps is hard labor and is important to understand the "why" as much as getting it right), you might notice that this is actually "cleaner" than comparing two JSON files just line by line and trying to figure out what changed/what needs to be added. Moreover, `jd` has a very nice feature: it allows you to generate this visual output as "patch" (not covered in this guide). Does that trigger some ideas?
 
-*Note:* Important to know/learn. Even if all packages are managed by composer, blindly uninstalling (not upgrading...we mean actually removing) *any* package that starts with `drupal/` without first `drush pm-uninstall` it from Drupal will lead to errors and constant notifications from there on that you have an installed module that has missing source files. Don't do it. Always cleanly uninstall components/modules first from Drupal if you are removing them. Then composer delete them. You have been warned! (:
+*Note 2:* Important to know/learn. Even if all packages are managed by composer, blindly uninstalling (not upgrading...we mean actually removing) *any* package that starts with `drupal/` without first `drush pm-uninstall` it from Drupal will lead to errors and constant notifications from there on that you have an installed module that has missing source files. Don't do it. Always cleanly uninstall components/modules first from Drupal if you are removing them. Then composer delete them. You have been warned! (:
 
-Now now back to diffing composer files. This new command is very powerful BUT, composer.json files are not just `.json` files, they are a normalized JSONs where the order of appearance of package has a dependency logic and might affect your installing/upgrading. For that we have a new plugin: `composer require --dev ergebnis/composer-normalize`
+So. With  this information at hand our goal is to Patch your current running composer.json (which as said before will/might have Packages/patches and other things Archipelago does not provide and we can't nor want to touch) by just affecting what Archipelago provides/changed between the **vanilla** versions of the *previous* and the *current release*.
 
-So. With all this information at hand our goal is to Patch your current running composer.json (which as said before will/might have Packages/patches and other things Archipelago does not provide and we can't nor want to touch) by just affecting what Archipelago provides/changed between the last and the current release.
-
-The gist: Convert each `+` followed into a `composer require` and each `-` that is not preceded or followed by a + into a `composer delete` command and also a few JSON merges. And run them one by one.
+The gist: For Step 1, We converted each `+` followed into a `composer require` and each `-` that is not preceded or followed by a + into a `composer delete` command followed also by a few JSON merges.
 Anything that is a nested set of keys, e.g for:
 
 ```shell
 @ ["config","allow-plugins","tbachert/spi"]
 + true
 ```
+--> is to be converted into a composer JSON merge command, as documented [here](https://getcomposer.org/doc/03-cli.md#modifying-extra-values) 
 
+### Step 1. Updates for key Drupal and Archipelago modules
 
---> it will be converted into a composer JSON merge command, as documented [here](https://getcomposer.org/doc/03-cli.md#modifying-extra-values) 
+Now that you know (if you read all we tried to explain in step 0) how commands for an updated are generated, you can actually start upgrading.
 
-**Start this part of the upgrade process** by running the following commands (line by line):
+**Start the actual upgrade process** by running the following commands (line by line):
 
-
-```
+```shell
 docker exec -ti esmero-php bash -c "composer config --json --merge allow-plugins.tbachert/spi true" 
 docker exec -ti esmero-php bash -c "composer config --json --merge description 'Project template for Drupal 10 /Archipelago projects with composer'"
 ```
-
 
 Do you have custom Patches (not provided by Archipelago) that are not provided by the following snippet (see the `extra` section of your composer.json)?
 
@@ -322,13 +318,13 @@ docker exec -ti esmero-php bash -c "composer config --json extra.patches '{
           }'"
 ```
 
-Note: notice how instead of using "patches/tus-file-cache.patch" as described in the `diff` we are using instead the 1.5.0 github repo URL for that file. Reason is we have not yet decided (or more like you need to decide) if you are already in a git diverging branch and will bring ONLY the files you need to your current branch OR, you are going to make a `git merge origin/1.5.0` overwriting all the defaults (including YAML files) of your current git branch/status and bring the new release into your branch. In other words, you don't have inside your drupal/patches folder the `tus-file-cache.patch` at all.
+Note: notice how instead of using "patches/tus-file-cache.patch", as described in the `diff`, we are using instead the 1.5.0 github repo URL for that file. Reason i:s we have not yet decided (or more like you need to decide) if you are already in a git diverging branch and will bring ONLY the files you need to your current branch OR, you are going to make a `git merge origin/1.5.0` overwriting all the defaults (including YAML files) of your current git branch/status and bring the new release into your branch. In other words, you don't have inside your drupal/patches folder the `tus-file-cache.patch` at all.
 
 Continuing now with packages:
 
 ```shell
 docker exec -ti esmero-php bash -c "composer require archipelago/ami:0.9.0.x-dev strawberryfield/strawberry_runners::0.9.0.x-dev archipelago/archipelago_subtheme:1.5.0.x-dev strawberryfield/strawberryfield:1.5.0.x-dev strawberryfield/webform_strawberryfield:1.5.0.x-dev strawberryfield/format_strawberryfield:1.5.0.x-dev archipelago/archipelago_subtheme_chiloe:dev-main --update-with-dependencies --no-update"
-````
+```
 
 ```shell
 docker exec -ti esmero-php bash -c "composer remove devizzent/cebe-php-openapi webmozart/path-util --no-update"
@@ -336,7 +332,7 @@ docker exec -ti esmero-php bash -c "composer remove devizzent/cebe-php-openapi w
 
 ```shell
 docker exec -ti esmero-php bash -c "composer require cebe/php-openapi:1.8 cweagans/composer-patches:^1 drupal/aggregator:^2.2 drupal/better_exposed_filters:^7 drupal/ds:^3.23 drupal/facets:2.0.x-dev  drupal/search_api:1.x-dev@dev drupal/search_api_solr:^4.3 drupal/twig_field:^2  drupal/webform:^6.2   react/child-process:^0.6 react/event-loop:^1.5 react/promise:^3.2 vlucas/phpdotenv:^5.6 ankitpokhrel/tus-php:^2.4 drupal/codemirror_editor:^2.0  --update-with-dependencies --no-update"
-````
+```
 
 From inside your `archipelago-deployment-live` repo folder we are now going to open up file `permissions` for some of your most protected Drupal files.
 
@@ -376,7 +372,7 @@ Find the PHP container line (as seen here https://github.com/esmero/archipelago-
 
 ```yml
     image: "esmero/php-8.1-fpm:1.2.0-multiarch"
-````
+```
 
 And replace with
 
@@ -390,12 +386,12 @@ Save. Now navigate to your ec2-docker folder and fetch all the updates by doing 
 cd deploy/ec2-docker
 docker-compose up -d
 ```
+
 That will download the newer image, and restart the `php` (esmero-php) container. Now we can fetch Drush version 13.
 
 ```shell
  docker exec -ti esmero-php bash -c "composer require drush/drush:^13  --update-with-dependencies --no-update"
-````
-
+```
 
 ### Step 3. Applying Composer updates/changes.
 
@@ -462,7 +458,7 @@ drupal/search_api_solr         4.3.10      requires solarium/solarium (^6.3.7)
 
 If a given library/module/dependency is only required by `drupal-composer/drupal-project` you have space to loosen it up to a higher/more permissive version. If it dependends on other library/modules, those might be the culprits of not being able to upgrade it and normally the solution is to upgrade that library first (always using the `--no-update` argument) and then run `docker exec -ti esmero-php bash -c "composer update -W"` again.
 
-### Step 2: Update your Database (and run hook updates)
+### Step 4: Update your Database (and run hook updates)
 
 Now run one final database update command:
 
@@ -470,9 +466,9 @@ Now run one final database update command:
 docker exec -ti esmero-php bash -c "drush updatedb"
 ```
 
-### Step 3: Optional Syncs
+### Step 5: Optional Syncs (Optional)
 
-Optionally, you can sync your new Archipelago 1.4.0 and bring in all the latest configs and settings. This requires you do fetch, either via `git` or manually via `wget` or `curl` newer configs from https://github.com/esmero/archipelago-deployment-live/tree/1.4.0/drupal/config/sync into the same folder structure/location of your deployment.
+Optionally, you can sync your new Archipelago 1.5.0 and bring in all the latest configs and settings. This requires you do fetch, either via `git` or manually via `wget` or `curl` newer configs from https://github.com/esmero/archipelago-deployment-live/tree/1.5.0/drupal/config/sync into the same folder structure/location of your deployment.
 
 For this you have **two** options (no worries, actually do worry, just remember you made a backup! Did you? Double check!):
 
@@ -499,13 +495,15 @@ You might see some warnings related to modules dealing with previously non-exist
 
 If you made it this far you are done with code/devops (are we ever really?), and that means you should be able to (hopefully) stay in the Drupal 10 realm for a few years!
 
-### Step 4: Update (or not) your Metadata Display Entities and menu items
+### Step 6: Update (or not - Opitional) your Metadata Display Entities and menu items
 
 Recommended: If you want to add new templates and menu items 1.5.0 provides, you need to fetch everything from this remote [https://github.com/esmero/archipelago-deployment-live/tree/1.5.0/drupal/d8content](https://github.com/esmero/archipelago-deployment-live/tree/1.5.0/drupal/d8content) to your local installation into the same folder structure/location,
 then replace your local `deploy.sh` and `update_deployed.sh` scripts which can be found inside your base archipelago deployment folder inside drupal/scripts/archipelago with
 
 `https://raw.githubusercontent.com/esmero/archipelago-deployment-live/refs/heads/1.5.0/drupal/scripts/archipelago/deploy.sh`
+ 
  and
+ 
 `https://raw.githubusercontent.com/esmero/archipelago-deployment-live/refs/heads/1.5.0/drupal/scripts/archipelago/update_deployed.sh`
 
 from the new release and, as described in the general (from zero) [1.5.0 Deployment Instructions](archipelago-deployment-live-readme.md) replace the `http://esmero-web` with your real domain.
@@ -522,7 +520,7 @@ On a terminal navigate to your base archipelago deployment folder and run the fo
 docker exec -ti esmero-php bash -c 'scripts/archipelago/deploy.sh'
 ```
 
-`Important`: If you don't download/sync/git merge (or your prefered method) then the command will add nothing, since you will be running this command against 1.4.0 content.
+**Important**: If you don't download/sync/git merge (or your prefered method) then the command will add nothing, since you will be running this command against 1.4.0 content.
 
 Once that is done, you *could* choose to update all Metadata Displays (twig templates) we ship with new 1.5.0 versions (including heavily adjusted IIIF manifest templates with Content Search API service definitions). Before you do this, we **strongly** recommend that you first make sure to manually (copy/paste) backup any Twig templates you have modified. If unsure, *do not run* the command that comes after this warning! You can always manually copy the new templates from the `d8content/metadatadisplays` folder which contains text versions (again, copy/paste) of each shipped template you can pick and use when you feel ready.
 
@@ -534,7 +532,7 @@ docker exec -ti esmero-php bash -c 'scripts/archipelago/update_deployed.sh'
 
 Done! (For realz now)
 
-### Step 5
+### Step 7
 
 Please login to your Archipelago and test/check all is working! Enjoy Archipelago 1.5.0 under Drupal 10. Thanks! Also please keep all your new changes under version control. Check what has changed. `git add` and `git commit -m "What i changed"` as needed.
 
