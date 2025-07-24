@@ -228,6 +228,10 @@ sudo chown -R 8983:8983 data_storage/solrcore
 
 Now now. Archipelago 1.5.0 now ships with [Anubis](https://anubis.techaro.lol/), an OSS Application Firewall/middleware that will alliviate some very valid concerns (and late night server hiccups, even costs related issues) related to AI/ML/Bot swarms and unwanted traffic. But you need to choose. And you need to choose now. Want it enabled immediately? Later on? In any case we need to do some setup. Not hard. Let's get started.
 
+##### Important Note About Troubleshooting Anubis Configurations
+
+To help keep usage of Anubis effective, we are intentionally not detailing all of the configuration options and devops-related troubleshooting in a live, public document. Please reach out over the Archipelago Slack/email for assistance with troubleshooting Anubis for your Archipelago instance.
+
 ##### Anubis needs some rules (even if you decide not to run them yet)
 
 The following files are needed by Anubis and mounted on start. if you get this wrong a `docker logs -f esmero-anubis` will tell you the rules are not present and traffic will be blocked. Don't get it wrong!
