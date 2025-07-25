@@ -10,16 +10,16 @@ Twig is a template engine for PHP part of Symfony framework.
 
 - [Twig in Symfony](https://twig.symfony.com)
 - [Twig in Drupal](https://www.drupal.org/docs/theming-drupal/twig-in-drupal)
-- A template engine is a processor. It allows you to mix and process _templates_ with _data_ to generate an output _document_.
-    - Template: Some type of static Document (we name this a “Frame”)
+- A template engine is a processor. It allows you to mix and process _templates_ or "blue prints" with _data_ to generate an output _document_.
+    - Template: Some type of static Document using, in our case the _Twig Pseudo coding language_ (we name this a “Frame”)
     - Data: Your Archipelago Digital Object (ADO) info and your Metadata
-    - Processor: Allows you to use a rich and expressive language to pick, check, iterate, transform and output your data inside the Template. We refer to this as “casting”.
+    - Processor: Allows you to use a rich and expressive language from the Template to pick, check, iterate, transform and output your data inside the Template. We refer to this as “casting”.
 		
 ### Where is Twig used in Archipelago?
 
 This templating system is exposed to Archipelago users through the UI, and is stored in the repository as content. This setup empowers users to fully control how metadata is transformed and published without touching their individual sources or needing to manage hard-coded configurations. We named these readily accessible and powerful templates `Metadata Display entities`, but they serve more than just display needs.
 
-Twig drives **every** Page in a Drupal 8/9/10 environment.
+Twig drives **every** Page in a Drupal 9/10 environment.
 
 - Twig templates are normally files (.twig.html) that live in your Code.
 - Modules provide Templates, Themes provide Templates
@@ -45,6 +45,7 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
     - Collection and Creative Work Series (old compound) displays (Drupal Views)
 - Machinable Output
     - Exposed Metadata Endpoints (Standalone URLs to access metadata)
+    - Metadata API, both Open API Wrapper and per Record Templates
 - Batch Ingest
     - AMI Ingest: To transform your CSV data (one row == DATA) to Strawberry field JSON to generate an ADO
 
@@ -65,13 +66,15 @@ Templates or recipes can be shared, exported, ingested, updated, and adapted in 
 - A Simple Dublin Core (XML) Metadata Display
 - MODS 3.7 (XML) Metadata Display
 - A Schema.org (JSON-LD) Metadata Display
+- An Open API (OAI-PMH) wrapper Metadata Display
+- An Open API (OAI-PMH, Unqualified DC) per Record Metadata Display
 - Carousel (in Bootstrap) for Images (HTML) Metadata Display 
 
 You can find these templates here:
 
 - On Github:
-    - [Local Deployment](https://github.com/esmero/archipelago-deployment/tree/1.0.0/d8content/metadatadisplays)
-    - [Live/Production Deployment](https://github.com/esmero/archipelago-deployment-live/tree/1.0.0/drupal/d8content/metadatadisplays)
+    - [Local Deployment](https://github.com/esmero/archipelago-deployment/tree/1.5.0/d8content/metadatadisplays)
+    - [Live/Production Deployment](https://github.com/esmero/archipelago-deployment-live/tree/1.5.0/drupal/d8content/metadatadisplays)
 - In your local instance: http://localhost:8001/metadatadisplay/list
 - In your live instance: https://yourdomain.org/metadatadisplay/list
 
