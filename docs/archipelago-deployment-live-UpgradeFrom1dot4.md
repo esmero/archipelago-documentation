@@ -323,7 +323,7 @@ Note: notice how instead of using "patches/tus-file-cache.patch", as described i
 Continuing now with packages:
 
 ```shell
-docker exec -ti esmero-php bash -c "composer require archipelago/ami:0.9.0.x-dev strawberryfield/strawberry_runners::0.9.0.x-dev archipelago/archipelago_subtheme:1.5.0.x-dev strawberryfield/strawberryfield:1.5.0.x-dev strawberryfield/webform_strawberryfield:1.5.0.x-dev strawberryfield/format_strawberryfield:1.5.0.x-dev archipelago/archipelago_subtheme_chiloe:dev-main --update-with-dependencies --no-update"
+docker exec -ti esmero-php bash -c "composer require archipelago/ami:0.9.0.x-dev strawberryfield/strawberry_runners:0.9.0.x-dev archipelago/archipelago_subtheme:1.5.0.x-dev strawberryfield/strawberryfield:1.5.0.x-dev strawberryfield/webform_strawberryfield:1.5.0.x-dev strawberryfield/format_strawberryfield:1.5.0.x-dev archipelago/archipelago_subtheme_chiloe:dev-main --update-with-dependencies --no-update"
 ```
 
 ```shell
@@ -331,7 +331,7 @@ docker exec -ti esmero-php bash -c "composer remove devizzent/cebe-php-openapi w
 ```
 
 ```shell
-docker exec -ti esmero-php bash -c "composer require cebe/php-openapi:1.8 cweagans/composer-patches:^1 drupal/aggregator:^2.2 drupal/better_exposed_filters:^7 drupal/ds:^3.23 drupal/facets:2.0.x-dev  drupal/search_api:1.x-dev@dev drupal/search_api_solr:^4.3 drupal/twig_field:^2  drupal/webform:^6.2   react/child-process:^0.6 react/event-loop:^1.5 react/promise:^3.2 vlucas/phpdotenv:^5.6 ankitpokhrel/tus-php:^2.4 drupal/codemirror_editor:^2.0  --update-with-dependencies --no-update"
+docker exec -ti esmero-php bash -c "composer require cebe/php-openapi:^1.8 cweagans/composer-patches:^1 drupal/aggregator:^2.2 drupal/better_exposed_filters:^7 drupal/ds:^3.23 drupal/facets:2.0.x-dev drupal/search_api:1.x-dev@dev drupal/search_api_solr:^4.3 drupal/twig_field:^2 drupal/webform:^6.2 react/child-process:^0.6 react/event-loop:^1.5 react/promise:^3.2 vlucas/phpdotenv:^5.6 ankitpokhrel/tus-php:^2.4 drupal/codemirror_editor:^2.0  --update-with-dependencies --no-update"
 ```
 
 From inside your `archipelago-deployment-live` repo folder we are now going to open up file `permissions` for some of your most protected Drupal files.
