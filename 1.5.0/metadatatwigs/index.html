@@ -3672,16 +3672,16 @@
 <ul>
 <li><a href="https://twig.symfony.com">Twig in Symfony</a></li>
 <li><a href="https://www.drupal.org/docs/theming-drupal/twig-in-drupal">Twig in Drupal</a></li>
-<li>A template engine is a processor. It allows you to mix and process <em>templates</em> with <em>data</em> to generate an output <em>document</em>.<ul>
-<li>Template: Some type of static Document (we name this a “Frame”)</li>
+<li>A template engine is a processor. It allows you to mix and process <em>templates</em> or "blue prints" with <em>data</em> to generate an output <em>document</em>.<ul>
+<li>Template: Some type of static Document using, in our case the <em>Twig Pseudo coding language</em> (we name this a “Frame”)</li>
 <li>Data: Your Archipelago Digital Object (ADO) info and your Metadata</li>
-<li>Processor: Allows you to use a rich and expressive language to pick, check, iterate, transform and output your data inside the Template. We refer to this as “casting”.</li>
+<li>Processor: Allows you to use a rich and expressive language from the Template to pick, check, iterate, transform and output your data inside the Template. We refer to this as “casting”.</li>
 </ul>
 </li>
 </ul>
 <h3 id="where-is-twig-used-in-archipelago">Where is Twig used in Archipelago?</h3>
 <p>This templating system is exposed to Archipelago users through the UI, and is stored in the repository as content. This setup empowers users to fully control how metadata is transformed and published without touching their individual sources or needing to manage hard-coded configurations. We named these readily accessible and powerful templates <code>Metadata Display entities</code>, but they serve more than just display needs.</p>
-<p>Twig drives <strong>every</strong> Page in a Drupal 8/9/10 environment.</p>
+<p>Twig drives <strong>every</strong> Page in a Drupal 9/10 environment.</p>
 <ul>
 <li>Twig templates are normally files (.twig.html) that live in your Code.</li>
 <li>Modules provide Templates, Themes provide Templates</li>
@@ -3709,6 +3709,7 @@
 </li>
 <li>Machinable Output<ul>
 <li>Exposed Metadata Endpoints (Standalone URLs to access metadata)</li>
+<li>Metadata API, both Open API Wrapper and per Record Templates</li>
 </ul>
 </li>
 <li>Batch Ingest<ul>
@@ -3732,13 +3733,15 @@
 <li>A Simple Dublin Core (XML) Metadata Display</li>
 <li>MODS 3.7 (XML) Metadata Display</li>
 <li>A Schema.org (JSON-LD) Metadata Display</li>
+<li>An Open API (OAI-PMH) wrapper Metadata Display</li>
+<li>An Open API (OAI-PMH, Unqualified DC) per Record Metadata Display</li>
 <li>Carousel (in Bootstrap) for Images (HTML) Metadata Display </li>
 </ul>
 <p>You can find these templates here:</p>
 <ul>
 <li>On Github:<ul>
-<li><a href="https://github.com/esmero/archipelago-deployment/tree/1.0.0/d8content/metadatadisplays">Local Deployment</a></li>
-<li><a href="https://github.com/esmero/archipelago-deployment-live/tree/1.0.0/drupal/d8content/metadatadisplays">Live/Production Deployment</a></li>
+<li><a href="https://github.com/esmero/archipelago-deployment/tree/1.5.0/d8content/metadatadisplays">Local Deployment</a></li>
+<li><a href="https://github.com/esmero/archipelago-deployment-live/tree/1.5.0/drupal/d8content/metadatadisplays">Live/Production Deployment</a></li>
 </ul>
 </li>
 <li>In your local instance: http://localhost:8001/metadatadisplay/list</li>
@@ -3781,7 +3784,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 22, 2024 12:04:27 UTC">March 22, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 24, 2025 20:22:59 UTC">July 24, 2025</span>
   </span>
 
     
