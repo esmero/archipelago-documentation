@@ -59,10 +59,10 @@ This document describes how to enable Xdebug for local PHP development using the
 
 # Set up Browser Integration
 
-1. We have had success using the [XDebug Helper](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en) extension in Chrome. Once you have the extension installed, right-click on the bug icon in the top right of your chrome browser window and select "Options" to configure the IDE key. Under "IDE", select "Other", and in the text box, enter "archipelago"
+1. We have had success using the [XDebug Helper by JetBrains](https://chromewebstore.google.com/detail/xdebug-helper-by-jetbrain/aoelhdemabeimdhedkidlnbkfhnhgnhm) extension in Chrome. Once you have the extension installed, right-click on the bug icon in the top right of your chrome browser window and select "Options" to configure the IDE key. Under "Debug Trigger or Xdebug Cloud Key" enter "archipelago"
 
     ![Debug](images/xdebug/xdebut-helper-menu.png "XDebug Helper Options")
-    ![Debug](images/xdebug/xdebug-helper-set-key.png "XDebug Helper IDE Key")
+    ![Debug](images/xdebug/xdebug-helper-set-key.png "XDebug Helper Debug Trigger or Xdebug Cloud Key")
  
 # Actually Debugging!
 
