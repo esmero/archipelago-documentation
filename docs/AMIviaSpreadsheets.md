@@ -160,12 +160,12 @@ To review your newly created Digital Objects and Collections, you can use the **
 
 You can view an AMI Set's Report tab either directly within the AMI Set, top tab for 'Report' OR from the main `AMI sets` page, select `Report` from the `Operations` menu for the AMI set you wish to review.
 
-    - This Report will contain information related to the last Processing operation run against your AMI Set.
-    - For each Digital Object or Collection row that was Processed, you will see:
-        - a `datetime` stamp
-        - one of three `level` (INFO, WARNING, or ERRORS) applicability
-        - a `message` summarizing the Processing outcome--including a title/label link to the created ADO if successful
-        - a `details` summary containing system information related to the operations.
+- This Report will contain information related to the last Processing operation run against your AMI Set.
+- For each Digital Object or Collection row that was Processed, you will see:
+    - a `datetime` stamp
+    - one of three `level` (INFO, WARNING, or ERRORS) applicability
+    - a `message` summarizing the Processing outcome--including a title/label link to the created ADO if successful
+    - a `details` summary containing system information related to the operations.
 
 ![AMI Sets Page Report Operation](images/AMIreportOverview_updated_2025_July.png)
 
