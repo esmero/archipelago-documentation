@@ -325,7 +325,7 @@ docker exec -ti esmero-php bash -c "composer install"
 
 Composer install will take a little while and bring all your PHP libraries.
 
-Note: Because `composer install` uses the shipped composer.lock and sometimes (inside the same shipped version) we fix bugs, it is always safe and recommended to run afterwards and extra "check if under the archipelago and strawberryfield defined versions there is newer code`. We try to keep `composer.default.lock` always updated when bug fixes (after release/pre next release cycle) happen, but one never knows when this documentation is being followed or if you cloned things weeks ago, so no harm on checking.
+Note: Because `composer install` uses the shipped composer.lock and sometimes (inside the same shipped version) we fix bugs, it is always safe and recommended to run afterwards an extra `"Let's check, if under the archipelago and strawberryfield defined versions, there is newer code"`. We try to keep `composer.default.lock` always updated when bug fixes (after release/pre next release cycle) happen, but one never knows when this documentation is being followed or if you cloned things weeks ago, so no harm on checking.
 
 Run the following command to fetch any last minute (if any) updates of our core modules:
 
