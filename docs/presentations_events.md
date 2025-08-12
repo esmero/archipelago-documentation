@@ -11,6 +11,8 @@
 - Archipelago August Showcase & Workshop Series (August 2025) : [registration details here](https://us02web.zoom.us/meeting/register/8sa1fxyZTQyDA3lhS6uXVA)
     - Session 1: Archipelago 1.5.0 Key New Features In-Depth
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/MMX_8ruUlhsX_23d_3eGmBWDjWtsBw7WEm5ir7twm55g1uEcm0hRJ9RbWjINKWr0.O8D8RuiDlP7oVv13)
+    - Session 2: All About Object Display - Step-by-step Walkthrough from Digital Object JSON Data to Display Outputs Through Twig Templates, View Modes, and Views
+        - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/OV5nqBY1_cKZ9ueuOCyoSFRXsYr4o367ybTzTKc6pkNLB_5s_VXpGP_ZKSrEbABE.Yr5T2d_0XaRfp7Vi)
   
 - Open Repositories Annual Conference (June 2025):
     - [Archipelago Commons: blooms, new growth and healthy trees from the community garden](https://zenodo.org/records/15758510).  Allison Sherrick, Diego Pino Navarro.
