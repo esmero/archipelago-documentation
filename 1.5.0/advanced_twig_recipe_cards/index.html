@@ -12,13 +12,13 @@
         <meta name="author" content="The Digital Services Team at Metropolitan New York Library Council">
       
       
-        <link rel="canonical" href="https://docs.archipelago.nyc/1.5.0/queuesexplainer/">
+        <link rel="canonical" href="https://docs.archipelago.nyc/1.5.0/advanced_twig_recipe_cards/">
       
       
-        <link rel="prev" href="../archifilepersistencestrategy/">
+        <link rel="prev" href="../twig_recipe_cards/">
       
       
-        <link rel="next" href="../strawberryrunners/">
+        <link rel="next" href="../metadata_display_preview/">
       
       
       <link rel="icon" href="../images/ArchipelagoLogo-favicon-32x32.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Archipelago Processing Queues Explainer - Archipelago Documentation</title>
+        <title>Advanced Twig Recipe Cards - Archipelago Documentation</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#archipelago-processing-queues-explainer" class="md-skip">
+        <a href="#advanced-twig-recipe-cards" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Archipelago Processing Queues Explainer
+              Advanced Twig Recipe Cards
             
           </span>
         </div>
@@ -1437,10 +1437,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1474,11 +1472,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -1494,7 +1492,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Site Administration & Configuration
@@ -1620,32 +1618,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Queues Explainer
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../queuesexplainer/" class="md-nav__link">
         
   
   
@@ -1656,275 +1632,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#primary-queue-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      Primary Queue Manager
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Primary Queue Manager">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#queue-actions-inspect-button" class="md-nav__link">
-    <span class="md-ellipsis">
-      Queue Actions &amp; Inspect Button
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Queue Actions &amp; Inspect Button">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#batch-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      Batch process
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remove-leases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove Leases
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clear" class="md-nav__link">
-    <span class="md-ellipsis">
-      Clear
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inspect-button" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inspect Button
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#queue-workers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Queue Workers
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Queue Workers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#aggregator-refresh" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aggregator refresh
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ami-lod-reconciling-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      AMI LoD Reconciling Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ami-digital-object-ingester-action-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      AMI Digital Object Ingester &amp; Action Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ami-csv-expander-and-ado-enqueuer-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      AMI CSV Expander and ADO Enqueuer Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#thumbnail-downloader" class="md-nav__link">
-    <span class="md-ellipsis">
-      Thumbnail downloader
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strawberry-runners-process-webhook-payload-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strawberry Runners Process Webhook Payload Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strawberry-runners-process-on-background-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strawberry Runners Process on Background Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strawberry-runners-process-via-cron-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strawberry Runners Process via Cron Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#archipelago-temporary-file-composter-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Archipelago Temporary File Composter Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#secondary-background-hydroponics-queue-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      Secondary Background / Hydroponics Queue Manager
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Secondary Background / Hydroponics Queue Manager">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#current-hydroponics-service-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      Current Hydroponics Service Status
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#checkbox-to-enable-the-hydroponics-queue" class="md-nav__link">
-    <span class="md-ellipsis">
-      Checkbox to enable the Hydroponics Queue
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#time-to-live-stay-awake-for-the-hydroponics-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      Time to live (stay awake) for the Hydroponics Service.*
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced settings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#allow-hydroponics-to-help-with-any-of-the-following-search-api-indexes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Allow Hydroponics to help with any of the following Search API Indexes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#number-of-items-to-be-indexed-by-hydroponics-at-the-same-time" class="md-nav__link">
-    <span class="md-ellipsis">
-      Number of items to be indexed by Hydroponics at the same time .
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#listing-of-queue-workers-and-checkboxes-for-enabling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Listing of Queue Workers and Checkboxes for Enabling
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strawberry-runners-ami-and-queues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strawberry Runners, AMI, and Queues
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2486,8 +2193,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2509,11 +2218,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -2529,7 +2238,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Content and Metadata Tools
@@ -2911,8 +2620,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2934,11 +2645,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
@@ -2954,7 +2665,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3_5">
             <span class="md-nav__icon md-icon"></span>
             Twig Templates and Archipelago
@@ -3034,10 +2745,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../advanced_twig_recipe_cards/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Advanced Twig Recipe Cards
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3048,6 +2781,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#twig-macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twig Macros
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Twig Macros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-twig-macro-1-simple-html-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Twig Macro 1 - Simple HTML Output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-twig-macro-2-simple-html-output-as-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Twig Macro 2 - Simple HTML Output as List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-twig-macro-3-html-output-search-non-lod-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Twig Macro 3 - HTML Output Search (Non-LoD Elements)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-twig-macro-4-html-output-search-lod-elements-with-labels-and-uris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Twig Macro 4 - HTML Output Search (LoD Elements with Labels and URIs)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calling-drupal-views-within-twig-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calling Drupal Views Within Twig Templates
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3828,159 +3641,48 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#primary-queue-manager" class="md-nav__link">
+  <a href="#twig-macros" class="md-nav__link">
     <span class="md-ellipsis">
-      Primary Queue Manager
+      Twig Macros
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Primary Queue Manager">
+    <nav class="md-nav" aria-label="Twig Macros">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#queue-actions-inspect-button" class="md-nav__link">
+  <a href="#default-twig-macro-1-simple-html-output" class="md-nav__link">
     <span class="md-ellipsis">
-      Queue Actions &amp; Inspect Button
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Queue Actions &amp; Inspect Button">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#batch-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      Batch process
+      Default Twig Macro 1 - Simple HTML Output
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#remove-leases" class="md-nav__link">
+  <a href="#default-twig-macro-2-simple-html-output-as-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove Leases
+      Default Twig Macro 2 - Simple HTML Output as List
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#clear" class="md-nav__link">
+  <a href="#default-twig-macro-3-html-output-search-non-lod-elements" class="md-nav__link">
     <span class="md-ellipsis">
-      Clear
+      Default Twig Macro 3 - HTML Output Search (Non-LoD Elements)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#inspect-button" class="md-nav__link">
+  <a href="#default-twig-macro-4-html-output-search-lod-elements-with-labels-and-uris" class="md-nav__link">
     <span class="md-ellipsis">
-      Inspect Button
+      Default Twig Macro 4 - HTML Output Search (LoD Elements with Labels and URIs)
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#queue-workers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Queue Workers
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Queue Workers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#aggregator-refresh" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aggregator refresh
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ami-lod-reconciling-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      AMI LoD Reconciling Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ami-digital-object-ingester-action-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      AMI Digital Object Ingester &amp; Action Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ami-csv-expander-and-ado-enqueuer-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      AMI CSV Expander and ADO Enqueuer Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#thumbnail-downloader" class="md-nav__link">
-    <span class="md-ellipsis">
-      Thumbnail downloader
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strawberry-runners-process-webhook-payload-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strawberry Runners Process Webhook Payload Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strawberry-runners-process-on-background-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strawberry Runners Process on Background Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strawberry-runners-process-via-cron-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strawberry Runners Process via Cron Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#archipelago-temporary-file-composter-queue-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Archipelago Temporary File Composter Queue Worker
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3990,89 +3692,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#secondary-background-hydroponics-queue-manager" class="md-nav__link">
+  <a href="#calling-drupal-views-within-twig-templates" class="md-nav__link">
     <span class="md-ellipsis">
-      Secondary Background / Hydroponics Queue Manager
+      Calling Drupal Views Within Twig Templates
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Secondary Background / Hydroponics Queue Manager">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#current-hydroponics-service-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      Current Hydroponics Service Status
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#checkbox-to-enable-the-hydroponics-queue" class="md-nav__link">
-    <span class="md-ellipsis">
-      Checkbox to enable the Hydroponics Queue
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#time-to-live-stay-awake-for-the-hydroponics-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      Time to live (stay awake) for the Hydroponics Service.*
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced settings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#allow-hydroponics-to-help-with-any-of-the-following-search-api-indexes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Allow Hydroponics to help with any of the following Search API Indexes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#number-of-items-to-be-indexed-by-hydroponics-at-the-same-time" class="md-nav__link">
-    <span class="md-ellipsis">
-      Number of items to be indexed by Hydroponics at the same time .
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#listing-of-queue-workers-and-checkboxes-for-enabling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Listing of Queue Workers and Checkboxes for Enabling
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strawberry-runners-ami-and-queues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strawberry Runners, AMI, and Queues
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4095,49 +3719,37 @@
       
       
       
-        <span class="md-tag">AMI</span>
+        <span class="md-tag">Examples</span>
       
     
       
       
       
-        <span class="md-tag">Archipelago Multi Importer</span>
+        <span class="md-tag">JSON</span>
       
     
       
       
       
-        <span class="md-tag">Background Processing</span>
+        <span class="md-tag">Twig</span>
       
     
       
       
       
-        <span class="md-tag">HOCR</span>
+        <span class="md-tag">Twig Filters</span>
       
     
       
       
       
-        <span class="md-tag">OCR</span>
+        <span class="md-tag">Twig Functions</span>
       
     
       
       
       
-        <span class="md-tag">Post-processing</span>
-      
-    
-      
-      
-      
-        <span class="md-tag">Queues</span>
-      
-    
-      
-      
-      
-        <span class="md-tag">Strawberry Runners</span>
+        <span class="md-tag">Twig Templates</span>
       
     
   </nav>
@@ -4147,163 +3759,143 @@
   
 
 
-<h1 id="archipelago-processing-queues-explainer">Archipelago Processing Queues Explainer</h1>
-<p>Archipelago has multiple helpful background queues to help keep your repository workflows running smoothly. These different queues will be triggered based on different workflow events, such as one-off create/update/delete actions for digital objects, or batch ingests or updates through AMI or Find and Replace operations. </p>
-<div class="admonition note">
-<p class="admonition-title">Important Note: Queues Automation</p>
-<p>The Secondary Background / Hydroponics Queue Manager runs independently from the primary Queue Manager. For the Secondary Background Hydroponics Queue Manager, as long as the option to 'Check to enabled Hydroponics Queue Background processing service wakeup during Drupal Cron' and a particular singular/set of Queue Actions are enabled, Archipelago will automatically run through these queues as configured, on a regular basis. </p>
-</div>
-<h2 id="primary-queue-manager">Primary Queue Manager</h2>
-<p>The primary Queue Manager handles the main Archipelago batch ingest and update operations, processed in a first in, first out (FIFO) basis. The Primary Queue Manager allows you to push or clear out Queue Actions in realtime, if desired.</p>
-<p>You can access the primary Queue Manager:</p>
-<ul>
-<li>Through the <code>Manage</code> menu &gt; <code>Configuration</code> &gt; <code>System</code> &gt; <code>Queue Manager</code></li>
-<li>Directly at <code>/admin/config/system/queue-ui</code> </li>
-</ul>
-<p><a class="glightbox" href="../images/AMIqueueMgrBatchProcess_updated_2025_July.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AMI Queue Manager Batch" src="../images/AMIqueueMgrBatchProcess_updated_2025_July.png" /></a></p>
-<h3 id="queue-actions-inspect-button">Queue Actions &amp; Inspect Button</h3>
-<p>Using/forcing any of the Actions on the Queue Manager will run in realtime, over your browser window. Only use the Actions if you have a stable internet connection and time to observe the resulting Actions.</p>
-<h4 id="batch-process">Batch process</h4>
-<ul>
-<li>This Action will start the Queue Operations for the selected items</li>
-<li>May be useful to <a href="../AMIviaSpreadsheets/#step-8-queue-manager-push-may-be-restricted-to-administrator-users-only">push along AMI ingests</a> </li>
-</ul>
-<h4 id="remove-leases">Remove Leases</h4>
-<ul>
-<li>This Action will remove the 'leases'--aka holds tagged for particular digital objects/operations related to a Queue Operations</li>
-<li>May be useful to stop a queued process and release the impacted Digital Objects for a different or refreshed operations</li>
-</ul>
-<h4 id="clear">Clear</h4>
-<ul>
-<li>This Action will clear all of the Queue Operations for the selected items</li>
-<li>Recommendation is to always first use the 'Remove Leases' Queue Action, then use 'Clear' only if needed. This order of Actions will help ensure no orphan operations are left behind if you interrupt and reset Queues operations.</li>
-</ul>
-<h4 id="inspect-button">Inspect Button</h4>
-<ul>
-<li>Found on the right-hand side of the Queue Operations table</li>
-<li>Allows you to review the individual processes enqueued, such as the particulars for the 'AMI CSV Expander and ADO Enqueuer Queue Worker' or the specific file being passed through the <a href="../strawberryrunners_pager_ocr/">Strawberry Runners Post Processing pipeline for HOCR extraction</a>. </li>
-</ul>
-<h3 id="queue-workers">Queue Workers</h3>
-<p>Every Queue Worker refers to a specific machine process, and has settings for when it executes based on your site's daily Cron runs.</p>
-<h4 id="aggregator-refresh">Aggregator refresh</h4>
-<ul>
-<li>Machine name: aggregator_feeds</li>
-<li>Cron time limit: 60 seconds</li>
-<li>Function: Drupal related operation</li>
-<li>Typically not used for Archipelago repository workflows</li>
-</ul>
-<h4 id="ami-lod-reconciling-queue-worker">AMI LoD Reconciling Queue Worker</h4>
-<ul>
-<li>Machine name: ami_lod_ado</li>
-<li>Cron disabled</li>
-<li>Function: processes AMI LoD Reconciliation one-by-one</li>
-<li>Can be useful for very large AMI Sets with hundreds of terms to be processed through LoD queries</li>
-</ul>
-<h4 id="ami-digital-object-ingester-action-queue-worker">AMI Digital Object Ingester &amp; Action Queue Worker</h4>
-<ul>
-<li>Machine name: ami_ingest_ado</li>
-<li>Cron disabled</li>
-<li>Function: processes the ingest of digital objects and collections enqueued in <a href="../AMIviaSpreadsheets/#step-7-ami-set-processing">AMI Set Processing</a></li>
-</ul>
-<h4 id="ami-csv-expander-and-ado-enqueuer-queue-worker">AMI CSV Expander and ADO Enqueuer Queue Worker</h4>
-<ul>
-<li>Machine name: ami_csv_ado</li>
-<li>Cron disabled</li>
-<li>Function: expands an AMI Set CSV and assigns the individual digital object and collection rows as Queue items for the <code>AMI Digital Object Ingest &amp; Action Queue Worker</code></li>
-</ul>
-<h4 id="thumbnail-downloader">Thumbnail downloader</h4>
-<ul>
-<li>Machine name: media_entity_thumbnail</li>
-<li>Cron time limit: 60 seconds</li>
-<li>Function: Drupal related operation</li>
-<li>Typically not used for Archipelago repository workflows</li>
-</ul>
-<h4 id="strawberry-runners-process-webhook-payload-queue-worker">Strawberry Runners Process Webhook Payload Queue Worker</h4>
-<ul>
-<li>Machine name: strawberryrunners_process_webhook_payload</li>
-<li>Cron time limit: 5 seconds</li>
-<li>Function: placeholder for future custom webhook routing, to be developed for future Archipelago releases</li>
-<li>This will always be empty until used in future developments</li>
-</ul>
-<h4 id="strawberry-runners-process-on-background-queue-worker">Strawberry Runners Process on Background Queue Worker</h4>
-<ul>
-<li>Machine name: strawberryrunners_process_background</li>
-<li>Cron disabled</li>
-<li>Function: processes, <strong>in real time</strong>, the complete <a href="../strawberryrunners/">'Strawberry Runners' post-processor operation</a>, such as HOCR extraction --&gt; output mapped to a 'Strawberryflavour' field in Solr for the corresponding digital object</li>
-</ul>
-<h4 id="strawberry-runners-process-via-cron-queue-worker">Strawberry Runners Process via Cron Queue Worker</h4>
-<ul>
-<li>Machine name: strawberryrunners_process_index</li>
-<li>Cron time limit: 180 seconds</li>
-<li>Function: processes, *<em>via Cron, in background</em>, the complete <a href="../strawberryrunners/">'Strawberry Runners' post-processor operation</a>, such as HOCR extraction --&gt; output mapped to a 'Strawberryflavour' field in Solr for the corresponding digital object</li>
-</ul>
-<h4 id="archipelago-temporary-file-composter-queue-worker">Archipelago Temporary File Composter Queue Worker</h4>
-<ul>
-<li>Machine name: sbf_compost_file</li>
-<li>Cron disabled</li>
-<li>Function: processes the deletion of temporary (unnecessary copy) files</li>
-</ul>
-<h2 id="secondary-background-hydroponics-queue-manager">Secondary Background / Hydroponics Queue Manager</h2>
-<p>The Background Queue Processing Manager, also referred to as the Hydroponics Queue, is used to review the Hydroponics Service status and also configure what Queue Workers are enabled. </p>
-<div class="admonition note">
-<p class="admonition-title">Important Note: Changing Hydroponics Settings</p>
-<p>Changing settings for the Hydroponics Queue does not immediately change the actions to be executed over already/previously Enqueued items. If there are items already listed in the different Queues, those operations will be complete as originally scheduled. </p>
-<p>If you wish to stop, clear, and reconfigure background Queue operations already in process, you will need to use the Primary Queue Manager as detailed above. Be cautious when interupting and reconfiguring the background queue operations, and work through the necessary changes one step at a time.</p>
-</div>
-<p>You can access the secondary background / Hydroponics Service Queue Manager:</p>
-<ul>
-<li>Through the <code>Manage</code> menu &gt; <code>Configuration</code> &gt; <code>Archipelago</code> &gt; <code>Queue Manager for Hydroponic Service</code></li>
-<li>Directly at <code>/admin/config/archipelago/hydroponics</code> </li>
-</ul>
-<p><a class="glightbox" href="../images/hyroponics_queue_updated.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Background Queue Processing Manager" src="../images/hyroponics_queue_updated.png" /></a></p>
-<h4 id="current-hydroponics-service-status">Current Hydroponics Service Status</h4>
-<ul>
-<li>Used to check on the status of the Hydroponics Services</li>
-<li>If running, you will see a message such as "Hydroponics Service Is Running on PID 211, time passed since last seen 1"</li>
-<li>If there are not items in the different queues, you will see a message such as "Hydroponics Service Not running, time passed since last seen 814"</li>
-<li>Selecting the 'Refresh' button will run a real-time check and refresh the message displayed..</li>
-</ul>
-<h4 id="checkbox-to-enable-the-hydroponics-queue">Checkbox to enable the Hydroponics Queue</h4>
-<ul>
-<li>The option to <code>Check to enabled Hydroponics Queue Background processing service wakeup during Drupal Cron.</code> is enabled by default in Archipelago.</li>
-<li>It is recommend to always leave Hydroponics enabled.</li>
-</ul>
-<h4 id="time-to-live-stay-awake-for-the-hydroponics-service">Time to live (stay awake) for the Hydroponics Service.*</h4>
-<ul>
-<li>A value of 0 will force the Service to finish all pending queues before shutting down</li>
-</ul>
-<h4 id="advanced-settings">Advanced settings</h4>
-<p><a class="glightbox" href="../images/hyroponics_queue_advanced_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Background Queue Processing Manager Advanced Settings" src="../images/hyroponics_queue_advanced_settings.png" /></a></p>
-<ul>
-<li>If you are not running Archipelago under the <code>esmero-php</code> docker containers (not common/advanced) you will need to provide the following settings.</li>
-<li>You will have the option to enter:<ol>
-<li>The full system path to your composer vendor drush installation (including the actual drush php script).For a standard archipelago-deployment docker the right path is "/var/www/html/vendor/drush/drush/drush*</li>
-<li>A full system path we can use as $HOME directory for your webserver user. For a standard archipelago-deployment via Docker please DO NOT ADD this. For others the webserver user (e.g www-data) may need at least read permissions</li>
-</ol>
-</li>
-<li>Recommended to leave the default settings</li>
-</ul>
-<h4 id="allow-hydroponics-to-help-with-any-of-the-following-search-api-indexes">Allow Hydroponics to help with any of the following Search API Indexes</h4>
-<ul>
-<li>This will enable you to determine the different Search API Indexes (holding Nodes/Strawberry Flavors) should Hydroponics contribute to.</li>
-<li>Checkbox for 'Drupal Content to Solr 9' is enabled by default</li>
-<li>If your site has different Search API Indexes, they will be listed here.</li>
-<li>Search Index operations under Hydroponics differ from queue operations. They do not run until indexing everything but will only contribute to indexing until a fixed available memory threshold is reached, continuing on a next Hydroponics wake-up cycle to avoid using resources needed for other tasks.</li>
-</ul>
-<h4 id="number-of-items-to-be-indexed-by-hydroponics-at-the-same-time">Number of items to be indexed by Hydroponics at the same time .</h4>
-<ul>
-<li>Similar to the Search API's "Cron Batch size" config option. Defines how many Search API Items will be sent at once to the backend server.</li>
-<li>Default setting: 10</li>
-<li>Recommended to leave the default setting</li>
-</ul>
-<h4 id="listing-of-queue-workers-and-checkboxes-for-enabling">Listing of Queue Workers and Checkboxes for Enabling</h4>
-<ul>
-<li>You will also see a listing of the same Queue Workers found in the Primary Queue Manager, any items currently enqueued for each, and a checkbox option to enable each to 'Run via Hydroponics Background Processor'</li>
-<li>Recommended to leave the default settings and keep </li>
-</ul>
-<h3 id="strawberry-runners-ami-and-queues">Strawberry Runners, AMI, and Queues</h3>
-<p>Please refer to the <a href="../ami_index/">Archipelago Multi Importer</a> and <a href="../strawberryrunners/">Strawberry Runners</a> documentation for more information about the different ingest, update, deletion, and post-processing operations that relate to the various queues in Archipelago.</p>
+<h1 id="advanced-twig-recipe-cards">Advanced Twig Recipe Cards</h1>
+<p>The Twig Recipe Cards below reference more advanced Metadata transformation, display, or other use cases/needs you may have in your own Archipelago repository. Please review our <a href="../twig_recipe_cards/">Twig Recipe Cards for Common Use Cases</a> before diving into these more advanced Twig recipe cards.</p>
+<h2 id="twig-macros">Twig Macros</h2>
+<p>Archipelago's default Object Description Metadata Display (Twig) template includes 4 different helpful Macros that enable you to use a standard approach for outputting different metadata elements in the same way without the repeating all of the same Twig logic over many lines for every metadata element you want to reference--you can instead call a onetime-defined Macro in a single line in your Twig template for different elements.</p>
+<p>To use any of the following Twig Macros, you <strong>need to first place a defined Macro at the top of the Twig template you are using for your specific output</strong>, then call the Macro in the template below that as needed for particular Metadata Elements.</p>
+<p>When calling the Macro in your Twig template, follow the patterns shown in the "Example Macro Usage for a Metadata Element" below each Main Twig Recipe Card section.</p>
+<h3 id="default-twig-macro-1-simple-html-output">Default Twig Macro 1 - Simple HTML Output</h3>
+<p><strong>Main Twig Recipe Card for Default Twig Macro #1:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">{%</span>- <span class="k">macro</span> <span class="nv">html_output</span><span class="o">(</span><span class="nv">html_title</span><span class="o">,</span> <span class="nv">source_datum</span><span class="o">,</span> <span class="nv">list_wrapper</span> <span class="o">=</span> <span class="s2">&quot;p&quot;</span><span class="o">,</span> <span class="nv">markdown</span> <span class="o">=</span> <span class="kp">false</span><span class="o">)</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">  </span><span class="c">{# -- Macro note: if markdown is selected no wrapper will be used -#}</span><span class="x"> </span>
+<span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">source_datum</span> <span class="k">and</span> <span class="nv">source_datum</span><span class="o">|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">html_title</span><span class="o">|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">&lt;h3&gt;</span><span class="cp">{{</span><span class="nv">html_title</span><span class="cp">}}</span><span class="x">&lt;/h3&gt; </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">source_datum</span> <span class="k">is</span> <span class="nf">iterable</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">source_data</span> <span class="k">in</span> <span class="nv">source_datum</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">markdown</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">          </span><span class="cp">{{</span> <span class="nv">source_data</span><span class="o">|</span><span class="nf">markdown_2_html</span> <span class="cp">}}</span><span class="x"> </span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">else</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">          &lt;</span><span class="cp">{{</span><span class="nv">list_wrapper</span><span class="cp">}}</span><span class="x">&gt;</span><span class="cp">{{</span> <span class="nv">source_data</span><span class="o">|</span><span class="nf">striptags</span> <span class="cp">}}</span><span class="x">&lt;/</span><span class="cp">{{</span><span class="nv">list_wrapper</span><span class="cp">}}</span><span class="x">&gt; </span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">endfor</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">else</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">markdown</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">          </span><span class="cp">{{</span> <span class="nv">source_datum</span><span class="o">|</span><span class="nf">markdown_2_html</span> <span class="cp">}}</span><span class="x"> </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">else</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">          &lt;</span><span class="cp">{{</span><span class="nv">list_wrapper</span><span class="cp">}}</span><span class="x">&gt;</span><span class="cp">{{</span> <span class="nv">source_datum</span><span class="o">|</span><span class="nf">striptags</span> <span class="cp">}}</span><span class="x">&lt;/</span><span class="cp">{{</span><span class="nv">list_wrapper</span><span class="cp">}}</span><span class="x">&gt; </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">  </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="cp">{%</span>- <span class="k">endmacro</span> <span class="nv">html_output</span> -<span class="cp">%}</span><span class="x"> </span>
+</code></pre></div>
+<p>This Macro enables you to define an <code>html_title</code> variable to be used for the heading  display of a metadata element defined as <code>source_datum</code> (notation of <code>data.element</code> when you call the Macro), then checks the metadata element's value for iterability (multiple versus single values), and lastly checks whether the output should be shown using a <code>list_wrapper</code> (defined as the <code>&lt;p&gt;</code> tag in the Macro itself) or using Markdown syntax. </p>
+<p>If you specify "markdown = true" when you call this Macro, no <code>list_wrapper</code> will be used on the display output. The value(s) for the defined element will be passed through the 'markdown_2_html' Twig filter before being displayed. </p>
+<p>If you specify "markdown = "false" when you call this Macro, the value(s) for the defined element will be passed through the '|striptags' Twig filter before being displayed.</p>
+<p><strong>Example Macro Usage for a Metadata Element</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">{{</span> <span class="nv">_self.html_output</span><span class="o">(</span><span class="s2">&quot;Title&quot;</span><span class="o">,</span> <span class="nv">data.label</span><span class="o">)</span> <span class="cp">}}</span>
+</code></pre></div>
+<p>This Twig snippet will use "Title" for the heading  display of the <code>data.label</code> metadata element.</p>
+<p><a class="glightbox" href="../images/Macro1_OutputExample.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Macro 1 Output Example" src="../images/Macro1_OutputExample.png" /></a></p>
+<p><strong>Second Example Macro Usage for a different Metadata Element</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">{{</span> <span class="nv">_self.html_output</span><span class="o">(</span><span class="s1">&#39;Description&#39;</span><span class="o">,</span> <span class="nv">data.description</span><span class="o">,</span> <span class="s1">&#39;&#39;</span><span class="o">,</span> <span class="kp">true</span><span class="o">)</span> <span class="cp">}}</span><span class="x"> </span>
+</code></pre></div>
+<p>This Twig snippet will use "Description" for the heading  display of the <code>data.description</code> metadata element, and will use the 'markdown_2_html' Twig filter against the value(s) contained in element.</p>
+<p><a class="glightbox" href="../images/Macro1b_OutputExample.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Macro 1b Output Example" src="../images/Macro1b_OutputExample.png" /></a></p>
+<h3 id="default-twig-macro-2-simple-html-output-as-list">Default Twig Macro 2 - Simple HTML Output as List</h3>
+<p><strong>Main Twig Recipe Card for Default Twig Macro #2:</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="cp">{%</span>- <span class="k">macro</span> <span class="nv">html_output_list</span><span class="o">(</span><span class="nv">html_title</span><span class="o">,</span> <span class="nv">source_datum</span><span class="o">,</span> <span class="nv">markdown</span> <span class="o">=</span> <span class="kp">false</span><span class="o">)</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">  </span><span class="c">{# -- Macro note: if markdown is selected no wrapper will be used -#}</span><span class="x"> </span>
+<span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">source_datum</span> <span class="k">and</span> <span class="nv">source_datum</span><span class="o">|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">html_title</span><span class="o">|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">&lt;h3&gt;</span><span class="cp">{{</span><span class="nv">html_title</span><span class="cp">}}</span><span class="x">&lt;/h3&gt; </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">  &lt;ul&gt; </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">source_datum</span> <span class="k">is</span> <span class="nf">iterable</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">source_data</span> <span class="k">in</span> <span class="nv">source_datum</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">markdown</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">          &lt;li&gt;</span><span class="cp">{{</span> <span class="nv">source_data</span><span class="o">|</span><span class="nf">markdown_2_html</span> <span class="cp">}}</span><span class="x">&lt;/li&gt; </span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">else</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">          &lt;li&gt;</span><span class="cp">{{</span> <span class="nv">source_data</span> <span class="cp">}}</span><span class="x">&lt;/li&gt; </span>
+<span class="x">        </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">endfor</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">else</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">markdown</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">        &lt;li&gt;</span><span class="cp">{{</span> <span class="nv">source_datum</span><span class="o">|</span><span class="nf">markdown_2_html</span> <span class="cp">}}</span><span class="x">&lt;/li&gt; </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">else</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">        &lt;li&gt;</span><span class="cp">{{</span> <span class="nv">source_datum</span> <span class="cp">}}</span><span class="x">&lt;/li&gt; </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">  &lt;/ul&gt; </span>
+<span class="x">  </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="cp">{%</span>- <span class="k">endmacro</span> <span class="nv">html_output_list</span> -<span class="cp">%}</span><span class="x"> </span>
+</code></pre></div>
+This Macro enables you to define an <code>html_title</code> variable to be used for the heading  display of a metadata element defined as <code>source_datum</code> (notation of <code>data.element</code> when you call the Macro), then checks the metadata element's value for iterability (multiple versus single values), and lastly checks whether the output should display values with or without using Markdown syntax. </p>
+<p>If you specify "markdown = true" when you call this Macro, the value(s) for the defined element will be passed through the 'markdown_2_html' Twig filter before being displayed.</p>
+<p><strong>Example Macro Usage for a Metadata Element</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">{{</span> <span class="nv">_self.html_output_list</span><span class="o">(</span><span class="s1">&#39;Publisher&#39;</span><span class="o">,</span> <span class="nv">data.publisher</span><span class="o">)</span> <span class="cp">}}</span><span class="x"> </span>
+</code></pre></div>
+<p>This Twig snippet will use "Publisher" for the heading  display of the <code>data.publisher</code> metadata element.</p>
+<p><a class="glightbox" href="../images/Macro2_OutputExample.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Macro 2 Output Example" src="../images/Macro2_OutputExample.png" /></a>  </p>
+<h3 id="default-twig-macro-3-html-output-search-non-lod-elements">Default Twig Macro 3 - HTML Output Search (Non-LoD Elements)</h3>
+<p>This Macro requires you to set a variable for a <code>search_facet</code>. See this guide to learn about <a href="../strawberry_key_name_providers/">Strawberry Key Name Providers, Solr Field, and Facet Configuration</a>. You need to complete the full Strawberry Key Name Provider -&gt; Solr Field -&gt; Facet  configuration for a specified metadata element (JSON Key) before you can effectively use this Macro.</p>
+<p><strong>Main Twig Recipe Card for Default Twig Macro #3:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">{%</span>- <span class="k">macro</span> <span class="nv">html_output_search</span><span class="o">(</span><span class="nv">html_title</span><span class="o">,</span> <span class="nv">source_datum</span><span class="o">,</span> <span class="nv">search_facet</span><span class="o">)</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">source_datum</span> <span class="k">and</span> <span class="nv">source_datum</span><span class="o">|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">html_title</span><span class="o">|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">&lt;h3&gt;</span><span class="cp">{{</span><span class="nv">html_title</span><span class="cp">}}</span><span class="x">&lt;/h3&gt; </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">  &lt;ul&gt; </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">source_datum</span> <span class="k">is</span> <span class="nf">iterable</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">source_data</span> <span class="k">in</span> <span class="nv">source_datum</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">      &lt;li&gt;&lt;a href=&quot;/search?search_api_fulltext=&amp;f%5B0%5D=</span><span class="cp">{{</span><span class="nv">search_facet</span><span class="cp">}}</span><span class="x">%3A</span><span class="cp">{{</span> <span class="nv">source_data</span><span class="o">|</span><span class="nf">url_encode</span> <span class="cp">}}</span><span class="x">&quot; target=&quot;_blank&quot; &gt;</span><span class="cp">{{</span> <span class="nv">source_data</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;&lt;/li&gt; </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">endfor</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">else</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">      &lt;li&gt;&lt;a href=&quot;/search?search_api_fulltext=&amp;f%5B0%5D=</span><span class="cp">{{</span><span class="nv">search_facet</span><span class="cp">}}</span><span class="x">%3A</span><span class="cp">{{</span> <span class="nv">source_datum</span><span class="o">|</span><span class="nf">url_encode</span> <span class="cp">}}</span><span class="x">&quot; target=&quot;_blank&quot; &gt;</span><span class="cp">{{</span> <span class="nv">source_datum</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;&lt;/li&gt; </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">  &lt;/ul&gt; </span>
+<span class="x">  </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="cp">{%</span>- <span class="k">endmacro</span> <span class="nv">html_output_search</span> -<span class="cp">%}</span>
+</code></pre></div>
+<p>This Macro enables you to define an <code>html_title</code> variable to be used for the heading display of a metadata element defined as <code>source_datum</code> (notation of <code>data.element</code> when you call the Macro), define another variable of <code>search_facet</code> to use for the internal search facets URL pattern, then checks the metadata element's value for iterability (multiple versus single values).</p>
+<p><strong>Example Macro Usage for a Metadata Element</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">{{</span> <span class="nv">_self.html_output_search</span><span class="o">(</span><span class="s2">&quot;Local Subjects&quot;</span><span class="o">,</span> <span class="nv">data.subjects_local</span><span class="o">,</span> <span class="s2">&quot;descriptive_metadata_subjects&quot;</span><span class="o">)</span> <span class="cp">}}</span>
+</code></pre></div>
+<p>This Twig snippet will use "Local Subjects" for the heading  display of the <code>data.subjects_local</code> metadata element. </p>
+<p><a class="glightbox" href="../images/Macro3_OutputExample.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Macro 3 Output Example" src="../images/Macro3_OutputExample.png" /></a></p>
+<p>The search generated will use the defined facet variable of "descriptive_metadata_subjects" in the URL pattern:
+'~/search?search_api_fulltext=&amp;f%5B0%5D=descriptive_metadata_subjects%3ADogs'</p>
+<h3 id="default-twig-macro-4-html-output-search-lod-elements-with-labels-and-uris">Default Twig Macro 4 - HTML Output Search (LoD Elements with Labels and URIs)</h3>
+<p>This Macro requires you to set a variable for a <code>search_facet</code>. See this guide to learn about <a href="../strawberry_key_name_providers/">Strawberry Key Name Providers, Solr Field, and Facet Configuration</a>. You need to complete the full Strawberry Key Name Provider -&gt; Solr Field -&gt; Facet  configuration for a specified metadata element (JSON Key) before you can effectively use this Macro.</p>
+<p><strong>Main Twig Recipe Card for Default Twig Macro #4:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c">{# Use for LoD elements with URI and label values#}</span><span class="x"> </span>
+<span class="cp">{%</span>- <span class="k">macro</span> <span class="nv">html_output_search_lod</span><span class="o">(</span><span class="nv">html_title</span><span class="o">,</span> <span class="nv">source_datum</span><span class="o">,</span> <span class="nv">search_facet</span><span class="o">)</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">source_datum</span> <span class="k">and</span> <span class="nv">source_datum</span><span class="o">|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">html_title</span><span class="o">|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">&lt;h3&gt;</span><span class="cp">{{</span><span class="nv">html_title</span><span class="cp">}}</span><span class="x">&lt;/h3&gt; </span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">  &lt;ul&gt; </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">source_data</span> <span class="k">in</span> <span class="nv">source_datum</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">      &lt;li&gt;&lt;a href=&quot;/search?search_api_fulltext=&amp;f%5B0%5D=</span><span class="cp">{{</span><span class="nv">search_facet</span><span class="cp">}}</span><span class="x">%3A</span><span class="cp">{{</span> <span class="nv">source_data.label</span><span class="o">|</span><span class="nf">url_encode</span> <span class="cp">}}</span><span class="x">&quot; target=&quot;_blank&quot; &gt;</span><span class="cp">{{</span> <span class="nv">source_data.label</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;&lt;/li&gt; </span>
+<span class="x">      </span><span class="cp">{%</span>- <span class="k">endfor</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="x">  &lt;/ul&gt; </span>
+<span class="x">  </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"> </span>
+<span class="cp">{%</span>- <span class="k">endmacro</span> <span class="nv">html_output_search_lod</span> -<span class="cp">%}</span><span class="x"> </span>
+</code></pre></div>
+<p>This Macro enables you to define an <code>html_title</code> variable to be used for the heading display of a metadata element defined as <code>source_datum</code> (notation of <code>data.element</code> when you call the Macro), define another variable of <code>search_facet</code> to use for the internal search facets URL pattern, then checks the metadata element's value for iterability (multiple versus single values).</p>
+<p><strong>Example Macro Usage for a Metadata Element</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">{{</span> <span class="nv">_self.html_output_search_lod</span><span class="o">(</span><span class="s2">&quot;Library of Congress Subjects&quot;</span><span class="o">,</span> <span class="nv">data.subject_loc</span><span class="o">,</span> <span class="s2">&quot;descriptive_metadata_subjects&quot;</span><span class="o">)</span> <span class="cp">}}</span><span class="x"> </span>
+</code></pre></div>
+<p>This Twig snippet will use "Library of Congress Subjects" for the heading  display of the <code>data.subject_loc</code> metadata element--specifically for the <code>data.subject_loc.label</code> value(s).</p>
+<p><a class="glightbox" href="../images/Macro4_OutputExample.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Macro 4 Output Example" src="../images/Macro4_OutputExample.png" /></a></p>
+<p>The search generated will use the defined facet variable of "descriptive_metadata_subjects" in the URL pattern:
+'~/search?search_api_fulltext=&amp;f%5B0%5D=descriptive_metadata_subjects%3ASuper%20Cool%20Dogs'</p>
+<h2 id="calling-drupal-views-within-twig-templates">Calling Drupal Views Within Twig Templates</h2>
+<p><em>Recipe coming, check back soon!</em></p>
 <hr />
+<p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
 <p>Return to the <a href="../">Archipelago Documentation main page</a>.</p>
 
 
@@ -4327,7 +3919,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 18, 2025 18:48:28 UTC">July 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2025 19:29:59 UTC">August 13, 2025</span>
   </span>
 
     
@@ -4337,7 +3929,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 16, 2025 20:05:36 UTC">July 16, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2025 18:55:50 UTC">August 13, 2025</span>
   </span>
 
     

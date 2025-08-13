@@ -18,7 +18,7 @@
         <link rel="prev" href="../workingtwigs/">
       
       
-        <link rel="next" href="../metadata_display_preview/">
+        <link rel="next" href="../advanced_twig_recipe_cards/">
       
       
       <link rel="icon" href="../images/ArchipelagoLogo-favicon-32x32.png">
@@ -2637,6 +2637,8 @@
       
         
       
+        
+      
     
     
     
@@ -2788,12 +2790,104 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="AMI Ingest Template Adaptations -- Common Use Cases and Twig Recipe Cards:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-case-1-lod-reconciliation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case #1 - LoD Reconciliation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-2-pairing-label-and-uri-columns-in-ami-set-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case # 2 - Pairing Label and URI columns in AMI Set CSV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-3-setting-creators-and-contributors-from-ami-set-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case #3 - Setting Creators and Contributors from AMI Set CSV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-4-more-complex-creators-and-contributors-from-ami-set-csv-using-lod-reconciliation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case #4 - More Complex Creators and Contributors from AMI Set CSV Using LoD Reconciliation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-5-geographic-location-reconciliation-from-coorindates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case # 5 - Geographic Location Reconciliation from Coorindates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-6-normalizing-circa-phrases-in-edtf-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case # 6 - Normalizing 'Circa' Phrases in EDTF Dates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-7-defining-cleaner-filenames-for-downloads-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case # 7 - Defining Cleaner Filenames for Downloads Menu
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced_twig_recipe_cards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Twig Recipe Cards
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3589,6 +3683,75 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="AMI Ingest Template Adaptations -- Common Use Cases and Twig Recipe Cards:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-case-1-lod-reconciliation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case #1 - LoD Reconciliation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-2-pairing-label-and-uri-columns-in-ami-set-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case # 2 - Pairing Label and URI columns in AMI Set CSV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-3-setting-creators-and-contributors-from-ami-set-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case #3 - Setting Creators and Contributors from AMI Set CSV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-4-more-complex-creators-and-contributors-from-ami-set-csv-using-lod-reconciliation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case #4 - More Complex Creators and Contributors from AMI Set CSV Using LoD Reconciliation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-5-geographic-location-reconciliation-from-coorindates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case # 5 - Geographic Location Reconciliation from Coorindates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-6-normalizing-circa-phrases-in-edtf-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case # 6 - Normalizing 'Circa' Phrases in EDTF Dates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-7-defining-cleaner-filenames-for-downloads-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case # 7 - Defining Cleaner Filenames for Downloads Menu
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3654,8 +3817,10 @@
 <p>The Twig Recipe Cards below reference common Metadata transformation, display, or other use cases/needs you may have in your own Archipelago repository.</p>
 <h3 id="getting-started-working-with-twig-in-archipelago">Getting Started Working with Twig in Archipelago</h3>
 <p>We recommend reading through our main <a href="../metadata_display_preview/">Metadata Display Preview</a> and <a href="../metadatatwigs/">Twigs in Archipelago documentation</a> overview guides, and also our <a href="../workingtwigs/">Working with Twig</a> primer before diving into applying any of these recipes in your own Archipelago.</p>
+<p>Please see our <a href="../advanced_twig_recipe_cards/">Advanced Twig Recipe Cards documentation</a> for more complex Twig recipe card examples.</p>
 <h2 id="ami-ingest-template-adaptations-common-use-cases-and-twig-recipe-cards">AMI Ingest Template Adaptations -- Common Use Cases and Twig Recipe Cards:</h2>
-<p><strong>Use Case #1:</strong> I used <a href="../ami_lod_rec/">AMI LoD Reconciliation</a> to reconciliate the values in my AMI Set Source CSV <code>mods_subject_topic</code> column against both LCSH and Wikidata. I would like to map the reconciliated values into the Archipelago default <code>subject_loc</code> and <code>subject_wikidata</code> JSON keys.</p>
+<h3 id="use-case-1-lod-reconciliation">Use Case #1 - LoD Reconciliation</h3>
+<p><strong>Scenario:</strong> I used <a href="../ami_lod_rec/">AMI LoD Reconciliation</a> to reconciliate the values in my AMI Set Source CSV <code>mods_subject_topic</code> column against both LCSH and Wikidata. I would like to map the reconciliated values into the Archipelago default <code>subject_loc</code> and <code>subject_wikidata</code> JSON keys.</p>
 <p><strong>Twig Recipe Card for Use Case #1:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="x">  </span><span class="c">{#- LCSH -#}</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data.mods_subject_topic</span><span class="o">|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> <span class="cp">%}</span>
@@ -3669,7 +3834,8 @@
 <span class="x">      </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x">  </span>
 </code></pre></div>
-<p><strong>Use Case #2:</strong> I have both columns containing a <code>mods_subject_authority_lcsh_topic</code> (labels) and corresponding <code>mods_subject_authority_lcsh_valueuri</code> (URIs) data in my AMI Set Source Data CSV that I would like to pair and map into the Archipelago default <code>subject_loc</code> JSON key.</p>
+<h3 id="use-case-2-pairing-label-and-uri-columns-in-ami-set-csv">Use Case # 2 - Pairing Label and URI columns in AMI Set CSV</h3>
+<p><strong>Scenario:</strong> I have both columns containing a <code>mods_subject_authority_lcsh_topic</code> (labels) and corresponding <code>mods_subject_authority_lcsh_valueuri</code> (URIs) data in my AMI Set Source Data CSV that I would like to pair and map into the Archipelago default <code>subject_loc</code> JSON key.</p>
 <p><strong>Twig Recipe Card for Use Case #2:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;mods_subject_authority_lcsh_topic&#39;</span><span class="o">]</span> <span class="k">is</span> <span class="nf">defined</span> <span class="k">and</span> <span class="k">not</span> <span class="k">empty</span> -<span class="cp">%}</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">subjects</span> <span class="o">=</span> <span class="nv">data</span><span class="o">[</span><span class="s2">&quot;mods_subject_authority_lcsh_topic&quot;</span><span class="o">]</span> <span class="k">is</span> <span class="nf">iterable</span> <span class="o">?</span> <span class="nv">data</span><span class="o">[</span><span class="s2">&quot;mods_subject_authority_lcsh_topic&quot;</span><span class="o">]</span> <span class="o">:</span> <span class="nv">data</span><span class="o">[</span><span class="s2">&quot;mods_subject_authority_lcsh_topic&quot;</span><span class="o">]|</span><span class="nf">split</span><span class="o">(</span><span class="s1">&#39;|@|&#39;</span><span class="o">)</span> <span class="cp">%}</span><span class="x"> </span>
@@ -3686,9 +3852,10 @@
 <span class="x">    ],</span>
 <span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span>
 </code></pre></div>
-<p><strong>Use case #3:</strong> I have <code>dc.creator</code> and <code>dc.contributor</code> columns in my AMI Set Source Data CSV with simple JSON-encoded values (e.g. source column cells contain <code>["Name 1, Name 2"]</code>) that I would like to map to the Archipelago default <code>creator_lod</code> JSON key.</p>
+<h3 id="use-case-3-setting-creators-and-contributors-from-ami-set-csv">Use Case #3 - Setting Creators and Contributors from AMI Set CSV</h3>
+<p><strong>Scenario:</strong> I have <code>dc.creator</code> and <code>dc.contributor</code> columns in my AMI Set Source Data CSV with simple JSON-encoded values (e.g. source column cells contain <code>["Name 1, Name 2"]</code>) that I would like to map to the Archipelago default <code>creator_lod</code> JSON key.</p>
 <p><strong>Twig Recipe Card for Use Case #3:</strong></p>
-<p><div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;dc.creator&#39;</span><span class="o">]|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> <span class="k">or</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;dc.contributor&#39;</span><span class="o">]|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> <span class="cp">%}</span>
+<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;dc.creator&#39;</span><span class="o">]|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> <span class="k">or</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;dc.contributor&#39;</span><span class="o">]|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> <span class="cp">%}</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">total_creators</span> <span class="o">=</span> <span class="o">(</span><span class="nv">data</span><span class="o">[</span><span class="s2">&quot;dc.creator&quot;</span><span class="o">]|</span><span class="nf">length</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="nv">data</span><span class="o">[</span><span class="s2">&quot;dc.contributor&quot;</span><span class="o">]|</span><span class="nf">length</span><span class="o">)</span> <span class="cp">%}</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">current_creator</span> <span class="o">=</span> <span class="m">0</span> <span class="cp">%}</span><span class="x">                </span>
 <span class="x">    &quot;creator_lod&quot;: [</span>
@@ -3719,7 +3886,8 @@
 <span class="x"> ],</span>
 <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x">  </span>
 </code></pre></div>
-<strong>Use Case #4:</strong> I have a mix of different columns containing Creator/Contributor/Other-Role-Types Name values with or without corresponding URI values that I would like to map to the default Archipelago <code>creator_lod</code> JSON key.</p>
+<h3 id="use-case-4-more-complex-creators-and-contributors-from-ami-set-csv-using-lod-reconciliation">Use Case #4 - More Complex Creators and Contributors from AMI Set CSV Using LoD Reconciliation</h3>
+<p><strong>Scenario:</strong> I have a mix of different columns containing Creator/Contributor/Other-Role-Types Name values with or without corresponding URI values that I would like to map to the default Archipelago <code>creator_lod</code> JSON key.</p>
 <p><strong>Twig Recipe Card for Use Case #4:</strong></p>
 <details class="info">
 <summary>Click to view the full Recipe Card</summary>
@@ -3842,7 +4010,8 @@
 <span class="x">    </span><span class="c">{#- END Names from LoD and MODS CSV with/without URIS. -#}</span>
 </code></pre></div>
 </details>
-<p><strong>Use Case #5:</strong> I have geographic location information that I would like to reconciliate against Nominatim and map into the default Archipelago 'geographic_location' key. I have AMI Source Data CSVs which contain values/labels and some which contain coordinates.</p>
+<h3 id="use-case-5-geographic-location-reconciliation-from-coorindates">Use Case # 5 - Geographic Location Reconciliation from Coorindates</h3>
+<p><strong>Scenario:</strong> I have geographic location information that I would like to reconciliate against Nominatim and map into the default Archipelago 'geographic_location' key. I have AMI Source Data CSVs which contain values/labels and some which contain coordinates.</p>
 <p><strong>Twig Recipe Card for Use Case #5 with variation notes:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c">{#- &lt;-- Geographic Info and terms:</span>
 <span class="c">  Includes options for geographic info for:</span>
@@ -3861,7 +4030,8 @@
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 <span class="c">{#- Geographic Info and terms --&gt; #}</span><span class="x">  </span>
 </code></pre></div>
-<p><strong>Use Case #6:</strong> I have date values in a <code>dc.date</code> column that contain instances of 'circa' or 'Circa' where I would like to replace with the EDTF-friendly '~' instead and map to the Archipelago default 'date_created_edtf' JSON key.</p>
+<h3 id="use-case-6-normalizing-circa-phrases-in-edtf-dates">Use Case # 6 - Normalizing 'Circa' Phrases in EDTF Dates</h3>
+<p><strong>Scenario:</strong> I have date values in a <code>dc.date</code> column that contain instances of 'circa' or 'Circa' where I would like to replace with the EDTF-friendly '~' instead and map to the Archipelago default 'date_created_edtf' JSON key.</p>
 <p><strong>Twig Recipe Card for Use Case #6:</strong> </p>
 <div class="highlight"><pre><span></span><code><span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;dc.date&#39;</span><span class="o">]</span> <span class="k">is</span> <span class="nf">defined</span> <span class="cp">%}</span>
 <span class="x">        </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">datecleaned</span> <span class="o">=</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;dc.date&#39;</span><span class="o">]|</span><span class="nf">replace</span><span class="o">({</span><span class="s2">&quot;circa &quot;:&quot;~&quot;</span><span class="o">,</span> <span class="s2">&quot;Circa &quot;:&quot;~&quot;</span><span class="o">})</span> <span class="cp">%}</span>
@@ -3872,6 +4042,23 @@
 <span class="x">        &quot;date_type&quot;: &quot;date_free&quot;</span>
 <span class="x">        },        </span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+</code></pre></div>
+<h3 id="use-case-7-defining-cleaner-filenames-for-downloads-menu">Use Case # 7 - Defining Cleaner Filenames for Downloads Menu</h3>
+<p><strong>Scenario:</strong> I want to render, via HTML, download links for files of type JPEG, using the current ADO Title as base for the file name and the Original Upload Filename as the link.</p>
+<p><strong>Twig Recipe Card for Use Case #7:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="x"> </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;as:image&#39;</span><span class="o">]</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="k">and</span> <span class="nv">node.id</span> <span class="k">is</span> <span class="nf">defined</span> <span class="cp">%}</span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">file_increment</span> <span class="o">=</span> <span class="m">0</span> <span class="cp">%}</span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">singleimage</span> <span class="k">in</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;as:image&#39;</span><span class="o">]</span> <span class="cp">%}</span>
+<span class="x">      </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">singleimage</span><span class="o">[</span><span class="s1">&#39;dr:mimetype&#39;</span><span class="o">]</span> <span class="o">==</span> <span class="s2">&quot;image/jpeg&quot;</span> <span class="cp">%}</span>
+<span class="x">        </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">file_increment</span> <span class="o">=</span> <span class="nv">file_increment</span> <span class="o">+</span> <span class="m">1</span> <span class="cp">%}</span>
+<span class="x">        </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">filename_extension</span> <span class="o">=</span> <span class="nv">singleimage.name</span><span class="o">|</span><span class="nf">default</span><span class="o">(</span><span class="s2">&quot;</span>
+<span class="s2">image.jpeg&quot;</span><span class="o">)|</span><span class="nf">split</span><span class="o">(</span><span class="s2">&quot;.&quot;</span><span class="o">,</span><span class="m">2</span><span class="o">)</span> <span class="cp">%}</span>
+<span class="x">        </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">filename</span> <span class="o">=</span> <span class="nv">node.label</span> <span class="o">~</span> <span class="s2">&quot;_&quot;</span> <span class="o">~</span> <span class="nv">file_increment</span> <span class="cp">%}</span>
+<span class="x">        </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">filename</span> <span class="o">=</span> <span class="o">(</span><span class="nv">filename</span> <span class="o">~</span> <span class="s2">&quot;.&quot;</span> <span class="o">~</span> <span class="nv">filename_extension</span><span class="o">[</span><span class="m">1</span><span class="o">])|</span><span class="nf">url_encode</span> <span class="cp">%}</span>
+<span class="x">      &lt;a download rel=&quot;nofollow&quot; href=&quot;/do/</span><span class="cp">{{</span> <span class="nv">node.uuid.value</span> <span class="cp">}}</span><span class="x">/file/</span><span class="cp">{{</span> <span class="nv">singleimage</span><span class="o">[</span><span class="s1">&#39;dr:uuid&#39;</span><span class="o">]</span> <span class="cp">}}</span><span class="x">/download/</span><span class="cp">{{</span> <span class="nv">filename</span> <span class="cp">}}</span><span class="x">&quot; target=&quot;_blank&quot;&gt;Click to download </span><span class="cp">{{</span> <span class="nv">singleimage.name</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;</span>
+<span class="x">      </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"> </span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 </code></pre></div>
 <p><em>More recipe cards will be added over time. Please see our <a href="../giveortake/">Archipelago Contribution Guide</a> to learn about contributing your own recipe card or other documentation.</em></p>
 <hr />
@@ -3899,7 +4086,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 15, 2023 14:29:42 UTC">August 15, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2025 19:46:52 UTC">August 13, 2025</span>
   </span>
 
     
