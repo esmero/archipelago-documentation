@@ -51,7 +51,7 @@ When calling the Macro in your Twig template, follow the patterns shown in the "
 {%- endmacro html_output -%} 
 ```
 
-This Macro enables you to define an `html_title` variable to be used for the heading (<h3>) display of a metadata element defined as `source_datum` (notation of `data.element` when you call the Macro), then checks the metadata element's value for iterability (multiple versus single values), and lastly checks whether the output should be shown using a `list_wrapper` (defined as <p> in the Macro itself) or using Markdown syntax. 
+This Macro enables you to define an `html_title` variable to be used for the heading  display of a metadata element defined as `source_datum` (notation of `data.element` when you call the Macro), then checks the metadata element's value for iterability (multiple versus single values), and lastly checks whether the output should be shown using a `list_wrapper` (defined as <p> in the Macro itself) or using Markdown syntax. 
 
 If you specify "markdown = true" when you call this Macro, no `list_wrapper` will be used on the display output. The value(s) for the defined element will be passed through the 'markdown_2_html' Twig filter before being displayed. 
 
@@ -63,7 +63,7 @@ If you specify "markdown = "false" when you call this Macro, the value(s) for th
 {{ _self.html_output("Title", data.label) }}
 ```
 
-This Twig snippet will use "Title" for the heading (<h3>) display of the `data.label` metadata element.
+This Twig snippet will use "Title" for the heading  display of the `data.label` metadata element.
 
 ![Macro 1 Output Example](images/Macro1_OutputExample.png)
 
@@ -74,7 +74,7 @@ This Twig snippet will use "Title" for the heading (<h3>) display of the `data.l
 {{ _self.html_output('Description', data.description, '', true) }} 
 ```
 
-This Twig snippet will use "Description" for the heading (<h3>) display of the `data.description` metadata element, and will use the 'markdown_2_html' Twig filter against the value(s) contained in element.
+This Twig snippet will use "Description" for the heading  display of the `data.description` metadata element, and will use the 'markdown_2_html' Twig filter against the value(s) contained in element.
   
 ![Macro 1b Output Example](images/Macro1b_OutputExample.png)
 
@@ -110,7 +110,7 @@ This Twig snippet will use "Description" for the heading (<h3>) display of the `
   {%- endif -%} 
 {%- endmacro html_output_list -%} 
 ```
-This Macro enables you to define an `html_title` variable to be used for the heading (<h3>) display of a metadata element defined as `source_datum` (notation of `data.element` when you call the Macro), then checks the metadata element's value for iterability (multiple versus single values), and lastly checks whether the output should display values with or without using Markdown syntax. 
+This Macro enables you to define an `html_title` variable to be used for the heading  display of a metadata element defined as `source_datum` (notation of `data.element` when you call the Macro), then checks the metadata element's value for iterability (multiple versus single values), and lastly checks whether the output should display values with or without using Markdown syntax. 
   
 If you specify "markdown = true" when you call this Macro, the value(s) for the defined element will be passed through the 'markdown_2_html' Twig filter before being displayed.
 
@@ -120,7 +120,7 @@ If you specify "markdown = true" when you call this Macro, the value(s) for the 
 {{ _self.html_output_list('Publisher', data.publisher) }} 
 ```
 
-This Twig snippet will use "Publisher" for the heading (<h3>) display of the `data.publisher` metadata element.
+This Twig snippet will use "Publisher" for the heading  display of the `data.publisher` metadata element.
   
 ![Macro 2 Output Example](images/Macro2_OutputExample.png)  
   
@@ -150,7 +150,7 @@ This Macro requires you to see a variable for a 'search_facet'. See this guide t
   {%- endif -%} 
 {%- endmacro html_output_search -%} 
 
-This Macro enables you to define an `html_title` variable to be used for the heading (<h3>) display of a defined metadata element, another variable to use for the internal search facets URL pattern, then checks the metadata element's value for iterability (multiple versus single values).
+This Macro enables you to define an `html_title` variable to be used for the heading  display of a defined metadata element, another variable to use for the internal search facets URL pattern, then checks the metadata element's value for iterability (multiple versus single values).
 
 **Example Macro Usage for a Metadata Element**
 
@@ -158,7 +158,7 @@ This Macro enables you to define an `html_title` variable to be used for the hea
 {{ _self.html_output_search("Local Subjects", data.subjects_local, "descriptive_metadata_subjects") }}
 ```
 
-This Twig snippet will use "Local Subjects" for the heading (<h3>) display of the `data.subjects_local` metadata element. 
+This Twig snippet will use "Local Subjects" for the heading  display of the `data.subjects_local` metadata element. 
 
 ![Macro 3 Output Example](images/Macro3_OutputExample.png)
 
@@ -188,7 +188,7 @@ This Macro requires you to see a variable for a 'search_facet'. See this guide t
 {%- endmacro html_output_search_lod -%} 
 ```
 
-This Macro enables you to define an `html_title` variable to be used for the heading (<h3>) display of a defined metadata element, another variable to use for the internal search facets URL pattern, then checks the metadata element's value for iterability (multiple versus single values).
+This Macro enables you to define an `html_title` variable to be used for the heading  display of a defined metadata element, another variable to use for the internal search facets URL pattern, then checks the metadata element's value for iterability (multiple versus single values).
 
 **Example Macro Usage for a Metadata Element**
 
@@ -196,7 +196,7 @@ This Macro enables you to define an `html_title` variable to be used for the hea
 {{ _self.html_output_search_lod("Library of Congress Subjects", data.subject_loc, "descriptive_metadata_subjects") }} 
 ```
 
-This Twig snippet will use "Library of Congress Subjects" for the heading (<h3>) display of the `data.subject_loc` metadata element--specifically for the `data.subject_loc.label` value(s). The search URL generated using the values for the 
+This Twig snippet will use "Library of Congress Subjects" for the heading  display of the `data.subject_loc` metadata element--specifically for the `data.subject_loc.label` value(s). The search URL generated using the values for the 
 
 ![Macro 4 Output Example](images/Macro4_OutputExample.png)
 
