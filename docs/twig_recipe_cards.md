@@ -17,9 +17,13 @@ The Twig Recipe Cards below reference common Metadata transformation, display, o
 
 We recommend reading through our main [Metadata Display Preview](metadata_display_preview.md) and [Twigs in Archipelago documentation](metadatatwigs.md) overview guides, and also our [Working with Twig](workingtwigs.md) primer before diving into applying any of these recipes in your own Archipelago.
 
+Please see our [Advanced Twig Recipe Cards documentation](advanced_twig_recipe_cards.md) for more complex Twig recipe card examples.
+
 ## AMI Ingest Template Adaptations -- Common Use Cases and Twig Recipe Cards:
 
-**Use Case #1:** I used [AMI LoD Reconciliation](ami_lod_rec.md) to reconciliate the values in my AMI Set Source CSV `mods_subject_topic` column against both LCSH and Wikidata. I would like to map the reconciliated values into the Archipelago default `subject_loc` and `subject_wikidata` JSON keys.
+### Use Case #1 - LoD Reconciliation
+
+**Scenario:** I used [AMI LoD Reconciliation](ami_lod_rec.md) to reconciliate the values in my AMI Set Source CSV `mods_subject_topic` column against both LCSH and Wikidata. I would like to map the reconciliated values into the Archipelago default `subject_loc` and `subject_wikidata` JSON keys.
 
 **Twig Recipe Card for Use Case #1:**
 
@@ -37,7 +41,9 @@ We recommend reading through our main [Metadata Display Preview](metadata_displa
     {% endfor %}  
 ```
 
-**Use Case #2:** I have both columns containing a `mods_subject_authority_lcsh_topic` (labels) and corresponding `mods_subject_authority_lcsh_valueuri` (URIs) data in my AMI Set Source Data CSV that I would like to pair and map into the Archipelago default `subject_loc` JSON key.
+### Use Case # 2 - Pairing Label and URI columns in AMI Set CSV
+
+**Scenario:** I have both columns containing a `mods_subject_authority_lcsh_topic` (labels) and corresponding `mods_subject_authority_lcsh_valueuri` (URIs) data in my AMI Set Source Data CSV that I would like to pair and map into the Archipelago default `subject_loc` JSON key.
 
 **Twig Recipe Card for Use Case #2:**
 
@@ -58,7 +64,9 @@ We recommend reading through our main [Metadata Display Preview](metadata_displa
 {%- endif -%}
 ```
 
-**Use case #3:** I have `dc.creator` and `dc.contributor` columns in my AMI Set Source Data CSV with simple JSON-encoded values (e.g. source column cells contain `["Name 1, Name 2"]`) that I would like to map to the Archipelago default `creator_lod` JSON key.
+### Use Case #3 - Setting Creators and Contributors from AMI Set CSV 
+
+**Scenario:** I have `dc.creator` and `dc.contributor` columns in my AMI Set Source Data CSV with simple JSON-encoded values (e.g. source column cells contain `["Name 1, Name 2"]`) that I would like to map to the Archipelago default `creator_lod` JSON key.
 
 **Twig Recipe Card for Use Case #3:**
 
@@ -94,7 +102,10 @@ We recommend reading through our main [Metadata Display Preview](metadata_displa
  ],
 {% endif %}  
 ```
-**Use Case #4:** I have a mix of different columns containing Creator/Contributor/Other-Role-Types Name values with or without corresponding URI values that I would like to map to the default Archipelago `creator_lod` JSON key.
+
+### Use Case #4 - More Complex Creators and Contributors from AMI Set CSV Using LoD Reconciliation
+
+**Scenario:** I have a mix of different columns containing Creator/Contributor/Other-Role-Types Name values with or without corresponding URI values that I would like to map to the default Archipelago `creator_lod` JSON key.
 
 **Twig Recipe Card for Use Case #4:**
 
@@ -220,7 +231,9 @@ We recommend reading through our main [Metadata Display Preview](metadata_displa
         {#- END Names from LoD and MODS CSV with/without URIS. -#}
     ```
 
-**Use Case #5:** I have geographic location information that I would like to reconciliate against Nominatim and map into the default Archipelago 'geographic_location' key. I have AMI Source Data CSVs which contain values/labels and some which contain coordinates.
+### Use Case # 5 - Geographic Location Reconciliation from Coorindates
+
+**Scenario:** I have geographic location information that I would like to reconciliate against Nominatim and map into the default Archipelago 'geographic_location' key. I have AMI Source Data CSVs which contain values/labels and some which contain coordinates.
 
 **Twig Recipe Card for Use Case #5 with variation notes:**
 
@@ -243,7 +256,9 @@ We recommend reading through our main [Metadata Display Preview](metadata_displa
 {#- Geographic Info and terms --> #}  
 ```
 
-**Use Case #6:** I have date values in a `dc.date` column that contain instances of 'circa' or 'Circa' where I would like to replace with the EDTF-friendly '~' instead and map to the Archipelago default 'date_created_edtf' JSON key.
+### Use Case # 6 - Normalizing 'Circa' Phrases in EDTF Dates
+
+**Scenario:** I have date values in a `dc.date` column that contain instances of 'circa' or 'Circa' where I would like to replace with the EDTF-friendly '~' instead and map to the Archipelago default 'date_created_edtf' JSON key.
 
 **Twig Recipe Card for Use Case #6:** 
 
@@ -259,8 +274,30 @@ We recommend reading through our main [Metadata Display Preview](metadata_displa
     {% endif %}
 ```
 
-_More recipe cards will be added over time. Please see our [Archipelago Contribution Guide](giveortake.md) to learn about contributing your own recipe card or other documentation._
+### Use Case # 7 - Defining Cleaner Filenames for Downloads Menu
 
+**Scenario:** I want to render, via HTML, download links for files of type JPEG, using the current ADO Title as base for the file name and the Original Upload Filename as the link.
+
+**Twig Recipe Card for Use Case #7:** 
+
+```twig
+ {% if data['as:image'] is not empty and node.id is defined %}
+    {% set file_increment = 0 %}
+    {% for singleimage in data['as:image'] %}
+      {% if singleimage['dr:mimetype'] == "image/jpeg" %}
+        {% set file_increment = file_increment + 1 %}
+        {% set filename_extension = singleimage.name|default("
+image.jpeg")|split(".",2) %}
+        {% set filename = node.label ~ "_" ~ file_increment %}
+        {% set filename = (filename ~ "." ~ filename_extension[1])|url_encode %}
+      <a download rel="nofollow" href="/do/{{ node.uuid.value }}/file/{{ singleimage['dr:uuid'] }}/download/{{ filename }}" target="_blank">Click to download {{ singleimage.name }}</a>
+      {% endif %}
+    {% endfor %} 
+  {% endif %}
+```
+
+
+_More recipe cards will be added over time. Please see our [Archipelago Contribution Guide](giveortake.md) to learn about contributing your own recipe card or other documentation._
 ___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
