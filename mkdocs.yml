@@ -92,6 +92,7 @@ nav:
         - metadatatwigs.md
         - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
         - Twig Recipe Cards for Common Use Cases: twig_recipe_cards.md
+        - Advanced Twig Recipe Cards: advanced_twig_recipe_cards.md
         - Metadata Display Preview: metadata_display_preview.md
         - Metadata Display Usage: metadata_display_usage.md
       - Annotations: annotations.md
