@@ -87,8 +87,9 @@ While a lot of core needs and use cases are covered with the Twig Templates ship
 **Knowing** (even if you do not plan to) how to edit or create your own **Twig templates** is important.
 
 - This guide covers the Basics of [Working With Twig in Archipelago](workingtwigs.md)
-- This section contains [Full Examples of Common Use Cases](workingtwigs.md#full-examples-for-common-uses-cases)
-- This section covers a [Recommended Workflow](workingtwigs.md#a-recommended-workflow)
+- And this section of the above guide contains [Full Examaples of Common Use Cases](workingtwigs.md#full-examples-for-common-uses-cases)
+- We also have two separate guide pages for [Twig Recipe Cards for Common Use Cases](twig_recipe_cards.md) and more [Advanced Twig Recipe Cards](advanced_twig_recipe_cards.md)
+- This guide covers a [Recommended Workflow](workingtwigs.md#a-recommended-workflow)
 - You may also want learn more about what `format_strawberryfield` can do and what many other possibilities are exposed through our templating system in this guide: [Strawberryfield Formatters](strawberryfield-formatters.md).
 - [Metadata Display Preview](metadata_display_preview.md): use Preview to check your template outputs against Archipelago Digital Objects or AMI Sets.
 - [Metadata Display Usage](metadata_display_usage.md): use the Usage tab to check where a Metadata Display Template is currently being used across your Archipelago.
