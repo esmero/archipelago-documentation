@@ -15,9 +15,9 @@ The Twig Recipe Cards below reference more advanced Metadata transformation, dis
 
 ## Twig Macros
 
-Archipelago's default Object Description Metadata Display (Twig) template includes 4 different helpful Macros that enable you to use a standard approach for outputting different metadata elements in the same way without the repeating all of the same Twig logic for every element.
+Archipelago's default Object Description Metadata Display (Twig) template includes 4 different helpful Macros that enable you to use a standard approach for outputting different metadata elements in the same way without the repeating all of the same Twig logic over many lines for every metadata element you want to reference--you can instead call a onetime-defined Macro in a single line in your Twig template for different elements.
 
-To use any of the following Twig Macros, you **need to first place defined Macro at the top of the Twig template you are using for your Object Description output**, then call the Macro in the template below as needed for particular Metadata Elements.
+To use any of the following Twig Macros, you **need to first place a defined Macro at the top of the Twig template you are using for your specific output**, then call the Macro in the template below that as needed for particular Metadata Elements.
 
 When calling the Macro in your Twig template, follow the patterns shown in the "Example Macro Usage for a Metadata Element" below each Main Twig Recipe Card section.
 
@@ -51,7 +51,7 @@ When calling the Macro in your Twig template, follow the patterns shown in the "
 {%- endmacro html_output -%} 
 ```
 
-This Macro enables you to define an `html_title` variable to be used for the heading  display of a metadata element defined as `source_datum` (notation of `data.element` when you call the Macro), then checks the metadata element's value for iterability (multiple versus single values), and lastly checks whether the output should be shown using a `list_wrapper` (defined as <p> in the Macro itself) or using Markdown syntax. 
+This Macro enables you to define an `html_title` variable to be used for the heading  display of a metadata element defined as `source_datum` (notation of `data.element` when you call the Macro), then checks the metadata element's value for iterability (multiple versus single values), and lastly checks whether the output should be shown using a `list_wrapper` (defined as the `<p>` tag in the Macro itself) or using Markdown syntax. 
 
 If you specify "markdown = true" when you call this Macro, no `list_wrapper` will be used on the display output. The value(s) for the defined element will be passed through the 'markdown_2_html' Twig filter before being displayed. 
 
@@ -127,7 +127,7 @@ This Twig snippet will use "Publisher" for the heading  display of the `data.pub
 
 ### Default Twig Macro 3 - HTML Output Search (Non-LoD Elements)
 
-This Macro requires you to see a variable for a 'search_facet'. See this guide to learn about [Strawberry Key Name Providers, Solr Field, and Facet Configuration](strawberry_key_name_providers.md). You need to complete the full Strawberry Key Name Provider -> Solr Field -> Facet  configuration for a specified metadata element (JSON Key) before you can effectively use this Macro.
+This Macro requires you to set a variable for a `search_facet`. See this guide to learn about [Strawberry Key Name Providers, Solr Field, and Facet Configuration](strawberry_key_name_providers.md). You need to complete the full Strawberry Key Name Provider -> Solr Field -> Facet  configuration for a specified metadata element (JSON Key) before you can effectively use this Macro.
 
 **Main Twig Recipe Card for Default Twig Macro #3:**
 
@@ -148,9 +148,10 @@ This Macro requires you to see a variable for a 'search_facet'. See this guide t
 	  {%- endif -%} 
   </ul> 
   {%- endif -%} 
-{%- endmacro html_output_search -%} 
+{%- endmacro html_output_search -%}
+```
 
-This Macro enables you to define an `html_title` variable to be used for the heading  display of a defined metadata element, another variable to use for the internal search facets URL pattern, then checks the metadata element's value for iterability (multiple versus single values).
+This Macro enables you to define an `html_title` variable to be used for the heading display of a metadata element defined as `source_datum` (notation of `data.element` when you call the Macro), define another variable of `search_facet` to use for the internal search facets URL pattern, then checks the metadata element's value for iterability (multiple versus single values).
 
 **Example Macro Usage for a Metadata Element**
 
@@ -165,10 +166,9 @@ This Twig snippet will use "Local Subjects" for the heading  display of the `dat
 The search generated will use the defined facet variable of "descriptive_metadata_subjects" in the URL pattern:
 '~/search?search_api_fulltext=&f%5B0%5D=descriptive_metadata_subjects%3ADogs'
 
-
 ### Default Twig Macro 4 - HTML Output Search (LoD Elements with Labels and URIs) 
 
-This Macro requires you to see a variable for a 'search_facet'. See this guide to learn about [Strawberry Key Name Providers, Solr Field, and Facet Configuration](strawberry_key_name_providers.md). You need to complete the full Strawberry Key Name Provider -> Solr Field -> Facet  configuration for a specified metadata element (JSON Key) before you can effectively use this Macro.
+This Macro requires you to set a variable for a `search_facet`. See this guide to learn about [Strawberry Key Name Providers, Solr Field, and Facet Configuration](strawberry_key_name_providers.md). You need to complete the full Strawberry Key Name Provider -> Solr Field -> Facet  configuration for a specified metadata element (JSON Key) before you can effectively use this Macro.
 
 **Main Twig Recipe Card for Default Twig Macro #4:**
 
@@ -188,7 +188,7 @@ This Macro requires you to see a variable for a 'search_facet'. See this guide t
 {%- endmacro html_output_search_lod -%} 
 ```
 
-This Macro enables you to define an `html_title` variable to be used for the heading  display of a defined metadata element, another variable to use for the internal search facets URL pattern, then checks the metadata element's value for iterability (multiple versus single values).
+This Macro enables you to define an `html_title` variable to be used for the heading display of a metadata element defined as `source_datum` (notation of `data.element` when you call the Macro), define another variable of `search_facet` to use for the internal search facets URL pattern, then checks the metadata element's value for iterability (multiple versus single values).
 
 **Example Macro Usage for a Metadata Element**
 
@@ -196,13 +196,16 @@ This Macro enables you to define an `html_title` variable to be used for the hea
 {{ _self.html_output_search_lod("Library of Congress Subjects", data.subject_loc, "descriptive_metadata_subjects") }} 
 ```
 
-This Twig snippet will use "Library of Congress Subjects" for the heading  display of the `data.subject_loc` metadata element--specifically for the `data.subject_loc.label` value(s). The search URL generated using the values for the 
+This Twig snippet will use "Library of Congress Subjects" for the heading  display of the `data.subject_loc` metadata element--specifically for the `data.subject_loc.label` value(s).
 
 ![Macro 4 Output Example](images/Macro4_OutputExample.png)
 
 The search generated will use the defined facet variable of "descriptive_metadata_subjects" in the URL pattern:
 '~/search?search_api_fulltext=&f%5B0%5D=descriptive_metadata_subjects%3ASuper%20Cool%20Dogs'
 
+## Calling Drupal Views Within Twig Templates
+
+_Recipe coming, check back soon!_
 ___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
