@@ -302,6 +302,7 @@ image.jpeg")|split(".",2) %}
 
 **Twig Recipe Card for Use Case #8:** 
 _Notes:_
+
 * The following Recipe card also uses a Macro, see our [Advanced Twig Recipe Cards doc](advanced_twig_recipe_cards.md) for more information about Macros.
 * If you want to show an element for all logged in users, simply remove `and "administrator" in user_roles` from the `if` statement.
 
