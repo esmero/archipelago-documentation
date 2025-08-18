@@ -231,7 +231,7 @@ Please see our [Advanced Twig Recipe Cards documentation](advanced_twig_recipe_c
         {#- END Names from LoD and MODS CSV with/without URIS. -#}
     ```
 
-### Use Case # 5 - Geographic Location Reconciliation from Coorindates
+### Use Case #5 - Geographic Location Reconciliation from Coorindates
 
 **Scenario:** I have geographic location information that I would like to reconciliate against Nominatim and map into the default Archipelago 'geographic_location' key. I have AMI Source Data CSVs which contain values/labels and some which contain coordinates.
 
@@ -256,7 +256,7 @@ Please see our [Advanced Twig Recipe Cards documentation](advanced_twig_recipe_c
 {#- Geographic Info and terms --> #}  
 ```
 
-### Use Case # 6 - Normalizing 'Circa' Phrases in EDTF Dates
+### Use Case #6 - Normalizing 'Circa' Phrases in EDTF Dates
 
 **Scenario:** I have date values in a `dc.date` column that contain instances of 'circa' or 'Circa' where I would like to replace with the EDTF-friendly '~' instead and map to the Archipelago default 'date_created_edtf' JSON key.
 
@@ -274,7 +274,7 @@ Please see our [Advanced Twig Recipe Cards documentation](advanced_twig_recipe_c
     {% endif %}
 ```
 
-### Use Case # 7 - Defining Cleaner Filenames for Downloads Menu
+### Use Case #7 - Defining Cleaner Filenames for Downloads Menu
 
 **Scenario:** I want to render, via HTML, download links for files of type JPEG, using the current ADO Title as base for the file name and the Original Upload Filename as the link.
 
@@ -296,6 +296,19 @@ image.jpeg")|split(".",2) %}
   {% endif %}
 ```
 
+### Use Case #8 - Showing an Element for Particular Users 
+
+**Scenario:** I want to show the Local Identifier metadata element for logged in Administrator users only. 
+
+**Twig Recipe Card for Use Case #8:** 
+
+```twig
+{% if logged_in and "administrator" in user_roles %}
+<h3>Administrative Information</h3> 
+<p><i>This information is only being display for Logged In Users.</i></p> 
+{{ _self.html_output('Local Identifier', data.local_identifier, 'p') }} 
+{% endif %}
+```
 
 _More recipe cards will be added over time. Please see our [Archipelago Contribution Guide](giveortake.md) to learn about contributing your own recipe card or other documentation._
 ___
