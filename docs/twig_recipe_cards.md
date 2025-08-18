@@ -301,6 +301,9 @@ image.jpeg")|split(".",2) %}
 **Scenario:** I want to show the Local Identifier metadata element for logged in Administrator users only. 
 
 **Twig Recipe Card for Use Case #8:** 
+_Notes:_
+* The following Recipe card also uses a Macro, see our [Advanced Twig Recipe Cards doc](advanced_twig_recipe_cards.md) for more information about Macros.
+* If you want to show an element for all logged in users, simply remove `and "administrator" in user_roles` from the `if` statement.
 
 ```twig
 {% if logged_in and "administrator" in user_roles %}
@@ -309,6 +312,7 @@ image.jpeg")|split(".",2) %}
 {{ _self.html_output('Local Identifier', data.local_identifier, 'p') }} 
 {% endif %}
 ```
+
 
 _More recipe cards will be added over time. Please see our [Archipelago Contribution Guide](giveortake.md) to learn about contributing your own recipe card or other documentation._
 ___
