@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://docs.archipelago.nyc/1.5.0/createdisplaymodes/">
       
       
-        <link rel="prev" href="../strawberryfield-formatters/">
+        <link rel="prev" href="../webformsasinput/">
       
       
-        <link rel="next" href="../webformsasinput/">
+        <link rel="next" href="../iiif_server_settings/">
       
       
       <link rel="icon" href="../images/ArchipelagoLogo-favicon-32x32.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Creating Display Modes - Archipelago Documentation</title>
+        <title>Creating Display/View Modes for Archipelago Digital Objects - Archipelago Documentation</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creating-display-modes-for-archipelago-digital-objects" class="md-skip">
+        <a href="#creating-displayview-modes-for-archipelago-digital-objects" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creating Display Modes
+              Creating Display/View Modes for Archipelago Digital Objects
             
           </span>
         </div>
@@ -1528,6 +1528,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../webformsasinput/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Primer on Display Modes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1581,15 +1604,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adding-a-new-form-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding a new Form Mode
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#adding-a-new-view-mode" class="md-nav__link">
     <span class="md-ellipsis">
       Adding a new View Mode
@@ -1602,29 +1616,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../webformsasinput/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Primer on Display Modes
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2370,6 +2361,8 @@
       
         
       
+        
+      
     
     
     
@@ -2439,6 +2432,29 @@
   
   <span class="md-ellipsis">
     Primer on Display Modes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creatingformmodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creating Form Modes
     
   </span>
   
@@ -3597,15 +3613,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adding-a-new-form-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding a new Form Mode
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#adding-a-new-view-mode" class="md-nav__link">
     <span class="md-ellipsis">
       Adding a new View Mode
@@ -3628,57 +3635,35 @@
                 
                   
 
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <span class="md-tag">Display Mode</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">Manage Display</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">View Mode</span>
+      
+    
+  </nav>
+
 
   
   
 
 
-<h1 id="creating-display-modes-for-archipelago-digital-objects">Creating Display Modes for Archipelago Digital Objects</h1>
+<h1 id="creating-displayview-modes-for-archipelago-digital-objects">Creating Display/View Modes for Archipelago Digital Objects</h1>
 <p>We recommend checking out our <a href="../webformsasinput/">primer on Display Modes</a> for a broader overview on Form Modes and View Modes for Archipelago Digital Objects (ADOs).</p>
-<p>But how do you create and enable these Display Modes in the first place? Let's find out.</p>
-<h2 id="adding-a-new-form-mode">Adding a new Form Mode</h2>
-<p>Why would you want to create a new form mode? One common reason is to create different data entry experiences for users with different roles. Let's create an example form mode called "Student Webform" --  we can imagine a deployment where Students need a simplified form for ADO creation. We are going to create a form mode, enable it for Digital Objects, and give it some custom settings that differentiate it from existing form modes.</p>
-<ol>
-<li>
-<p>Navigate to <code>yoursite/admin/structure/display-modes</code></p>
-<p><a class="glightbox" href="../images/display-modes.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Display modes" src="../images/display-modes.jpg" /></a></p>
-</li>
-<li>
-<p>Click on Form modes. This image shows the basic Form Modes shipped with Archipelago</p>
-<p><a class="glightbox" href="../images/form-modes-default.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Form modes" src="../images/form-modes-default.png" /></a></p>
-</li>
-<li>
-<p>Click the "Add Form mode" button at the top of the page. Then select the "Content" entity type from the list. In this example, we ultimately want the form mode to be applied to Archipelago Digital Objects, which is a Content entity type.</p>
-<p><a class="glightbox" href="../images/form-mode-entity-type.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Form mode entity type" src="../images/form-mode-entity-type.png" /></a></p>
-</li>
-<li>
-<p>Enter the name of your Form Mode and hit save. Here we are entering "Student Webform".</p>
-<p><a class="glightbox" href="../images/form-mode-name.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Form mode name" src="../images/form-mode-name.png" /></a></p>
-</li>
-<li>
-<p>Great. Now you will see your new Form mode in the list! Let's put it to use.</p>
-<p><a class="glightbox" href="../images/form-mode-saved.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Form mode saved" src="../images/form-mode-saved.png" /></a></p>
-</li>
-<li>
-<p>Head to <code>yoursite/admin/structure/types/manage/digital_object</code> and click the "Manage Form Display" tab. As mentioned above, in this example we want to add a new Form Mode for ADOs, so we are dealing with the Digital Object content type. Scroll to the bottom of this page and look for the "Custom Display Settings" area, which is collapsed by default. Expand it, and you should see this.</p>
-<p><a class="glightbox" href="../images/form-mode-enable.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Form mode enable" src="../images/form-mode-enable.png" /></a></p>
-</li>
-<li>
-<p>Enable "Student Webform" and hit save! Now scroll back up the page. You'll see it enabled like so.</p>
-<p><a class="glightbox" href="../images/form-mode-enable-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Form mode enable" src="../images/form-mode-enable-2.png" /></a></p>
-</li>
-<li>
-<p>Now select our new "Student Webform" tab. From here, you have many options and can configure input fields as you see fit! To finish out our specific example though, let's finally add our Student Webform to the display. Click on the settings gear icon next to the Descriptive Metadata field.</p>
-<p><a class="glightbox" href="../images/form-mode-add-webform.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Form mode enable" src="../images/form-mode-add-webform.png" /></a></p>
-<p>You'll see that the default webform named "Descriptive Metadata" is entered. To add custom content to this Field Widget, start typing in the autocomplete. This example assumes you've created a webform called <code>Student Webform</code> in <code>yoursite/admin/structure/webform</code>. For info on how to create a new Webform with proper settings, see our <a href="../webformsasinput/">Webforms as input guide</a>.</p>
-</li>
-<li>
-<p>After you've selected your "Student Webform" in the Field Widget setting, hit Update, and then Save at the bottom of the page.</p>
-</li>
-</ol>
-<p>All done! So let's recap. We created a new form mode. We added this form mode to the Manage Form Display &gt; Custom Display Settings options for Digital Objects. And finally we configured the Field Widget for Descriptive Metadata in our new Form Mode to use a new Webform. This last step is arbitrary to this example. We could have enabled or disabled fields, or changed other field widget settings depending on our needs. But configuring different Webforms as Field Widgets for Descriptive Metadata is a common use case in Archipelago.</p>
-<hr />
-<p>Thanks for reading this far! But there is more. We might want to display, in addition to ingest, our ADOs in custom ways. The process for creating new View Modes (the other type of Display Mode) is quite similar to creating new Form Modes, but let's walk through it with another example case.</p>
 <h2 id="adding-a-new-view-mode">Adding a new View Mode</h2>
 <p>Why would you want to create a new View Mode? Maybe there is a new type of media you are attaching to ADOs that you want to display using the proper player or tool. Or maybe you want to simplify the ADO display, removing fields from the display page. In this example let's create a new View Mode for ADOs that adds some fields to the display to show the Author and Published date of the object.</p>
 <ol>
@@ -3724,7 +3709,7 @@
 </li>
 </ol>
 <p>All done! This was quite a simple example, but now you are aware of how to customize your own ADO display. It can only get more complex and exciting from here.</p>
-<p>Let's recap. We created a new View Mode. We enabled this View Mode in Manage Display &gt; Custom Display Settings for Digital Objects. We enabled new fields (in this case, just for instruction, the Author and Post date fields) to make our new View Mode unique, and learned about Disabled fields in the process. We selected our new View Mode in the Display Settings area (slightly confusing wording because yes, this is a View Mode, subset of Display Mode) during ADO creation (for more on creating new objects, see <a href="../firstobject/">this guide</a>).</p>
+<p>Let's recap. We created a new View Mode. We enabled this View Mode in Manage Display &gt; Custom Display Settings for Digital Objects. We enabled new fields (in this case, just for instruction, the Author and Post date fields) to make our new View Mode unique, and learned about Disabled fields in the process. We selected our new View Mode in the Display Settings area (slightly confusing wording because yes, this is a View Mode, subset of Display Mode) during ADO creation. For more on creating new digital objects, see <a href="../firstobject/">this guide</a>).</p>
 <hr />
 <p>Thank you for reading! Please contact us on our <a href="https://groups.google.com/forum/#!forum/archipelago-commons">Archipelago Commons Google Group</a> with any questions or feedback.</p>
 <p>Return to the <a href="../">Archipelago Documentation main page</a>.</p>
@@ -3750,7 +3735,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2021 18:17:06 UTC">October 18, 2021</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 20, 2025 15:02:45 UTC">August 20, 2025</span>
   </span>
 
     
