@@ -29,7 +29,7 @@ The main difference, other than their purpose (Output v/s Input) is that, on Vie
 
 **Please note that this guides features some older screenshots using earlier versions of Archipelago/Drupal Adminsitrative Theming. Please pardon any jumps between themes.*
 
-So, resuming, this is what lives under the Concept of a "Display Mode"...
+So, resuming, this is what lives under the Concept of a "Display Mode" or "View Mode"...
 
 ## View Mode
 
