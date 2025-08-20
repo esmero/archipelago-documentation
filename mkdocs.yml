@@ -50,8 +50,8 @@ nav:
         - Twig Modules Configuration: generalqa_twig_modules_configuration.md
     - Site Administration & Configuration:
       - Strawberryfield Formatters: strawberryfield-formatters.md
-      - Creating Display Modes: createdisplaymodes.md
       - Primer on Display Modes: webformsasinput.md
+      - Creating Display Modes: createdisplaymodes.md
       - IIIF Server Settings: iiif_server_settings.md
       - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
       - Queues Explainer: queuesexplainer.md
@@ -80,6 +80,7 @@ nav:
       - Webforms in Archipelago:
         - webforms.md
         - How to Create a Webform as an Input Method: webformsasinput.md
+        - Creating Form Modes: creatingformmodes.md
         - Modifying allowable file extensions: modifyingfileextensionsinwebform.md
         - Archipelago Custom Webform Elements: customwebformelements.md
         - Using Archipelago's Webform LoD from CSV attached to an ADO suggest: webformLoDfromCSV.md

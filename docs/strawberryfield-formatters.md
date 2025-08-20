@@ -1,8 +1,40 @@
+---
+title: Strawberryfield Formatters
+tags:
+  - Strawberryfield Formatters
+  - Display Formatters
+---
+
 # Strawberryfield Formatters
 
-This documentation will give a brief overview of Archipelago's [Strawberryfield Formatters](https://github.com/esmero/format_strawberryfield) and how they work using the default View mode `Digital Object Full View` as an example.
+Archipelago's [Strawberryfield Formatters](https://github.com/esmero/format_strawberryfield) provide specialty media and other data processing formatters for StrawberryField (JSON) fields. These speciality Formatters power different parts of the display outputs for Archipelago Digital Objects (ADOs).
 
-## At a glance
+## Archipelago Provided Formatters
+
+The following Strawberryfield Formatters are shipped and configured with corresponding [View Modes](/webformsasinput.md#view-mode) in Archipelago.
+
+1. Strawberry Field 3D Model Formatter
+2. Strawberry Field Audio Formatter
+3. Strawberry Field Simple Citation Formatter
+4. Strawberry Field Simple Image Formatter using IlIF
+5. Strawberry Field Map Formatter using the Leaflet and GeoJson*
+6. Strawberry Field Media Formatter using OpenSeadragon for IIIF media
+7. Strawberry Field Formatter for Custom Metadata Templates
+8. Strawberry Field Media Formatter using the Mirador * IIIF Viewer plugin
+9. Strawberry Field Paged Formatter using IABook Readerplugin
+10. Strawberry Field Panorama Formatter using Pannellum * and IIIF
+11. Strawberry Field PDF Formatter for IIIF served PDFs
+12. Strawberry Field Media Formatter using the Universal (UV) * IIIF Viewer plugin
+13. Strawberry Field Video Formatter
+14. Strawberry Warc Formatter using replay.web embedded player
+15. Strawberry Default Formatter
+16. Strawberry Field Pretty Formatter
+
+## Overview and Example Walkthrough
+
+The rest of this documentation guide will provide an overview of Archipelago's Strawberryfield Formatters and how they work using the default View Mode `Digital Object Full View` as an example.
+
+### At a glance
 
 When taking a look at your [First Digital Object](firstobject.md) note that multiple formatters are working together to create this `Display` ( or `View mode`). Since "*My First Digital Object*" is a `Photograph` the `Display` being used is `Digital Object Full View` which, by default, uses formatters to:
 
@@ -12,7 +44,7 @@ When taking a look at your [First Digital Object](firstobject.md) note that mult
 
 ![Image Viewer](images/strawberryfield-formatters/01_my-first-digital-object.jpg)
 
-## In Greater Detail
+### In Greater Detail
 
 When editing an ADO, at the top of the Webform page there is a tab titled `Manage display` which will take us to where all the Formatters live. _Take note that the `DISPLAY SETTINGS` shown in the screenshot below are using the **Default** View mode._
 
@@ -20,37 +52,15 @@ When editing an ADO, at the top of the Webform page there is a tab titled `Manag
 
 Once the page loads the `Default` View mode is automatically selected. However, because we are editing an object with the `Media type` `Photograph`, we need to edit the View mode `Digital Object Full View` since it is the *Default* View mode for this `Media type`.
 
-#### How to find and configure which View mode is Default per Media type
+### ADO Type to View Mode Mapping Form
 
-The **ADO Type to View Mode Mapping** page tells the ADOs which View mode to use by default per Media type. You can find the ADO Type to View Mode Mapping Form at `~yoursite/admin/config/archipelago/viewmode_mapping`
+The **ADO Type to View Mode Mapping** form tells the ADOs which View mode to use by default per Media `type`. You can find the ADO Type to View Mode Mapping Form at `~yoursite/admin/config/archipelago/viewmode_mapping`
 
 ![ADO Type to View Mode Mapping Form](images/ado-type-to-view-mode-mapping.png)
 
-??? info "Strawberryfield Formatters Shipped and Configured with Archipelago"
+You can see the full list of [Default View Modes included in Archipelago here](/webformsasinput.md#view-mode).
 
-    1. Default
-    2. Collection listing
-    3. Digital Object Full View
-    4. Digital Object Image Only for Carousel
-    5. Digital Object with 3D Viewer
-    6. Digital Object with Audio Player
-    7. Digital Object with Book Reader
-    8. Digital Object with Mirador Viewer
-    9. Digital Object with PDF Viewer
-    10. Digital Object with Pannellum Panorama
-    11. Digital Object with Video Player
-    12. Digital Object with Replay.web WARC Replay.web Widget
-    13. Digital Object with thumbnail and abstract
-    14. Digital Object with thumbnail for Grid
-    _For Digital Object Collections/Compound Objects/CreativeWorkSeries_
-    15. Digital Object Collection with Mirador Viewer
-    16. Digital Object Creative Work Series with Mirador Viewer
-    
-
-??? info "Default View Modes"
-
-    You can see the full list of [Default View Modes included in Archipelago here](/webformsasinput.md#view-mode), and you can access your Archipelago's ADO Type to View Mode Mapping at `~yoursite/admin/config/archipelago/viewmode_mapping`.
-    
+### Reviewing a View Mode in Depth
 
 ![Selecting Digital Object Full View](images/strawberryfield-formatters/03_default-managedisplay.jpg)
 
@@ -89,3 +99,4 @@ ___
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
 Return to the [Archipelago Documentation main page](index.md).
+  
