@@ -11,7 +11,7 @@ Archipelago's [Strawberryfield Formatters](https://github.com/esmero/format_stra
 
 ## Archipelago Provided Formatters
 
-The following Strawberryfield Formatters are shipped and configured with corresponding [View Modes](/webformsasinput.md#view-mode) in Archipelago.
+The following Strawberryfield Formatters are shipped and configured with corresponding [View Modes](/webformsasinput/#default-view-modes-bundled-in-archipelago) in Archipelago.
 
 1. Strawberry Field 3D Model Formatter
 2. Strawberry Field Audio Formatter
