@@ -11,7 +11,7 @@ Archipelago's [Strawberryfield Formatters](https://github.com/esmero/format_stra
 
 ## Archipelago Provided Formatters
 
-The following Strawberryfield Formatters are shipped and configured with corresponding [View Modes](/webformsasinput/#default-view-modes-bundled-in-archipelago) in Archipelago.
+The following Strawberryfield Formatters are shipped and configured with corresponding [View Modes](/webformsasinput#default-view-modes-bundled-in-archipelago) in Archipelago.
 
 1. Strawberry Field 3D Model Formatter
 2. Strawberry Field Audio Formatter
@@ -58,7 +58,7 @@ The **ADO Type to View Mode Mapping** form tells the ADOs which View mode to use
 
 ![ADO Type to View Mode Mapping Form](images/ado-type-to-view-mode-mapping.png)
 
-You can see the full list of [Default View Modes included in Archipelago here](/webformsasinput.md#view-mode).
+You can see the full list of [Default View Modes included in Archipelago here](/webformsasinput#default-view-modes-bundled-in-archipelago).
 
 ### Reviewing a View Mode in Depth
 
