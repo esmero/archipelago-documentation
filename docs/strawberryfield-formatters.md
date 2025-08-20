@@ -11,7 +11,7 @@ Archipelago's [Strawberryfield Formatters](https://github.com/esmero/format_stra
 
 ## Archipelago Provided Formatters
 
-The following Strawberryfield Formatters are shipped and configured with corresponding View Modes (more details below) in Archipelago.
+The following Strawberryfield Formatters are shipped and configured with corresponding [View Modes](/webformsasinput.md#view-mode) in Archipelago.
 
 1. Strawberry Field 3D Model Formatter
 2. Strawberry Field Audio Formatter
@@ -52,9 +52,9 @@ When editing an ADO, at the top of the Webform page there is a tab titled `Manag
 
 Once the page loads the `Default` View mode is automatically selected. However, because we are editing an object with the `Media type` `Photograph`, we need to edit the View mode `Digital Object Full View` since it is the *Default* View mode for this `Media type`.
 
-### How to find and configure which View mode is Default per Media type
+### ADO Type to View Mode Mapping Form
 
-The **ADO Type to View Mode Mapping** page tells the ADOs which View mode to use by default per Media type. You can find the ADO Type to View Mode Mapping Form at `~yoursite/admin/config/archipelago/viewmode_mapping`
+The **ADO Type to View Mode Mapping** form tells the ADOs which View mode to use by default per Media `type`. You can find the ADO Type to View Mode Mapping Form at `~yoursite/admin/config/archipelago/viewmode_mapping`
 
 ![ADO Type to View Mode Mapping Form](images/ado-type-to-view-mode-mapping.png)
 
