@@ -12,7 +12,7 @@ tags:
 
 # Reviewing and adjusting the `text` Post-Processor operations 
 
-As stated on the [Strawberry Runners overview page](docs/strawberryrunners.md), the `text` action extracts textual values from Files and sends the output to the Search API.
+As stated on the [Strawberry Runners overview page](strawberryrunners.md), the `text` action extracts textual values from Files and sends the output to the Search API.
 
 # Text Settings
 
