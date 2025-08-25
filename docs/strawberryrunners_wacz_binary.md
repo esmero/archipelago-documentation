@@ -11,7 +11,7 @@ tags:
 
 # Reviewing and adjusting the `warc_to_wacz` Post-Processor operation
 
-As stated on the [Strawberry Runners overview page](docs/strawberryrunners.md), the `warc_to_wacz` action uses the 'Post processor that uses a System Binary to process * files' operations.
+As stated on the [Strawberry Runners overview page](strawberryrunners.md), the `warc_to_wacz` action uses the 'Post processor that uses a System Binary to process * files' operations.
 
 ## Wacz Page Extractor Settings
 
