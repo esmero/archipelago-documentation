@@ -8,17 +8,17 @@ tags:
 
 # GitHub Workflow
 
-1. Find an issue to resolve or create a new issue [here](https://github.com/esmero/archipelago-documentation/issues).
-2. [Fork the documentation repo](https://github.com/esmero/archipelago-documentation). If you're not familiar with forking [see this guide](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
-3. Create an issue branch in your forked repo. For example, if the issue you're resolving is ISSUE-100:
+1. First, either open a new Issue in the [Archipelago Documentation Github Repo](https://github.com/esmero/archipelago-documentation) describing the new documentation you would like to contribute, or reply to an existing Issue that you would like to address. Tag `@alliomeria` to request feedback. Since our team is consistently working on new and updating existing documentation, please wait for review and guidance before proceeding with creating the new documentation you described in your new Issue or comments on an existing documentation Issue.
+3. [Fork the documentation repo](https://github.com/esmero/archipelago-documentation). If you're not familiar with forking [see this guide](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+4. Create an issue branch in your forked repo. For example, if the issue you're resolving is ISSUE-100:
    ```shell
    git checkout -b ISSUE-100
    ```
-4. Copy this template to create a new piece of documentation:
+5. Copy this template to create a new piece of documentation:
    ```shell
    cp docs/documentation_template.md docs/new_documentation.md
    ```
-5. Make your changes to the copied markdown file.
+6. Make your changes to the copied markdown file.
 5. If this is new documentation add it to the `nav` section of the `mkdocs.yml` configuration file at the root of the repo. For example:
    ```yaml hl_lines="7"
    nav:
@@ -67,3 +67,10 @@ tags:
     ```
 11. [Create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) and link to the issue by tagging it, e.g. `Resolves #100`.
 
+12. Please tag `@alliomeria` when you are ready for your contributed documentation to be reviewed. Our team will review and provide feedback, and let you know when your contributed documentation is merged. Thank you in advance for your time and efforts to create documentation for Archipelago's community!
+
+___
+
+Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
+
+Return to the [Archipelago Documentation main page](index.md).
