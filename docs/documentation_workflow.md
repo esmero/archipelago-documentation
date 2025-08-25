@@ -9,17 +9,17 @@ tags:
 # GitHub Workflow
 
 1. First, either open a new Issue in the [Archipelago Documentation Github Repo](https://github.com/esmero/archipelago-documentation) describing the new documentation you would like to contribute, or reply to an existing Issue that you would like to address. Tag `@alliomeria` to request feedback. Since our team is consistently working on new and updating existing documentation, please wait for review and guidance before proceeding with creating the new documentation you described in your new Issue or comments on an existing documentation Issue.
-3. [Fork the documentation repo](https://github.com/esmero/archipelago-documentation). If you're not familiar with forking [see this guide](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
-4. Create an issue branch in your forked repo. For example, if the issue you're resolving is ISSUE-100:
+2. [Fork the documentation repo](https://github.com/esmero/archipelago-documentation). If you're not familiar with forking [see this guide](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+3. Create an issue branch in your forked repo. For example, if the issue you're resolving is ISSUE-100:
    ```shell
    git checkout -b ISSUE-100
    ```
-5. Copy this template to create a new piece of documentation:
+4. Copy this template to create a new piece of documentation:
    ```shell
    cp docs/documentation_template.md docs/new_documentation.md
    ```
-6. Make your changes to the copied markdown file.
-5. If this is new documentation add it to the `nav` section of the `mkdocs.yml` configuration file at the root of the repo. For example:
+5. Make your changes to the copied markdown file.
+6. If this is new documentation add it to the `nav` section of the `mkdocs.yml` configuration file at the root of the repo. For example:
    ```yaml hl_lines="7"
    nav:
      - Home: index.md
@@ -38,13 +38,13 @@ tags:
          - Adding Demo Archipelago Digital Objects (ADOs) to your Repository: archipelago-deployment-democontent.md
    ...
    ```
-6. To view the changes locally, first install the Python libraries using the Python package manager pip:
+7. To view the changes locally, first install the Python libraries using the Python package manager pip:
    ```shell
    pip install mkdocs-material mike git+https://github.com/jldiaz/mkdocs-plugin-tags.git mkdocs-git-revision-date-localized-plugin mkdocs-glightbox
    ```
    You may need to install Python on your machine. [Download Python](https://www.python.org/downloads/) or use your favorite operating system package manager such as Homebrew. 
 
-7. Now you can build the site locally, e.g. for the documentation using the 1.4.0 branch:
+8. Now you can build the site locally, e.g. for the documentation using the 1.4.0 branch:
    ```shell
    mike deploy 1.4.0
    mike set-default 1.4.0
@@ -54,20 +54,20 @@ tags:
    mike deploy ISSUE-129
    mike set-default ISSUE-129
    ```
-8. Start the web server:
+9. Start the web server:
    ```shell
    mike serve
    ```
-9. Check the results in your browser by going to: <http://localhost:8000>
-10. If everything looks good, you can push to your forked repo issue branch:
+10. Check the results in your browser by going to: <http://localhost:8000>
+11. If everything looks good, you can push to your forked repo issue branch:
     ```shell
     git add .
     git commit -m "Create new docs with useful information."
     git push origin ISSUE-100
     ```
-11. [Create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) and link to the issue by tagging it, e.g. `Resolves #100`.
+12. [Create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) and link to the issue by tagging it, e.g. `Resolves #100`.
 
-12. Please tag `@alliomeria` when you are ready for your contributed documentation to be reviewed. Our team will review and provide feedback, and let you know when your contributed documentation is merged. Thank you in advance for your time and efforts to create documentation for Archipelago's community!
+13. Please tag `@alliomeria` when you are ready for your contributed documentation to be reviewed. Our team will review and provide feedback, and let you know when your contributed documentation is merged. Thank you in advance for your time and efforts to create documentation for Archipelago's community!
 
 ___
 
