@@ -10,19 +10,23 @@ tags:
 
 Documentation is vital to our community, and contributions are welcome, greatly appreciated, and encouraged. 
 
-## How to Contribute
+## How to Report Simple Documentation Issues
 
-<!--
-!!! info "Difficulty Level: Easy–Moderate"
+For simple documentation page issues such as broken links, minor typos, or inconsistent formatting (malformed lists, text overflow in note blocks), please report by opening a new Issue in the [Archipelago Documentation Github Repo](https://github.com/esmero/archipelago-documentation). Tag `@alliomeria` to request review. Our team will take care of making any necessary corrections directly.
 
-    1. Start with [this documentation template](documentation_template.md).
-    2. Edit the template, and save the file.
-    3. [Join our Slack](https://join.slack.com/t/archipelagocommons/shared_invite/zt-1g66bqxbl-trkVHyaWJDxwIyj99MMTMg).
-    4. Share the new documentation file in the #archipelago-documentation Slack channel.
--->
+## How to Contribute New Documentation
 
 !!! info "Difficulty Level: Moderate–Difficult"
 
-    1. Follow the [GitHub Workflow](documentation_workflow.md).
-    2. Check out the [examples of additional features](documentation_features.md).
+    1. First, either open a new Issue in the [Archipelago Documentation Github Repo](https://github.com/esmero/archipelago-documentation) describing the new documentation you would like to contribute, or reply to an existing Issue that you would like to address. Tag `@alliomeria` to request feedback.
+    2. Since our team is consistently working on new and updating existing documentation, please wait for review and guidance before proceeding with creating the new documentation you described in your new Issue or comments on an existing documentation Issue.
+    3. Proceed with following the [GitHub Workflow](documentation_workflow.md), picking up as needed after the original Issue steps. 
+    4. Check out the [examples of additional features](documentation_features.md) to potentially use in documentation guides.
+
+___
+
+Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
+
+Return to the [Archipelago Documentation main page](index.md).
+
 
