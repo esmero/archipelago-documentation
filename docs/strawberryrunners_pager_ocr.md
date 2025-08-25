@@ -13,7 +13,7 @@ tags:
 
 The `pager` and `ocr` Post-processor operations are likely the most important pair of Strawberry Runners in your Archipelago.
 
-As stated on the [Strawberry Runners overview page](docs/strawberryrunners.md), the `pager` action uses the 'Post processor that extracts/generates Ordered Sequences of files/pages/children using Files present in an ADO' plugin. Nested one level in, the `ocr` action uses the 'Post processor that Runs OCR/HORC against files' plugin. The `ocr` operations will be executed after the completion of the `pager` operations.
+As stated on the [Strawberry Runners overview page](strawberryrunners.md), the `pager` action uses the 'Post processor that extracts/generates Ordered Sequences of files/pages/children using Files present in an ADO' plugin. Nested one level in, the `ocr` action uses the 'Post processor that Runs OCR/HORC against files' plugin. The `ocr` operations will be executed after the completion of the `pager` operations.
 
 Common changes you may wish to make for the `pager` and/or `ocr` operations include adding or removing particular types of Archipelago Digital Objects to apply these operations to.
 

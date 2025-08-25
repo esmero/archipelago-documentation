@@ -12,7 +12,7 @@ tags:
 
 # Reviewing and adjusting the `subtitle` Post-Processor operations 
 
-As stated on the [Strawberry Runners overview page](docs/strawberryrunners.md), the `subtitle` action extracts textual values from subtitle/transcript VTT files and generates time/space transmuted OCR. This transmuted OCR can be used to search within a time-based video or audio file's corresponding subtitle/transcript VTT file(s), then navigate to the matching time of the video or audio file within a media viewer.
+As stated on the [Strawberry Runners overview page](strawberryrunners.md), the `subtitle` action extracts textual values from subtitle/transcript VTT files and generates time/space transmuted OCR. This transmuted OCR can be used to search within a time-based video or audio file's corresponding subtitle/transcript VTT file(s), then navigate to the matching time of the video or audio file within a media viewer.
 
 We strongly recommend using caution when making any adjustments to the default `subtitle` configurations as this may result in unexpected issues with the transmuted OCR values in your Solr Index. Also, the `subtitle` Strawberry Runner Post-Processor needs to used with corresponding related default IIIF Server Settings Form. 
 
