@@ -19,7 +19,7 @@ Finally, Archipelago tries to stay humble, slim, and nimble in nature with a sma
 We recommend you start with the [Core Documentation Guides listed here](101_guides_list.md) as you begin your Archipelago explorations. 
 
 # Contributing
-Archipelago welcomes and appreciates any type of contribution, from use cases and needs, questions, documentation, devops and configuration and -- of course -- code, fixes, or new features. To make the process less painful, we recommend you first to read our documentation and deploy a local instance. After that, to contribute to Archipelago's codebase please follow [this set of guidelines](docs/giveortake.md) to help you get started. To contribute to Archipelago's documentation, please follow [this guide](documentation_about.md).
+Archipelago welcomes and appreciates any type of contribution, from use cases and needs, questions, documentation, devops and configuration and -- of course -- code, fixes, or new features. To make the process less painful, we recommend you first to read our documentation and deploy a local instance. After that, to contribute to Archipelago's codebase please follow [this set of guidelines](docs/giveortake.md) to help you get started. To contribute to Archipelago's documentation, please follow [this guide](docs/documentation_about.md).
 
 ## Caring & Documenting & Coding + Fixing
 * [Allison Sherrick](https://github.com/alliomeria)
