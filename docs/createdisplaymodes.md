@@ -8,7 +8,7 @@ tags:
 
 # Creating Display/View Modes for Archipelago Digital Objects
 
-We recommend checking out our [primer on Display Modes](primerondisplaymodes.md) for a broader overview on Display/View Modes for Archipelago Digital Objects (ADOs).
+We recommend checking out our [primer on Display Modes](primerdisplaymodes.md) for a broader overview on Display/View Modes for Archipelago Digital Objects (ADOs).
 
 ## Adding a new View Mode
 
