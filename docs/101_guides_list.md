@@ -14,7 +14,7 @@ Top 10 guides we recommend you review as you get started working with Archipelag
 
 2. [Strawberryfield Formatters](strawberryfield-formatters.md): overview of the general setup of an Archipelago Digital Object (ADO) page and the way your ADO JSON metadata and data are output
 
-3. [Primer on Display Modes & How to Create a Webform as an Input Method](webformsasinput.md): deeper look at Display Modes and Form Modes, two ways you'll be interacting with your ADOs most frequently
+3. [Primer on Display Modes](primerdisplaymodes.md) & [How to Create a Webform as an Input Method](webformsasinput.md): deeper look at Display Modes and Form Modes, two ways you'll be interacting with your ADOs most frequently
 
 4. [Twig Templates and Archipelago](metadatatwigs.md): a great place to dive into one of Archipelago's best loved feature areas
 
