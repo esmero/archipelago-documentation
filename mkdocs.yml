@@ -50,7 +50,7 @@ nav:
         - Twig Modules Configuration: generalqa_twig_modules_configuration.md
     - Site Administration & Configuration:
       - Strawberryfield Formatters: strawberryfield-formatters.md
-      - Primer on Display Modes: webformsasinput.md
+      - Primer on Display Modes: primerdisplaymodes.md
       - Creating Display Modes: createdisplaymodes.md
       - IIIF Server Settings: iiif_server_settings.md
       - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
