@@ -8,7 +8,7 @@ tags:
 
 # Creating Form Modes for Archipelago Digital Objects
 
-We recommend checking out our [primer on Display Modes](webformsasinput.md) for a broader overview on Form Modes and View Modes for Archipelago Digital Objects (ADOs).
+We recommend checking out our related [How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO) guide](webformsasinput.md) for a broader overview on Form Modes for Archipelago Digital Objects (ADOs).
 
 ## Adding a new Form Mode
 
