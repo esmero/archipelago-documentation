@@ -14,7 +14,7 @@ tags:
 2. [Fork the documentation repo](https://github.com/esmero/archipelago-documentation). If you're not familiar with forking [see this guide](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
 3. In your local fork of Archipelago's documentation, before proceeding with making changes to existing or adding new documentations guides, make sure you first select 'Sync Fork' and that the local fork branch you are working on is up-to-date with the same branch in the main documentation repo.
 4. Working in your synced, up-to-date local fork, proceed with navigating to the existing documentation guides you would like to edit, or proceed with creating a new guide as related to the Issue you followed up on in Step 1.
-5. Committ your changes (whether edits or new additions) and add notes descrbing what is part of the committed changes.
+5. Commit your changes (whether edits or new additions) and add notes describing what is part of the committed changes.
 6. If this is new documentation add it to the `nav` section of the `mkdocs.yml` configuration file at the root of the repo. For example:
    ```yaml hl_lines="7"
    nav:
