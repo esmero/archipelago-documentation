@@ -90,7 +90,7 @@ A Display Mode is a configureable page layout, using Formatters and other option
 
 Display Mode and View Mode can be used interchangeably.
 
-Related documentation: [Primer on Display Modes](webformsasinput.md). 
+Related documentation: [Primer on Display Modes](primerdisplaymodes.md). 
 
 ### Find and Replace
 

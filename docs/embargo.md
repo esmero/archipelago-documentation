@@ -103,7 +103,7 @@ In order to enforce the Embargo options noted above, you have multiple options f
 
 ### Display Mode Formatter Configuration Options
 
-First, to better understand this functionality area, please first familiarize yourself with Archipelago's [Primer on Display Modes](webformsasinput.md) and [Strawberryfield Formatters](strawberryfield-formatters.md).
+First, to better understand this functionality area, please first familiarize yourself with Archipelago's [Primer on Display Modes](primerdisplaymodes.md) and [Strawberryfield Formatters](strawberryfield-formatters.md).
 
 For every Display Mode you have configured for your Digital Objects and Digital Object Collection (Compounds/Creative Work Series), you can configure Embargo settings within the corresponding Strawberryfield Formatter.
 
