@@ -30,7 +30,7 @@ while you re-index a new one, but honestly, and assuming you are reading this gu
 
 Backups are always going to be your best friends. Archipelago's code, database, and settings are mostly self-contained in your current `archipelago-deployment-live` repo folder, and backing up is simple because of that.
 
-### Step 1:
+### Step 1 (do not skip):
 
 To make upgrading simpler we will clone archipelago-deployment-live (empty one) into a different folder. That way we can copy complete folders of configs and files instead of fetching them from github one by one.
 
@@ -124,7 +124,7 @@ and
 https://github.com/esmero/archipelago-deployment-live/tree/1.5.0/data_storage/solrlib
 
 
-### Step 1: Edit docker-composer.yml 
+### Step 1: Edit docker-compose.yml 
 
 You want to replace your current Solr Service (in its enterity. Please make sure indendation is 1:1) with this.
 
