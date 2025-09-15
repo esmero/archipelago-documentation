@@ -257,7 +257,7 @@ Which means you are in the correct folder. Now time to clean your index (really 
 sudo rm -rf *
 ```
 
-Now we need the new configurations for your Solr (so then docker container can re-create the index from scratch). Remember we downloaded a reference/empty Archipelago Deployment Live 1.4.0 at `/home/ec2-user/archipelago-deployment-live-1.4.0`.
+Now we need the new configurations for your Solr (so then docker container can re-create the index from scratch). Remember we downloaded a reference/empty Archipelago Deployment Live 1.5.0 at `/home/ec2-user/archipelago-deployment-live-1.5.0` in STEP 1.
 We are going to use the files there to replace your own configs. `cd` back to your live deployment assuming here it is (still) `/home/ec2-user/archipelago-deployment-live`
 
 ```shell
