@@ -30,7 +30,7 @@ while you re-index a new one, but honestly, and assuming you are reading this gu
 
 Backups are always going to be your best friends. Archipelago's code, database, and settings are mostly self-contained in your current `archipelago-deployment-live` repo folder, and backing up is simple because of that.
 
-### Step 1:
+### Step 1 (do not skip):
 
 To make upgrading simpler we will clone archipelago-deployment-live (empty one) into a different folder. That way we can copy complete folders of configs and files instead of fetching them from github one by one.
 
@@ -124,7 +124,7 @@ and
 https://github.com/esmero/archipelago-deployment-live/tree/1.5.0/data_storage/solrlib
 
 
-### Step 1: Edit docker-composer.yml 
+### Step 1: Edit docker-compose.yml 
 
 You want to replace your current Solr Service (in its enterity. Please make sure indendation is 1:1) with this.
 
@@ -257,7 +257,7 @@ Which means you are in the correct folder. Now time to clean your index (really 
 sudo rm -rf *
 ```
 
-Now we need the new configurations for your Solr (so then docker container can re-create the index from scratch). Remember we downloaded a reference/empty Archipelago Deployment Live 1.4.0 at `/home/ec2-user/archipelago-deployment-live-1.4.0`.
+Now we need the new configurations for your Solr (so then docker container can re-create the index from scratch). Remember we downloaded a reference/empty Archipelago Deployment Live 1.5.0 at `/home/ec2-user/archipelago-deployment-live-1.5.0` in STEP 1.
 We are going to use the files there to replace your own configs. `cd` back to your live deployment assuming here it is (still) `/home/ec2-user/archipelago-deployment-live`
 
 ```shell

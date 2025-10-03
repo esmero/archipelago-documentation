@@ -148,7 +148,7 @@ What does each key mean?
 - `MINIO_SECRET_KEY`: If you are running a Cloud Service backed S3/Azure Storage this needs to generated there. The user/IAM owner of the matching SECRET_KEY needs to have access to read/write the bucket you will configure in this same `.env` file. If running local `min.io` whatever you set will be used.
 - `MYSQL_ROOT_PASSWORD`: The MYSQL 8 or Mariadb 15 password. This password will be used later also during Drupal deployment via `drush`
 - `MINIO_BUCKET_MEDIA`: The name of your Persistant Storage Bucket. If using mini.io local we recommend keeping it simple, e.g. `archipelago`.
-- `MINIO_FOLDER_PREFIX_MEDIA`: The `folder` (a prefix really) where your DO Storage and File storage will go inside the `MINIO_BUCKET_MEDIA` Bucket. `media/` is a _fine_ name for this one and common in archipelago deployments. **IMPORTANT:** Always terminate these with a `/`. 
+- `MINIO_FOLDER_PREFIX_MEDIA`: The `folder` (a prefix really) where your DO Storage and File storage will go inside the `MINIO_BUCKET_MEDIA` Bucket. `media/` is a _fine_ name for this one and common in archipelago deployments. **IMPORTANT:** Always terminate these with a `/`. Drupal will only have access to files inside this prefix. Means a URL like s3://myfile.pdf requires myfile.pdf to exist inside that bucket and inside that prefix.
 - `MINIO_BUCKET_CACHE`: The name of your IIIF Cache storage Bucket. May be the same as `MINIO_BUCKET_MEDIA`. If different make sure your your `MINIO_ACCESS_KEY` and/or IAM role ACL have permission to read write to this one too.
 - `MINIO_FOLDER_PREFIX_CACHE`:  The `folder` (a prefix really) where Cantaloupe will/can write its `iiif` caches. `iiifcache/` is a _lovely_ name we use a lot. **IMPORTANT:** Always terminate these with a `/`.
 - `REDIS_PASSWORD`: Password for your REDIS (Drupal Cache/Queue storage) if you decide to enable the Drupal REDIS module.
@@ -270,6 +270,24 @@ If you want to run NGINX first without any intercepting please do. You can alway
 
 ```
 cp config_storage/nginxconfig/template/nginx.conf.template.default config_storage/nginxconfig/template/nginx.conf.template
+```
+#### IMPORTANT!! (IP Based embargoes and Anubis)
+
+If you decided to run Anubis, you must be aware that because of how it acts as "middleware" in NGINX, the client IP, Port and other original Client Information are going to be sent via headers from NGINX to PHP on the backend. By default Drupal and Symfony will not trust those headers (nor its origin) and that will intefere with IP Based embargo Bypass Logic as defined on the Format Strawberry Field Module (if you set that up). If you don't act on this, still any IP based embargoed ADOs will be secure. Without making the changes recommended below, your site's embargoed objects will be *so secure* that literally nobody other than a logged in (via Drupal) user will be able to access them because the Client IP that PHP will see is the one of the NGINX Container (inside Docker).
+
+Only IF you are running Anubis (don't do this if not - DANGER -), and to ensure trustable information from the Forwarded IP headers is decoded as trusted "Client IP" on PHP, please edit your `drupal\web\sites\default\settings.php` and ensure that you replace the following `if (PHP_SAPI !== 'cli')` statement with the following snippet (or if recently deployed just comment/uncomment what is there already).
+
+```PHP
+if (PHP_SAPI !== 'cli') {
+  $settings['reverse_proxy'] = TRUE;
+  # $settings['reverse_proxy_addresses'] = [@\$_SERVER['REMOTE_ADDR']];
+  # If Running Anubis via NGINX, as Documented in this release, comment (or keep commented out) the previous line
+  # and (keep) uncomment The two following Lines. Add/Replace Any Private IP Ranges under which your Docker Containers Run. 
+  # The ranges set there are the most common ones found for Docker Networks, but could be different if you customized it.
+  # You can also disable some of the trusted headers for extra security (most important one is the .
+  $settings['reverse_proxy_addresses'] = ['10.0.0.0/8','192.168.0.0/16', '172.16.0.0/12'];
+  $settings['reverse_proxy_trusted_headers'] = \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_FOR | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_HOST | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PORT | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PROTO | \Symfony\Component\HttpFoundation\Request::HEADER_FORWARDED;
+}
 ```
 
 That is all. DONE! Danke!

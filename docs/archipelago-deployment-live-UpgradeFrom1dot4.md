@@ -261,7 +261,7 @@ Do you have custom Patches (not provided by Archipelago) that are not provided b
                 "D10.3 Reset Fix": "https://www.drupal.org/files/issues/2024-07-08/3459811-6.patch"
              },
              "ankitpokhrel/tus-php": {
-                "Less Cache writes during upload fix": "patches/tus-file-cache.patch"
+                "Less Cache writes during upload fix": "https://raw.githubusercontent.com/esmero/archipelago-deployment-live/refs/heads/1.5.0/drupal/patches/tus-file-cache.patch"
              },
              "league/openapi-psr7-validator": {
                 "Fixes OpenAPI 1.8 compat": "https://github.com/DiegoPino/openapi-psr7-validator/commit/94e9df4c152d0db46cfa475fa8bb319ff5ac551a.patch"
