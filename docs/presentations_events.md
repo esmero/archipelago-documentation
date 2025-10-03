@@ -8,9 +8,8 @@
 
 ## 2025
 
-- Fedora Commons AI Discussions, Solutions Showcase Series (August 2025) : [registration details here](https://lyrasis.zoom.us/meeting/register/ITwAfGVFQdS2IF_0uCkTTA)
-    - [Archipelago/METRO Digital Services Perspective](https://docs.google.com/presentation/d/12afURHoIkFfNJGFWPYEdwR_GFyn8GnfFP1RNtCklx1A/edit?usp=sharing)
-		- 🎥 Recording available (registration required)
+- Fedora Commons AI Discussions, Solutions Showcase Series (August 2025) : [more information here](https://wiki.lyrasis.org/display/cmtygp/Solutions+Showcase)
+    - [Archipelago/METRO Digital Services Presentation](https://docs.google.com/presentation/d/12afURHoIkFfNJGFWPYEdwR_GFyn8GnfFP1RNtCklx1A/edit?usp=sharing)
 - Archipelago August Showcase & Workshop Series (August 2025) : [registration details here](https://us02web.zoom.us/meeting/register/8sa1fxyZTQyDA3lhS6uXVA)
     - Session 1: Archipelago 1.5.0 Key New Features In-Depth
         - [🎥 Recording available (registration required)](https://us02web.zoom.us/rec/share/MMX_8ruUlhsX_23d_3eGmBWDjWtsBw7WEm5ir7twm55g1uEcm0hRJ9RbWjINKWr0.O8D8RuiDlP7oVv13)
