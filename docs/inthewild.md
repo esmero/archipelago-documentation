@@ -28,10 +28,13 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 
 - [Frick Collection and Webrecorder Team Web Archives Collaboration](https://webarchive.archipelago.nyc)
 
-- [Hamilton College Library & IT Services](https://litsdigital.hamilton.edu/)
+- [Hamilton College Library & IT Services](https://litsdigital.hamilton.edu/) and [Hamilton College Institutional Repository](https://ir.hamilton.edu)
 
 - [Olin College Library Phoenix Files](https://phoenixfiles.olin.edu)
     - *Early adopter - live since Summer 2020
+
+- [New York Public Radio Archives](https://www.wnyc.org/archives/collections/)
+    - *Migration to Archipelago began November 2025
  
 - [New York State Archives](https://findingaids.nysed.gov) Finding Aids Discovery Portal
 
@@ -68,8 +71,6 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
 
 - [University of Edinburgh Libraries](https://www.ed.ac.uk/information-services/library-museum-gallery)
     - _*Development of Archipelago environment began late 2022/3_
- 
-- [Vipassana Treasures](https://tod.vridhamma.org/)
 
 ## We should be here 
 
