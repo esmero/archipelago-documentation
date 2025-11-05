@@ -70,7 +70,7 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
 - [Universidad Nacional Autónoma de México](https://archivodigital.iibi.unam.mx/es)
 
 - [University of Edinburgh Libraries](https://www.ed.ac.uk/information-services/library-museum-gallery)
-    - _*Development of Archipelago environment began late 2022/3_
+    - _*Development of Archipelago environment began late 2023. Beta instance live November 2025. Public link to be shared soon._
 
 ## We should be here 
 
