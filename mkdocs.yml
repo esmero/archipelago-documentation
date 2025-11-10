@@ -68,6 +68,7 @@ nav:
         - Advanced Search: search_advanced.md
         - Search Within Collections: search-within-collection.md
         - IIIF Content Search: iiif-content-search.md
+        - SBF Date Slider Facet: search_sbf_date_slider_facet.md
       - Fragaria Redirects: fragaria.md
       - Embargo & Access Restrictions: embargo.md
       - Metadata API Module:
