@@ -1,5 +1,5 @@
 ---
-title: How to Add a 'Search Within Collection' Block
+title: Strawberryfield Date Slider Facet
 tags:
   - Dates
   - Facets
