@@ -60,6 +60,7 @@ Your metadata and data, as configured through Keyname Providers and Fields, Face
 * [How to Add a 'Search Within Collection' Block](search-within-collection.md)
 * [IIIF Content Search](iiif-content-search.md)
 * For Live Archipelago Deployment Site Administrators: [Upgrading Solr](archipelago-deployment-live-search_solr_index.md)
+* [Strawberryfield Date Slider Facet](search_sbf_date_slider_facet.md)
 
 ___
 
