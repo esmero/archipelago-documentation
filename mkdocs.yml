@@ -2,7 +2,7 @@ site_name: Archipelago Documentation
 site_url: https://docs.archipelago.nyc
 repo_url: https://github.com/esmero/archipelago-documentation
 repo_name: archipelago-documentation
-edit_uri: commits/1.6.0/docs/
+edit_uri: commits/1.4.0/docs/
 site_description: Project documentation for Archipelago.
 site_author: The Digital Services Team at Metropolitan New York Library Council
 extra_css:
@@ -87,6 +87,7 @@ nav:
         - Modifying allowable file extensions: modifyingfileextensionsinwebform.md
         - Archipelago Custom Webform Elements: customwebformelements.md
         - Using Archipelago's Webform LoD from CSV attached to an ADO suggest: webformLoDfromCSV.md
+        - Webform Strawberryfield Custom LoD Endpoints: webform_sbf_custom_lod.md
       - Find and Replace:
         - find_and_replace.md
         - Text Based Find and Replace: find_and_replace_action_text.md
