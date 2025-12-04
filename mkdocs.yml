@@ -2,7 +2,7 @@ site_name: Archipelago Documentation
 site_url: https://docs.archipelago.nyc
 repo_url: https://github.com/esmero/archipelago-documentation
 repo_name: archipelago-documentation
-edit_uri: commits/1.4.0/docs/
+edit_uri: commits/1.6.0/docs/
 site_description: Project documentation for Archipelago.
 site_author: The Digital Services Team at Metropolitan New York Library Council
 extra_css:
@@ -52,6 +52,7 @@ nav:
       - Strawberryfield Formatters: strawberryfield-formatters.md
       - Primer on Display Modes: primerdisplaymodes.md
       - Creating Display Modes: createdisplaymodes.md
+      - Customizable A/V Formatters: custom_av_formatter.md
       - IIIF Server Settings: iiif_server_settings.md
       - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
       - Queues Explainer: queuesexplainer.md
@@ -70,6 +71,7 @@ nav:
         - IIIF Content Search: iiif-content-search.md
         - SBF Date Slider Facet: search_sbf_date_slider_facet.md
       - Fragaria Redirects: fragaria.md
+      - DataCite Integration: datacite_integration.md
       - Embargo & Access Restrictions: embargo.md
       - Metadata API Module:
         - Metadata API Module Overview & Defaults: open_api.md
