@@ -131,10 +131,7 @@ Archipelago 1.6.0+ also feature a new Date Range type Solr Field. Default deploy
 
 ![Date as Range Field](images/date_as_range_field.png)
 
-You may wish to experiment with this new Date Range type Solr Field before using a production environment. The logic of date range value processing it applies may be 
-
-
-
+You may wish to experiment with this new Date Range type Solr Field before using a production environment. The logic of date range value processing it applies may not yield your anticipated end-user browse/narrowing results, depending on the date values found in your repository.
 
 ___
 
