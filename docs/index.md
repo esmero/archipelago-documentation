@@ -12,7 +12,7 @@ We recommend you start with the [Core Documentation Guides listed here](101_guid
 
 ### Note about Documentation Version for December 2025 1.6.0+ Release
 
-Alongside the primary Archipelago 1.6.0 Release in December 2025, the secondary Archipelago 2.0.0 Release was also made public. The 1.6.0 and 2.0.0 releases have **feature parity** for any new UI and API related features (you are not “missing out” on any important functionality with either version), and we have decided to only release a 1.6.0 branch of the Archipelago documentation at this time. 
+Alongside the primary Archipelago 1.6.0 Release in December 2025, the secondary Archipelago 2.0.0 Release was also made public. The 1.6.0 and 2.0.0 releases have **feature parity** for any new UI and API related features (you are not “missing out” on any important functionality with either version), and we have decided to only tag a 1.6.0 branch of the Archipelago documentation at this time, please use the 1.6.0 documentation branch for now when interacting & learning under 2.0.0.
 
 Please see the official release announcements shared on the [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) for more information about 1.6.0+ Releases.
 
