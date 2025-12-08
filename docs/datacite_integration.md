@@ -18,8 +18,11 @@ This documentation page is a work-in-progress and will be updated in the upcomin
     
     You can find more information about establshing a DataCite Fabrica account at: https://doi.datacite.org.
 
+### Prerequisite - Fragaria enabled
 
-### Configuration Form
+Your Archipelago instance needs to first have the Fragaria module enabled. For default Archipelago local deployments, you will need to follow the steps outlined in the [Fragaria documentation guide here](fragaria.md#engable-fragaria-for-local-deployments).
+
+## Configuration Form
 
 You can find the DataCite DOI Integration Settings Configuration Form:
 
@@ -30,13 +33,13 @@ You can find the DataCite DOI Integration Settings Configuration Form:
 
 Please note that your account credentials will be not show the saved password after your initial configuration form save.
 
-### Corresponding Metadata Display Template
+## Corresponding Metadata Display Template
 
 The default Archipelago 1.6.0+ release includes a custom Twig template with DataCite V4 mappings for default Archipelago instances. This default template includes all required DataCite elements, plus a few optional elements.
 
 For default Archipelago instances, you can find this template at ~`/metadatadisplay/20`.
 
-### doi_DataCite_action Key
+## doi_DataCite_action Key
 
 For AMI Set Ingests and Updates, you can use the specialty `doi_DataCite_action` key in your AMI Set CSV and specify one of the following listed operations.
 
@@ -48,7 +51,7 @@ First, add a column to your AMI Set CSV named exactly `doi_DataCite_action`. The
 - `publish` (written as a word in the cell). I no previous DOI was minted (new ingest/updated Object without DOI), a new Findable DOI will be minted, can not be longer deleted
 - `delete` (written as a word in the cell). I a previous DOI was minted and its current state is draft, it will be deleted.
 
-### DataCite Reporting
+## DataCite Reporting
 
 
 
