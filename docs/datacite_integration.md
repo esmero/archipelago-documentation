@@ -45,7 +45,7 @@ First, add a column to your AMI Set CSV named exactly `doi_DataCite_action`. The
 - literally nothing (empty), or a `0`, or `null`: if used to update existing Objects, any previous DOIs will stay put. Has no effect/no minting will happen, no change to existing DOIs will happen for that row
 - `draft` (written as a word in the cell): if no previous DOI was minted (new ingest/updated Object without DOI), a new Draft DOI will be minted
 - `register` (written as a word in the cell): if no previous DOI was minted (new ingest/updated Object without DOI), a new registered DOI will be minted and cannot be longer deleted; if a previous DOI exists, it can transition from its current state to "registered" (draft to registered if the ADO ), (findable to registered only if the ADO ends unpublished after the operation)
-- `publis`h (written as a word in the cell). I no previous DOI was minted (new ingest/updated Object without DOI), a new Findable DOI will be minted, can not be longer deleted
+- `publish` (written as a word in the cell). I no previous DOI was minted (new ingest/updated Object without DOI), a new Findable DOI will be minted, can not be longer deleted
 - `delete` (written as a word in the cell). I a previous DOI was minted and its current state is draft, it will be deleted.
 
 ### DataCite Reporting
