@@ -33,13 +33,16 @@ You can find the DataCite DOI Integration Settings Configuration Form:
 
 Please note that your account credentials will be not show the saved password after your initial configuration form save.
 
-## Corresponding Metadata Display Template
+## Corresponding Metadata Display Templates
 
-The default Archipelago 1.6.0+ release includes a custom Twig template with DataCite V4 mappings for default Archipelago instances. This default template includes all required DataCite elements, plus a few optional elements.
-
-For default Archipelago instances, you can find this template at ~`/metadatadisplay/20`.
-
-## doi_DataCite_action Key
+1. The default Archipelago 1.6.0+ release includes a custom Twig template with DataCite V4 mappings for default Archipelago instances. This default template includes [all required DataCite elements](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/overview/#mandatory-properties), plus a few optional elements.
+      * For default Archipelago instances, you can find this template at ~`/metadatadisplay/22`.
+      * You can also find a copy of this template in the Archipelago Deployment Github repository [here](https://github.com/esmero/archipelago-deployment/blob/1.6.0/d8content/metadatadisplays/DataCite%20V4%20Default%20Template%20for%201.6.0%2B-4003250e-a596-4c29-a7e3-d55ff1009d44.twig.html).
+2. The default Archipelago 1.6.0+ release includes updates in the AMI Ingest JSON template to facilitate DOI related actions in AMI Sets using the doi_datacite_action key (see more details below)
+      * For default Archipelago instances, you can find this template at ~`/metadatadisplay/11`.
+      * Also available in the Archipelago Deployment Github repository [here](https://github.com/esmero/archipelago-deployment/blob/1.6.0/d8content/metadatadisplays/AMI%20Ingest%20JSON%20Template-8595827e-b17d-42bc-bc46-a746bdd05417.twig.html).
+      
+## doi_datacite_action Key
 
 For AMI Set Ingests and Updates, you can use the specialty `doi_DataCite_action` key in your AMI Set CSV and specify one of the following listed operations.
 
