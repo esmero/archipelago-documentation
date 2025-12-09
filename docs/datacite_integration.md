@@ -29,7 +29,7 @@ You can find the DataCite DOI Integration Settings Configuration Form:
 - Through the `Manage` menu > `Configuration` > `Archipelago` > `DataCite Services`
 - Directly at `/admin/config/archipelago/fragaria/DataCite` 
 
-![DataCite Config Form](images/DataCite_config_form.png)
+![DataCite Config Form](images/datacite_config_form.png)
 
 Please note that your account credentials will be not show the saved password after your initial configuration form save.
 
