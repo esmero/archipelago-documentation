@@ -9,7 +9,21 @@ tags:
 
 Archipelago's Fragaria Redirect Module is a Drupal 9/10 module that provides dynamic redirect routes matched against existing Search API field values. This module will also provide future Unique IDs (API) integrations and PURLs.
 
-### Prerequisites
+
+
+## Prerequisites
+
+### Engable Fragaria for Local Deployments
+
+For Archipelago local deployments, you will need to enable this module manually. 
+
+1. Navigate to the Modules overview at `/admin/modules`, or select 'Extend' through the `Manage` menu.
+
+2. Use the 'Filter' box to search for "Redirect".
+
+3. Check the checkbox by the 'Archipelago ID and Redirect Module' and then select the 'Install' button.
+
+### Data + Keyname + Solr Field Requirements
 
 Before proceeding with the following configuration steps, you need to first create the [Strawberry Key Name Provider and Solr Field](strawberry_key_name_providers.md) that corresponds to the Field that will be matched against the variable part of the route exists.
 

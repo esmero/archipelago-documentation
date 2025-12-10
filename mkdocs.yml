@@ -52,6 +52,7 @@ nav:
       - Strawberryfield Formatters: strawberryfield-formatters.md
       - Primer on Display Modes: primerdisplaymodes.md
       - Creating Display Modes: createdisplaymodes.md
+      - Customizable A/V Formatters: custom_av_formatter.md
       - IIIF Server Settings: iiif_server_settings.md
       - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
       - Queues Explainer: queuesexplainer.md
@@ -68,7 +69,9 @@ nav:
         - Advanced Search: search_advanced.md
         - Search Within Collections: search-within-collection.md
         - IIIF Content Search: iiif-content-search.md
+        - SBF Date Slider Facet: search_sbf_date_slider_facet.md
       - Fragaria Redirects: fragaria.md
+      - DataCite Integration: datacite_integration.md
       - Embargo & Access Restrictions: embargo.md
       - Metadata API Module:
         - Metadata API Module Overview & Defaults: open_api.md
@@ -84,6 +87,7 @@ nav:
         - Modifying allowable file extensions: modifyingfileextensionsinwebform.md
         - Archipelago Custom Webform Elements: customwebformelements.md
         - Using Archipelago's Webform LoD from CSV attached to an ADO suggest: webformLoDfromCSV.md
+        - Webform Strawberryfield Custom LoD Endpoints: webform_sbf_custom_lod.md
       - Find and Replace:
         - find_and_replace.md
         - Text Based Find and Replace: find_and_replace_action_text.md

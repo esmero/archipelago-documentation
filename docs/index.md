@@ -9,6 +9,13 @@ Archipelago's primary focus is to serve the greater [`GLAM community`](https://e
 Finally, Archipelago tries to stay humble, slim, and nimble in nature with a small codebase full of inline comments and `@todos`. All of our work is driven by a clear and [concise but thoughtful planned technical roadmap --updated in tandem with new releases](https://github.com/esmero/archipelago-deployment/issues/285).
 
 We recommend you start with the [Core Documentation Guides listed here](101_guides_list.md) as you begin your Archipelago explorations. 
+
+### Note about Documentation Version for December 2025 1.6.0+ Release
+
+Alongside the primary Archipelago 1.6.0 Release in December 2025, the secondary Archipelago 2.0.0 Release was also made public. The 1.6.0 and 2.0.0 releases have **feature parity** for any new UI and API related features (you are not “missing out” on any important functionality with either version), and we have decided to only tag a 1.6.0 branch of the Archipelago documentation at this time, please use the 1.6.0 documentation branch for now when interacting & learning under 2.0.0.
+
+Please see the official release announcements shared on the [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) for more information about 1.6.0+ Releases.
+
 ___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
