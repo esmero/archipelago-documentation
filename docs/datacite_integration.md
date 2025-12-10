@@ -10,8 +10,6 @@ tags:
 
 Archipelago's 1.6.0+ release (December 2025) features DataCite Integration, including UI interfaces, DataCite Schema V4 compliance, stable reporting, and test and production environment. Archipelago's DataCite functionality is integrated into the Fragaria Module and RAW JSON workflows.
 
-This documentation page is a work-in-progress and will be updated in the upcoming weeks to provide more detailed information related to this functionality area in the upcoming weeks.
-
 ??? note "DataCite Fabrica Account Required"
 
     To use Archipelago's DataCity Integration, your institution will need to have established DataCite Fabrica account credentials. Archipelago will not provide test account credentials for you to use. 
@@ -29,7 +27,7 @@ You can find the DataCite DOI Integration Settings Configuration Form:
 - Through the `Manage` menu > `Configuration` > `Archipelago` > `DataCite Services`
 - Directly at `/admin/config/archipelago/fragaria/DataCite` 
 
-![DataCite Config Form](images/datacite_config_form.png)
+![DataCite Config Form](images/DataCite_config_form.png)
 
 Please note that your account credentials will be not show the saved password after your initial configuration form save.
 
@@ -54,9 +52,23 @@ First, add a column to your AMI Set CSV named exactly `doi_DataCite_action`. The
 - `publish` (written as a word in the cell). I no previous DOI was minted (new ingest/updated Object without DOI), a new Findable DOI will be minted, can not be longer deleted
 - `delete` (written as a word in the cell). I a previous DOI was minted and its current state is draft, it will be deleted.
 
+Any wrong combination of the different DataCite states and Published/Unpublished ADO states will be handled automatically by the default DataCite Twig template logic and Archipelago's built-in cross-referencing of the [DataCite states permissions](https://support.datacite.org/docs/doi-states). However, it is still important to be mindful of how DataCite's DOI states work and what transitions between states are permitted.
+​
 ## DataCite Reporting
 
+### DataCite Fabrica Review 
 
+You can check the status of DOIs created or updated within Archipelago by reviewing your repositories DOIs in the DataCite Fabrica environment.
+
+First, use your Datacite account credentials to login to DataCite Fabrica at either:  [https://doi.test.datacite.org/sign-in](https://doi.test.datacite.org/sign-in) (if using a test DataCite account) or [https://doi.datacite.org/sign-in](https://doi.datacite.org/sign-in) (is using a production DataCite account).
+
+Next, navigate to the `DOIs` tab and review the different DOIs that were created or updated within your Archipelago environment.
+
+![DataCite Fabrica DOIs Review](images/datacite_fabrica_dois_review.png)
+
+### LocalArchipelago Reporting
+
+Archipelago's DateCite Reporting integration is currently still under construction. This documentation page will be updated in the upcoming weeks to provide more detailed information related to this functionality area when it has been made available.
 
 ___
 
