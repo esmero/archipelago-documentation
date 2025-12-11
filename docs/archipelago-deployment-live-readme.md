@@ -432,7 +432,7 @@ Almost Done! Now you can log into your new Archipelago using `https` and start e
 ### Run any Pending Search API Tasks (New to Drupal Search API 1.4.x)
 
 This is new to us and specific to this version of Drupal's Search API.
-Please, once logged in, navigate to <http://localhost:8001/admin/config/search/search-api> and press, if present,
+Please, once logged in, navigate to `/admin/config/search/search-api>` and press, if present,
 the "Execute pending tasks" button (in blue). This is new behavior (during a deployment from cero) for Drupal Search API.
 It should take less tan a second and will inform the Search Index that there are indeed no OCRs/VTTs or ML annotations (strawberry flavors)
 in the system yet (something that was never an issue before). 
