@@ -427,7 +427,19 @@ NOTE: We are passing the `-y` flag to `drush` avoid that way having to answer "y
 docker exec -ti esmero-php bash -c "drush config-set -y format_strawberryfield.iiif_settings pub_server_url https://your.domain.org/cantaloupe/iiif/2"
 ```
 
-Finally Done! Now you can log into your new Archipelago using `https` and start exploring. Thank you for following this guide!
+Almost Done! Now you can log into your new Archipelago using `https` and start exploring. 
+
+### Run any Pending Search API Tasks (New to Drupal Search API 1.4.x)
+
+This is new to us and specific to this version of Drupal's Search API.
+Please, once logged in, navigate to <http://localhost:8001/admin/config/search/search-api> and press, if present,
+the "Execute pending tasks" button (in blue). This is new behavior (during a deployment from cero) for Drupal Search API.
+It should take less tan a second and will inform the Search Index that there are indeed no OCRs/VTTs or ML annotations (strawberry flavors)
+in the system yet (something that was never an issue before). 
+Eventually we will understand (and work around) what changed in their November 2025 code making this extra little step needed,
+and why also they removed the drush command that allows this to be run via the command line.
+
+And Done Done! Thank you for following this guide!
 
 ## Deployment on ARM64/v8(Graviton, Apple M1) system:
 
