@@ -227,8 +227,18 @@ index 818d6e3..4558d1e 100644
          "drupal/drupal": "*"
 ```
 
-See? Changes are not too many. Red means removed, green added. Most of the time it will be a matching (version bump) removal/addition of a package, which for our purpouses here will become a 
-`docker exec -ti esmero-php bash -c "composer require package/in-green:version-in-green --no-update"` command. Cool. If you see JUST a red (check your output), most likely it would be ONE of your custom added modules which compare to ours does not exist (thus in RED onkly). We won't touch those, because we don't ship archipelago with every module you might have added. It would be up to you to decide (or act on when you run the final command of step 1) if you want/need/can update those. 
+See? Changes without your customizations are not too many. Red means removed, green added. Most of the time it will be a matching (version bump) removal/addition of a package, which for our purpouses here will become a 
+`docker exec -ti esmero-php bash -c "composer require package/in-green:version-in-green --no-update"` command. 
+
+
+Now, to compare your live and active `composer.json` (which is not tracked) against 1.6.0, please run:
+
+```shell
+git diff origin/1.6.0:drupal/composer.default.json drupal/composer.json
+```
+
+Note: Bear in mind that because you are comparing *two different file names*, and your local one might be untracked, you can't git diff using `-R` (reversed one), so new additions to 2.0.0 will show up (in red) as removals instead.
+If you see green only (remember, your active `composer.json` against the new remote `composer.default.json`are not reversed), most likely it would be ONE of your custom added modules which compare to ours does not exist (thus in GREEN only). We won't touch those, because we don't ship archipelago with every module you might have added. It would be up to you to decide (or act on when you run the final command of `step 1`) if you want/need/can update those. 
 
 *Note:* Important to know/learn. Even if all packages are managed by composer, blindly uninstalling (not upgrading...we mean actually removing) *any* package that starts with `drupal/` without first `drush pm-uninstall` it from Drupal will lead to errors and constant notifications from there on that you have an installed module that has missing source files. Don't do it! Always cleanly uninstall components/modules first from Drupal via drush or the UI if you are removing them. Then, once that is done, `composer delete` them. You have been warned! (twice) (:
 
