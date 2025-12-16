@@ -1459,7 +1459,7 @@
   <a href="#option-2-a-complete-sync-which-will-bring-new-things-and-update-existing-but-will-also-remove-all-the-ones-that-are-not-part-of-150-its-a-like-clean-danger-factory-reset" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 2. A Complete Sync, which will bring new things and update existing but will also remove all the ones that are not part of 1.5.0. It's a like clean (danger!) factory reset.
+        Option 2. A Complete Sync, which will bring new things and update existing but will also remove all the ones that are not part of 1.5.0. It's a like clean (DANGER!) factory reset.
       
     </span>
   </a>
@@ -1467,10 +1467,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-3-a-selective-partial-sync-which-will-bring-manually-picked-configs-and-update-existing-ones-wont-remove-new-ones-you-added-wont-bring-all-changed-160" class="md-nav__link">
+  <a href="#option-3-a-selective-partial-sync-which-will-bring-manually-picked-configs-and-update-existing-ones-wont-remove-new-ones-you-added-wont-bring-all-what-changed-in-160" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 3. A Selective Partial Sync, which will bring manually picked configs and update existing ones. Won't remove new ones you added. Won't bring all changed 1.6.0
+        Option 3. A Selective Partial Sync, which will bring manually picked configs and update existing ones. Won't remove new ones you added. Won't bring all what changed in 1.6.0
       
     </span>
   </a>
@@ -4919,7 +4919,7 @@
   <a href="#option-2-a-complete-sync-which-will-bring-new-things-and-update-existing-but-will-also-remove-all-the-ones-that-are-not-part-of-150-its-a-like-clean-danger-factory-reset" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 2. A Complete Sync, which will bring new things and update existing but will also remove all the ones that are not part of 1.5.0. It's a like clean (danger!) factory reset.
+        Option 2. A Complete Sync, which will bring new things and update existing but will also remove all the ones that are not part of 1.5.0. It's a like clean (DANGER!) factory reset.
       
     </span>
   </a>
@@ -4927,10 +4927,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-3-a-selective-partial-sync-which-will-bring-manually-picked-configs-and-update-existing-ones-wont-remove-new-ones-you-added-wont-bring-all-changed-160" class="md-nav__link">
+  <a href="#option-3-a-selective-partial-sync-which-will-bring-manually-picked-configs-and-update-existing-ones-wont-remove-new-ones-you-added-wont-bring-all-what-changed-in-160" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 3. A Selective Partial Sync, which will bring manually picked configs and update existing ones. Won't remove new ones you added. Won't bring all changed 1.6.0
+        Option 3. A Selective Partial Sync, which will bring manually picked configs and update existing ones. Won't remove new ones you added. Won't bring all what changed in 1.6.0
       
     </span>
   </a>
@@ -5137,7 +5137,7 @@ Restart your <code>docker-compose</code> ensemble, and wait a little while for a
 <h2 id="upgrading-to-archipelago-160-softwarecode">Upgrading to Archipelago 1.6.0 (Software/Code)</h2>
 <h3 id="step-0-get-familiar-with-what-changed">Step 0: Get familiar with what changed.</h3>
 <p>We mean this. This is a <strong>new step</strong>. Running a Production Server requires some informed decision making and thus, we believe, a good pre-step is reviewing what <a href="https://github.com/esmero/archipelago-deployment-live/compare/1.5.0...1.6.0">changed between releases</a>. </p>
-<p>In 1.5.0 we introduced the <code>jq</code> command to (attempt) to teach you all how to approach a composer.json level upgrade. That is still valid. But also, to simplify the process this time, our new composer.json (compared to the previous release one) was shipped using the same order of appearance of dependencies, which means a simple <code>git diff</code> would give you pretty much the same experience. So let's do that here. Inside your Archipelago deployment live git root (folder) run</p>
+<p>In 1.5.0 we introduced the <code>jq</code> command to (attempt) to teach you all how to approach a <code>composer.json</code> level upgrade. That is still valid. But also, to simplify the process this time, our new composer.json (compared to the previous release one) was shipped using the same order of appearance of dependencies, which means a simple <code>git diff</code> would give you pretty much the same experience. So let's do that here. Inside your Archipelago deployment live's git root (folder) run</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>diff<span class="w"> </span>-R<span class="w"> </span>origin/1.6.0<span class="w"> </span>--<span class="w"> </span>drupal/composer.default.json
@@ -5250,12 +5250,12 @@ Restart your <code>docker-compose</code> ensemble, and wait a little while for a
 <span class="w"> </span>    "conflict": {
 <span class="w"> </span>        "drupal/drupal": "*"
 </code></pre></div>
-<p>See? Changes without your customizations are not too many. Red means removed, green added. Most of the time it will be a matching (version bump) removal/addition of a package, which for our purpouses here will become a 
+<p>See? Changes without your customizations are not too many. <code>Red</code> means removed, <code>green</code> added. Most of the time it will be a matching (version bump) removal/addition of a package, which for our purpouses here will become a 
 <code>docker exec -ti esmero-php bash -c "composer require package/in-green:version-in-green --no-update"</code> command. </p>
 <p>Now, to compare your live and active <code>composer.json</code> (which is not tracked) against 1.6.0, please run:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>diff<span class="w"> </span>origin/1.6.0:drupal/composer.default.json<span class="w"> </span>drupal/composer.json
 </code></pre></div>
-<p><em>Note:</em> Bear in mind that because you are comparing <em>two different file names</em>, and your local one might be untracked, you can't git diff using <code>-R</code> (reversed one), so new additions to 1.6.0 will show up (in red) as removals instead.
+<p><em>Note:</em> Bear in mind that, because you are comparing <em>two different file names</em>, and your local one might be untracked, you can't git diff using <code>-R</code> (reversed one), so new additions to 1.6.0 will show up (in red) as removals instead.
 If you see green only (remember, your active <code>composer.json</code> against the new remote <code>composer.default.json</code>are not reversed), most likely it would be ONE of your custom added modules which compare to ours does not exist (thus in GREEN only). We won't touch those, because we don't ship archipelago with every module you might have added. It would be up to you to decide (or act on when you run the final command of <code>step 1</code>) if you want/need/can update those. </p>
 <p><em>Note 2:</em> Important to know/learn. Even if all packages are managed by composer, blindly uninstalling (not upgrading...we mean actually removing) <em>any</em> package that starts with <code>drupal/</code> without first <code>drush pm-uninstall</code> it from Drupal will lead to errors and constant notifications from there on that you have an installed module that has missing source files. Don't do it! Always cleanly uninstall components/modules first from Drupal via drush or the UI if you are removing them. Then, once that is done, <code>composer delete</code> them. You have been warned! (twice) (:</p>
 <h3 id="step-1-updates-for-key-drupal-and-archipelago-modules">Step 1. Updates for key Drupal and Archipelago modules</h3>
@@ -5283,10 +5283,10 @@ sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">666</sp
 </code></pre></div>
 <p>Well done! If you see <strong>no</strong> issues and all ends in <strong>Green colored messages</strong>, all is good!</p>
 <h4 id="what-if-all-is-not-ok-and-i-see-red-and-a-lot-of-dependency-explanations">What if all is not OK, and I see red and a lot of dependency explanations?</h4>
-<p>Just in case try to run this agai.</p>
+<p>Just in case try to run this again.</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"composer update -W"</span>
 </code></pre></div>
-<p>Sometimes the internet is a pokey place and remote servers timeout, things are strange. Sometimes people skip steps (did you?). If after trying again and also self-doubting and retracing your steps, things are still strange, you might need to do some troubleshooting. </p>
+<p>Sometimes the internet is a "pokey" place and remote servers timeout, things are strange. Sometimes people skip steps (did you?). If after trying again and also self-doubting and retracing your steps, things are still strange, you might need to do some troubleshooting. </p>
 <p>Maybe you have custom modules that are NO longer Drupal 10.5 compatible? If so, you may see errors. You should check each package website's (normally https://www.drupal.org/project/the_module_name) to see if there is a more recent Drupal 10 compatible version.</p>
 <p>If so run:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"composer require 'drupal/the_module_name:^VERSION_NUMBER_THAT_WORKS_ON_DRUPAL10_5' --update-with-dependencies --no-update"</span>
@@ -5316,38 +5316,38 @@ drupal/search_api_solr<span class="w">         </span><span class="m">4</span>.3
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"drush updatedb"</span>
 </code></pre></div>
 <h3 id="step-5-optional-syncs-optional">Step 5: Optional Syncs (Optional)</h3>
-<p>This is optional ,but very recommended. To be sure you are getting what you want/need and will not end  overriding things you carefully modified already, we encourage you to run a local Archipelago 1.6.0, explore the UI, ingest, do some searches and the experience the new settings first hand and new metadata displays.
-It takes 5-10 minutes of your live and will provide an excellent visual insight of what is new. For that go to https://github.com/esmero/archipelago-deployment and follow the guide matching your local OS. You won't regret it.</p>
-<p>After playing with a new 1.6.0 safely in your local, you can decide if syncing your new Archipelago 1.6.0 is needed and bring in chosen latest configs and settings. This requires you do fetch, either via <code>git</code> or manually via <code>wget</code> or <code>curl</code> newer configs from https://github.com/esmero/archipelago-deployment-live/tree/1.6.0/drupal/config/sync into the same folder structure/location of your deployment or use the local cloned copy you made at <code>Step 6</code> of <code>Backing up and preparing for the upgrade</code>.</p>
+<p>This is optional, and if recommended or not depends on too many factors! But, to be sure you are getting what you want/need and will not end  overriding things you carefully modified already, we encourage you to run a local Archipelago 1.6.0, explore the UI, ingest, do some searches and the experience the new settings first hand and new metadata displays.</p>
+<p>It takes 5-10 minutes of your life and will provide an excellent visual insight of what is new. For that go to https://github.com/esmero/archipelago-deployment and follow the guide matching your local OS. You won't regret it.</p>
+<p>After playing with a new 1.6.0 safely in your local computer, you can decide if syncing your new Archipelago 1.6.0 is needed, and bring if chosen so latest configs and settings. This requires you do fetch, either via <code>git</code> or manually via <code>wget</code> or <code>curl</code> newer configs from https://github.com/esmero/archipelago-deployment-live/tree/1.6.0/drupal/config/sync into the same folder structure/location of your deployment or use the local cloned copy you made at <code>Step 6</code> of <code>Backing up and preparing for the upgrade</code>.</p>
 <p>For this you have <strong>three</strong> options (no worries, actually do worry, just remember you made a backup! Did you? Double check!):</p>
 <h4 id="option-1-a-partial-sync-which-will-bring-new-configs-and-update-existing-ones-but-will-not-remove-ones-that-only-exist-in-your-custom-setup-eg-new-webforms-or-view-modes">Option 1. A Partial Sync, which will bring new configs and update existing ones but will <strong>not</strong> remove ones that only exist in your custom setup, e.g. new Webforms or View Modes.</h4>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>cim<span class="w"> </span>--partial
 </code></pre></div>
 <p>You will get a list. You can always have second thoughs and baul out here if you feel unsure. Select "YES" if you decide to proceed.</p>
-<h4 id="option-2-a-complete-sync-which-will-bring-new-things-and-update-existing-but-will-also-remove-all-the-ones-that-are-not-part-of-150-its-a-like-clean-danger-factory-reset">Option 2. A Complete Sync, which will bring new things and update existing but will also <strong>remove all</strong> the ones that are not part of 1.5.0. It's a like clean (danger!) factory reset.</h4>
+<h4 id="option-2-a-complete-sync-which-will-bring-new-things-and-update-existing-but-will-also-remove-all-the-ones-that-are-not-part-of-150-its-a-like-clean-danger-factory-reset">Option 2. A Complete Sync, which will bring new things and update existing but will also <strong>remove all</strong> the ones that are not part of 1.5.0. It's a like clean (DANGER!) factory reset.</h4>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>cim<span class="w"> </span>
 </code></pre></div>
 <p>You will get a list. You can always have second thoughs and baul out here if you feel unsure. Select "YES" if you decide to proceed.</p>
-<h4 id="option-3-a-selective-partial-sync-which-will-bring-manually-picked-configs-and-update-existing-ones-wont-remove-new-ones-you-added-wont-bring-all-changed-160">Option 3. A Selective Partial Sync, which will bring manually picked configs and update existing ones. Won't remove new ones you added. Won't bring all changed 1.6.0</h4>
-<p>To do so, create inside <code>drupal/config</code> a new folder named "sync_handpicked". Fetch or copy any (or or more) YAML files from the 1.6.0 release (from github or your locally cloned copy) you want to sync. E.g. Just the search index, https://github.com/esmero/archipelago-deployment-live/blob/1.6.0/drupal/config/sync/search_api.index.default_solr_index.yml into that folder. Y</p>
+<h4 id="option-3-a-selective-partial-sync-which-will-bring-manually-picked-configs-and-update-existing-ones-wont-remove-new-ones-you-added-wont-bring-all-what-changed-in-160">Option 3. A Selective Partial Sync, which will bring manually picked configs and update existing ones. Won't remove new ones you added. Won't bring all what changed in 1.6.0</h4>
+<p>To do so, create inside <code>drupal/config</code> a new folder named <code>sync_handpicked</code>. Fetch or copy any (one or more) YAML files from the 1.6.0 release (from github or your locally cloned copy) you want to sync. E.g. Just the search index, https://github.com/esmero/archipelago-deployment-live/blob/1.6.0/drupal/config/sync/search_api.index.default_solr_index.yml into that folder. Then run:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>esmero-php<span class="w"> </span>drush<span class="w"> </span>cim<span class="w"> </span>--source<span class="w"> </span>config/sync_handpicked<span class="w"> </span>
 </code></pre></div>
 <p>You might see some warnings related to modules dealing with previously non-existent data—-no worries, just ignore those. One notable is a Search API/ and autocomplete warning. We are running a @dev version and Drupal's dependencies (e.g 8.x-1.2.0) can't handle @dev. </p>
 <h3 id="step-6-update-or-not-optional-your-metadata-display-entities-and-menu-items">Step 6: Update (or not - Optional) your Metadata Display Entities and menu items</h3>
-<p>Recommended: If you want to add new templates and menu items 1.6.0 provides, you need to fetch everything from this remote <a href="https://github.com/esmero/archipelago-deployment-live/tree/1.5.0/drupal/d8content">https://github.com/esmero/archipelago-deployment-live/tree/1.6.0/drupal/d8content</a> or copy from your locally cloned 1.6.0, to your local installation into the same folder structure/location,
+<p>Recommended: If you want to add new templates and menu items 1.6.0 provides, you need to fetch everything from this remote <a href="https://github.com/esmero/archipelago-deployment-live/tree/1.6.0/drupal/d8content">https://github.com/esmero/archipelago-deployment-live/tree/1.6.0/drupal/d8content</a> or copy from your locally cloned 1.6.0, to your local installation into the same folder structure/location,
 then replace your local <code>deploy.sh</code> and <code>update_deployed.sh</code> scripts which can be found inside your base archipelago deployment folder inside drupal/scripts/archipelago with</p>
-<p><code>https://raw.githubusercontent.com/esmero/archipelago-deployment-live/refs/heads/1.5.0/drupal/scripts/archipelago/deploy.sh</code></p>
+<p><code>https://raw.githubusercontent.com/esmero/archipelago-deployment-live/refs/heads/1.6.0/drupal/scripts/archipelago/deploy.sh</code></p>
 <p>and</p>
 <p><code>https://raw.githubusercontent.com/esmero/archipelago-deployment-live/refs/heads/1.6.0/drupal/scripts/archipelago/update_deployed.sh</code></p>
-<p>from the new release and, as described in the general (from zero) <a href="../archipelago-deployment-live-readme/">1.6.0 Deployment Instructions</a> replace the <code>http://esmero-web</code> with your real domain.
-On a terminal navigate to your base archipelago deployment folder and run the following command replacing <code>your.domain.org</code> with your actual domain.</p>
+<p>from the new release, and as described in the general (from zero) <a href="../archipelago-deployment-live-readme/">1.6.0 Deployment Instructions</a> replace the <code>http://esmero-web</code> with your real domain.</p>
+<p>On a terminal navigate to your base archipelago deployment folder and run the following command replacing <code>your.domain.org</code> with your actual domain.</p>
 <div class="highlight"><pre><span></span><code><span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/http:\/\/esmero-web/https:\/\/your.domain.org/g'</span><span class="w"> </span>drupal/scripts/archipelago/deploy.sh
 <span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/http:\/\/esmero-web/https:\/\/your.domain.org/g'</span><span class="w"> </span>drupal/scripts/archipelago/update_deployed.sh
 </code></pre></div>
 <p>and then run:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'scripts/archipelago/deploy.sh'</span>
 </code></pre></div>
-<p>This command will only add templates you don't have and fail (good) one same UUID/exiting ones.</p>
+<p>This command will only add templates you don't have and fail (good) one same <code>UUID/existing</code> ones.</p>
 <p><strong>Important</strong>: If you don't download/sync/git/merge or copy from your local cloned 1.6.0 (or your prefered method) then the command will add nothing, since you will be running this command against 1.5.0 content.</p>
 <p>Once that is done, you <em>could (danger!) * choose to update all Metadata Displays (twig templates) we ship with new 1.6.0 versions (including a new IIIF manifest that fetches CWS Children from multiple levels from Solr Stored RAW JSON, DataCite Schema V4, improved OAI templates, AMI set Description template, etc). Before you do this, we </em><em>strongly</em><em> recommend that you first make sure to manually (copy/paste or download via the UI - new in Archipelago 1.6.0!) backup any Twig templates you have modified. If unsure, </em>do not run* the command that comes after this warning! You can always manually copy the new templates from the <code>d8content/metadatadisplays</code> folder which contains text versions (again, copy/paste) of each shipped template you can pick and use when you feel ready.</p>
 <p>If you are sure (like really?) you <strong>really want to overwrite</strong> the ones you modified (sure, just checking?), then you can run this (make sure you edit that file):</p>
@@ -5425,7 +5425,7 @@ be01ebfe847c<span class="w">   </span>esmero/cantaloupe-s3:6.0.5-noturbojpeg-mul
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 15, 2025 21:39:38 UTC">December 15, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 15:19:53 UTC">December 16, 2025</span>
   </span>
 
     
