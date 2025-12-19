@@ -22,7 +22,7 @@ Installation is entirely [Dockerized](https://www.docker.com) and scripted with 
   esmero-php | PHP-FPM | Has all binaries for postprocessing/exif/ocr/etc. Runs PHP code. 
   esmero-db | Database | AMD and INTEL processors: MYSQL 8<br />ARM processors: MariaDB 
   esmero-minio | Storage | S3 API compatible Backend file and ADO as file storage. In a local it will do all the S3 stuff, on a live instance it can server as file routing to AWS S3, Azure Blob Storage, etc. 
-  esmero-solr | Solr | Currently version 9.8.4
+  esmero-solr | Solr | Currently version 9.10
   esmero-nlp | Natural Language Processing | NLP64 server for entity extraction, language detection, ML, etc.
   esmero-cantaloupe | IIIF Media Server| Customized Server used to provide IIIF Image API/Media access 
 
