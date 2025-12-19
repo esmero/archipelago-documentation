@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../images/ArchipelagoLogo-favicon-32x32.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -321,8 +321,6 @@
       
         
       
-        
-      
     
     
     
@@ -495,34 +493,6 @@
     
   
     Metadata in Archipelago
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../archifilepersistencestrategy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Archipelago's File Persistence Strategy
   
 
     
@@ -4607,16 +4577,15 @@
 <p>Your source spreadsheet will also need to contain at least one column containing terms/names (values) you want to reconcile against an LoD Authority Source. Multiple values should be separated by '|@|'.</p>
 <h2 id="step-1-select-the-ami-set-you-will-be-working-with">Step 1: Select the AMI Set you will be working with.</h2>
 <p>From the main AMI Sets List page, click on your AMI Set's Name, or select the 'Edit' option from the Operations menu on the right-hand side of the Sets list.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ami/AMIsetsList.jpg" data-desc-position="bottom"><img alt="AMI Sets List" src="../images/ami/AMIsetsList.jpg"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/AMIsetsList_1-6-0.png" data-desc-position="bottom"><img alt="AMI Sets List" src="../images/AMIsetsList_1-6-0.png"></a></p>
 <h2 id="step-2-reconcile-lod-tab">Step 2: Reconcile LoD Tab</h2>
-<p>Navigate to the Reconcile LoD tab.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ami/AMIreconcileLodTab.jpg" data-desc-position="bottom"><img alt="Reconcile LoD Tab" src="../images/ami/AMIreconcileLodTab.jpg"></a></p>
+<p>Navigate to the 'Reconcile LoD' tab for your selected AMI Set.</p>
 <h2 id="step-3-lod-reconciling-selections">Step 3: LoD Reconciling Selections</h2>
 <p>From the list of columns from your spreadsheet source, select which columns you want to reconcile against LoD providers. </p>
 <p>Under the LoD Sources section, select how your chosen Columns will be LoD reconciled.
 - LoD reconcile options will be on the left, LoD Authority Sources will be on the right.
 - Example: 'local_subjects' will be mapped to 'LoC subjects (LCSH)'</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ami/AMI_LodSources.jpg" data-desc-position="bottom"><img alt="AMI LoD Sources" src="../images/ami/AMI_LodSources.jpg"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/AMI_LodSources_1-6-0.png" data-desc-position="bottom"><img alt="AMI LoD Sources" src="../images/AMI_LodSources_1-6-0.png"></a></p>
 <details class="info">
 <summary>Full list of potential LoD Authority Sources</summary>
 <ul>
@@ -4638,6 +4607,8 @@
 <li>VIAF</li>
 <li>Getty aat Fuzzy / Terms / Exact Label Match</li>
 <li>Wikidata Q Items</li>
+<li>MESH Terms and Descriptors (Starts / Contains / Exact)</li>
+<li><a href="../webform_sbf_custom_lod/">Local Webform Strawberryfield Custom LoD Endpoints</a></li>
 </ul>
 </details>
 <p>To preview the values contained in the column(s) you selected, click the 'Inspect cleaned/split up column values' button. </p>
@@ -4647,8 +4618,8 @@
  - To process immediately, select 'Process LoD from Source'
  - To enqueue the batch process, select 'Enqueue but do not process Batch in real time.
  - To add new data (i.e. terms, LoD Authority Sources) to existing reconciliation (e.g after replacing 
-   source CSV data), select 'Re-process only adding new terms/LoD Authority Sources</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/processLoD.jpg" data-desc-position="bottom"><img alt="Process LoD" src="../images/processLoD.jpg"></a></p>
+   source CSV data), select 'Re-process only adding new terms/LoD Authority Sources'</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/processLoD_1-6-0.png" data-desc-position="bottom"><img alt="Process LoD" src="../images/processLoD_1-6-0.png"></a></p>
 <p><em>Important note: if you have previously run LoD Reconciliation for your AMI set, this action will overwrite any manually corrected LoD on your Processed CSV. Please make sure you have a backup if unsure.</em></p>
 <p>Depending on the size of your AMI Set, the Reconciliation processing may take a few minutes. </p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ami/AMIbatchReconcile.jpg" data-desc-position="bottom"><img alt="AMI LoD Reconciling Success" src="../images/ami/AMIbatchReconcile.jpg"></a></p>
@@ -4661,7 +4632,7 @@
 - The CSV Column Header/Key from the source spreadsheet where the value is found
 - A Checked option you can use to denote that an LoD mapping has been reviewed/revisioned
 - The Linked Data Label and URL pairing selected during the LoD reconciliation process</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ami/AMIeditReconciledLoD.jpg" data-desc-position="bottom"><img alt="AMI Edit Reconciled LoD" src="../images/ami/AMIeditReconciledLoD.jpg"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/AMIeditReconciledLoD_1-6-0.png" data-desc-position="bottom"><img alt="AMI Edit Reconciled LoD" src="../images/AMIeditReconciledLoD_1-6-0.png"></a></p>
 <p>The results table will show 10 original terms and mappings per page. You can advance through the pages using the page numbers and navigational arrows above and below the table.</p>
 <h2 id="step-5-review-and-edit-your-reconciled-lod-mappings">Step 5: Review and Edit your Reconciled LoD Mappings</h2>
 <p>Review the LoD reconciliation mappings, to make sure the best terms were selected for your metadata.</p>
@@ -4710,8 +4681,17 @@
 <li>'getty_aat_terms' =&gt; Getty aat Terms</li>
 <li>'getty_aat_exact' =&gt; Getty aat Exact Label Match</li>
 <li>'wikidata_subjects_thing' =&gt; Wikidata Q Items</li>
+<li>'mesh;term;startswith' =&gt; 'MeSH (starts with Term)',</li>
+<li>'mesh;term;contains' =&gt; 'MeSH (contains Term)',</li>
+<li>'mesh;term;exact' =&gt; 'MeSH (exact Term)',</li>
+<li>'mesh;descriptor;startswith' =&gt; 'MeSH (starts with Descriptor)',</li>
+<li>'mesh;descriptor;contains' =&gt; 'MeSH (contains Descriptor)',</li>
+<li>'mesh;descriptor;exact' =&gt; 'MeSH (exact Descriptor)'</li>
 </ul>
 </details>
+<p>!!! note "Important note for Webform Strawberryfield Custom LoD Endpoints</p>
+<pre><code>When using Archipelago's [Local Webform Strawberryfield Custom LoD Endpoints](webform_sbf_custom_lod.md), the Processed LoD Information details will be generated dynamically, based on the column name of the source local LoD plus the prefix 'custom_'. For example, if your column name was 'local_lod_provider', the Processed LoD contextual information would show `custom_local_lod_provider` as the 'lod_endpoint_type'.
+</code></pre>
 <h2 id="next-steps">Next Steps</h2>
 <p>To proceed with Processing your AMI Set, <a href="../AMIviaSpreadsheets/#step-7-ami-set-processing">click here</a> to be directed to the main <a href="../AMIviaSpreadsheets/">Ingesting Digital Objects via Spreadsheets</a>.</p>
 <hr>
@@ -4739,7 +4719,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 11, 2023 13:39:27 UTC">August 11, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 19, 2025 17:42:17 UTC">December 19, 2025</span>
   </span>
 
     
@@ -4833,10 +4813,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "default", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   
