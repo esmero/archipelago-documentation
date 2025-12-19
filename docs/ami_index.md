@@ -15,7 +15,9 @@ tags:
 
 You can access AMI through the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`.
 
-![AMI Sets List Updated](images/AMIsetsList_1-5-0.png)
+![AMI Sets List Updated](images/AMIsetsList_1-6-0.png)
+
+* _Easter Egg for 1.6.0+ release: you can sort the AMI Set List by the Set ID, to help you navigate quickly to your most recent AMI set._
 
 ## AMI Guides
 

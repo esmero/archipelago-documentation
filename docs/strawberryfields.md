@@ -4,7 +4,7 @@
 
 ## What Strawberry fields does, why we built it, and what issues it addresses
 
-Archipelago integrates transparently into the Drupal 8 ecosystem using its Core Content Entity System (Nodes), Discovery (Search API) and in general all its Core Components plus a few well maintained external ones.
+Archipelago integrates transparently into the Drupal ecosystem using its Core Content Entity System (Nodes), Discovery (Search API) and in general all its Core Components plus a few well maintained external ones.
 
 By design (and because we think its imperative), Archipelago takes full charge of the metadata layer and associated media assets by implementing a highly configurable, smart Drupal field written in JSON named [`Strawberryfield`](https://github.com/esmero/strawberryfield/tree/1.0.0) that attaches to any content.
 

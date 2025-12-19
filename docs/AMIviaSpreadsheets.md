@@ -113,9 +113,9 @@ If you clicked on the 'see it here' link in Step 6, you will be brought to the A
    
     You may wish to double check the settings configured in your AMI Set in the Raw Metadata (JSON) on the AMI Set `View` tab before Processing.
 
-    ![AMI Set Admin Review](images/AMIsetAdminReview_updated_2025_July.png)
+    ![AMI Set Admin Review](images/AMIsetAdminReview_1-6-0.png)
 
-![AMI Admin Set Process](images/AMIsetAdminProcess_updated_2025_July.png)
+![AMI Admin Set Process](images/AMIsetAdminProcess_1-6-0.png)
 
 To Process this set, navigate to the `Process` tab. You will have multiple options related to the Processing outcome for your AMI Set.
 
@@ -167,7 +167,7 @@ You can view an AMI Set's Report tab either directly within the AMI Set, top tab
     - a `message` summarizing the Processing outcome--including a title/label link to the created ADO if successful
     - a `details` summary containing system information related to the operations.
 
-![AMI Sets Page Report Operation](images/AMIreportOverview_updated_2025_July.png)
+![AMI Sets Page Report Operation](images/AMIreportOverview_1-6-0.png)
 
 You can use information found in the Reports tab to identify review your created ADOs one-by-one and identify any errors or issues that may have come up during the Process if needed.
 
@@ -176,6 +176,8 @@ At the bottom of the AMI Report tab (for Archipelago 1.5.0 and up), you will see
 #### Optional Step 11: Run Action on Processed ADOS
 
 Lastly, you may wish to run a batch Action against your already-processed ADOs for a particular AMI Set. Using the 'Run Action on Processed ADOs' tab for an AMI Set, you can select from the [available Actions](find_and_replace.md#available-actions) found in your Archipelago instance. The most common Actions you might wish to run for an AMI Set's ADOs include 'Publish' or 'Unpublish', and 'Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item' (read more about [Archipelago's Strawberry Runners Post-Processing Options here](strawberryrunners.md)).
+
+![AMI Sets Run Action on Processed ADOS](images/AMIrunaction_1-6-0.png)
 
 #### Important Note about AMI's ADO Deletion Operations
 
