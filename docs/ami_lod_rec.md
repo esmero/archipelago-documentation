@@ -35,7 +35,7 @@ Under the LoD Sources section, select how your chosen Columns will be LoD reconc
 - LoD reconcile options will be on the left, LoD Authority Sources will be on the right.
 - Example: 'local_subjects' will be mapped to 'LoC subjects (LCSH)'
 	
-![AMI LoD Sources](images/ami/AMI_LodSources_1-6-0.png)
+![AMI LoD Sources](images/AMI_LodSources_1-6-0.png)
 	
 ??? info "Full list of potential LoD Authority Sources"
 
@@ -57,7 +57,7 @@ Under the LoD Sources section, select how your chosen Columns will be LoD reconc
     - VIAF
     - Getty aat Fuzzy / Terms / Exact Label Match
     - Wikidata Q Items
-	- MESH Terms
+	- MESH Terms and Descriptors (Starts / Contains / Exact)
 	- [Local Webform Strawberryfield Custom LoD Endpoints](webform_sbf_custom_lod.md)
 
 To preview the values contained in the column(s) you selected, click the 'Inspect cleaned/split up column values' button. 
@@ -95,7 +95,7 @@ You will see a table (form) containing:
 - A Checked option you can use to denote that an LoD mapping has been reviewed/revisioned
 - The Linked Data Label and URL pairing selected during the LoD reconciliation process
 
-![AMI Edit Reconciled LoD](images/AMIeditReconciledLoD.png)
+![AMI Edit Reconciled LoD](images/AMIeditReconciledLoD_1-6-0.png)
 
 The results table will show 10 original terms and mappings per page. You can advance through the pages using the page numbers and navigational arrows above and below the table.
 
