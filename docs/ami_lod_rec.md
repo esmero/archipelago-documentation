@@ -157,6 +157,12 @@ The same general pattern can be adapted to apply to different mapping scenarios 
     - 'getty_aat_terms' => Getty aat Terms
     - 'getty_aat_exact' => Getty aat Exact Label Match
     - 'wikidata_subjects_thing' => Wikidata Q Items
+	- 'mesh;term;startswith' => 'MeSH (starts with Term)',
+	- 'mesh;term;contains' => 'MeSH (contains Term)',
+	- 'mesh;term;exact' => 'MeSH (exact Term)',
+	- 'mesh;descriptor;startswith' => 'MeSH (starts with Descriptor)',
+	- 'mesh;descriptor;contains' => 'MeSH (contains Descriptor)',
+	- 'mesh;descriptor;exact' => 'MeSH (exact Descriptor)'
 
 
 ## Next Steps 
