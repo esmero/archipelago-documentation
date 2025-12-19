@@ -166,7 +166,7 @@ The same general pattern can be adapted to apply to different mapping scenarios 
 
 !!! note "Important note for Webform Strawberryfield Custom LoD Endpoints
 
-    When using Archipelago's [Local Webform Strawberryfield Custom LoD Endpoints](webform_sbf_custom_lod.md), the Processed LoD Information details will be generated dynamically, based on the column name of the source local LoD plus the prefix 'custom_'. For example, if your column name was 'local_lod_provider', the Processed LoD contextual information would show `custom_local_lod_provider` as the 'lod_endpoint_type'. Use 
+    When using Archipelago's [Local Webform Strawberryfield Custom LoD Endpoints](webform_sbf_custom_lod.md), the Processed LoD Information details will be generated dynamically, based on the column name of the source local LoD plus the prefix 'custom_'. For example, if your column name was 'local_lod_provider', the Processed LoD contextual information would show `custom_local_lod_provider` as the 'lod_endpoint_type'.
 
 ## Next Steps 
 
