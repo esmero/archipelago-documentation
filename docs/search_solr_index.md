@@ -20,11 +20,11 @@ Archipelago's default Search and Solr configurations are intended to cover the m
 Before diving into any Search and Solr configuration changes, we strongly recommend that you read our [Metadata in Archipelago](metadatainarchipelago.md) overview documentation, which provides important context for understanding how the shape of your Archipelago Digital Objects/Collections (ADOs) metadata will inform your Search and Solr options and outcomes.
 
 ### Archipelago and Solr
-Archipelago's latest Release (1.4.0) uses [Apache Solr 9.2](https://solr.apache.org/guide/solr/9_2/index.html), which incorporates some [major improvements and changes from Solr 8](https://solr.apache.org/guide/solr/9_2/upgrade-notes/major-changes-in-solr-9.html). Please refer to the [primary Solr documentation](https://solr.apache.org/guide/solr/9_2/index.html) for the most comprehensive and in-depth information about Solr's wide breadth of functionality and configuration options.
+Archipelago's latest Release (1.6.0) uses [Apache Solr 9.10](https://solr.apache.org/guide/solr/9_10/index.html). Please refer to the [primary Solr documentation](https://solr.apache.org/guide/solr/9_10/index.html) for the most comprehensive and in-depth information about Solr's wide breadth of functionality and configuration options.
 
 ### OCR Highlights
 
-Archipelago uses [solr-ocrhighlighting v0.8.4](https://github.com/dbmdz/solr-ocrhighlighting/releases/tag/wip), built by the Development Team at the [Bavarian State Library](https://github.com/dbmdz). See our [Strawberry Runners Post-Processing documentation](strawberryrunners.md) for more information about configuring page-based HOCR/OCR extraction for image and pdf-based ADOs and options for sending that output to the Search API.
+Archipelago uses [solr-ocrhighlighting v0.9.5](https://github.com/dbmdz/solr-ocrhighlighting/releases/tag/wip), built by the Development Team at the [Bavarian State Library](https://github.com/dbmdz). See our [Strawberry Runners Post-Processing documentation](strawberryrunners.md) for more information about configuring page-based HOCR/OCR extraction for image and pdf-based ADOs and options for sending that output to the Search API.
 
 ## In-a-nutshell : JSON data to Strawberry Keyname Providers to Solr
 
