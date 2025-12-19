@@ -21,13 +21,11 @@ Your source spreadsheet will also need to contain at least one column containing
 
 From the main AMI Sets List page, click on your AMI Set's Name, or select the 'Edit' option from the Operations menu on the right-hand side of the Sets list.
 
-![AMI Sets List](images/ami/AMIsetsList.jpg)
+![AMI Sets List](images/AMIsetsList_1-6-0.png)
 
 ## Step 2: Reconcile LoD Tab
 
-Navigate to the Reconcile LoD tab.
-
-![Reconcile LoD Tab](images/ami/AMIreconcileLodTab.jpg)
+Navigate to the 'Reconcile LoD' tab for your selected AMI Set.
 
 ## Step 3: LoD Reconciling Selections
 
@@ -37,7 +35,7 @@ Under the LoD Sources section, select how your chosen Columns will be LoD reconc
 - LoD reconcile options will be on the left, LoD Authority Sources will be on the right.
 - Example: 'local_subjects' will be mapped to 'LoC subjects (LCSH)'
 	
-![AMI LoD Sources](images/ami/AMI_LodSources.jpg)
+![AMI LoD Sources](images/ami/AMI_LodSources_1-6-0.png)
 	
 ??? info "Full list of potential LoD Authority Sources"
 
@@ -59,9 +57,10 @@ Under the LoD Sources section, select how your chosen Columns will be LoD reconc
     - VIAF
     - Getty aat Fuzzy / Terms / Exact Label Match
     - Wikidata Q Items
+	- MESH Terms
+	- [Local Webform Strawberryfield Custom LoD Endpoints](webform_sbf_custom_lod.md)
 
 To preview the values contained in the column(s) you selected, click the 'Inspect cleaned/split up column values' button. 
-
 	
 ![AMI LoD](images/ami/AMIreconcileValuePreview.jpg)
 
@@ -72,9 +71,9 @@ When ready, there are multiple processing options to select from depending on yo
  - To process immediately, select 'Process LoD from Source'
  - To enqueue the batch process, select 'Enqueue but do not process Batch in real time.
  - To add new data (i.e. terms, LoD Authority Sources) to existing reconciliation (e.g after replacing 
-   source CSV data), select 'Re-process only adding new terms/LoD Authority Sources
+   source CSV data), select 'Re-process only adding new terms/LoD Authority Sources'
 
-![Process LoD](images/processLoD.jpg)
+![Process LoD](images/processLoD_1-6-0.png)
 
 *Important note: if you have previously run LoD Reconciliation for your AMI set, this action will overwrite any manually corrected LoD on your Processed CSV. Please make sure you have a backup if unsure.*
 
@@ -96,7 +95,7 @@ You will see a table (form) containing:
 - A Checked option you can use to denote that an LoD mapping has been reviewed/revisioned
 - The Linked Data Label and URL pairing selected during the LoD reconciliation process
 
-![AMI Edit Reconciled LoD](images/ami/AMIeditReconciledLoD.jpg)
+![AMI Edit Reconciled LoD](images/AMIeditReconciledLoD.png)
 
 The results table will show 10 original terms and mappings per page. You can advance through the pages using the page numbers and navigational arrows above and below the table.
 
