@@ -12,7 +12,7 @@ Archipelago's 1.6.0+ release (December 2025) features DataCite Integration, incl
 
 ??? note "DataCite Repository Account Required"
 
-    To use Archipelago's DataCity Integration, your institution will need to have established DataCite Repository account credentials. Archipelago will not provide test account credentials for you to use. 
+    To use Archipelago's DataCite Integration, your institution will need to have established DataCite Repository account credentials. Archipelago will not provide test account credentials for you to use. 
     
     You can find more information about establshing a DataCite Repository account at: https://support.datacite.org/docs/datacite-account-types#repository-account.
 
