@@ -19,7 +19,7 @@ You can find the DataCite Webform Strawberryfield Custom LoD Endpoints Configura
 
 ## How to Use
 
-1. First, create a custom ADO using the steps outlined in [Archipelago's 'Webform LoD from CSV attached to an ADO suggest'](webformLoDfromCSV.md) documentation guide. For the example screenshots shown below, the '[PB Core Asset Type](https://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/)' vocabulary was used.
+1. First, create a custom ADO using steps 1 and 2 outlined in [Archipelago's 'Webform LoD from CSV attached to an ADO suggest'](webformLoDfromCSV.md) documentation guide. For the example screenshots shown below, the '[PB Core Asset Type](https://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/)' vocabulary was used.
 
 ![Example PBCore Asset Type Spreadsheet](images/webform_sbf_custom_lod_example_spreadsheet.png)
 
