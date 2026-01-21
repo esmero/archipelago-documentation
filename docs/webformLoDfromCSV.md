@@ -106,7 +106,7 @@ Navigate to a Digital Object in your repository that you would like to use this 
 
     ![Webform LoD from CSV in Action](images/WebformLoDfromCSVinAction.png)
 
-You can now begin using this custom vocab vocabulary element when using the corresponding webform (where you added this element) to Edit and Update your Digital Objects. You may also wish to add this same element to the Default Digital Object Collection/Creative Work Series webform.
+You can now begin using this custom vocabulary element when using the corresponding webform (where you added this element) to Edit and Update your Digital Objects. You may also wish to add this same element to the Default Digital Object Collection/Creative Work Series webform.
 
 ### 10. Optional: Add a Custom Webform Strawberryfield Custom LoD Endpoint
 
