@@ -44,6 +44,8 @@ Documentation related to the Strawberryfield modules can be found here: [Strawbe
 
 - [Annotorius](https://github.com/recogito/annotorious)
 - [Anubis](https://github.com/TecharoHQ/anubis)
+- [DataCite](https://datacite.org) 
+     - [*Archipelago is proud to be a DataCite Registered Service Provider*](https://support.datacite.org/docs/service-provider-software-integrations)
 - [Drupal Webform Module](https://www.drupal.org/project/webform)
 - [International Image Interoperability Framework (IIIF)](https://iiif.io/)
 - [Internet Archive BookReader](https://github.com/internetarchive/bookreader)
