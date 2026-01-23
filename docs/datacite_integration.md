@@ -10,6 +10,10 @@ tags:
 
 Archipelago's 1.6.0+ release (December 2025) features DataCite Integration, including UI interfaces, DataCite Schema V4 compliance, stable reporting, and test and production environment. Archipelago's DataCite functionality is integrated into the Fragaria Module and RAW JSON workflows.
 
+[*Archipelago is proud to be a DataCite Registered Service Provider*](https://support.datacite.org/docs/service-provider-software-integrations)
+
+![DataCite Registered Service Provider Badge](images/DCbadge_RegisteredServiceProvider_2024.png)
+
 ??? note "DataCite Repository Account Required"
 
     To use Archipelago's DataCite Integration, your institution will need to have established DataCite Repository account credentials. Archipelago will not provide test account credentials for you to use. 
