@@ -71,7 +71,7 @@ Next, navigate to the `DOIs` tab and review the different DOIs that were created
 
 ![DataCite Fabrica DOIs Review](images/datacite_fabrica_dois_review.png)
 
-### LocalArchipelago Reporting
+### Local Archipelago Reporting
 
 Archipelago's DateCite Reporting integration is currently still under construction. This documentation page will be updated in the upcoming weeks to provide more detailed information related to this functionality area when it has been made available.
 
