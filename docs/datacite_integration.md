@@ -12,7 +12,7 @@ Archipelago's 1.6.0+ release (December 2025) features DataCite Integration, incl
 
 [*Archipelago is proud to be a DataCite Registered Service Provider*](https://support.datacite.org/docs/service-provider-software-integrations)
 
-![DataCite Registered Service Provider Badge](images/DCbadge_RegisteredServiceProvider_2024.png)
+![DataCite Registered Service Provider Badge](images/DCbadge_RegisteredServiceProvider_2024_thumbnail.png)
 
 ??? note "DataCite Repository Account Required"
 
