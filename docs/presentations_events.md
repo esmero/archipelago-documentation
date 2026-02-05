@@ -6,7 +6,14 @@
 
     [METRO's Digital Services Team](https://metro.org/digital-services) facilitated many different internal training sessions throughout 2020-2022. If you and your team need access to any of these sessions that were recorded, please [contact us](mailto:repositorysupport@metro.org). Thank you!
 
+## 2026
+- [IIIF Online Meeting (January 2026)](https://iiif.io/event/2026/online-meeting/)
+    - Experiments (and reflections) on Content: Metadata and Image Similarity experiments through the Content Search API in Archipelago Commons. Diego Pino Navarro.
+    - Customizing Mirador Settings for Special Collections Materials in Archipelago. Allison Sherrick.
+
 ## 2025
+
+- 🍓[Archipelago 1.6.0 + 2.0.0 Release Announcement (December 2025)](https://groups.google.com/g/archipelago-commons/c/Lc-nVWXcwS0/m/9MfYPQZ_CgAJ)
 
 - iPRES Annual Conference (November 2025):
     - Digital Preservation "Bake Off" : Bring your wild file ingredients, the Archipelago kitchen can handle it! Allison Sherrick, Diego Pino Navarro.
