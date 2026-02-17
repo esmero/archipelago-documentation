@@ -14,10 +14,12 @@ Archipelago's custom webform element 'Webform LoD from CSV attached to an ADO su
 
 ### 1. Prepare your CSV File
 
-To use this element, you need to first have prepared a CSV file containing two columns only:
+To use this element, you need to first have prepared a CSV file containing at least the following two columns:
 
-* one column for 'label' containing the labels for your vocabulary
-* one column for 'uris' containing the corresponding uris for your vocabulary
+* one column for 'label' (or 'term') containing the labels for your vocabulary
+* one column for 'uri' (or 'url') containing the corresponding uris for your vocabulary
+
+Your CSV file may also contain an additional column, for providing additional contextual/descriptive information, such as a 'description' column with textual definitions for labels/terms. 
     
 ### 2. New ADO Using Your CSV File
 
