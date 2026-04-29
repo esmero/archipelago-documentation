@@ -68,7 +68,7 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
         - [Virtual Tour Santuario Paola](http://archipelago.byterfly.eu/do/5aea0a3f-cf03-40cc-9611-924dea1fd806)
 
 - [Universidad Nacional Autónoma de México](https://archivodigital.iibi.unam.mx/es)
-    - _*access restricted to on-campus only*
+    - *access restricted to on-campus only*
 
 - [University of Edinburgh Libraries](https://www.ed.ac.uk/information-services/library-museum-gallery)
     - _*Development of Archipelago environment began late 2023. Beta instance live November 2025. Public link to be shared soon._
