@@ -10,7 +10,7 @@ tags:
 
 Archipelago's 1.6.0+ release (December 2025) features a new functionality area for enabling custom LoD endpoints for Archipelago's [AMI Linked Data Reconciliation](ami_lod_rec.md) process. 
 
-You can find the DataCite Webform Strawberryfield Custom LoD Endpoints Configuration Form:
+You can find the Webform Strawberryfield Custom LoD Endpoints Configuration Form:
 
 - Through the `Manage` menu > `Structure` > `Webform SBF Custom LoD Endpoints`
 - Directly at `admin/structure/webform_strawberryfield_lod` 
