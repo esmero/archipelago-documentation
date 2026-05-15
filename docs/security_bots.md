@@ -138,7 +138,7 @@ A public-facing production instance will likely encounter bad bots and other mal
 
 ## Deployment with Upgrade
 
-If looking to use this solution as part of an upgrade (from 1.0.0 to 1.1.0, for example) we recommend coming back to the above steps after successfully completing the upgrade. After the upgrade, you will only need to add the environment variables and docker compose configurations and follow the steps as detailed above.
+If looking to use this solution as part of an upgrade we recommend coming back to the above steps after successfully completing the upgrade. After the upgrade, you will only need to add the environment variables and docker compose configurations and follow the steps as detailed above.
 
 ## Advanced Configuration
 
@@ -190,7 +190,7 @@ Another more generally applicable approach is to override files that are part of
 
 !!! example
 
-    Our bash script ([setup_bot_blocker.sh](https://github.com/esmero/archipelago-docker-images/tree/1.1.0/esmero-web/setup_bot_blocker.sh)) is triggered by and runs just before the startup script ([start_nginx_certbot.sh](https://github.com/JonasAlfredsson/docker-nginx-certbot/blob/master/src/scripts/start_nginx_certbot.sh)) for the NGINX Certbot image. For any advanced needs involving custom startup behavior, our script can be modified and overwridden:
+    Our bash script ([setup_bot_blocker.sh](https://github.com/esmero/archipelago-docker-images/blob/main/esmero-web-botblocker/Dockerfile)) is triggered by and runs just before the startup script ([start_nginx_certbot.sh](https://github.com/JonasAlfredsson/docker-nginx-certbot/blob/master/src/scripts/start_nginx_certbot.sh)) for the NGINX Certbot image. For any advanced needs involving custom startup behavior, our script can be modified and overwridden:
 
     1. First, we'll copy the script from the running Docker container onto our host:
        ```bash
