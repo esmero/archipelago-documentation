@@ -10,7 +10,10 @@ tags:
 A Cloud / Local production ready Archipelago 1.6.0 Deployment (Drupal 10) using Docker,
 For Drupal 11 (IOHO less stable) please follow the [Archipelago 2.0.0 Deployment Live](https://github.com/esmero/archipelago-deployment-live/blob/2.0archipelago-deployment-live-readme.md) guide. Same features but different code (and more work for us!).
 
-Last updated: December 10th 2025.
+
+Last updated:  May 22nd 2026 for https://www.drupal.org/psa-2026-05-18 (Drupal 10.6.9)
+
+Previously updated: December 10th 2025.
 
 
 ## What is this repo for?
