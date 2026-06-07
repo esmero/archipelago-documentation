@@ -19,8 +19,8 @@ One advantage of Drupal's integration of the [Twig](https://www.drupal.org/docs/
 
 The [Symfony](https://symfony.com/) PHP framework, which is integrated into Drupal Core, provides extensions, which we use in our default templates:
 
-* [Twig Filters from Symfony](https://twig.symfony.com/doc/2.x/filters/index.html)
-* [Twig Functions from Symfony](https://twig.symfony.com/doc/2.x/functions/index.html)
+* [Twig Filters, functions and tests from Symfony](https://twig.symfony.com/doc/3.x/)
+
 
 ## Default Twig Extensions from Drupal
 
@@ -31,7 +31,7 @@ Additionally, we have some very handy Drupal-specific extensions:
 
 ## Default Twig Extensions from Archipelago
 
-Finally, we have a growing list of extensions that apply to our own specific use cases:
+Finally, we have a growing list of extensions, filters and tests that apply to our own specific use cases:
 
 ### Twig Filters from Archipelago
 
@@ -55,11 +55,40 @@ Finally, we have a growing list of extensions that apply to our own specific use
 
     Then we pass the `date_free` field through the `trim` filter (as a precaution, in case there's any accidental whitespace), and then we finally hand off the field to our `edtf_2_human_date` filter:
     ```html+twig title="edtf_2_human_date" hl_lines="1 3"
-    {{ data.date_created_edtf.date_free|trim|edtf_2_human_date('en') }}
+    {{ data.date_created_edtf.date_free|default('')|trim|edtf_2_human_date('en') }}
     
     {# Output: Circa 1899 #}
     ```
     
+
+!!! example "edtf_2_iso_date"
+
+    The `edtf_2_iso_date` filter takes an EDTF date, and attemtps to converts it to its fitting ISO 8601 format using the [EDTF PHP](https://github.com/ProfessionalWiki/EDTF) library.
+    The return values of this function are an Array (List) of ISO 86901 dates fitting an EDTF one. Even for single Dates, the return might contain two entries, given that a specific
+    EDTF date, can range between the start and the end of a single day if not limited. If the date is invalid or out of range, the Array (List) will be empty. 
+    Let's start with the following metadata fragment:
+    ```json title="Metadata Fragment" hl_lines="4"
+    ...
+    "date_created_edtf": {
+        "date_to": "",
+        "date_free": "~1899",
+        "date_from": "",
+        "date_type": "date_free"
+    },
+    "date_created_free": null,
+    ...
+    ```
+
+    Then we pass the `date_free` field through the `trim` filter (as a precaution, in case there's any accidental whitespace), and then we finally hand off the field to our `edtf_2_iso_date` filter:
+    ```html+twig title="edtf_2_iso_date" hl_lines="1 2"
+    {{ data.date_created_edtf.date_free|default('')|trim|edtf_2_iso_date|json_encode|raw }}{# Notice how we JSON encode the output first, because rendering Arrays is Invalid in Drupal #}
+    {{ data.date_created_free|default('')|trim|edtf_2_iso_date|json_encode|raw }}{# Notice how we JSON encode the output first, because rendering Arrays is Invalid in Drupal #}
+    {# Output: 
+      ["1899-01-01","1899-12-31"] --> valid dates
+      [] --> when null is passed
+    #}
+    ```
+
 !!! example "html_2_markdown"
 
     The `html_2_markdown` filter, as the name suggests, converts HTML to Markdown.
@@ -454,3 +483,43 @@ Finally, we have a growing list of extensions that apply to our own specific use
     * Strawberry Field at Thorpes Organic Family Farm
     * organic agriculture
     * strawberries
+
+### Twig Tests from Archipelago
+
+!!! example "instanceof"
+
+    The `instanceof` test checks if a certain value is of a certain strict(er) type. By default PHP is a very loosely typed language and JSON, depending on how the 
+    data was generated, might inherit that looseness: a number could end being encoded as either a string or a native JSON number. This tests call internally native 
+    PHP functions e.g `is_numeric` when using `numeric` as the argument. The full list of functions starting with `is_` can be seen [here](https://www.php.net/manual/en/ref.var.php).
+    The test can also check if a value (e.g `Object`) is an instance of a specific class e.g. `\Drupal\node\Entity\Node`. 
+    Tests always return a `boolean` (`true` or `false`).
+
+    Using the following metadata fragment:
+    ```json title="Metadata Fragment" hl_lines="5"
+    ...
+    "ismemberof": [
+       1,
+       "2",
+       "wrong textual value",
+       null
+    ]
+    ...
+    ```
+
+    The example here will prevalidate values of `ismemberof` to be numeric (as expected and needed for Drupal Node IDs). That is specially relevant if we plan on using those
+    values as input for another Twig extension, that, for example, needs to load `Node Entities` using only their IDs and/or generate URLs using Drupal internal Routes,
+    which require a strict "argument/value" matching:
+    ```html+twig title="instanceof" hl_lines="3 5 6 9"
+    {% if data.ismemberof is iterable %}
+       {% for possible_parent_id in data.ismemberof %}
+          {% if possible_parent_id is instanceof("numeric") %}{#- will call internall `is_numeric` -#}
+            {% set parentnode = bamboo_load_entity('node', possible_parent_id) %} 
+            {% if parentnode is instanceof('\Drupal\node\Entity\Node') %} {#- will check if parentnode is a Drupal Node Entity -#}
+              {{ url('entity.node.canonical', {'node': parentnode.id}, {'absolute': true}) }}{#- will be output for "1" and 2 #}
+            {% endif %}
+          {% else %}
+              {{ possible_parent_id|json_encode|raw ~ " Is not a numeric value" }}{#- will be output for "wrong textual value" and null #}
+          {% endif %}
+      {% endfor %}
+    {% endif %}
+    ```
