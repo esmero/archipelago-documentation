@@ -109,13 +109,14 @@ Your newly created AMI Set will now need to be Processed.
 
 If you clicked on the 'see it here' link in Step 6, you will be brought to the AMI Set page for review. You may also select `Process` from the `Operations` menu for the AMI set from the main `AMI sets` page. From the `Process` page you can review the JSON configuration for your set (determined by your selections in the preceding steps).
 
-??? info "Optional step to review the settings configured in your AMI Set"
+??? note "Review the settings configured in your AMI Set"
    
+       
     You may wish to double check the settings configured in your AMI Set in the Raw Metadata (JSON) on the AMI Set `View` tab before Processing.
 
-    ![AMI Set Admin Review](images/AMIsetAdminReview_1-6-0.png)
+    See this guide for [Reviewing an AMI Sets Configuration and Status](ami_set_review.md)
 
-![AMI Admin Set Process](images/AMIsetAdminProcess_1-6-0.png)
+![AMI Admin Set Process](images/AMI_process_updated.png)
 
 To Process this set, navigate to the `Process` tab. You will have multiple options related to the Processing outcome for your AMI Set.
 
