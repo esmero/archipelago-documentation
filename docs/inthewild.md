@@ -58,7 +58,7 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
 
 - [California Revealed](https://repository.californiarevealed.org/)
 
-- [Christian Observatory of the Pro Civitate Christiana](https://janus.amiciosservatorio.org/)
+- [Christian Observatory of the Pro Civitate Christiana](https://procivitate.assisi.museum/)
 
 - [Consiglio Nazionale delle Ricerche / National Research Council of Italy](https://www.cnr.it/)
     - [https://dbopen.ba.cnr.it/](https://dbopen.ba.cnr.it/)
@@ -66,6 +66,8 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
     - [https://vitisgrinzane.ipsp.cnr.it/](https://vitisgrinzane.ipsp.cnr.it/)
     - [http://archipelago.byterfly.eu/](http://archipelago.byterfly.eu/) 🦋
         - [Virtual Tour Santuario Paola](http://archipelago.byterfly.eu/do/5aea0a3f-cf03-40cc-9611-924dea1fd806)
+
+- [Texas A&M Digital Collections](https://digitalcollections.library.tamu.edu)
 
 - [Universidad Nacional Autónoma de México](https://archivodigital.iibi.unam.mx/es)
     - *access restricted to on-campus only*
