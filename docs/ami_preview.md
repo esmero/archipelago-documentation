@@ -24,9 +24,11 @@ For all options selected, you will see need to select a specific 'Row to preview
 
 Below the 'Row to preview' box, you will see first a summary of the number of rows in your Source CSV, followed by a note that states: 'Row 1 is the header and if used will always return row 2. You can also use the mapped "ADO label' column to autocomplete.'
 
-During any of the selected options, Preview will attempt to process a single ROW of the selected AMI set's CSV source data as it it would happen via a Queue Worker. Any referenced Files will be also validated to exist, but will not be downloaded/processed, which means also that your Preview might lack any as:filetype structure which will be reflected also when asking for a diff of the rendered version or the JSON. In other words--you will not see your media files rendered out and you will not see the file info reflected in the Raw JSON. That is by design and should be ignored.
+During any of the selected options, Preview will attempt to process a single ROW of the selected AMI set's CSV source data as it it would happen via a Queue Worker. Any referenced Files will be also validated to exist, but will not be downloaded/processed, which means also that your Preview might lack any as:filetype structure which will be reflected also when asking for a diff of the rendered version or the JSON. That is by design and should be ignored.
 
-### Option 1: Processed HTML Output
+### Option 1: Processed HTML Display
+
+Using the simplest preview option, you be able to see the processed HTML Display for the metadata that will be ingested for your selected Preview ADO. As noted above, will not see your media files rendered out and you will not see the file info reflected in the Raw JSON. That is not an error and does not mean associated files will not display after full processing + ingest is completed.
 
 ![AMI Set Preview Outcome 1](images/AMI_set_preview_output1.png)
 
