@@ -15,6 +15,7 @@ To navigate to an AMI Set, either first select the AMI set link from the [main A
 ![AMI Set Page Review](images/AMI_set_page_review.png)
 
 Every AMI Set page will include:
+
 * User Name of the person (or jsonapi user) associated with creating the AMI Set
 * Source Data File link for the associated CSV file used for the AMI Set digital objects and collections
 * If you provided a Zip File for media files during your configuration setup, a link to the uploaded Zip File.
@@ -26,6 +27,7 @@ Every AMI Set page will include:
 ![AMI Set Page Description](images/AMI_set_page_description.png)
 
 Expanding the AMI Set Description dropdown will show you:
+
 * Configured Operation for this AMI set
 * AMI Plugin used to create this set's data
 * Source data to ADO data mapping approach
