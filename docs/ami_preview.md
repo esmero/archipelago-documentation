@@ -38,9 +38,9 @@ If the Row previewed references an existing ADO (via its UUID), then a DIFF of t
 
 ### Option 3: Preview JSON as a diff
 
-![AMI Set Preview Outcome 3](images/AMI_set_preview_output3.png)
-
 If the Row previewed references an existing ADO (via its UUID), then a DIFF of the RAW JSON v/s new one will be attempted. If the ADO is new no diff will be produced.
+
+![AMI Set Preview Outcome 3](images/AMI_set_preview_output3.png)
 
 ___
 
