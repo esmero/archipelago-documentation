@@ -179,7 +179,7 @@ At the bottom of the AMI Report tab (for Archipelago 1.5.0 and up), you will see
 
 Lastly, you may wish to run a batch Action against your already-processed ADOs for a particular AMI Set. Using the 'Run Action on Processed ADOs' tab for an AMI Set, you can select from the [available Actions](find_and_replace.md#available-actions) found in your Archipelago instance. The most common Actions you might wish to run for an AMI Set's ADOs include 'Publish' or 'Unpublish', and 'Trigger Strawberrry Runners process/reprocess for Archipelago Digital Objects content item' (read more about [Archipelago's Strawberry Runners Post-Processing Options here](strawberryrunners.md)).
 
-![AMI Sets Run Action on Processed ADOS](images/AMIrunaction_1-6-0.png)
+![AMI Sets Run Action on Processed ADOS](images/AMIrunaction_1-7.png)
 
 #### Important Note about AMI's ADO Deletion Operations
 
