@@ -169,7 +169,7 @@ You can view an AMI Set's Report tab either directly within the AMI Set, top tab
     - a `message` summarizing the Processing outcome--including a title/label link to the created ADO if successful
     - a `details` summary containing system information related to the operations.
 
-![AMI Sets Page Report Operation](images/AMIreportOverview_1-6-0.png)
+![AMI Sets Page Report Operation](images/AMIreportOverview_1-7.png)
 
 You can use information found in the Reports tab to identify review your created ADOs one-by-one and identify any errors or issues that may have come up during the Process if needed.
 
