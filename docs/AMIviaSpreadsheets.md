@@ -109,12 +109,12 @@ Your newly created AMI Set will now need to be Processed.
 
 If you clicked on the 'see it here' link in Step 6, you will be brought to the AMI Set page for review. You may also select `Process` from the `Operations` menu for the AMI set from the main `AMI sets` page. From the `Process` page you can review the JSON configuration for your set (determined by your selections in the preceding steps).
 
-??? note "Review the settings configured in your AMI Set"
-   
+??? info "Review the settings configured for your AMI Set"   
        
     You may wish to double check the settings configured in your AMI Set in the Raw Metadata (JSON) on the AMI Set `View` tab before Processing.
 
-    See this guide for [Reviewing an AMI Sets Configuration and Status](ami_set_review.md)
+    See this guide related to [Reviewing an AMI Set's Configuration and Status](ami_set_review.md)
+
 
 ![AMI Admin Set Process](images/AMI_process_updated.png)
 
@@ -127,9 +127,10 @@ To Process this set, navigate to the `Process` tab. You will have multiple optio
 - Enqueuing and File Processing Options
     - **Enqueue but do not process Batch in realtime** : Check this to enqueue but not trigger the interactive Batch processing. Cron or any other mechanism you have enabled will do the actual operation. This queue is shared by all AMI Sets in this repository and will be processed on a First-In First-Out basis.
     - **Force every File attached to an ADO to be processed in its own Queue item** : Warning: This may make your ingest slower. Check this to force every file attached to an ADO to be downloaded and characterized as an independent process. This bypasses the Number of files Global setting that would otherwise trigger this behavior.
-    - **Re download and reprocess every file** : Check this to force every file attached to an ADO to be downloaded and characterized again, even if on a previous Batch run that data was already generated for reuse. IMPORTANT: Needed if e.g the URL of a file is the same but the remote source changed, if you have custom code that modifies the backend naming strategy of files.    
+    - **Re download and reprocess every file** : Check this to force every file attached to an ADO to be downloaded and characterized again, even if on a previous Batch run that data was already generated for reuse. IMPORTANT: Needed if e.g the URL of a file is the same but the remote source changed, if you have custom code that modifies the backend naming strategy of files.
+- **Preview Instead of Processing**: please see this guide related to [using AMI's Preview Function](ami_preview.md)   
 
-- Select `Confirm` to continue. 
+Make your desired choices and then select `Confirm` to continue. 
 
 You will be returned to `AMI sets` page and see a brief confirmation message regarding the Enqueuing and Processing options you selected.
   
