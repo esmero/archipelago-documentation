@@ -26,12 +26,16 @@ Every AMI Set page will include:
 
 ![AMI Set Page Description](images/AMI_set_page_description.png)
 
+### AMI Set Description
+
 Expanding the AMI Set Description dropdown will show you:
 
 * Configured Operation for this AMI set
 * AMI Plugin used to create this set's data
 * Source data to ADO data mapping approach
 * Per ADO Type processing configuration (unless the 'Direct' processing approach was used)
+
+### Last Config used
 
 ![AMI Set Page Last Config](images/AMI_set_page_last_config.png)
 
