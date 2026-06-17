@@ -15,7 +15,7 @@ tags:
 
 You can access AMI through the `AMI Sets` tab on the main Content page found at `/admin/content` or directly at `/amiset/list`.
 
-![AMI Sets List Updated](images/AMIsetsList_1-6-0.png)
+![AMI Sets List Updated](images/AMI_Sets_1-7.png)
 
 * _Easter Egg for 1.6.0+ release: you can sort the AMI Set List by the Set ID, to help you navigate quickly to your most recent AMI set._
 
@@ -24,6 +24,8 @@ You can access AMI through the `AMI Sets` tab on the main Content page found at 
 * [Spreadsheet Formatting Overview](ami_spreadsheet_overview.md)
 * [Configure the Google Sheets API](googleapi.md)
 * [Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets](AMIviaSpreadsheets.md)
+* [Reviewing AMI Set Configuration and Status](ami_set_review.md)
+* [Using AMI's Preview Function](ami_preview.md)
 * [Using AMI's Linked Data Reconciliation](ami_lod_rec.md)
 * [Using AMI's Update Operations](ami_update.md)
 * [Using the I7 Solr Importer](I7solrImporter.md)
