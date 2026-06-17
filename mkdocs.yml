@@ -106,6 +106,8 @@ nav:
       - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
       - Configuration for Google Sheets API: googleapi.md
       - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
+      - Reviewing AMI Set Configuration and Status: ami_set_review.md
+      - Using AMI's Preview Function: ami_preview.md
       - Linked Data Reconciliation: ami_lod_rec.md
       - AMI Update Sets: ami_update.md
       - Using the Islandora 7 Solr Importer: I7solrImporter.md
