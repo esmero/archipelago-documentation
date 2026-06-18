@@ -24,9 +24,7 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
     - _Supported by the Southeastern New York Library Resources Council (SENYLRC)_   
 
 - [Empire Immersive Experiences](https://esie.space)
-    - _Supported by the Western New York Library Resources Council (WNYLRC)_    
-
-- [Frick Collection and Webrecorder Team Web Archives Collaboration](https://webarchive.archipelago.nyc)
+    - _Supported by the Western New York Library Resources Council (WNYLRC)_
 
 - [Hamilton College Library & IT Services](https://litsdigital.hamilton.edu/) and [Hamilton College Institutional Repository](https://ir.hamilton.edu)
 
