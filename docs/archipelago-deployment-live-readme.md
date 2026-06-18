@@ -479,7 +479,7 @@ uname -m
 ## Caring & Coding + Fixing + Testing
 
 * [Diego Pino](https://github.com/DiegoPino)
-* [Allison Lund](https://github.com/alliomeria)
+* [Allison Sherrick](https://github.com/alliomeria)
 
 ### Historic Core Contributors (Same Caring)
 
