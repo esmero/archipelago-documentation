@@ -31,8 +31,7 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
 - [Olin College Library Phoenix Files](https://phoenixfiles.olin.edu)
     - *Early adopter - live since Summer 2020
 
-- [New York Public Radio Archives](https://www.wnyc.org/archives/collections/)
-    - *Migration to Archipelago began November 2025
+- [New York Public Radio Archives](https://archives.nypublicradio.org/)
  
 - [New York State Archives](https://findingaids.nysed.gov) Finding Aids Discovery Portal
 
