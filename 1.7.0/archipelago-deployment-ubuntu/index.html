@@ -26,7 +26,7 @@
     
     
       
-        <title>Installing Archipelago (1.6.0) Drupal 10 on Ubuntu 20.04+ - Archipelago Documentation</title>
+        <title>Installing Archipelago (1.7.0) Drupal 10 on Ubuntu 20.04+ - Archipelago Documentation</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installing-archipelago-160-drupal-10-on-ubuntu-2004" class="md-skip">
+        <a href="#installing-archipelago-170-drupal-10-on-ubuntu-2004" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installing Archipelago (1.6.0) Drupal 10 on Ubuntu 20.04+
+              Installing Archipelago (1.7.0) Drupal 10 on Ubuntu 20.04+
             
           </span>
         </div>
@@ -4506,7 +4506,7 @@
   
 
 
-<h1 id="installing-archipelago-160-drupal-10-on-ubuntu-2004">Installing Archipelago (1.6.0) Drupal 10 on Ubuntu 20.04+</h1>
+<h1 id="installing-archipelago-170-drupal-10-on-ubuntu-2004">Installing Archipelago (1.7.0) Drupal 10 on Ubuntu 20.04+</h1>
 <h2 id="about-running-terminal-commands">About running terminal commands</h2>
 <p>This guide assumes you are comfortable enough running terminal (bash) commands on a Linux Computer.</p>
 <p>We made sure that you can <code>copy</code> and <code>paste</code> each of these commands from this guide directly into your terminal.</p>
@@ -4595,7 +4595,7 @@ use: <code>- ".:/var/www/html:cached"</code></p>
 <p>Now that you got it, let's deploy:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/esmero/archipelago-deployment.git<span class="w"> </span>archipelago-deployment
 <span class="nb">cd</span><span class="w"> </span>archipelago-deployment
-git<span class="w"> </span>checkout<span class="w"> </span><span class="m">1</span>.6.0
+git<span class="w"> </span>checkout<span class="w"> </span><span class="m">1</span>.7.0
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>cp<span class="w"> </span>docker-compose-linux.yml<span class="w"> </span>docker-compose.yml
 docker-compose<span class="w"> </span>pull
@@ -4636,7 +4636,6 @@ pass:minio123
  <code>[warning] The "facets_summary_block:advance" was not found</code>
  <code>[warning] The "facets_summary_block:search_page_facet_summary" was not found</code></p>
 <p>Nothing to worry about. We will provide the missing part in Step 5.</p>
-<p>Note 2: Please be patient. This step takes now 25-30% longer because of how the most recent Drupal Installation code fetches translations and other resources (see <code>Performed install task</code>). This means progress might look like getting "stuck", go and get a coffee/tea and let it run to the end.</p>
 <p>Once finished, this will give you an <code>admin</code> Drupal user with <code>archipelago</code> as password (change this if running on a public instance!) and also set the right Docker Container owner for your Drupal installation files.</p>
 <p>Note about Steps 2-3: You don't need to, nor should you do this more than once. You can destroy/stop/update, recreate your Docker containers, and start again (<code>git pull</code>), and your Drupal and Data will persist once you've passed the <code>Installation complete</code> message. I repeat, all other containers' data is persisted inside the <code>persistent/</code> folder contained in this cloned git repository. Drupal and all its code is visible, editable, and stable inside your <code>web/</code> folder.</p>
 <p>Final Note/optional: In between releases (Post release announcement, the period between 1.6.0 and 1.7.0), you can always run:</p>
@@ -4650,7 +4649,7 @@ pass:minio123
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'drush urol administrator "admin"'</span>
 </code></pre></div><p></p>
 <h2 id="step-5-ingest-some-metadata-displays-to-make-playing-much-more-interactive">Step 5: Ingest some Metadata Displays to make playing much more interactive</h2>
-<p>Archipelago is more fun without having to start writing Metadata Displays (in Twig) before you know what they actually are. Since you should now have a <code>jsonapi</code> user and jsonapi should be enabled, you can use that awesome functionality of D8 to get that done. We have 4 demo Metadata Display Entities that go well with the demo Webform we provided. To do that execute in your shell (copy and paste):</p>
+<p>Archipelago is more fun without having to start writing Metadata Displays (in Twig) before you know what they actually are. Since you should now have a <code>jsonapi</code> user and jsonapi should be enabled, you can use that awesome functionality to get that done. We have multiple demo Metadata Display Entities that go well with the demo Webform we provided. To do that execute in your shell (copy and paste):</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>esmero-php<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'scripts/archipelago/deploy.sh'</span>
 </code></pre></div>
 <p>You are almost done! Open your most loved Web Browser and point it to <code>http://localhost:8001</code> and log in as your 'admin' user.</p>
@@ -4659,9 +4658,7 @@ pass:minio123
 Please, once logged in, navigate to <a href="http://localhost:8001/admin/config/search/search-api">http://localhost:8001/admin/config/search/search-api</a> and press, if present,
 the "Execute pending tasks" button (in blue). This is new behavior (during a deployment from cero) for Drupal Search API.
 It should take less tan a second and will inform the Search Index that there are indeed no OCRs/VTTs or ML annotations (strawberry flavors)
-in the system yet (something that was never an issue before). 
-Eventually we will understand what changed in their November 2025 code making this extra step needed,
-and why also they removed the drush command that allows this to be run via the command line. Oh well.</p>
+in the system yet (something that was never an issue before). </p>
 <p>Note: It can take some time to start the first time (Drupal needs some warming up). The Ubuntu deployment is WAY faster than the OSX deployment because of the way the bind mount volumes are handled by the driver. Our experience is that Archipelago basically reacts instantly!</p>
 <h2 id="step-6-optional-but-more-fun-if-you-add-content">Step 6: Optional but more fun if you add content</h2>
 <p><a href="../archipelago-deployment-democontent/">One-Step Demo content ingest</a></p>
@@ -4704,7 +4701,7 @@ and why also they removed the drush command that allows this to be run via the c
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 24, 2026 21:47:10 UTC">February 24, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 01:33:21 UTC">June 18, 2026</span>
   </span>
 
     
