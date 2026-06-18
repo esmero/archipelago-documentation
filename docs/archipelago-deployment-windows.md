@@ -1,5 +1,5 @@
 ---
-title: "Installing Archipelago (1.6.0) Drupal 10 on Windows 10/11"
+title: "Installing Archipelago (1.7.0) Drupal 10 on Windows 10/11"
 tags:
   - Archipelago-deployment
   - Drupal 10
@@ -7,7 +7,7 @@ tags:
   - Ubuntu
 ---
 
-# Installing Archipelago (1.6.0) Drupal 10 on Windows 10/11
+# Installing Archipelago (1.7.0) Drupal 10 on Windows 10/11
 
 ## Prerequisites
 

@@ -7,13 +7,14 @@ tags:
 
 # Archipelago Deployment Live
 
-A Cloud / Local production ready Archipelago 1.6.0 Deployment (Drupal 10) using Docker,
-For Drupal 11 (IOHO less stable) please follow the [Archipelago 2.0.0 Deployment Live](https://github.com/esmero/archipelago-deployment-live/blob/2.0archipelago-deployment-live-readme.md) guide. Same features but different code (and more work for us!).
+A Cloud / Local production ready Archipelago 1.7.0 Deployment (Drupal 10) using Docker,
+For Drupal 11 (IOHO less stable) please follow the [Archipelago 2.1.0 Deployment Live](https://github.com/esmero/archipelago-deployment-live/blob/2.0archipelago-deployment-live-readme.md) guide. Same features but different code (and more work for us!).
 
+Last updated: Jun 17th 2026 for Drupal 10.6.11 and Archipelago 1.7.0 (and 2.1.0) release day!
 
-Last updated:  May 22nd 2026 for https://www.drupal.org/psa-2026-05-18 (Drupal 10.6.9)
+Previously updated: for 1.6.0, May 22nd 2026 for https://www.drupal.org/psa-2026-05-18 (Drupal 10.6.9)
 
-Previously updated: December 10th 2025.
+Previously updated: for 1.6.0, December 10th 2025.
 
 
 ## What is this repo for?
@@ -27,6 +28,19 @@ Running Archipelago Commons on a live public instance using SSL with Blob/Object
 ## What is this repo not for? 
 
 - Running your own local/development Archipelago. For that we suggest using <https://github.com/esmero/archipelago-deployment>
+
+### What is inside this dumpling for 1.7.0? (new section)
+
+- minio.io (latest) for local or Routed S3 with Console. We recommend disabling it and using directly a cloud managed S3 for better performance and full multipart upload compliance if deciding to go for the route (default) version.
+- Updated Apache Solr 10.0 with custom built and updated wizardly Solr OCR Highlight library [v0.10](https://github.com/dbmdz/solr-ocrhighlighting) coded and maintained by the Development Team at the [Bavarian State Library](https://github.com/dbmdz). Thanks Johannes Baiter and team.
+- MySQL 8.4(amd64/x86) or MariaDB 12.3 (Arm64/M1/M2/M3/M4/M5)
+- Updated NGINX 1.31.1
+- Updated Custom PHP-FPM 8.3 multi architecture, fine-tuned for Drupal 10/11 , WARC to WACZ processing, Tesseract 5 with JP2 support, PDFAlto(what a pain to build!) and latest Composer 2.x, Drush 13.x-dev, FFMPEG, FIDO, plus (NEW) Audiowave for Waveform to JSON extraction and BWFmetaedit for WAV files holding BWF metadata (Checksumming and other extras per stream).
+- Natural Language Processing via NLPWEB64 multi architecture with FastText Language detection (Thanks Mike Bennett!) or alternatively Machine learning/ML containers/APIs. (Image similarity: YOLO,MobileNet,ViT(New),Insightface and Text transformer: SBERT) differentiated for arm64 and amd/intel/64
+- New Cantaloupe 6.0.6 (our own versioning, but based on latest `dev` upstream) on Java 26, multi architecture, IIIF2/3 Server with precise Video Frame, PDF extraction, PDF Tiling support, new Jetty with tons of community and custom fixes.
+- A Skeleton Project setup to run latest Version of Drupal 10 (10.6.11), Updated Archipelago Chiloe Base theme based on Bootstrap 5 with Light/Dark Mode (for those late night dwellers) and Strawberry Field modules on 2.1.0.
+- Complete support for Apple Silicon M1/M2/M3/M4/M5 Machines and in general arm64 architecture Chips like Raspberry Pi 4, with specially built arm64 docker containers. The only differences now between deployment strategies is the DB. Blazing fast OCR.
+- A freshly baked Anubis with bugfixes, more Bot control and new options for rules. Also faster.
 
 ## Requirements
 
@@ -106,7 +120,7 @@ In your location of choice clone this repo
 ```shell
 git clone https://github.com/esmero/archipelago-deployment-live
 cd archipelago-deployment-live
-git checkout 1.6.0
+git checkout 1.7.0
 ```
 
 ### Step 3. Setup your enviromental variables for Docker/Services
@@ -125,7 +139,7 @@ nano deploy/ec2-docker/.env
 ```
 
 The content of that file would be similar to this. 
-`Note`: There are a few extra commented lines at the end only used for: https://docs.archipelago.nyc/1.5.0/security_bots/ if you decide to go that way.
+`Note`: There are a few extra commented lines at the end only used for: https://docs.archipelago.nyc/1.7.0/security_bots/ if you decide to go that way, but also not needed if running `anubis`.
 
 ```env
 ARCHIPELAGO_ROOT=/home/ec2-user/archipelago-deployment-live
@@ -158,7 +172,7 @@ What does each key mean?
 - `MINIO_FOLDER_PREFIX_CACHE`:  The `folder` (a prefix really) where Cantaloupe will/can write its `iiif` caches. `iiifcache/` is a _lovely_ name we use a lot. **IMPORTANT:** Always terminate these with a `/`.
 - `REDIS_PASSWORD`: Password for your REDIS (Drupal Cache/Queue storage) if you decide to enable the Drupal REDIS module.
 - `PHP_MEMORY_LIMIT`: PHP's (esmero-php) Memory limit in Megabytes without the "M" at the end(so just a number). Defaults to 1024
-- `PHP_CLI_MEMORY_LIMIT`: PHP's (esmero-php) client (the php command, drush and hydropinics) Memory limit in Megabytes without the "M" at the end(so just a number) t. Defaults to PHP_MEMORY_LIMIT. If you are going to enabled Search API Background indexing, new to 1.5.0, then this number should be ideally 2048 so the queue can render/ingest/and do its Drupal magic.
+- `PHP_CLI_MEMORY_LIMIT`: PHP's (esmero-php) client (the php command, drush and hydropinics) Memory limit in Megabytes without the "M" at the end(so just a number) t. Defaults to PHP_MEMORY_LIMIT. If you are going to enabled Search API Background indexing, new since 1.5.0, then this number should be ideally 2048 so the queue can render/ingest/and do its Drupal magic.
 - `ANUBIS_PRIVATE_KEY`: Since 1.5.0. Because we (and you) do not like ML Bots (or people making money out of your data and re-selling the output as canned/simplified answers), you should put the output of ```openssl rand -hex 32``` in this key.
 
 `IMPORTANT NOTE`: For AWS EC2. If you selected an `IAM role` for your server when setting it up/deploying it, `min.io` will use the AWS EC2-backed internal API to request access to your S3. This means the ROLE itself needs to have read/write access (ACL) to the given Bucket(s) and your key/secrets won't be able to override that. Please do not ignore this note. It will save you a LOT of frustration and coffee. You can also run an EC2 instace without a given IAM and in that case just the ACCESS_KEY/SECRET will matter.
@@ -185,36 +199,6 @@ This means you will use the `docker-compose-aws-s3-arm64.yml`. Do the following:
 cp deploy/ec2-docker/docker-compose-aws-s3-arm64.yml deploy/ec2-docker/docker-compose.yml
 ```
 
-#### OR Running self-signed? (optional and does not apply to ARM64/Apple M1 Architecture): 
-
-Only if you are not running a fully qualified domain you wish a valid/signed. We **really DO not** recommend this route. IF you plan on using this deployment for local testing or running on non SSL please go for <https://github.com/esmero/archipelago-deployment> which delivers the same experience in less than 20 minutes deployment time.
-
-Generate a self signed Cert
-
-```shell
-sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout data_storage/selfcert/private/nginx.key -out data_storage/selfcert/certs/nginx.crt 
-sudo openssl dhparam -out data_storage/selfcert/dhparam.pem 4096
-cp deploy/ec2-docker/docker-compose-selfsigned.yml deploy/ec2-docker/docker-compose.yml
-```
-
-Note: Self signed docker-compose.yml file is setup to use min.io with local storage
-
-```yaml
-    volumes:
-      - ${ARCHIPELAGO_ROOT}/data_storage/minio-data:/data:cached
-```
-
-This folder will be created by min.io. If you are using a secondary Drive (e.g. magnetic) you can modify your `deploy/ec2-docker/docker-compose.yml` to use a folder there, e.g.
-
-```yaml
-    volumes:
-      - /persistentinotherdrive/data_storage/minio-data:/data:cached
-```
-
-Make sure your logged in user can read/write to it.
-
-NOTE: If you want to use AWS S3 storage for the self signed version replace the minio Service yaml block with this [Service Block](https://github.com/esmero/archipelago-deployment-live/blob/e90cf7701f1ae8e0a580a0901aaadb669baa21fd/deploy/ec2-docker/docker-compose-aws-s3.yml#L108-L125) in your new `deploy/ec2-docker/docker-compose.yml`. You can mix and match services and even remove all `:cached` statements for _improved_ R/W volumen performance.
-
 ### Step 4. First Run
 
 Be sure you are in your archipelago-deployment-live (Git) base folder.
@@ -231,7 +215,7 @@ sudo chown -R 8983:8983 data_storage/solrcore
 
 #### Second, Choices (so many)
 
-Archipelago 1.6.0 ships (since 1.5.0) with a custom [Anubis](https://anubis.techaro.lol/), an OSS Application Firewall/middleware that will alliviate some very valid concerns (and late night server hiccups, even costs related issues) related to AI/ML/Bot swarms and unwanted traffic. But you need to choose. And you need to choose now. Want it enabled immediately? Later on? In any case we need to do some setup. Not hard. Let's get started.
+Archipelago ships (since 1.5.0) with a custom [Anubis](https://anubis.techaro.lol/) and for this release also a freshly renewed (new tag) one. Anubis is an OSS Application Firewall/middleware that will alliviate some very valid concerns (and late night server hiccups, even costs related issues) related to AI/ML/Bot swarms and unwanted traffic. But you need to choose. And you need to choose now. Want it enabled immediately? Later on? In any case we need to do some setup. Not hard. Let's get started.
 
 ##### Important Note About Troubleshooting Anubis Configurations
 
@@ -323,7 +307,7 @@ Now press CTRL+C. `docker-compose` will shutdown gracefully. Good!
 
 ### Step 5. Deploy Drupal 10
 
-#### Composer and Drupal
+#### Composer
 
 Copy the shipped default composer.default.json to composer.json and composer.default.lock to composer.lock (ONLY if you are installing from scratch):
 
@@ -356,6 +340,41 @@ Run the following command to fetch any last minute (if any) updates of our core 
 docker exec -ti esmero-php bash -c "composer update archipelago/* strawberryfield/*"
 ```
 
+#### Note on Composer, Github and VCS repositories
+
+for this release we had to patch Drupal and contributed modules a lot. We waited patiently for the maintainers to merge/accept or even review our changes, but sometimes people are busy (for months!), so we had opt for fetching versions from forks and our own diverging (and very well tested) modifications. You might want to peek into the `composer.json` to see where/what is being fetched from other sources. That said. When you are running `composer update` and specially, if you do that very often, `Github` might ask you to generate a token (which requires you to have a Github account) to access the APIs without throttling limits. The message you will see might be like this:
+
+```shell
+GitHub API limit (60 calls/hr) is exhausted, could not fetch https://api.github.com/repos/DiegoPino/tableschema-php/commits/6d36f14a53c627aa12bca5837218f7e5fb0cfba7. Create a GitHub OAuth token to go over the API rate limit. You can also wait until 202X-XX-XX XX:XX:XX for the rate limit to reset.
+
+You need to provide a GitHub access token.
+Tokens will be stored in plain text in "/root/.config/composer/auth.json" for future use by Composer.
+Due to the security risk of tokens being exfiltrated, use tokens with short expiration times and only the minimum permissions necessary.
+
+Carefully consider the following options in order:
+
+1. When you don't use 'vcs'  type 'repositories'  in composer.json and do not need to clone source or download dist files
+from private GitHub repositories over HTTPS, use a fine-grained token with read-only access to public information.
+Use the following URL to create such a token:
+https://github.com/settings/personal-access-tokens/new?name=Composer+on+XXXX
+
+2. When all relevant _private_ GitHub repositories belong to a single user or organisation, use a fine-grained token with
+repository "content" read-only permissions. You can start with the following URL, but you may need to change the resource owner
+to the right user or organisation. Additionally, you can scope permissions down to apply only to selected repositories.
+https://github.com/settings/personal-access-tokens/new?contents=read&name=Composer+on+XXXX
+
+3. A "classic" token grants broad permissions on your behalf to all repositories accessible by you.
+This may include write permissions, even though not needed by Composer. Use it only when you need to access
+private repositories across multiple organisations at the same time and using directory-specific authentication sources
+is not an option. You can generate a classic token here:
+https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+XXXX
+
+```
+
+If you hit this limit (will never happen during a `composer install`), please follow the link on `1.`. It will generate a token (copy it please) that you can paste (it please) into the terminal. Then press enter. That is all. Tokens last some time so you won't be bothered again.
+
+#### Now onto Drupal
+
 Once done, execute our setup script that will prepare your Drupal `settings.php` and bring some of the `.env` enviromental variables to the Drupal environment. 
 
 ```shell
@@ -365,8 +384,6 @@ docker exec -ti esmero-php bash -c 'scripts/archipelago/setup.sh'
 And now you can deploy Drupal! 
 
 **IMPORTANT:** Make sure you replace in the following command inside `root:MYSQL_ROOT_PASSWORD` the `MYSQL_ROOT_PASSWORD` string with the **value** you used/assigned in your `.env` file for `MYSQL_ROOT_PASSWORD`. And replace `ADMIN_PASSWORD` with a password that is safe and you won't forget! That passwords is for your Drupal super user (uid:1). 
-
-**IMPORTANT 2:** Also make sure you are INDEED running Drush Version 13. (`docker exec -ti -u www-data esmero-php bash -c "drush version"`). Why this last comment? This is just in case you "cloned" this repository before we made that change (always do a git clone before starting!). The original guide of our previous release, 1.5.0, (June 10th 2025) used Drush 12 and because of some bugs/warnings we upgraded composer.json and its lock (June 19th 2025!) to drush 13, still under 1.5.0. That applies to 1.6.0 too, adding a new argument to the following command.
 
 ```shell
 docker exec -ti -u www-data esmero-php bash -c "cd web;../vendor/bin/drush -y si --verbose --existing-config --extra=--skip-ssl --db-url=mysql://root:MYSQL_ROOT_PASSWORD@esmero-db/drupal --account-name=admin --account-pass=ADMIN_PASSWORD -r=/var/www/html/web --sites-subdir=default --notify=false;drush cr;chown -R www-data:www-data sites;"
@@ -404,7 +421,7 @@ docker exec -ti esmero-php bash -c 'scripts/archipelago/deploy.sh'
 ```
 
 **IMPORTANT:**  `update_deployed.sh` is not needed when deploying for the first time and totally **discouraged** on a customized Archipelago. 
-If you make modifications to your `Twig templates`, that command will **replace** the ones shipped by us with fresh copies overwriting all your modifications. Only run to restore larger errors or when needing to update **everything** ones with newer versions and you don't care for your own customization. Please read https://docs.archipelago.nyc/1.6.0/utility_scripts/ for more ways of managing exporting/importing Metadata Display Entities (Twig templates).
+If you make modifications to your `Twig templates`, that command will **replace** the ones shipped by us with fresh copies overwriting all your modifications. Only run to restore larger errors or when needing to update **everything** ones with newer versions and you don't care for your own customization. Please read https://docs.archipelago.nyc/1.7.0/utility_scripts/ for more ways of managing exporting/importing Metadata Display Entities (Twig templates).
 
 ### Step 7. Set your public IIIF server URL to your actual domain
 
@@ -439,15 +456,14 @@ Please, once logged in, navigate to `/admin/config/search/search-api>` and press
 the "Execute pending tasks" button (in blue). This is new behavior (during a deployment from cero) for Drupal Search API.
 It should take less tan a second and will inform the Search Index that there are indeed no OCRs/VTTs or ML annotations (strawberry flavors)
 in the system yet (something that was never an issue before). 
-Eventually we will understand (and work around) what changed in their November 2025 code making this extra little step needed,
-and why also they removed the drush command that allows this to be run via the command line.
+We discussed this issue with the maintainers, they are aware, but can not provide a solution for now.
 
 And Done Done! Thank you for following this guide!
 
 ## Deployment on ARM64/v8(Graviton, Apple M1) system:
 
 This applies to AWS `m6g` and `t3g` Instances and is documented inline in this guide. Please open an [ISSUE](https://github.com/esmero/archipelago-deployment-live/issues) in this repository if you run into any problems.
-Please review <https://github.com/esmero/archipelago-deployment-live/blob/1.6.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml> for more info.
+Please review <https://github.com/esmero/archipelago-deployment-live/blob/1.7.0/deploy/ec2-docker/docker-compose-aws-s3-arm64.yml> for more info.
 
 ### How do I know my Architecture?
 
@@ -464,6 +480,9 @@ uname -m
 
 * [Diego Pino](https://github.com/DiegoPino)
 * [Allison Lund](https://github.com/alliomeria)
+
+### Historic Core Contributors (Same Caring)
+
 * [Giancarlo Birello](https://github.com/giancarlobi)
 
 ## Acknowledgments
