@@ -24,17 +24,14 @@ The Archipelagos listed below are supported by the [Digital Services Team at the
     - _Supported by the Southeastern New York Library Resources Council (SENYLRC)_   
 
 - [Empire Immersive Experiences](https://esie.space)
-    - _Supported by the Western New York Library Resources Council (WNYLRC)_    
-
-- [Frick Collection and Webrecorder Team Web Archives Collaboration](https://webarchive.archipelago.nyc)
+    - _Supported by the Western New York Library Resources Council (WNYLRC)_
 
 - [Hamilton College Library & IT Services](https://litsdigital.hamilton.edu/) and [Hamilton College Institutional Repository](https://ir.hamilton.edu)
 
 - [Olin College Library Phoenix Files](https://phoenixfiles.olin.edu)
     - *Early adopter - live since Summer 2020
 
-- [New York Public Radio Archives](https://www.wnyc.org/archives/collections/)
-    - *Migration to Archipelago began November 2025
+- [New York Public Radio Archives](https://archives.nypublicradio.org/)
  
 - [New York State Archives](https://findingaids.nysed.gov) Finding Aids Discovery Portal
 
@@ -58,7 +55,7 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
 
 - [California Revealed](https://repository.californiarevealed.org/)
 
-- [Christian Observatory of the Pro Civitate Christiana](https://janus.amiciosservatorio.org/)
+- [Christian Observatory of the Pro Civitate Christiana](https://procivitate.assisi.museum/)
 
 - [Consiglio Nazionale delle Ricerche / National Research Council of Italy](https://www.cnr.it/)
     - [https://dbopen.ba.cnr.it/](https://dbopen.ba.cnr.it/)
@@ -66,6 +63,8 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
     - [https://vitisgrinzane.ipsp.cnr.it/](https://vitisgrinzane.ipsp.cnr.it/)
     - [http://archipelago.byterfly.eu/](http://archipelago.byterfly.eu/) 🦋
         - [Virtual Tour Santuario Paola](http://archipelago.byterfly.eu/do/5aea0a3f-cf03-40cc-9611-924dea1fd806)
+
+- [Texas A&M Digital Collections](https://digitalcollections.library.tamu.edu)
 
 - [Universidad Nacional Autónoma de México](https://archivodigital.iibi.unam.mx/es)
     - *access restricted to on-campus only*
