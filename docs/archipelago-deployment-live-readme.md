@@ -8,7 +8,7 @@ tags:
 # Archipelago Deployment Live
 
 A Cloud / Local production ready Archipelago 1.7.0 Deployment (Drupal 10) using Docker,
-For Drupal 11 (IOHO less stable) please follow the [Archipelago 2.1.0 Deployment Live](https://github.com/esmero/archipelago-deployment-live/blob/2.0archipelago-deployment-live-readme.md) guide. Same features but different code (and more work for us!).
+For Drupal 11 (IOHO less stable) please follow the [Archipelago 2.1.0 Deployment Live](https://github.com/esmero/archipelago-deployment-live/blob/2.1archipelago-deployment-live-readme.md) guide. Same features but different code (and more work for us!).
 
 Last updated: Jun 17th 2026 for Drupal 10.6.11 and Archipelago 1.7.0 (and 2.1.0) release day!
 
