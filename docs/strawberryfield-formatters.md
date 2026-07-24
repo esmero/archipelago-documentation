@@ -13,26 +13,39 @@ Archipelago's [Strawberryfield Formatters](https://github.com/esmero/format_stra
 
 The following Strawberryfield Formatters are shipped and configured with corresponding [View Modes](primerdisplaymodes.md#default-view-modes-bundled-in-archipelago) in Archipelago.
 
-1. Strawberry Field 3D Model Formatter
-2. Strawberry Field Audio Formatter
-3. Strawberry Field Simple Citation Formatter
-4. Strawberry Field Simple Image Formatter using IlIF
-5. Strawberry Field Map Formatter using the Leaflet and GeoJson*
-6. Strawberry Field Media Formatter using OpenSeadragon for IIIF media
-7. Strawberry Field Formatter for Custom Metadata Templates
-8. Strawberry Field Media Formatter using the Mirador * IIIF Viewer plugin
-9. Strawberry Field Paged Formatter using IABook Readerplugin
-10. Strawberry Field Panorama Formatter using Pannellum * and IIIF
-11. Strawberry Field PDF Formatter for IIIF served PDFs
-12. Strawberry Field Media Formatter using the Universal (UV) * IIIF Viewer plugin
-13. Strawberry Field Video Formatter
-14. Strawberry Warc Formatter using replay.web embedded player
-15. Strawberry Default Formatter
-16. Strawberry Field Pretty Formatter
+### IIIF Mediated Formatters
+
+See guide for [IIIF mediated Viewers here](/iiif_mediated_formatters_overview.md)
+
+Formatters that use IIIF Twig templates to process media and generate IIIF manifests:
+
+- Strawberry Field Simple Image Formatter using IIIF
+- Strawberry Field Media Formatter using OpenSeadragon for IIIF media
+- Strawberry Field Media Formatter using the Mirador * IIIF Viewer plugin
+- Strawberry Field Paged Formatter using IABook Readerplugin
+- Strawberry Field 3D Model Formatter
+- Strawberry Field Panorama Formatter using Pannellum * and IIIF
+- Strawberry Field PDF Formatter for IIIF served PDFs
+- Strawberry Field Media Formatter using the Universal (UV) * IIIF Viewer plugin
+
+### Direct Media or JSON Object Data Formatters
+
+See guide for [Direct Media or JSON Object Data Formatters here](/direct_media_json_formatters.md)
+
+Formatters that process media files or JSON object data directly for display outputs:
+
+- Strawberry Field Audio Formatter
+- Strawberry Field Simple Citation Formatter
+- Strawberry Field Map Formatter using the Leaflet and GeoJson*
+- Strawberry Field Formatter for Custom Metadata Templates
+- Strawberry Field Video Formatter
+- Strawberry Warc Formatter using replay.web embedded player
+- Strawberry Default Formatter
+- Strawberry Field Pretty Formatter
 
 ## Overview and Example Walkthrough
 
-The rest of this documentation guide will provide an overview of Archipelago's Strawberryfield Formatters and how they work using the default View Mode `Digital Object Full View` as an example.
+The rest of this documentation guide will provide an overview of Archipelago's Strawberryfield Formatters more generally and how they work using the default View Mode `Digital Object Full View` as an example.
 
 ### At a glance
 
@@ -99,4 +112,3 @@ ___
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
 
 Return to the [Archipelago Documentation main page](index.md).
-  
