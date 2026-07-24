@@ -15,7 +15,7 @@ The following Strawberryfield Formatters are shipped and configured with corresp
 
 ### IIIF Mediated Formatters
 
-See separate guide for [IIIF mediated Viewers here](/iiif_mediated_formatters_overview.md)
+See separate guide for [IIIF mediated Viewers here](iiif_mediated_formatters_overview.md)
 
 Formatters that use IIIF Twig templates to process media and generate IIIF manifests:
 
@@ -30,7 +30,7 @@ Formatters that use IIIF Twig templates to process media and generate IIIF manif
 
 ### Direct Media or JSON Object Data Formatters
 
-See separate guide for [Direct Media or JSON Object Data Formatters here](/direct_media_json_formatters.md)
+See separate guide for [Direct Media or JSON Object Data Formatters here](direct_media_json_formatters.md)
 
 Formatters that process media files or JSON object data directly for display outputs:
 
