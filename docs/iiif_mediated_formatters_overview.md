@@ -63,7 +63,7 @@ See [separate guide for this formatter here](mirador_iiif_formatter.md), and som
 
 ## Strawberry Field Paged Formatter using IABook Readerplugin
 
-Archipelago provides a formatter integration for the popular [Internet Archive Bookreader](https://github.com/internetarchive/bookreader). 
+This formatter displays media using the [Internet Archive Bookreader](https://github.com/internetarchive/bookreader). 
 
 You can find the default IA Bookreader Formatter settings configuration form at:
 - `admin/structure/types/manage/digital_object/display/digital_object_with_book_reader`
@@ -88,6 +88,8 @@ Select the small settings cogwheel to the right of the `Erdbeere` field + `Straw
 
 ## Strawberry Field 3D Model Formatter
 
+This formatter displays 3D media using a lightweight 3D Object viewer.
+
 You can find the default 3D Model Formatter settings configuration form at:
 - `admin/structure/types/manage/digital_object/display/digital_object_with_3d_viewer`
 - Through the `Manage` menu > `Structure` > Content types > Digital Object > Manage display > Select 'Digital Object with 3D Viewer'
@@ -111,7 +113,7 @@ Select the small settings cogwheel to the right of the `Erdbeere` field + `Straw
 
 ## Strawberry Field Panorama Formatter using Pannellum * and IIIF
 
-Archipelago provides a formatter integration for the [Pannellum](https://github.com/mpetroff/pannellum) open source panorama viewer for the web.
+This formatter displays media using the [Pannellum](https://github.com/mpetroff/pannellum) open source panorama viewer for the web.
 
 You can find the default Pannellum Formatter settings configuration form at:
 - `admin/structure/types/manage/digital_object/display/digital_object_with_pannellum_panorama`
@@ -136,7 +138,7 @@ Select the small settings cogwheel to the right of the `Erdbeere` field + `Straw
 
 ## Strawberry Field PDF Formatter for IIIF served PDFs
 
-Archipelago provides a formatter integration for a lightweight, browser driven [Javascript PDF Reader](https://github.com/mozilla/pdf.js).
+This formatter displays media using a lightweight, browser driven [Javascript PDF Reader](https://github.com/mozilla/pdf.js).
 
 You can find the default PDF Formatter settings configuration form at:
 - `admin/structure/types/manage/digital_object/display/digital_object_with_pdf`
@@ -160,9 +162,7 @@ Select the small settings cogwheel to the right of the `Erdbeere` field + `Straw
 
 ## Strawberry Field Media Formatter using the Universal (UV) * IIIF Viewer plugin
 
-Archipelago provides a formatter integration for [Universal Viewer](https://github.com/universalviewer/universalviewer).
-
-There is not an example use of this formatter in default Archipelago deployments. You can find the option for this formatter listed in the Formatters dropdown list for any pre-configured display mode + formatter setup, labeled as `Strawberry Field Formatter using the Universal (UV) * IIIF Viewer plugin` in the formatter dropdown menu.
+Archipelago provides a formatter integration for [Universal Viewer](https://github.com/universalviewer/universalviewer), but there is not an example use of this formatter in default Archipelago deployments. You can find the option for this formatter listed in the Formatters dropdown list for any pre-configured display mode + formatter setup, labeled as `Strawberry Field Formatter using the Universal (UV) * IIIF Viewer plugin` in the formatter dropdown menu.
 
 For this formatter, the settings available for configuring include: selecting the Exposed Metadata Endpoints used to generate the Manifests, , defining Max Height + Width, specifying the source JSON Keys for the media files, setting the number of files to be used, setting for enabling embargo hiding, and a checkbox to set whether to use global IIIF URLs or not.
 
