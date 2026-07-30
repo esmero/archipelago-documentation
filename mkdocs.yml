@@ -49,7 +49,12 @@ nav:
         - SMTP Configuration: generalqa_smtp_configuration.md
         - Twig Modules Configuration: generalqa_twig_modules_configuration.md
     - Site Administration & Configuration:
-      - Strawberryfield Formatters: strawberryfield-formatters.md
+      - Strawberryfield Formatters: 
+        - strawberryfield-formatters.md
+        - IIIF Mediated Formatters: iiif_mediated_formatters_overview.md
+        - Direct Media Formatters: direct_media_json_formatters.md
+        - Custom A/V Formatter: custom_av_formatter.md
+        - Mirador Formatter: mirador_iiif_formatter.md
       - Primer on Display Modes: primerdisplaymodes.md
       - Creating Display Modes: createdisplaymodes.md
       - Customizable A/V Formatters: custom_av_formatter.md
