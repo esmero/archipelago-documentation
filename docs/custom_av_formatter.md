@@ -39,7 +39,38 @@ An ADO can also override this formatters OSD settings by providing (partial exam
 
 ## Video Formatter Example
 
-A custom video formatter example will be provided and documented soon. Please check back for related updates.
+Archipelago's Video Formatter provides both a lightweight, browser-based HTML5 video player or a customized/stylized [Wavesurfer](https://wavesurfer.xyz) player. 
+
+For default Archipelagos, you can find the default Video settings configuration form at:
+- `admin/structure/types/manage/digital_object/display/digital_object_with_video_player`
+- Through the `Manage` menu > `Structure` > Content types > Digital Object > Manage display > Select 'Digital Object with Video Player
+
+Select the small settings cogwheel to the right of the `Erdbeere` field + `Strawberry Field Video Formatter` to review the custom Video formatter settings.
+
+
+??? info "Default configurations used"
+
+    - Use IIIF Global Urls? Yes.
+    - IIIF Media Server base URI: https://dcmny.org/cantaloupe/iiif/2
+    - IIIF Media Server Internal base URI: http://esmero-cantaloupe:8182/iiif/2
+    - Media fetched from JSON "as:video" key
+    - Embargo Alternate upload JSON Keys: Do not provide alternate files when embargoed
+    - Viewer for embargoed Objects is hidden
+    - Use JMESPath? No.
+    - No JMESPath expression used
+    - No Alternative JMESPath expression used
+    - Fallback to non JMESPath? No.
+    - Plays Video from JSON
+    - Number of Videos: "1"
+    - Maximum size: 100% x auto
+    - Poster Frame Generation: Extract first frame of the movie via IIIF in realtime
+    - Additional options for using the WaveSurfer JS library, external or native HTML controls all unchecked.
+
+
+An example display of the default Video Formatter + simple HTML5 video player can be seen by reviewing this Archipelago Digital Object: [Food for Thought](https://dcmny.org/do/05ea3366-00ff-4fd9-b147-24bf1889aca3).
+
+![Food for Thought Video Example](images/food_for_thought_video_example.png)
+
 
 ___
 
