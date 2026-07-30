@@ -29,9 +29,11 @@ See [Customizable A/V Formatters Configuration documentation here](custom_av_for
 
 ## Strawberry Field Simple Citation Formatter
 
-This `Strawberry Field Simple Citation Formatter` can be used to display citation information for your Archipelago Digital Objects. 
+This `Strawberry Field Simple Citation Formatter` can be used to display citation information for your Archipelago Digital Objects by making use of an integration with [BibCite](https://www.drupal.org/project/bibcite) --and corresponding Metadata Display (Twig) templates. 
 
-There is not an example use of this formatter in default Archipelago deployments. You can find the option for this formatter listed in the Formatters dropdown list for any pre-configured display mode + formatter setup. 
+There is not an example use of this formatter in default Archipelago deployments, and this integration may be sunset in future releases in favor of utilizing Archipelago-native Twig templates only. 
+
+You can find the option for this formatter listed in the Formatters dropdown list for any pre-configured display mode + formatter setup. 
 
 ![Simple Citation Formatter Example](images/simple_citation_formatter_example.png)
 
@@ -72,17 +74,63 @@ Under 'Render settings', you can review the default configurations for this View
     - All other optional settings are left empty/not configured.
 
 
-
 ## Strawberry Field Formatter for Custom Metadata Templates
+
+This formatter casts your plain Strawberry Field JSON into other metadata formats using configurable templates, such as casting Archipelago Digital Object JSON data into formatted HTML through the Object Description twig template.
+
+You can find an example of this formatter being used in almost every provided default view mode. One example can be found in the `Digital Object Full View` settings configuration form at:
+- `admin/structure/types/manage/digital_object/display/digital_object_viewmode_fullitem`
+- Through the `Manage` menu > `Structure` > Content types > Digital Object > Manage display > Select 'Digital Object Full View'
+
+Click on the small settings cogwheel on the right hand side of the 'Strawberry Field Formatter for Custom Metadata Templates' formatter to review the formatter settings.
+
+You will most often see the "Object Description" metadata display template listed for the metadata template, with the option to "Use Global IIIF Urls" checked.
+
+Please see our full documentation related to [Twig Templates and Archipelago, here](metadatatwigs.md).
 
 ## Strawberry Field Video Formatter
 
+See [Customizable A/V Formatters Configuration documentation here](custom_av_formatter.md).
+
 ## Strawberry Warc Formatter using replay.web embedded player
+
+This formatter integrates with [Webrecorder's ReplayWeb](https://webrecorder.net/replaywebpage/) browser-based web archive viewer.
+
+You can find the default Warc Formatter settings configuration form at:
+- `admin/structure/types/manage/digital_object/display/digital_object_with_replay_web_webarchive_with_navbars_`
+- Through the `Manage` menu > `Structure` > Content types > Digital Object > Manage display > Select 'Digital Object with WARC Replay.web Widget'
+
+Select the small settings cogwheel to the right of the `Erdbeere` field + `Strawberry Warc Formatter using replay.web embedded player` to review the custom WARC formatter settings.
+
+
+??? info "Default configurations used"
+
+    - Use IIIF Global Urls? Yes.
+    - IIIF Media Server base URI: https://dcmny.org/cantaloupe/iiif/2
+    - IIIF Media Server Internal base URI: http://esmero-cantaloupe:8182/iiif/2
+    - Limited to the following file upload JSON Keys: Fetch from any available
+    - Embargo Alternate upload JSON Keys: Do not provide alternate files when embargoed
+    - Viewer for embargoed Objects is hidden
+    - Use JMESPath? No.
+    - No JMESPath expression used
+    - No Alternative JMESPath expression used
+    - Fallback to non JMESPath? No.
+    - WARC file fetched from JSON "as:document" key
+    - Maximum size: 100% x 960 pixels
 
 ## Strawberry Default Formatter
 
+This formatter displays JSON data, and is used to display ADO JSON data (for logged in users only, by default) in a section below the main object viewer and description on ADO display pages.
+
+You can find an example of this formatter being used in almost every provided default view mode. One example can be found in the `Digital Object Full View` settings configuration form at:
+- `admin/structure/types/manage/digital_object/display/digital_object_viewmode_fullitem`
+- Through the `Manage` menu > `Structure` > Content types > Digital Object > Manage display > Select 'Digital Object Full View'
+
+Click on the small settings cogwheel on the right hand side of the 'Strawberry Default Formatter' formatter to review the formatter settings. The only option you will be able to change is the label "Label to be used on the accordion Drop down" --which defaults to (historically) to "Raw Metadata (JSON)".
+
 ## Strawberry Field Pretty Formatter
 
+This formatter displays JSON data, similar to the "Strawberry Default Formatter" noted above. There is not an example use of this formatter in default Archipelago deployments, but it would potentially be useful for certain Archipelago environments that have certain types of Theme styling that apply to their administrative interfaces.
 
 ___
 
