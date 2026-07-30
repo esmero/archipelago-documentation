@@ -111,6 +111,14 @@ Select the small settings cogwheel to the right of the `Erdbeere` field + `Straw
     - Number of 3D Models: "1"
     - Maximum size: 100% x 720 pixels
 
+
+!!! note "Filename Requirements for 3D Model Assets"
+
+    In order for Archipelago to know to pair the main .obj and coressponding .mtl file, the files need to have the same base filename prefix.
+    
+    For example, "Dish with Sailing-ship Design.obj" and "Dish with Sailing-ship Design.mtl" -- as shown in the "Model with Sailing Ship Design" demo object found in Archipelago's provided AMI Demo Set: https://github.com/esmero/archipelago-deployment/blob/1.7.0/d8content/ami_set_entity_01.csv
+
+
 ## Strawberry Field Panorama Formatter using Pannellum * and IIIF
 
 This formatter displays media using the [Pannellum](https://github.com/mpetroff/pannellum) open source panorama viewer for the web.
