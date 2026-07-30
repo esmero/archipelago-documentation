@@ -39,7 +39,7 @@ An ADO can also override this formatters OSD settings by providing (partial exam
 
 ## Video Formatter Example
 
-A custom video formatter example will be provided and documented soon. Please check back for related updates in early 2026.
+A custom video formatter example will be provided and documented soon. Please check back for related updates.
 
 ___
 
