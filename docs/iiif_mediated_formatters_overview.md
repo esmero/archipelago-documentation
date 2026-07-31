@@ -19,7 +19,7 @@ Formatters that use IIIF twig templates to process media and generate IIIF manif
 - Strawberry Field PDF Formatter for IIIF served PDFs
 - Strawberry Field Media Formatter using the Universal (UV) * IIIF Viewer plugin
 
-!! note "Recommended prerequisite documentation"
+!!! note "Recommended prerequisite documentation"
 
     Please also see our '[Primer on Display Modes](primerdisplaymodes.md)' and '[Strawberryfield Formatters](strawberryfield-formatters.md)' guides for more information about Display Modes and Formatters.
 
