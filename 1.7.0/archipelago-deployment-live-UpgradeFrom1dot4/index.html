@@ -5536,10 +5536,10 @@ docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </spa
 <div class="highlight"><pre><span></span><code>nano<span class="w"> </span>deploy/ec2-docker/docker-compose.yml
 </code></pre></div>
 <p>Find the PHP container line (as seen here https://github.com/esmero/archipelago-deployment-live/blob/1.4.0/deploy/ec2-docker/docker-compose-aws-s3.yml#L45). Should be something like </p>
-<div class="highlight"><pre><span></span><code>    image: "esmero/php-8.1-fpm:1.2.0-multiarch"
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">"esmero/php-8.1-fpm:1.2.0-multiarch"</span>
 </code></pre></div>
 <p>And replace with</p>
-<div class="highlight"><pre><span></span><code>    image: "esmero/php-8.3-fpm:1.5.0-multiarch"
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">"esmero/php-8.3-fpm:1.5.0-multiarch"</span>
 </code></pre></div>
 <p>Save. Now navigate to your ec2-docker folder and fetch all the updates by doing this:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>deploy/ec2-docker

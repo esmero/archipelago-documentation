@@ -5244,34 +5244,34 @@ In specific focus on this folder.</p>
 <p>https://github.com/esmero/archipelago-deployment-live/tree/1.5.0/data_storage/solrlib</p>
 <h3 id="step-1-edit-docker-composeyml">Step 1: Edit docker-compose.yml</h3>
 <p>You want to replace your current Solr Service (in its enterity. Please make sure indendation is 1:1) with this.</p>
-<div class="highlight"><pre><span></span><code>  solr:
-    container_name: esmero-solr
-    restart: always
-    image: "solr:9.8.1"
-    # If running Docker &lt; 20.10.10 please uncomment the following lines
-    # See https://solr.apache.org/guide/solr/latest/upgrade-notes/major-changes-in-solr-9.html#solr-9-2 
-    #security_opt:
-    #  - seccomp:unconfined
-    tty: true
-    environment:
-      SOLR_HEAP: 1024m
-      SOLR_OPTS: -Dsolr.jetty.request.header.size=65535 -Dsolr.install.dir=/opt/solr
-      SOLR_MODULES: "extraction,langid,ltr,analysis-extras,scripting"
-      SOLR_LOG_LEVEL: "WARN"
-    ports:
-      - "8983:8983"
-    networks:
-      - host-net
-      - esmero-net
-    volumes:
-      - ${ARCHIPELAGO_ROOT}/data_storage/solrcore:/var/solr/data
-      - ${ARCHIPELAGO_ROOT}/config_storage/solrconfig:/drupalconfig
-      - ${ARCHIPELAGO_ROOT}/data_storage/solrlib:/var/solr/data/lib
-    entrypoint:
-      - docker-entrypoint.sh
-      - solr-precreate
-      - drupal
-      - /drupalconfig
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">solr</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-solr</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">"solr:9.8.1"</span>
+<span class="w">    </span><span class="c1"># If running Docker &lt; 20.10.10 please uncomment the following lines</span>
+<span class="w">    </span><span class="c1"># See https://solr.apache.org/guide/solr/latest/upgrade-notes/major-changes-in-solr-9.html#solr-9-2 </span>
+<span class="w">    </span><span class="c1">#security_opt:</span>
+<span class="w">    </span><span class="c1">#  - seccomp:unconfined</span>
+<span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">SOLR_HEAP</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1024m</span>
+<span class="w">      </span><span class="nt">SOLR_OPTS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-Dsolr.jetty.request.header.size=65535 -Dsolr.install.dir=/opt/solr</span>
+<span class="w">      </span><span class="nt">SOLR_MODULES</span><span class="p">:</span><span class="w"> </span><span class="s">"extraction,langid,ltr,analysis-extras,scripting"</span>
+<span class="w">      </span><span class="nt">SOLR_LOG_LEVEL</span><span class="p">:</span><span class="w"> </span><span class="s">"WARN"</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"8983:8983"</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host-net</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esmero-net</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${ARCHIPELAGO_ROOT}/data_storage/solrcore:/var/solr/data</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${ARCHIPELAGO_ROOT}/config_storage/solrconfig:/drupalconfig</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${ARCHIPELAGO_ROOT}/data_storage/solrlib:/var/solr/data/lib</span>
+<span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker-entrypoint.sh</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">solr-precreate</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drupal</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/drupalconfig</span>
 </code></pre></div>
 <p>Please double check and use any of these as reference:</p>
 <ul>

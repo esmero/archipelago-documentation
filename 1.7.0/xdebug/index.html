@@ -4779,12 +4779,12 @@ xdebug.discover_client_host = 1
 xdebug.start_with_request=yes
 </code></pre></div></li>
 <li>Make a bind mount to this file in your docker-compose.dev.yml file:
-    <div class="highlight"><pre><span></span><code>  php-debug:
-  ...
-    volumes:
-  - ${PWD}:/var/www/html:cached
-    # Bind mount custom xdebug configuration file...
-  - ${PWD}/xdebug/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+    <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">php-debug</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">volumes</span><span class="p p-Indicator">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${PWD}:/var/www/html:cached</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain"># Bind mount custom xdebug configuration file...</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${PWD}/xdebug/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini</span>
 </code></pre></div></li>
 <li>Restart your docker containers using the method described at the top of this page.</li>
 </ol>
