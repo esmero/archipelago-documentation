@@ -31,11 +31,11 @@ You can access Webforms in Archipelago at:
 Archipelago's default deployments provide two webforms you can use/modify directly or copy elements from to create a custom webform that best matches your own repository/project needs:
 
 * Archipelago Default Deployment Webforms
-    * [Descriptive Metadata](https://github.com/esmero/archipelago-deployment/blob/1.5.0/config/sync/webform.webform.descriptive_metadata.yml)
-        * [Corresponding Schema.org Type Options](https://github.com/esmero/archipelago-deployment/blob/1.5.0/config/sync/webform.webform_options.schema_org_creative_works.yml)
+    * [Descriptive Metadata](https://github.com/esmero/archipelago-deployment/blob/1.7.0/config/sync/webform.webform.descriptive_metadata.yml)
+        * [Corresponding Schema.org Type Options](https://github.com/esmero/archipelago-deployment/blob/1.7.0/config/sync/webform.webform_options.schema_org_creative_works.yml)
 
-    * [Digital Object Collection](https://github.com/esmero/archipelago-deployment/blob/1.5.0/config/sync/webform.webform.digital_object_collection.yml)
-        * [Corresponding Schema.org Type Options](https://github.com/esmero/archipelago-deployment/blob/1.5.0/config/sync/webform.webform_options.schema_org_cw_collections.yml)
+    * [Digital Object Collection](https://github.com/esmero/archipelago-deployment/blob/1.7.0/config/sync/webform.webform.digital_object_collection.yml)
+        * [Corresponding Schema.org Type Options](https://github.com/esmero/archipelago-deployment/blob/1.7.0/config/sync/webform.webform_options.schema_org_cw_collections.yml)
 
 ___
 
