@@ -10,7 +10,10 @@ tags:
 A Cloud / Local production ready Archipelago 1.7.0 Deployment (Drupal 10) using Docker,
 For Drupal 11 (IOHO less stable) please follow the [Archipelago 2.1.0 Deployment Live](https://github.com/esmero/archipelago-deployment-live/blob/2.1archipelago-deployment-live-readme.md) guide. Same features but different code (and more work for us!).
 
-Last updated: Jun 17th 2026 for Drupal 10.6.11 and Archipelago 1.7.0 (and 2.1.0) release day!
+
+Last updated: Sept 16th 2026. Replaces "gone" minio/minio with gateway support with our own built from scratch.
+
+Previously updated: Jun 17th 2026 for Drupal 10.6.11 and Archipelago 1.7.0 (and 2.1.0) release day!
 
 Previously updated: for 1.6.0, May 22nd 2026 for https://www.drupal.org/psa-2026-05-18 (Drupal 10.6.9)
 
@@ -31,7 +34,7 @@ Running Archipelago Commons on a live public instance using SSL with Blob/Object
 
 ### What is inside this dumpling for 1.7.0? (new section)
 
-- minio.io (latest) for local or Routed S3 with Console. We recommend disabling it and using directly a cloud managed S3 for better performance and full multipart upload compliance if deciding to go for the route (default) version.
+- minio.io (our own build, with legacy gateway support) for local or Routed S3 with Console. We recommend disabling it and using directly a cloud managed S3 for better performance and full multipart upload compliance.
 - Updated Apache Solr 10.0 with custom built and updated wizardly Solr OCR Highlight library [v0.10](https://github.com/dbmdz/solr-ocrhighlighting) coded and maintained by the Development Team at the [Bavarian State Library](https://github.com/dbmdz). Thanks Johannes Baiter and team.
 - MySQL 8.4(amd64/x86) or MariaDB 12.3 (Arm64/M1/M2/M3/M4/M5)
 - Updated NGINX 1.31.1
