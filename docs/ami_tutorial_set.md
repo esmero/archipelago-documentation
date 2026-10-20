@@ -46,8 +46,7 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
 
 1. Select the 'Spreadsheet Importer  (if using local CSV file)' for the Plugin type you will be using from the dropdown menu.
 
-2. Select 'Create New ADOs' as the Operation you would like to perform.
-        - Under the 'Upload your file' section, select 'Choose File' to upload the AMI Tutorial CSV you downloaded earlier. Be sure to wait for the file to finish uploading before advancing to the next step. After the file is finished uploading, you will have the option to 'Remove' and select a different file if needed.
+2. Select 'Create New ADOs' as the Operation you would like to perform. Under the 'Upload your file' section, select 'Choose File' to upload the AMI Tutorial CSV you downloaded earlier. Be sure to wait for the file to finish uploading before advancing to the next step. After the file is finished uploading, you will have the option to 'Remove' and select a different file if needed.
 	
    ![AMI Tutorial Step 2](images/AMItutorial_step2.png)	
 
@@ -66,12 +65,12 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
   
 
 4. For AMI step 4 of 6, select the following:
-        - ADO Parent Columns: `ismemberof`
-		- Keep the 'Automatically assign UUID' box checked (even though the AMI Tutorial CSV has node_uuid values already)
-		- Under the 'Base ADO mappings', select the `label` column for ADO Label
+     - ADO Parent Columns: `ismemberof`
+     - Keep the 'Automatically assign UUID' box checked (even though the AMI Tutorial CSV has node_uuid values already)
+     - Under the 'Base ADO mappings', select the `label` column for ADO Label
 
 5. For the final AMI configuration step 5 of 6:
-        - Specify the name of your AMI Set as "AMI Tutorial", then select the 'Press to Create Set' button.
+      - Specify the name of your AMI Set as "AMI Tutorial", then select the 'Press to Create Set' button.
 
 6. You will now see a message letting you know that 'Your source data was saved and is available as a CSV at ~`linktotheAMIgenerated.csv`. The message will also let you know that your New AMI Set was created and provide a link to the AMI Set page.
 
@@ -87,7 +86,7 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
    ![AMI Tutorial LoD Reconciliation Selection](images/AMItutorial_LoDrecSelections.png)	
 
 4. For the LoD Source reconcile options --> LoD Authority Sources, make the following selections:
-        - name_corporate_compiler_nampert --> LOC MADS RDF BY TYPE: CORPORATE NAME
+      - name_corporate_compiler_nampert --> LOC MADS RDF BY TYPE: CORPORATE NAME
 		- name_corporate_printer_nampert --> LOC MADS RDF BY TYPE: CORPORATE NAME
 		- name_corporate_publisher_nampert --> LOC MADS RDF BY TYPE: CORPORATE NAME
 		- name_personal_author_namepart --> LOC MADS RDF BY TYPE: PERSONAL NAME
@@ -109,9 +108,9 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
 2. Select 'AMI Set' for the Preview source option. Then enter the row for each object contained in the AMI Tutorial CSV, beginning with row '2'. Keep the `Show Preview with JSON keys used in this template` option selected before pressing `Show Preview`.
 
 3. For each row specified, review each of the Preview Section areas that appear on the right side of the screen:
-        - The top section contains full JSON metadata record for the selected digital object or AMI Set + specified row.
-        - The middle section will show the 'Reconciliated LoD' for the selected row if any matches are present in the LoD Reconciliation.
-        - The bottom section will show the rendered Output from the Template using the metadata from the selected ADO or AMI Set + specified row.
+      - The top section contains full JSON metadata record for the selected digital object or AMI Set + specified row.
+      - The middle section will show the 'Reconciliated LoD' for the selected row if any matches are present in the LoD Reconciliation.
+      - The bottom section will show the rendered Output from the Template using the metadata from the selected ADO or AMI Set + specified row.
 		- Observe the different ways data elements are present in the AMI Tutorial CSV, the LoD Reconciliation mappings, and how all of the data elements are processed in different sections of the Advanced AMI Ingest Template.
 		- Make note of any data processing that you would like to replicate in your own AMI CSVs and Ingest Templates in your daily work.
 
@@ -124,7 +123,7 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
 2. Optional: You may wish to double check the settings configured in your AMI Set in the Raw Metadata (JSON) on the AMI Set `View` tab before Processing. See this guide related to [Reviewing an AMI Set's Configuration and Status](ami_set_review.md)
 
 3. Navigate to the `Process` tab. You will have multiple options related to the Processing outcome for your AMI Set. For this AMI Tutorial Set:
-        - Keep **Skip ADO processing on missing File** checked.
+      - Keep **Skip ADO processing on missing File** checked.
 		- Keep all of the other enqueing and processing options unchecked.
 		- Set the **Desired ADOS Statuses After Process** to either Unpublished or Published --depending on your personal preference. If you are working in a live/production Archipelago, we would recommended setting these to Unpublished.
 		- Quickly review the note about the _'remaining free space on your Drupal temporary filesystem. Please be aware of that before running a batch with large files'._ While this information is not likely to be relevant for this small AMI Tutorial Set, it's important to keep in mind for real world work with large AMI Sets, especially in production environments with multiple users preparing AMI Sets simultaneously.	
@@ -132,13 +131,13 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
 4. Select `Confirm` to continue and Process your AMI Set immediately. Your AMI set will now be Processed. You can follow the set's progress through the `Processing queues` loading screen. After your AMI set is Processed, you will receive confirmation messages letting you know your Digital Objects were successfully created. 
 
 5. To review the newly created Digital Objects and (single) Collection, you can use the **AMI Set Report** tab to quickly navigate through each object. From the AMI Tutorial Set page, navigate to the 'Reports' tab. For each Digital Object or Collection row that was Processed, you will see:
-        - a `datetime` stamp
-        - one of three `level` (INFO, WARNING, or ERRORS) applicability
-        - a `message` summarizing the Processing outcome--including a title/label link to the created ADO if successful
-        - a `details` summary containing system information related to the operations.
+      - a `datetime` stamp
+      - one of three `level` (INFO, WARNING, or ERRORS) applicability
+      - a `message` summarizing the Processing outcome--including a title/label link to the created ADO if successful
+      - a `details` summary containing system information related to the operations.
 
 6. Review the created Collection and 7 different Digital Objects. Read each of the descriptions for each of the Digital Objects, and make note of the following:
-        - the object's `type` (JSON value)
+      - the object's `type` (JSON value)
 		- the Viewer or Media Player being used
 		- the View Mode being used (and how to review it directly)
 		- the LoD Reconciliation values processed for display and indexing
