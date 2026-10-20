@@ -13,8 +13,8 @@ tags:
 For Archipelago's 2.2.0 Release, we developed a new AMI Tutorial Set to help new and existing Archipelago users work through an interactive understanding of Archipelago's Multi Importer (AMI) and other key functionality areas. 
 
 To follow this AMI Tutorial, begin by first downloading and saving copies of these files to your computer:
-- AMI Tutorial CSV: [link to doc stored in Archipelago Documentation Repo]
-- Advanced AMI Ingest Template: [link to doc stored in Archipelago Documentation Repo]
+- AMI Tutorial CSV: [AMI Tutorial.csv](AMI Tutorial.csv)
+- Advanced AMI Ingest Template: [Advanced_AMI_Ingest_Template](Advanced_AMI_Ingest_Template)
 
 Then, open your local (or shared Testing/Sandbox Archipelago) instance and begin at Step 1.
 
@@ -139,7 +139,7 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
       - a `message` summarizing the Processing outcome--including a title/label link to the created ADO if successful
       - a `details` summary containing system information related to the operations.
 
-6. Review the created Collection and 7 different Digital Objects. Read each of the descriptions for each of the Digital Objects, and make note of the following:
+6. Review the created Collection and 6 different Digital Objects. Read each of the descriptions for each of the Digital Objects, and make note of the following:
       - the object's `type` (JSON value)
 	  - the Viewer or Media Player being used
 	  - the View Mode being used (and how to review it directly)
