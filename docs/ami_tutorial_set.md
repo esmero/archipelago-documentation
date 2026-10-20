@@ -89,9 +89,9 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
    ![AMI Tutorial LoD Reconciliation Selection](images/AMItutorial_LoDrecSelections.png)	
 
 4. For the LoD Source reconcile options --> LoD Authority Sources, make the following selections:
-      - name_corporate_compiler_nampert --> LOC MADS RDF BY TYPE: CORPORATE NAME
-	  - name_corporate_printer_nampert --> LOC MADS RDF BY TYPE: CORPORATE NAME
-	  - name_corporate_publisher_nampert --> LOC MADS RDF BY TYPE: CORPORATE NAME
+      - name_corporate_compiler_namepart --> LOC MADS RDF BY TYPE: CORPORATE NAME
+	  - name_corporate_printer_namepart --> LOC MADS RDF BY TYPE: CORPORATE NAME
+	  - name_corporate_publisher_namepart --> LOC MADS RDF BY TYPE: CORPORATE NAME
 	  - name_personal_author_namepart --> LOC MADS RDF BY TYPE: PERSONAL NAME
 	  - subject_lcgft_terms --> LOC MADS RDF BY TYPE: GENRE FORM
 	  - subject_lcnaf_corporate_names --> LOC MADS RDF BY TYPE: CORPORATE NAME
