@@ -21,6 +21,7 @@ You can access AMI through the `AMI Sets` tab on the main Content page found at 
 
 ## AMI Guides
 
+* [AMI Tutorial Set Guide](ami_tutorial_set.md)
 * [Spreadsheet Formatting Overview](ami_spreadsheet_overview.md)
 * [Configure the Google Sheets API](googleapi.md)
 * [Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets](AMIviaSpreadsheets.md)
