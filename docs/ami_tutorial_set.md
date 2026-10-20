@@ -13,7 +13,7 @@ tags:
 For Archipelago's 2.2.0 Release, we developed a new AMI Tutorial Set to help new and existing Archipelago users work through an interactive understanding of Archipelago's Multi Importer (AMI) and other key functionality areas. 
 
 To follow this AMI Tutorial, begin by first downloading and saving copies of these files to your computer:
-- AMI Tutorial CSV: [AMI Tutorial.csv](AMI Tutorial.csv)
+- AMI Tutorial CSV: [AMI Tutorial.csv](AMI%20Tutorial.csv)
 - Advanced AMI Ingest Template: [Advanced_AMI_Ingest_Template](Advanced_AMI_Ingest_Template)
 
 Then, open your local (or shared Testing/Sandbox Archipelago) instance and begin at Step 1.
