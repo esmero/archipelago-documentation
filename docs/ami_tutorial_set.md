@@ -3,6 +3,9 @@ title: Archipelago Multi Importer Tutorial Set
 tags:
   - AMI
   - Archipelago Multi Importer
+  - Metadata Display
+  - Preview
+  - LoD Reconciliation
 ---
 
 # Archipelago Multi Importer Tutorial Set
@@ -87,15 +90,15 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
 
 4. For the LoD Source reconcile options --> LoD Authority Sources, make the following selections:
       - name_corporate_compiler_nampert --> LOC MADS RDF BY TYPE: CORPORATE NAME
-		- name_corporate_printer_nampert --> LOC MADS RDF BY TYPE: CORPORATE NAME
-		- name_corporate_publisher_nampert --> LOC MADS RDF BY TYPE: CORPORATE NAME
-		- name_personal_author_namepart --> LOC MADS RDF BY TYPE: PERSONAL NAME
-		- subject_lcgft_terms --> LOC MADS RDF BY TYPE: GENRE FORM
-		- subject_lcnaf_corporate_names --> LOC MADS RDF BY TYPE: CORPORATE NAME
-		- subject_lcnaf_geographic_names --> LOC MADS RDF BY TYPE: GEOGRAPHIC
-		- subject_lcnaf_personal_names --> LOC MADS RDF BY TYPE: PERSONAL NAME
-		- subject_loc --> LOC SUBJECTS (LCSH)
-		- subject_wikidata --> WIKIDATA Q ITEMS
+	  - name_corporate_printer_nampert --> LOC MADS RDF BY TYPE: CORPORATE NAME
+	  - name_corporate_publisher_nampert --> LOC MADS RDF BY TYPE: CORPORATE NAME
+	  - name_personal_author_namepart --> LOC MADS RDF BY TYPE: PERSONAL NAME
+	  - subject_lcgft_terms --> LOC MADS RDF BY TYPE: GENRE FORM
+	  - subject_lcnaf_corporate_names --> LOC MADS RDF BY TYPE: CORPORATE NAME
+	  - subject_lcnaf_geographic_names --> LOC MADS RDF BY TYPE: GEOGRAPHIC
+	  - subject_lcnaf_personal_names --> LOC MADS RDF BY TYPE: PERSONAL NAME
+	  - subject_loc --> LOC SUBJECTS (LCSH)
+	  - subject_wikidata --> WIKIDATA Q ITEMS
 
 5. After making the above selections, leave the processing options unchecked, then select the 'Process LoD from Source' button.
 
@@ -111,8 +114,8 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
       - The top section contains full JSON metadata record for the selected digital object or AMI Set + specified row.
       - The middle section will show the 'Reconciliated LoD' for the selected row if any matches are present in the LoD Reconciliation.
       - The bottom section will show the rendered Output from the Template using the metadata from the selected ADO or AMI Set + specified row.
-		- Observe the different ways data elements are present in the AMI Tutorial CSV, the LoD Reconciliation mappings, and how all of the data elements are processed in different sections of the Advanced AMI Ingest Template.
-		- Make note of any data processing that you would like to replicate in your own AMI CSVs and Ingest Templates in your daily work.
+	  - Observe the different ways data elements are present in the AMI Tutorial CSV, the LoD Reconciliation mappings, and how all of the data elements are processed in different sections of the Advanced AMI Ingest Template.
+	  - Make note of any data processing that you would like to replicate in your own AMI CSVs and Ingest Templates in your daily work.
 
 4. After you have conducted your Preview for each row in the AMI Tutorial, proceed to the next Tutorial Step (5).
 
@@ -124,9 +127,9 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
 
 3. Navigate to the `Process` tab. You will have multiple options related to the Processing outcome for your AMI Set. For this AMI Tutorial Set:
       - Keep **Skip ADO processing on missing File** checked.
-		- Keep all of the other enqueing and processing options unchecked.
-		- Set the **Desired ADOS Statuses After Process** to either Unpublished or Published --depending on your personal preference. If you are working in a live/production Archipelago, we would recommended setting these to Unpublished.
-		- Quickly review the note about the _'remaining free space on your Drupal temporary filesystem. Please be aware of that before running a batch with large files'._ While this information is not likely to be relevant for this small AMI Tutorial Set, it's important to keep in mind for real world work with large AMI Sets, especially in production environments with multiple users preparing AMI Sets simultaneously.	
+	  - Keep all of the other enqueing and processing options unchecked.
+	  - Set the **Desired ADOS Statuses After Process** to either Unpublished or Published --depending on your personal preference. If you are working in a live/production Archipelago, we would recommended setting these to Unpublished.
+	  - Quickly review the note about the _'remaining free space on your Drupal temporary filesystem. Please be aware of that before running a batch with large files'._ While this information is not likely to be relevant for this small AMI Tutorial Set, it's important to keep in mind for real world work with large AMI Sets, especially in production environments with multiple users preparing AMI Sets simultaneously.	
 
 4. Select `Confirm` to continue and Process your AMI Set immediately. Your AMI set will now be Processed. You can follow the set's progress through the `Processing queues` loading screen. After your AMI set is Processed, you will receive confirmation messages letting you know your Digital Objects were successfully created. 
 
@@ -138,10 +141,10 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
 
 6. Review the created Collection and 7 different Digital Objects. Read each of the descriptions for each of the Digital Objects, and make note of the following:
       - the object's `type` (JSON value)
-		- the Viewer or Media Player being used
-		- the View Mode being used (and how to review it directly)
-		- the LoD Reconciliation values processed for display and indexing
-		- Anything else that stands out to you about how an object was processed that differs from another object in the CSV	
+	  - the Viewer or Media Player being used
+	  - the View Mode being used (and how to review it directly)
+	  - the LoD Reconciliation values processed for display and indexing
+	  - Anything else that stands out to you about how an object was processed that differs from another object in the CSV	
 
 ## That's all folks!
 
