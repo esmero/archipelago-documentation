@@ -108,6 +108,7 @@ nav:
       - Annotations: annotations.md
     - Archipelago Multi-Importer (AMI):
       - ami_index.md
+      - AMI Tutorial: ami_tutorial_set.md
       - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
       - Configuration for Google Sheets API: googleapi.md
       - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
