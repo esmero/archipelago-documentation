@@ -18,6 +18,8 @@ Formatters that use IIIF twig templates to process media and generate IIIF manif
 - Strawberry Field Panorama Formatter using Pannellum * and IIIF
 - Strawberry Field PDF Formatter for IIIF served PDFs
 - Strawberry Field Media Formatter using the Universal (UV) * IIIF Viewer plugin
+- Strawberry Field Media Formatter using the Triiiceratops * IIIF Viewer plugin
+- Strawberry Field Media Formatter using the Clover * IIIF Viewer plugin
 
 !!! note "Recommended prerequisite documentation"
 
@@ -173,6 +175,19 @@ Select the small settings cogwheel to the right of the `Erdbeere` field + `Straw
 Archipelago provides a formatter integration for [Universal Viewer](https://github.com/universalviewer/universalviewer), but there is not an example use of this formatter in default Archipelago deployments. You can find the option for this formatter listed in the Formatters dropdown list for any pre-configured display mode + formatter setup, labeled as `Strawberry Field Formatter using the Universal (UV) * IIIF Viewer plugin` in the formatter dropdown menu.
 
 For this formatter, the settings available for configuring include: selecting the Exposed Metadata Endpoints used to generate the Manifests, , defining Max Height + Width, specifying the source JSON Keys for the media files, setting the number of files to be used, setting for enabling embargo hiding, and a checkbox to set whether to use global IIIF URLs or not.
+
+## Strawberry Field Media Formatter using the Triiiceratops * IIIF Viewer plugin
+
+New for 2.2.0 release - documentation to be updated soon. 
+
+More information Triceratops can be found here: [https://github.com/d-flood/triiiceratops](https://github.com/d-flood/triiiceratops).
+
+
+## Strawberry Field Media Formatter using the Clover * IIIF Viewer plugin
+
+New for 2.2.0 release - documentation to be updated soon.
+
+More information about Clover can be found here: [https://clover.iiif.library.northwestern.edu](https://clover.iiif.library.northwestern.edu).
 
 ___
 
