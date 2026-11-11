@@ -180,7 +180,7 @@ For this formatter, the settings available for configuring include: selecting th
 
 New for 2.2.0 release - documentation to be updated soon. 
 
-More information Triceratops can be found here: [https://github.com/d-flood/triiiceratops](https://github.com/d-flood/triiiceratops).
+More information about Triceratops can be found here: [https://github.com/d-flood/triiiceratops](https://github.com/d-flood/triiiceratops).
 
 
 ## Strawberry Field Media Formatter using the Clover * IIIF Viewer plugin
