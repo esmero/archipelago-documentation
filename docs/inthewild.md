@@ -53,9 +53,7 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
 
 - [Association Montessori Internationale](https://archives.montessori-ami.org/)
 
-- Briscoe Center for American History, University of Texas at Austin: 
-    - [Briscoe Center Digital Collections](http://digitalcollections.briscoecenter.org/)
-    - [Clements Papers Project](https://clementspapers.org)
+- Briscoe Center for American History, University of Texas at Austin: [Clements Papers Project](https://clementspapers.org)
 
 - [California Revealed](https://repository.californiarevealed.org/)
 
@@ -67,8 +65,6 @@ From all around our beautiful shared world. 🏡 🏫 🏛️
     - [https://vitisgrinzane.ipsp.cnr.it/](https://vitisgrinzane.ipsp.cnr.it/)
     - [http://archipelago.byterfly.eu/](http://archipelago.byterfly.eu/) 🦋
         - [Virtual Tour Santuario Paola](http://archipelago.byterfly.eu/do/5aea0a3f-cf03-40cc-9611-924dea1fd806)
-
-- [Hispanic Museum & Library Digital Collections](https://diglib.hispanicsociety.org)
 
 - [Texas A&M Digital Collections](https://digitalcollections.library.tamu.edu)
 
