@@ -108,7 +108,7 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
 
 1. Navigate to the Metadata Display list at /admin/content/metadatadisplay/list (or through the admin menu via  Manage > Content > Metadata Displays). Open and select 'Edit' for the 'Advanced AMI Ingest' template.
 
-2. Select 'AMI Set' for the Preview source option. Then enter the row for each object contained in the AMI Tutorial CSV, beginning with row '2'. Keep the `Show Preview with JSON keys used in this template` option selected before pressing `Show Preview`.
+2. Select 'AMI Set' for the Preview source option. Then enter "AMI Tutorial" for the AMI Set to preview, then enter the row for each object contained in the AMI Tutorial CSV, beginning with row '2'. Keep the `Show Preview with JSON keys used in this template` option selected before pressing `Show Preview`.
 
 3. For each row specified, review each of the Preview Section areas that appear on the right side of the screen:
       - The top section contains full JSON metadata record for the selected digital object or AMI Set + specified row.
