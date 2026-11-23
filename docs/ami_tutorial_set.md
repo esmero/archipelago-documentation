@@ -37,7 +37,7 @@ Then, open your local (or shared Testing/Sandbox Archipelago) instance and begin
 
 3. Open the `Advanced AMI Ingest Template` you downloaded earlier. Copy and paste the entire contents of this file into the Twig template code editor box.
 
-4. Scroll down to the bottom of the page and set the "Primary mime type this Twig Template entity will generate as output" to "JSON".
+4. Enter 'Advanced AMI Ingest Template' for the template `Name` field. Then scroll down to the bottom of the page and set the "Primary mime type this Twig Template entity will generate as output" to "JSON".
 
 5. Save your newly added Advanced AMI Ingest Template.
 
