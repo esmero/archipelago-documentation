@@ -116,6 +116,7 @@ From either the main Content page `/admin/content` or the AMI Sets List page `/a
       - The bottom section will show the rendered Output from the Template using the metadata from the selected ADO or AMI Set + specified row.
 	  - Observe the different ways data elements are present in the AMI Tutorial CSV, the LoD Reconciliation mappings, and how all of the data elements are processed in different sections of the Advanced AMI Ingest Template.
 	  - Make note of any data processing that you would like to replicate in your own AMI CSVs and Ingest Templates in your daily work.
+      - Also make note of any data fields and values that are not being mapped by the Advanced AMI Ingest Template. (Hint: observe the creator name value for AMI Tutorial Object 4, Row 6. What happens if you map the name value in the LoD Reconciliation form, then save, then refresh the preview? How might you adjust the template to account for "mixed mappings" of some LoD reconciled values, and some with no matches?)  
 
 4. After you have conducted your Preview for each row in the AMI Tutorial, proceed to the next Tutorial Step (5).
 
