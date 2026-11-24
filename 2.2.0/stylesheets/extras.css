@@ -1,0 +1,7 @@
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+  fill: currentcolor;
+  display: block;
+  height: auto !important;
+  max-height: 10rem !important;
+  width: auto;
+}
