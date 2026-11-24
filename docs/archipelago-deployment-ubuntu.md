@@ -1,6 +1,6 @@
 ---
 
-title: "Installing Archipelago (2.1.0) Drupal 11 on Ubuntu 20.04+"
+title: "Installing Archipelago (2.2.0) Drupal 11 on Ubuntu 24.04+"
 
 tags:
   - Archipelago-deployment
@@ -9,7 +9,7 @@ tags:
 ---
 
 
-# Installing Archipelago (2.1.0) Drupal 11 on Ubuntu 20.04+
+# Installing Archipelago (2.2.0) Drupal 11 on Ubuntu 24.04+
 
 ## About running terminal commands
 
@@ -43,20 +43,10 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 # Add the repository to Apt sources:
 
 ```shell
-sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
-Types: deb
-URIs: https://download.docker.com/linux/ubuntu
-Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
-Components: stable
-Signed-By: /etc/apt/keyrings/docker.asc
-EOF
-
 sudo apt update
-sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo apt-cache policy docker-ce
-sudo apt install docker-ce
 sudo systemctl status docker
-
 sudo usermod -aG docker ${USER}
 ```
 
@@ -128,14 +118,14 @@ Now that you got it, let's deploy:
 ```shell
 git clone https://github.com/esmero/archipelago-deployment.git archipelago-deployment
 cd archipelago-deployment
-git checkout 2.1.0
+git checkout 2.2.0
 ```
 
 
 ```shell
 cp docker-compose-linux.yml docker-compose.yml
-docker-compose pull
-docker-compose up -d
+docker compose pull
+docker compose up -d
 ```
 
 Note: `docker-compose.yml` is git ignored in case you make local adjustments or changes to it.
@@ -235,7 +225,7 @@ docker exec -ti esmero-php bash -c 'scripts/archipelago/deploy.sh'
 
 You are almost done! Open your most loved Web Browser and point it to `http://localhost:8001`
 
-### Run any Pending Search API Tasks (New to Drupal Search API 1.4.x)
+### Run any Pending Search API Tasks (Since Drupal Search API 1.4.x)
 
 This is new to us and specific to this version of Drupal's Search API.
 Please, once logged in, navigate to <http://localhost:8001/admin/config/search/search-api> and press, if present,
@@ -254,12 +244,6 @@ Note: It can take some time to start the first time (Drupal needs some warming u
 If you see any issues or errors or need help with a step, please let us know (ASAP!). You can either open an `issue` in this repository or use the [Google Group](https://groups.google.com/forum/#!forum/archipelago-commons). We are here to help.
 
 If you like this, let us know!
-
-### User contributed documentation (A Video!)[^1]:
-
-_Installing Archipelago on AWS Ubuntu_ by [Zach Spalding](https://github.com/senyzspalding): <https://youtu.be/RBy7UMxSmyQ>
-
-[^1]: You may find this user contributed tutorial video, which was created for an earlier Archipelago release, to be helpful. Please note that there are significant differences between the executed steps and that you need to follow the current release instructions in order to have a successful deployment.
 
 ## Caring & Coding + Fixing + Testing
 
