@@ -44,6 +44,7 @@ Documentation related to the Strawberryfield modules can be found here: [Strawbe
 
 - [Annotorius](https://github.com/recogito/annotorious)
 - [Anubis](https://github.com/TecharoHQ/anubis)
+- [Clover](https://clover.iiif.library.northwestern.edu)
 - [DataCite](https://datacite.org) 
      - [*Archipelago is proud to be a DataCite Registered Service Provider*](https://support.datacite.org/docs/service-provider-software-integrations)
 - [Drupal Webform Module](https://www.drupal.org/project/webform)
@@ -54,6 +55,7 @@ Documentation related to the Strawberryfield modules can be found here: [Strawbe
 - [Pannellum](https://github.com/mpetroff/pannellum)
 - [Replayweb.page Webarchive Player](https://github.com/webrecorder/replayweb.page)
 - [Solr OCR Highlighting](https://github.com/dbmdz/solr-ocrhighlighting)
+- [Triiiceratops](https://github.com/d-flood/triiiceratops)
 - Twig Templating [In Symfony](https://twig.symfony.com) / [In Drupal](https://www.drupal.org/docs/theming-drupal/twig-in-drupal)
 
 ___
