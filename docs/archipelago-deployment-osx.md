@@ -1,13 +1,13 @@
 ---
-title: "Installing Archipelago (1.7.0) Drupal 10 on OSX (macOS)"
+title: "Installing Archipelago (2.2.0) Drupal 11 on OSX (macOS)"
 tags:
   - Archipelago-deployment
-  - Drupal 10
+  - Drupal 11
   - macOS
   - OSX
 ---
 
-# Installing Archipelago (1.7.0) Drupal 10 on macOS
+# Installing Archipelago (2.2.0) Drupal 11 on macOS
 
 ## About running terminal commands
 
@@ -24,11 +24,11 @@ Happy deploying!
 ### OSX (macOS):
 
 - [Install Docker for Mac](https://docs.docker.com/desktop/install/mac-install/)
-  - For macOS `Ventura` or Higher on Intel (i5/i7) and Apple Silicon Chips (M1/M2/M3/M4/M5) macOS Sonoma or higher, the latest tested version is: `4.77.0 (228796)` with Docker engine v29.5.3. You may go newer of course.
+  - For macOS `Ventura` or Higher on Intel (i5/i7) and Apple Silicon Chips (M1/M2/M3/M4/M5) macOS Sonoma or higher, the latest tested version is: `4.99.0 (245822)` with Docker engine v29.9.3. You may go newer of course.
   - In `Preferences` -> `General`: check under `Choose file sharing implementation for your containers` either the new `VirtioFS`(faster) or `gRPC FUSE` and restart. Specially if you are using your `$HOME` folder for deploying, e.g. `/Users/username`.
   - In `Preferences` -> `Resources`: a minimum of 4 Gbytes of RAM is needed and works; 8 Gbytes is faster and snappier. Go for 16 GBytes if you are going to evaluate the ML/AI features on large sets of images/text.
 - [Install Github Desktop](https://desktop.github.com).
-- At least 15 Gbytes of free space (to get started). 30 Gbytes if Running ML Containers
+- At least 15 Gbytes of free space (to get started). 20 Gbytes if Running ML Containers
 - Being able to open a terminal.
 
 **Note:** Most Recent Docker Desktop for macOS removed `docker-compose` and replace it with `docker compose`. We updated this documentation to reflect the newer version. If you are running an older one, either upgrade or please replace every mention of `docker composer` with the legacy `docker-compose` when going through the steps.
@@ -81,18 +81,18 @@ Ok, now we are ready to start. Depending on what type of Chip your Apple uses yo
 ```shell
 git clone https://github.com/esmero/archipelago-deployment.git archipelago-deployment
 cd archipelago-deployment
-git checkout 1.7.0
+git checkout 2.2.0
 cp docker-compose-osx.yml docker-compose.yml
 docker compose pull
 docker compose up -d
 ```
 
-## Step 1 (M1/M2/M3/M4): Docker Deployment on Apple Silicon Chips (M1/M2/M3/M4/M5)
+## Step 1 (M1/M2/M3/M4/M5): Docker Deployment on Apple Silicon Chips (M1/M2/M3/M4/M5)
 
 ```shell
 git clone https://github.com/esmero/archipelago-deployment.git archipelago-deployment
 cd archipelago-deployment
-git checkout 1.7.0
+git checkout 2.2.0
 cp docker-compose-arm64.yml docker-compose.yml
 docker compose pull
 docker compose up -d
@@ -112,7 +112,7 @@ pass:minio123
 
 and once logged in, accept the licence, then press on "Buckets" (left tools column) and then on "Create Bucket"  (top right) and under "Bucket Name" type `archipelago`. Leave all other options unchecked for now (you can experiment with those later), and make sure you write `archipelago` (no spaces, lowercase) and press "Save". Done! That is where we will persist all your Files and also your File copies of each Digital Object. You can always go there and explore what Archipelago (well really Strawberryfield does the hard work) has persisted so you can get comfortable with our architecture.
 
-## Step 3: Deploy Drupal 10 and the awesome Archipelago Modules
+## Step 3: Deploy Drupal 11 and the awesome Archipelago Modules
 
 The following will run composer inside the esmero-php container to download all dependencies and Drupal Core too:
 
@@ -140,7 +140,6 @@ Note: You might see some warnings like these:
 
  `[warning] The "block_content:9aa72fb1-2817-44a7-8fb5-a3eb51166e83" was not found`
  `[warning] The "block_content:1cdf7155-eb60-4f27-9e5e-64fffe93127a" was not found`
- `[warning] The "block_content:3920219e-ccb0-482d-b3f4-15475d5d60d1" was not found`
  `[warning] The "facets_summary_block:advance" was not found`
  `[warning] The "facets_summary_block:search_page_facet_summary" was not found`
  `[notice] Missing required data for configuration: role_theme_switcher.settings`
@@ -152,13 +151,13 @@ Once finished, this will give you an `admin` Drupal user with `archipelago` as p
  Note about Steps 2-3: You don't need to, nor should you do this more than once. You can destroy/stop/update, recreate your Docker containers, and start again (`git pull`), and your Drupal and Data will persist once you're past the `Installation complete` message. I repeat, all other containers' data is persisted inside the `persistent/` folder contained in this cloned git repository. Drupal and all its code is visible, editable, and stable inside your `web/` folder.
 
 
-Final Note/optional: In between releases (Post release announcement, the period between 1.7.0 and 2.2.0 (Next release is D11 only!)), you can always run:
+Final Note/optional: In between releases (Post release announcement, the period between 2.2.0 and 2.3.0), you can always run:
 
 ```shell
 docker exec -ti esmero-php bash -c "composer update archipelago/* strawberryfield/* -W"
 ```
 
-To fetch, under the same release version, any `Hot Fixes` and post release compatibility changes (e.g some weird deprecation introduced in a Drupal version we did not had at the time of the release)
+To fetch, under the same release version, any `Hot Fixes` and post release compatibility changes (e.g. some weird deprecation introduced in a Drupal version we did not had at the time of the release)
 
 ## Step 4: Create a "demo "and a "jsonapi" user using drush and assign your "admin" user the Administrator Role.
 
@@ -180,7 +179,7 @@ Archipelago is more fun without having to start writing Metadata Displays (in Tw
 docker exec -ti esmero-php bash -c 'scripts/archipelago/deploy.sh'
 ```
 
-Open your most loved Web Browser and point it to `http://localhost:8001` and log in as your 'admin' user.
+Open your most loved Web Browser and point it to `http://localhost:8001`.
 
 ### Run any Pending Search API Tasks (New to Drupal Search API 1.4.x)
 

@@ -1,12 +1,15 @@
 ---
-title: "Installing Archipelago (1.7.0) Drupal 10 on Ubuntu 20.04+"
+
+title: "Installing Archipelago (2.1.0) Drupal 11 on Ubuntu 20.04+"
+
 tags:
   - Archipelago-deployment
-  - Drupal 10
+  - Drupal 11
   - Ubuntu
 ---
 
-# Installing Archipelago (1.7.0) Drupal 10 on Ubuntu 20.04+
+
+# Installing Archipelago (2.1.0) Drupal 11 on Ubuntu 20.04+
 
 ## About running terminal commands
 
@@ -35,7 +38,7 @@ sudo apt install ca-certificates curl apt-transport-https software-properties-co
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
-````
+```
 
 # Add the repository to Apt sources:
 
@@ -125,7 +128,7 @@ Now that you got it, let's deploy:
 ```shell
 git clone https://github.com/esmero/archipelago-deployment.git archipelago-deployment
 cd archipelago-deployment
-git checkout 1.7.0
+git checkout 2.1.0
 ```
 
 
@@ -166,7 +169,7 @@ pass:minio123
 
 accept the license and then create a bucket named "archipelago". To do so go to the `Buckets` section in the navigation pane, and click `Create Bucket +`. Type `archipelago` under `Bucket Name` and submit, done! That is where we will persist all your Files and also your File copies of each Digital Object. You can always go there and explore what Archipelago (well really Strawberryfield does the hard work) has persisted so you can get comfortable with our architecture.
 
-## Step 3: Deploy Drupal 10 and the awesome Archipelago Modules
+## Step 3: Deploy Drupal 11 and the awesome Archipelago Modules
 
 The following will run composer inside the esmero-php container to download all dependencies and Drupal Core too.
 
@@ -203,7 +206,7 @@ Once finished, this will give you an `admin` Drupal user with `archipelago` as p
 
 Note about Steps 2-3: You don't need to, nor should you do this more than once. You can destroy/stop/update, recreate your Docker containers, and start again (`git pull`), and your Drupal and Data will persist once you've passed the `Installation complete` message. I repeat, all other containers' data is persisted inside the `persistent/` folder contained in this cloned git repository. Drupal and all its code is visible, editable, and stable inside your `web/` folder.
 
-Final Note/optional: In between releases (Post release announcement, the period between 1.6.0 and 1.7.0), you can always run:
+Final Note/optional: In between releases (Post release announcement, the period between 2.1.0 and 2.2.0), you can always run:
 
 ```shell
 docker exec -ti esmero-php bash -c "composer update archipelago/* strawberryfield/* -W"
@@ -230,7 +233,7 @@ Archipelago is more fun without having to start writing Metadata Displays (in Tw
 docker exec -ti esmero-php bash -c 'scripts/archipelago/deploy.sh'
 ```
 
-You are almost done! Open your most loved Web Browser and point it to `http://localhost:8001` and log in as your 'admin' user.
+You are almost done! Open your most loved Web Browser and point it to `http://localhost:8001`
 
 ### Run any Pending Search API Tasks (New to Drupal Search API 1.4.x)
 
