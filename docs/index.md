@@ -10,12 +10,6 @@ Finally, Archipelago tries to stay humble, slim, and nimble in nature with a sma
 
 We recommend you start with the [Core Documentation Guides listed here](101_guides_list.md) as you begin your Archipelago explorations. 
 
-### Note about Documentation Version for June 2026 1.7.0+ Release
-
-Alongside the primary [Archipelago 1.7.0](archipelago-deployment-readme.md) Release shared in June 2026, the secondary [Archipelago 2.1.0](https://github.com/esmero/archipelago-deployment/tree/2.1.0) Release was also made public. The 1.7.0 and 2.1.0 releases have **feature parity** for any new UI and API related features (you are not “missing out” on any important functionality with either version), and we have decided to only tag a 1.7.0 branch of the Archipelago documentation at this time. Please use the 1.7.0 documentation branch for now when interacting & learning under a 2.1.0 Archipelago environment.
-
-Please see the official release announcements shared on the [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) for more information about 1.7.0+ Releases.
-
 ___
 
 Thank you for reading! Please contact us on our [Archipelago Commons Google Group](https://groups.google.com/forum/#!forum/archipelago-commons) with any questions or feedback.
