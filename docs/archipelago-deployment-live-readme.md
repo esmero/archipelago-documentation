@@ -9,7 +9,7 @@ tags:
 
 A Cloud / Local production ready Archipelago 2.2.0 Deployment (Drupal 11/PHP 8.4+) using Docker,
 
-Last updated: Nov 23rd 2026 for Drupal 11.4.13 and Archipelago 2.2.0 release day!
+Last updated: Nov 23rd 2026 for Drupal 11.4.14 (sa-core-2026-019) and Archipelago 2.2.0 release day!
 
 Previously updated: Sept 16th 2026. Replaces "gone" minio/minio with gateway support with our own built from scratch.
 
