@@ -146,7 +146,7 @@ nano deploy/ec2-docker/.env
 ```
 
 The content of that file would be similar to this. 
-`Note`: There are a few extra commented lines at the end only used for: https://docs.archipelago.nyc/1.7.0/security_bots/ if you decide to go that way, but also not needed if running `anubis`.
+`Note`: There are a few extra commented lines only used in the past in combination with bot blocker for: https://docs.archipelago.nyc/2.2.0/security_bots/ if you decide to go that way (not recommended) and also not needed if running `anubis`.
 
 ```env
 ARCHIPELAGO_ROOT=/home/ec2-user/archipelago-deployment-live
